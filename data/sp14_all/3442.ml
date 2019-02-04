@@ -35,43 +35,27 @@ let rec additivePersistence n =
 ListG LitG Nothing
 
 (11,19)-(11,76)
-0
-LitG
+EMPTY
+EmptyG
+
+(11,57)-(11,62)
+EMPTY
+EmptyG
+
+(11,57)-(11,76)
+EMPTY
+EmptyG
 
 (11,65)-(11,76)
 additivePersistence (sumList (digitsOfInt n))
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (11,66)-(11,71)
-additivePersistence
-VarG
-
-(11,66)-(11,71)
-sumList
-VarG
-
-(11,66)-(11,71)
-digitsOfInt
-VarG
-
-(11,66)-(11,71)
-n
-VarG
-
-(11,66)-(11,71)
-sumList
-VarG
-
-(11,66)-(11,71)
 sumList (digitsOfInt n)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(11,66)-(11,71)
-digitsOfInt n
-AppG (fromList [VarG])
-
-(11,66)-(11,71)
-sumList count
-AppG (fromList [VarG])
+(11,74)-(11,75)
+EMPTY
+EmptyG
 
 *)

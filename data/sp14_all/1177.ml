@@ -68,6 +68,22 @@ match a with
 | (x , y) -> (carry2 , dig :: y)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(25,36)-(25,41)
+EMPTY
+EmptyG
+
+(25,37)-(25,40)
+EMPTY
+EmptyG
+
+(25,53)-(25,73)
+EMPTY
+EmptyG
+
+(25,54)-(25,60)
+EMPTY
+EmptyG
+
 (25,70)-(25,71)
 y
 VarG

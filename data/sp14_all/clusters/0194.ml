@@ -1,7 +1,2 @@
-IteG (AppG (fromList [EmptyG])) VarG (ConAppG (Just EmptyG) Nothing)
-if List.mem h seen
-then seen
-else h :: seen
-if List.mem h seen
-then seen
-else h :: seen
+BopG (AppG (fromList [EmptyG])) (UopG EmptyG)
+eval (e1 , x , y) *. (- 1.0)

@@ -26,8 +26,16 @@ helper ((v mod 10) :: acc)
        (v / 10)
 AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 
+(7,31)-(7,68)
+EMPTY
+EmptyG
+
 (7,39)-(7,49)
 (v mod 10) :: acc
 ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
+
+(7,54)-(7,68)
+EMPTY
+EmptyG
 
 *)

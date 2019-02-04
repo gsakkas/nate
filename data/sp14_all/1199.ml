@@ -85,8 +85,16 @@ let bigAdd l1 l2 =
 pair ((h1 , h2) :: acc) t1 t2
 AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,TupleG (fromList [VarG])]))) Nothing])
 
+(34,29)-(34,59)
+EMPTY
+EmptyG
+
 (34,35)-(34,43)
 (h1 , h2) :: acc
 ConAppG (Just (TupleG (fromList [VarG,TupleG (fromList [VarG])]))) Nothing
+
+(34,48)-(34,59)
+EMPTY
+EmptyG
 
 *)

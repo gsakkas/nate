@@ -36,6 +36,10 @@ let ll2 = List.length l2 in
                                 (ll1 - ll2) @ l2)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
+(8,14)-(8,16)
+EMPTY
+EmptyG
+
 (8,19)-(8,21)
 ll2
 VarG
@@ -43,6 +47,10 @@ VarG
 (8,26)-(8,28)
 ll1
 VarG
+
+(8,42)-(8,44)
+EMPTY
+EmptyG
 
 (8,47)-(8,49)
 ll1

@@ -34,14 +34,6 @@ l2
 VarG
 
 (7,48)-(7,72)
-l2
-VarG
-
-(7,48)-(7,72)
-l1
-VarG
-
-(7,48)-(7,72)
 (l1 , l2 @ clone 0 (x1 - x2))
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 

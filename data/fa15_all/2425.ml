@@ -63,32 +63,8 @@ let (a1 , a2) = a in
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (20,4)-(21,68)
-a1
-VarG
-
-(20,4)-(21,68)
-l1x
-VarG
-
-(20,4)-(21,68)
-l2x
-VarG
-
-(20,4)-(21,68)
-a2
-VarG
-
-(20,4)-(21,68)
 l1x + l2x
 BopG VarG VarG
-
-(20,4)-(21,68)
-(a1 , (l1x + l2x) :: a2)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing])
-
-(20,4)-(21,68)
-(l1x + l2x) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
 
 (20,15)-(20,17)
 ([] , [])
@@ -99,20 +75,8 @@ TupleG (fromList [ListG EmptyG Nothing])
 ListG EmptyG Nothing
 
 (21,15)-(21,17)
-List.rev
-VarG
-
-(21,15)-(21,17)
-List.combine
-VarG
-
-(21,15)-(21,17)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(21,15)-(21,17)
-List.combine l1 l2
-AppG (fromList [VarG])
 
 (21,21)-(21,68)
 l2

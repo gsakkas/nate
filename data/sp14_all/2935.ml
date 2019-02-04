@@ -69,9 +69,41 @@ match a with
 | (o , p) -> (newc , digit :: p)
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(22,21)-(22,47)
-x
-VarG
+(21,17)-(21,48)
+EMPTY
+EmptyG
+
+(21,21)-(21,47)
+EMPTY
+EmptyG
+
+(21,22)-(21,29)
+EMPTY
+EmptyG
+
+(21,23)-(21,24)
+EMPTY
+EmptyG
+
+(21,27)-(21,28)
+EMPTY
+EmptyG
+
+(21,32)-(21,46)
+EMPTY
+EmptyG
+
+(21,33)-(21,38)
+EMPTY
+EmptyG
+
+(21,43)-(21,45)
+EMPTY
+EmptyG
+
+(22,17)-(22,48)
+EMPTY
+EmptyG
 
 (22,21)-(22,47)
 let digit =
@@ -81,31 +113,10 @@ match a with
 | (o , p) -> (newc , digit :: p)
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(22,21)-(22,47)
-match x with
-| (f , g) -> (f + g) + (carry mod 10)
-CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG)])
-
-(23,6)-(23,11)
-a
-VarG
-
-(23,6)-(23,11)
-newc
-VarG
-
 (23,6)-(23,11)
 match a with
 | (o , p) -> (newc , digit :: p)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(23,6)-(23,11)
-(newc , digit :: p)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(23,6)-(23,11)
-digit :: p
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (24,4)-(26,51)
 p

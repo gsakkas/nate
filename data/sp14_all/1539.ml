@@ -20,14 +20,6 @@ f hd hd
 AppG (fromList [VarG])
 
 (4,57)-(4,59)
-f
-VarG
-
-(4,57)-(4,59)
-hd
-VarG
-
-(4,57)-(4,59)
 hd
 VarG
 

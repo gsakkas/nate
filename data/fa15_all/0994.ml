@@ -32,10 +32,6 @@ fun b ->
   (let x = f b in (x , x <> b))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(2,31)-(2,34)
-let x = f b in (x , x <> b)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-
 (2,42)-(2,49)
 x <> b
 BopG VarG VarG

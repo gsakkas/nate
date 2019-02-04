@@ -25,18 +25,6 @@ List.fold_left f base xs
 LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (3,18)-(3,67)
-a
-VarG
-
-(3,18)-(3,67)
-a
-VarG
-
-(3,18)-(3,67)
-a * a
-BopG VarG VarG
-
-(3,18)-(3,67)
 let base =
   match xs with
   | [] -> 4
@@ -51,5 +39,13 @@ LitG
 (3,59)-(3,60)
 2
 LitG
+
+(4,2)-(4,42)
+EMPTY
+EmptyG
+
+(4,13)-(4,14)
+EMPTY
+EmptyG
 
 *)

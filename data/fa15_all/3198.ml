@@ -66,51 +66,75 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(5,6)-(5,11)
+EMPTY
+EmptyG
+
+(5,10)-(5,11)
+EMPTY
+EmptyG
+
 (26,6)-(28,63)
 let (c , a1 :: a2) = a in
 let v = (x1 + x2) + c in
 (v / 10 , [v / 10] @ ([v mod 10] @ a2))
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(28,32)-(28,46)
-v
-VarG
+(27,6)-(28,63)
+EMPTY
+EmptyG
+
+(27,18)-(27,20)
+EMPTY
+EmptyG
 
 (28,32)-(28,46)
 v / 10
 BopG VarG LitG
 
-(28,32)-(28,46)
-10
-LitG
+(28,33)-(28,35)
+EMPTY
+EmptyG
+
+(28,39)-(28,40)
+EMPTY
+EmptyG
+
+(28,39)-(28,44)
+EMPTY
+EmptyG
 
 (28,43)-(28,44)
 v / 10
 BopG VarG LitG
 
 (28,48)-(28,62)
-v
-VarG
-
-(28,48)-(28,62)
 10
 LitG
+
+(28,49)-(28,51)
+EMPTY
+EmptyG
+
+(28,55)-(28,56)
+EMPTY
+EmptyG
+
+(28,55)-(28,60)
+EMPTY
+EmptyG
 
 (28,59)-(28,60)
 v mod 10
 BopG VarG LitG
 
 (29,4)-(31,60)
-v
-VarG
-
-(29,4)-(31,60)
 a2
 VarG
 
-(29,4)-(31,60)
-10
-LitG
+(29,16)-(29,19)
+EMPTY
+EmptyG
 
 (29,17)-(29,18)
 0
@@ -121,10 +145,6 @@ LitG
 LitG
 
 (30,15)-(30,33)
-List.rev
-VarG
-
-(30,15)-(30,33)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
@@ -133,5 +153,13 @@ let (_ , res) =
   List.fold_left f base args in
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+
+(31,50)-(31,60)
+EMPTY
+EmptyG
+
+(31,51)-(31,54)
+EMPTY
+EmptyG
 
 *)

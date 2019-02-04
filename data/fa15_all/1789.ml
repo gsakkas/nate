@@ -27,16 +27,12 @@ LamG (TupleG (fromList [EmptyG]))
 x
 VarG
 
+(4,41)-(4,42)
+EMPTY
+EmptyG
+
 (4,46)-(4,47)
 x
-VarG
-
-(4,51)-(4,52)
-x
-VarG
-
-(4,51)-(4,52)
-h
 VarG
 
 (4,51)-(4,52)

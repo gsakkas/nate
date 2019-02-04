@@ -46,28 +46,12 @@ rand (0 , 2)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (13,31)-(13,69)
-0
-LitG
-
-(13,31)-(13,69)
-2
-LitG
-
-(13,31)-(13,69)
 (0 , 2)
 TupleG (fromList [LitG])
 
 (15,14)-(15,25)
 rand (0 , 5)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(16,5)-(18,46)
-0
-LitG
-
-(16,5)-(18,46)
-5
-LitG
 
 (16,5)-(18,46)
 (0 , 5)

@@ -12,14 +12,18 @@ let rec listReverse l =
 
 (* changed spans
 (3,2)-(3,56)
-l
-VarG
-
-(3,2)-(3,56)
 let h :: t = l in
 match l with
 | [] -> []
 | h :: t -> listReverse t
 LetG NonRec (fromList [VarG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+
+(3,36)-(3,56)
+EMPTY
+EmptyG
+
+(3,55)-(3,56)
+EMPTY
+EmptyG
 
 *)

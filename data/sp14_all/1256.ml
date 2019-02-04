@@ -74,36 +74,38 @@ fun i ->
                     (bigAdd acc l)
 LamG (LamG EmptyG)
 
-(27,17)-(28,70)
-fun l ->
-  fun acc ->
-    match i with
-    | 0 -> [0]
-    | 1 -> l
-    | _ -> helper (i - 1) l
-                  (bigAdd acc l)
-LamG (LamG EmptyG)
+(27,21)-(28,70)
+EMPTY
+EmptyG
 
-(28,41)-(28,47)
-i
-VarG
+(27,23)-(28,70)
+EMPTY
+EmptyG
 
-(28,41)-(28,47)
-l
-VarG
+(28,4)-(28,70)
+EMPTY
+EmptyG
+
+(28,10)-(28,11)
+EMPTY
+EmptyG
+
+(28,24)-(28,27)
+EMPTY
+EmptyG
+
+(28,24)-(28,33)
+EMPTY
+EmptyG
+
+(28,30)-(28,33)
+EMPTY
+EmptyG
 
 (28,41)-(28,47)
 helper (i - 1) l (bigAdd acc
                          l)
 AppG (fromList [VarG,AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-
-(28,41)-(28,47)
-0
-LitG
-
-(28,41)-(28,47)
-[0]
-ListG LitG Nothing
 
 (28,41)-(28,70)
 match i with
@@ -124,5 +126,17 @@ VarG
 (28,64)-(28,65)
 acc
 VarG
+
+(28,66)-(28,69)
+EMPTY
+EmptyG
+
+(29,9)-(29,12)
+EMPTY
+EmptyG
+
+(29,10)-(29,11)
+EMPTY
+EmptyG
 
 *)

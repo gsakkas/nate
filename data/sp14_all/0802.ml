@@ -63,24 +63,8 @@ let rec eval (e,x,y) =
 
 (* changed spans
 (11,14)-(23,76)
-atan
-VarG
-
-(11,14)-(23,76)
-atan 1.0
-AppG (fromList [LitG])
-
-(11,14)-(23,76)
 4.0 *. atan 1.0
 BopG LitG (AppG (fromList [EmptyG]))
-
-(11,14)-(23,76)
-4.0
-LitG
-
-(11,14)-(23,76)
-1.0
-LitG
 
 (12,2)-(23,76)
 match e with
@@ -98,16 +82,8 @@ match e with
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
 (15,19)-(15,36)
-pi
-VarG
-
-(15,19)-(15,36)
 pi *. eval (e' , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
-
-(16,21)-(16,38)
-pi
-VarG
 
 (16,21)-(16,38)
 pi *. eval (e' , x , y)
@@ -117,9 +93,17 @@ BopG VarG (AppG (fromList [EmptyG]))
 (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
+(17,23)-(17,66)
+EMPTY
+EmptyG
+
 (17,24)-(17,41)
 eval (e1 , x , y) +. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+
+(17,65)-(17,66)
+EMPTY
+EmptyG
 
 (18,21)-(18,38)
 eval (e1 , x , y) *. eval (e2 , x , y)
@@ -128,6 +112,10 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 (18,21)-(18,58)
 2.0
 LitG
+
+(23,9)-(23,17)
+EMPTY
+EmptyG
 
 (23,18)-(23,76)
 sqrt

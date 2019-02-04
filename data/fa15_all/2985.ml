@@ -12,6 +12,18 @@ let stringOfList f l =
 *)
 
 (* changed spans
+(3,15)-(3,64)
+EMPTY
+EmptyG
+
+(3,21)-(3,22)
+EMPTY
+EmptyG
+
+(3,36)-(3,38)
+EMPTY
+EmptyG
+
 (3,49)-(3,60)
 (^)
 VarG

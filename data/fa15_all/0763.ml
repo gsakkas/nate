@@ -45,10 +45,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (14,35)-(14,58)
-a
-VarG
-
-(14,35)-(14,58)
 let (a1 , a2) = a in
 (if ((a1 + x1) + x2) >= 10
  then 1
@@ -62,40 +58,8 @@ else 0
 IteG (BopG EmptyG EmptyG) LitG LitG
 
 (14,37)-(14,38)
-a1
-VarG
-
-(14,37)-(14,38)
-x1
-VarG
-
-(14,37)-(14,38)
-x2
-VarG
-
-(14,37)-(14,38)
-(a1 + x1) + x2
-BopG (BopG EmptyG EmptyG) VarG
-
-(14,37)-(14,38)
 ((a1 + x1) + x2) >= 10
 BopG (BopG EmptyG EmptyG) LitG
-
-(14,37)-(14,38)
-a1 + x1
-BopG VarG VarG
-
-(14,37)-(14,38)
-10
-LitG
-
-(14,37)-(14,38)
-1
-LitG
-
-(14,43)-(14,45)
-a1
-VarG
 
 (14,43)-(14,45)
 a1 + x1
@@ -108,14 +72,6 @@ VarG
 (15,15)-(15,17)
 (0 , [0])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(16,4)-(17,51)
-0
-LitG
-
-(16,4)-(17,51)
-0
-LitG
 
 (16,4)-(17,51)
 [0]

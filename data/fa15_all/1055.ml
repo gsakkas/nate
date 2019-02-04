@@ -30,10 +30,6 @@ l1
 VarG
 
 (9,19)-(9,20)
-(@)
-VarG
-
-(9,19)-(9,20)
 clone 0 z
 AppG (fromList [VarG,LitG])
 
@@ -43,10 +39,6 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (9,39)-(9,40)
 l2
-VarG
-
-(10,20)-(10,21)
-(@)
 VarG
 
 (10,20)-(10,21)

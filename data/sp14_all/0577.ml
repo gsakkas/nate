@@ -33,16 +33,36 @@ LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 let xx = f x in (xx , xx <> x)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
-(9,47)-(9,48)
-xx
-VarG
+(9,32)-(9,71)
+EMPTY
+EmptyG
 
-(9,47)-(9,48)
-xx
-VarG
+(9,35)-(9,36)
+EMPTY
+EmptyG
+
+(9,35)-(9,40)
+EMPTY
+EmptyG
+
+(9,39)-(9,40)
+EMPTY
+EmptyG
 
 (9,47)-(9,48)
 xx <> x
 BopG VarG VarG
+
+(9,50)-(9,54)
+EMPTY
+EmptyG
+
+(9,62)-(9,67)
+EMPTY
+EmptyG
+
+(9,65)-(9,66)
+EMPTY
+EmptyG
 
 *)

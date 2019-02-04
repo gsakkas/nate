@@ -58,12 +58,24 @@ match a with
 | _ -> [sum / 10 ; sum mod 10]
 CaseG VarG (fromList [(Nothing,ConAppG (Just EmptyG) Nothing),(Nothing,ListG EmptyG Nothing)])
 
-(22,15)-(22,44)
-List.rev
-VarG
+(22,15)-(22,23)
+EMPTY
+EmptyG
 
 (22,15)-(22,44)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(22,37)-(22,44)
+EMPTY
+EmptyG
+
+(23,4)-(23,51)
+EMPTY
+EmptyG
+
+(23,48)-(23,51)
+EMPTY
+EmptyG
 
 *)

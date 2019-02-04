@@ -18,10 +18,6 @@ let pipe fs =
 
 (* changed spans
 (2,9)-(5,23)
-y
-VarG
-
-(2,9)-(5,23)
 fun y -> y
 LamG VarG
 
@@ -34,12 +30,12 @@ acc x
 AppG (fromList [VarG])
 
 (4,57)-(4,59)
-acc
-VarG
-
-(4,57)-(4,59)
 x
 VarG
+
+(5,7)-(5,20)
+EMPTY
+EmptyG
 
 (5,18)-(5,19)
 id

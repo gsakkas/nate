@@ -23,4 +23,8 @@ AppG (fromList [AppG (fromList [EmptyG])])
 append t [h]
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
+(5,68)-(5,75)
+EMPTY
+EmptyG
+
 *)

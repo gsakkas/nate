@@ -32,28 +32,8 @@ let rec digitalRoot n =
 
 (* changed spans
 (8,16)-(8,70)
-digitsOfInt
-VarG
-
-(8,16)-(8,70)
-abs
-VarG
-
-(8,16)-(8,70)
-n
-VarG
-
-(8,16)-(8,70)
 fun n -> digitsOfInt (abs n)
 LamG (AppG (fromList [EmptyG]))
-
-(8,16)-(8,70)
-digitsOfInt (abs n)
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(8,16)-(8,70)
-abs n
-AppG (fromList [VarG])
 
 (11,2)-(12,73)
 let d = digits n in

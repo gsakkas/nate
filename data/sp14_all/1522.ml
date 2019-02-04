@@ -15,9 +15,9 @@ let pipe fs =
 x (a k)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(3,20)-(3,21)
-a
-VarG
+(3,16)-(3,21)
+EMPTY
+EmptyG
 
 (3,20)-(3,21)
 a k

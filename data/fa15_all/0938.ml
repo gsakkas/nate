@@ -25,10 +25,6 @@ let padZero l1 l2 =
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (6,8)-(6,13)
-(@)
-VarG
-
-(6,8)-(6,13)
 clone 0
       (List.length l2 - List.length l1)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
@@ -40,10 +36,6 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (7,7)-(7,62)
 l2
-VarG
-
-(7,8)-(7,13)
-(@)
 VarG
 
 (7,8)-(7,13)

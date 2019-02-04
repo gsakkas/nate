@@ -50,10 +50,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (15,16)-(15,70)
-a
-VarG
-
-(15,16)-(15,70)
 match a with
 | (carry , rest) -> match x with
                     | (add1 , add2) -> (((add1 + add2) + carry) / 10 , (((add1 + add2) + carry) mod 10) :: rest)
@@ -68,40 +64,8 @@ carry
 VarG
 
 (16,4)-(18,51)
-add1
-VarG
-
-(16,4)-(18,51)
-add2
-VarG
-
-(16,4)-(18,51)
-carry
-VarG
-
-(16,4)-(18,51)
-rest
-VarG
-
-(16,4)-(18,51)
 ((add1 + add2) + carry) mod 10
 BopG (BopG EmptyG EmptyG) LitG
-
-(16,4)-(18,51)
-(add1 + add2) + carry
-BopG (BopG EmptyG EmptyG) VarG
-
-(16,4)-(18,51)
-add1 + add2
-BopG VarG VarG
-
-(16,4)-(18,51)
-10
-LitG
-
-(16,4)-(18,51)
-(((add1 + add2) + carry) mod 10) :: rest
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
 
 (16,15)-(16,16)
 (0 , [])

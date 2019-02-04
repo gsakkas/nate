@@ -58,10 +58,6 @@ exprToString e2
 AppG (fromList [VarG])
 
 (23,29)-(23,32)
-(^)
-VarG
-
-(23,29)-(23,32)
 "?" ^ (exprToString e3 ^ ("?" ^ exprToString e4))
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 

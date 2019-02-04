@@ -57,9 +57,17 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
+(26,17)-(26,20)
+EMPTY
+EmptyG
+
 (26,18)-(26,19)
 l
 VarG
+
+(26,35)-(26,59)
+EMPTY
+EmptyG
 
 (26,36)-(26,50)
 mulByDigit (i - 1) l
@@ -68,5 +76,9 @@ AppG (fromList [VarG,BopG EmptyG EmptyG])
 (26,48)-(26,49)
 i - 1
 BopG VarG LitG
+
+(26,53)-(26,58)
+EMPTY
+EmptyG
 
 *)

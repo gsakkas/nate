@@ -32,24 +32,12 @@ VarG
 LitG
 
 (9,33)-(9,42)
-(^)
-VarG
-
-(9,33)-(9,42)
 sepConcat ";" (List.map f l)
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (9,43)-(9,44)
-List.map
-VarG
-
-(9,43)-(9,44)
 List.map f l
 AppG (fromList [VarG])
-
-(9,43)-(9,44)
-";"
-LitG
 
 (9,48)-(9,49)
 "]"

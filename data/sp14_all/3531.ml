@@ -31,10 +31,6 @@ let palindrome w =
 
 (* changed spans
 (12,49)-(12,50)
-explode
-VarG
-
-(12,49)-(12,50)
 explode w
 AppG (fromList [VarG])
 

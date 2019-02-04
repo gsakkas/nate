@@ -13,21 +13,6 @@ let rec clone x n =
 
 (* changed spans
 (3,20)-(3,68)
-fun x ->
-  fun n ->
-    if n < 1
-    then accum
-    else x :: accum
-LamG (LamG EmptyG)
-
-(3,20)-(3,68)
-fun n ->
-  if n < 1
-  then accum
-  else x :: accum
-LamG (IteG EmptyG EmptyG EmptyG)
-
-(3,20)-(3,68)
 let helper =
   fun x ->
     fun n ->
@@ -37,17 +22,17 @@ let helper =
 helper x (n - 1)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
+(3,34)-(3,36)
+EMPTY
+EmptyG
+
 (3,42)-(3,47)
 accum
 VarG
 
-(3,61)-(3,68)
-helper
-VarG
-
-(3,61)-(3,68)
-x
-VarG
+(3,42)-(3,68)
+EMPTY
+EmptyG
 
 (3,61)-(3,68)
 helper x (n - 1)

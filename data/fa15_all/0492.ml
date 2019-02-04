@@ -49,10 +49,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (16,35)-(16,73)
-a
-VarG
-
-(16,35)-(16,73)
 let (carry , sum) = a in
 ((x1 + x2) / 10 , (((x1 + x2) + carry) mod 10) :: sum)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))

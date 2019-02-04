@@ -11,6 +11,18 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(3,2)-(3,71)
+EMPTY
+EmptyG
+
+(3,10)-(3,11)
+EMPTY
+EmptyG
+
+(3,37)-(3,71)
+EMPTY
+EmptyG
+
 (3,38)-(3,60)
 digitsOfInt (n / 10) @ [n mod 10]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])

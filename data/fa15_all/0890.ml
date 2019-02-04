@@ -31,6 +31,10 @@ let stringOfList f l =
 *)
 
 (* changed spans
+(13,19)-(13,20)
+EMPTY
+EmptyG
+
 (13,21)-(13,38)
 ""
 LitG
@@ -38,5 +42,9 @@ LitG
 (13,22)-(13,30)
 List.map f l
 AppG (fromList [VarG])
+
+(13,31)-(13,37)
+EMPTY
+EmptyG
 
 *)

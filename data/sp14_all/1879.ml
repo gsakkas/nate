@@ -101,4 +101,12 @@ BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
 2.0
 LitG
 
+(44,15)-(44,19)
+EMPTY
+EmptyG
+
+(44,15)-(44,36)
+EMPTY
+EmptyG
+
 *)

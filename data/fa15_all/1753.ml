@@ -20,15 +20,19 @@ let rec digitsOfInt n =
 ConAppG (Just (TupleG (fromList [AppG (fromList [BopG VarG LitG]),BopG VarG LitG]))) Nothing
 
 (5,15)-(5,35)
-n
-VarG
-
-(5,15)-(5,35)
 n mod 10
 BopG VarG LitG
 
-(5,15)-(5,35)
-10
-LitG
+(5,37)-(5,38)
+EMPTY
+EmptyG
+
+(5,37)-(5,45)
+EMPTY
+EmptyG
+
+(5,43)-(5,45)
+EMPTY
+EmptyG
 
 *)

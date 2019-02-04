@@ -78,22 +78,34 @@ match a with
                                           l1') a')
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(32,10)-(32,11)
-l1'
-VarG
+(32,4)-(32,70)
+EMPTY
+EmptyG
 
 (32,10)-(32,11)
 bigAdd (mulByDigit x l1') a'
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(32,25)-(32,27)
+EMPTY
+EmptyG
 
 (32,38)-(32,70)
 (l1' , bigAdd (mulByDigit x
                           l1') a')
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(32,45)-(32,70)
+EMPTY
+EmptyG
+
 (32,46)-(32,66)
 mulByDigit x l1'
 AppG (fromList [VarG])
+
+(32,58)-(32,65)
+EMPTY
+EmptyG
 
 (32,59)-(32,60)
 x

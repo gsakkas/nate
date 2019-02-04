@@ -54,97 +54,40 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (2,10)-(5,15)
-List.rev
-VarG
-
-(2,10)-(5,15)
-List.combine
-VarG
-
-(2,10)-(5,15)
-l1
-VarG
-
-(2,10)-(5,15)
-l2
-VarG
-
-(2,10)-(5,15)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(2,10)-(5,15)
-List.combine l1 l2
-AppG (fromList [VarG])
+(15,6)-(15,11)
+EMPTY
+EmptyG
 
-(2,10)-(5,15)
-0
-LitG
+(15,10)-(15,11)
+EMPTY
+EmptyG
 
-(2,10)-(5,15)
-0
-LitG
+(19,16)-(19,17)
+EMPTY
+EmptyG
 
-(2,10)-(5,15)
-9
-LitG
+(19,16)-(19,21)
+EMPTY
+EmptyG
 
-(2,10)-(5,15)
-9
-LitG
-
-(2,10)-(5,15)
-1
-LitG
-
-(2,10)-(5,15)
-0
-LitG
-
-(2,10)-(5,15)
-0
-LitG
-
-(2,10)-(5,15)
-2
-LitG
-
-(2,10)-(5,15)
-3
-LitG
-
-(2,10)-(5,15)
-3
-LitG
-
-(2,10)-(5,15)
-(3 , 3)
-TupleG (fromList [LitG])
-
-(2,10)-(5,15)
-(3 , 3) :: (List.rev (List.combine l1
-                                   l2))
-ConAppG (Just (TupleG (fromList [AppG (fromList [AppG (fromList [VarG])]),TupleG (fromList [LitG])]))) Nothing
-
-(2,10)-(5,15)
-[0 ; 0 ; 9 ; 9]
-ListG LitG Nothing
-
-(2,10)-(5,15)
-[1 ; 0 ; 0 ; 2]
-ListG LitG Nothing
+(20,15)-(20,18)
+EMPTY
+EmptyG
 
 (20,16)-(20,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
 (21,4)-(21,76)
-0
-LitG
-
-(21,4)-(21,76)
 []
 ListG EmptyG Nothing
+
+(21,17)-(21,19)
+EMPTY
+EmptyG
 
 (21,21)-(21,23)
 0
@@ -158,5 +101,45 @@ ListG EmptyG Nothing
 removeZero (add (padZero l1
                          l2))
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(22,2)-(22,56)
+EMPTY
+EmptyG
+
+(22,36)-(22,37)
+EMPTY
+EmptyG
+
+(22,38)-(22,39)
+EMPTY
+EmptyG
+
+(22,40)-(22,41)
+EMPTY
+EmptyG
+
+(22,42)-(22,43)
+EMPTY
+EmptyG
+
+(22,47)-(22,56)
+EMPTY
+EmptyG
+
+(22,48)-(22,49)
+EMPTY
+EmptyG
+
+(22,50)-(22,51)
+EMPTY
+EmptyG
+
+(22,52)-(22,53)
+EMPTY
+EmptyG
+
+(22,54)-(22,55)
+EMPTY
+EmptyG
 
 *)

@@ -62,10 +62,6 @@ ex y
 AppG (fromList [VarG])
 
 (26,52)-(26,55)
-(^)
-VarG
-
-(26,52)-(26,55)
 ")" ^ "^2"
 AppG (fromList [LitG])
 

@@ -61,6 +61,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(24,14)-(24,46)
+EMPTY
+EmptyG
+
 (24,33)-(24,34)
 valueToAddToArray :: currentSum
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing

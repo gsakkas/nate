@@ -65,6 +65,10 @@ let rec eval (e,x,y) =
 (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
+(21,23)-(21,66)
+EMPTY
+EmptyG
+
 (21,24)-(21,41)
 eval (e1 , x , y) +. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))

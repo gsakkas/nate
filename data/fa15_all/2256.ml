@@ -87,8 +87,16 @@ let bigMul l1 l2 =
 bigAdd (mulByDigit prod l1) l
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(37,47)-(37,74)
+EMPTY
+EmptyG
+
 (37,48)-(37,65)
 mulByDigit prod l1
 AppG (fromList [VarG])
+
+(37,67)-(37,73)
+EMPTY
+EmptyG
 
 *)

@@ -65,9 +65,25 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(30,40)-(30,49)
+EMPTY
+EmptyG
+
+(30,40)-(30,52)
+EMPTY
+EmptyG
+
 (30,50)-(30,52)
 1.0
 LitG
+
+(30,60)-(30,74)
+EMPTY
+EmptyG
+
+(30,61)-(30,70)
+EMPTY
+EmptyG
 
 (30,71)-(30,73)
 1.0

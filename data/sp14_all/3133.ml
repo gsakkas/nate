@@ -73,24 +73,12 @@ d1 + d2
 BopG VarG VarG
 
 (23,47)-(23,55)
-d1
-VarG
-
-(23,47)-(23,55)
 d2
 VarG
 
 (23,48)-(23,49)
 d1 + d2
 BopG VarG VarG
-
-(23,53)-(23,54)
-d1
-VarG
-
-(23,53)-(23,54)
-d2
-VarG
 
 (23,53)-(23,54)
 match a with
@@ -101,13 +89,25 @@ CaseG VarG (fromList [(Nothing,VarG)])
 a2
 VarG
 
-(25,54)-(25,56)
-List.combine
-VarG
+(25,15)-(25,59)
+EMPTY
+EmptyG
 
-(25,54)-(25,56)
-l1
-VarG
+(25,21)-(25,23)
+EMPTY
+EmptyG
+
+(25,39)-(25,59)
+EMPTY
+EmptyG
+
+(25,40)-(25,58)
+EMPTY
+EmptyG
+
+(25,41)-(25,42)
+EMPTY
+EmptyG
 
 (25,54)-(25,56)
 List.combine l1 l2

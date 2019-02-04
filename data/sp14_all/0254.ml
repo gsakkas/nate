@@ -35,9 +35,13 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(14,38)-(14,49)
-sumList
-VarG
+(14,16)-(14,23)
+EMPTY
+EmptyG
+
+(14,24)-(14,53)
+EMPTY
+EmptyG
 
 (14,38)-(14,49)
 digitsOfInt n

@@ -1,7 +1,5 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-match f x with
-| x -> (x , false)
-| y -> (y , true)
-match f x with
-| x -> (x , false)
-| y -> (y , true)
+CaseG VarG (fromList [(Nothing,VarG),(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
+match xs with
+| [] -> 0
+| h :: _ -> h
+| h :: t -> h + sumList t

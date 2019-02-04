@@ -48,53 +48,31 @@ let palindrome w =
 
 (* changed spans
 (7,12)-(10,6)
-listReverse
-VarG
-
-(7,12)-(10,6)
-z
-VarG
-
-(7,12)-(10,6)
-t
-VarG
-
-(7,12)-(10,6)
 fun z ->
   match listReverse z with
   | [] -> []
   | h :: t -> t
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(7,12)-(10,6)
-listReverse z
-AppG (fromList [VarG])
+(13,8)-(13,15)
+EMPTY
+EmptyG
 
-(7,12)-(10,6)
-match listReverse z with
-| [] -> []
-| h :: t -> t
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,VarG),(Nothing,ListG EmptyG Nothing)])
+(13,8)-(13,17)
+EMPTY
+EmptyG
 
-(7,12)-(10,6)
-[]
-ListG EmptyG Nothing
+(15,19)-(15,30)
+EMPTY
+EmptyG
+
+(15,20)-(15,27)
+EMPTY
+EmptyG
 
 (17,38)-(17,42)
 matchHeads (loseTail t)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(17,48)-(17,53)
-matchHeads
-VarG
-
-(17,48)-(17,53)
-loseTail
-VarG
-
-(17,48)-(17,53)
-t
-VarG
 
 (17,48)-(17,53)
 loseTail t

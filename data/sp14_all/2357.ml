@@ -24,28 +24,12 @@ x ^ a
 AppG (fromList [VarG])
 
 (7,6)-(7,60)
-x
-VarG
-
-(7,6)-(7,60)
-(^)
-VarG
-
-(7,6)-(7,60)
 a
 VarG
 
 (7,17)-(7,19)
 sepConcat sep t
 AppG (fromList [VarG])
-
-(7,23)-(7,60)
-sepConcat
-VarG
-
-(7,23)-(7,60)
-sep
-VarG
 
 (7,23)-(7,60)
 t

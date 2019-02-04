@@ -1,3 +1,2 @@
-LetG NonRec (fromList [VarG]) VarG
-let an = a in x
-let an = a in x
+AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
+List.combine l1 (0 :: l2)

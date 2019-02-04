@@ -53,10 +53,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (18,21)-(18,66)
-a
-VarG
-
-(18,21)-(18,66)
 match a with
 | (carry , list) -> (let num =
                        (l1e + l2e) + carry in
@@ -68,16 +64,8 @@ carry
 VarG
 
 (18,64)-(18,65)
-(@)
-VarG
-
-(18,64)-(18,65)
 [7] @ list
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(18,64)-(18,65)
-[7]
-ListG LitG Nothing
 
 (19,4)-(21,51)
 list
@@ -86,5 +74,25 @@ VarG
 (22,18)-(22,64)
 (padZero l1 l2 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(22,35)-(22,63)
+EMPTY
+EmptyG
+
+(22,39)-(22,41)
+EMPTY
+EmptyG
+
+(22,39)-(22,46)
+EMPTY
+EmptyG
+
+(22,52)-(22,54)
+EMPTY
+EmptyG
+
+(22,60)-(22,62)
+EMPTY
+EmptyG
 
 *)

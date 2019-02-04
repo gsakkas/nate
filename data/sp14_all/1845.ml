@@ -19,13 +19,21 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(4,10)-(4,13)
+EMPTY
+EmptyG
+
 (4,43)-(4,49)
 xs2
 VarG
 
-(4,62)-(4,64)
-append
-VarG
+(4,43)-(4,64)
+EMPTY
+EmptyG
+
+(4,51)-(4,54)
+EMPTY
+EmptyG
 
 (4,62)-(4,64)
 append tl xs2

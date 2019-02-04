@@ -51,4 +51,40 @@ let bigAdd l1 l2 =
 (((x1 + x2) + carry) / 10 , (((x1 + x2) + carry) mod 10) :: accList)
 TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 
+(17,11)-(17,57)
+EMPTY
+EmptyG
+
+(17,12)-(17,13)
+EMPTY
+EmptyG
+
+(18,11)-(18,38)
+EMPTY
+EmptyG
+
+(18,12)-(18,13)
+EMPTY
+EmptyG
+
+(18,15)-(18,37)
+EMPTY
+EmptyG
+
+(18,16)-(18,25)
+EMPTY
+EmptyG
+
+(18,17)-(18,19)
+EMPTY
+EmptyG
+
+(18,22)-(18,24)
+EMPTY
+EmptyG
+
+(18,29)-(18,36)
+EMPTY
+EmptyG
+
 *)

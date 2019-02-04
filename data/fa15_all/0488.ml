@@ -60,37 +60,9 @@ LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 BopG (BopG EmptyG EmptyG) LitG
 
 (16,42)-(16,56)
-a
-VarG
-
-(16,42)-(16,56)
-x1
-VarG
-
-(16,42)-(16,56)
-x2
-VarG
-
-(16,42)-(16,56)
-(x1 + x2) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,42)-(16,56)
-x1 + x2
-BopG VarG VarG
-
-(16,42)-(16,56)
-10
-LitG
-
-(16,42)-(16,56)
 let (carry , sum) = a in
 ((x1 + x2) / 10 , (((x1 + x2) + carry) mod 10) :: sum)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(16,42)-(16,56)
-((x1 + x2) / 10 , (((x1 + x2) + carry) mod 10) :: sum)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 
 (16,43)-(16,45)
 x1 + x2
@@ -104,10 +76,6 @@ VarG
 sum
 VarG
 
-(17,4)-(20,51)
-10
-LitG
-
 (17,16)-(17,18)
 0
 LitG
@@ -118,17 +86,25 @@ let (l1' , l2') =
 List.combine l1' l2'
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
+(19,42)-(19,45)
+EMPTY
+EmptyG
+
+(19,42)-(19,75)
+EMPTY
+EmptyG
+
+(19,46)-(19,58)
+EMPTY
+EmptyG
+
+(19,59)-(19,62)
+EMPTY
+EmptyG
+
 (19,63)-(19,75)
 List.combine l1' l2'
 AppG (fromList [VarG])
-
-(20,4)-(20,51)
-List.combine
-VarG
-
-(20,4)-(20,51)
-l1'
-VarG
 
 (20,4)-(20,51)
 l2'

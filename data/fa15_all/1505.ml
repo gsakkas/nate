@@ -72,4 +72,12 @@ List.combine (List.rev l1)
              (List.rev l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
+(26,4)-(26,51)
+EMPTY
+EmptyG
+
+(26,48)-(26,51)
+EMPTY
+EmptyG
+
 *)

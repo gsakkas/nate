@@ -97,4 +97,12 @@ let rec eval (e,x,y) =
 (((atan res1 +. atan res2) -. atan res3) *. 2.0) /. (3.0 *. pi)
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
 
+(44,15)-(44,19)
+EMPTY
+EmptyG
+
+(44,15)-(44,36)
+EMPTY
+EmptyG
+
 *)

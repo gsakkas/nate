@@ -29,10 +29,18 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
+(11,22)-(11,56)
+EMPTY
+EmptyG
+
 (11,23)-(11,39)
 List.combine (0 :: l1)
              (0 :: l2)
 AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
+
+(11,37)-(11,38)
+EMPTY
+EmptyG
 
 (11,43)-(11,49)
 0

@@ -66,39 +66,39 @@ let rec exprToString e =
 
 (* changed spans
 (17,16)-(17,39)
-a
-VarG
-
-(17,16)-(17,39)
-b
-VarG
-
-(17,16)-(17,39)
-a_less
-VarG
-
-(17,16)-(17,39)
-b_less
-VarG
-
-(17,16)-(17,39)
 fun (a , b , a_less , b_less) ->
   Thresh (a , b , a_less , b_less)
 LamG (ConAppG (Just (TupleG (fromList [VarG]))) Nothing)
 
-(17,16)-(17,39)
-Thresh (a , b , a_less , b_less)
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+(19,11)-(19,20)
+EMPTY
+EmptyG
+
+(19,16)-(19,20)
+EMPTY
+EmptyG
+
+(21,11)-(21,20)
+EMPTY
+EmptyG
+
+(21,16)-(21,20)
+EMPTY
+EmptyG
+
+(25,24)-(25,36)
+EMPTY
+EmptyG
+
+(25,24)-(25,56)
+EMPTY
+EmptyG
 
 (25,37)-(25,43)
 let e' =
   buildThresh (a , b , c , d) in
 exprToString e'
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
-
-(25,44)-(25,56)
-buildThresh
-VarG
 
 (25,44)-(25,56)
 buildThresh (a , b , c , d)
@@ -109,14 +109,6 @@ exprToString e'
 AppG (fromList [VarG])
 
 (26,32)-(26,42)
-e'
-VarG
-
-(26,32)-(26,42)
-buildTimes (a , b)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(26,32)-(26,42)
 let e' = buildTimes (a , b) in
 exprToString e'
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
@@ -124,14 +116,6 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 (27,21)-(27,53)
 exprToString e'
 AppG (fromList [VarG])
-
-(27,34)-(27,46)
-e'
-VarG
-
-(27,34)-(27,46)
-buildAverage (a , b)
-AppG (fromList [TupleG (fromList [EmptyG])])
 
 (27,34)-(27,46)
 let e' =
@@ -144,28 +128,12 @@ exprToString e'
 AppG (fromList [VarG])
 
 (28,29)-(28,40)
-e'
-VarG
-
-(28,29)-(28,40)
-buildCosine a
-AppG (fromList [VarG])
-
-(28,29)-(28,40)
 let e' = buildCosine a in
 exprToString e'
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
 (29,14)-(29,38)
 exprToString e'
-AppG (fromList [VarG])
-
-(29,27)-(29,36)
-e'
-VarG
-
-(29,27)-(29,36)
-buildSine a
 AppG (fromList [VarG])
 
 (29,27)-(29,36)

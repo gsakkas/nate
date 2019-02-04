@@ -74,27 +74,55 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
+(31,4)-(33,75)
+EMPTY
+EmptyG
+
+(31,16)-(31,17)
+EMPTY
+EmptyG
+
 (32,4)-(33,75)
 match a with
 | (l1' , a') -> (l1' , bigAdd (mulByDigit x
                                           l1') a')
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(33,4)-(33,75)
+EMPTY
+EmptyG
+
+(33,10)-(33,12)
+EMPTY
+EmptyG
+
+(33,26)-(33,28)
+EMPTY
+EmptyG
+
 (33,39)-(33,75)
 bigAdd (mulByDigit x l1') a'
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(33,40)-(33,41)
+EMPTY
+EmptyG
 
 (33,43)-(33,74)
 l1'
 VarG
 
-(33,64)-(33,65)
-l1'
-VarG
+(33,51)-(33,73)
+EMPTY
+EmptyG
 
 (33,64)-(33,65)
 a'
 VarG
+
+(33,66)-(33,68)
+EMPTY
+EmptyG
 
 (33,70)-(33,72)
 x
@@ -103,5 +131,17 @@ VarG
 (34,13)-(34,20)
 []
 ListG EmptyG Nothing
+
+(34,14)-(34,15)
+EMPTY
+EmptyG
+
+(35,13)-(35,32)
+EMPTY
+EmptyG
+
+(35,29)-(35,31)
+EMPTY
+EmptyG
 
 *)

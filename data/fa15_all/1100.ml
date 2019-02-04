@@ -48,12 +48,28 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(16,6)-(17,60)
+EMPTY
+EmptyG
+
 (16,16)-(16,45)
 let b = fst x + snd x in
 match a with
 | h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
 | _ -> [b / 10 ; b mod 10]
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+
+(16,38)-(16,45)
+EMPTY
+EmptyG
+
+(16,39)-(16,42)
+EMPTY
+EmptyG
+
+(16,43)-(16,44)
+EMPTY
+EmptyG
 
 (17,6)-(17,60)
 match a with
@@ -66,10 +82,6 @@ h + b
 BopG VarG VarG
 
 (17,36)-(17,38)
-h
-VarG
-
-(17,36)-(17,38)
 b
 VarG
 
@@ -78,39 +90,19 @@ h + b
 BopG VarG VarG
 
 (17,52)-(17,54)
-h
-VarG
-
-(17,52)-(17,54)
 b
 VarG
-
-(18,4)-(20,51)
-b
-VarG
-
-(18,4)-(20,51)
-b
-VarG
-
-(18,4)-(20,51)
-b / 10
-BopG VarG LitG
-
-(18,4)-(20,51)
-b mod 10
-BopG VarG LitG
-
-(18,4)-(20,51)
-10
-LitG
-
-(18,4)-(20,51)
-10
-LitG
 
 (18,4)-(20,51)
 [b / 10 ; b mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
+
+(20,4)-(20,51)
+EMPTY
+EmptyG
+
+(20,48)-(20,51)
+EMPTY
+EmptyG
 
 *)

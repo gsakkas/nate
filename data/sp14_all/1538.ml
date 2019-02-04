@@ -15,6 +15,10 @@ let sqsum xs =
 *)
 
 (* changed spans
+(4,13)-(4,64)
+EMPTY
+EmptyG
+
 (4,19)-(4,21)
 match xs with
 | hd :: tl -> f (f hd hd) tl

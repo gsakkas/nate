@@ -86,24 +86,8 @@ match e with
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
 (30,6)-(30,53)
-exp
-VarG
-
-(30,6)-(30,53)
 exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
 AppG (fromList [UopG EmptyG])
-
-(30,6)-(30,53)
-((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(30,6)-(30,53)
-(-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-UopG (BopG EmptyG EmptyG)
-
-(30,6)-(30,53)
-2.0
-LitG
 
 (30,6)-(30,74)
 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
@@ -116,5 +100,17 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 (30,51)-(30,52)
 2.0
 LitG
+
+(31,9)-(31,17)
+EMPTY
+EmptyG
+
+(31,9)-(31,76)
+EMPTY
+EmptyG
+
+(31,18)-(31,76)
+EMPTY
+EmptyG
 
 *)

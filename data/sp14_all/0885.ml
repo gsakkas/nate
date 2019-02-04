@@ -11,6 +11,14 @@ let sqsum xs =
 *)
 
 (* changed spans
+(3,14)-(3,22)
+EMPTY
+EmptyG
+
+(3,14)-(3,27)
+EMPTY
+EmptyG
+
 (3,15)-(3,16)
 a * a
 BopG VarG VarG

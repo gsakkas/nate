@@ -46,10 +46,6 @@ mulByDigit i t
 AppG (fromList [VarG])
 
 (17,32)-(17,64)
-i
-VarG
-
-(17,32)-(17,64)
 t
 VarG
 

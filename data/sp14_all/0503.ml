@@ -72,10 +72,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (24,8)-(26,39)
-carry
-VarG
-
-(24,8)-(26,39)
 let ch :: _ = carry in
 let tens =
   ((x1 + x2) + ch) / 10 in

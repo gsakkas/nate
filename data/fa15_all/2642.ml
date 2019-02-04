@@ -81,22 +81,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (28,19)-(29,72)
-n
-VarG
-
-(28,19)-(29,72)
-(@)
-VarG
-
-(28,19)-(29,72)
-listZeros
-VarG
-
-(28,19)-(29,72)
-n
-VarG
-
-(28,19)-(29,72)
 fun n ->
   match n with
   | 0 -> []
@@ -104,69 +88,30 @@ fun n ->
   | x -> [0] @ listZeros (n - 1)
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(28,19)-(29,72)
-[0] @ listZeros (n - 1)
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(28,19)-(29,72)
-listZeros (n - 1)
-AppG (fromList [BopG EmptyG EmptyG])
-
-(28,19)-(29,72)
-n - 1
-BopG VarG LitG
-
-(28,19)-(29,72)
-0
-LitG
-
-(28,19)-(29,72)
-0
-LitG
-
-(28,19)-(29,72)
-1
-LitG
-
-(28,19)-(29,72)
-match n with
-| 0 -> []
-| 1 -> [0]
-| x -> [0] @ listZeros (n - 1)
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
-
-(28,19)-(29,72)
-[]
-ListG EmptyG Nothing
-
-(28,19)-(29,72)
-[0]
-ListG LitG Nothing
-
-(28,19)-(29,72)
-[0]
-ListG LitG Nothing
-
 (34,16)-(34,59)
 bigAdd total (mulByDigit x
                          l2) @ listZeros pow
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (34,17)-(34,22)
-bigAdd
-VarG
-
-(34,17)-(34,22)
-(@)
-VarG
-
-(34,17)-(34,22)
 bigAdd total (mulByDigit x l2)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(34,25)-(34,58)
+EMPTY
+EmptyG
+
+(34,46)-(34,57)
+EMPTY
+EmptyG
 
 (34,47)-(34,49)
 listZeros pow
 AppG (fromList [VarG])
+
+(34,50)-(34,52)
+EMPTY
+EmptyG
 
 (34,53)-(34,56)
 listZeros

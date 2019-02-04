@@ -20,19 +20,7 @@ digits @ [n mod 10]
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
 (3,51)-(3,61)
-digits
-VarG
-
-(3,51)-(3,61)
-(@)
-VarG
-
-(3,51)-(3,61)
 digits @ [n mod 10]
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(3,51)-(3,61)
-[n mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
 
 *)

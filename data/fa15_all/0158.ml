@@ -19,9 +19,29 @@ let fixpoint (f,b) = wwhile ((fun x  -> (x, ((f x) = x))), b);;
 fun x -> (x , f x = x)
 LamG (TupleG (fromList [EmptyG]))
 
+(5,30)-(5,35)
+EMPTY
+EmptyG
+
+(5,31)-(5,32)
+EMPTY
+EmptyG
+
+(5,33)-(5,34)
+EMPTY
+EmptyG
+
+(5,37)-(5,54)
+EMPTY
+EmptyG
+
 (5,38)-(5,41)
 x
 VarG
+
+(5,46)-(5,47)
+EMPTY
+EmptyG
 
 (5,51)-(5,52)
 x

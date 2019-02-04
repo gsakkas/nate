@@ -66,10 +66,6 @@ let rec mulByDigit i l =
 ListG LitG Nothing
 
 (28,31)-(28,68)
-bigAdd
-VarG
-
-(28,31)-(28,68)
 bigAdd l l
 AppG (fromList [VarG])
 

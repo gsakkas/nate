@@ -29,6 +29,10 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
+(12,21)-(12,42)
+EMPTY
+EmptyG
+
 (12,22)-(12,31)
 clone 0 (- lendiff)
 AppG (fromList [UopG EmptyG,LitG])

@@ -57,6 +57,10 @@ let rec exprToString e =
 *)
 
 (* changed spans
+(13,13)-(13,17)
+EMPTY
+EmptyG
+
 (14,13)-(14,17)
 "x"
 LitG

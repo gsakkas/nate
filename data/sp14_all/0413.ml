@@ -14,6 +14,14 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(4,21)-(4,27)
+EMPTY
+EmptyG
+
+(4,21)-(4,65)
+EMPTY
+EmptyG
+
 (4,28)-(4,65)
 let w =
   fun b' ->
@@ -37,19 +45,7 @@ b'
 VarG
 
 (4,63)-(4,64)
-wwhile
-VarG
-
-(4,63)-(4,64)
-w
-VarG
-
-(4,63)-(4,64)
 wwhile (w , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(4,63)-(4,64)
-(w , b)
-TupleG (fromList [VarG])
 
 *)

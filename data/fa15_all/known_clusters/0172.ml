@@ -1,7 +1,4 @@
-IteG VarG (AppG (fromList [EmptyG])) VarG
-if t
-then wwhile (f , i)
-else i
-if c'
-then wwhile (f , b')
-else b'
+IteG (AppG (fromList [EmptyG])) VarG (ConAppG (Just EmptyG) Nothing)
+if List.mem h seen
+then seen
+else h :: seen

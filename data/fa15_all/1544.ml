@@ -35,4 +35,12 @@ VarG
 x
 VarG
 
+(7,71)-(7,75)
+EMPTY
+EmptyG
+
+(8,6)-(8,7)
+EMPTY
+EmptyG
+
 *)

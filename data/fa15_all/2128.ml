@@ -10,6 +10,22 @@ let pipe fs = let f a x = x in let base x = x in List.fold_left f base fs;;
 *)
 
 (* changed spans
+(3,14)-(3,17)
+EMPTY
+EmptyG
+
+(3,16)-(3,17)
+EMPTY
+EmptyG
+
+(3,32)-(3,39)
+EMPTY
+EmptyG
+
+(3,32)-(3,42)
+EMPTY
+EmptyG
+
 (3,40)-(3,42)
 fun x -> x
 LamG VarG

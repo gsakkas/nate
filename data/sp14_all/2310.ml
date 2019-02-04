@@ -49,6 +49,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(19,41)-(19,49)
+EMPTY
+EmptyG
+
+(19,42)-(19,43)
+EMPTY
+EmptyG
+
 (19,47)-(19,48)
 []
 ListG EmptyG Nothing

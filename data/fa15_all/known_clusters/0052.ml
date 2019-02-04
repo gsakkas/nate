@@ -1,51 +1,26 @@
-AppG (fromList [BopG EmptyG EmptyG,LitG])
-clone 0 (ll1 - ll2)
-clone 0 (ll2 - ll1)
-clone 0 (ll2 - ll1)
-clone 0 (ll2 - ll1)
-clone 0 (0 - n)
-clone 0 (0 - n)
-clone 0 (n * (-1))
-clone 0 (n * (-1))
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0
-      (List.length l2 - List.length l1)
-clone 0
-      (List.length l1 - List.length l2)
-clone 0 (y - x)
-clone 0 (x - y)
+TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
+(((cin + d1) + d2) mod 10 , ((cin + d1) + d2) :: res)
+(((x1 + x2) + carry) / 10 , (((x1 + x2) + carry) mod 10) :: accList)
+(m / 10 , (m mod 10) :: z)
+(m / 10 , (m mod 10) :: z)
+(b / 10 , (b mod 10) :: ((h + y) :: t))
+(((x + y) + w) / 10 , (((x + y) + w) mod 10) :: z)
+(((x + y) + w) / 10 , (((x + y) + w) mod 10) :: z)
+(((x + y) + w) / 10 , (((x + y) + w) mod 10) :: z)
+(((x + y) + w) / 10 , (((x + y) + w) mod 10) :: z)
+((x1 + x2) / 10 , (((a1 + x1) + x2) mod 10) :: a2)
+((x1 + x2) / 10 , (((a1 + x1) + x2) mod 10) :: a2)
+((x1 + x2) / 10 , (((a1 + x1) + x2) mod 10) :: a2)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(num / 10 , (num mod 10) :: res)
+(((num1 + num2) + carry) / 10 , (((num1 + num2) + carry) mod 10) :: sum)

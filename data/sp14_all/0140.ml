@@ -40,10 +40,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (13,16)-(13,49)
-a
-VarG
-
-(13,16)-(13,49)
 let (carry , num) = a in
 let (l1 , l2) = x in
 (0 , l1 :: num)

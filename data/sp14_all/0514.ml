@@ -17,16 +17,8 @@ a + int_of_float (float_of_int x ** 2.0)
 BopG VarG (AppG (fromList [EmptyG]))
 
 (3,19)-(3,29)
-int_of_float
-VarG
-
-(3,19)-(3,29)
 int_of_float (float_of_int x ** 2.0)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(3,20)-(3,21)
-float_of_int
-VarG
 
 (3,20)-(3,21)
 float_of_int x

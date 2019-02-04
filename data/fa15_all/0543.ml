@@ -82,10 +82,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (11,7)-(11,59)
-l1
-VarG
-
-(11,7)-(11,59)
 (l1 , clone 0
             (List.length l1 - List.length l2) @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])

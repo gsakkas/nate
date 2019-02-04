@@ -29,12 +29,48 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
+(10,2)-(14,13)
+EMPTY
+EmptyG
+
+(10,18)-(13,65)
+EMPTY
+EmptyG
+
+(12,9)-(12,10)
+EMPTY
+EmptyG
+
 (13,9)-(13,16)
 0
 LitG
 
+(13,9)-(13,65)
+EMPTY
+EmptyG
+
+(13,18)-(13,19)
+EMPTY
+EmptyG
+
 (13,25)-(13,44)
 additivePersistence (sumList (digits n))
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(14,2)-(14,9)
+EMPTY
+EmptyG
+
+(14,2)-(14,13)
+EMPTY
+EmptyG
+
+(14,10)-(14,11)
+EMPTY
+EmptyG
+
+(14,12)-(14,13)
+EMPTY
+EmptyG
 
 *)

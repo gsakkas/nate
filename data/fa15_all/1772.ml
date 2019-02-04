@@ -37,6 +37,14 @@ let removeDuplicates l =
 h :: seen
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
+(12,20)-(12,28)
+EMPTY
+EmptyG
+
+(12,25)-(12,26)
+EMPTY
+EmptyG
+
 (13,8)-(13,58)
 seen
 VarG
@@ -44,5 +52,9 @@ VarG
 (13,20)-(13,33)
 filter t h
 AppG (fromList [VarG])
+
+(13,27)-(13,33)
+EMPTY
+EmptyG
 
 *)

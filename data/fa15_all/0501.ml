@@ -24,21 +24,9 @@ List.rev (0 :: l)
 AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
 
 (6,47)-(6,73)
-l
-VarG
-
-(6,47)-(6,73)
-0
-LitG
-
-(6,47)-(6,73)
 let (_ , res) =
   List.fold_left f base args in
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
-
-(6,47)-(6,73)
-0 :: l
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
 
 *)

@@ -43,4 +43,12 @@ let rec eval (e,x,y) =
 eval (e1 , x , y) +. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
+(17,23)-(17,66)
+EMPTY
+EmptyG
+
+(17,65)-(17,66)
+EMPTY
+EmptyG
+
 *)

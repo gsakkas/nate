@@ -63,6 +63,30 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(18,2)-(31,76)
+EMPTY
+EmptyG
+
+(18,16)-(18,20)
+EMPTY
+EmptyG
+
+(18,16)-(18,27)
+EMPTY
+EmptyG
+
+(18,21)-(18,27)
+EMPTY
+EmptyG
+
+(18,22)-(18,23)
+EMPTY
+EmptyG
+
+(18,25)-(18,26)
+EMPTY
+EmptyG
+
 (25,26)-(25,33)
 rand
 VarG

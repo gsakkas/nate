@@ -70,80 +70,24 @@ let rec eval (e,x,y) =
 BopG (BopG EmptyG EmptyG) LitG
 
 (27,24)-(27,25)
-eval
-VarG
-
-(27,24)-(27,25)
-eval (a , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(27,24)-(27,25)
-(a , x , y)
-TupleG (fromList [VarG])
-
-(27,29)-(27,30)
-x
-VarG
-
-(27,29)-(27,30)
-y
-VarG
-
-(27,29)-(27,30)
-eval
-VarG
-
-(27,29)-(27,30)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (27,29)-(27,30)
-(a , x , y)
-TupleG (fromList [VarG])
-
-(27,35)-(27,43)
-x
-VarG
+eval (a , x , y)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 (27,35)-(27,43)
 y
 VarG
 
 (27,36)-(27,37)
-eval
-VarG
-
-(27,36)-(27,37)
-eval (b , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(27,36)-(27,37)
-(b , x , y)
-TupleG (fromList [VarG])
-
-(27,41)-(27,42)
-x
-VarG
-
-(27,41)-(27,42)
-y
-VarG
-
-(27,41)-(27,42)
-eval
-VarG
-
-(27,41)-(27,42)
 eval (b , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (27,41)-(27,42)
-(b , x , y)
-TupleG (fromList [VarG])
-
-(27,47)-(27,50)
-x
-VarG
+eval (b , x , y)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 (27,47)-(27,50)
 y
@@ -154,60 +98,16 @@ VarG
 BopG (BopG EmptyG EmptyG) LitG
 
 (28,26)-(28,27)
-eval
-VarG
-
-(28,26)-(28,27)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(28,26)-(28,27)
-(a , x , y)
-TupleG (fromList [VarG])
-
-(28,31)-(28,32)
-x
-VarG
-
-(28,31)-(28,32)
-y
-VarG
-
-(28,31)-(28,32)
-eval
-VarG
 
 (28,31)-(28,32)
 eval (b , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(28,31)-(28,32)
-(b , x , y)
-TupleG (fromList [VarG])
-
-(28,37)-(28,38)
-x
-VarG
-
-(28,37)-(28,38)
-y
-VarG
-
-(28,37)-(28,38)
-eval
-VarG
-
 (28,37)-(28,38)
 eval (c , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(28,37)-(28,38)
-(c , x , y)
-TupleG (fromList [VarG])
-
-(28,42)-(28,45)
-x
-VarG
 
 (28,42)-(28,45)
 y

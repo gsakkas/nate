@@ -21,6 +21,10 @@ match fs with
 | [] -> fun x -> x
 CaseG VarG (fromList [(Nothing,LamG EmptyG),(Nothing,AppG (fromList [EmptyG]))])
 
+(4,43)-(4,44)
+EMPTY
+EmptyG
+
 (4,45)-(4,46)
 h
 VarG

@@ -63,10 +63,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (20,6)-(25,15)
-x
-VarG
-
-(20,6)-(25,15)
 let (x1 , x2) = x in
 let (a1 , a2) = a in
 let h :: _ = a1 in
@@ -76,6 +72,10 @@ let ones =
   (x1 + x2) + (h mod 10) in
 (tens :: a1 , ones :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+
+(21,6)-(25,15)
+EMPTY
+EmptyG
 
 (21,12)-(21,13)
 let h :: _ = a1 in
@@ -98,21 +98,33 @@ VarG
 h
 VarG
 
+(24,48)-(24,65)
+EMPTY
+EmptyG
+
 (24,49)-(24,53)
 tens :: a1
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (24,55)-(24,59)
-a1
-VarG
-
-(24,55)-(24,59)
 ones :: a2
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+
+(24,64)-(24,65)
+EMPTY
+EmptyG
 
 (25,14)-(25,15)
 a2
 VarG
+
+(26,15)-(26,23)
+EMPTY
+EmptyG
+
+(26,17)-(26,18)
+EMPTY
+EmptyG
 
 (26,20)-(26,21)
 []

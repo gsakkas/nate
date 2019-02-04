@@ -27,13 +27,25 @@ let removeDuplicates l =
 seen
 VarG
 
+(7,34)-(7,35)
+EMPTY
+EmptyG
+
 (7,41)-(7,42)
 h :: seen
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
+(7,41)-(7,47)
+EMPTY
+EmptyG
+
 (7,43)-(7,44)
 seen
 VarG
+
+(7,45)-(7,47)
+EMPTY
+EmptyG
 
 (8,8)-(8,46)
 seen

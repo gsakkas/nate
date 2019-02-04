@@ -17,20 +17,16 @@ let rec additivePersistence n =
 
 (* changed spans
 (2,9)-(2,19)
-i
-VarG
-
-(2,9)-(2,19)
 fun i -> i + 1
 LamG (BopG EmptyG EmptyG)
 
-(2,9)-(2,19)
-i + 1
-BopG VarG LitG
+(4,54)-(4,56)
+EMPTY
+EmptyG
 
-(2,9)-(2,19)
-1
-LitG
+(4,54)-(4,62)
+EMPTY
+EmptyG
 
 (4,60)-(4,62)
 match n with

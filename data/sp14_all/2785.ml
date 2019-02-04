@@ -67,4 +67,8 @@ match e with
                                 else eval (e9 , x , y)
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(25,9)-(25,27)
+EMPTY
+EmptyG
+
 *)

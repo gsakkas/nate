@@ -24,14 +24,14 @@ let stringOfList f l =
 *)
 
 (* changed spans
+(9,38)-(9,66)
+EMPTY
+EmptyG
+
 (9,39)-(9,44)
 List.append ("[" :: (List.map f
                               l)) ["]"]
 AppG (fromList [ConAppG (Just EmptyG) Nothing,ListG EmptyG Nothing])
-
-(9,40)-(9,43)
-List.append
-VarG
 
 (9,40)-(9,43)
 "[" :: (List.map f l)

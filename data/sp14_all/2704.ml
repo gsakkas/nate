@@ -10,6 +10,14 @@ let rec digitsOfInt n = if n > 0 then [n / 10; n mod 10] else [];;
 *)
 
 (* changed spans
+(3,16)-(3,38)
+EMPTY
+EmptyG
+
+(3,16)-(3,52)
+EMPTY
+EmptyG
+
 (3,17)-(3,28)
 [n / 10 ; n mod 10]
 ListG (BopG EmptyG EmptyG) Nothing

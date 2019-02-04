@@ -95,20 +95,12 @@ exprToString expr0
 AppG (fromList [VarG])
 
 (22,20)-(22,74)
-exprToString
-VarG
-
-(22,20)-(22,74)
 expr0
 VarG
 
 (22,28)-(22,32)
 exprToString expr1
 AppG (fromList [VarG])
-
-(22,35)-(22,72)
-exprToString
-VarG
 
 (22,35)-(22,72)
 expr1
@@ -119,20 +111,12 @@ exprToString expr2
 AppG (fromList [VarG])
 
 (22,50)-(22,70)
-exprToString
-VarG
-
-(22,50)-(22,70)
 expr2
 VarG
 
 (22,58)-(22,62)
 exprToString expr3
 AppG (fromList [VarG])
-
-(22,65)-(22,68)
-exprToString
-VarG
 
 (22,65)-(22,68)
 expr3

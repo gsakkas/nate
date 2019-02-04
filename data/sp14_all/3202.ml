@@ -17,8 +17,4 @@ BopG VarG VarG
 a
 VarG
 
-(2,33)-(2,73)
-a
-VarG
-
 *)

@@ -1,29 +1,3 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,BopG EmptyG EmptyG)])
-match e with
-| VarX -> x
-| VarY -> y
-| Sine e -> pi *. x
-| Cosine e -> pi *. y
-| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
-match e with
-| VarX -> x
-| VarY -> y
-| Sine e -> pi *. x
-| Cosine e -> pi *. y
-| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
-match e with
-| VarX -> x
-| VarY -> y
-| Sine e -> pi *. x
-| Cosine e -> pi *. y
-| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
-match e with
-| VarX -> x
-| VarY -> y
-| Sine e -> pi *. x
-| Cosine e -> pi *. y
-| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+LamG (BopG EmptyG EmptyG)
+fun x -> x * 1
+fun x -> x * 10

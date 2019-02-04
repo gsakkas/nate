@@ -1,3 +1,2 @@
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing])
-(0 , (d1 + d2) :: result)
-(0 , (arg1 + arg2) :: acc)
+IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (ListG EmptyG Nothing)
+if v = 0 then [1] else [0]

@@ -79,26 +79,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (17,11)-(35,21)
-l
-VarG
-
-(17,11)-(35,21)
-h
-VarG
-
-(17,11)-(35,21)
-removeZero
-VarG
-
-(17,11)-(35,21)
-t
-VarG
-
-(17,11)-(35,21)
-l
-VarG
-
-(17,11)-(35,21)
 fun l ->
   match l with
   | [] -> []
@@ -106,36 +86,6 @@ fun l ->
               then removeZero t
               else l
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(17,11)-(35,21)
-removeZero t
-AppG (fromList [VarG])
-
-(17,11)-(35,21)
-h = 0
-BopG VarG LitG
-
-(17,11)-(35,21)
-0
-LitG
-
-(17,11)-(35,21)
-if h = 0
-then removeZero t
-else l
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) VarG
-
-(17,11)-(35,21)
-match l with
-| [] -> []
-| h :: t -> if h = 0
-            then removeZero t
-            else l
-CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG Nothing)])
-
-(17,11)-(35,21)
-[]
-ListG EmptyG Nothing
 
 (33,6)-(33,34)
 pair (List.rev l1)
@@ -152,10 +102,6 @@ AppG (fromList [VarG])
 
 (34,48)-(34,52)
 res
-VarG
-
-(35,2)-(35,5)
-removeZero
 VarG
 
 (35,2)-(35,5)

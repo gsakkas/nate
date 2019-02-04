@@ -33,17 +33,21 @@ LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 fun x -> fun x -> (0 , true)
 LamG (LamG EmptyG)
 
-(5,39)-(5,60)
-fun x -> (0 , true)
-LamG (TupleG (fromList [EmptyG]))
-
-(5,40)-(5,56)
-0
-LitG
-
 (5,40)-(5,56)
 true
 LitG
+
+(5,41)-(5,42)
+EMPTY
+EmptyG
+
+(5,44)-(5,55)
+EMPTY
+EmptyG
+
+(5,46)-(5,47)
+EMPTY
+EmptyG
 
 (5,48)-(5,49)
 func

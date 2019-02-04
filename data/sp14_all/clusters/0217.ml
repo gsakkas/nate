@@ -1,6 +1,9 @@
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG),(Just EmptyG,EmptyG)]))
-fun n ->
-  match n with
-  | 1 -> 1
-  | _ when (n mod 2) = 0 -> n / 2
-  | _ -> (3 * n) + 1
+CaseG VarG (fromList [(Nothing,LitG),(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
+match l with
+| [] -> "[]"
+| x :: xs -> (let g =
+                fun a ->
+                  fun x -> a ^ ("; " ^ f x) in
+              let base = "[" ^ f x in
+              List.fold_left g base
+                             xs ^ "]")

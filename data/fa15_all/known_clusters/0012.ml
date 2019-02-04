@@ -1,210 +1,141 @@
-BopG (BopG EmptyG EmptyG) LitG
-((cin + d1) + d2) mod 10
-((((eval (e1 , x , y) /. 2.0) *. eval (e2 , x , y)) /. 3.0) *. eval (e3 , x , y)) /. 4.0
-((eval (e1 , x , y) /. 2.0) *. eval (e2 , x , y)) /. 3.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-((x1 + x2) + carry) mod 10
-(x1 + x2) / 10
-((x1 + x2) + carry) mod 10
-(x1 + x2) / 10
-((x1 + x2) + carry) mod 10
-(x1 + x2) / 10
-((x1 + x2) + carry) mod 10
-(x1 + x2) / 10
-((x1 + x2) + carry) mod 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(x1 + x2) / 10
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-((a1 + x1) + x2) >= 10
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-((y + z) + carry) mod 10
-((y + z) + carry) > 9
-((y + z) + carry) > 9
-((y + z) + carry) mod 10
-((y + z) + carry) > 9
-((y + z) + carry) mod 10
-((y + z) + carry) mod 10
-((y + z) + carry) mod 10
-((y + z) + carry) mod 10
-((y + z) + carry) mod 10
-((y + z) + carry) mod 10
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(sumList (digits n) mod 10) <> 0
-((x1 + x2) + carry) / 10
-((x1 + x2) + carry) mod 10
-((x1 + x2) + carry) / 10
-((x1 + x2) + carry) / 10
-((x1 + x2) + carry) mod 10
-((x1 + x2) + carry) / 10
-((x1 + x2) + carry) mod 10
-((x1 + x2) + carry) / 10
-((x1 + x2) + carry) mod 10
-((x1 + x2) + carry) / 10
-((x1 + x2) + carry) mod 10
-((x1 + x2) + carry) mod 10
-((x + y) + w) / 10
-((x + y) + w) mod 10
-((x + y) + w) / 10
-((x + y) + w) mod 10
-((x + y) + w) / 10
-((x + y) + w) mod 10
-((x + y) + w) mod 10
-((x + y) + w) / 10
-(eval (v , x , y) +. eval (w , x , y)) /. 2.0
-(eval (v , x , y) +. eval (w , x , y)) /. 2.0
-(eval (v , x , y) +. eval (w , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(eval (e , x , y) +. eval (f , x , y)) /. 2.0
-(eval (e , x , y) +. eval (f , x , y)) /. 2.0
-(eval (e , x , y) +. eval (f , x , y)) /. 2.0
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
-(x1 + x2) > 10
-((x1 + x2) + a1) - 10
-(x1 + x2) > 10
-((x1 + x2) + a1) - 10
-(x1 + x2) > 10
-((x1 + x2) + a1) - 10
-((x1 + x2) + a1) - 10
-((x1 + x2) + a1) - 10
-((x1 + x2) + a1) - 10
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-((eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (b , x , y))) /. 2.0
-((eval (a , x , y) *. eval (b , x , y)) *. eval (c , x , y)) /. 2.0
-((eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (b , x , y))) /. 2.0
-((eval (a , x , y) *. eval (b , x , y)) *. eval (c , x , y)) /. 2.0
-(n / 10) = 0
-((i + j) + m) >= 10
-((i + j) + m) - 10
-((i + j) + m) >= 10
-((i + j) + m) - 10
-(x1 + x2) / 10
-((a1 + x1) + x2) mod 10
-(x1 + x2) / 10
-((a1 + x1) + x2) mod 10
-(x1 + x2) / 10
-((a1 + x1) + x2) mod 10
-(((eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))) +. (eval (e3 , x , y) *. eval (e3 , x , y))) /. 3.0
-(eval (i1 , x , y) +. eval (i2 , x , y)) /. 2.0
-(eval (i1 , x , y) +. eval (i2 , x , y)) /. 2.0
-(eval (i1 , x , y) +. eval (i2 , x , y)) /. 2.0
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-(eval (a , x , y) +. eval (b , x , y)) /. 2.0
-(h + h') > 10
-(h + h') > 10
-(h + h') > 10
-(h + h') > 10
-(h + h') > 10
-(h + h') > 10
-(h + h') > 10
-(h + h') > 10
-(h + h') > 10
-(h + h') > 10
-((h + x1) + x2) / 10
-((h + x1) + x2) mod 10
-((h + x1) + x2) / 10
-(eval (p , x , y) -. eval (q , x , y)) < 0.0
-((num1 + num2) + carry) / 10
-((num1 + num2) + carry) mod 10
-((num1 + num2) + carry) / 10
-((num1 + num2) + carry) mod 10
-((num1 + num2) + carry) / 10
-((num1 + num2) + carry) mod 10
-((num1 + num2) + carry) / 10
-((num1 + num2) + carry) mod 10
-((num1 + num2) + carry) / 10
-((num1 + num2) + carry) mod 10
-(eval (x3 , x , y) +. eval (x4 , x , y)) /. 2.0
-(eval (x3 , x , y) +. eval (x4 , x , y)) /. 2.0
-(eval (expr1 , x , y) +. eval (expr2 , x , y)) /. 2.0
-(eval (expr , x , y) *. (eval (expr , x , y) +. 1.0)) /. 2.0
-(eval (expr , x , y) *. (eval (expr , x , y) +. 1.0)) /. 2.0
-(x1 + x2) mod 10
-((x1 + x2) + c) / 10
-((x1 + x2) + c) / 10
-(x * i) mod 10
+TupleG (fromList [VarG])
+(e , x , y)
+(e , x , y)
+(e1 , x , y)
+(e2 , x , y)
+(e1 , x , y)
+(e1 , x , y)
+(e1 , x , y)
+(f , b')
+(g , b)
+(g , b)
+(e1 , x , y)
+(e2 , x , y)
+(e1 , x , y)
+(e1 , x , y)
+(e2 , x , y)
+(e1 , x , y)
+(e1 , x , y)
+(n , b)
+(n , b)
+(n , b)
+(n , b)
+(n , b)
+(n , b)
+(n , b)
+(n , b)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(d , k , t)
+(d , k , t)
+(d , k , t)
+(d , k , t)
+(d , k , t)
+(t , x , y)
+(t , x , y)
+(t , x , y)
+(s , x , y)
+(funt , b)
+(i , l)
+(f , b)
+(f , b)
+(f , b)
+(f , b)
+(f , b')
+(f , b')
+(l1 , l2)
+(l1 , l2)
+(circ1 , x , y)
+(circ2 , x , y)
+(circ1 , x , y)
+(circ2 , x , y)
+(fin , b)
+(f , b')
+(e1 , x , y)
+(e2 , x , y)
+(e1 , x , y)
+(e2 , x , y)
+(e1 , x , y)
+(l1 , l2)
+(l1 , l2)
+(b_less , x , y)
+(a_less , x , y)
+(b_less , x , y)
+(f , b')
+(f , b')
+(f , b')
+(f , b')
+(f , b')
+(h , b)
+(h , b)
+(f , b)
+(f , b)
+(f , b')
+(f , b')
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(l1 , l2)
+(d , k , t)
+(d , k , t)
+(e' , x , y)
+(e' , x , y)
+(e1 , x , y)
+(e2 , x , y)
+(e1 , x , y)
+(e2 , x , y)
+(e1 , x , y)
+(e2 , x , y)
+(e3 , x , y)
+(e4 , x , y)
+(e1 , x , y)
+(e2 , x , y)
+(e1 , x , y)
+(e2 , x , y)
+(ex , x , y)
+(f , y)
+(d , k , t)
+(d , k , t)
+(g , b)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(a , x)
+(p , x , y)
+(expr , x , y)
+(expr , x , y)
+(expr1 , x , y)
+(expr2 , x , y)
+(expr3 , x , y)
+(expr1 , x , y)
+(expr1 , x , y)
+(expr1 , x , y)
+(f , b')
+(f , b')
+(e1 , x , y)
+(e2 , x , y)
+(e3 , x , y)

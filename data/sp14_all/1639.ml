@@ -55,20 +55,12 @@ let rec eval (e,x,y) =
 TupleG (fromList [VarG])
 
 (19,21)-(19,48)
-x
-VarG
-
-(19,21)-(19,48)
 y
 VarG
 
 (19,28)-(19,29)
 (u , x , y)
 TupleG (fromList [VarG])
-
-(19,34)-(19,42)
-x
-VarG
 
 (19,34)-(19,42)
 y
@@ -83,20 +75,12 @@ x
 VarG
 
 (20,19)-(20,39)
-y
-VarG
-
-(20,19)-(20,39)
 2.0
 LitG
 
 (20,25)-(20,26)
 (u , x , y)
 TupleG (fromList [VarG])
-
-(20,31)-(20,39)
-x
-VarG
 
 (20,31)-(20,39)
 y
@@ -107,20 +91,12 @@ VarG
 TupleG (fromList [VarG])
 
 (21,24)-(21,70)
-x
-VarG
-
-(21,24)-(21,70)
 y
 VarG
 
 (21,33)-(21,34)
 (s , x , y)
 TupleG (fromList [VarG])
-
-(21,38)-(21,46)
-x
-VarG
 
 (21,38)-(21,46)
 y
@@ -131,20 +107,12 @@ VarG
 TupleG (fromList [VarG])
 
 (21,52)-(21,58)
-x
-VarG
-
-(21,52)-(21,58)
 y
 VarG
 
 (21,57)-(21,58)
 (u , x , y)
 TupleG (fromList [VarG])
-
-(21,64)-(21,70)
-x
-VarG
 
 (21,64)-(21,70)
 y

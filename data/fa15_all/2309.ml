@@ -52,10 +52,6 @@ y
 VarG
 
 (19,19)-(19,31)
-(^)
-VarG
-
-(19,19)-(19,31)
 exprToString x
 AppG (fromList [VarG])
 
@@ -65,10 +61,6 @@ AppG (fromList [AppG (fromList [EmptyG])])
 
 (19,32)-(19,33)
 x
-VarG
-
-(19,34)-(19,37)
-(^)
 VarG
 
 (19,34)-(19,37)

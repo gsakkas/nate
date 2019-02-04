@@ -27,4 +27,8 @@ let padZero l1 l2 =
 clone 0 (ll2 - ll1)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
 
+(9,16)-(9,31)
+EMPTY
+EmptyG
+
 *)

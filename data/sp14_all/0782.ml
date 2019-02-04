@@ -81,17 +81,109 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(17,18)-(17,24)
-e
-VarG
+(15,14)-(15,53)
+EMPTY
+EmptyG
+
+(15,35)-(15,53)
+EMPTY
+EmptyG
+
+(15,40)-(15,41)
+EMPTY
+EmptyG
+
+(15,43)-(15,44)
+EMPTY
+EmptyG
+
+(15,46)-(15,52)
+EMPTY
+EmptyG
 
 (17,18)-(17,24)
 fun e -> Sine e
 LamG (ConAppG (Just VarG) Nothing)
 
-(17,18)-(17,24)
-Op1 e
-ConAppG (Just VarG) Nothing
+(29,27)-(29,33)
+EMPTY
+EmptyG
+
+(29,34)-(29,36)
+EMPTY
+EmptyG
+
+(30,16)-(30,27)
+EMPTY
+EmptyG
+
+(30,16)-(30,39)
+EMPTY
+EmptyG
+
+(30,28)-(30,39)
+EMPTY
+EmptyG
+
+(30,29)-(30,35)
+EMPTY
+EmptyG
+
+(30,36)-(30,38)
+EMPTY
+EmptyG
+
+(32,9)-(42,51)
+EMPTY
+EmptyG
+
+(32,16)-(32,24)
+EMPTY
+EmptyG
+
+(34,14)-(34,23)
+EMPTY
+EmptyG
+
+(34,14)-(37,50)
+EMPTY
+EmptyG
+
+(35,16)-(37,50)
+EMPTY
+EmptyG
+
+(35,17)-(35,25)
+EMPTY
+EmptyG
+
+(36,19)-(37,49)
+EMPTY
+EmptyG
+
+(36,20)-(36,47)
+EMPTY
+EmptyG
+
+(36,50)-(36,55)
+EMPTY
+EmptyG
+
+(36,56)-(36,75)
+EMPTY
+EmptyG
+
+(36,57)-(36,61)
+EMPTY
+EmptyG
+
+(36,63)-(36,74)
+EMPTY
+EmptyG
+
+(36,64)-(36,69)
+EMPTY
+EmptyG
 
 (36,72)-(36,73)
 buildCosine
@@ -102,25 +194,41 @@ buildSine
 VarG
 
 (39,14)-(42,50)
-randNum3
-VarG
-
-(39,14)-(42,50)
 match randNum3 with
 | 1 -> buildSine (buildOp1 (build (rand , depth - 1)))
 | 2 -> buildCosine (buildOp1 (build (rand , depth - 1)))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+(40,17)-(40,25)
+EMPTY
+EmptyG
+
 (41,19)-(42,49)
 buildOp1
 VarG
 
+(41,50)-(41,55)
+EMPTY
+EmptyG
+
+(41,56)-(41,75)
+EMPTY
+EmptyG
+
+(41,57)-(41,61)
+EMPTY
+EmptyG
+
+(41,63)-(41,74)
+EMPTY
+EmptyG
+
+(41,64)-(41,69)
+EMPTY
+EmptyG
+
 (41,72)-(41,73)
 buildCosine
-VarG
-
-(42,22)-(42,27)
-buildOp1
 VarG
 
 (42,22)-(42,27)

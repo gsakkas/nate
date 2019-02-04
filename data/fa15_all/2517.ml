@@ -30,4 +30,12 @@ VarG
 input
 VarG
 
+(6,63)-(6,69)
+EMPTY
+EmptyG
+
+(6,72)-(6,73)
+EMPTY
+EmptyG
+
 *)

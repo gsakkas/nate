@@ -25,4 +25,12 @@ ListG EmptyG Nothing
 clone x (n - 1)
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(2,46)-(2,57)
+EMPTY
+EmptyG
+
+(2,64)-(2,66)
+EMPTY
+EmptyG
+
 *)

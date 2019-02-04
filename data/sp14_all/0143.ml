@@ -52,20 +52,12 @@ let bigAdd l1 l2 =
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
 (19,29)-(19,30)
-(@)
-VarG
-
-(19,29)-(19,30)
 [0]
 ListG LitG Nothing
 
 (19,36)-(19,43)
 [0] @ l2
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(19,37)-(19,38)
-(@)
-VarG
 
 (19,37)-(19,38)
 [0]

@@ -147,59 +147,7 @@ let rec build (rand,depth) =
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (65,6)-(67,50)
-build
-VarG
-
-(65,6)-(67,50)
-rand
-VarG
-
-(65,6)-(67,50)
-depth
-VarG
-
-(65,6)-(67,50)
-build
-VarG
-
-(65,6)-(67,50)
-rand
-VarG
-
-(65,6)-(67,50)
-depth
-VarG
-
-(65,6)-(67,50)
 build (rand , depth - 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(65,6)-(67,50)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(65,6)-(67,50)
-depth - 1
-BopG VarG LitG
-
-(65,6)-(67,50)
-depth - 1
-BopG VarG LitG
-
-(65,6)-(67,50)
-1
-LitG
-
-(65,6)-(67,50)
-1
-LitG
-
-(65,6)-(67,50)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(65,6)-(67,50)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)

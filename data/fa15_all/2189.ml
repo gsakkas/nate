@@ -27,6 +27,10 @@ fun b' ->
    (result , result = b'))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(7,37)-(7,41)
+EMPTY
+EmptyG
+
 (7,42)-(7,43)
 f
 VarG
@@ -35,8 +39,16 @@ VarG
 b'
 VarG
 
+(7,66)-(7,67)
+EMPTY
+EmptyG
+
 (8,6)-(8,14)
 b'
 VarG
+
+(8,13)-(8,14)
+EMPTY
+EmptyG
 
 *)

@@ -1,220 +1,237 @@
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (r , x , y) /. eval (s , x , y)
-eval (r , x , y) /. eval (s , x , y)
-eval (r , x , y) /. eval (s , x , y)
-sin (pi *. eval (r , x , y)) +. tan (pi *. eval (s , x , y))
-sin (pi *. eval (r , x , y)) *. tan (pi *. eval (s , x , y))
-eval (a , x , y) *. eval (b , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-List.length l2 - List.length l1
-List.length l1 - List.length l2
-List.length l2 - List.length l1
-List.length l1 - List.length l2
-List.length l1 - List.length l2
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-fst x + snd x
-fst x + snd x
-fst x + snd x
-fst x + snd x
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length acc = List.length l1
-List.length l2 - List.length l1
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-eval (t1 , x , y) *. eval (t2 , x , y)
-eval (th1 , x , y) < eval (th2 , x , y)
-(eval (circ1 , x , y) ** 2.0) +. (eval (circ2 , x , y) ** 2.0)
-(eval (circ1 , x , y) ** 2.0) +. (eval (circ2 , x , y) ** 2.0)
-(eval (circ1 , x , y) ** 2.0) +. (eval (circ2 , x , y) ** 2.0)
-(eval (circ1 , x , y) ** 2.0) +. (eval (circ2 , x , y) ** 2.0)
-(eval (circ1 , x , y) ** 2.0) +. (eval (circ2 , x , y) ** 2.0)
-(eval (circ1 , x , y) ** 2.0) +. (eval (circ2 , x , y) ** 2.0)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-explode w = listReverse (explode w)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) < eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) *. eval (e2 , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) +. eval (b , x , y)
-(eval (a , x , y) ** 2.0) +. (eval (b , x , y) ** 2.0)
-eval (m , x , y) *. eval (n , x , y)
-eval (m , x , y) *. eval (n , x , y)
-eval (m , x , y) +. eval (n , x , y)
-List.length l1 = List.length l2
-List.length l1 < List.length l2
-List.length l2 - List.length l1
-List.length l1 = List.length l2
-List.length l1 < List.length l2
-List.length l2 - List.length l1
-List.length l1 = List.length l2
-List.length l1 < List.length l2
-List.length l2 - List.length l1
-eval (v , x , y) +. eval (w , x , y)
-eval (v , x , y) *. eval (w , x , y)
-eval (v , x , y) +. eval (w , x , y)
-eval (v , x , y) *. eval (w , x , y)
-eval (v , x , y) /. eval (w , x , y)
-eval (v , x , y) +. eval (w , x , y)
-fst x + snd x
-fst x + snd x
-fst x + snd x
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (l , x , y) *. eval (w , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e , x , y) +. eval (f , x , y)
-eval (e , x , y) *. eval (f , x , y)
-eval (e , x , y) *. eval (f , x , y)
-eval (e , x , y) *. eval (f , x , y)
-eval (e , x , y) *. eval (f , x , y)
-List.length l1 - List.length l2
-List.length l1 - List.length l2
-List.length l1 - List.length l2
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) *. eval (b , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) *. eval (b , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) *. eval (b , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) *. eval (b , x , y)
-eval (e1 , x , y) *. eval (e1 , x , y)
-eval (e2 , x , y) *. eval (e2 , x , y)
-eval (e3 , x , y) *. eval (e3 , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) *. eval (b , x , y)
-eval (a , x , y) +. eval (b , x , y)
-eval (a , x , y) *. eval (b , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (p , x , y) -. eval (q , x , y)
-eval (x5 , x , y) *. eval (x6 , x , y)
-eval (expr1 , x , y) +. eval (expr2 , x , y)
-eval (expr1 , x , y) *. eval (expr2 , x , y)
-eval (expr1 , x , y) +. eval (expr2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
-eval (e1 , x , y) +. eval (e2 , x , y)
+TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+(l1 , listZeros @ l2)
+(l1 , listZeros @ l2)
+(listZeros @ l1 , l2)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 @ clone 0 diff , l2)
+(l1 , l2 @ clone 0 diff)
+(l1 , clone 0 n @ l2)
+(clone 0 (0 - n) @ l1 , l2)
+(l1 , clone 0 n @ l2)
+(clone 0 (0 - n) @ l1 , l2)
+(List.append (clone 0
+                    (padLength l1 l2)) l1 , l2)
+(l1 , List.append (clone 0
+                         (padLength l1 l2)) l2)
+(List.append (clone 0
+                    (padLength l1 l2)) l1 , l2)
+(l1 , List.append (clone 0
+                         (padLength l1 l2)) l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0 n @ l1 , l2)
+(clone 0 n @ l2 , l1)
+(clone 0 n @ l1 , l2)
+(clone 0 n @ l2 , l1)
+(clone 0 n @ l1 , l2)
+(clone 0 n @ l2 , l1)
+(clone 0 n @ l2 , l1)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(padZero l1 l2 , l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l1 - List.length l2) @ l2 , l1)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l1 - List.length l2) @ l2 , l1)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l1 - List.length l2) @ l2 , l1)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l1 - List.length l2) @ l2 , l1)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l1 - List.length l2) @ l2 , l1)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l1 - List.length l2) @ l2 , l1)
+(l1 , clone 0 z @ l2)
+(clone 0 z @ l1 , l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(l1 , pad @ l2)
+(pad @ l1 , l2)
+(l1 , pad @ l2)
+(pad @ l1 , l2)
+(l1 , pad @ l2)
+(pad @ l1 , l2)
+(l1 , pad @ l2)
+(pad @ l1 , l2)
+(l1 , pad @ l2)
+(pad @ l1 , l2)
+(l1 , pad @ l2)
+(pad @ l1 , l2)
+(l1 , pad @ l2)
+(pad @ l1 , l2)
+(l1 , pad @ l2)
+(pad @ l1 , l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(clone 0
+       (List.length l2 - List.length l1) @ l1 , l2)
+(l1 , clone 0
+            (List.length l1 - List.length l2) @ l2)
+(a1 , mulByDigit x
+                 l1 @ clone 0 (List.length a1))
+(l1 , clone 0
+            (len1 - len2) @ l2)
+(clone 0
+       (len2 - len1) @ l1 , l2)
+(clone 0 (0 - d) @ l1 , l2)
+(l1 , clone 0 d @ l2)
+(clone 0 (0 - d) @ l1 , l2)
+(l1 , clone 0 d @ l2)
+(l1 , clone 0 d @ l2)
+(buildThresh (x7 , x8 , x9 , x0) , x , y)
+(clone 0 (s2 - s1) , l2)

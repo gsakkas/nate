@@ -33,6 +33,10 @@ CaseG VarG (fromList [(Nothing,VarG),(Nothing,LetG NonRec (fromList [EmptyG]) Em
 hd
 VarG
 
+(6,34)-(6,35)
+EMPTY
+EmptyG
+
 (6,51)-(6,52)
 tl
 VarG

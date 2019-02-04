@@ -1,635 +1,696 @@
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let base = h in
-let l = t in
-List.fold_left f base l
-let (carry , num) = a in
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (carry , num) = a in
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (carry , num) = a in
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(addit / 10 , (addit mod 10) :: num)
-let (carry , num) = a in
-let (l1 , l2) = x in
-(0 , l1 :: num)
-let (carry , num) = a in
-let (l1 , l2) = x in
-(0 , l1 :: num)
-let (carry , num) = a in
-let (l1 , l2) = x in
-(0 , l1 :: num)
-let (rem , acc) = a in
-let (el1 , el2) = x in
-let new_sum =
-  (rem + el1) + el2 in
-let new_rem =
-  if new_sum > 9
-  then 1
-  else 0 in
-let norm_sum =
-  if new_sum > 9
-  then new_sum - 10
-  else new_sum in
-(new_rem , norm_sum :: acc)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let ch :: _ = carry in
-let tens =
-  ((x1 + x2) + ch) / 10 in
-let ones =
-  ((x1 + x2) + ch) mod 10 in
-([tens] , tens :: (ones :: res))
-let ch :: _ = carry in
-let tens =
-  ((x1 + x2) + ch) / 10 in
-let ones =
-  ((x1 + x2) + ch) mod 10 in
-([tens] , tens :: (ones :: res))
-let ch :: _ = carry in
-let tens =
-  ((x1 + x2) + ch) / 10 in
-let ones =
-  ((x1 + x2) + ch) mod 10 in
-([tens] , tens :: (ones :: res))
-let ch :: _ = carry in
-let tens =
-  ((x1 + x2) + ch) / 10 in
-let ones =
-  ((x1 + x2) + ch) mod 10 in
-([tens] , tens :: (ones :: res))
-let ch :: _ = carry in
-let tens =
-  ((x1 + x2) + ch) / 10 in
-let ones =
-  ((x1 + x2) + ch) mod 10 in
-([tens] , tens :: (ones :: res))
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (upper_mult , total) =
-  a in
-let newTotal =
-  mulByDigit x upper_mult in
-let updateTotal =
-  bigAdd newTotal total in
-(upper_mult @ [0] , updateTotal)
-let base = h in
-let l = sl in
-List.fold_left f base l
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
+CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
+match x with
+| (y , z) -> (let sum =
+                y + z in
+              match a with
+              | h :: t -> ((sum + h) / 10) :: (((sum + h) mod 10) :: t)
+              | _ -> [sum / 10 ; sum mod 10])
+match x with
+| (y , z) -> (let sum =
+                y + z in
+              match a with
+              | h :: t -> ((sum + h) / 10) :: (((sum + h) mod 10) :: t)
+              | _ -> [sum / 10 ; sum mod 10])
+match x with
+| (y , z) -> (let sum =
+                y + z in
+              match a with
+              | h :: t -> ((sum + h) / 10) :: (((sum + h) mod 10) :: t)
+              | _ -> [sum / 10 ; sum mod 10])
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let prevcarry =
+                              match a with
+                              | (x , y) -> x in
+                            let new_carry =
+                              ((prevcarry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((prevcarry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , c :: d :: y) -> (new_carry , new_carry :: (digit :: (d :: y)))
+                            | _ -> (new_carry , [new_carry ; digit]))
+match x with
+| (addend_a , addend_b) -> (let prevcarry =
+                              match a with
+                              | (x , y) -> x in
+                            let new_carry =
+                              ((prevcarry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((prevcarry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , c :: d :: y) -> (new_carry , new_carry :: (digit :: (d :: y)))
+                            | _ -> (new_carry , [new_carry ; digit]))
+match x with
+| (addend_a , addend_b) -> (let prevcarry =
+                              match a with
+                              | (x , y) -> x in
+                            let new_carry =
+                              ((prevcarry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((prevcarry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , c :: d :: y) -> (new_carry , new_carry :: (digit :: (d :: y)))
+                            | _ -> (new_carry , [new_carry ; digit]))
+match x with
+| (addend_a , addend_b) -> (let prevcarry =
+                              match a with
+                              | (x , y) -> x in
+                            let new_carry =
+                              ((prevcarry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((prevcarry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , c :: d :: y) -> (new_carry , new_carry :: (digit :: (d :: y)))
+                            | _ -> (new_carry , [new_carry ; digit]))
+match x with
+| (addend_a , addend_b) -> (let prevcarry =
+                              match a with
+                              | (x , y) -> x in
+                            let new_carry =
+                              ((prevcarry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((prevcarry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , c :: d :: y) -> (new_carry , new_carry :: (digit :: (d :: y)))
+                            | _ -> (new_carry , [new_carry ; digit]))
+match x with
+| (addend_a , addend_b) -> (let prevcarry =
+                              match a with
+                              | (x , y) -> x in
+                            let new_carry =
+                              ((prevcarry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((prevcarry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , c :: d :: y) -> (new_carry , new_carry :: (digit :: (d :: y)))
+                            | _ -> (new_carry , [new_carry ; digit]))
+match x with
+| (addend_a , addend_b) -> (let prevcarry =
+                              match a with
+                              | (x , y) -> x in
+                            let new_carry =
+                              ((prevcarry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((prevcarry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , c :: d :: y) -> (new_carry , new_carry :: (digit :: (d :: y)))
+                            | _ -> (new_carry , [new_carry ; digit]))
+match x with
+| (addend_a , addend_b) -> (let prevcarry =
+                              match a with
+                              | (x , y) -> x in
+                            let new_carry =
+                              ((prevcarry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((prevcarry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , c :: d :: y) -> (new_carry , new_carry :: (digit :: (d :: y)))
+                            | _ -> (new_carry , [new_carry ; digit]))
+match x with
+| (l2digit , templ1) -> (let (l2digit2 , templ12) =
+                           a in
+                         let multres =
+                           mulByDigit l2digit templ1 in
+                         (0 , bigAdd (templ12 @ [0])
+                                     multres))
+match x with
+| (l2digit , templ1) -> (let (l2digit2 , templ12) =
+                           a in
+                         let multres =
+                           mulByDigit l2digit templ1 in
+                         (0 , bigAdd (templ12 @ [0])
+                                     multres))
+match x with
+| (l2digit , templ1) -> (let (l2digit2 , templ12) =
+                           a in
+                         let multres =
+                           mulByDigit l2digit templ1 in
+                         (0 , bigAdd (templ12 @ [0])
+                                     multres))
+match x with
+| (l2digit , templ1) -> (let (l2digit2 , templ12) =
+                           a in
+                         let multres =
+                           mulByDigit l2digit templ1 in
+                         (0 , bigAdd (templ12 @ [0])
+                                     multres))
+match x with
+| (l2digit , templ1) -> (let (l2digit2 , templ12) =
+                           a in
+                         let multres =
+                           mulByDigit l2digit templ1 in
+                         (0 , bigAdd (templ12 @ [0])
+                                     multres))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match a with
+| [] -> (let sum = z + y in
+         intlist sum)
+| h :: t -> (let sum =
+               (h + z) + y in
+             intlist sum @ t)
+match a with
+| [] -> (let sum = z + y in
+         intlist sum)
+| h :: t -> (let sum =
+               (h + z) + y in
+             intlist sum @ t)
+match a with
+| [] -> (let sum = z + y in
+         intlist sum)
+| h :: t -> (let sum =
+               (h + z) + y in
+             intlist sum @ t)
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match x with
+| (b , c) -> (let sum =
+                b + c in
+              if sum < 10
+              then (match a with
+                    | (len , []) -> (len , [sum])
+                    | (len , x' :: xs') -> if x' = (-1)
+                                           then if sum = 9
+                                                then (len , (-1) :: (0 :: xs'))
+                                                else (len , (sum + 1) :: xs')
+                                           else (len , sum :: (x' :: xs')))
+              else (match a with
+                    | (len , []) -> (len , [(-1) ; sum mod 10])
+                    | (len , x' :: xs') -> if x' = (-1)
+                                           then (len , (-1) :: (((sum mod 10) + 1) :: xs'))
+                                           else (len , (-1) :: ((sum mod 10) :: (x' :: xs')))))
+match x with
+| (b , c) -> (let sum =
+                b + c in
+              if sum < 10
+              then (match a with
+                    | (len , []) -> (len , [sum])
+                    | (len , x' :: xs') -> if x' = (-1)
+                                           then if sum = 9
+                                                then (len , (-1) :: (0 :: xs'))
+                                                else (len , (sum + 1) :: xs')
+                                           else (len , sum :: (x' :: xs')))
+              else (match a with
+                    | (len , []) -> (len , [(-1) ; sum mod 10])
+                    | (len , x' :: xs') -> if x' = (-1)
+                                           then (len , (-1) :: (((sum mod 10) + 1) :: xs'))
+                                           else (len , (-1) :: ((sum mod 10) :: (x' :: xs')))))

@@ -20,10 +20,6 @@ z
 VarG
 
 (5,34)-(5,44)
-(@)
-VarG
-
-(5,34)-(5,44)
 mulByDigit i
            [((z * i) mod 10) + x]
 AppG (fromList [VarG,ListG EmptyG Nothing])

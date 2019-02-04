@@ -40,10 +40,6 @@ match i with
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)])),(Nothing,ListG EmptyG Nothing)])
 
 (8,6)-(10,46)
-l
-VarG
-
-(8,6)-(10,46)
 match l with
 | [] -> []
 | h :: t -> if List.length t = 0
@@ -51,9 +47,5 @@ match l with
             else (remainder i
                             h) :: (mulByDigit i t)
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG Nothing)])
-
-(8,6)-(10,46)
-[]
-ListG EmptyG Nothing
 
 *)

@@ -64,8 +64,24 @@ let rec exprToString e =
 *)
 
 (* changed spans
+(30,6)-(30,9)
+EMPTY
+EmptyG
+
+(30,12)-(30,61)
+EMPTY
+EmptyG
+
+(30,30)-(30,31)
+EMPTY
+EmptyG
+
 (30,39)-(30,59)
 exprToString e
 AppG (fromList [VarG])
+
+(30,55)-(30,58)
+EMPTY
+EmptyG
 
 *)

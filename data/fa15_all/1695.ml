@@ -87,13 +87,17 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(27,12)-(27,29)
+EMPTY
+EmptyG
+
+(27,19)-(27,21)
+EMPTY
+EmptyG
+
 (27,27)-(27,28)
 (0 , 1)
 TupleG (fromList [LitG])
-
-(27,39)-(27,48)
-1
-LitG
 
 (27,39)-(27,48)
 0
@@ -102,14 +106,6 @@ LitG
 (29,13)-(29,17)
 rand (0 , 4)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(30,14)-(30,51)
-0
-LitG
-
-(30,14)-(30,51)
-4
-LitG
 
 (30,14)-(30,51)
 (0 , 4)

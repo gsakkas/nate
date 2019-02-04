@@ -13,6 +13,14 @@ let pipe fs =
 *)
 
 (* changed spans
+(3,30)-(3,31)
+EMPTY
+EmptyG
+
+(3,32)-(3,37)
+EMPTY
+EmptyG
+
 (3,35)-(3,36)
 x g
 AppG (fromList [VarG])

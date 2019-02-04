@@ -70,6 +70,14 @@ match e with
 | Hoi (a , b , c) -> "sin(pi*" ^ (exp a ^ (")*cos(pi*" ^ (exp b ^ (")/(" ^ (exp c ^ ")")))))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 
+(26,30)-(26,35)
+EMPTY
+EmptyG
+
+(26,36)-(26,65)
+EMPTY
+EmptyG
+
 (26,37)-(26,46)
 ")*cos(pi*"
 LitG
@@ -79,31 +87,7 @@ LitG
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (26,66)-(26,69)
-(^)
-VarG
-
-(26,66)-(26,69)
-exp
-VarG
-
-(26,66)-(26,69)
-c
-VarG
-
-(26,66)-(26,69)
-(^)
-VarG
-
-(26,66)-(26,69)
 exp c ^ ")"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(26,66)-(26,69)
-exp c
-AppG (fromList [VarG])
-
-(26,66)-(26,69)
-")/("
-LitG
 
 *)

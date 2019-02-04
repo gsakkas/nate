@@ -13,6 +13,10 @@ let sqsum xs = let f a x = a + x in let base = 0 in List.fold_left f base xs;;
 a + x
 BopG VarG VarG
 
+(2,27)-(2,32)
+EMPTY
+EmptyG
+
 (2,31)-(2,32)
 a
 VarG

@@ -64,6 +64,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(25,31)-(25,58)
+EMPTY
+EmptyG
+
 (25,32)-(25,36)
 let (_ , asd4) =
   padZero asd3 (asd2 :: b) in
@@ -76,14 +80,6 @@ ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (26,11)-(26,30)
 b
-VarG
-
-(26,12)-(26,13)
-asd3
-VarG
-
-(26,12)-(26,13)
-asd4
 VarG
 
 (26,12)-(26,13)

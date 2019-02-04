@@ -59,6 +59,14 @@ let rec mulByDigit i l = if i > 0 then mulByDigit (i - 1) (bigAdd l l) else l;;
 *)
 
 (* changed spans
+(27,2)-(28,69)
+EMPTY
+EmptyG
+
+(27,8)-(27,26)
+EMPTY
+EmptyG
+
 (27,10)-(27,26)
 if i > 0
 then mulByDigit (i - 1)
@@ -67,36 +75,60 @@ else l
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) VarG
 
 (27,14)-(27,20)
-mulByDigit
-VarG
-
-(27,14)-(27,20)
-i
-VarG
-
-(27,14)-(27,20)
 bigAdd l l
 AppG (fromList [VarG])
-
-(27,14)-(27,20)
-i - 1
-BopG VarG LitG
-
-(27,14)-(27,20)
-1
-LitG
-
-(27,14)-(27,26)
-i
-VarG
 
 (27,14)-(27,26)
 i > 0
 BopG VarG LitG
 
-(27,14)-(27,26)
-0
-LitG
+(27,21)-(27,24)
+EMPTY
+EmptyG
+
+(27,22)-(27,23)
+EMPTY
+EmptyG
+
+(27,25)-(27,26)
+EMPTY
+EmptyG
+
+(28,2)-(28,69)
+EMPTY
+EmptyG
+
+(28,13)-(28,14)
+EMPTY
+EmptyG
+
+(28,18)-(28,69)
+EMPTY
+EmptyG
+
+(28,29)-(28,37)
+EMPTY
+EmptyG
+
+(28,29)-(28,39)
+EMPTY
+EmptyG
+
+(28,43)-(28,57)
+EMPTY
+EmptyG
+
+(28,43)-(28,69)
+EMPTY
+EmptyG
+
+(28,58)-(28,59)
+EMPTY
+EmptyG
+
+(28,60)-(28,64)
+EMPTY
+EmptyG
 
 (28,65)-(28,69)
 l

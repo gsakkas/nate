@@ -21,13 +21,13 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(8,5)-(8,69)
-fun x ->
-  (let y = f x in
-   if y = x
-   then (y , false)
-   else (y , true))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
+(4,28)-(4,36)
+EMPTY
+EmptyG
+
+(4,33)-(4,35)
+EMPTY
+EmptyG
 
 (8,5)-(8,69)
 let helper =
@@ -39,13 +39,13 @@ let helper =
 helper
 LetG NonRec (fromList [LamG EmptyG]) VarG
 
+(8,16)-(8,17)
+EMPTY
+EmptyG
+
 (8,21)-(8,68)
 x
 VarG
-
-(8,27)-(8,28)
-y = x
-BopG VarG VarG
 
 (8,27)-(8,28)
 if y = x

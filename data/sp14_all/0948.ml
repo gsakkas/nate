@@ -14,13 +14,9 @@ let pipe fs =
 fun c -> x (a c)
 LamG (AppG (fromList [EmptyG]))
 
-(2,35)-(2,77)
-a
-VarG
-
-(2,35)-(2,77)
-c
-VarG
+(2,28)-(2,29)
+EMPTY
+EmptyG
 
 (2,35)-(2,77)
 a c

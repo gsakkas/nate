@@ -51,39 +51,13 @@ let bigAdd l1 l2 =
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (7,7)-(7,59)
-l2
-VarG
-
-(7,7)-(7,59)
-l1
-VarG
-
-(7,7)-(7,59)
 (l1 , clone 0
             (List.length l1 - List.length l2) @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(9,23)-(9,51)
-l
-VarG
-
-(9,23)-(9,51)
-h
-VarG
-
-(9,23)-(9,51)
-h = 0
-BopG VarG LitG
-
-(9,23)-(9,51)
-0
-LitG
-
-(9,23)-(9,51)
-if h = 0
-then removeZero t
-else l
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) VarG
+(9,23)-(9,31)
+EMPTY
+EmptyG
 
 (9,23)-(9,51)
 match l with
@@ -93,21 +67,21 @@ match l with
             else l
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG Nothing)])
 
-(9,23)-(9,51)
-[]
-ListG EmptyG Nothing
-
 (9,32)-(9,51)
 removeZero
 VarG
 
 (11,11)-(17,34)
-t
-VarG
-
-(11,11)-(17,34)
 l
 VarG
+
+(13,16)-(13,24)
+EMPTY
+EmptyG
+
+(13,16)-(13,44)
+EMPTY
+EmptyG
 
 (13,25)-(13,44)
 match x with
@@ -119,140 +93,42 @@ match x with
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
 (14,4)-(16,51)
-x
-VarG
-
-(14,4)-(16,51)
-y
-VarG
-
-(14,4)-(16,51)
-z
-VarG
-
-(14,4)-(16,51)
-a
-VarG
-
-(14,4)-(16,51)
-sum
-VarG
-
-(14,4)-(16,51)
-h
-VarG
-
-(14,4)-(16,51)
-sum
-VarG
-
-(14,4)-(16,51)
-h
-VarG
-
-(14,4)-(16,51)
-t
-VarG
-
-(14,4)-(16,51)
-sum
-VarG
-
-(14,4)-(16,51)
-sum
-VarG
-
-(14,4)-(16,51)
-y + z
-BopG VarG VarG
-
-(14,4)-(16,51)
-(sum + h) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(14,4)-(16,51)
-sum + h
-BopG VarG VarG
-
-(14,4)-(16,51)
-(sum + h) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(14,4)-(16,51)
-sum + h
-BopG VarG VarG
-
-(14,4)-(16,51)
-sum / 10
-BopG VarG LitG
-
-(14,4)-(16,51)
-sum mod 10
-BopG VarG LitG
-
-(14,4)-(16,51)
-10
-LitG
-
-(14,4)-(16,51)
-10
-LitG
-
-(14,4)-(16,51)
-10
-LitG
-
-(14,4)-(16,51)
-10
-LitG
-
-(14,4)-(16,51)
 let sum = y + z in
 match a with
 | h :: t -> ((sum + h) / 10) :: (((sum + h) mod 10) :: t)
 | _ -> [sum / 10 ; sum mod 10]
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(14,4)-(16,51)
-match a with
-| h :: t -> ((sum + h) / 10) :: (((sum + h) mod 10) :: t)
-| _ -> [sum / 10 ; sum mod 10]
-CaseG VarG (fromList [(Nothing,ConAppG (Just EmptyG) Nothing),(Nothing,ListG EmptyG Nothing)])
+(14,15)-(14,23)
+EMPTY
+EmptyG
 
-(14,4)-(16,51)
-((sum + h) / 10) :: (((sum + h) mod 10) :: t)
-ConAppG (Just (TupleG (fromList [BopG (BopG VarG VarG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing]))) Nothing
-
-(14,4)-(16,51)
-((sum + h) mod 10) :: t
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
-
-(14,4)-(16,51)
-[sum / 10 ; sum mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
+(14,15)-(14,43)
+EMPTY
+EmptyG
 
 (14,24)-(14,43)
 []
 ListG EmptyG Nothing
+
+(15,15)-(15,23)
+EMPTY
+EmptyG
+
+(15,24)-(15,43)
+EMPTY
+EmptyG
 
 (16,4)-(16,51)
 List.rev
 VarG
 
 (16,18)-(16,44)
-List.combine
-VarG
-
-(16,18)-(16,44)
-l1
-VarG
-
-(16,18)-(16,44)
-l2
-VarG
-
-(16,18)-(16,44)
 List.combine l1 l2
 AppG (fromList [VarG])
+
+(16,48)-(16,51)
+EMPTY
+EmptyG
 
 *)

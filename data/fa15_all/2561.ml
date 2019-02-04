@@ -12,40 +12,28 @@ let sqsum xs =
 *)
 
 (* changed spans
+(3,22)-(3,29)
+EMPTY
+EmptyG
+
+(3,27)-(3,28)
+EMPTY
+EmptyG
+
 (3,44)-(3,46)
 0
 LitG
+
+(3,65)-(3,66)
+EMPTY
+EmptyG
 
 (3,67)-(3,71)
 fun a -> fun x -> a + (x * x)
 LamG (LamG EmptyG)
 
 (3,72)-(3,74)
-a
-VarG
-
-(3,72)-(3,74)
-x
-VarG
-
-(3,72)-(3,74)
-x
-VarG
-
-(3,72)-(3,74)
 fun x -> a + (x * x)
 LamG (BopG EmptyG EmptyG)
-
-(3,72)-(3,74)
-a + (x * x)
-BopG VarG (BopG EmptyG EmptyG)
-
-(3,72)-(3,74)
-x * x
-BopG VarG VarG
-
-(3,72)-(3,74)
-0
-LitG
 
 *)

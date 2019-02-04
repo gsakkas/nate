@@ -25,4 +25,16 @@ let rec sepConcat sep sl =
 []
 ListG EmptyG Nothing
 
+(7,42)-(7,49)
+EMPTY
+EmptyG
+
+(7,44)-(7,45)
+EMPTY
+EmptyG
+
+(7,46)-(7,49)
+EMPTY
+EmptyG
+
 *)

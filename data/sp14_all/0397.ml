@@ -21,12 +21,6 @@ f
 VarG
 
 (5,21)-(5,48)
-fun x ->
-  (let xx = f b in
-   (xx , xx <> b))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(5,21)-(5,48)
 let f =
   fun x ->
     (let xx = f b in
@@ -34,28 +28,16 @@ let f =
 wwhile (f , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
-(5,21)-(5,48)
-let xx = f b in (xx , xx <> b)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-
 (5,28)-(5,48)
-b
-VarG
-
-(5,29)-(5,44)
-xx
-VarG
-
-(5,29)-(5,44)
-xx
-VarG
-
-(5,29)-(5,44)
 b
 VarG
 
 (5,29)-(5,44)
 xx <> b
 BopG VarG VarG
+
+(5,46)-(5,47)
+EMPTY
+EmptyG
 
 *)

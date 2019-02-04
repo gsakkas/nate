@@ -1,7 +1,21 @@
-AppG (fromList [ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-List.rev (h1 :: t1)
-List.rev (h1 :: t1)
-listReverse (hd :: l)
-listReverse (hd :: l)
-listReverse (h :: l)
-listReverse (h :: l)
+IteG (BopG EmptyG EmptyG) (LamG EmptyG) (LamG EmptyG)
+if f b = b
+then (fun b'' ->
+        (f b , false))
+else (fun b'' -> (f b , true))
+if f b = b
+then (fun b'' ->
+        (f b , false))
+else (fun b'' -> (f b , true))
+if f b = b
+then (fun b'' ->
+        (f b , false))
+else (fun b'' -> (f b , true))
+if f b = b
+then (fun b'' ->
+        (f b , false))
+else (fun b'' -> (f b , true))
+if f b = b
+then (fun b'' ->
+        (f b , false))
+else (fun b'' -> (f b , true))

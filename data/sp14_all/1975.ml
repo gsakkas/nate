@@ -13,13 +13,13 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(3,45)-(3,48)
+EMPTY
+EmptyG
+
 (3,46)-(3,47)
 []
 ListG EmptyG Nothing
-
-(3,56)-(3,67)
-(@)
-VarG
 
 (3,56)-(3,67)
 digitsOfInt (n / 10)

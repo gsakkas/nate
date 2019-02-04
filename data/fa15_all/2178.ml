@@ -11,6 +11,10 @@ let pipe fs =
 *)
 
 (* changed spans
+(3,12)-(3,21)
+EMPTY
+EmptyG
+
 (3,14)-(3,21)
 fun y -> x (a y)
 LamG (AppG (fromList [EmptyG]))
@@ -19,13 +23,13 @@ LamG (AppG (fromList [EmptyG]))
 a y
 AppG (fromList [VarG])
 
-(3,43)-(3,67)
-x
-VarG
+(3,25)-(3,67)
+EMPTY
+EmptyG
 
-(3,43)-(3,67)
-fun x -> x
-LamG VarG
+(3,34)-(3,39)
+EMPTY
+EmptyG
 
 (3,43)-(3,67)
 let base = fun x -> x in

@@ -14,6 +14,10 @@ let pipe fs =
 (fun a -> x) a
 AppG (fromList [VarG])
 
+(2,26)-(2,31)
+EMPTY
+EmptyG
+
 (2,30)-(2,31)
 fun a -> x
 LamG VarG

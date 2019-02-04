@@ -49,10 +49,22 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(19,16)-(19,46)
+EMPTY
+EmptyG
+
+(19,31)-(19,32)
+EMPTY
+EmptyG
+
 (19,36)-(19,46)
 let (h :: t , _) = a in
 ([] , [])
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+
+(19,41)-(19,42)
+EMPTY
+EmptyG
 
 (19,44)-(19,45)
 []

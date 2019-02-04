@@ -11,6 +11,10 @@ let pipe fs =
 *)
 
 (* changed spans
+(3,18)-(3,19)
+EMPTY
+EmptyG
+
 (3,25)-(3,67)
 a
 VarG

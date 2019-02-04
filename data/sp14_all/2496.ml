@@ -32,17 +32,17 @@ LetG NonRec (fromList [LamG EmptyG]) VarG
 let xx = f x in (xx , xx <> b)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
+(7,48)-(7,49)
+EMPTY
+EmptyG
+
 (7,53)-(7,54)
 (xx , xx <> b)
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
-(7,55)-(7,56)
-xx
-VarG
-
-(7,55)-(7,56)
-xx
-VarG
+(7,53)-(7,56)
+EMPTY
+EmptyG
 
 (7,55)-(7,56)
 xx <> b

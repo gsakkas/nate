@@ -90,31 +90,7 @@ let rec build (rand,depth) =
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (40,7)-(40,65)
-build
-VarG
-
-(40,7)-(40,65)
-rand
-VarG
-
-(40,7)-(40,65)
-depth
-VarG
-
-(40,7)-(40,65)
 build (rand , depth - 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(40,7)-(40,65)
-depth - 1
-BopG VarG LitG
-
-(40,7)-(40,65)
-1
-LitG
-
-(40,7)-(40,65)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)

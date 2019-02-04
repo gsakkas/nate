@@ -34,10 +34,6 @@ let y :: [] =
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (ListG EmptyG Nothing)
 
 (6,56)-(6,68)
-y
-VarG
-
-(6,56)-(6,68)
 [y ; input mod 10]
 ListG VarG Nothing
 

@@ -50,20 +50,12 @@ evalhelper p1 x y
 AppG (fromList [VarG])
 
 (19,19)-(19,46)
-x
-VarG
-
-(19,19)-(19,46)
 y
 VarG
 
 (19,30)-(19,45)
 evalhelper p1 x y
 AppG (fromList [VarG])
-
-(20,2)-(20,18)
-x
-VarG
 
 (20,2)-(20,18)
 y

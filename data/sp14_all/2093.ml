@@ -31,4 +31,20 @@ VarG
 sepConcat ";" (List.map f l)
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
+(9,49)-(9,65)
+EMPTY
+EmptyG
+
+(9,50)-(9,64)
+EMPTY
+EmptyG
+
+(9,59)-(9,64)
+EMPTY
+EmptyG
+
+(9,66)-(9,67)
+EMPTY
+EmptyG
+
 *)

@@ -92,6 +92,22 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(28,11)-(28,20)
+EMPTY
+EmptyG
+
+(28,16)-(28,20)
+EMPTY
+EmptyG
+
+(30,11)-(30,20)
+EMPTY
+EmptyG
+
+(30,16)-(30,20)
+EMPTY
+EmptyG
+
 (33,2)-(47,50)
 match depth with
 | 0 -> match rand (1 , 2) with
@@ -114,6 +130,10 @@ match rand (1 , 2) with
 | 1 -> VarX
 | 2 -> VarY
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,ConAppG Nothing Nothing)])
+
+(36,14)-(36,20)
+EMPTY
+EmptyG
 
 (37,14)-(37,20)
 VarX

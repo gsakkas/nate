@@ -79,18 +79,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (34,38)-(34,64)
-o
-VarG
-
-(34,38)-(34,64)
-10 * o
-BopG LitG VarG
-
-(34,38)-(34,64)
-10
-LitG
-
-(34,38)-(34,64)
 (10 * o , bigAdd (mulByDigit o
                              l1) l)
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])

@@ -18,12 +18,12 @@ let rec digitsOfInt n =
 
 (* changed spans
 (6,25)-(6,35)
-listReverse
-VarG
-
-(6,25)-(6,35)
 listReverse [n mod 10]
 AppG (fromList [ListG EmptyG Nothing])
+
+(6,38)-(6,72)
+EMPTY
+EmptyG
 
 (6,39)-(6,50)
 digitsOfInt (n / 10)

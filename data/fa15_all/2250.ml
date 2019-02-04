@@ -82,26 +82,26 @@ let bigMul l1 l2 =
 
 (* changed spans
 (35,28)-(35,76)
-o
-VarG
-
-(35,28)-(35,76)
-x
-VarG
-
-(35,28)-(35,76)
-o * x
-BopG VarG VarG
-
-(35,28)-(35,76)
 let prod = o * x in
 (10 * o , bigAdd (mulByDigit prod
                              l1) l)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
 
+(35,47)-(35,72)
+EMPTY
+EmptyG
+
 (35,48)-(35,62)
 mulByDigit prod l1
 AppG (fromList [VarG])
+
+(35,60)-(35,61)
+EMPTY
+EmptyG
+
+(35,65)-(35,71)
+EMPTY
+EmptyG
 
 (35,66)-(35,67)
 prod

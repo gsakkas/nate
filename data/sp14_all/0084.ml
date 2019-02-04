@@ -50,11 +50,19 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(16,16)-(16,24)
+EMPTY
+EmptyG
+
 (16,16)-(16,30)
 match snd a with
 | [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
 | h :: t -> (0 , [])
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+
+(16,25)-(16,30)
+EMPTY
+EmptyG
 
 (17,4)-(19,51)
 snd
@@ -65,120 +73,8 @@ a
 VarG
 
 (17,16)-(17,18)
-fst
-VarG
-
-(17,16)-(17,18)
-x
-VarG
-
-(17,16)-(17,18)
-snd
-VarG
-
-(17,16)-(17,18)
-x
-VarG
-
-(17,16)-(17,18)
-fst
-VarG
-
-(17,16)-(17,18)
-x
-VarG
-
-(17,16)-(17,18)
-snd
-VarG
-
-(17,16)-(17,18)
-x
-VarG
-
-(17,16)-(17,18)
-fst
-VarG
-
-(17,16)-(17,18)
-x
-VarG
-
-(17,16)-(17,18)
-snd
-VarG
-
-(17,16)-(17,18)
-x
-VarG
-
-(17,16)-(17,18)
-fst x
-AppG (fromList [VarG])
-
-(17,16)-(17,18)
-snd x
-AppG (fromList [VarG])
-
-(17,16)-(17,18)
-fst x
-AppG (fromList [VarG])
-
-(17,16)-(17,18)
-snd x
-AppG (fromList [VarG])
-
-(17,16)-(17,18)
-fst x
-AppG (fromList [VarG])
-
-(17,16)-(17,18)
-snd x
-AppG (fromList [VarG])
-
-(17,16)-(17,18)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(17,16)-(17,18)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(17,16)-(17,18)
-(fst x + snd x) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(17,16)-(17,18)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(17,16)-(17,18)
-(fst x + snd x) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(17,16)-(17,18)
-10
-LitG
-
-(17,16)-(17,18)
-10
-LitG
-
-(17,16)-(17,18)
-0
-LitG
-
-(17,16)-(17,18)
-(0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(17,16)-(17,18)
 [(fst x + snd x) / 10 ; (fst x + snd x) mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
-
-(17,20)-(17,22)
-0
-LitG
 
 (17,20)-(17,22)
 let base = (0 , []) in
@@ -190,10 +86,6 @@ let (_ , res) =
 res
 LetG NonRec (fromList [TupleG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(17,20)-(17,22)
-(0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
 (18,15)-(18,36)
 List.combine (List.rev l1)
              (List.rev l2)
@@ -204,10 +96,6 @@ List.rev l1
 AppG (fromList [VarG])
 
 (18,29)-(18,31)
-List.rev
-VarG
-
-(18,33)-(18,35)
 List.rev
 VarG
 

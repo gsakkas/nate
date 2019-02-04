@@ -9,6 +9,10 @@ let rec digitsOfInt n = if n < 0 then [] else digitsOfInt (n / 10);;
 *)
 
 (* changed spans
+(2,24)-(2,60)
+EMPTY
+EmptyG
+
 (2,27)-(2,32)
 n < 0
 BopG VarG LitG

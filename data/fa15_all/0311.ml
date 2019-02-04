@@ -24,6 +24,14 @@ let rec sepConcat sep sl =
 h
 VarG
 
+(8,14)-(8,22)
+EMPTY
+EmptyG
+
+(8,14)-(8,42)
+EMPTY
+EmptyG
+
 (8,23)-(8,42)
 t
 VarG

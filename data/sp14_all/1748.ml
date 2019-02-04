@@ -63,85 +63,113 @@ let (s , t) = a in
 (((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(20,4)-(26,51)
-a
-VarG
-
-(20,4)-(26,51)
-i
-VarG
-
-(20,4)-(26,51)
-j
-VarG
-
-(20,4)-(26,51)
-s
-VarG
-
-(20,4)-(26,51)
-i
-VarG
-
-(20,4)-(26,51)
-j
-VarG
-
-(20,4)-(26,51)
-s
-VarG
-
-(20,4)-(26,51)
-t
-VarG
-
-(20,4)-(26,51)
-((i + j) + s) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(20,4)-(26,51)
-(i + j) + s
-BopG (BopG EmptyG EmptyG) VarG
-
-(20,4)-(26,51)
-i + j
-BopG VarG VarG
-
-(20,4)-(26,51)
-((i + j) + s) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(20,4)-(26,51)
-(i + j) + s
-BopG (BopG EmptyG EmptyG) VarG
-
-(20,4)-(26,51)
-i + j
-BopG VarG VarG
-
-(20,4)-(26,51)
-10
-LitG
-
-(20,4)-(26,51)
-10
-LitG
+(19,16)-(19,21)
+EMPTY
+EmptyG
 
 (20,4)-(26,51)
 let (s , t) = a in
 (((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
-(20,4)-(26,51)
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
-(20,4)-(26,51)
-(((i + j) + s) mod 10) :: t
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
 (20,19)-(20,20)
 []
 ListG EmptyG Nothing
+
+(22,6)-(25,20)
+EMPTY
+EmptyG
+
+(23,6)-(25,20)
+EMPTY
+EmptyG
+
+(23,12)-(23,17)
+EMPTY
+EmptyG
+
+(24,17)-(24,74)
+EMPTY
+EmptyG
+
+(24,20)-(24,27)
+EMPTY
+EmptyG
+
+(24,20)-(24,31)
+EMPTY
+EmptyG
+
+(24,21)-(24,22)
+EMPTY
+EmptyG
+
+(24,25)-(24,26)
+EMPTY
+EmptyG
+
+(24,30)-(24,31)
+EMPTY
+EmptyG
+
+(24,37)-(24,56)
+EMPTY
+EmptyG
+
+(24,38)-(24,39)
+EMPTY
+EmptyG
+
+(24,41)-(24,55)
+EMPTY
+EmptyG
+
+(24,42)-(24,49)
+EMPTY
+EmptyG
+
+(24,43)-(24,44)
+EMPTY
+EmptyG
+
+(24,47)-(24,48)
+EMPTY
+EmptyG
+
+(24,52)-(24,54)
+EMPTY
+EmptyG
+
+(24,62)-(24,74)
+EMPTY
+EmptyG
+
+(24,63)-(24,64)
+EMPTY
+EmptyG
+
+(24,66)-(24,73)
+EMPTY
+EmptyG
+
+(24,67)-(24,68)
+EMPTY
+EmptyG
+
+(24,71)-(24,72)
+EMPTY
+EmptyG
+
+(25,14)-(25,20)
+EMPTY
+EmptyG
+
+(25,15)-(25,16)
+EMPTY
+EmptyG
+
+(25,18)-(25,19)
+EMPTY
+EmptyG
 
 *)

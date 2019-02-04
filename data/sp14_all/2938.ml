@@ -84,29 +84,13 @@ let bigMul l1 l2 =
 
 (* changed spans
 (31,14)-(31,24)
-a
-VarG
-
-(31,14)-(31,24)
-0
-LitG
-
-(31,14)-(31,24)
 match a with
 | (_ , y) -> (0 , bigAdd y x)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(31,14)-(31,24)
-(0 , bigAdd y x)
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
-
 (31,21)-(31,22)
 y
 VarG
-
-(32,13)-(32,15)
-0
-LitG
 
 (32,13)-(32,15)
 (0 , [])

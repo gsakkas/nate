@@ -21,14 +21,6 @@ let rec mulByDigit i l =
 ListG EmptyG Nothing
 
 (5,12)-(5,54)
-mulByDigit
-VarG
-
-(5,12)-(5,54)
-i
-VarG
-
-(5,12)-(5,54)
 mulByDigit i
            (List.rev (List.map (fun x ->
                                   x * 10) t))

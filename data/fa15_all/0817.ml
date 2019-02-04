@@ -37,6 +37,14 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
+(15,22)-(15,29)
+EMPTY
+EmptyG
+
+(15,23)-(15,24)
+EMPTY
+EmptyG
+
 (15,32)-(15,40)
 itt x' i
 AppG (fromList [VarG])

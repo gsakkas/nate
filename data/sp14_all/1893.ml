@@ -38,4 +38,12 @@ VarG
 h
 VarG
 
+(6,32)-(6,38)
+EMPTY
+EmptyG
+
+(6,41)-(6,42)
+EMPTY
+EmptyG
+
 *)

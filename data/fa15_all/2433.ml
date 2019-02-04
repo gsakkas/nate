@@ -62,16 +62,8 @@ let (a1 , a2) = a in
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (19,38)-(19,41)
-a1
-VarG
-
-(19,38)-(19,41)
 l1x + l2x
 BopG VarG VarG
-
-(19,38)-(19,41)
-(l1x + l2x) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
 
 (19,51)-(19,52)
 a2

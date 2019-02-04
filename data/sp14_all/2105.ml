@@ -113,12 +113,4 @@ TupleG (fromList [ConAppG Nothing Nothing])
 VarX
 ConAppG Nothing Nothing
 
-(28,9)-(28,18)
-VarX
-ConAppG Nothing Nothing
-
-(28,9)-(28,18)
-VarX
-ConAppG Nothing Nothing
-
 *)

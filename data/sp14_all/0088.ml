@@ -55,112 +55,16 @@ snd a
 AppG (fromList [VarG])
 
 (16,37)-(16,45)
-snd
-VarG
-
-(16,37)-(16,45)
 a
 VarG
+
+(16,38)-(16,40)
+EMPTY
+EmptyG
 
 (16,42)-(16,44)
 fst x + snd x
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,56)-(16,64)
-fst
-VarG
-
-(16,56)-(16,64)
-x
-VarG
-
-(16,56)-(16,64)
-snd
-VarG
-
-(16,56)-(16,64)
-x
-VarG
-
-(16,56)-(16,64)
-fst
-VarG
-
-(16,56)-(16,64)
-x
-VarG
-
-(16,56)-(16,64)
-snd
-VarG
-
-(16,56)-(16,64)
-x
-VarG
-
-(16,56)-(16,64)
-fst
-VarG
-
-(16,56)-(16,64)
-x
-VarG
-
-(16,56)-(16,64)
-snd
-VarG
-
-(16,56)-(16,64)
-x
-VarG
-
-(16,56)-(16,64)
-fst x
-AppG (fromList [VarG])
-
-(16,56)-(16,64)
-snd x
-AppG (fromList [VarG])
-
-(16,56)-(16,64)
-fst x
-AppG (fromList [VarG])
-
-(16,56)-(16,64)
-snd x
-AppG (fromList [VarG])
-
-(16,56)-(16,64)
-fst x
-AppG (fromList [VarG])
-
-(16,56)-(16,64)
-snd x
-AppG (fromList [VarG])
-
-(16,56)-(16,64)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,56)-(16,64)
-(fst x + snd x) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,56)-(16,64)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,56)-(16,64)
-(fst x + snd x) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,56)-(16,64)
-10
-LitG
-
-(16,56)-(16,64)
-10
-LitG
 
 (16,56)-(16,64)
 [(fst x + snd x) / 10 ; (fst x + snd x) mod 10]

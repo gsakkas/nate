@@ -1,16 +1,10 @@
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
-((sum + h) mod 10) :: t
-((sum + h) mod 10) :: t
-((sum + h) mod 10) :: t
-((w + z) mod 10) :: y
-((w + z) mod 10) :: y
-((w + z) mod 10) :: y
-((w + z) mod 10) :: y
-((w + z) mod 10) :: y
-((w + z) mod 10) :: y
-((h1 + h2) mod 10) :: a
-((x + y) / 10) :: a
-((x + y) / 10) :: a
-((x + y) / 10) :: a
-((arg1 + arg2) mod 10) :: acc
-((h1 + h2) / 10) :: list1
+AppG (fromList [LitG])
+float_of_int 2
+float_of_int 2
+Format.sprintf "%expr" 1.0
+atan 1.0
+(+) 0
+(+) 0
+(+) 0
+int_of_char '3'
+print_string "going into then"

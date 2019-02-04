@@ -54,6 +54,58 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(11,17)-(11,67)
+EMPTY
+EmptyG
+
+(11,38)-(11,67)
+EMPTY
+EmptyG
+
+(11,46)-(11,47)
+EMPTY
+EmptyG
+
+(11,49)-(11,50)
+EMPTY
+EmptyG
+
+(11,52)-(11,58)
+EMPTY
+EmptyG
+
+(11,60)-(11,66)
+EMPTY
+EmptyG
+
+(13,16)-(13,39)
+EMPTY
+EmptyG
+
+(13,25)-(13,39)
+EMPTY
+EmptyG
+
+(13,32)-(13,34)
+EMPTY
+EmptyG
+
+(13,36)-(13,38)
+EMPTY
+EmptyG
+
+(23,67)-(23,68)
+EMPTY
+EmptyG
+
+(24,21)-(24,31)
+EMPTY
+EmptyG
+
+(24,21)-(24,54)
+EMPTY
+EmptyG
+
 (24,32)-(24,54)
 2.0
 LitG
@@ -67,10 +119,6 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 TupleG (fromList [VarG])
 
 (24,44)-(24,53)
-x
-VarG
-
-(24,44)-(24,53)
 y
 VarG
 
@@ -78,17 +126,9 @@ VarG
 (e2 , x , y)
 TupleG (fromList [VarG])
 
-(25,28)-(25,56)
-x
-VarG
-
-(25,28)-(25,56)
-y
-VarG
-
-(25,28)-(25,56)
-eval (e1 , x , y) < eval (e2 , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+(25,28)-(25,39)
+EMPTY
+EmptyG
 
 (25,28)-(25,56)
 if eval (e1 , x , y) < eval (e2 , x , y)
@@ -105,63 +145,15 @@ VarG
 TupleG (fromList [VarG])
 
 (25,45)-(25,47)
-x
-VarG
-
-(25,45)-(25,47)
-y
-VarG
-
-(25,45)-(25,47)
-eval
-VarG
-
-(25,45)-(25,47)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(25,45)-(25,47)
-(e2 , x , y)
-TupleG (fromList [VarG])
-
-(25,49)-(25,51)
-x
-VarG
-
-(25,49)-(25,51)
-y
-VarG
-
-(25,49)-(25,51)
-eval
-VarG
 
 (25,49)-(25,51)
 eval (e3 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(25,49)-(25,51)
-(e3 , x , y)
-TupleG (fromList [VarG])
-
-(25,53)-(25,55)
-x
-VarG
-
-(25,53)-(25,55)
-y
-VarG
-
-(25,53)-(25,55)
-eval
-VarG
-
 (25,53)-(25,55)
 eval (e4 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(25,53)-(25,55)
-(e4 , x , y)
-TupleG (fromList [VarG])
 
 *)

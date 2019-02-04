@@ -19,4 +19,8 @@ let rec listReverse l = match l with | [] -> [] | h::t -> append t [h];;
 append t [h]
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
+(5,65)-(5,72)
+EMPTY
+EmptyG
+
 *)

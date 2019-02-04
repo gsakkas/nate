@@ -66,31 +66,43 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (26,7)-(26,50)
-x1
-VarG
-
-(26,7)-(26,50)
-x2
-VarG
-
-(26,7)-(26,50)
-c
-VarG
-
-(26,7)-(26,50)
 ((x1 + x2) + c) / 10
 BopG (BopG EmptyG EmptyG) LitG
 
-(26,7)-(26,50)
-(x1 + x2) + c
-BopG (BopG EmptyG EmptyG) VarG
+(26,52)-(26,74)
+EMPTY
+EmptyG
 
-(26,7)-(26,50)
-x1 + x2
-BopG VarG VarG
+(26,53)-(26,68)
+EMPTY
+EmptyG
 
-(26,7)-(26,50)
-10
-LitG
+(26,53)-(26,73)
+EMPTY
+EmptyG
+
+(26,54)-(26,63)
+EMPTY
+EmptyG
+
+(26,55)-(26,57)
+EMPTY
+EmptyG
+
+(26,60)-(26,62)
+EMPTY
+EmptyG
+
+(26,66)-(26,67)
+EMPTY
+EmptyG
+
+(26,71)-(26,73)
+EMPTY
+EmptyG
+
+(27,16)-(27,19)
+EMPTY
+EmptyG
 
 *)

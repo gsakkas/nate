@@ -54,27 +54,11 @@ List.length
 VarG
 
 (16,15)-(16,25)
-List.nth
-VarG
-
-(16,15)-(16,25)
-l1
-VarG
-
-(16,15)-(16,25)
 List.nth l1 (List.length l1)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (17,15)-(17,22)
 List.length
-VarG
-
-(17,15)-(17,25)
-List.nth
-VarG
-
-(17,15)-(17,25)
-l2
 VarG
 
 (17,15)-(17,25)

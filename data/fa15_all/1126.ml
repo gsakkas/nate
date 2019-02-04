@@ -75,12 +75,28 @@ match a with
        else (0 , [(fst x + snd x) mod 10])
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(21,19)-(21,66)
+EMPTY
+EmptyG
+
 (21,26)-(21,60)
 (((fst x + snd x) + a) mod 10) :: t
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG (AppG (fromList [VarG])) (AppG (fromList [VarG]))) VarG) LitG]))) Nothing
 
+(21,62)-(21,63)
+EMPTY
+EmptyG
+
+(22,19)-(22,66)
+EMPTY
+EmptyG
+
 (22,26)-(22,60)
 (((fst x + snd x) + a) mod 10) :: t
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG (AppG (fromList [VarG])) (AppG (fromList [VarG]))) VarG) LitG]))) Nothing
+
+(22,62)-(22,63)
+EMPTY
+EmptyG
 
 *)

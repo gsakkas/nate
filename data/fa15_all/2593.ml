@@ -9,6 +9,10 @@ let rec wwhile (f,b) = let (x,y) = f b in if y then wwhile (f, y) else x;;
 *)
 
 (* changed spans
+(2,52)-(2,66)
+EMPTY
+EmptyG
+
 (2,60)-(2,61)
 (f , y)
 TupleG (fromList [VarG])

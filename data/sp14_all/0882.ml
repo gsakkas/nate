@@ -18,6 +18,10 @@ match $x with
 | v -> x (a v)
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+(3,34)-(3,36)
+EMPTY
+EmptyG
+
 (4,2)-(4,58)
 v
 VarG

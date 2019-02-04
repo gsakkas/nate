@@ -39,4 +39,8 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
        (List.length l2 - List.length l1) @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(12,65)-(12,69)
+EMPTY
+EmptyG
+
 *)

@@ -25,6 +25,14 @@ let rec digitalRoot n =
 0
 LitG
 
+(8,62)-(8,72)
+EMPTY
+EmptyG
+
+(8,63)-(8,64)
+EMPTY
+EmptyG
+
 (8,69)-(8,71)
 0
 LitG

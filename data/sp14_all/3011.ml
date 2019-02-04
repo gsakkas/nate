@@ -65,4 +65,8 @@ let bigAdd l1 l2 =
 (0 :: (List.rev l1) , 0)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG]))) Nothing])
 
+(25,22)-(25,40)
+EMPTY
+EmptyG
+
 *)

@@ -23,19 +23,7 @@ print_int (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
 
 (3,43)-(3,54)
-n
-VarG
-
-(3,43)-(3,54)
 digitsOfInt (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
-
-(3,43)-(3,54)
-n / 10
-BopG VarG LitG
-
-(3,43)-(3,54)
-10
-LitG
 
 *)

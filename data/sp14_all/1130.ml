@@ -66,6 +66,14 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(29,6)-(29,10)
+EMPTY
+EmptyG
+
+(29,6)-(31,36)
+EMPTY
+EmptyG
+
 (30,8)-(31,36)
 (sqrt (eval (e1 , x , x)) *. sqrt (eval (e2 , x , y))) *. sqrt (eval (e3 , y , y))
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))

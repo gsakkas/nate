@@ -22,4 +22,8 @@ VarG
 listReverse (cat l h)
 AppG (fromList [AppG (fromList [EmptyG])])
 
+(4,63)-(4,64)
+EMPTY
+EmptyG
+
 *)

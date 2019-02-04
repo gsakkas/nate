@@ -185,56 +185,12 @@ let rec build (rand,depth) =
 
 (* changed spans
 (31,22)-(31,33)
-buildTimes
-VarG
-
-(31,22)-(31,33)
-build
-VarG
-
-(31,22)-(31,33)
-rand
-VarG
-
-(31,22)-(31,33)
-depth
-VarG
-
-(31,22)-(31,33)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(31,22)-(31,33)
-buildCosine (build (rand , depth - 1))
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(31,22)-(31,33)
-depth - 1
-BopG VarG LitG
-
-(31,22)-(31,33)
-1
-LitG
-
-(31,22)-(31,33)
 (build (rand , depth - 1) , buildCosine (build (rand , depth - 1)))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(31,22)-(31,33)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(31,34)-(31,53)
-build
-VarG
-
 (31,34)-(31,53)
 build (rand , depth - 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(35,54)-(35,73)
-build
-VarG
 
 (35,54)-(35,73)
 build (rand , depth - 1)

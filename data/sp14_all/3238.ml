@@ -85,6 +85,14 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(38,6)-(39,41)
+EMPTY
+EmptyG
+
+(38,6)-(40,11)
+EMPTY
+EmptyG
+
 (38,7)-(38,61)
 ((eval (ex1 , x , y) *. sin (pi *. eval (ex2 , x , y))) *. cos (pi *. eval (ex3 , x , y))) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
@@ -92,10 +100,6 @@ BopG (BopG EmptyG EmptyG) LitG
 (38,8)-(38,26)
 (eval (ex1 , x , y) *. sin (pi *. eval (ex2 , x , y))) *. cos (pi *. eval (ex3 , x , y))
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
-
-(38,8)-(38,26)
-eval (ex1 , x , y) *. sin (pi *. eval (ex2 , x , y))
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 (38,34)-(38,59)
 pi *. eval (ex2 , x , y)

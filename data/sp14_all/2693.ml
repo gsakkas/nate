@@ -70,6 +70,14 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(29,6)-(32,57)
+EMPTY
+EmptyG
+
+(29,7)-(29,11)
+EMPTY
+EmptyG
+
 (30,9)-(32,56)
 (eval (a , sin (pi *. x) , sin (pi *. y)) +. eval (b , sin (pi *. x) , sin (pi *. y))) +. eval (c , sin (pi *. x) , sin (pi *. y))
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))

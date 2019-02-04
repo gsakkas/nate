@@ -68,65 +68,45 @@ let v = (x1 + x2) + c in
 (v / 10 , [v / 10] @ ([v mod 10] @ a2))
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(24,50)-(24,57)
+EMPTY
+EmptyG
+
+(24,51)-(24,52)
+EMPTY
+EmptyG
+
 (24,55)-(24,56)
 v / 10
 BopG VarG LitG
 
 (24,59)-(24,73)
-v
-VarG
-
-(24,59)-(24,73)
 10
 LitG
+
+(24,60)-(24,62)
+EMPTY
+EmptyG
+
+(24,66)-(24,67)
+EMPTY
+EmptyG
+
+(24,66)-(24,71)
+EMPTY
+EmptyG
 
 (24,70)-(24,71)
 v / 10
 BopG VarG LitG
 
 (25,4)-(27,60)
-v
-VarG
-
-(25,4)-(27,60)
-v
-VarG
-
-(25,4)-(27,60)
-(@)
-VarG
-
-(25,4)-(27,60)
-a2
-VarG
-
-(25,4)-(27,60)
 [v mod 10] @ a2
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(25,4)-(27,60)
-v mod 10
-BopG VarG LitG
-
-(25,4)-(27,60)
-10
-LitG
-
-(25,4)-(27,60)
-10
-LitG
-
-(25,4)-(27,60)
-[v mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
 
 (25,20)-(25,21)
 0
 LitG
-
-(26,15)-(26,33)
-List.rev
-VarG
 
 (26,15)-(26,33)
 List.rev (List.combine l1 l2)
@@ -137,5 +117,13 @@ let (_ , res) =
   List.fold_left f base args in
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+
+(27,50)-(27,60)
+EMPTY
+EmptyG
+
+(27,51)-(27,54)
+EMPTY
+EmptyG
 
 *)

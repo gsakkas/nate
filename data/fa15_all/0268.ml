@@ -15,4 +15,8 @@ let rec mulByDigit i l =
 [hd * i]
 ListG (BopG EmptyG EmptyG) Nothing
 
+(3,49)-(3,66)
+EMPTY
+EmptyG
+
 *)

@@ -22,16 +22,16 @@ match fs with
 CaseG VarG (fromList [(Nothing,LamG EmptyG),(Nothing,AppG (fromList [EmptyG]))])
 
 (4,37)-(4,38)
-x
-VarG
-
-(4,37)-(4,38)
 f (fun x -> x) h
 AppG (fromList [VarG,LamG EmptyG])
 
 (4,37)-(4,40)
 fun x -> x
 LamG VarG
+
+(4,39)-(4,40)
+EMPTY
+EmptyG
 
 (5,2)-(5,26)
 h

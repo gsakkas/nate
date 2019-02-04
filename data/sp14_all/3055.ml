@@ -58,9 +58,17 @@ let rec eval (e,x,y) =
 (eval (var3 , x , y) +. eval (var4 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
+(19,27)-(19,74)
+EMPTY
+EmptyG
+
 (19,28)-(19,47)
 eval (var3 , x , y) +. eval (var4 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+
+(19,73)-(19,74)
+EMPTY
+EmptyG
 
 (20,25)-(20,44)
 eval (var5 , x , y) *. eval (var6 , x , y)

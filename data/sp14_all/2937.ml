@@ -59,4 +59,8 @@ match x with
 | (f , g) -> ((f + g) + carry) mod 10
 CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG)])
 
+(20,65)-(20,70)
+EMPTY
+EmptyG
+
 *)

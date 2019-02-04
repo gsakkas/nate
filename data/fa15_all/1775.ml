@@ -11,6 +11,10 @@ let rec wwhile (f,b) =
 *)
 
 (* changed spans
+(3,31)-(3,36)
+EMPTY
+EmptyG
+
 (3,42)-(3,48)
 wwhile (f , b')
 AppG (fromList [TupleG (fromList [EmptyG])])

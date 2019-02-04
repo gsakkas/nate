@@ -24,6 +24,14 @@ let removeDuplicates l =
 *)
 
 (* changed spans
+(7,20)-(7,21)
+EMPTY
+EmptyG
+
+(8,8)-(9,29)
+EMPTY
+EmptyG
+
 (8,32)-(8,37)
 h
 VarG
@@ -34,10 +42,6 @@ VarG
 
 (8,55)-(8,60)
 h
-VarG
-
-(9,8)-(9,29)
-t
 VarG
 
 (9,8)-(9,29)

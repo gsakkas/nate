@@ -1,3 +1,2 @@
-TupleG (fromList [ConAppG Nothing Nothing])
-(VarX , VarY)
-(VarX , VarX , VarX , VarX)
+SeqG (AppG (fromList [EmptyG])) (ListG EmptyG Nothing)
+listReverse t; [h]

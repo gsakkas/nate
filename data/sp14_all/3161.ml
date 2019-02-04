@@ -69,12 +69,28 @@ let bigAdd l1 l2 =
 0
 LitG
 
-(28,41)-(28,43)
-0 :: l2
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
+(30,18)-(30,47)
+EMPTY
+EmptyG
 
 (30,19)-(30,30)
 padZero l1 l2
 AppG (fromList [VarG])
+
+(30,28)-(30,29)
+EMPTY
+EmptyG
+
+(30,34)-(30,40)
+EMPTY
+EmptyG
+
+(30,34)-(30,46)
+EMPTY
+EmptyG
+
+(30,38)-(30,39)
+EMPTY
+EmptyG
 
 *)

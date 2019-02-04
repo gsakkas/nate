@@ -18,6 +18,18 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(6,21)-(6,27)
+EMPTY
+EmptyG
+
+(6,21)-(6,49)
+EMPTY
+EmptyG
+
+(6,28)-(6,49)
+EMPTY
+EmptyG
+
 (6,29)-(6,45)
 fun b ->
   if f b
@@ -25,11 +37,9 @@ fun b ->
   else (b , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(6,29)-(6,45)
-if f b
-then (b , true)
-else (b , false)
-IteG (AppG (fromList [EmptyG])) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
+(6,30)-(6,31)
+EMPTY
+EmptyG
 
 (6,33)-(6,44)
 let funt =
@@ -45,35 +55,11 @@ LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 TupleG (fromList [VarG,LitG])
 
 (6,35)-(6,36)
-true
-LitG
-
-(6,35)-(6,36)
 (b , false)
 TupleG (fromList [VarG,LitG])
 
 (6,37)-(6,38)
-wwhile
-VarG
-
-(6,37)-(6,38)
-funt
-VarG
-
-(6,37)-(6,38)
-b
-VarG
-
-(6,37)-(6,38)
 wwhile (funt , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(6,37)-(6,38)
-false
-LitG
-
-(6,37)-(6,38)
-(funt , b)
-TupleG (fromList [VarG])
 
 *)

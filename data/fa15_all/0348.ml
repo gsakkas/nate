@@ -9,6 +9,10 @@ let pipe fs = let f a x n = x n in let base n = n in List.fold_left f base fs;;
 *)
 
 (* changed spans
+(2,26)-(2,27)
+EMPTY
+EmptyG
+
 (2,26)-(2,29)
 fun n -> x n
 LamG (AppG (fromList [EmptyG]))

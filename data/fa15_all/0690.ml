@@ -86,29 +86,9 @@ let rec build (rand,depth) =
 
 (* changed spans
 (17,16)-(17,39)
-a
-VarG
-
-(17,16)-(17,39)
-b
-VarG
-
-(17,16)-(17,39)
-a_less
-VarG
-
-(17,16)-(17,39)
-b_less
-VarG
-
-(17,16)-(17,39)
 fun (a , b , a_less , b_less) ->
   Thresh (a , b , a_less , b_less)
 LamG (ConAppG (Just (TupleG (fromList [VarG]))) Nothing)
-
-(17,16)-(17,39)
-Thresh (a , b , a_less , b_less)
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (37,9)-(37,19)
 buildThresh

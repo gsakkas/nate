@@ -24,10 +24,6 @@ let padZero l1 l2 =
 
 (* changed spans
 (8,18)-(8,23)
-(@)
-VarG
-
-(8,18)-(8,23)
 clone 0 (y - x)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
 
@@ -41,10 +37,6 @@ VarG
 
 (8,45)-(8,46)
 l1
-VarG
-
-(8,49)-(8,54)
-(@)
 VarG
 
 (8,49)-(8,54)

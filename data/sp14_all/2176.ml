@@ -37,4 +37,8 @@ match (d , k , l) with
                                                 else assoc (d , k , t))
 CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(4,10)-(4,11)
+EMPTY
+EmptyG
+
 *)

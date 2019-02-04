@@ -23,6 +23,10 @@ let removeDuplicates l =
 *)
 
 (* changed spans
+(7,54)-(7,62)
+EMPTY
+EmptyG
+
 (7,56)-(7,57)
 h :: seen
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing

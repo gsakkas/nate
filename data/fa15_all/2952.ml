@@ -68,9 +68,13 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(31,42)-(31,68)
-0
-LitG
+(30,13)-(30,20)
+EMPTY
+EmptyG
+
+(30,14)-(30,15)
+EMPTY
+EmptyG
 
 (31,42)-(31,68)
 (0 , List.fold_left f base

@@ -67,6 +67,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(18,6)-(27,42)
+EMPTY
+EmptyG
+
+(18,9)-(18,10)
+EMPTY
+EmptyG
+
 (18,9)-(18,15)
 (List.length acc = List.length l1) || (List.length acc = List.length l2)
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
@@ -76,63 +84,23 @@ List.length acc
 AppG (fromList [VarG])
 
 (20,8)-(27,42)
-List.length
-VarG
-
-(20,8)-(27,42)
-acc
-VarG
-
-(20,8)-(27,42)
-List.length
-VarG
-
-(20,8)-(27,42)
-l1
-VarG
-
-(20,8)-(27,42)
-List.length
-VarG
-
-(20,8)-(27,42)
-acc
-VarG
-
-(20,8)-(27,42)
-List.length
-VarG
-
-(20,8)-(27,42)
-l2
-VarG
-
-(20,8)-(27,42)
-List.length l1
-AppG (fromList [VarG])
-
-(20,8)-(27,42)
-List.length acc
-AppG (fromList [VarG])
-
-(20,8)-(27,42)
-List.length l2
-AppG (fromList [VarG])
-
-(20,8)-(27,42)
 List.length acc = List.length l2
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 (23,11)-(27,41)
-acc
-VarG
-
-(23,11)-(27,41)
-0
-LitG
-
-(23,11)-(27,41)
 (0 , acc)
 TupleG (fromList [VarG,LitG])
+
+(29,25)-(29,27)
+EMPTY
+EmptyG
+
+(29,28)-(29,29)
+EMPTY
+EmptyG
+
+(29,30)-(29,50)
+EMPTY
+EmptyG
 
 *)

@@ -30,14 +30,6 @@ BopG VarG LitG
 LitG
 
 (5,23)-(5,24)
-n > 10
-BopG VarG LitG
-
-(5,23)-(5,24)
-0
-LitG
-
-(5,23)-(5,24)
 if n > 10
 then digitsOfInt (n mod 10)
 else (let a = n mod 10 in

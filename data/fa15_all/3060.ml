@@ -13,6 +13,10 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
+(3,14)-(3,22)
+EMPTY
+EmptyG
+
 (3,15)-(3,18)
 a @ [0]
 AppG (fromList [VarG,ListG EmptyG Nothing])

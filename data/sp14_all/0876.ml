@@ -32,38 +32,6 @@ l1
 VarG
 
 (10,50)-(10,54)
-l2
-VarG
-
-(10,50)-(10,54)
-l1
-VarG
-
-(10,50)-(10,54)
-clone
-VarG
-
-(10,50)-(10,54)
-(@)
-VarG
-
-(10,50)-(10,54)
-clone 0 (len2 - len1) @ l1
-AppG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(10,50)-(10,54)
-clone 0 (len2 - len1)
-AppG (fromList [BopG EmptyG EmptyG,LitG])
-
-(10,50)-(10,54)
-len2 - len1
-BopG VarG VarG
-
-(10,50)-(10,54)
-0
-LitG
-
-(10,50)-(10,54)
 (clone 0
        (len2 - len1) @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])

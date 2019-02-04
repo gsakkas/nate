@@ -51,17 +51,13 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(20,17)-(20,18)
+EMPTY
+EmptyG
+
 (20,20)-(20,21)
 [0]
 ListG LitG Nothing
-
-(21,4)-(22,74)
-0
-LitG
-
-(21,4)-(22,74)
-0
-LitG
 
 (21,4)-(22,74)
 [0]
@@ -71,16 +67,16 @@ ListG LitG Nothing
 ([0] , [0])
 TupleG (fromList [ListG EmptyG Nothing])
 
-(21,15)-(21,16)
-[0]
-ListG LitG Nothing
-
-(22,4)-(22,74)
-0
-LitG
-
 (22,4)-(22,74)
 [0]
 ListG LitG Nothing
+
+(22,15)-(22,23)
+EMPTY
+EmptyG
+
+(22,20)-(22,22)
+EMPTY
+EmptyG
 
 *)

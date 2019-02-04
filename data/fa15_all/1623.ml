@@ -11,6 +11,10 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(3,24)-(3,61)
+EMPTY
+EmptyG
+
 (3,50)-(3,60)
 [n mod 10]
 ListG (BopG EmptyG EmptyG) Nothing

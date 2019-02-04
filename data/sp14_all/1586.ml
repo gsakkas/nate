@@ -54,41 +54,29 @@ match e with
 | Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,BopG EmptyG EmptyG)])
 
+(19,23)-(19,50)
+EMPTY
+EmptyG
+
 (19,24)-(19,35)
 eval (e1 , x , y) +. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 (19,25)-(19,27)
-eval
-VarG
-
-(19,25)-(19,27)
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(19,25)-(19,27)
-(e1 , x , y)
-TupleG (fromList [VarG])
+(19,30)-(19,34)
+EMPTY
+EmptyG
 
 (19,38)-(19,49)
 x
 VarG
 
 (19,39)-(19,41)
-y
-VarG
-
-(19,39)-(19,41)
-eval
-VarG
-
-(19,39)-(19,41)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(19,39)-(19,41)
-(e2 , x , y)
-TupleG (fromList [VarG])
 
 (19,44)-(19,48)
 x

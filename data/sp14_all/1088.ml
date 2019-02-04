@@ -27,9 +27,17 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(10,24)-(10,29)
-List.append
-VarG
+(10,8)-(10,49)
+EMPTY
+EmptyG
+
+(10,9)-(10,21)
+EMPTY
+EmptyG
+
+(10,22)-(10,48)
+EMPTY
+EmptyG
 
 (10,24)-(10,29)
 clone 0 (abs diff)
@@ -39,9 +47,17 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 (l1 , l2)
 TupleG (fromList [VarG])
 
-(11,45)-(11,50)
-List.append
-VarG
+(11,29)-(11,64)
+EMPTY
+EmptyG
+
+(11,30)-(11,42)
+EMPTY
+EmptyG
+
+(11,43)-(11,63)
+EMPTY
+EmptyG
 
 (11,45)-(11,50)
 clone 0 diff

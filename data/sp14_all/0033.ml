@@ -63,4 +63,32 @@ match a with
 | (h1 :: t1 , _) -> (l1 , [0 ; 0 ; 0 ; 0])
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(24,58)-(24,76)
+EMPTY
+EmptyG
+
+(24,59)-(24,61)
+EMPTY
+EmptyG
+
+(24,63)-(24,75)
+EMPTY
+EmptyG
+
+(24,64)-(24,65)
+EMPTY
+EmptyG
+
+(24,67)-(24,68)
+EMPTY
+EmptyG
+
+(24,70)-(24,71)
+EMPTY
+EmptyG
+
+(24,73)-(24,74)
+EMPTY
+EmptyG
+
 *)

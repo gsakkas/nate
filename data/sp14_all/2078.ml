@@ -67,6 +67,22 @@ let rec exprToString e =
 *)
 
 (* changed spans
+(21,11)-(21,20)
+EMPTY
+EmptyG
+
+(21,16)-(21,20)
+EMPTY
+EmptyG
+
+(23,11)-(23,20)
+EMPTY
+EmptyG
+
+(23,16)-(23,20)
+EMPTY
+EmptyG
+
 (32,26)-(32,32)
 VarX
 ConAppG Nothing Nothing

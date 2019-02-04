@@ -63,6 +63,10 @@ let bigAdd l1 l2 =
 (c , d :: t)
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
+(23,43)-(23,55)
+EMPTY
+EmptyG
+
 (23,48)-(23,49)
 d :: t
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing

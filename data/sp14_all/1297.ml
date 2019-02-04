@@ -83,9 +83,9 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(39,49)-(39,65)
-(^)
-VarG
+(39,42)-(39,66)
+EMPTY
+EmptyG
 
 (39,49)-(39,65)
 exprToString c ^ ")^0"

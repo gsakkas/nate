@@ -119,18 +119,6 @@ buildCotangent
 VarG
 
 (50,26)-(50,45)
-build
-VarG
-
-(50,26)-(50,45)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(51,24)-(51,43)
-build
-VarG
-
-(51,24)-(51,43)
 build (rand , depth - 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
 

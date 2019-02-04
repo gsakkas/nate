@@ -16,10 +16,6 @@ let fixpoint (f,b) = wwhile ((let f' b = ((f b), (b = (f b))) in f'), b);;
 
 (* changed spans
 (5,29)-(5,49)
-fun b -> (f b , b = f b)
-LamG (TupleG (fromList [EmptyG]))
-
-(5,29)-(5,49)
 let f' =
   fun b -> (f b , b = f b) in
 f'

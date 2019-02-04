@@ -16,12 +16,12 @@ let rec digitsOfInt n =
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 
 (3,26)-(3,34)
-(@)
-VarG
-
-(3,26)-(3,34)
 [n mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
+
+(3,36)-(3,56)
+EMPTY
+EmptyG
 
 (3,49)-(3,50)
 n / 10

@@ -1,5 +1,3 @@
-BopG (UopG EmptyG) LitG
-(- 1.0) /. 3.0
-(- 1.0) /. 3.0
-(- 1.0) /. 3.0
-(- 1.0) /. 3.0
+AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
+helper (x :: acc) (n' - 1)
+helper (x :: acc) (n' - 1)

@@ -11,6 +11,10 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(3,21)-(3,57)
+EMPTY
+EmptyG
+
 (3,36)-(3,57)
 []
 ListG EmptyG Nothing

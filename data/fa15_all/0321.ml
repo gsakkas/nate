@@ -100,22 +100,6 @@ let accumulate =
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (34,20)-(34,31)
-mulByDigit
-VarG
-
-(34,20)-(34,31)
-x
-VarG
-
-(34,20)-(34,31)
-l1
-VarG
-
-(34,20)-(34,31)
-List.append accumulate [0]
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(34,20)-(34,31)
 let accumulate =
   List.append accumulate [0] in
 (l1 , bigAdd accumulate
@@ -130,9 +114,21 @@ VarG
 [0]
 ListG LitG Nothing
 
+(34,40)-(34,49)
+EMPTY
+EmptyG
+
+(34,41)-(34,44)
+EMPTY
+EmptyG
+
 (34,47)-(34,48)
 l1
 VarG
+
+(34,59)-(34,68)
+EMPTY
+EmptyG
 
 (34,69)-(34,70)
 accumulate
@@ -143,12 +139,28 @@ multed
 VarG
 
 (35,14)-(35,15)
-l1
-VarG
-
-(35,14)-(35,15)
 [0]
 ListG LitG Nothing
+
+(35,17)-(35,19)
+EMPTY
+EmptyG
+
+(36,13)-(36,21)
+EMPTY
+EmptyG
+
+(36,13)-(36,37)
+EMPTY
+EmptyG
+
+(36,22)-(36,37)
+EMPTY
+EmptyG
+
+(36,23)-(36,33)
+EMPTY
+EmptyG
 
 (36,34)-(36,36)
 l2

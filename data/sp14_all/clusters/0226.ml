@@ -1,2 +1,2 @@
-UopG (AppG (fromList [EmptyG]))
-(-. eval (e3 , x , y))
+TupleG (fromList [VarG,BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
+(x , n - 1 , x :: acc)

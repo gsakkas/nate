@@ -62,25 +62,13 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (21,13)-(21,19)
-a
-VarG
-
-(21,13)-(21,19)
 let (carry , ans) = a in
 (1 , [9] @ ans)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (21,17)-(21,18)
-(@)
-VarG
-
-(21,17)-(21,18)
 [9] @ ans
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(21,17)-(21,18)
-[9]
-ListG LitG Nothing
 
 (23,10)-(24,59)
 ans

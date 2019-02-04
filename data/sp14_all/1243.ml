@@ -68,6 +68,42 @@ TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 w
 VarG
 
+(21,36)-(21,37)
+EMPTY
+EmptyG
+
+(21,40)-(21,41)
+EMPTY
+EmptyG
+
+(21,47)-(21,49)
+EMPTY
+EmptyG
+
+(21,54)-(21,55)
+EMPTY
+EmptyG
+
+(22,13)-(22,35)
+EMPTY
+EmptyG
+
+(22,14)-(22,22)
+EMPTY
+EmptyG
+
+(22,15)-(22,16)
+EMPTY
+EmptyG
+
+(22,19)-(22,21)
+EMPTY
+EmptyG
+
+(22,24)-(22,34)
+EMPTY
+EmptyG
+
 (22,25)-(22,33)
 w
 VarG
@@ -75,10 +111,6 @@ VarG
 (23,4)-(25,51)
 y
 VarG
-
-(23,15)-(23,17)
-0
-LitG
 
 (23,15)-(23,17)
 (0 , [])

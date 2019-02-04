@@ -42,6 +42,18 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(13,16)-(13,24)
+EMPTY
+EmptyG
+
+(13,16)-(13,27)
+EMPTY
+EmptyG
+
+(13,25)-(13,27)
+EMPTY
+EmptyG
+
 (14,4)-(15,74)
 let (carry , num) = a in
 let (l1' , l2') = x in
@@ -53,34 +65,6 @@ let addit =
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (14,15)-(14,21)
-a
-VarG
-
-(14,15)-(14,21)
-x
-VarG
-
-(14,15)-(14,21)
-l1'
-VarG
-
-(14,15)-(14,21)
-l2'
-VarG
-
-(14,15)-(14,21)
-carry
-VarG
-
-(14,15)-(14,21)
-l1' + l2'
-BopG VarG VarG
-
-(14,15)-(14,21)
-(l1' + l2') + carry
-BopG (BopG EmptyG EmptyG) VarG
-
-(14,15)-(14,21)
 let (l1' , l2') = x in
 let addit =
   (l1' + l2') + carry in
@@ -89,59 +73,11 @@ let addit =
  else 0 , (addit / 10) :: num)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(14,15)-(14,21)
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
-(14,16)-(14,17)
-addit
-VarG
-
-(14,16)-(14,17)
-addit
-VarG
-
-(14,16)-(14,17)
-addit > 10
-BopG VarG LitG
-
-(14,16)-(14,17)
-addit mod 10
-BopG VarG LitG
-
-(14,16)-(14,17)
-10
-LitG
-
-(14,16)-(14,17)
-10
-LitG
-
 (14,16)-(14,17)
 if addit > 10
 then addit mod 10
 else 0
 IteG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG) LitG
-
-(14,19)-(14,20)
-addit
-VarG
-
-(14,19)-(14,20)
-num
-VarG
-
-(14,19)-(14,20)
-addit / 10
-BopG VarG LitG
-
-(14,19)-(14,20)
-10
-LitG
 
 (14,19)-(14,20)
 let base = (0 , []) in
@@ -151,14 +87,6 @@ let (_ , res) =
   List.fold_left f base args in
 res
 LetG NonRec (fromList [TupleG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(14,19)-(14,20)
-(0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(14,19)-(14,20)
-(addit / 10) :: num
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
 
 (15,4)-(15,74)
 []

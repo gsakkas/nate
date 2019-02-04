@@ -15,21 +15,21 @@ let pipe fs =
 fun n -> x (a n)
 LamG (AppG (fromList [EmptyG]))
 
+(3,21)-(3,22)
+EMPTY
+EmptyG
+
+(3,28)-(3,70)
+EMPTY
+EmptyG
+
+(3,39)-(3,40)
+EMPTY
+EmptyG
+
 (3,41)-(3,42)
 a
 VarG
-
-(3,46)-(3,70)
-n
-VarG
-
-(3,46)-(3,70)
-fun f -> 0
-LamG LitG
-
-(3,46)-(3,70)
-0
-LitG
 
 (3,46)-(3,70)
 let base = fun f -> 0 in

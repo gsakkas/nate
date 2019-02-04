@@ -59,15 +59,15 @@ else (0 , ((x1 + x2) + a1) :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (17,17)-(17,75)
-a
-VarG
-
-(17,17)-(17,75)
 let (a1 , a2) = a in
 if (x1 + x2) > 10
 then (1 , (((x1 + x2) + a1) - 10) :: a2)
 else (0 , ((x1 + x2) + a1) :: a2)
 LetG NonRec (fromList [VarG]) (IteG EmptyG EmptyG EmptyG)
+
+(17,21)-(17,22)
+EMPTY
+EmptyG
 
 (17,25)-(17,26)
 x1
@@ -81,17 +81,13 @@ VarG
 (((x1 + x2) + a1) - 10) :: a2
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
 
+(17,44)-(17,45)
+EMPTY
+EmptyG
+
 (17,48)-(17,49)
 x1 + x2
 BopG VarG VarG
-
-(17,53)-(17,55)
-x1
-VarG
-
-(17,53)-(17,55)
-x2
-VarG
 
 (17,53)-(17,55)
 a1
@@ -105,21 +101,13 @@ VarG
 ((x1 + x2) + a1) :: a2
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing
 
+(17,68)-(17,69)
+EMPTY
+EmptyG
+
 (17,72)-(17,73)
 x1 + x2
 BopG VarG VarG
-
-(18,4)-(20,51)
-x1
-VarG
-
-(18,4)-(20,51)
-x2
-VarG
-
-(18,4)-(20,51)
-a1
-VarG
 
 (18,4)-(20,51)
 a2

@@ -25,6 +25,10 @@ let rec digitalRoot n =
 r_digitalRoot n (-1)
 AppG (fromList [VarG,LitG])
 
+(8,36)-(8,57)
+EMPTY
+EmptyG
+
 (8,56)-(8,57)
 (-1)
 LitG

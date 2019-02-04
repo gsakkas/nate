@@ -63,4 +63,24 @@ AppG (fromList [TupleG (fromList [EmptyG])])
 (padZero l1 l2 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(25,34)-(25,62)
+EMPTY
+EmptyG
+
+(25,38)-(25,40)
+EMPTY
+EmptyG
+
+(25,38)-(25,45)
+EMPTY
+EmptyG
+
+(25,51)-(25,53)
+EMPTY
+EmptyG
+
+(25,59)-(25,61)
+EMPTY
+EmptyG
+
 *)

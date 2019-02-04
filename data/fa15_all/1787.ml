@@ -91,10 +91,6 @@ exprToString e2
 AppG (fromList [VarG])
 
 (40,32)-(40,36)
-(^)
-VarG
-
-(40,32)-(40,36)
 ")/" ^ ("log(" ^ (exprToString e3 ^ "))"))
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 

@@ -20,16 +20,8 @@ match n with
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
 
 (3,25)-(3,36)
-(@)
-VarG
-
-(3,25)-(3,36)
 digitsOfInt (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
-
-(3,25)-(3,56)
-n
-VarG
 
 (3,25)-(3,56)
 []

@@ -82,40 +82,8 @@ let rec build (rand,depth) =
 
 (* changed spans
 (21,15)-(33,67)
-fun () -> VarX
-LamG (ConAppG Nothing Nothing)
-
-(21,15)-(33,67)
 fun () -> VarY
 LamG (ConAppG Nothing Nothing)
-
-(21,15)-(33,67)
-VarX
-ConAppG Nothing Nothing
-
-(21,15)-(33,67)
-VarY
-ConAppG Nothing Nothing
-
-(22,2)-(33,67)
-depth
-VarG
-
-(22,2)-(33,67)
-buildX
-VarG
-
-(22,2)-(33,67)
-buildY
-VarG
-
-(22,2)-(33,67)
-buildX ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(22,2)-(33,67)
-buildY ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 
 (22,2)-(33,67)
 match depth with
@@ -131,13 +99,9 @@ match depth with
         | 5 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1)))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
-(22,2)-(33,67)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
-(22,2)-(33,67)
-()
-ConAppG Nothing (Just (TApp "unit" []))
+(22,10)-(22,23)
+EMPTY
+EmptyG
 
 (22,17)-(22,18)
 (1 , 6)

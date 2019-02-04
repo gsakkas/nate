@@ -11,9 +11,13 @@ let rec listReverse l =
 *)
 
 (* changed spans
-(3,55)-(3,56)
-t
-VarG
+(3,36)-(3,39)
+EMPTY
+EmptyG
+
+(3,37)-(3,38)
+EMPTY
+EmptyG
 
 (3,55)-(3,56)
 [h]

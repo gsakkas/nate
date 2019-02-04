@@ -15,6 +15,10 @@ let rec clone x n = cloneHelper x n;;
 cloneHelper x (n - 1)
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(2,43)-(2,59)
+EMPTY
+EmptyG
+
 (2,58)-(2,59)
 cloneHelper
 VarG

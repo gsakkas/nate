@@ -40,36 +40,8 @@ let rec build (rand,depth) =
 
 (* changed spans
 (16,2)-(16,72)
-rand
-VarG
-
-(16,2)-(16,72)
-buildX
-VarG
-
-(16,2)-(16,72)
-rand (2 , 6)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(16,2)-(16,72)
-buildX ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(16,2)-(16,72)
-2
-LitG
-
-(16,2)-(16,72)
-6
-LitG
-
-(16,2)-(16,72)
 let y = rand (2 , 6) in
 buildX ()
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
-
-(16,2)-(16,72)
-(2 , 6)
-TupleG (fromList [LitG])
 
 *)

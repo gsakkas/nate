@@ -19,13 +19,13 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
+(6,6)-(6,27)
+EMPTY
+EmptyG
+
 (6,7)-(6,21)
 mulByDigit i (m :: t)
 AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(6,19)-(6,20)
-i
-VarG
 
 (6,19)-(6,20)
 m :: t

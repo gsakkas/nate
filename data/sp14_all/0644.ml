@@ -70,13 +70,9 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(30,20)-(30,21)
-l1'
-VarG
-
-(30,20)-(30,21)
-bigAdd (mulByDigit x l1') a'
-AppG (fromList [VarG,AppG (fromList [EmptyG])])
+(30,14)-(30,74)
+EMPTY
+EmptyG
 
 (30,20)-(30,21)
 match a with
@@ -89,9 +85,9 @@ CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
                           l1') a')
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(30,67)-(30,68)
-l1'
-VarG
+(30,54)-(30,74)
+EMPTY
+EmptyG
 
 (30,67)-(30,68)
 a'
@@ -100,10 +96,6 @@ VarG
 (30,69)-(30,70)
 (l1 , [])
 TupleG (fromList [VarG,ListG EmptyG Nothing])
-
-(30,72)-(30,73)
-x
-VarG
 
 (30,72)-(30,73)
 []

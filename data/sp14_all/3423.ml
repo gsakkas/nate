@@ -16,10 +16,6 @@ fun list ->
   fun digInt -> n mod 10
 LamG (LamG EmptyG)
 
-(2,24)-(2,34)
-fun digInt -> n mod 10
-LamG (BopG EmptyG EmptyG)
-
 (2,24)-(2,76)
 let int =
   fun list ->

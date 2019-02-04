@@ -1,15 +1,5 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,LitG)])
-match explode x with
-| h :: t -> false
-match explode x with
-| h :: t -> false
-match explode x with
-| h :: t -> false
-match explode x with
-| h :: t -> false
-match explode x with
-| h :: t -> false
-match explode x with
-| h :: t -> false
-match explode x with
-| h :: t -> false
+LamG (ConAppG (Just VarG) Nothing)
+fun e -> Sine e
+fun c1 -> Circ c1
+fun e -> Sine e
+fun e -> Sine e

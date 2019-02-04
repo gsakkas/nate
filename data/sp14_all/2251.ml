@@ -28,4 +28,8 @@ LamG (IteG EmptyG EmptyG EmptyG)
 b
 VarG
 
+(6,36)-(6,37)
+EMPTY
+EmptyG
+
 *)

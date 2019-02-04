@@ -19,15 +19,19 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(7,9)-(7,62)
+EMPTY
+EmptyG
+
+(7,17)-(7,52)
+EMPTY
+EmptyG
+
 (7,21)-(7,52)
 fun x ->
   (let ff = f b in
    (ff , b = ff))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(7,30)-(7,31)
-f b
-AppG (fromList [VarG])
 
 (7,30)-(7,31)
 let ff = f b in (ff , b = ff)
@@ -40,6 +44,14 @@ VarG
 (7,36)-(7,38)
 ff
 VarG
+
+(7,45)-(7,50)
+EMPTY
+EmptyG
+
+(7,46)-(7,47)
+EMPTY
+EmptyG
 
 (7,48)-(7,49)
 ff

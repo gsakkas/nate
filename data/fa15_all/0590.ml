@@ -75,21 +75,17 @@ let rec exprToString e =
 exprToString e1
 AppG (fromList [VarG])
 
+(31,26)-(31,29)
+EMPTY
+EmptyG
+
 (32,12)-(32,33)
 "*"
 LitG
 
 (32,13)-(32,25)
-(^)
-VarG
-
-(32,13)-(32,25)
 exprToString e2
 AppG (fromList [VarG])
-
-(32,29)-(32,32)
-(^)
-VarG
 
 (32,29)-(32,32)
 "*" ^ (exprToString e3 ^ ")")

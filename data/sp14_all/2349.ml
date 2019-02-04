@@ -42,16 +42,20 @@ LetG NonRec (fromList [TupleG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
 (List.length l1 , List.length l2)
 TupleG (fromList [AppG (fromList [EmptyG])])
 
+(9,28)-(9,77)
+EMPTY
+EmptyG
+
 (9,54)-(9,77)
 b - a
 BopG VarG VarG
 
+(9,57)-(9,58)
+EMPTY
+EmptyG
+
 (9,61)-(9,62)
 a
-VarG
-
-(9,68)-(9,73)
-List.append
 VarG
 
 (9,68)-(9,73)
@@ -59,12 +63,12 @@ clone 0 (b - a)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
 
 (9,68)-(9,77)
-b
-VarG
-
-(9,68)-(9,77)
 (List.append (clone 0 (b - a))
              l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(9,76)-(9,77)
+EMPTY
+EmptyG
 
 *)

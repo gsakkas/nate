@@ -24,34 +24,6 @@ let result = f b in
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
 (5,56)-(5,62)
-f
-VarG
-
-(5,56)-(5,62)
-b
-VarG
-
-(5,56)-(5,62)
-result
-VarG
-
-(5,56)-(5,62)
-result
-VarG
-
-(5,56)-(5,62)
-b
-VarG
-
-(5,56)-(5,62)
-f b
-AppG (fromList [VarG])
-
-(5,56)-(5,62)
-result = b
-BopG VarG VarG
-
-(5,56)-(5,62)
 (result , result = b)
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
 

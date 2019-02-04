@@ -82,10 +82,6 @@ TupleG (fromList [ListG EmptyG Nothing])
 ListG EmptyG Nothing
 
 (21,15)-(21,33)
-List.rev
-VarG
-
-(21,15)-(21,33)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 

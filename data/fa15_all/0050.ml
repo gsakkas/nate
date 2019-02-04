@@ -23,6 +23,10 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
+(8,13)-(8,34)
+EMPTY
+EmptyG
+
 (8,23)-(8,26)
 ll1 - ll2
 BopG VarG VarG
@@ -30,6 +34,14 @@ BopG VarG VarG
 (9,9)-(9,32)
 clone 0 (ll2 - ll1)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
+
+(9,16)-(9,31)
+EMPTY
+EmptyG
+
+(9,17)-(9,24)
+EMPTY
+EmptyG
 
 (9,20)-(9,23)
 ll2 - ll1

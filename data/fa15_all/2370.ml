@@ -24,6 +24,22 @@ let palindrome w = match explode w with | [] -> true | h::t -> matchHeads w;;
 *)
 
 (* changed spans
+(7,19)-(7,58)
+EMPTY
+EmptyG
+
+(7,23)-(7,58)
+EMPTY
+EmptyG
+
+(7,29)-(7,30)
+EMPTY
+EmptyG
+
+(7,44)-(7,46)
+EMPTY
+EmptyG
+
 (7,57)-(7,58)
 fun x ->
   match explode x with
@@ -31,24 +47,16 @@ fun x ->
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (9,15)-(10,68)
-explode
-VarG
-
-(9,15)-(10,68)
-x
-VarG
-
-(9,15)-(10,68)
-explode x
-AppG (fromList [VarG])
-
-(9,15)-(10,68)
-false
-LitG
-
-(9,15)-(10,68)
 match explode x with
 | h :: t -> false
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,LitG)])
+
+(10,57)-(10,68)
+EMPTY
+EmptyG
+
+(10,58)-(10,65)
+EMPTY
+EmptyG
 
 *)

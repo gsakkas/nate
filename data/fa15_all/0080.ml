@@ -19,14 +19,6 @@ let fixpoint (f,b) =
 
 (* changed spans
 (5,2)-(5,66)
-fun b ->
-  (let result = f b in
-   if result = b
-   then (result , false)
-   else (result , true))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(5,2)-(5,66)
 let foo =
   fun b ->
     (let result = f b in
@@ -41,24 +33,12 @@ LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 TupleG (fromList [VarG,LitG])
 
 (5,48)-(5,66)
-result
-VarG
-
-(5,48)-(5,66)
-result
-VarG
-
-(5,48)-(5,66)
-false
-LitG
-
-(5,48)-(5,66)
-true
-LitG
-
-(5,48)-(5,66)
 (result , true)
 TupleG (fromList [VarG,LitG])
+
+(5,56)-(5,57)
+EMPTY
+EmptyG
 
 (5,59)-(5,65)
 foo

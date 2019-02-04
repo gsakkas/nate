@@ -1,5 +1,2 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LamG EmptyG)
-let s =
-  Random.State.make seed in
-fun (x , y) ->
-  x + Random.State.int s (y - x)
+TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing])
+(t1 , (((h1 + x) + rh) mod 10) :: rt)

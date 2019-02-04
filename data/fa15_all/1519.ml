@@ -87,66 +87,10 @@ let rec build (rand,depth) =
 
 (* changed spans
 (26,2)-(41,40)
-build
-VarG
-
-(26,2)-(41,40)
-rand
-VarG
-
-(26,2)-(41,40)
-depth
-VarG
-
-(26,2)-(41,40)
-rand
-VarG
-
-(26,2)-(41,40)
-buildX
-VarG
-
-(26,2)-(41,40)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(26,2)-(41,40)
-rand (1 , 2)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(26,2)-(41,40)
-buildX ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(26,2)-(41,40)
-depth - 1
-BopG VarG LitG
-
-(26,2)-(41,40)
-1
-LitG
-
-(26,2)-(41,40)
-1
-LitG
-
-(26,2)-(41,40)
-2
-LitG
-
-(26,2)-(41,40)
 match rand (1 , 2) with
 | 1 -> buildX ()
 | 2 -> buildY ()
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
-
-(26,2)-(41,40)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(26,2)-(41,40)
-(1 , 2)
-TupleG (fromList [LitG])
 
 (28,4)-(41,40)
 match rand (1 , 5) with
@@ -156,6 +100,30 @@ match rand (1 , 5) with
 | 4 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
 | 5 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
+
+(28,19)-(28,20)
+EMPTY
+EmptyG
+
+(29,11)-(29,17)
+EMPTY
+EmptyG
+
+(29,11)-(29,20)
+EMPTY
+EmptyG
+
+(29,18)-(29,20)
+EMPTY
+EmptyG
+
+(30,11)-(30,17)
+EMPTY
+EmptyG
+
+(30,11)-(30,20)
+EMPTY
+EmptyG
 
 (30,18)-(30,20)
 5

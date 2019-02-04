@@ -47,6 +47,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(13,10)-(17,62)
+EMPTY
+EmptyG
+
 (14,6)-(17,62)
 fun a ->
   (let (carry , num) = a in

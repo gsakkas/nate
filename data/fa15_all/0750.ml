@@ -25,6 +25,10 @@ BopG VarG LitG
 0
 LitG
 
+(3,37)-(3,59)
+EMPTY
+EmptyG
+
 (3,51)-(3,52)
 n / 10
 BopG VarG LitG

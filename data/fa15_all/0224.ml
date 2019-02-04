@@ -26,6 +26,18 @@ let n =
 (n , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
+(6,39)-(6,55)
+EMPTY
+EmptyG
+
+(6,40)-(6,41)
+EMPTY
+EmptyG
+
+(6,43)-(6,54)
+EMPTY
+EmptyG
+
 (6,44)-(6,45)
 let ff = f b in (ff , b = ff)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))

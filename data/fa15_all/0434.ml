@@ -19,6 +19,10 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(7,20)-(7,30)
+EMPTY
+EmptyG
+
 (7,21)-(7,25)
 f b
 AppG (fromList [VarG])

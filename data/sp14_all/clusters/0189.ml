@@ -1,3 +1,3 @@
-BopG LitG LitG
-0.0 -. 1.0
-0.0 -. 1.0
+LamG (ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing)
+fun (x , y) ->
+  ((x + y) / 10) :: a

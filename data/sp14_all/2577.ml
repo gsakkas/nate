@@ -58,14 +58,6 @@ ListG (BopG EmptyG EmptyG) Nothing
 TupleG (fromList [ListG EmptyG Nothing])
 
 (19,21)-(19,22)
-x + 1
-BopG VarG LitG
-
-(19,21)-(19,22)
-1
-LitG
-
-(19,21)-(19,22)
 [x + 1]
 ListG (BopG EmptyG EmptyG) Nothing
 
@@ -80,5 +72,13 @@ TupleG (fromList [ListG EmptyG Nothing])
 (21,4)-(21,74)
 []
 ListG EmptyG Nothing
+
+(21,15)-(21,23)
+EMPTY
+EmptyG
+
+(21,20)-(21,22)
+EMPTY
+EmptyG
 
 *)

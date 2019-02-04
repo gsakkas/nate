@@ -15,13 +15,9 @@ let pipe fs =
 fun n -> x (a n)
 LamG (AppG (fromList [EmptyG]))
 
-(3,28)-(3,68)
-a
-VarG
-
-(3,28)-(3,68)
-n
-VarG
+(3,21)-(3,22)
+EMPTY
+EmptyG
 
 (3,28)-(3,68)
 a n

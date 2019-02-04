@@ -22,6 +22,10 @@ CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
 x (a v)
 AppG (fromList [AppG (fromList [EmptyG])])
 
+(3,31)-(3,37)
+EMPTY
+EmptyG
+
 (3,36)-(3,37)
 a v
 AppG (fromList [VarG])

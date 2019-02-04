@@ -90,8 +90,28 @@ match e with
 | Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(30,6)-(35,14)
+EMPTY
+EmptyG
+
 (32,12)-(34,37)
 (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
 UopG (BopG EmptyG EmptyG)
+
+(35,11)-(35,14)
+EMPTY
+EmptyG
+
+(36,9)-(36,17)
+EMPTY
+EmptyG
+
+(36,9)-(36,25)
+EMPTY
+EmptyG
+
+(36,18)-(36,25)
+EMPTY
+EmptyG
 
 *)

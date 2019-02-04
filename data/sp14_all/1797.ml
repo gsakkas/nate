@@ -28,53 +28,11 @@ let palindrome w =
 
 (* changed spans
 (2,12)-(5,6)
-x
-VarG
-
-(2,12)-(5,6)
-y
-VarG
-
-(2,12)-(5,6)
-reverse
-VarG
-
-(2,12)-(5,6)
-t
-VarG
-
-(2,12)-(5,6)
-h
-VarG
-
-(2,12)-(5,6)
-y
-VarG
-
-(2,12)-(5,6)
 fun (x , y) ->
   match x with
   | [] -> y
   | h :: t -> reverse (t , h :: y)
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(2,12)-(5,6)
-reverse (t , h :: y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(2,12)-(5,6)
-match x with
-| [] -> y
-| h :: t -> reverse (t , h :: y)
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-
-(2,12)-(5,6)
-(t , h :: y)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(2,12)-(5,6)
-h :: y
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (7,16)-(7,75)
 fun l ->
@@ -82,6 +40,10 @@ fun l ->
   | [] -> []
   | h :: t -> reverse (l , [])
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+
+(7,29)-(7,30)
+EMPTY
+EmptyG
 
 (7,44)-(7,45)
 l
@@ -95,6 +57,22 @@ VarG
 []
 ListG EmptyG Nothing
 
+(7,64)-(7,65)
+EMPTY
+EmptyG
+
+(7,67)-(7,74)
+EMPTY
+EmptyG
+
+(7,68)-(7,69)
+EMPTY
+EmptyG
+
+(7,70)-(7,71)
+EMPTY
+EmptyG
+
 (7,72)-(7,73)
 l
 VarG
@@ -104,15 +82,19 @@ VarG
 ListG EmptyG Nothing
 
 (9,22)-(9,23)
-explode
-VarG
-
-(9,22)-(9,23)
 explode w
 AppG (fromList [VarG])
+
+(9,27)-(9,33)
+EMPTY
+EmptyG
 
 (9,34)-(9,51)
 listReverse
 VarG
+
+(9,48)-(9,50)
+EMPTY
+EmptyG
 
 *)

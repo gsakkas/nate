@@ -1,36 +1,13 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG)])
-match e with
-| VarX -> x
-| VarY -> y
-| Sine v -> sin (pi *. eval (v , x , y))
-| Cosine v -> cos (pi *. eval (v , x , y))
-| Average (v , w) -> (eval (v , x , y) +. eval (w , x , y)) /. 2.0
-| Times (v , w) -> eval (v , x , y) *. eval (w , x , y)
-match e with
-| VarX -> x
-| VarY -> y
-| Sine v -> sin (pi *. eval (v , x , y))
-| Cosine v -> cos (pi *. eval (v , x , y))
-| Average (v , w) -> (eval (v , x , y) +. eval (w , x , y)) /. 2.0
-| Times (v , w) -> eval (v , x , y) *. eval (w , x , y)
-match e with
-| VarX -> x
-| VarY -> y
-| Sine v -> sin (pi *. eval (v , x , y))
-| Cosine v -> cos (pi *. eval (v , x , y))
-| Average (v , w) -> (eval (v , x , y) +. eval (w , x , y)) /. 2.0
-| Times (v , w) -> eval (v , x , y) *. eval (w , x , y)
-match e with
-| VarX -> x
-| VarY -> y
-| Sine v -> sin (pi *. eval (v , x , y))
-| Cosine v -> cos (pi *. eval (v , x , y))
-| Average (v , w) -> (eval (v , x , y) +. eval (w , x , y)) /. 2.0
-| Times (v , w) -> eval (v , x , y) *. eval (w , x , y)
-match e with
-| VarX -> x
-| VarY -> y
-| Sine v -> sin (pi *. eval (v , x , y))
-| Cosine v -> cos (pi *. eval (v , x , y))
-| Average (v , w) -> (eval (v , x , y) +. eval (w , x , y)) /. 2.0
-| Times (v , w) -> eval (v , x , y) *. eval (w , x , y)
+LetG NonRec (fromList [LetG NonRec (fromList [EmptyG]) EmptyG]) (AppG (fromList [EmptyG]))
+let n1 =
+  (let x0 = digitsOfInt n in
+   sumList x0) in
+additivePersistence n1
+let n1 =
+  (let x0 = digitsOfInt n in
+   sumList x0) in
+additivePersistence n1
+let n1 =
+  (let x0 = digitsOfInt n in
+   sumList x0) in
+additivePersistence n1

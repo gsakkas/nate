@@ -1,142 +1,75 @@
-TupleG (fromList [VarG,AppG (fromList [EmptyG])])
-(List.append (clone 0
-                    (List.length l2 - List.length l1))
-             l1 , l2)
-(clone 0
-       (List.length l2 - List.length l1) @ l1 , l2)
-(l1 , clone 0
-            (List.length l1 - List.length l2) @ l2)
-(l1 @ clone 0 (x2 - x1) , l2)
-(l1 , l2 @ clone 0 (x1 - x2))
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-(clone 0
-       (len2 - len1) @ l1 , l2)
-(clone 0
-       (len2 - len1) @ l1 , l2)
-(clone 0
-       (len1 - len2) @ l2 , l1)
-(cout , List.append [r] [])
-(f , fst (f b))
-(List.append (clone 0
-                    (abs diff)) l1 , l2)
-(l1 , List.append (clone 0
-                         diff) l2)
-(List.append (clone 0
-                    (abs diff)) l1 , l2)
-(l1 , List.append (clone 0
-                         diff) l2)
-(List.append (clone 0
-                    (abs diff)) l1 , l2)
-(List.append (clone 0
-                    (length2 - length1)) l1 , l2)
-(l1 , List.append (clone 0
-                         (length1 - length2)) l2)
-(List.append (clone 0
-                    (length2 - length1)) l1 , l2)
-(l1 , List.append (clone 0
-                         (length1 - length2)) l2)
-(l1 , clone 0
-            (List.length l1 - List.length l2) @ l2)
-(clone 0
-       (List.length l2 - List.length l1) @ l1 , l2)
-(l1 , clone 0
-            (List.length l1 - List.length l2) @ l2)
-(clone 0
-       (List.length l2 - List.length l1) @ l1 , l2)
-(l1 , clone 0
-            (List.length l1 - List.length l2) @ l2)
-(clone 0
-       (List.length l2 - List.length l1) @ l1 , l2)
-(l1 , clone 0
-            (List.length l1 - List.length l2) @ l2)
-(clone 0
-       (List.length l2 - List.length l1) @ l1 , l2)
-(l1 , clone 0
-            (List.length l1 - List.length l2) @ l2)
-(clone 0
-       (List.length l2 - List.length l1) @ l1 , l2)
-(l1 , clone 0
-            (List.length l1 - List.length l2) @ l2)
-(clone 0
-       (List.length l2 - List.length l1) @ l1 , l2)
-(l1 , clone 0
-            (List.length l1 - List.length l2) @ l2)
-(clone 0
-       (List.length l2 - List.length l1) @ l1 , l2)
-(List.append (clone 0
-                    (sec - first)) l1 , l2)
-(l1 , List.append (clone 0
-                         (first - sec)) l2)
-(first_forced , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
-(first_forced , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
-(b , f b)
-(b , f b)
-(b , f b)
-(b , f b)
-(g , f b)
-(g , f b)
-(List.append (clone 0 (b - a))
-             l1 , l2)
-(l1 , List.append (clone 0
-                         (a - b)) l2)
-(List.append (clone 0 (b - a))
-             l1 , l2)
-(List.append (clone 0 (b - a))
-             l1 , l2)
-(List.append (clone 0 (b - a))
-             l1 , l2)
-(List.append (clone 0 (b - a))
-             l1 , l2)
-(List.append (clone 0 (b - a))
-             l1 , l2)
-(List.append (clone 0 (b - a))
-             l1 , l2)
-(List.append (clone 0 (b - a))
-             l1 , l2)
-(l1 , List.append (clone 0
-                         (a - b)) l2)
-(l1 , List.append (clone 0
-                         l1G) l2)
-(List.append (clone 0 l2G)
-             l1 , l2)
-(List.append (clone 0 l2G)
-             l1 , l2)
-(l1 , to_append @ l2)
-(l1 , clone 0 a)
-(l1 , clone 0 a)
-(List.append (clone 0 (0 - a))
-             l1 , l2)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
-(func b , b)
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+listReverse tl @ [hd]
+listReverse tl @ [hd]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+listReverse t @ []
+listReverse t @ [h]
+listReverse t @ [h]
+listReverse t @ [h]
+digitsOfInt (n / 10) @ [n mod 10]
+List.append [result / 10]
+            (List.append [result mod 10]
+                         l)
+List.append [result / 10]
+            (List.append [result mod 10]
+                         l)
+listReverse t @ [h]
+listReverse b @ [a]
+digitsOfInt (n / 10) @ [n mod 10]
+append_new (listReverse tail)
+           [head]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+listReverse t @ [h]
+append (listReverse t) [h]
+[n mod 10] @ digitsOfInt (n / 10)
+[n mod 10] @ digitsOfInt (n / 10)
+[n mod 10] @ digitsOfInt n10
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+append [n mod 10]
+       (digitsOfInt (n / 10))
+append [n mod 10]
+       (digitsOfInt (n / 10))
+append (helper (n / 10))
+       [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+bigAdd (mulByDigit (i - 1) l)
+       [0]
+[(0 , 0)] @ List.combine (List.rev l1)
+                         (List.rev l2)
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+digitsOfInt (n / 10) @ [n mod 10]
+listReverse l' @ [x]
+intlist (x / 10) @ [x mod 10]
+intlist (x / 10) @ [x mod 10]
+append (digitsOfInt (n / 10))
+       [n mod 10]
+[5] @ digitsOfInt (n / 10)
+app (digitsOfInt (n / 10))
+    [n mod 10]
+app (digitsOfInt (n / 10))
+    [n mod 10]
+List.append (List.rev (List.combine l1
+                                    l2)) [(0 , 0)]
+mulByDigit i
+           (m :: t) @ [((h * i) / 10) + ((m * i) mod 10) ; (h * i) mod 10]
+helper t1 @ [h1 mod 10]
+mulByDigit i
+           (List.rev (List.map (fun x ->
+                                  x * 10) t)) @ [h * i]

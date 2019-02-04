@@ -58,4 +58,44 @@ let addit =
  else 0 , (addit / 10) :: num)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(16,19)-(16,65)
+EMPTY
+EmptyG
+
+(16,20)-(16,21)
+EMPTY
+EmptyG
+
+(16,23)-(16,64)
+EMPTY
+EmptyG
+
+(16,27)-(16,32)
+EMPTY
+EmptyG
+
+(16,27)-(16,36)
+EMPTY
+EmptyG
+
+(16,35)-(16,36)
+EMPTY
+EmptyG
+
+(16,42)-(16,47)
+EMPTY
+EmptyG
+
+(16,42)-(16,54)
+EMPTY
+EmptyG
+
+(16,51)-(16,54)
+EMPTY
+EmptyG
+
+(16,60)-(16,63)
+EMPTY
+EmptyG
+
 *)

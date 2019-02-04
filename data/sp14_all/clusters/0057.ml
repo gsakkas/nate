@@ -1,134 +1,25 @@
-LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-(g , b)
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-(g , b)
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-(g , b)
-let g =
-  fun x ->
-    (let bb = f b in
-     (bb , bb = b)) in
-(g , b)
-let y =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> x)) in
-(y , b)
-let y =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> x)) in
-(y , b)
-let y =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> x)) in
-(y , b)
-let y =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> x)) in
-(y , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x -> (0 , true) in
-(func b , b)
-let func =
-  fun x ->
-    fun x ->
-      (f b , not (f b = b)) in
-(func b , b)
+BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
+(List.length acc = List.length l1) || (List.length acc = List.length l2)
+(List.length acc = List.length l1) || (List.length acc = List.length l2)
+(eval (e1 , x , y) /. 2.0) +. (eval (e2 , x , y) /. 2.0)
+(eval (e1 , x , y) /. 2.0) +. (eval (e2 , x , y) /. 2.0)
+((eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))) +. (eval (e3 , x , y) *. eval (e3 , x , y))
+((eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))) +. (eval (e3 , x , y) *. eval (e3 , x , y))
+(eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))
+(a * a) + (x * x)
+((1.0 /. eval (e1 , x , y)) +. (1.0 /. eval (e2 , x , y))) +. (1.0 /. eval (e3 , x , y))
+(1.0 /. eval (e1 , x , y)) +. (1.0 /. eval (e2 , x , y))
+((1.0 /. eval (e1 , x , y)) +. (1.0 /. eval (e2 , x , y))) +. (1.0 /. eval (e3 , x , y))
+(1.0 /. eval (e1 , x , y)) +. (1.0 /. eval (e2 , x , y))
+((eval (a , x , y) +. eval (b , x , y)) +. eval (c , x , y)) -. ((eval (a , x , y) +. eval (b , x , y)) +. eval (c , x , y))
+(((atan res1 +. atan res2) -. atan res3) *. 2.0) /. (3.0 *. pi)
+(((atan res1 +. atan res2) -. atan res3) *. 2.0) /. (3.0 *. pi)
+(((atan res1 +. atan res2) -. atan res3) *. 2.0) /. (3.0 *. pi)
+(eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (c , x , y))
+(eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (c , x , y))
+(eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (c , x , y))
+(x + h) - (asd * 10)
+(((eval (ex1 , x , y) *. (eval (ex1 , x , y) +. eval (ex2 , x , y))) *. ((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y))) *. (((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y))) *. ((((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y)) +. eval (ex5 , x , y))
+((eval (ex1 , x , y) *. (eval (ex1 , x , y) +. eval (ex2 , x , y))) *. ((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y))) *. (((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y))
+((eval (ex1 , x , y) *. (eval (ex1 , x , y) +. eval (ex2 , x , y))) *. ((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y))) *. (((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y))
+((eval (ex1 , x , y) *. (eval (ex1 , x , y) +. eval (ex2 , x , y))) *. ((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y))) *. (((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y))

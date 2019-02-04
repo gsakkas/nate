@@ -80,9 +80,17 @@ helper (x - 1) l (bigAdd l
                          accum)
 AppG (fromList [VarG,AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
+(34,19)-(34,54)
+EMPTY
+EmptyG
+
 (34,27)-(34,28)
 x - 1
 BopG VarG LitG
+
+(34,32)-(34,54)
+EMPTY
+EmptyG
 
 (35,2)-(35,31)
 mulByDigit i (helper i l

@@ -1,19 +1,16 @@
-AppG (fromList [ListG EmptyG Nothing])
-[n] @ [(n + c) + d]
-[n + 1] @ [((n + c) + d) mod 10]
-[n] @ [(n + c) + d]
-[n + 1] @ [((n + c) + d) mod 10]
-[n] @ [(n + c) + d]
-[n + 1] @ [((n + c) + d) mod 10]
-[n] @ [(n + c) + d]
-[n + 1] @ [((n + c) + d) mod 10]
-[n] @ [(n + c) + d]
-[n + 1] @ [((n + c) + d) mod 10]
-[n] @ [(n + c) + d]
-[n + 1] @ [((n + c) + d) mod 10]
-[] @ [n mod 10]
-[] @ [n mod 10]
-[] @ [n mod 10]
-[w mod 10] @ [w / 10]
-[w mod 10] @ [w / 10]
-matchHeads [["b"]]
+TupleG (fromList [LitG])
+(0 , 4)
+(1 , 6)
+(0 , 0)
+(0 , 4)
+(0 , 4)
+(0 , 4)
+(0 , 4)
+(0 , 4)
+(0 , 1)
+(0 , 4)
+(0 , 1)
+(0 , 6)
+(0 , 0)
+(0 , 4)
+(0 , 4)

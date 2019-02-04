@@ -59,10 +59,6 @@ let palindrome w =
 ListG VarG Nothing
 
 (23,67)-(23,68)
-explode
-VarG
-
-(23,67)-(23,68)
 explode w
 AppG (fromList [VarG])
 

@@ -52,28 +52,20 @@ match e with
 | Average (x1 , x2) -> (eval (x1 , x , y) +. eval (x2 , x , y)) /. 2.0
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG)])
 
-(17,31)-(17,32)
-eval
-VarG
+(17,18)-(17,34)
+EMPTY
+EmptyG
 
-(17,31)-(17,32)
-x1
-VarG
+(17,19)-(17,23)
+EMPTY
+EmptyG
 
 (17,31)-(17,32)
 eval (x1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(17,31)-(17,32)
-(x1 , x , y)
-TupleG (fromList [VarG])
-
 (18,16)-(18,36)
 y
-VarG
-
-(18,33)-(18,34)
-x1
 VarG
 
 (18,33)-(18,34)
@@ -89,20 +81,12 @@ VarG
 TupleG (fromList [VarG])
 
 (19,37)-(19,46)
-x
-VarG
-
-(19,37)-(19,46)
 y
 VarG
 
 (19,43)-(19,45)
 (x2 , x , y)
 TupleG (fromList [VarG])
-
-(19,51)-(19,53)
-x
-VarG
 
 (19,51)-(19,53)
 y

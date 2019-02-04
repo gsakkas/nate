@@ -22,6 +22,26 @@ match c' with
 | false -> b'
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
 
+(5,28)-(5,68)
+EMPTY
+EmptyG
+
+(5,32)-(5,33)
+EMPTY
+EmptyG
+
+(5,32)-(5,41)
+EMPTY
+EmptyG
+
+(5,36)-(5,41)
+EMPTY
+EmptyG
+
+(5,37)-(5,38)
+EMPTY
+EmptyG
+
 (5,39)-(5,40)
 let func =
   fun x ->
@@ -32,18 +52,6 @@ LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 (5,47)-(5,51)
 fun x -> fun x -> (0 , true)
 LamG (LamG EmptyG)
-
-(5,47)-(5,51)
-fun x -> (0 , true)
-LamG (TupleG (fromList [EmptyG]))
-
-(5,47)-(5,51)
-0
-LitG
-
-(5,47)-(5,51)
-(0 , true)
-TupleG (fromList [LitG])
 
 (5,58)-(5,63)
 func b

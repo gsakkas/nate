@@ -24,49 +24,11 @@ let rec digitalRoot n =
 
 (* changed spans
 (7,20)-(8,66)
-xs
-VarG
-
-(7,20)-(8,66)
-h
-VarG
-
-(7,20)-(8,66)
-sumList
-VarG
-
-(7,20)-(8,66)
-t
-VarG
-
-(7,20)-(8,66)
 fun xs ->
   match xs with
   | [] -> 0
   | h :: t -> h + sumList t
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(7,20)-(8,66)
-sumList t
-AppG (fromList [VarG])
-
-(7,20)-(8,66)
-h + sumList t
-BopG VarG (AppG (fromList [EmptyG]))
-
-(7,20)-(8,66)
-0
-LitG
-
-(7,20)-(8,66)
-match xs with
-| [] -> 0
-| h :: t -> h + sumList t
-CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
-
-(8,8)-(8,9)
-digits
-VarG
 
 (8,8)-(8,9)
 digits n

@@ -21,4 +21,8 @@ let fixpoint (f,b) =
 wwhile (g , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
+(6,46)-(6,61)
+EMPTY
+EmptyG
+
 *)

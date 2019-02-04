@@ -27,9 +27,13 @@ let palindrome w =
 *)
 
 (* changed spans
-(11,41)-(11,42)
-explode
-VarG
+(11,20)-(11,27)
+EMPTY
+EmptyG
+
+(11,28)-(11,43)
+EMPTY
+EmptyG
 
 (11,41)-(11,42)
 explode w

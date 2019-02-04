@@ -25,6 +25,10 @@ fun b' ->
   else (b' , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
+(6,17)-(6,18)
+EMPTY
+EmptyG
+
 (6,22)-(6,23)
 b'
 VarG

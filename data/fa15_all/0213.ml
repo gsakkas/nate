@@ -32,25 +32,13 @@ fun x ->
    (ff , b = ff))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(6,37)-(6,40)
-let ff = f b in (ff , b = ff)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-
-(6,45)-(6,51)
-ff
-VarG
-
-(6,45)-(6,51)
-b
-VarG
-
-(6,45)-(6,51)
-ff
-VarG
-
 (6,45)-(6,51)
 b = ff
 BopG VarG VarG
+
+(6,46)-(6,47)
+EMPTY
+EmptyG
 
 (6,49)-(6,50)
 n

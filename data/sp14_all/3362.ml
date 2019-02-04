@@ -16,23 +16,9 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(5,12)-(5,54)
-mulByDigit
-VarG
-
-(5,12)-(5,54)
-i
-VarG
-
-(5,12)-(5,54)
-(@)
-VarG
-
-(5,12)-(5,54)
-mulByDigit i
-           (List.rev (List.map (fun x ->
-                                  x * 10) t))
-AppG (fromList [VarG,AppG (fromList [EmptyG])])
+(4,10)-(4,11)
+EMPTY
+EmptyG
 
 (5,12)-(5,54)
 mulByDigit i

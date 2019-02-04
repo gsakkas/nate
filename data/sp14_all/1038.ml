@@ -14,10 +14,6 @@ a + x
 BopG VarG VarG
 
 (2,35)-(2,76)
-a
-VarG
-
-(2,35)-(2,76)
 x
 VarG
 

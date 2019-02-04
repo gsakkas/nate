@@ -17,10 +17,6 @@ x (fun a -> a)
 AppG (fromList [LamG EmptyG])
 
 (3,21)-(3,22)
-x
-VarG
-
-(3,21)-(3,22)
 fun a -> a
 LamG VarG
 

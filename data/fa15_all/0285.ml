@@ -26,22 +26,6 @@ let padZero l1 l2 =
 
 (* changed spans
 (5,12)-(9,49)
-n
-VarG
-
-(5,12)-(9,49)
-cloneHelper
-VarG
-
-(5,12)-(9,49)
-x
-VarG
-
-(5,12)-(9,49)
-n
-VarG
-
-(5,12)-(9,49)
 fun x ->
   fun n ->
     if n < 1
@@ -49,69 +33,48 @@ fun x ->
     else cloneHelper x n []
 LamG (LamG EmptyG)
 
-(5,12)-(9,49)
-fun n ->
-  if n < 1
-  then []
-  else cloneHelper x n []
-LamG (IteG EmptyG EmptyG EmptyG)
+(8,7)-(8,18)
+EMPTY
+EmptyG
 
-(5,12)-(9,49)
-cloneHelper x n []
-AppG (fromList [VarG,ListG EmptyG Nothing])
+(8,7)-(8,49)
+EMPTY
+EmptyG
 
-(5,12)-(9,49)
-n < 1
-BopG VarG LitG
+(8,19)-(8,20)
+EMPTY
+EmptyG
 
-(5,12)-(9,49)
-1
-LitG
+(8,21)-(8,40)
+EMPTY
+EmptyG
 
-(5,12)-(9,49)
-if n < 1
-then []
-else cloneHelper x n []
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (AppG (fromList [EmptyG]))
+(8,22)-(8,35)
+EMPTY
+EmptyG
 
-(5,12)-(9,49)
-[]
-ListG EmptyG Nothing
+(8,23)-(8,27)
+EMPTY
+EmptyG
 
-(5,12)-(9,49)
-[]
-ListG EmptyG Nothing
+(8,30)-(8,34)
+EMPTY
+EmptyG
 
 (8,38)-(8,39)
 (l1 @ clone 0 diff , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(9,7)-(9,49)
-clone
-VarG
-
-(9,7)-(9,49)
-diff
-VarG
-
-(9,7)-(9,49)
-l2
-VarG
+(8,42)-(8,43)
+EMPTY
+EmptyG
 
 (9,7)-(9,49)
 clone 0 diff
 AppG (fromList [VarG,LitG])
 
-(9,7)-(9,49)
-0
-LitG
-
 (9,24)-(9,44)
 l2
-VarG
-
-(9,24)-(9,49)
-l1
 VarG
 
 (9,24)-(9,49)
@@ -120,10 +83,6 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (9,25)-(9,36)
 clone
-VarG
-
-(9,47)-(9,49)
-l1
 VarG
 
 (9,47)-(9,49)

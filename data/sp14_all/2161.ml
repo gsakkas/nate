@@ -27,9 +27,13 @@ let removeDuplicates l =
 h :: seen
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
-(8,8)-(8,46)
-h
-VarG
+(7,23)-(7,34)
+EMPTY
+EmptyG
+
+(7,24)-(7,25)
+EMPTY
+EmptyG
 
 (8,8)-(8,46)
 seen

@@ -49,10 +49,6 @@ let (a1 , a2) = a in
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (16,18)-(16,65)
-a1
-VarG
-
-(16,18)-(16,65)
 (a1 , mulByDigit x
                  l1 @ clone 0 (List.length a1))
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])

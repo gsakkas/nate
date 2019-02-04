@@ -82,6 +82,10 @@ CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 l1'
 VarG
 
+(32,10)-(32,11)
+EMPTY
+EmptyG
+
 (32,25)-(32,27)
 (l1' , bigAdd (mulByDigit x
                           l1') a')
@@ -91,9 +95,17 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 mulByDigit x l1'
 AppG (fromList [VarG])
 
+(32,57)-(32,64)
+EMPTY
+EmptyG
+
 (32,58)-(32,59)
 x
 VarG
+
+(33,18)-(33,21)
+EMPTY
+EmptyG
 
 (33,19)-(33,20)
 []

@@ -68,13 +68,13 @@ let bigMul l1 l2 =
 
 (* changed spans
 (29,14)-(29,35)
-a
-VarG
-
-(29,14)-(29,35)
 let (0 , res) = a in
 (0 , mulByDigit x res)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+
+(29,30)-(29,31)
+EMPTY
+EmptyG
 
 (30,2)-(31,75)
 res

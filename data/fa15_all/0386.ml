@@ -65,6 +65,10 @@ let rec eval (e,x,y) =
 (sin (pi *. eval (r , x , y)) +. tan (pi *. eval (s , x , y))) *. sin (pi *. eval (t , x , y))
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
+(27,6)-(28,37)
+EMPTY
+EmptyG
+
 (27,7)-(27,36)
 sin (pi *. eval (r , x , y)) +. tan (pi *. eval (s , x , y))
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))

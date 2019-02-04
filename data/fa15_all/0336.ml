@@ -29,14 +29,6 @@ fun f ->
 LamG (LamG EmptyG)
 
 (2,27)-(2,70)
-f
-VarG
-
-(2,27)-(2,70)
-b
-VarG
-
-(2,27)-(2,70)
 fun b ->
   fun b ->
     (f b , if f b = b
@@ -44,25 +36,28 @@ fun b ->
            else false)
 LamG (LamG EmptyG)
 
-(2,27)-(2,70)
-fun b ->
-  (f b , if f b = b
-         then true
-         else false)
-LamG (TupleG (fromList [EmptyG]))
+(2,45)-(2,54)
+EMPTY
+EmptyG
 
-(2,27)-(2,70)
-f b
-AppG (fromList [VarG])
+(2,46)-(2,47)
+EMPTY
+EmptyG
 
-(2,27)-(2,70)
-(f b , if f b = b
-       then true
-       else false)
-TupleG (fromList [AppG (fromList [EmptyG]),IteG EmptyG EmptyG EmptyG])
+(2,60)-(2,70)
+EMPTY
+EmptyG
+
+(2,61)-(2,62)
+EMPTY
+EmptyG
 
 (7,29)-(7,52)
 fixpointHelper f b
 AppG (fromList [VarG])
+
+(7,45)-(7,51)
+EMPTY
+EmptyG
 
 *)

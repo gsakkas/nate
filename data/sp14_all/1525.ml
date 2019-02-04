@@ -18,6 +18,10 @@ VarG
 f
 VarG
 
+(3,34)-(3,36)
+EMPTY
+EmptyG
+
 (3,42)-(3,66)
 xs
 VarG

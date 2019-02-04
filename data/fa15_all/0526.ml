@@ -78,4 +78,24 @@ match e with
 | _ -> 0.0
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,LitG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(27,14)-(27,17)
+EMPTY
+EmptyG
+
+(27,14)-(27,26)
+EMPTY
+EmptyG
+
+(27,18)-(27,26)
+EMPTY
+EmptyG
+
+(27,19)-(27,23)
+EMPTY
+EmptyG
+
+(27,24)-(27,25)
+EMPTY
+EmptyG
+
 *)

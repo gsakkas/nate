@@ -87,10 +87,6 @@ bigAdd (mulByDigit (i - 1) l)
        [0]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 
-(34,39)-(34,45)
-0
-LitG
-
 (34,39)-(34,68)
 [0]
 ListG LitG Nothing

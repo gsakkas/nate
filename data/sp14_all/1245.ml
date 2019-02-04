@@ -60,6 +60,10 @@ match a with
 | (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(21,16)-(21,55)
+EMPTY
+EmptyG
+
 (21,19)-(21,20)
 w
 VarG
@@ -68,6 +72,38 @@ VarG
 ((w + z) mod 10) :: y
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
 
+(21,35)-(21,36)
+EMPTY
+EmptyG
+
+(21,39)-(21,40)
+EMPTY
+EmptyG
+
+(21,46)-(21,48)
+EMPTY
+EmptyG
+
+(21,54)-(21,55)
+EMPTY
+EmptyG
+
+(22,13)-(22,35)
+EMPTY
+EmptyG
+
+(22,14)-(22,22)
+EMPTY
+EmptyG
+
+(22,15)-(22,16)
+EMPTY
+EmptyG
+
+(22,19)-(22,21)
+EMPTY
+EmptyG
+
 (22,24)-(22,34)
 w
 VarG
@@ -75,10 +111,6 @@ VarG
 (23,4)-(25,51)
 y
 VarG
-
-(23,15)-(23,17)
-0
-LitG
 
 (23,15)-(23,17)
 (0 , [])

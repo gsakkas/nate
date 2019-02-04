@@ -23,8 +23,28 @@ let stringOfList f l = sepConcat " " l;;
 *)
 
 (* changed spans
+(9,23)-(9,32)
+EMPTY
+EmptyG
+
+(9,23)-(9,53)
+EMPTY
+EmptyG
+
 (9,34)-(9,37)
 sepConcat
 VarG
+
+(9,38)-(9,46)
+EMPTY
+EmptyG
+
+(9,47)-(9,52)
+EMPTY
+EmptyG
+
+(9,48)-(9,49)
+EMPTY
+EmptyG
 
 *)

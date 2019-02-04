@@ -1,6 +1,17 @@
-UopG (BopG EmptyG EmptyG)
-(-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-(-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-(-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-(-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-(-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+SeqG (BopG EmptyG EmptyG) (IteG EmptyG EmptyG EmptyG)
+x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x
+x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x
+x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x
+x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x

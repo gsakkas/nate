@@ -22,13 +22,13 @@ let fixpoint (f,b) =
 fun b'' -> (f b , false)
 LamG (TupleG (fromList [EmptyG]))
 
+(5,49)-(5,57)
+EMPTY
+EmptyG
+
 (5,49)-(5,63)
 fun b'' -> (f b , true)
 LamG (TupleG (fromList [EmptyG]))
-
-(5,49)-(5,63)
-(f b , true)
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (5,58)-(5,63)
 f

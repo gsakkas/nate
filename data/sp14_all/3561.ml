@@ -49,13 +49,37 @@ match (a , x) with
 | ((b , c) , (d , e)) -> (b , (d + e) :: c)
 CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(15,37)-(15,71)
-b
-VarG
+(15,37)-(15,51)
+EMPTY
+EmptyG
 
 (15,37)-(15,71)
 (b , (d + e) :: c)
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing])
+
+(15,39)-(15,40)
+EMPTY
+EmptyG
+
+(15,48)-(15,50)
+EMPTY
+EmptyG
+
+(15,55)-(15,71)
+EMPTY
+EmptyG
+
+(15,56)-(15,63)
+EMPTY
+EmptyG
+
+(15,57)-(15,58)
+EMPTY
+EmptyG
+
+(15,61)-(15,62)
+EMPTY
+EmptyG
 
 (15,68)-(15,70)
 e
@@ -65,6 +89,10 @@ VarG
 c
 VarG
 
+(16,16)-(16,17)
+EMPTY
+EmptyG
+
 (16,19)-(16,20)
 []
 ListG EmptyG Nothing
@@ -73,41 +101,53 @@ ListG EmptyG Nothing
 []
 ListG EmptyG Nothing
 
+(19,22)-(19,51)
+EMPTY
+EmptyG
+
+(19,23)-(19,31)
+EMPTY
+EmptyG
+
+(19,32)-(19,47)
+EMPTY
+EmptyG
+
+(19,43)-(19,46)
+EMPTY
+EmptyG
+
+(19,44)-(19,45)
+EMPTY
+EmptyG
+
+(19,48)-(19,50)
+EMPTY
+EmptyG
+
+(20,11)-(20,40)
+EMPTY
+EmptyG
+
+(20,12)-(20,20)
+EMPTY
+EmptyG
+
+(20,21)-(20,36)
+EMPTY
+EmptyG
+
+(20,32)-(20,35)
+EMPTY
+EmptyG
+
+(20,33)-(20,34)
+EMPTY
+EmptyG
+
 (20,37)-(20,39)
 [0 ; 0 ; 9 ; 9]
 ListG LitG Nothing
-
-(21,4)-(21,51)
-0
-LitG
-
-(21,4)-(21,51)
-0
-LitG
-
-(21,4)-(21,51)
-9
-LitG
-
-(21,4)-(21,51)
-9
-LitG
-
-(21,4)-(21,51)
-1
-LitG
-
-(21,4)-(21,51)
-0
-LitG
-
-(21,4)-(21,51)
-0
-LitG
-
-(21,4)-(21,51)
-2
-LitG
 
 (21,4)-(21,51)
 [1 ; 0 ; 0 ; 2]

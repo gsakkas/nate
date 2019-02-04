@@ -30,15 +30,15 @@ LamG (IteG EmptyG EmptyG EmptyG)
 TupleG (fromList [VarG,LitG])
 
 (6,48)-(6,51)
-true
-LitG
-
-(6,48)-(6,51)
 (f b , false)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (6,55)-(6,59)
 false
 LitG
+
+(6,62)-(6,63)
+EMPTY
+EmptyG
 
 *)

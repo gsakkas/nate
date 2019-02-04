@@ -14,13 +14,13 @@ let sqsum xs =
 a * a
 BopG VarG VarG
 
+(2,27)-(2,33)
+EMPTY
+EmptyG
+
 (2,29)-(2,31)
 (a * a) + (x * x)
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
-
-(2,32)-(2,33)
-a
-VarG
 
 (2,32)-(2,33)
 x * x

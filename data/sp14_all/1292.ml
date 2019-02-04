@@ -90,29 +90,13 @@ let rec build (rand,depth) =
 
 (* changed spans
 (17,16)-(17,39)
-a
-VarG
-
-(17,16)-(17,39)
-b
-VarG
-
-(17,16)-(17,39)
-a_less
-VarG
-
-(17,16)-(17,39)
-b_less
-VarG
-
-(17,16)-(17,39)
 fun (a , b , a_less , b_less) ->
   Thresh (a , b , a_less , b_less)
 LamG (ConAppG (Just (TupleG (fromList [VarG]))) Nothing)
 
-(17,16)-(17,39)
-Thresh (a , b , a_less , b_less)
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+(28,5)-(42,73)
+EMPTY
+EmptyG
 
 (28,8)-(28,13)
 match x with
@@ -123,8 +107,56 @@ match x with
 | 4 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+(28,12)-(28,13)
+EMPTY
+EmptyG
+
+(31,7)-(42,73)
+EMPTY
+EmptyG
+
+(31,10)-(31,11)
+EMPTY
+EmptyG
+
+(31,10)-(31,15)
+EMPTY
+EmptyG
+
+(31,14)-(31,15)
+EMPTY
+EmptyG
+
+(34,9)-(42,73)
+EMPTY
+EmptyG
+
+(34,12)-(34,13)
+EMPTY
+EmptyG
+
+(34,12)-(34,17)
+EMPTY
+EmptyG
+
+(34,16)-(34,17)
+EMPTY
+EmptyG
+
 (39,11)-(42,73)
 buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
+
+(39,14)-(39,15)
+EMPTY
+EmptyG
+
+(39,14)-(39,19)
+EMPTY
+EmptyG
+
+(39,18)-(39,19)
+EMPTY
+EmptyG
 
 *)

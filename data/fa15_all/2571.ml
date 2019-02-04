@@ -71,6 +71,10 @@ let rec exprToString e =
 exprToString (Average (Times (ex1 , ex2) , Times (ex2 , ex3)))
 AppG (fromList [ConAppG (Just (TupleG (fromList [ConAppG (Just (TupleG (fromList [VarG]))) Nothing]))) Nothing])
 
+(31,19)-(31,26)
+EMPTY
+EmptyG
+
 (31,27)-(31,67)
 Average (Times (ex1 , ex2) , Times (ex2 , ex3))
 ConAppG (Just (TupleG (fromList [ConAppG (Just (TupleG (fromList [VarG]))) Nothing]))) Nothing

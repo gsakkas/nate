@@ -62,26 +62,6 @@ let bigAdd l1 l2 =
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
 (25,4)-(25,68)
-0
-LitG
-
-(25,4)-(25,68)
-0
-LitG
-
-(25,4)-(25,68)
-0
-LitG
-
-(25,4)-(25,68)
-0
-LitG
-
-(25,4)-(25,68)
-0
-LitG
-
-(25,4)-(25,68)
 [0 ; 0 ; 0 ; 0]
 ListG LitG Nothing
 

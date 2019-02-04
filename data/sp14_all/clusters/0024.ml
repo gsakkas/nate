@@ -1,94 +1,86 @@
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(c , c :: s)
-(carry2 , dig :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(t , h :: y)
-(Average (e1 , e2) , x , y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(newc , digit :: p)
-(newc , digit :: p)
-(newc , digit :: p)
-(c , d :: t)
-(c , d :: t)
-(c , d :: t)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(new_carry , digit :: y)
-(h :: seen , t)
-(h :: seen , t)
+ListG LitG Nothing
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0]
+[0 ; 0 ; 0 ; 0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[1]
+[9 ; 9 ; 9]
+[0]
+[0]
+["]"]
+["]"]
+[1]
+[1]
+[0]
+[0]
+[0]
+[0]
+[5]
+[1]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0]
+[0 ; 0 ; 9 ; 9]
+[0 ; 0 ; 9 ; 9]
+[0 ; 0 ; 9 ; 9]
+[0 ; 0 ; 9 ; 9]
+[0 ; 0 ; 9 ; 9]
+[0 ; 0 ; 9 ; 9]
+[1]
+[1]
+[0]
+[0]
+[0]
+[0]
+[0]
+[1 ; 2]
+[0 ; 0 ; 9 ; 9]
+[1 ; 0 ; 0 ; 2]
+[0 ; 0 ; 9 ; 9]
+[1 ; 0 ; 0 ; 2]

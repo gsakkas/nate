@@ -22,8 +22,40 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(2,15)-(2,20)
+EMPTY
+EmptyG
+
+(2,15)-(2,24)
+EMPTY
+EmptyG
+
+(2,16)-(2,17)
+EMPTY
+EmptyG
+
+(2,18)-(2,19)
+EMPTY
+EmptyG
+
+(2,23)-(2,24)
+EMPTY
+EmptyG
+
+(4,16)-(5,63)
+EMPTY
+EmptyG
+
 (9,52)-(9,54)
 f
 VarG
+
+(9,69)-(9,73)
+EMPTY
+EmptyG
+
+(9,72)-(9,73)
+EMPTY
+EmptyG
 
 *)

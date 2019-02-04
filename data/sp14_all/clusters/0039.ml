@@ -1,55 +1,85 @@
-AppG (fromList [BopG EmptyG EmptyG])
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-sin ((pi *. eval (e , x , y)) *. 0.5)
-sin ((pi *. eval (e , x , y)) *. 0.5)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-not (f b = b)
-not (f x = x)
-not (f x = x)
-cos (pi *. eval (e' , x , y))
-sin ((cos (pi *. eval (e1 , x , y)) *. cos (pi *. eval (e2 , x , y))) *. cos (pi *. eval (e3 , x , y)))
-sin ((cos (pi *. eval (e1 , x , y)) *. cos (pi *. eval (e2 , x , y))) *. cos (pi *. eval (e3 , x , y)))
-digitsOfInt (n / 10)
-cos (pi *. eval (u , x , y))
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-helper (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-getDigits (n / 10)
-getDigits (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n mod 10)
-digitsOfInt (n mod 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-sin (pi *. evalhelper p1 x y)
-cos (pi *. evalhelper p1 x y)
-sin (pi *. evalhelper p1 x y)
-cos (pi *. evalhelper p1 x y)
-sin (pi *. evalhelper p1 x y)
-cos (pi *. evalhelper p1 x y)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
-digitsOfInt (n / 10)
+LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
+let y = rand (2 , 6) in
+buildX ()
+let y = rand (2 , 6) in
+buildX ()
+let y = rand (2 , 6) in
+buildX ()
+let x = List.map f l in
+sepConcat ";" x
+let x = List.map f l in
+sepConcat ";" x
+let x = List.map f l in
+sepConcat ";" x
+let x = List.map f l in
+sepConcat ";" x
+let digit =
+  digitsOfInt (n / 10) in
+digit @ [n mod 10]
+let digits =
+  digitsOfInt (n / 10) in
+digits @ [n mod 10]
+let e' =
+  buildThresh (a , b , c , d) in
+exprToString e'
+let e' = buildTimes (a , b) in
+exprToString e'
+let e' =
+  buildAverage (a , b) in
+exprToString e'
+let e' = buildCosine a in
+exprToString e'
+let e' = buildSine a in
+exprToString e'
+let e' =
+  buildThresh (a , b , c , d) in
+exprToString e'
+let e' = buildTimes (a , b) in
+exprToString e'
+let e' =
+  buildAverage (a , b) in
+exprToString e'
+let e' = buildCosine a in
+exprToString e'
+let e' = buildSine a in
+exprToString e'
+let e' =
+  buildThresh (a , b , c , d) in
+exprToString e'
+let e' = buildTimes (a , b) in
+exprToString e'
+let e' =
+  buildAverage (a , b) in
+exprToString e'
+let e' = buildCosine a in
+exprToString e'
+let e' = buildSine a in
+exprToString e'
+let e' =
+  buildThresh (a , b , c , d) in
+exprToString e'
+let e' = buildTimes (a , b) in
+exprToString e'
+let e' =
+  buildAverage (a , b) in
+exprToString e'
+let e' = buildCosine a in
+exprToString e'
+let e' = buildSine a in
+exprToString e'
+let e' =
+  buildThresh (a , b , c , d) in
+exprToString e'
+let e' = buildTimes (a , b) in
+exprToString e'
+let e' =
+  buildAverage (a , b) in
+exprToString e'
+let e' = buildCosine a in
+exprToString e'
+let e' = buildSine a in
+exprToString e'
+let base = "[" ^ f x in
+List.fold_left g base xs ^ "]"
+let nl = List.map f l in
+sepConcat "" nl

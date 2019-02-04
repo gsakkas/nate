@@ -53,15 +53,27 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(19,19)-(19,22)
-a
-VarG
+(19,16)-(19,23)
+EMPTY
+EmptyG
+
+(19,16)-(19,33)
+EMPTY
+EmptyG
+
+(19,17)-(19,18)
+EMPTY
+EmptyG
 
 (19,19)-(19,22)
 let (r , s) = x in
 let m = (r + s) + y in
 (m / 10 , (m mod 10) :: z)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+
+(19,20)-(19,21)
+EMPTY
+EmptyG
 
 (19,26)-(19,33)
 let (y , z) = a in
@@ -71,60 +83,8 @@ let m = (r + s) + y in
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (19,27)-(19,28)
-r
-VarG
-
-(19,27)-(19,28)
-s
-VarG
-
-(19,27)-(19,28)
-y
-VarG
-
-(19,27)-(19,28)
-m
-VarG
-
-(19,27)-(19,28)
-m
-VarG
-
-(19,27)-(19,28)
-z
-VarG
-
-(19,27)-(19,28)
-r + s
-BopG VarG VarG
-
-(19,27)-(19,28)
-(r + s) + y
-BopG (BopG EmptyG EmptyG) VarG
-
-(19,27)-(19,28)
-m / 10
-BopG VarG LitG
-
-(19,27)-(19,28)
-m mod 10
-BopG VarG LitG
-
-(19,27)-(19,28)
-10
-LitG
-
-(19,27)-(19,28)
-10
-LitG
-
-(19,27)-(19,28)
 (m / 10 , (m mod 10) :: z)
 TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
-(19,27)-(19,28)
-(m mod 10) :: z
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
 
 (19,29)-(19,32)
 (0 , [])
@@ -134,9 +94,5 @@ TupleG (fromList [LitG,ListG EmptyG Nothing])
 let m = (r + s) + y in
 (m / 10 , (m mod 10) :: z)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
-(19,30)-(19,31)
-[]
-ListG EmptyG Nothing
 
 *)

@@ -67,25 +67,37 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(19,22)-(19,24)
-sin
-VarG
+(19,15)-(19,18)
+EMPTY
+EmptyG
+
+(19,15)-(19,43)
+EMPTY
+EmptyG
 
 (19,22)-(19,24)
 pi *. eval (e1 , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
-(20,24)-(20,26)
-cos
-VarG
+(20,17)-(20,20)
+EMPTY
+EmptyG
+
+(20,17)-(20,45)
+EMPTY
+EmptyG
 
 (20,24)-(20,26)
 pi *. eval (e1 , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
-(27,23)-(27,25)
-sin
-VarG
+(27,16)-(27,19)
+EMPTY
+EmptyG
+
+(27,16)-(27,58)
+EMPTY
+EmptyG
 
 (27,23)-(27,25)
 pi *. cos (pi *. eval (e1 , x , y))

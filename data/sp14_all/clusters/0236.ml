@@ -1,4 +1,2 @@
-IteG (BopG EmptyG EmptyG) LitG (BopG EmptyG EmptyG)
-if n < 10
-then 1
-else 1 + additivePersistence (sumList (digitsOfInt n))
+ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])]))) Nothing
+h :: (listReverse t)

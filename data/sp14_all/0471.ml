@@ -39,9 +39,9 @@ let rec exprToString e =
 "sin" ^ exprToString ex
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(15,19)-(15,36)
-(^)
-VarG
+(15,15)-(15,36)
+EMPTY
+EmptyG
 
 (15,19)-(15,36)
 "sin"

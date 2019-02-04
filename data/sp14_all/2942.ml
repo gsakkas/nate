@@ -15,9 +15,9 @@ match n with
 | _ -> clone x (n - 1) @ [x]
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
 
-(2,51)-(2,56)
-(@)
-VarG
+(2,50)-(2,70)
+EMPTY
+EmptyG
 
 (2,51)-(2,56)
 clone x (n - 1)

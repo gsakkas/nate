@@ -95,6 +95,10 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
+(43,38)-(43,64)
+EMPTY
+EmptyG
+
 (43,54)-(43,56)
 rh :: rt
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing

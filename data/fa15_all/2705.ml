@@ -16,14 +16,6 @@ let rec assoc (d,k,l) =
 
 (* changed spans
 (5,56)-(5,57)
-d
-VarG
-
-(5,56)-(5,57)
-k
-VarG
-
-(5,56)-(5,57)
 (d , k , t)
 TupleG (fromList [VarG])
 

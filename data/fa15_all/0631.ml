@@ -37,13 +37,25 @@ fun x ->
    else (0 , val1 :: a2))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(5,4)-(9,26)
+EMPTY
+EmptyG
+
+(5,15)-(5,17)
+EMPTY
+EmptyG
+
 (6,16)-(6,17)
 x
 VarG
 
-(11,28)-(11,29)
-List.rev
-VarG
+(11,13)-(11,21)
+EMPTY
+EmptyG
+
+(11,13)-(11,30)
+EMPTY
+EmptyG
 
 (11,28)-(11,29)
 List.rev l

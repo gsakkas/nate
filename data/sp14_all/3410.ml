@@ -60,17 +60,33 @@ helper 1
        xs
 AppG (fromList [VarG,LitG,ConAppG (Just (TupleG (fromList [BopG (BopG VarG LitG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing])
 
+(18,20)-(19,25)
+EMPTY
+EmptyG
+
 (18,30)-(18,49)
 ((num / 10) mod 10) :: ((num mod 10) :: xs')
 ConAppG (Just (TupleG (fromList [BopG (BopG VarG LitG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing
+
+(19,17)-(19,25)
+EMPTY
+EmptyG
 
 (23,16)-(23,30)
 helper 0 (num :: accum) xs
 AppG (fromList [VarG,LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
+(23,16)-(23,44)
+EMPTY
+EmptyG
+
 (23,26)-(23,29)
 num :: accum
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+
+(23,34)-(23,44)
+EMPTY
+EmptyG
 
 (24,16)-(24,46)
 helper 1
@@ -78,8 +94,16 @@ helper 1
        xs
 AppG (fromList [VarG,LitG,ConAppG (Just (TupleG (fromList [BopG (BopG VarG LitG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing])
 
+(24,16)-(24,76)
+EMPTY
+EmptyG
+
 (24,26)-(24,45)
 ((num / 10) mod 10) :: ((num mod 10) :: accum)
 ConAppG (Just (TupleG (fromList [BopG (BopG VarG LitG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing
+
+(24,66)-(24,76)
+EMPTY
+EmptyG
 
 *)

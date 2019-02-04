@@ -65,6 +65,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(19,6)-(27,41)
+EMPTY
+EmptyG
+
+(19,12)-(19,18)
+EMPTY
+EmptyG
+
 (19,13)-(19,14)
 let (fst , sec) = x in
 let (fst' , sec') =
@@ -93,10 +101,6 @@ let (carry' , digits') =
 LetG NonRec (fromList [IteG EmptyG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (25,10)-(27,41)
-a
-VarG
-
-(25,10)-(27,41)
 let (carry , digits) = a in
 let (carry' , digits') =
   if sec' = 1
@@ -105,17 +109,17 @@ let (carry' , digits') =
 (carry' , digits')
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(25,10)-(27,41)
-let (carry' , digits') =
-  if sec' = 1
-  then (1 , digits @ [fst'])
-  else (0 , digits @ [fst']) in
-(carry' , digits')
-LetG NonRec (fromList [IteG EmptyG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
 (25,13)-(25,16)
 sec'
 VarG
+
+(26,29)-(26,39)
+EMPTY
+EmptyG
+
+(26,30)-(26,33)
+EMPTY
+EmptyG
 
 (26,35)-(26,38)
 [fst']
@@ -126,12 +130,12 @@ fst'
 VarG
 
 (27,29)-(27,39)
-fst'
-VarG
-
-(27,29)-(27,39)
 [fst']
 ListG VarG Nothing
+
+(27,30)-(27,33)
+EMPTY
+EmptyG
 
 (27,35)-(27,38)
 carry'
@@ -141,17 +145,21 @@ VarG
 digits'
 VarG
 
-(30,4)-(30,51)
-0
-LitG
+(29,15)-(29,23)
+EMPTY
+EmptyG
 
-(30,4)-(30,51)
-0
-LitG
+(29,16)-(29,22)
+EMPTY
+EmptyG
 
-(30,4)-(30,51)
-(0 , 0)
-TupleG (fromList [LitG])
+(29,17)-(29,18)
+EMPTY
+EmptyG
+
+(29,20)-(29,21)
+EMPTY
+EmptyG
 
 (30,4)-(30,51)
 [(0 , 0)]

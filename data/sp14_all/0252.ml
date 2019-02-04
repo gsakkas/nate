@@ -35,4 +35,24 @@ let rec additivePersistence n =
 0
 LitG
 
+(13,40)-(13,47)
+EMPTY
+EmptyG
+
+(13,40)-(13,63)
+EMPTY
+EmptyG
+
+(13,48)-(13,63)
+EMPTY
+EmptyG
+
+(13,49)-(13,60)
+EMPTY
+EmptyG
+
+(13,61)-(13,62)
+EMPTY
+EmptyG
+
 *)

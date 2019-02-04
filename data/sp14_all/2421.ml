@@ -23,9 +23,17 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
+(8,11)-(8,62)
+EMPTY
+EmptyG
+
 (8,29)-(8,61)
 (prod / 10) :: (mulByDigit i
                            t)
 ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),BopG VarG LitG]))) Nothing
+
+(8,66)-(8,67)
+EMPTY
+EmptyG
 
 *)

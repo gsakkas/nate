@@ -22,10 +22,6 @@ front :: (add back next)
 ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])]))) Nothing
 
 (6,25)-(6,36)
-add
-VarG
-
-(6,25)-(6,36)
 digitsOfInt (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
 
@@ -33,5 +29,13 @@ AppG (fromList [BopG EmptyG EmptyG])
 add (digitsOfInt (n / 10))
     (n mod 10)
 AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
+
+(6,46)-(6,49)
+EMPTY
+EmptyG
+
+(6,50)-(6,60)
+EMPTY
+EmptyG
 
 *)

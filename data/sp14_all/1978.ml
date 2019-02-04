@@ -19,19 +19,7 @@ match n with
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
 
 (2,47)-(2,67)
-n
-VarG
-
-(2,47)-(2,67)
-(@)
-VarG
-
-(2,47)-(2,67)
 digitsOfInt (n / 10) @ [n mod 10]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(2,47)-(2,67)
-[]
-ListG EmptyG Nothing
 
 *)

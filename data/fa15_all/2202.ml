@@ -77,14 +77,6 @@ mod_float comb
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (29,51)-(29,55)
-mod_float
-VarG
-
-(29,51)-(29,55)
-comb
-VarG
-
-(29,51)-(29,55)
 eval (e3 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 

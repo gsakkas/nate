@@ -18,6 +18,14 @@ fun p ->
    List.fold_left f base fs)
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(3,32)-(3,39)
+EMPTY
+EmptyG
+
+(3,32)-(3,42)
+EMPTY
+EmptyG
+
 (3,40)-(3,42)
 p
 VarG

@@ -99,10 +99,6 @@ AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 
-(27,51)-(27,57)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
 (29,4)-(43,71)
 ()
 ConAppG Nothing (Just (TApp "unit" []))
@@ -114,10 +110,6 @@ AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 (31,12)-(31,18)
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(31,12)-(31,18)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 (32,12)-(32,49)
 ()

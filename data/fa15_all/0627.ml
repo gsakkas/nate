@@ -10,9 +10,9 @@ let rec clone x n =
 *)
 
 (* changed spans
-(2,53)-(2,58)
-List.append
-VarG
+(2,52)-(2,69)
+EMPTY
+EmptyG
 
 (2,53)-(2,58)
 clone x (n - 1)

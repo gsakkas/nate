@@ -93,41 +93,33 @@ LetG NonRec (fromList [IteG EmptyG EmptyG EmptyG]) (IteG EmptyG EmptyG EmptyG)
 List.length l1 > List.length l2
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
+(19,21)-(19,24)
+EMPTY
+EmptyG
+
 (20,10)-(20,60)
 l1
 VarG
+
+(20,24)-(20,54)
+EMPTY
+EmptyG
+
+(20,25)-(20,37)
+EMPTY
+EmptyG
+
+(20,38)-(20,53)
+EMPTY
+EmptyG
 
 (20,39)-(20,46)
 l2
 VarG
 
-(21,15)-(21,18)
-List.length
-VarG
-
-(21,15)-(21,18)
-acc
-VarG
-
-(21,15)-(21,18)
-List.length
-VarG
-
-(21,15)-(21,18)
-larger
-VarG
-
-(21,15)-(21,18)
-List.length acc
-AppG (fromList [VarG])
-
-(21,15)-(21,18)
-List.length larger
-AppG (fromList [VarG])
-
-(21,15)-(21,18)
-rem = 1
-BopG VarG LitG
+(20,58)-(20,59)
+EMPTY
+EmptyG
 
 (21,15)-(21,18)
 if rem = 1

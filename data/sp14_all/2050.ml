@@ -13,11 +13,19 @@ let fixpoint (f,b) = let f b = ((f b), ((f b) = b)) in wwhile (f, b);;
 *)
 
 (* changed spans
+(4,21)-(4,72)
+EMPTY
+EmptyG
+
 (4,28)-(4,54)
 let f =
   fun b -> (f b , f b = b) in
 wwhile (f , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+
+(4,43)-(4,44)
+EMPTY
+EmptyG
 
 (4,58)-(4,72)
 b

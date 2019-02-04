@@ -100,6 +100,34 @@ let rec build (rand,depth) =
 depth <= 0
 BopG VarG LitG
 
+(27,7)-(27,58)
+EMPTY
+EmptyG
+
+(27,11)-(27,23)
+EMPTY
+EmptyG
+
+(27,11)-(27,27)
+EMPTY
+EmptyG
+
+(27,12)-(27,16)
+EMPTY
+EmptyG
+
+(27,21)-(27,22)
+EMPTY
+EmptyG
+
+(27,26)-(27,27)
+EMPTY
+EmptyG
+
+(27,48)-(27,54)
+EMPTY
+EmptyG
+
 (27,48)-(27,57)
 match rand (0 , 4) with
 | 0 -> buildSine (build (rand , depth - 1))
@@ -110,6 +138,22 @@ match rand (0 , 4) with
 | _ -> buildY ()
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+(27,55)-(27,57)
+EMPTY
+EmptyG
+
+(29,4)-(49,75)
+EMPTY
+EmptyG
+
+(29,7)-(29,19)
+EMPTY
+EmptyG
+
+(29,7)-(29,23)
+EMPTY
+EmptyG
+
 (29,17)-(29,18)
 (0 , 4)
 TupleG (fromList [LitG])
@@ -118,9 +162,81 @@ TupleG (fromList [LitG])
 4
 LitG
 
+(32,6)-(49,75)
+EMPTY
+EmptyG
+
+(32,9)-(32,21)
+EMPTY
+EmptyG
+
+(32,9)-(32,25)
+EMPTY
+EmptyG
+
+(32,10)-(32,14)
+EMPTY
+EmptyG
+
+(32,19)-(32,20)
+EMPTY
+EmptyG
+
+(32,24)-(32,25)
+EMPTY
+EmptyG
+
+(35,8)-(49,75)
+EMPTY
+EmptyG
+
+(35,11)-(35,23)
+EMPTY
+EmptyG
+
+(35,11)-(35,27)
+EMPTY
+EmptyG
+
+(35,12)-(35,16)
+EMPTY
+EmptyG
+
+(35,21)-(35,22)
+EMPTY
+EmptyG
+
+(35,26)-(35,27)
+EMPTY
+EmptyG
+
 (38,36)-(38,37)
 2
 LitG
+
+(38,65)-(38,66)
+EMPTY
+EmptyG
+
+(40,10)-(49,75)
+EMPTY
+EmptyG
+
+(40,13)-(40,25)
+EMPTY
+EmptyG
+
+(40,13)-(40,29)
+EMPTY
+EmptyG
+
+(40,14)-(40,18)
+EMPTY
+EmptyG
+
+(40,23)-(40,24)
+EMPTY
+EmptyG
 
 (40,28)-(40,29)
 2
@@ -130,13 +246,29 @@ LitG
 2
 LitG
 
-(45,12)-(49,75)
-buildY
-VarG
+(43,67)-(43,68)
+EMPTY
+EmptyG
 
 (45,12)-(49,75)
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
+
+(45,15)-(45,27)
+EMPTY
+EmptyG
+
+(45,15)-(45,31)
+EMPTY
+EmptyG
+
+(45,16)-(45,20)
+EMPTY
+EmptyG
+
+(45,25)-(45,26)
+EMPTY
+EmptyG
 
 (45,30)-(45,31)
 2

@@ -53,6 +53,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(20,17)-(20,20)
+EMPTY
+EmptyG
+
+(20,22)-(20,25)
+EMPTY
+EmptyG
+
 (20,23)-(20,24)
 []
 ListG EmptyG Nothing
@@ -60,6 +68,14 @@ ListG EmptyG Nothing
 (21,19)-(21,20)
 []
 ListG EmptyG Nothing
+
+(22,15)-(22,44)
+EMPTY
+EmptyG
+
+(22,16)-(22,17)
+EMPTY
+EmptyG
 
 (22,19)-(22,43)
 clone 0 (List.length l1)

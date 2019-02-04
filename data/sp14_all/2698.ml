@@ -86,49 +86,21 @@ CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 "sin(pi*("
 LitG
 
+(30,46)-(30,56)
+EMPTY
+EmptyG
+
 (30,49)-(30,55)
 "+" ^ (exprToString b ^ (exprToString c ^ ")/3)"))
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (30,50)-(30,51)
-(^)
-VarG
-
-(30,50)-(30,51)
-exprToString
-VarG
-
-(30,50)-(30,51)
-(^)
-VarG
-
-(30,50)-(30,51)
 exprToString b ^ (exprToString c ^ ")/3)")
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(30,50)-(30,51)
-exprToString b
-AppG (fromList [VarG])
-
-(30,50)-(30,51)
-"+"
-LitG
-
-(30,53)-(30,54)
-exprToString
-VarG
-
-(30,53)-(30,54)
-(^)
-VarG
 
 (30,53)-(30,54)
 exprToString c ^ ")/3)"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(30,53)-(30,54)
-exprToString c
-AppG (fromList [VarG])
 
 (30,60)-(30,63)
 ")/3)"

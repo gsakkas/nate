@@ -57,6 +57,14 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(20,17)-(20,18)
+EMPTY
+EmptyG
+
+(20,22)-(20,45)
+EMPTY
+EmptyG
+
 (20,23)-(20,24)
 1.0
 LitG
@@ -65,33 +73,13 @@ LitG
 1.0 -. exp ((- 1.0) *. eval (a , x , y))
 BopG LitG (AppG (fromList [EmptyG]))
 
-(20,27)-(20,44)
-1.0
-LitG
-
 (20,33)-(20,37)
 (- 1.0)
 UopG LitG
 
 (20,41)-(20,42)
-eval
-VarG
-
-(20,41)-(20,42)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(20,41)-(20,42)
-1.0
-LitG
-
-(20,41)-(20,42)
-(a , x , y)
-TupleG (fromList [VarG])
-
-(21,21)-(21,65)
-x
-VarG
 
 (21,21)-(21,65)
 y

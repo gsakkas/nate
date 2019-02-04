@@ -71,109 +71,9 @@ then (0 , carry' :: acc)
 else (carry' , acc)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(20,4)-(21,71)
-a
-VarG
-
-(20,4)-(21,71)
-x1
-VarG
-
-(20,4)-(21,71)
-x2
-VarG
-
-(20,4)-(21,71)
-carry
-VarG
-
-(20,4)-(21,71)
-s
-VarG
-
-(20,4)-(21,71)
-s
-VarG
-
-(20,4)-(21,71)
-rem
-VarG
-
-(20,4)-(21,71)
-temp
-VarG
-
-(20,4)-(21,71)
-List.length
-VarG
-
-(20,4)-(21,71)
-acc
-VarG
-
-(20,4)-(21,71)
-List.length
-VarG
-
-(20,4)-(21,71)
-l1
-VarG
-
-(20,4)-(21,71)
-carry'
-VarG
-
-(20,4)-(21,71)
-acc
-VarG
-
-(20,4)-(21,71)
-carry'
-VarG
-
-(20,4)-(21,71)
-acc
-VarG
-
-(20,4)-(21,71)
-List.length acc
-AppG (fromList [VarG])
-
-(20,4)-(21,71)
-List.length l1
-AppG (fromList [VarG])
-
-(20,4)-(21,71)
-x1 + x2
-BopG VarG VarG
-
-(20,4)-(21,71)
-(x1 + x2) + carry
-BopG (BopG EmptyG EmptyG) VarG
-
-(20,4)-(21,71)
-s / 10
-BopG VarG LitG
-
-(20,4)-(21,71)
-s mod 10
-BopG VarG LitG
-
-(20,4)-(21,71)
-List.length acc = List.length l1
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(20,4)-(21,71)
-10
-LitG
-
-(20,4)-(21,71)
-10
-LitG
-
-(20,4)-(21,71)
-0
-LitG
+(19,16)-(19,21)
+EMPTY
+EmptyG
 
 (20,4)-(21,71)
 let (carry , temp) = a in
@@ -186,77 +86,9 @@ then (0 , carry' :: acc)
 else (carry' , acc)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(20,4)-(21,71)
-let s = (x1 + x2) + carry in
-let carry' = s / 10 in
-let rem = s mod 10 in
-let acc = rem :: temp in
-if List.length acc = List.length l1
-then (0 , carry' :: acc)
-else (carry' , acc)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(20,4)-(21,71)
-let carry' = s / 10 in
-let rem = s mod 10 in
-let acc = rem :: temp in
-if List.length acc = List.length l1
-then (0 , carry' :: acc)
-else (carry' , acc)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(20,4)-(21,71)
-let rem = s mod 10 in
-let acc = rem :: temp in
-if List.length acc = List.length l1
-then (0 , carry' :: acc)
-else (carry' , acc)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(20,4)-(21,71)
-let acc = rem :: temp in
-if List.length acc = List.length l1
-then (0 , carry' :: acc)
-else (carry' , acc)
-LetG NonRec (fromList [ConAppG (Just EmptyG) Nothing]) (IteG EmptyG EmptyG EmptyG)
-
-(20,4)-(21,71)
-if List.length acc = List.length l1
-then (0 , carry' :: acc)
-else (carry' , acc)
-IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
-(20,4)-(21,71)
-(0 , carry' :: acc)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(20,4)-(21,71)
-(carry' , acc)
-TupleG (fromList [VarG])
-
-(20,4)-(21,71)
-rem :: temp
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(20,4)-(21,71)
-carry' :: acc
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(20,15)-(20,17)
-0
-LitG
-
 (20,15)-(20,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(21,15)-(21,17)
-List.rev
-VarG
-
-(21,15)-(21,17)
-List.combine
-VarG
 
 (21,15)-(21,17)
 List.combine l1 l2

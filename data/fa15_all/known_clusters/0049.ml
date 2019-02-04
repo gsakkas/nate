@@ -1,39 +1,117 @@
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-(((x1 + x2) + carry) mod 10) :: sum
-(((x1 + x2) + carry) mod 10) :: res
-(((x1 + x2) + carry) mod 10) :: res
-(((x1 + x2) + carry) mod 10) :: res
-(((x1 + x2) + carry) mod 10) :: res
-(((x1 + x2) + carry) mod 10) :: res
-(((x1 + x2) + carry) mod 10) :: res
-(((x1 + x2) + carry) mod 10) :: res
-(((x1 + x2) + carry) mod 10) :: res
-(((x + y) + w) mod 10) :: z
-(((x + y) + w) mod 10) :: z
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((x1 + x2) + a1) - 10) :: a2
-(((i + j) + m) - 10) :: n
-(((i + j) + m) - 10) :: n
-(((a1 + x1) + x2) mod 10) :: a2
-(((a1 + x1) + x2) mod 10) :: a2
-(((a1 + x1) + x2) mod 10) :: a2
-(((j + k) + l) - 10) :: m
-(((num1 + num2) + carry) mod 10) :: sum
-(((num1 + num2) + carry) mod 10) :: sum
-(((num1 + num2) + carry) mod 10) :: sum
-(((num1 + num2) + carry) mod 10) :: sum
-(((num1 + num2) + carry) mod 10) :: sum
-(((num1 + num2) + carry) mod 10) :: sum
-(((num1 + num2) + carry) mod 10) :: sum
-(((num1 + num2) + carry) mod 10) :: sum
-(((num1 + num2) + carry) mod 10) :: sum
+LetG NonRec (fromList [VarG]) (IteG EmptyG EmptyG EmptyG)
+let (b' , c') = temp in
+if c' = true
+then wwhile (f , b')
+else b'
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (a1 , a2) = a in
+if (x1 + x2) > 10
+then (1 , (((x1 + x2) + a1) - 10) :: a2)
+else (0 , ((x1 + x2) + a1) :: a2)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)
+let (l , m) = a in
+if ((j + k) + l) > 9
+then (1 , (((j + k) + l) - 10) :: m)
+else (0 , ((j + k) + l) :: m)

@@ -24,16 +24,12 @@ y = false
 BopG VarG LitG
 
 (3,50)-(3,63)
-y
-VarG
-
-(3,50)-(3,63)
 x
 VarG
 
-(3,50)-(3,63)
-false
-LitG
+(3,61)-(3,62)
+EMPTY
+EmptyG
 
 (3,69)-(3,70)
 x

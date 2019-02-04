@@ -33,23 +33,7 @@ h
 VarG
 
 (7,34)-(7,35)
-seen
-VarG
-
-(7,34)-(7,35)
-seen
-VarG
-
-(7,34)-(7,35)
-(@)
-VarG
-
-(7,34)-(7,35)
 seen @ [h]
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(7,34)-(7,35)
-[h]
-ListG VarG Nothing
 
 *)

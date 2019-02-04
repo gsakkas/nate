@@ -66,6 +66,10 @@ match x with
                             | (x , y) -> (new_carry , digit :: y))
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
+(15,20)-(15,27)
+EMPTY
+EmptyG
+
 (15,25)-(15,26)
 match x with
 | (addend_a , addend_b) -> (let new_carry =
@@ -77,78 +81,6 @@ match x with
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
 (16,4)-(17,68)
-carry
-VarG
-
-(16,4)-(17,68)
-addend_a
-VarG
-
-(16,4)-(17,68)
-addend_b
-VarG
-
-(16,4)-(17,68)
-carry
-VarG
-
-(16,4)-(17,68)
-addend_a
-VarG
-
-(16,4)-(17,68)
-addend_b
-VarG
-
-(16,4)-(17,68)
-a
-VarG
-
-(16,4)-(17,68)
-new_carry
-VarG
-
-(16,4)-(17,68)
-digit
-VarG
-
-(16,4)-(17,68)
-y
-VarG
-
-(16,4)-(17,68)
-(carry + addend_a) + addend_b
-BopG (BopG EmptyG EmptyG) VarG
-
-(16,4)-(17,68)
-((carry + addend_a) + addend_b) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,4)-(17,68)
-carry + addend_a
-BopG VarG VarG
-
-(16,4)-(17,68)
-(carry + addend_a) + addend_b
-BopG (BopG EmptyG EmptyG) VarG
-
-(16,4)-(17,68)
-((carry + addend_a) + addend_b) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,4)-(17,68)
-carry + addend_a
-BopG VarG VarG
-
-(16,4)-(17,68)
-10
-LitG
-
-(16,4)-(17,68)
-10
-LitG
-
-(16,4)-(17,68)
 let new_carry =
   ((carry + addend_a) + addend_b) / 10 in
 let digit =
@@ -157,49 +89,13 @@ match a with
 | (x , y) -> (new_carry , digit :: y)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(16,4)-(17,68)
-let digit =
-  ((carry + addend_a) + addend_b) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(16,4)-(17,68)
-match a with
-| (x , y) -> (new_carry , digit :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(16,4)-(17,68)
-(new_carry , digit :: y)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(16,4)-(17,68)
-digit :: y
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(16,15)-(16,17)
-0
-LitG
-
 (16,15)-(16,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
 (17,15)-(17,17)
-List.rev
-VarG
-
-(17,15)-(17,17)
-List.combine
-VarG
-
-(17,15)-(17,17)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(17,15)-(17,17)
-List.combine l1 l2
-AppG (fromList [VarG])
 
 (17,21)-(17,68)
 l2

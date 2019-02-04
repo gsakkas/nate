@@ -17,4 +17,8 @@ let rec digitsOfInt n =
 digitsOfInt n
 AppG (fromList [VarG])
 
+(5,58)-(5,60)
+EMPTY
+EmptyG
+
 *)

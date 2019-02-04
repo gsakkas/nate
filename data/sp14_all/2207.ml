@@ -82,18 +82,6 @@ BopG VarG LitG
 LitG
 
 (29,9)-(29,10)
-i
-VarG
-
-(29,9)-(29,10)
-i = 1
-BopG VarG LitG
-
-(29,9)-(29,10)
-1
-LitG
-
-(29,9)-(29,10)
 if i = 1
 then l
 else bigAdd (bigAdd l l)
@@ -104,5 +92,9 @@ IteG (BopG EmptyG EmptyG) VarG (AppG (fromList [EmptyG]))
 bigAdd (bigAdd l l)
        (mulByDigit (i - 2) l)
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(30,16)-(30,53)
+EMPTY
+EmptyG
 
 *)

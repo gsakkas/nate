@@ -22,6 +22,10 @@ let removeDuplicates l =
 *)
 
 (* changed spans
+(7,20)-(7,21)
+EMPTY
+EmptyG
+
 (7,25)-(7,74)
 if List.mem h seen
 then seen
@@ -33,28 +37,8 @@ seen
 VarG
 
 (7,53)-(7,74)
-seen
-VarG
-
-(7,53)-(7,74)
-h
-VarG
-
-(7,53)-(7,74)
-seen
-VarG
-
-(7,53)-(7,74)
-t
-VarG
-
-(7,53)-(7,74)
 let rest' = t in
 helper (seen' , rest')
 LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
-
-(7,53)-(7,74)
-h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 *)

@@ -54,16 +54,8 @@ let rec build (rand,depth) =
 
 (* changed spans
 (11,11)-(11,20)
-e
-VarG
-
-(11,11)-(11,20)
 fun e -> Sine e
 LamG (ConAppG (Just VarG) Nothing)
-
-(11,11)-(11,20)
-Sine e
-ConAppG (Just VarG) Nothing
 
 (17,9)-(17,15)
 buildSine

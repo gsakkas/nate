@@ -87,6 +87,10 @@ BopG VarG (AppG (fromList [EmptyG]))
 pi *. eval (e' , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
+(25,9)-(25,17)
+EMPTY
+EmptyG
+
 (25,18)-(25,76)
 sqrt
 VarG

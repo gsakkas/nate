@@ -1,4 +1,11 @@
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing])
-(0 , ((o + x1) + x2) :: z)
-(0 , ((o + x1) + x2) :: z)
-(0 , ((o + x1) + x2) :: z)
+TupleG (fromList [VarG,IteG EmptyG EmptyG EmptyG])
+(if f b = b
+ then (fun b'' ->
+         (f b , false))
+ else (fun b'' ->
+         (f b , true)) , b)
+(if f b = b
+ then (fun b'' ->
+         (f b , false))
+ else (fun b'' ->
+         (f b , true)) , b)

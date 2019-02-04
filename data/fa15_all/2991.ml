@@ -51,9 +51,17 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(18,10)-(20,38)
-a
-VarG
+(14,6)-(20,38)
+EMPTY
+EmptyG
+
+(14,12)-(14,13)
+EMPTY
+EmptyG
+
+(15,14)-(15,16)
+EMPTY
+EmptyG
 
 (18,10)-(20,38)
 let (l , m) = a in
@@ -74,9 +82,17 @@ VarG
 (1 , (((j + k) + l) - 10) :: m)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing])
 
+(19,23)-(19,24)
+EMPTY
+EmptyG
+
 (19,37)-(19,39)
 l
 VarG
+
+(19,44)-(19,45)
+EMPTY
+EmptyG
 
 (20,15)-(20,16)
 (0 , ((j + k) + l) :: m)
@@ -85,6 +101,10 @@ TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG Var
 (20,15)-(20,38)
 m
 VarG
+
+(20,22)-(20,23)
+EMPTY
+EmptyG
 
 (20,37)-(20,38)
 l

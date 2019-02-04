@@ -33,19 +33,7 @@ match x with
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 (4,2)-(11,49)
-k
-VarG
-
-(4,2)-(11,49)
-v
-VarG
-
-(4,2)-(11,49)
 ([k] , v)
 TupleG (fromList [VarG,ListG EmptyG Nothing])
-
-(4,2)-(11,49)
-[k]
-ListG VarG Nothing
 
 *)

@@ -53,15 +53,79 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(23,4)-(25,74)
+EMPTY
+EmptyG
+
+(23,10)-(23,21)
+EMPTY
+EmptyG
+
+(23,12)-(23,21)
+EMPTY
+EmptyG
+
+(23,16)-(23,17)
+EMPTY
+EmptyG
+
+(23,16)-(23,21)
+EMPTY
+EmptyG
+
+(23,20)-(23,21)
+EMPTY
+EmptyG
+
+(24,4)-(25,74)
+EMPTY
+EmptyG
+
 (24,15)-(24,21)
 [0 ; 0 ; 0 ; 0 ; 0]
 ListG LitG Nothing
 
-(25,71)-(25,74)
-0
-LitG
+(25,4)-(25,74)
+EMPTY
+EmptyG
 
-(26,2)-(26,34)
+(25,15)-(25,23)
+EMPTY
+EmptyG
+
+(25,16)-(25,18)
+EMPTY
+EmptyG
+
+(25,20)-(25,22)
+EMPTY
+EmptyG
+
+(25,27)-(25,74)
+EMPTY
+EmptyG
+
+(25,41)-(25,55)
+EMPTY
+EmptyG
+
+(25,41)-(25,67)
+EMPTY
+EmptyG
+
+(25,56)-(25,57)
+EMPTY
+EmptyG
+
+(25,58)-(25,62)
+EMPTY
+EmptyG
+
+(25,63)-(25,67)
+EMPTY
+EmptyG
+
+(25,71)-(25,74)
 0
 LitG
 

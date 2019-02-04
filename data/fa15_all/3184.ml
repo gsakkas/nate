@@ -70,16 +70,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (5,12)-(13,41)
-y
-VarG
-
-(5,12)-(13,41)
 fun y -> y
 LamG VarG
-
-(26,6)-(26,72)
-c
-VarG
 
 (26,6)-(26,72)
 match c with
@@ -88,84 +80,20 @@ match c with
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 (26,15)-(26,24)
-x1
-VarG
-
-(26,15)-(26,24)
-x2
-VarG
-
-(26,15)-(26,24)
-a2
-VarG
-
-(26,15)-(26,24)
-(@)
-VarG
-
-(26,15)-(26,24)
 a2 @ [(x1 + x2) mod 10]
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
-(26,15)-(26,24)
-(x1 + x2) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(26,15)-(26,24)
-10
-LitG
-
-(26,15)-(26,24)
-[(x1 + x2) mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
+(26,27)-(26,29)
+EMPTY
+EmptyG
 
 (26,39)-(26,71)
 (a1 @ [((x1 + x2) + c) / 10] , a2 @ [((x1 + x2) + c) mod 10])
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (26,40)-(26,42)
-a1
-VarG
-
-(26,40)-(26,42)
-x1
-VarG
-
-(26,40)-(26,42)
-x2
-VarG
-
-(26,40)-(26,42)
-c
-VarG
-
-(26,40)-(26,42)
-(@)
-VarG
-
-(26,40)-(26,42)
 a2 @ [((x1 + x2) + c) mod 10]
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(26,40)-(26,42)
-(x1 + x2) + c
-BopG (BopG EmptyG EmptyG) VarG
-
-(26,40)-(26,42)
-((x1 + x2) + c) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(26,40)-(26,42)
-x1 + x2
-BopG VarG VarG
-
-(26,40)-(26,42)
-10
-LitG
-
-(26,40)-(26,42)
-[((x1 + x2) + c) / 10]
-ListG (BopG EmptyG EmptyG) Nothing
 
 (26,59)-(26,61)
 c

@@ -110,10 +110,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (46,18)-(46,48)
-intListToInt
-VarG
-
-(46,18)-(46,48)
 intListToInt (mulByDigit (intListToInt l1)
                          [s])
 AppG (fromList [AppG (fromList [EmptyG])])
@@ -121,5 +117,13 @@ AppG (fromList [AppG (fromList [EmptyG])])
 (46,47)-(46,48)
 [s]
 ListG VarG Nothing
+
+(51,13)-(51,21)
+EMPTY
+EmptyG
+
+(51,13)-(51,42)
+EMPTY
+EmptyG
 
 *)

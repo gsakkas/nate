@@ -40,23 +40,14 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (13,16)-(13,29)
-a
-VarG
-
-(13,16)-(13,29)
-x
-VarG
-
-(13,16)-(13,29)
 let (carry , num) = a in
 let (l1 , l2) = x in
 (0 , l1 :: num)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(13,16)-(13,29)
-let (l1 , l2) = x in
-(0 , l1 :: num)
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+(13,21)-(13,22)
+EMPTY
+EmptyG
 
 (13,26)-(13,27)
 l1

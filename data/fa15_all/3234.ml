@@ -71,29 +71,13 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(17,11)-(29,21)
-l
-VarG
+(5,6)-(5,11)
+EMPTY
+EmptyG
 
-(17,11)-(29,21)
-l
-VarG
-
-(17,11)-(29,21)
-h
-VarG
-
-(17,11)-(29,21)
-removeZero
-VarG
-
-(17,11)-(29,21)
-t
-VarG
-
-(17,11)-(29,21)
-l
-VarG
+(5,10)-(5,11)
+EMPTY
+EmptyG
 
 (17,11)-(29,21)
 fun l ->
@@ -105,77 +89,95 @@ fun l ->
         | _ -> l)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(17,11)-(29,21)
-removeZero t
-AppG (fromList [VarG])
-
-(17,11)-(29,21)
-l = []
-BopG VarG (ListG EmptyG Nothing)
-
-(17,11)-(29,21)
-let h :: t = l in
-match h with
-| 0 -> removeZero t
-| _ -> l
-LetG NonRec (fromList [VarG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(17,11)-(29,21)
-if l = []
-then []
-else (let h :: t = l in
-      match h with
-      | 0 -> removeZero t
-      | _ -> l)
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(17,11)-(29,21)
-match h with
-| 0 -> removeZero t
-| _ -> l
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-
-(17,11)-(29,21)
-[]
-ListG EmptyG Nothing
-
-(17,11)-(29,21)
-[]
-ListG EmptyG Nothing
-
 (21,6)-(25,60)
 let (c , a1 :: a2) = a in
 let v = (x1 + x2) + c in
 (v / 10 , [v / 10] @ ([v mod 10] @ a2))
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(22,6)-(25,60)
+EMPTY
+EmptyG
+
+(22,23)-(22,25)
+EMPTY
+EmptyG
+
+(23,6)-(25,60)
+EMPTY
+EmptyG
+
+(23,18)-(23,20)
+EMPTY
+EmptyG
+
 (24,26)-(24,28)
 c
-VarG
-
-(25,7)-(25,27)
-v
 VarG
 
 (25,7)-(25,27)
 v / 10
 BopG VarG LitG
 
-(25,7)-(25,27)
-10
-LitG
+(25,9)-(25,10)
+EMPTY
+EmptyG
+
+(25,9)-(25,14)
+EMPTY
+EmptyG
+
+(25,13)-(25,14)
+EMPTY
+EmptyG
+
+(25,18)-(25,26)
+EMPTY
+EmptyG
+
+(25,30)-(25,32)
+EMPTY
+EmptyG
+
+(25,35)-(25,58)
+EMPTY
+EmptyG
+
+(25,37)-(25,38)
+EMPTY
+EmptyG
+
+(25,37)-(25,43)
+EMPTY
+EmptyG
+
+(25,41)-(25,43)
+EMPTY
+EmptyG
+
+(25,45)-(25,46)
+EMPTY
+EmptyG
+
+(25,47)-(25,57)
+EMPTY
+EmptyG
 
 (26,4)-(28,60)
 a2
 VarG
 
+(26,16)-(26,22)
+EMPTY
+EmptyG
+
+(26,20)-(26,21)
+EMPTY
+EmptyG
+
 (26,25)-(26,26)
 0
 LitG
-
-(27,15)-(27,33)
-List.rev
-VarG
 
 (27,15)-(27,33)
 List.rev (List.combine l1 l2)
@@ -187,9 +189,13 @@ let (_ , res) =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
-(29,2)-(29,5)
-removeZero
-VarG
+(28,50)-(28,60)
+EMPTY
+EmptyG
+
+(28,51)-(28,54)
+EMPTY
+EmptyG
 
 (29,2)-(29,5)
 add (padZero l1 l2)
@@ -211,10 +217,6 @@ BopG VarG LitG
 (32,22)-(32,24)
 1
 LitG
-
-(32,32)-(32,33)
-i
-VarG
 
 (32,32)-(32,33)
 match i with

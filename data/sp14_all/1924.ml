@@ -24,21 +24,29 @@ let g = fun b -> (b , f b) in
 wwhile (g , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
+(7,21)-(7,61)
+EMPTY
+EmptyG
+
 (7,28)-(7,61)
 fun b -> (b , f b)
 LamG (TupleG (fromList [EmptyG]))
 
+(7,29)-(7,30)
+EMPTY
+EmptyG
+
+(7,32)-(7,60)
+EMPTY
+EmptyG
+
+(7,36)-(7,45)
+EMPTY
+EmptyG
+
 (7,51)-(7,52)
 wwhile (g , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(7,58)-(7,59)
-wwhile
-VarG
-
-(7,58)-(7,59)
-g
-VarG
 
 (7,58)-(7,59)
 (g , b)

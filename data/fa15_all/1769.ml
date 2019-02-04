@@ -23,20 +23,8 @@ let fixpoint (f,b) =
 TupleG (fromList [VarG,LitG])
 
 (6,46)-(6,50)
-x
-VarG
-
-(6,46)-(6,50)
 (true , f2 x)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(6,54)-(6,60)
-f2
-VarG
-
-(6,54)-(6,60)
-x
-VarG
 
 (6,54)-(6,60)
 wwhile (f1 f , b)

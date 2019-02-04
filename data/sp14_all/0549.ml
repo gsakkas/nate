@@ -34,6 +34,10 @@ LamG (TupleG (fromList [EmptyG]))
 fun b'' -> (f b , true)
 LamG (TupleG (fromList [EmptyG]))
 
+(5,50)-(5,58)
+EMPTY
+EmptyG
+
 (5,59)-(5,64)
 f
 VarG

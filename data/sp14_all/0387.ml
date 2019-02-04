@@ -34,10 +34,6 @@ explode w
 AppG (fromList [VarG])
 
 (10,46)-(10,47)
-explode
-VarG
-
-(10,46)-(10,47)
 explode w
 AppG (fromList [VarG])
 

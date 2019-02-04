@@ -51,16 +51,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,24)-(19,26)
-List.hd
-VarG
-
-(19,24)-(19,26)
 List.hd l1
 AppG (fromList [VarG])
-
-(19,38)-(19,40)
-List.hd
-VarG
 
 (19,38)-(19,40)
 List.hd l2

@@ -21,6 +21,14 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(4,28)-(4,36)
+EMPTY
+EmptyG
+
+(4,33)-(4,35)
+EMPTY
+EmptyG
+
 (8,4)-(8,73)
 (let helper =
    fun x ->
@@ -32,14 +40,6 @@ let fixpoint (f,b) =
 TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
 
 (8,13)-(8,16)
-fun x ->
-  (let y = f x in
-   if y = x
-   then (y , false)
-   else (y , true))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(8,13)-(8,16)
 let helper =
   fun x ->
     (let y = f x in
@@ -49,12 +49,13 @@ let helper =
 helper
 LetG NonRec (fromList [LamG EmptyG]) VarG
 
-(8,13)-(8,16)
-let y = f x in
-if y = x
-then (y , false)
-else (y , true)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
+(8,15)-(8,16)
+EMPTY
+EmptyG
+
+(8,20)-(8,72)
+EMPTY
+EmptyG
 
 (8,40)-(8,50)
 if y = x
@@ -63,16 +64,12 @@ else (y , true)
 IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
 
 (8,41)-(8,42)
-y
-VarG
-
-(8,41)-(8,42)
 y = x
 BopG VarG VarG
 
-(8,59)-(8,68)
-y
-VarG
+(8,44)-(8,49)
+EMPTY
+EmptyG
 
 (8,59)-(8,68)
 false

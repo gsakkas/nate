@@ -13,13 +13,13 @@ let fixpoint (f,b) = let fx b = ((f b), (not ((f b) = b))) in wwhile (fx, b);;
 *)
 
 (* changed spans
+(4,40)-(4,55)
+EMPTY
+EmptyG
+
 (4,41)-(4,50)
 not (f b = b)
 AppG (fromList [BopG EmptyG EmptyG])
-
-(4,46)-(4,47)
-f b
-AppG (fromList [VarG])
 
 (4,46)-(4,47)
 f b = b

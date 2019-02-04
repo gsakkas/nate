@@ -25,65 +25,31 @@ let rec digitalRoot n = sumList (digitsOfInt n);;
 
 (* changed spans
 (8,20)-(8,59)
-xs
-VarG
-
-(8,20)-(8,59)
-List.hd
-VarG
-
-(8,20)-(8,59)
-xs
-VarG
-
-(8,20)-(8,59)
-sumList
-VarG
-
-(8,20)-(8,59)
-List.tl
-VarG
-
-(8,20)-(8,59)
-xs
-VarG
-
-(8,20)-(8,59)
 fun xs ->
   match xs with
   | [] -> 0
   | xs -> List.hd xs + sumList (List.tl xs)
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(8,20)-(8,59)
-List.hd xs
-AppG (fromList [VarG])
+(8,24)-(8,59)
+EMPTY
+EmptyG
 
-(8,20)-(8,59)
-sumList (List.tl xs)
-AppG (fromList [AppG (fromList [EmptyG])])
+(8,27)-(8,28)
+EMPTY
+EmptyG
 
-(8,20)-(8,59)
-List.tl xs
-AppG (fromList [VarG])
+(8,27)-(8,33)
+EMPTY
+EmptyG
 
-(8,20)-(8,59)
-List.hd xs + sumList (List.tl xs)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+(8,31)-(8,33)
+EMPTY
+EmptyG
 
-(8,20)-(8,59)
-0
-LitG
-
-(8,20)-(8,59)
-match xs with
-| [] -> 0
-| xs -> List.hd xs + sumList (List.tl xs)
-CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
-
-(8,46)-(8,57)
-sumList
-VarG
+(8,39)-(8,40)
+EMPTY
+EmptyG
 
 (8,46)-(8,57)
 digitsOfInt n

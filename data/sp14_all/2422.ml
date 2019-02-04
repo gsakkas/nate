@@ -28,4 +28,8 @@ let rec mulByDigit i l =
                            t)
 ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),BopG VarG LitG]))) Nothing
 
+(8,43)-(8,59)
+EMPTY
+EmptyG
+
 *)

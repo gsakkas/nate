@@ -23,4 +23,8 @@ let fixpoint (f,b) = wwhile ((fun x  -> let b = f x in (b, (b != x))), b);;
     (b , b <> x)) , b)
 TupleG (fromList [VarG,LamG EmptyG])
 
+(6,55)-(6,68)
+EMPTY
+EmptyG
+
 *)

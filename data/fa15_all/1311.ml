@@ -19,4 +19,20 @@ let padZero l1 l2 =
 (l1 , l2)
 TupleG (fromList [VarG])
 
+(5,28)-(5,60)
+EMPTY
+EmptyG
+
+(5,31)-(5,42)
+EMPTY
+EmptyG
+
+(5,31)-(5,46)
+EMPTY
+EmptyG
+
+(5,45)-(5,46)
+EMPTY
+EmptyG
+
 *)

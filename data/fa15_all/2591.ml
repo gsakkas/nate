@@ -13,9 +13,13 @@ let fixpoint (f,b) = wwhile ((fun x  -> ((f b), (not (b = (f b))))), b);;
 *)
 
 (* changed spans
-(4,58)-(4,69)
-not
-VarG
+(4,42)-(4,48)
+EMPTY
+EmptyG
+
+(4,49)-(4,55)
+EMPTY
+EmptyG
 
 (4,58)-(4,69)
 not (b = f b)

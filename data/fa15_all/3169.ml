@@ -58,16 +58,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (22,36)-(22,38)
-x1 + x2
-BopG VarG VarG
-
-(22,36)-(22,38)
 [x1 + x2]
 ListG (BopG EmptyG EmptyG) Nothing
-
-(23,4)-(25,51)
-x2
-VarG
 
 (23,4)-(25,51)
 [x2]

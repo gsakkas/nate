@@ -53,12 +53,12 @@ LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 ((num1 + num2) + carry) / 10
 BopG (BopG EmptyG EmptyG) LitG
 
+(14,52)-(14,60)
+EMPTY
+EmptyG
+
 (14,53)-(14,54)
 num1
-VarG
-
-(14,57)-(14,59)
-num2
 VarG
 
 (14,57)-(14,59)
@@ -69,29 +69,9 @@ VarG
 ((num1 + num2) + carry) mod 10
 BopG (BopG EmptyG EmptyG) LitG
 
-(14,63)-(14,67)
-(num1 + num2) + carry
-BopG (BopG EmptyG EmptyG) VarG
-
-(14,63)-(14,67)
-num1 + num2
-BopG VarG VarG
-
-(14,63)-(14,67)
-(((num1 + num2) + carry) mod 10) :: sum
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
-(15,4)-(17,51)
-carry
-VarG
-
 (15,4)-(17,51)
 sum
 VarG
-
-(15,4)-(17,51)
-10
-LitG
 
 (15,19)-(15,20)
 []

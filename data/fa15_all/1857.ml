@@ -53,4 +53,12 @@ let rec additivePersistence n =
 (sumList (digits n) mod 10) <> 0
 BopG (BopG EmptyG EmptyG) LitG
 
+(21,32)-(21,42)
+EMPTY
+EmptyG
+
+(21,36)-(21,39)
+EMPTY
+EmptyG
+
 *)

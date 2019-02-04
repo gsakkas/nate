@@ -61,4 +61,16 @@ match x with
 | (add1 , add2) -> (((add1 + add2) + carry) / 10 , (((add1 + add2) + carry) mod 10) :: rest)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(19,19)-(19,24)
+EMPTY
+EmptyG
+
+(19,19)-(19,32)
+EMPTY
+EmptyG
+
+(19,28)-(19,32)
+EMPTY
+EmptyG
+
 *)

@@ -89,59 +89,7 @@ let rec build (rand,depth) =
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (38,15)-(38,56)
-build
-VarG
-
-(38,15)-(38,56)
-rand
-VarG
-
-(38,15)-(38,56)
-depth
-VarG
-
-(38,15)-(38,56)
-build
-VarG
-
-(38,15)-(38,56)
-rand
-VarG
-
-(38,15)-(38,56)
-depth
-VarG
-
-(38,15)-(38,56)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(38,15)-(38,56)
 buildCosine (build (rand , depth - 1))
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(38,15)-(38,56)
-depth - 1
-BopG VarG LitG
-
-(38,15)-(38,56)
-depth - 1
-BopG VarG LitG
-
-(38,15)-(38,56)
-1
-LitG
-
-(38,15)-(38,56)
-1
-LitG
-
-(38,15)-(38,56)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(38,15)-(38,56)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)

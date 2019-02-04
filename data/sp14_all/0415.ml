@@ -15,12 +15,24 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(5,2)-(5,8)
+EMPTY
+EmptyG
+
+(5,2)-(5,66)
+EMPTY
+EmptyG
+
+(5,9)-(5,66)
+EMPTY
+EmptyG
+
+(5,58)-(5,59)
+EMPTY
+EmptyG
+
 (5,60)-(5,61)
 wwhile
-VarG
-
-(5,64)-(5,65)
-w
 VarG
 
 (5,64)-(5,65)

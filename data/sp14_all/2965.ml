@@ -10,14 +10,6 @@ let rec digitsOfInt n = if n > 0 then [5] @ (digitsOfInt (n / 10)) else [1];;
 
 (* changed spans
 (2,38)-(2,53)
-(@)
-VarG
-
-(2,38)-(2,53)
-5
-LitG
-
-(2,38)-(2,53)
 [5]
 ListG LitG Nothing
 

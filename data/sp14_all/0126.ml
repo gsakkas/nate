@@ -51,6 +51,58 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(14,6)-(21,73)
+EMPTY
+EmptyG
+
+(14,12)-(14,13)
+EMPTY
+EmptyG
+
+(16,28)-(16,29)
+EMPTY
+EmptyG
+
+(17,10)-(17,56)
+EMPTY
+EmptyG
+
+(17,11)-(17,12)
+EMPTY
+EmptyG
+
+(17,14)-(17,55)
+EMPTY
+EmptyG
+
+(17,18)-(17,23)
+EMPTY
+EmptyG
+
+(17,18)-(17,27)
+EMPTY
+EmptyG
+
+(17,26)-(17,27)
+EMPTY
+EmptyG
+
+(17,33)-(17,38)
+EMPTY
+EmptyG
+
+(17,33)-(17,45)
+EMPTY
+EmptyG
+
+(17,42)-(17,45)
+EMPTY
+EmptyG
+
+(17,51)-(17,54)
+EMPTY
+EmptyG
+
 (19,10)-(21,73)
 a
 VarG
@@ -63,6 +115,26 @@ let addit =
  then addit mod 10
  else 0 , (addit / 10) :: num)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+
+(20,23)-(20,35)
+EMPTY
+EmptyG
+
+(20,24)-(20,31)
+EMPTY
+EmptyG
+
+(20,32)-(20,34)
+EMPTY
+EmptyG
+
+(20,38)-(20,50)
+EMPTY
+EmptyG
+
+(20,39)-(20,46)
+EMPTY
+EmptyG
 
 (20,47)-(20,49)
 l1'

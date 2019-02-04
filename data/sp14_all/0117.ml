@@ -35,6 +35,10 @@ fun b ->
    | _ -> (self , true))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(10,7)-(10,63)
+EMPTY
+EmptyG
+
 (10,13)-(10,17)
 match b with
 | self -> (self , false)

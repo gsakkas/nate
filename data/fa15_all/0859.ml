@@ -29,16 +29,20 @@ AppG (fromList [VarG,LitG])
 (clone 0 n @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(8,32)-(8,35)
+EMPTY
+EmptyG
+
 (8,49)-(8,64)
 clone 0 n
 AppG (fromList [VarG,LitG])
 
 (8,49)-(8,69)
-l2
-VarG
-
-(8,49)-(8,69)
 (clone 0 n @ l2 , l1)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(8,58)-(8,61)
+EMPTY
+EmptyG
 
 *)

@@ -66,35 +66,27 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(29,6)-(30,76)
+EMPTY
+EmptyG
+
+(29,6)-(31,14)
+EMPTY
+EmptyG
+
+(29,7)-(29,11)
+EMPTY
+EmptyG
+
+(30,9)-(30,75)
+EMPTY
+EmptyG
+
 (30,10)-(30,13)
 let d =
   (eval (m , x , y) +. eval (n , x , y)) +. eval (o , x , y) in
 sqrt (d ** d) /. 3.0
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (BopG EmptyG EmptyG)
-
-(31,11)-(31,14)
-sqrt
-VarG
-
-(31,11)-(31,14)
-d
-VarG
-
-(31,11)-(31,14)
-(**)
-VarG
-
-(31,11)-(31,14)
-d
-VarG
-
-(31,11)-(31,14)
-sqrt (d ** d)
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(31,11)-(31,14)
-d ** d
-AppG (fromList [VarG])
 
 (31,11)-(31,14)
 sqrt (d ** d) /. 3.0

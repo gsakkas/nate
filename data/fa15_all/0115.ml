@@ -18,15 +18,19 @@ let rec digitsOfInt n =
 
 (* changed spans
 (5,30)-(5,61)
-print_int
-VarG
-
-(5,30)-(5,61)
-n
-VarG
-
-(5,30)-(5,61)
 print_int n
 AppG (fromList [VarG])
+
+(5,63)-(5,72)
+EMPTY
+EmptyG
+
+(5,63)-(5,74)
+EMPTY
+EmptyG
+
+(5,73)-(5,74)
+EMPTY
+EmptyG
 
 *)

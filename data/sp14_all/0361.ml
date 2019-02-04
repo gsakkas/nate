@@ -59,11 +59,19 @@ match a with
 CaseG VarG (fromList [(Nothing,ConAppG (Just EmptyG) Nothing),(Nothing,ListG EmptyG Nothing)])
 
 (22,15)-(22,27)
-List.rev
-VarG
-
-(22,15)-(22,27)
 List.combine l1 l2
 AppG (fromList [VarG])
+
+(22,28)-(22,35)
+EMPTY
+EmptyG
+
+(23,4)-(23,51)
+EMPTY
+EmptyG
+
+(23,48)-(23,51)
+EMPTY
+EmptyG
 
 *)

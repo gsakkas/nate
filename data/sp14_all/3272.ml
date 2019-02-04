@@ -45,6 +45,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(14,16)-(14,24)
+EMPTY
+EmptyG
+
+(14,16)-(14,44)
+EMPTY
+EmptyG
+
 (14,25)-(14,44)
 match a with
 | (list1 , list2) -> match list1 with
@@ -53,55 +61,18 @@ match a with
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
 
 (15,4)-(17,51)
-a
-VarG
-
-(15,4)-(17,51)
-list1
-VarG
-
-(15,4)-(17,51)
-x
-VarG
-
-(15,4)-(17,51)
-h1
-VarG
-
-(15,4)-(17,51)
-h2
-VarG
-
-(15,4)-(17,51)
-list1
-VarG
-
-(15,4)-(17,51)
-list2
-VarG
-
-(15,4)-(17,51)
-h1 + h2
-BopG VarG VarG
-
-(15,4)-(17,51)
 match list1 with
 | [] -> match x with
         | (h1 , h2) -> ((h1 + h2) :: list1 , list2)
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
 
-(15,4)-(17,51)
-match x with
-| (h1 , h2) -> ((h1 + h2) :: list1 , list2)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+(15,15)-(15,23)
+EMPTY
+EmptyG
 
-(15,4)-(17,51)
-((h1 + h2) :: list1 , list2)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing])
-
-(15,4)-(17,51)
-(h1 + h2) :: list1
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
+(15,15)-(15,43)
+EMPTY
+EmptyG
 
 (15,24)-(15,43)
 ([] , [])
@@ -111,21 +82,17 @@ TupleG (fromList [ListG EmptyG Nothing])
 []
 ListG EmptyG Nothing
 
-(16,4)-(17,51)
-[]
-ListG EmptyG Nothing
+(16,15)-(16,23)
+EMPTY
+EmptyG
+
+(16,15)-(16,43)
+EMPTY
+EmptyG
 
 (16,24)-(16,43)
 List.combine l1 l2
 AppG (fromList [VarG])
-
-(17,4)-(17,51)
-List.combine
-VarG
-
-(17,4)-(17,51)
-l1
-VarG
 
 (17,4)-(17,51)
 l2
@@ -135,5 +102,49 @@ VarG
 removeZero (add (padZero l1
                          l2))
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(18,35)-(18,47)
+EMPTY
+EmptyG
+
+(18,48)-(18,77)
+EMPTY
+EmptyG
+
+(18,49)-(18,56)
+EMPTY
+EmptyG
+
+(18,57)-(18,63)
+EMPTY
+EmptyG
+
+(18,58)-(18,59)
+EMPTY
+EmptyG
+
+(18,61)-(18,62)
+EMPTY
+EmptyG
+
+(18,64)-(18,76)
+EMPTY
+EmptyG
+
+(18,65)-(18,66)
+EMPTY
+EmptyG
+
+(18,68)-(18,69)
+EMPTY
+EmptyG
+
+(18,71)-(18,72)
+EMPTY
+EmptyG
+
+(18,74)-(18,75)
+EMPTY
+EmptyG
 
 *)

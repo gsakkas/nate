@@ -107,55 +107,69 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(39,11)-(50,49)
-int_of_string
-VarG
+(29,19)-(30,55)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-sepConcat
-VarG
+(29,21)-(30,55)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-List.map
-VarG
+(30,2)-(30,55)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-string_of_int
-VarG
+(30,5)-(30,6)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-l
-VarG
+(30,5)-(30,10)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-i
-VarG
+(30,9)-(30,10)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-bigAdd
-VarG
+(30,16)-(30,22)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-l
-VarG
+(30,16)-(30,47)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-mulByDigit
-VarG
+(30,23)-(30,24)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-i
-VarG
+(30,25)-(30,47)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-l
-VarG
+(30,26)-(30,36)
+EMPTY
+EmptyG
 
-(39,11)-(50,49)
-fun l ->
-  int_of_string (sepConcat ""
-                           (List.map string_of_int l))
-LamG (AppG (fromList [EmptyG]))
+(30,37)-(30,44)
+EMPTY
+EmptyG
+
+(30,38)-(30,39)
+EMPTY
+EmptyG
+
+(30,42)-(30,43)
+EMPTY
+EmptyG
+
+(30,45)-(30,46)
+EMPTY
+EmptyG
+
+(30,53)-(30,55)
+EMPTY
+EmptyG
 
 (39,11)-(50,49)
 fun i ->
@@ -166,76 +180,22 @@ fun i ->
     else []
 LamG (LamG EmptyG)
 
-(39,11)-(50,49)
-fun l ->
-  if i > 0
-  then bigAdd l
-              (mulByDigit (i - 1) l)
-  else []
-LamG (IteG EmptyG EmptyG EmptyG)
-
-(39,11)-(50,49)
-int_of_string (sepConcat ""
-                         (List.map string_of_int l))
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(39,11)-(50,49)
-sepConcat ""
-          (List.map string_of_int l)
-AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(39,11)-(50,49)
-List.map string_of_int l
-AppG (fromList [VarG])
-
-(39,11)-(50,49)
-bigAdd l (mulByDigit (i - 1)
-                     l)
-AppG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(39,11)-(50,49)
-mulByDigit (i - 1) l
-AppG (fromList [VarG,BopG EmptyG EmptyG])
-
-(39,11)-(50,49)
-i > 0
-BopG VarG LitG
-
-(39,11)-(50,49)
-i - 1
-BopG VarG LitG
-
-(39,11)-(50,49)
-""
-LitG
-
-(39,11)-(50,49)
-0
-LitG
-
-(39,11)-(50,49)
-1
-LitG
-
-(39,11)-(50,49)
-if i > 0
-then bigAdd l
-            (mulByDigit (i - 1) l)
-else []
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (ListG EmptyG Nothing)
-
-(39,11)-(50,49)
-[]
-ListG EmptyG Nothing
-
-(44,18)-(44,64)
-intListToInt
-VarG
-
 (44,18)-(44,64)
 intListToInt (mulByDigit (intListToInt l1)
                          [s])
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(44,30)-(44,43)
+EMPTY
+EmptyG
+
+(44,44)-(44,61)
+EMPTY
+EmptyG
+
+(44,45)-(44,54)
+EMPTY
+EmptyG
 
 (44,55)-(44,57)
 intListToInt
@@ -244,5 +204,13 @@ VarG
 (44,63)-(44,64)
 [s]
 ListG VarG Nothing
+
+(49,13)-(49,21)
+EMPTY
+EmptyG
+
+(49,13)-(49,42)
+EMPTY
+EmptyG
 
 *)

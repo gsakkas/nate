@@ -54,16 +54,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (17,6)-(20,72)
-c
-VarG
-
-(17,6)-(20,72)
 (c , s)
 TupleG (fromList [VarG])
-
-(17,18)-(17,19)
-c
-VarG
 
 (17,18)-(17,19)
 (c , c :: s)
@@ -74,5 +66,29 @@ match (c , s) with
 | (c , []) -> (c , c :: s)
 | _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
 CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+
+(19,14)-(19,36)
+EMPTY
+EmptyG
+
+(19,15)-(19,31)
+EMPTY
+EmptyG
+
+(19,16)-(19,24)
+EMPTY
+EmptyG
+
+(19,21)-(19,23)
+EMPTY
+EmptyG
+
+(19,27)-(19,30)
+EMPTY
+EmptyG
+
+(19,34)-(19,35)
+EMPTY
+EmptyG
 
 *)

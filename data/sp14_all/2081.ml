@@ -31,8 +31,4 @@ VarG
 h
 VarG
 
-(7,44)-(7,48)
-h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
 *)

@@ -28,10 +28,6 @@ f b
 AppG (fromList [VarG])
 
 (7,53)-(7,59)
-f
-VarG
-
-(7,53)-(7,59)
 b
 VarG
 

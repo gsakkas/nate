@@ -68,6 +68,10 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(31,8)-(31,77)
+EMPTY
+EmptyG
+
 (31,9)-(31,48)
 (eval (e1 , x , y) +. eval (e2 , x , y)) +. (eval (e3 , x , y) /. pi)
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)

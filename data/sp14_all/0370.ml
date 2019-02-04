@@ -59,6 +59,22 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(14,6)-(14,15)
+EMPTY
+EmptyG
+
+(14,10)-(14,11)
+EMPTY
+EmptyG
+
+(14,10)-(14,15)
+EMPTY
+EmptyG
+
+(14,14)-(14,15)
+EMPTY
+EmptyG
+
 (19,6)-(24,32)
 let (rem , acc) = a in
 let (el1 , el2) = x in

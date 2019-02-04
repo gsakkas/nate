@@ -29,6 +29,18 @@ let y =
 (y , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
+(8,24)-(8,31)
+EMPTY
+EmptyG
+
+(8,24)-(8,35)
+EMPTY
+EmptyG
+
+(8,25)-(8,26)
+EMPTY
+EmptyG
+
 (8,29)-(8,30)
 f x
 AppG (fromList [VarG])
@@ -41,9 +53,25 @@ VarG
 xx <> x
 BopG VarG VarG
 
+(8,50)-(8,53)
+EMPTY
+EmptyG
+
+(9,5)-(9,25)
+EMPTY
+EmptyG
+
+(9,6)-(9,21)
+EMPTY
+EmptyG
+
 (9,7)-(9,13)
 x
 VarG
+
+(9,15)-(9,16)
+EMPTY
+EmptyG
 
 (9,18)-(9,19)
 y

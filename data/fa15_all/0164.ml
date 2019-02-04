@@ -27,29 +27,29 @@ let removeDuplicates l =
 List.mem h t
 AppG (fromList [VarG])
 
+(7,32)-(7,37)
+EMPTY
+EmptyG
+
+(7,43)-(7,47)
+EMPTY
+EmptyG
+
 (7,53)-(7,58)
 [] :: seen
 ConAppG (Just (TupleG (fromList [VarG,ListG EmptyG Nothing]))) Nothing
 
 (8,8)-(8,69)
-seen
-VarG
-
-(8,8)-(8,69)
-h
-VarG
-
-(8,8)-(8,69)
-seen
-VarG
-
-(8,8)-(8,69)
-h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(8,8)-(8,69)
 []
 ListG EmptyG Nothing
+
+(8,20)-(8,28)
+EMPTY
+EmptyG
+
+(8,20)-(8,44)
+EMPTY
+EmptyG
 
 (8,29)-(8,44)
 t

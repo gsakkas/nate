@@ -105,13 +105,13 @@ AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 
-(27,46)-(27,52)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
 (29,4)-(50,77)
 ()
 ConAppG Nothing (Just (TApp "unit" []))
+
+(30,5)-(50,76)
+EMPTY
+EmptyG
 
 (30,8)-(30,13)
 match x with
@@ -121,5 +121,73 @@ match x with
 | 3 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
 | 4 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
+
+(30,12)-(30,13)
+EMPTY
+EmptyG
+
+(33,7)-(50,76)
+EMPTY
+EmptyG
+
+(33,10)-(33,11)
+EMPTY
+EmptyG
+
+(33,10)-(33,15)
+EMPTY
+EmptyG
+
+(33,14)-(33,15)
+EMPTY
+EmptyG
+
+(36,9)-(50,76)
+EMPTY
+EmptyG
+
+(36,12)-(36,13)
+EMPTY
+EmptyG
+
+(36,12)-(36,17)
+EMPTY
+EmptyG
+
+(36,16)-(36,17)
+EMPTY
+EmptyG
+
+(41,11)-(50,76)
+EMPTY
+EmptyG
+
+(41,14)-(41,15)
+EMPTY
+EmptyG
+
+(41,14)-(41,19)
+EMPTY
+EmptyG
+
+(41,18)-(41,19)
+EMPTY
+EmptyG
+
+(46,13)-(50,76)
+EMPTY
+EmptyG
+
+(46,16)-(46,17)
+EMPTY
+EmptyG
+
+(46,16)-(46,21)
+EMPTY
+EmptyG
+
+(46,20)-(46,21)
+EMPTY
+EmptyG
 
 *)

@@ -24,6 +24,22 @@ let stringOfList f l =
 *)
 
 (* changed spans
+(9,23)-(9,60)
+EMPTY
+EmptyG
+
+(9,24)-(9,40)
+EMPTY
+EmptyG
+
+(9,25)-(9,34)
+EMPTY
+EmptyG
+
+(9,35)-(9,39)
+EMPTY
+EmptyG
+
 (9,42)-(9,59)
 let newList = List.map f l in
 "[" ^ (sepConcat "; "
@@ -33,5 +49,9 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 (9,43)-(9,51)
 List.map f l
 AppG (fromList [VarG])
+
+(9,52)-(9,58)
+EMPTY
+EmptyG
 
 *)

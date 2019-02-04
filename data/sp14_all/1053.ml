@@ -59,10 +59,6 @@ let rec eval (e,x,y) =
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
 (19,66)-(19,67)
-float_of_int
-VarG
-
-(19,66)-(19,67)
 float_of_int 2
 AppG (fromList [LitG])
 

@@ -75,28 +75,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(28,12)-(28,36)
+EMPTY
+EmptyG
+
 (28,30)-(28,31)
 [(x1 + x2) / 10 ; 0]
 ListG LitG Nothing
+
+(28,32)-(28,35)
+EMPTY
+EmptyG
 
 (28,38)-(28,56)
 [(x1 + x2) mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
 
 (31,41)-(31,65)
-a2
-VarG
-
-(31,41)-(31,65)
-(@)
-VarG
-
-(31,41)-(31,65)
 a2 @ [((x1 + x2) + c) mod 10]
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(31,41)-(31,65)
-[((x1 + x2) + c) mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
 
 *)

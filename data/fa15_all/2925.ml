@@ -26,10 +26,6 @@ f x
 AppG (fromList [VarG])
 
 (6,36)-(6,48)
-f
-VarG
-
-(6,36)-(6,48)
 x
 VarG
 

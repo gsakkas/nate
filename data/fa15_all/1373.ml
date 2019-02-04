@@ -71,6 +71,10 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 2.0
 LitG
 
+(28,61)-(28,62)
+EMPTY
+EmptyG
+
 (29,19)-(29,22)
 log (eval (nlog , x , y))
 AppG (fromList [AppG (fromList [EmptyG])])

@@ -18,6 +18,18 @@ let rec digitsOfInt n = if n >= 10 then app [5] [n mod 10] else app [3] [8];;
 app [5] [n mod 10]
 AppG (fromList [ListG EmptyG Nothing])
 
+(5,22)-(5,43)
+EMPTY
+EmptyG
+
+(5,24)-(5,25)
+EMPTY
+EmptyG
+
+(5,24)-(5,30)
+EMPTY
+EmptyG
+
 (5,28)-(5,30)
 5
 LitG

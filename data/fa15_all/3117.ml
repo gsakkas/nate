@@ -15,10 +15,6 @@ listReverse l'
 AppG (fromList [VarG])
 
 (2,73)-(2,74)
-l'
-VarG
-
-(2,73)-(2,74)
 [a]
 ListG VarG Nothing
 

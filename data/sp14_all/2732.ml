@@ -23,6 +23,10 @@ BopG VarG LitG
 1
 LitG
 
+(2,58)-(2,75)
+EMPTY
+EmptyG
+
 (2,68)-(2,69)
 n - 1
 BopG VarG LitG

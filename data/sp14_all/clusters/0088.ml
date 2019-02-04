@@ -1,44 +1,19 @@
-CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (a , x) with
-| ((b , c) , (d , e)) -> (b , (d + e) :: c)
-match (a , x) with
-| ((b , c) , (d , e)) -> (b , (d + e) :: c)
+AppG (fromList [ListG EmptyG Nothing])
+append [h] [h]
+append [h] [h]
+append [h] [h]
+listReverse [a]
+[] @ [n mod 10]
+listReverse [n mod 10]
+app [3] [8]
+app [5] [n mod 10]
+List.hd [List.fold_left f base
+                        (mulByDigit i
+                                    (List.rev (List.map (fun x ->
+                                                           x * 10)
+                                                        t)) @ [h * i])]
+List.hd [List.fold_left f base
+                        (mulByDigit i
+                                    (List.rev (List.map (fun x ->
+                                                           x * 10)
+                                                        t)) @ [h * i])]

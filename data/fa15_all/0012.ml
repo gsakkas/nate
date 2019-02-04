@@ -32,17 +32,53 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(9,5)-(16,77)
-abs
-VarG
+(5,2)-(16,78)
+EMPTY
+EmptyG
 
-(9,5)-(16,77)
-numZeros
-VarG
+(5,5)-(5,21)
+EMPTY
+EmptyG
 
-(9,5)-(16,77)
-abs numZeros
-AppG (fromList [VarG])
+(5,5)-(5,40)
+EMPTY
+EmptyG
+
+(5,6)-(5,17)
+EMPTY
+EmptyG
+
+(5,18)-(5,20)
+EMPTY
+EmptyG
+
+(5,24)-(5,40)
+EMPTY
+EmptyG
+
+(5,25)-(5,36)
+EMPTY
+EmptyG
+
+(5,37)-(5,39)
+EMPTY
+EmptyG
+
+(6,7)-(6,17)
+EMPTY
+EmptyG
+
+(6,8)-(6,16)
+EMPTY
+EmptyG
+
+(6,9)-(6,11)
+EMPTY
+EmptyG
+
+(6,13)-(6,15)
+EMPTY
+EmptyG
 
 (9,5)-(16,77)
 let absNumZeros =
@@ -56,9 +92,25 @@ else (let listZeros =
       else (listZeros @ l1 , l2))
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
 
+(10,10)-(10,20)
+EMPTY
+EmptyG
+
 (12,24)-(12,49)
 clone 0 absNumZeros
 AppG (fromList [VarG,LitG])
+
+(12,30)-(12,49)
+EMPTY
+EmptyG
+
+(12,34)-(12,48)
+EMPTY
+EmptyG
+
+(12,35)-(12,38)
+EMPTY
+EmptyG
 
 (12,39)-(12,47)
 absNumZeros
@@ -67,5 +119,45 @@ VarG
 (14,13)-(14,77)
 (l1 , listZeros @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(14,31)-(14,77)
+EMPTY
+EmptyG
+
+(14,61)-(14,77)
+EMPTY
+EmptyG
+
+(14,63)-(14,68)
+EMPTY
+EmptyG
+
+(14,70)-(14,75)
+EMPTY
+EmptyG
+
+(16,10)-(16,76)
+EMPTY
+EmptyG
+
+(16,41)-(16,75)
+EMPTY
+EmptyG
+
+(16,59)-(16,75)
+EMPTY
+EmptyG
+
+(16,60)-(16,74)
+EMPTY
+EmptyG
+
+(16,61)-(16,66)
+EMPTY
+EmptyG
+
+(16,68)-(16,73)
+EMPTY
+EmptyG
 
 *)

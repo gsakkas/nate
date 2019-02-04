@@ -50,88 +50,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (16,16)-(16,26)
-snd
-VarG
-
-(16,16)-(16,26)
-a
-VarG
-
-(16,16)-(16,26)
-fst
-VarG
-
-(16,16)-(16,26)
-x
-VarG
-
-(16,16)-(16,26)
-snd
-VarG
-
-(16,16)-(16,26)
-x
-VarG
-
-(16,16)-(16,26)
-fst
-VarG
-
-(16,16)-(16,26)
-x
-VarG
-
-(16,16)-(16,26)
-snd
-VarG
-
-(16,16)-(16,26)
-x
-VarG
-
-(16,16)-(16,26)
-snd a
-AppG (fromList [VarG])
-
-(16,16)-(16,26)
-fst x
-AppG (fromList [VarG])
-
-(16,16)-(16,26)
-snd x
-AppG (fromList [VarG])
-
-(16,16)-(16,26)
-fst x
-AppG (fromList [VarG])
-
-(16,16)-(16,26)
-snd x
-AppG (fromList [VarG])
-
-(16,16)-(16,26)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,16)-(16,26)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,16)-(16,26)
-(fst x + snd x) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,16)-(16,26)
-10
-LitG
-
-(16,16)-(16,26)
 (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
 TupleG (fromList [BopG EmptyG EmptyG,ListG EmptyG Nothing])
-
-(16,16)-(16,26)
-[(fst x + snd x) / 10 ; (fst x + snd x) mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
 
 (16,16)-(16,31)
 match snd a with
@@ -140,24 +60,8 @@ match snd a with
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 (16,17)-(16,18)
-fst
-VarG
-
-(16,17)-(16,18)
-fst x
-AppG (fromList [VarG])
-
-(16,17)-(16,18)
 fst x + snd x
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,23)-(16,25)
-snd
-VarG
-
-(16,23)-(16,25)
-x
-VarG
 
 (16,23)-(16,25)
 snd x
@@ -168,10 +72,6 @@ AppG (fromList [VarG])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
 (17,4)-(18,68)
-0
-LitG
-
-(17,4)-(18,68)
 []
 ListG EmptyG Nothing
 
@@ -179,26 +79,9 @@ ListG EmptyG Nothing
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
-(17,22)-(17,24)
-List.combine
-VarG
-
-(17,22)-(17,24)
-List.rev
-VarG
-
-(17,22)-(17,24)
-List.combine (List.rev l1)
-             (List.rev l2)
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(17,22)-(17,24)
-List.rev l1
-AppG (fromList [VarG])
-
-(17,22)-(17,24)
-0
-LitG
+(17,15)-(17,66)
+EMPTY
+EmptyG
 
 (17,22)-(17,24)
 let args =
@@ -209,9 +92,9 @@ let (_ , res) =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(17,22)-(17,24)
-[]
-ListG EmptyG Nothing
+(17,37)-(17,38)
+EMPTY
+EmptyG
 
 (17,42)-(17,66)
 List.rev l2
@@ -220,5 +103,17 @@ AppG (fromList [VarG])
 (17,49)-(17,51)
 List.rev
 VarG
+
+(17,64)-(17,65)
+EMPTY
+EmptyG
+
+(18,4)-(18,68)
+EMPTY
+EmptyG
+
+(18,15)-(18,17)
+EMPTY
+EmptyG
 
 *)

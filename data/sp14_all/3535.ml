@@ -67,14 +67,6 @@ rand (0 , 2)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (19,29)-(19,71)
-0
-LitG
-
-(19,29)-(19,71)
-2
-LitG
-
-(19,29)-(19,71)
 (0 , 2)
 TupleG (fromList [LitG])
 

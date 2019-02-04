@@ -21,39 +21,7 @@ fun x ->
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (5,32)-(5,33)
-f
-VarG
-
-(5,32)-(5,33)
-x
-VarG
-
-(5,32)-(5,33)
-y
-VarG
-
-(5,32)-(5,33)
-y
-VarG
-
-(5,32)-(5,33)
-x
-VarG
-
-(5,32)-(5,33)
-f x
-AppG (fromList [VarG])
-
-(5,32)-(5,33)
-y <> x
-BopG VarG VarG
-
-(5,32)-(5,33)
 let y = f x in (y , y <> x)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-
-(5,32)-(5,33)
-(y , y <> x)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)

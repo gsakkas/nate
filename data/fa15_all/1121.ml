@@ -99,8 +99,16 @@ VarG
 [(fst x + snd x) mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
 
+(25,52)-(25,53)
+EMPTY
+EmptyG
+
 (26,19)-(26,54)
 [(fst x + snd x) mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
+
+(26,52)-(26,53)
+EMPTY
+EmptyG
 
 *)

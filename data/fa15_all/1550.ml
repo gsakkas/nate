@@ -23,4 +23,12 @@ fun x ->
    (b' , b' = b))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(6,56)-(6,60)
+EMPTY
+EmptyG
+
+(6,59)-(6,60)
+EMPTY
+EmptyG
+
 *)

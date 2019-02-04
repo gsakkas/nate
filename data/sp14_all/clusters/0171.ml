@@ -1,13 +1,7 @@
-SeqG (BopG EmptyG EmptyG) (IteG EmptyG EmptyG EmptyG)
-x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x
-x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x
-x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x
+IteG (BopG EmptyG EmptyG) LitG LitG
+if ((f + g) + carry) > 9
+then 1
+else 0
+if explosion = listReverse explosion
+then true
+else false

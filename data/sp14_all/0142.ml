@@ -53,4 +53,8 @@ let bigAdd l1 l2 =
  else 0 , num @ [addit mod 10])
 TupleG (fromList [AppG (fromList [EmptyG]),IteG EmptyG EmptyG EmptyG])
 
+(17,33)-(17,60)
+EMPTY
+EmptyG
+
 *)

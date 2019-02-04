@@ -21,4 +21,8 @@ let fixpoint (f,b) = wwhile (let func x x = (0, true) in ((func b), b));;
 func b
 AppG (fromList [VarG])
 
+(6,64)-(6,65)
+EMPTY
+EmptyG
+
 *)

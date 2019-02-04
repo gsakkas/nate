@@ -33,14 +33,6 @@ func (f , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (7,39)-(7,40)
-func
-VarG
-
-(7,39)-(7,40)
-f
-VarG
-
-(7,39)-(7,40)
 (f , b)
 TupleG (fromList [VarG])
 

@@ -66,24 +66,20 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(30,6)-(30,54)
+EMPTY
+EmptyG
+
+(30,6)-(30,74)
+EMPTY
+EmptyG
+
 (30,7)-(30,33)
 ((float_of_int (-1) *. eval (e1 , x , y)) *. eval (e2 , x , y)) *. eval (e3 , x , y)
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
 (30,8)-(30,12)
-float_of_int
-VarG
-
-(30,8)-(30,12)
-float_of_int (-1)
-AppG (fromList [LitG])
-
-(30,8)-(30,12)
 (float_of_int (-1) *. eval (e1 , x , y)) *. eval (e2 , x , y)
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
-
-(30,8)-(30,12)
-float_of_int (-1) *. eval (e1 , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)

@@ -1,3 +1,3 @@
-ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [BopG VarG LitG])]))) Nothing
-n :: (digitsOfInt (n / 10))
-n :: (digitsOfInt (n / 10))
+SeqG (ConAppG (Just EmptyG) Nothing) (AppG (fromList [EmptyG]))
+1 :: x;
+additivePersistence (sumList (digitsOfInt n))

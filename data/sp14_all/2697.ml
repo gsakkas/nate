@@ -95,44 +95,12 @@ AppG (fromList [VarG])
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (30,49)-(30,50)
-(^)
-VarG
-
-(30,49)-(30,50)
-exprToString
-VarG
-
-(30,49)-(30,50)
-(^)
-VarG
-
-(30,49)-(30,50)
 exprToString b ^ (exprToString c ^ ")/3)")
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(30,49)-(30,50)
-exprToString b
-AppG (fromList [VarG])
-
-(30,49)-(30,50)
-"+"
-LitG
-
-(30,52)-(30,53)
-exprToString
-VarG
-
-(30,52)-(30,53)
-(^)
-VarG
 
 (30,52)-(30,53)
 exprToString c ^ ")/3)"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(30,52)-(30,53)
-exprToString c
-AppG (fromList [VarG])
 
 (30,58)-(30,61)
 ")/3)"

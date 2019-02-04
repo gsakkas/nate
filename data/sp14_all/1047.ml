@@ -82,6 +82,10 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(26,2)-(38,70)
+EMPTY
+EmptyG
+
 (26,18)-(37,61)
 let num =
   if depth < 1
@@ -98,62 +102,10 @@ match num with
 LetG NonRec (fromList [IteG EmptyG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (27,4)-(37,61)
-depth
-VarG
-
-(27,4)-(37,61)
-rand
-VarG
-
-(27,4)-(37,61)
-rand
-VarG
-
-(27,4)-(37,61)
-rand (0 , 2)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(27,4)-(37,61)
-rand (2 , 7)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(27,4)-(37,61)
-depth < 1
-BopG VarG LitG
-
-(27,4)-(37,61)
-1
-LitG
-
-(27,4)-(37,61)
-0
-LitG
-
-(27,4)-(37,61)
-2
-LitG
-
-(27,4)-(37,61)
-2
-LitG
-
-(27,4)-(37,61)
-7
-LitG
-
-(27,4)-(37,61)
 if depth < 1
 then rand (0 , 2)
 else rand (2 , 7)
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(27,4)-(37,61)
-(0 , 2)
-TupleG (fromList [LitG])
-
-(27,4)-(37,61)
-(2 , 7)
-TupleG (fromList [LitG])
 
 (27,10)-(27,11)
 num
@@ -194,5 +146,69 @@ VarG
 (37,27)-(37,28)
 depth
 VarG
+
+(37,52)-(37,53)
+EMPTY
+EmptyG
+
+(37,56)-(37,57)
+EMPTY
+EmptyG
+
+(38,2)-(38,70)
+EMPTY
+EmptyG
+
+(38,5)-(38,14)
+EMPTY
+EmptyG
+
+(38,20)-(38,30)
+EMPTY
+EmptyG
+
+(38,20)-(38,42)
+EMPTY
+EmptyG
+
+(38,31)-(38,35)
+EMPTY
+EmptyG
+
+(38,36)-(38,42)
+EMPTY
+EmptyG
+
+(38,37)-(38,38)
+EMPTY
+EmptyG
+
+(38,40)-(38,41)
+EMPTY
+EmptyG
+
+(38,48)-(38,58)
+EMPTY
+EmptyG
+
+(38,48)-(38,70)
+EMPTY
+EmptyG
+
+(38,59)-(38,63)
+EMPTY
+EmptyG
+
+(38,64)-(38,70)
+EMPTY
+EmptyG
+
+(38,65)-(38,66)
+EMPTY
+EmptyG
+
+(38,68)-(38,69)
+EMPTY
+EmptyG
 
 *)

@@ -59,41 +59,21 @@ match a with
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (19,12)-(19,13)
-fst
-VarG
-
-(19,12)-(19,13)
-fst x
-AppG (fromList [VarG])
-
-(19,12)-(19,13)
 fst x + snd x
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(19,33)-(19,47)
-snd
-VarG
-
-(19,33)-(19,47)
-x
-VarG
-
-(19,33)-(19,47)
-a
-VarG
 
 (19,33)-(19,47)
 match a with
 | (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(19,33)-(19,47)
-((w + z) / 10 , ((w + z) mod 10) :: y)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
 (19,33)-(19,72)
 snd x
 AppG (fromList [VarG])
+
+(19,35)-(19,36)
+EMPTY
+EmptyG
 
 (19,39)-(19,40)
 w
@@ -102,6 +82,10 @@ VarG
 (19,44)-(19,46)
 z
 VarG
+
+(19,53)-(19,54)
+EMPTY
+EmptyG
 
 (19,57)-(19,58)
 w
@@ -116,11 +100,27 @@ y
 VarG
 
 (20,15)-(20,17)
-0
-LitG
-
-(20,15)-(20,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
+
+(21,25)-(21,45)
+EMPTY
+EmptyG
+
+(21,46)-(21,47)
+EMPTY
+EmptyG
+
+(21,48)-(21,54)
+EMPTY
+EmptyG
+
+(21,49)-(21,50)
+EMPTY
+EmptyG
+
+(21,52)-(21,53)
+EMPTY
+EmptyG
 
 *)

@@ -31,16 +31,32 @@ let padZero l1 l2 =
 (l1 @ clone 0 diff , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(10,21)-(10,40)
+EMPTY
+EmptyG
+
+(10,22)-(10,35)
+EMPTY
+EmptyG
+
+(10,23)-(10,27)
+EMPTY
+EmptyG
+
 (10,38)-(10,39)
 l2
 VarG
 
 (11,24)-(11,49)
-l1
-VarG
-
-(11,24)-(11,49)
 (l1 , l2 @ clone 0 diff)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(11,38)-(11,48)
+EMPTY
+EmptyG
+
+(11,46)-(11,47)
+EMPTY
+EmptyG
 
 *)

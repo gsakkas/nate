@@ -64,6 +64,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(5,6)-(5,11)
+EMPTY
+EmptyG
+
+(5,10)-(5,11)
+EMPTY
+EmptyG
+
 (26,6)-(26,76)
 let (c , a1 :: a2) = a in
 let v = (x1 + x2) + c in
@@ -79,52 +87,56 @@ c
 VarG
 
 (26,45)-(26,59)
-v
-VarG
-
-(26,45)-(26,59)
 v / 10
 BopG VarG LitG
 
-(26,45)-(26,59)
-10
-LitG
+(26,46)-(26,48)
+EMPTY
+EmptyG
+
+(26,52)-(26,53)
+EMPTY
+EmptyG
+
+(26,52)-(26,57)
+EMPTY
+EmptyG
 
 (26,56)-(26,57)
 v / 10
 BopG VarG LitG
 
 (26,61)-(26,75)
-v
-VarG
-
-(26,61)-(26,75)
 10
 LitG
+
+(26,62)-(26,64)
+EMPTY
+EmptyG
+
+(26,68)-(26,69)
+EMPTY
+EmptyG
+
+(26,68)-(26,73)
+EMPTY
+EmptyG
 
 (26,72)-(26,73)
 v mod 10
 BopG VarG LitG
 
 (27,4)-(29,60)
-v
-VarG
-
-(27,4)-(29,60)
 a2
 VarG
 
-(27,4)-(29,60)
-10
-LitG
+(27,16)-(27,19)
+EMPTY
+EmptyG
 
 (27,22)-(27,23)
 0
 LitG
-
-(28,15)-(28,33)
-List.rev
-VarG
 
 (28,15)-(28,33)
 List.rev (List.combine l1 l2)
@@ -135,5 +147,13 @@ let (_ , res) =
   List.fold_left f base args in
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+
+(29,50)-(29,60)
+EMPTY
+EmptyG
+
+(29,51)-(29,54)
+EMPTY
+EmptyG
 
 *)

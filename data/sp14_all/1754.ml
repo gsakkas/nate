@@ -62,6 +62,26 @@ let (s , t) = a in
 (((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(21,20)-(21,77)
+EMPTY
+EmptyG
+
+(21,23)-(21,30)
+EMPTY
+EmptyG
+
+(21,23)-(21,34)
+EMPTY
+EmptyG
+
+(21,24)-(21,25)
+EMPTY
+EmptyG
+
+(21,28)-(21,29)
+EMPTY
+EmptyG
+
 (21,33)-(21,34)
 let (s , t) = a in
 (((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
@@ -70,6 +90,10 @@ LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 (21,40)-(21,59)
 a
 VarG
+
+(21,41)-(21,42)
+EMPTY
+EmptyG
 
 (21,44)-(21,58)
 ((i + j) + s) / 10
@@ -82,6 +106,10 @@ BopG VarG VarG
 (21,55)-(21,57)
 s
 VarG
+
+(21,65)-(21,77)
+EMPTY
+EmptyG
 
 (21,66)-(21,67)
 (((i + j) + s) mod 10) :: t
@@ -102,14 +130,6 @@ VarG
 (23,4)-(25,51)
 t
 VarG
-
-(23,4)-(25,51)
-10
-LitG
-
-(23,15)-(23,17)
-0
-LitG
 
 (23,15)-(23,17)
 (0 , [])

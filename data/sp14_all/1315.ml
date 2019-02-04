@@ -77,16 +77,8 @@ let bigMul l1 l2 =
 
 (* changed spans
 (33,51)-(33,64)
-int_of_float
-VarG
-
-(33,51)-(33,64)
 int_of_float (10.0 ** float_of_int pos)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(33,60)-(33,63)
-float_of_int
-VarG
 
 (33,60)-(33,63)
 float_of_int pos

@@ -68,9 +68,13 @@ fun (l1 , l2) ->
    res)
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(19,6)-(19,72)
-x
-VarG
+(17,6)-(19,72)
+EMPTY
+EmptyG
+
+(17,20)-(17,21)
+EMPTY
+EmptyG
 
 (19,6)-(19,72)
 let (x1 , x2) = x in
@@ -78,12 +82,36 @@ let sum = (x1 + x2) + carry in
 (sum / 10 , (sum mod 10) :: acc)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(19,51)-(19,54)
+EMPTY
+EmptyG
+
 (20,4)-(22,51)
 acc
 VarG
 
+(21,15)-(21,68)
+EMPTY
+EmptyG
+
 (21,31)-(21,38)
 List.combine
 VarG
+
+(21,48)-(21,60)
+EMPTY
+EmptyG
+
+(21,48)-(21,68)
+EMPTY
+EmptyG
+
+(21,61)-(21,64)
+EMPTY
+EmptyG
+
+(21,65)-(21,68)
+EMPTY
+EmptyG
 
 *)

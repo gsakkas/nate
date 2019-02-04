@@ -23,4 +23,8 @@ let fixpoint (f,b) =
     (b , b <> input)) , b)
 TupleG (fromList [VarG,LamG EmptyG])
 
+(6,44)-(6,61)
+EMPTY
+EmptyG
+
 *)

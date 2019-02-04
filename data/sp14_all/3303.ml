@@ -28,13 +28,17 @@ let bigMul l1 l2 =
 
 (* changed spans
 (3,14)-(3,24)
-x
-VarG
-
-(3,14)-(3,24)
 match x with
 | (k , v) -> ([k] , v)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+
+(3,16)-(3,17)
+EMPTY
+EmptyG
+
+(3,20)-(3,23)
+EMPTY
+EmptyG
 
 (3,21)-(3,22)
 k

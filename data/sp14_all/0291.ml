@@ -14,4 +14,8 @@ let rec listReverse l = match l with | [] -> l | h::t -> listReverse (h :: l);;
 listReverse (h :: l)
 AppG (fromList [ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
+(3,56)-(3,57)
+EMPTY
+EmptyG
+
 *)

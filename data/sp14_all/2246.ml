@@ -31,6 +31,10 @@ TupleG (fromList [VarG,LitG])
 true
 LitG
 
+(5,69)-(5,72)
+EMPTY
+EmptyG
+
 (5,71)-(5,72)
 (b , false)
 TupleG (fromList [VarG,LitG])

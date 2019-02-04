@@ -68,4 +68,8 @@ bigAdd (bigAdd l l)
        (mulByDigit (i - 2) l)
 AppG (fromList [AppG (fromList [EmptyG])])
 
+(29,35)-(29,72)
+EMPTY
+EmptyG
+
 *)

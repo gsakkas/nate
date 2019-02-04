@@ -27,6 +27,10 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
+(11,27)-(11,37)
+EMPTY
+EmptyG
+
 (11,28)-(11,34)
 n / 10
 BopG VarG LitG

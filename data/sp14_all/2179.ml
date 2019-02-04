@@ -70,25 +70,17 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 (eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (c , x , y))
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
 
-(28,26)-(28,35)
-eval
-VarG
+(28,12)-(28,36)
+EMPTY
+EmptyG
 
 (28,26)-(28,35)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (28,41)-(28,50)
-eval
-VarG
-
-(28,41)-(28,50)
 eval (b , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(28,54)-(28,63)
-eval
-VarG
 
 (28,54)-(28,63)
 eval (c , x , y)

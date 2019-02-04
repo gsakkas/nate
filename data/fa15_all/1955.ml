@@ -92,29 +92,57 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(28,19)-(34,66)
-l1
-VarG
+(2,19)-(2,61)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-h
-VarG
+(2,22)-(2,23)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-l2
-VarG
+(2,22)-(2,27)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-helper
-VarG
+(2,26)-(2,27)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-t
-VarG
+(2,33)-(2,34)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-l2
-VarG
+(2,40)-(2,42)
+EMPTY
+EmptyG
+
+(2,40)-(2,61)
+EMPTY
+EmptyG
+
+(2,45)-(2,61)
+EMPTY
+EmptyG
+
+(2,46)-(2,52)
+EMPTY
+EmptyG
+
+(2,53)-(2,60)
+EMPTY
+EmptyG
+
+(2,54)-(2,55)
+EMPTY
+EmptyG
+
+(2,58)-(2,59)
+EMPTY
+EmptyG
+
+(4,14)-(4,65)
+EMPTY
+EmptyG
 
 (28,19)-(34,66)
 fun l1 ->
@@ -125,36 +153,81 @@ fun l1 ->
                                     l2)
 LamG (LamG EmptyG)
 
-(28,19)-(34,66)
-fun l2 ->
-  match l1 with
-  | [] -> []
-  | h :: t -> (h , l2) :: (helper t
-                                  l2)
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+(36,14)-(37,72)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-helper t l2
-AppG (fromList [VarG])
+(36,16)-(37,72)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-match l1 with
-| [] -> []
-| h :: t -> (h , l2) :: (helper t
-                                l2)
-CaseG VarG (fromList [(Nothing,ConAppG (Just EmptyG) Nothing),(Nothing,ListG EmptyG Nothing)])
+(37,2)-(37,72)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-(h , l2)
-TupleG (fromList [VarG])
+(37,8)-(37,9)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-(h , l2) :: (helper t l2)
-ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),TupleG (fromList [VarG])]))) Nothing
+(37,23)-(37,25)
+EMPTY
+EmptyG
 
-(28,19)-(34,66)
-[]
-ListG EmptyG Nothing
+(37,36)-(37,53)
+EMPTY
+EmptyG
+
+(37,36)-(37,72)
+EMPTY
+EmptyG
+
+(37,37)-(37,42)
+EMPTY
+EmptyG
+
+(37,43)-(37,50)
+EMPTY
+EmptyG
+
+(37,44)-(37,45)
+EMPTY
+EmptyG
+
+(37,48)-(37,49)
+EMPTY
+EmptyG
+
+(37,51)-(37,52)
+EMPTY
+EmptyG
+
+(37,54)-(37,55)
+EMPTY
+EmptyG
+
+(37,56)-(37,72)
+EMPTY
+EmptyG
+
+(37,57)-(37,67)
+EMPTY
+EmptyG
+
+(37,57)-(37,71)
+EMPTY
+EmptyG
+
+(37,58)-(37,64)
+EMPTY
+EmptyG
+
+(37,65)-(37,66)
+EMPTY
+EmptyG
+
+(37,70)-(37,71)
+EMPTY
+EmptyG
 
 (40,14)-(40,74)
 let (x1 , x2) = x in
@@ -170,29 +243,9 @@ let (carry , res) = a in
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (40,48)-(40,54)
-carry
-VarG
-
-(40,48)-(40,54)
-(@)
-VarG
-
-(40,48)-(40,54)
 bigAdd (mulByDigit x1
                    x2 @ carry) res
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(40,48)-(40,54)
-0
-LitG
-
-(40,48)-(40,54)
-[0]
-ListG LitG Nothing
-
-(40,48)-(40,74)
-a
-VarG
 
 (40,48)-(40,74)
 (carry @ [0] , bigAdd (mulByDigit x1
@@ -200,23 +253,19 @@ VarG
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (40,56)-(40,66)
-(@)
-VarG
-
-(40,56)-(40,66)
 mulByDigit x1 x2
 AppG (fromList [VarG])
 
+(40,67)-(40,68)
+EMPTY
+EmptyG
+
+(40,69)-(40,71)
+EMPTY
+EmptyG
+
 (40,73)-(40,74)
 x1
-VarG
-
-(41,2)-(43,63)
-x2
-VarG
-
-(41,2)-(43,63)
-carry
 VarG
 
 (41,2)-(43,63)
@@ -231,13 +280,9 @@ TupleG (fromList [ListG EmptyG Nothing])
 []
 ListG EmptyG Nothing
 
-(42,2)-(43,63)
-[]
-ListG EmptyG Nothing
-
-(42,13)-(42,23)
-List.rev
-VarG
+(42,13)-(42,18)
+EMPTY
+EmptyG
 
 (42,13)-(42,23)
 List.rev (helper l1 l2)
@@ -256,5 +301,21 @@ let (_ , res) =
   List.fold_left f base args in
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+
+(43,50)-(43,57)
+EMPTY
+EmptyG
+
+(43,50)-(43,63)
+EMPTY
+EmptyG
+
+(43,51)-(43,56)
+EMPTY
+EmptyG
+
+(43,58)-(43,59)
+EMPTY
+EmptyG
 
 *)

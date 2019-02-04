@@ -11,10 +11,6 @@ let rec wwhile (f,b) =
 
 (* changed spans
 (2,70)-(2,71)
-wwhile
-VarG
-
-(2,70)-(2,71)
 (f , a)
 TupleG (fromList [VarG])
 

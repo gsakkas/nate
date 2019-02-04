@@ -1,7 +1,4 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,LitG)])
-match a1 with
-| [] -> 0
-| h :: t -> h
-match a1 with
-| [] -> 0
-| h :: t -> h
+IteG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG) LitG
+if x > 10
+then 1 + additivePersistence x
+else 0

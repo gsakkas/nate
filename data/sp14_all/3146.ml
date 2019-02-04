@@ -62,27 +62,15 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(23,16)-(23,64)
+EMPTY
+EmptyG
+
 (23,22)-(23,23)
 match x with
 | (d1 , d2) -> (d1 + d2 , (d1 + d2) :: (match a with
                                         | (a1 , a2) -> a2))
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(23,50)-(23,64)
-x
-VarG
-
-(23,50)-(23,64)
-d1
-VarG
-
-(23,50)-(23,64)
-d2
-VarG
-
-(23,50)-(23,64)
-d1 + d2
-BopG VarG VarG
 
 (23,50)-(23,64)
 (d1 + d2 , (d1 + d2) :: (match a with
@@ -93,10 +81,6 @@ TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 match a with
 | (a1 , a2) -> a2
 CaseG VarG (fromList [(Nothing,VarG)])
-
-(24,4)-(26,51)
-a
-VarG
 
 (24,4)-(26,51)
 a2

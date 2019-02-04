@@ -15,6 +15,14 @@ let rec clone x n =
 clone x (n - 1)
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(3,57)-(3,68)
+EMPTY
+EmptyG
+
+(3,58)-(3,63)
+EMPTY
+EmptyG
+
 (3,61)-(3,62)
 n - 1
 BopG VarG LitG

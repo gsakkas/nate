@@ -9,10 +9,6 @@ List.mem h seen = false
 List.mem h seen = false
 List.mem h seen = false
 eval (e2 , x , y) /. 2.0
-rand (0 , 1) = 0
-rand (0 , 1) = 0
-rand (0 , 1) = 0
-rand (0 , 1) = 0
 List.length t < 2
 List.length t < 2
 sumList (digits n) > 9

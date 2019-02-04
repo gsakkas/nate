@@ -85,6 +85,10 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
+(38,32)-(38,39)
+EMPTY
+EmptyG
+
 (38,33)-(38,36)
 q + 1
 BopG VarG LitG

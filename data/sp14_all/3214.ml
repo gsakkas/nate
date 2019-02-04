@@ -87,6 +87,46 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(27,2)-(43,69)
+EMPTY
+EmptyG
+
+(27,5)-(27,10)
+EMPTY
+EmptyG
+
+(27,5)-(27,14)
+EMPTY
+EmptyG
+
+(27,13)-(27,14)
+EMPTY
+EmptyG
+
+(29,4)-(43,69)
+EMPTY
+EmptyG
+
+(29,15)-(29,19)
+EMPTY
+EmptyG
+
+(29,15)-(29,26)
+EMPTY
+EmptyG
+
+(29,20)-(29,26)
+EMPTY
+EmptyG
+
+(29,21)-(29,22)
+EMPTY
+EmptyG
+
+(29,24)-(29,25)
+EMPTY
+EmptyG
+
 (32,11)-(32,17)
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])

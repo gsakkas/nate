@@ -1,52 +1,56 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
+CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
+match randNum3 with
+| 1 -> buildSine (buildOp1 (build (rand , depth - 1)))
+| 2 -> buildCosine (buildOp1 (build (rand , depth - 1)))
+match $x with
+| v -> x (a v)
+match $x with
+| v -> x (a v)
+match $x with
+| v -> x (a v)
+match x with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+| 2 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 3 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 4 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match x with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+| 2 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 3 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 4 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match x with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+| 2 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 3 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 4 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match x with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+| 2 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 3 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 4 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match xs with
+| hd :: tl -> f (f hd hd) tl
+match r with
+| 0 -> buildX ()
+| 1 -> buildY ()
+| 2 -> buildSine (build (rand , depth - 1))
+| 3 -> buildCosine (build (rand , depth - 1))
+| 4 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| _ -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match a with
+| [] -> mulByDigit x l2
+| _ -> bigAdd a (mulByDigit x
+                            l2)
+match a with
+| [] -> mulByDigit x l2
+| _ -> bigAdd a (mulByDigit x
+                            l2)
+match a with
+| [] -> mulByDigit x l2
+| _ -> bigAdd a (mulByDigit x
+                            l2)

@@ -16,9 +16,17 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(5,15)-(5,25)
-(@)
-VarG
+(5,12)-(5,50)
+EMPTY
+EmptyG
+
+(5,12)-(5,54)
+EMPTY
+EmptyG
+
+(5,13)-(5,47)
+EMPTY
+EmptyG
 
 (5,15)-(5,25)
 mulByDigit i
@@ -31,28 +39,8 @@ List.map (fun x -> x * 10) t
 AppG (fromList [VarG,LamG EmptyG])
 
 (5,44)-(5,46)
-List.map
-VarG
-
-(5,44)-(5,46)
-x
-VarG
-
-(5,44)-(5,46)
 fun x -> x * 10
 LamG (BopG EmptyG EmptyG)
-
-(5,44)-(5,46)
-x * 10
-BopG VarG LitG
-
-(5,48)-(5,49)
-t
-VarG
-
-(5,48)-(5,49)
-h * i
-BopG VarG VarG
 
 (5,48)-(5,49)
 [h * i]

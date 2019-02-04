@@ -20,6 +20,14 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(7,4)-(8,19)
+EMPTY
+EmptyG
+
+(7,14)-(7,67)
+EMPTY
+EmptyG
+
 (7,18)-(7,67)
 let g =
   fun x ->
@@ -36,12 +44,6 @@ fun x ->
   | y -> (y , true)
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(7,24)-(7,27)
-match f x with
-| x -> (x , false)
-| y -> (y , true)
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
 (7,26)-(7,27)
 x
 VarG
@@ -53,6 +55,14 @@ VarG
 (7,59)-(7,60)
 y
 VarG
+
+(8,6)-(8,14)
+EMPTY
+EmptyG
+
+(8,7)-(8,11)
+EMPTY
+EmptyG
 
 (8,12)-(8,13)
 g

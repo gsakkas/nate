@@ -31,4 +31,8 @@ VarG
 List.mem h seen
 AppG (fromList [VarG])
 
+(7,33)-(7,42)
+EMPTY
+EmptyG
+
 *)

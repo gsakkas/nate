@@ -19,16 +19,8 @@ match f b with
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
 (3,33)-(3,34)
-wwhile
-VarG
-
-(3,33)-(3,34)
 (f , b')
 TupleG (fromList [VarG])
-
-(3,33)-(3,37)
-c'
-VarG
 
 (3,33)-(3,37)
 if c'

@@ -1,13 +1,5 @@
-SeqG (IteG EmptyG EmptyG EmptyG) (AppG (fromList [EmptyG]))
-if n < 0
-then print_int 0
-else print_int (n / 10);
-digitsOfInt (n / 10)
-if n < 0
-then print_int 0
-else print_int (n / 10);
-digitsOfInt (n / 10)
-if n < 0
-then print_int 0
-else print_int (n / 10);
-digitsOfInt (n / 10)
+CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,VarG)])
+match digits n with
+| x :: [] -> x
+match digits n with
+| x :: [] -> x

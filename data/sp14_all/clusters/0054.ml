@@ -1,176 +1,42 @@
-LetG NonRec (fromList [LamG EmptyG]) VarG
-let fn = fun d -> d in fn
-let fn = fun d -> d in fn
-let fn = fun d -> d in fn
-let d =
-  fun x ->
-    (let xx = f b in
-     (xx , xx = b)) in
-d
-let d =
-  fun x ->
-    (let xx = f b in
-     (xx , xx = b)) in
-d
-let d =
-  fun x ->
-    (let xx = f b in
-     (xx , xx = b)) in
-d
-let func =
-  fun b ->
-    (let ans = f b in
-     if b = ans
-     then (ans , false)
-     else (ans , true)) in
-func
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
+LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
+let xx = f x in (xx , xx <> x)
+let xx = f x in (xx , xx <> x)
+let xx = f x in (xx , xx <> x)
+let xi = f x in
+(xi , (f xi <> xi) || f (f xi))
+let ll2 = List.length l2 in
+(clone 0
+       (ll2 - ll1) @ l1 , clone 0
+                                (ll1 - ll2) @ l2)
+let y = f x in (y , y <> x)
+let y = f x in (y , y <> x)
+let (_ , asd4) =
+  padZero asd3 (asd2 :: b) in
+(asd3 , asd4)
+let (_ , asd4) =
+  padZero asd3 (asd2 :: b) in
+(asd3 , asd4)
+let (_ , asd4) =
+  padZero asd3 (asd2 :: b) in
+(asd3 , asd4)
+let (_ , asd4) =
+  padZero asd3 (asd2 :: b) in
+(asd3 , asd4)
+let (_ , asd4) =
+  padZero asd3 (asd2 :: b) in
+(asd3 , asd4)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)
+let xx = f x in (xx , xx <> b)

@@ -39,4 +39,12 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 ""
 LitG
 
+(13,20)-(13,23)
+EMPTY
+EmptyG
+
+(13,33)-(13,38)
+EMPTY
+EmptyG
+
 *)

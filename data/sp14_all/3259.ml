@@ -23,6 +23,22 @@ let rec sepConcat sep sl =
 *)
 
 (* changed spans
+(8,18)-(8,40)
+EMPTY
+EmptyG
+
+(8,21)-(8,22)
+EMPTY
+EmptyG
+
+(8,21)-(8,28)
+EMPTY
+EmptyG
+
+(8,25)-(8,28)
+EMPTY
+EmptyG
+
 (8,34)-(8,35)
 (^)
 VarG

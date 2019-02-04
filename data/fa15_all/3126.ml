@@ -18,6 +18,10 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(6,10)-(6,63)
+EMPTY
+EmptyG
+
 (6,17)-(6,18)
 fun b' ->
   if f b' = b'
@@ -34,36 +38,8 @@ f
 VarG
 
 (6,47)-(6,52)
-b'
-VarG
-
-(6,47)-(6,52)
-f
-VarG
-
-(6,47)-(6,52)
-b'
-VarG
-
-(6,47)-(6,52)
-f b'
-AppG (fromList [VarG])
-
-(6,47)-(6,52)
 (f b' , false)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(6,58)-(6,62)
-f
-VarG
-
-(6,58)-(6,62)
-b'
-VarG
-
-(6,58)-(6,62)
-f b'
-AppG (fromList [VarG])
 
 (6,58)-(6,62)
 (f b' , true)

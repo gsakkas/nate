@@ -59,13 +59,13 @@ AppG (fromList [AppG (fromList [EmptyG])])
 List.combine l1 l2
 AppG (fromList [VarG])
 
+(22,44)-(22,47)
+EMPTY
+EmptyG
+
 (23,2)-(23,43)
 List.rev res
 AppG (fromList [VarG])
-
-(23,11)-(23,21)
-res
-VarG
 
 (23,11)-(23,21)
 removeZero (add (padZero l1

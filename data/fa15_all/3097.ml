@@ -76,20 +76,12 @@ BopG (BopG EmptyG EmptyG) LitG
 TupleG (fromList [VarG])
 
 (28,36)-(28,56)
-x
-VarG
-
-(28,36)-(28,56)
 y
 VarG
 
 (28,43)-(28,47)
 (expr , x , y)
 TupleG (fromList [VarG])
-
-(28,52)-(28,55)
-x
-VarG
 
 (28,52)-(28,55)
 y
@@ -104,10 +96,6 @@ LitG
 TupleG (fromList [VarG])
 
 (30,22)-(30,58)
-x
-VarG
-
-(30,22)-(30,58)
 y
 VarG
 
@@ -118,14 +106,6 @@ VarG
 (30,34)-(30,39)
 (expr2 , x , y)
 TupleG (fromList [VarG])
-
-(30,44)-(30,56)
-expr2
-VarG
-
-(30,44)-(30,56)
-x
-VarG
 
 (30,44)-(30,56)
 y

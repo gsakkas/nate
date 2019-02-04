@@ -85,6 +85,10 @@ let (carry' , digits') =
 (carry' , digits')
 LetG NonRec (fromList [IteG EmptyG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(20,21)-(20,22)
+EMPTY
+EmptyG
+
 (20,25)-(20,26)
 fst
 VarG
@@ -93,6 +97,10 @@ VarG
 sec
 VarG
 
+(20,40)-(20,41)
+EMPTY
+EmptyG
+
 (20,44)-(20,45)
 fst
 VarG
@@ -100,6 +108,10 @@ VarG
 (20,49)-(20,51)
 sec
 VarG
+
+(20,64)-(20,65)
+EMPTY
+EmptyG
 
 (20,68)-(20,69)
 fst
@@ -110,70 +122,6 @@ sec
 VarG
 
 (21,4)-(23,51)
-a
-VarG
-
-(21,4)-(23,51)
-sec'
-VarG
-
-(21,4)-(23,51)
-digits
-VarG
-
-(21,4)-(23,51)
-(@)
-VarG
-
-(21,4)-(23,51)
-fst'
-VarG
-
-(21,4)-(23,51)
-digits
-VarG
-
-(21,4)-(23,51)
-(@)
-VarG
-
-(21,4)-(23,51)
-fst'
-VarG
-
-(21,4)-(23,51)
-carry'
-VarG
-
-(21,4)-(23,51)
-digits'
-VarG
-
-(21,4)-(23,51)
-digits @ [fst']
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(21,4)-(23,51)
-digits @ [fst']
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(21,4)-(23,51)
-sec' = 1
-BopG VarG LitG
-
-(21,4)-(23,51)
-1
-LitG
-
-(21,4)-(23,51)
-1
-LitG
-
-(21,4)-(23,51)
-0
-LitG
-
-(21,4)-(23,51)
 let (carry , digits) = a in
 let (carry' , digits') =
   if sec' = 1
@@ -182,60 +130,10 @@ let (carry' , digits') =
 (carry' , digits')
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(21,4)-(23,51)
-let (carry' , digits') =
-  if sec' = 1
-  then (1 , digits @ [fst'])
-  else (0 , digits @ [fst']) in
-(carry' , digits')
-LetG NonRec (fromList [IteG EmptyG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
-(21,4)-(23,51)
-if sec' = 1
-then (1 , digits @ [fst'])
-else (0 , digits @ [fst'])
-IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
-(21,4)-(23,51)
-(1 , digits @ [fst'])
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(21,4)-(23,51)
-(0 , digits @ [fst'])
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(21,4)-(23,51)
-(carry' , digits')
-TupleG (fromList [VarG])
-
-(21,4)-(23,51)
-[fst']
-ListG VarG Nothing
-
-(21,4)-(23,51)
-[fst']
-ListG VarG Nothing
-
-(22,15)-(22,44)
-(@)
-VarG
-
 (22,15)-(22,44)
 List.rev (List.combine l1
                        l2) @ [(0 , 0)]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(23,4)-(23,51)
-0
-LitG
-
-(23,4)-(23,51)
-0
-LitG
-
-(23,4)-(23,51)
-(0 , 0)
-TupleG (fromList [LitG])
 
 (23,4)-(23,51)
 [(0 , 0)]

@@ -67,10 +67,6 @@ exprToString expr2
 AppG (fromList [VarG])
 
 (26,52)-(26,64)
-(^)
-VarG
-
-(26,52)-(26,64)
 exprToString expr4
 AppG (fromList [VarG])
 

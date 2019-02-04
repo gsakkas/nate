@@ -1,52 +1,51 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
+LetG NonRec (fromList [BopG EmptyG EmptyG]) (IteG EmptyG EmptyG EmptyG)
+let b = n / 10 in
+if b = 0 then [n] else [a]
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let digit = add x + carry in
+if digit > 9
+then (1 , 1 :: ((digit - 10) :: sum))
+else (0 , digit :: sum)

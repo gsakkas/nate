@@ -25,4 +25,12 @@ ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])]))) Nothing
 add
 VarG
 
+(6,48)-(6,51)
+EMPTY
+EmptyG
+
+(6,52)-(6,62)
+EMPTY
+EmptyG
+
 *)

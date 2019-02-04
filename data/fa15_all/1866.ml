@@ -10,6 +10,10 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(2,24)-(2,75)
+EMPTY
+EmptyG
+
 (2,27)-(2,33)
 n <= 0
 BopG VarG LitG

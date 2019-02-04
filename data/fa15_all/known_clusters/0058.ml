@@ -1,82 +1,24 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
-let (_ , res) =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing
+((a1 + x1) + x2) :: a2
+((a1 + x1) + x2) :: a2
+((a1 + x1) + x2) :: a2
+((a1 + x1) + x2) :: a2
+((a1 + x1) + x2) :: a2
+((a1 + x1) + x2) :: a2
+((a1 + x1) + x2) :: a2
+((a1 + x1) + x2) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((x1 + x2) + a1) :: a2
+((i + j) + m) :: n
+((i + j) + m) :: n
+((j + k) + l) :: m

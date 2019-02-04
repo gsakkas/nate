@@ -1,33 +1,13 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
-let ans = f b in
-if b = ans
-then (ans , false)
-else (ans , true)
-let (a' , b') = f b in
-if b' = true
-then wwhile (f , b')
-else a'
-let (a' , b') = f b in
-if b' = true
-then wwhile (f , b')
-else a'
-let (b' , c') = f b in
-if c'
-then wwhile (f , b')
-else b'
-let b' = f b in
-if b' = b
-then b'
-else helper (f , b')
-let b' = f b in
-if b' = b
-then b'
-else helper (f , b')
-let b' = f b in
-if b' = b
-then b'
-else helper (f , b')
-let explosion = explode w in
-if explosion = listReverse explosion
-then true
-else false
+ConAppG (Just (TupleG (fromList [BopG VarG VarG,CaseG VarG (fromList [(Nothing,VarG)])]))) Nothing
+(d1 + d2) :: (match a with
+              | (a1 , a2) -> a2)
+(d1 + d2) :: (match a with
+              | (a1 , a2) -> a2)
+(d1 + d2) :: (match a with
+              | (a1 , a2) -> a2)
+(d1 + d2) :: (match a with
+              | (a1 , a2) -> a2)
+(d1 + d2) :: (match a with
+              | (a1 , a2) -> a2)
+(d1 + d2) :: (match a with
+              | (a1 , a2) -> a2)

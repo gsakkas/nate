@@ -1,2 +1,4 @@
-AppG (fromList [VarG,LamG EmptyG])
-List.map (fun t -> f t) l
+TupleG (fromList [AppG (fromList [EmptyG]),IteG EmptyG EmptyG EmptyG])
+(f b , if f b = b
+       then true
+       else false)

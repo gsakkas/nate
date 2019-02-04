@@ -1,13 +1,2 @@
-LetG NonRec (fromList [LamG EmptyG]) (IteG EmptyG EmptyG EmptyG)
-let int =
-  fun list ->
-    fun digInt -> n mod 10 in
-if n > 0
-then digitsOfInt (n / 10)
-else []
-let int =
-  fun list ->
-    fun digInt -> n mod 10 in
-if n > 0
-then digitsOfInt (n / 10)
-else []
+AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,TupleG (fromList [VarG])]))) Nothing])
+pair ((h1 , h2) :: acc) t1 t2

@@ -31,18 +31,6 @@ let newList = List.map f l in
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
 (9,27)-(9,28)
-List.map
-VarG
-
-(9,27)-(9,28)
-f
-VarG
-
-(9,27)-(9,28)
-l
-VarG
-
-(9,27)-(9,28)
 "[" ^ (sepConcat "; "
                  newList ^ "]")
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
@@ -50,6 +38,26 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 (9,30)-(9,67)
 sepConcat "; " newList
 AppG (fromList [VarG,LitG])
+
+(9,41)-(9,66)
+EMPTY
+EmptyG
+
+(9,48)-(9,65)
+EMPTY
+EmptyG
+
+(9,49)-(9,57)
+EMPTY
+EmptyG
+
+(9,58)-(9,64)
+EMPTY
+EmptyG
+
+(9,59)-(9,60)
+EMPTY
+EmptyG
 
 (9,62)-(9,63)
 newList

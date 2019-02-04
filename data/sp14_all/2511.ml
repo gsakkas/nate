@@ -36,6 +36,14 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 xx
 VarG
 
+(7,48)-(7,53)
+EMPTY
+EmptyG
+
+(7,49)-(7,50)
+EMPTY
+EmptyG
+
 (7,51)-(7,52)
 xx
 VarG

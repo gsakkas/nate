@@ -69,6 +69,10 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
+(30,37)-(30,39)
+EMPTY
+EmptyG
+
 (30,45)-(30,66)
 l1
 VarG
@@ -76,10 +80,6 @@ VarG
 (30,63)-(30,64)
 snd a
 AppG (fromList [VarG])
-
-(31,2)-(32,75)
-snd
-VarG
 
 (31,2)-(32,75)
 a

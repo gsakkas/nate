@@ -69,4 +69,8 @@ let rec mulByDigit i l = if i = 0 then [0] else bigAdd l l;;
 bigAdd l l
 AppG (fromList [VarG])
 
+(30,55)-(30,61)
+EMPTY
+EmptyG
+
 *)

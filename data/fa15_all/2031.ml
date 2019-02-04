@@ -49,24 +49,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (17,12)-(17,18)
-y
-VarG
-
-(17,12)-(17,18)
-z
-VarG
-
-(17,12)-(17,18)
-y + z
-BopG VarG VarG
-
-(17,12)-(17,18)
 (y + z , b @ ([w mod 10] @ [w / 10]))
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-
-(17,45)-(17,46)
-(@)
-VarG
 
 (17,45)-(17,46)
 [w mod 10]

@@ -32,11 +32,15 @@ TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
 let xx = f x in (xx , xx <> b)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
-(7,54)-(7,55)
-xx
-VarG
+(7,47)-(7,48)
+EMPTY
+EmptyG
 
-(7,56)-(7,57)
+(7,53)-(7,58)
+EMPTY
+EmptyG
+
+(7,54)-(7,55)
 xx
 VarG
 

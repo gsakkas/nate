@@ -38,12 +38,12 @@ LamG (TupleG (fromList [EmptyG]))
 LitG
 
 (5,41)-(5,46)
-true
-LitG
-
-(5,41)-(5,46)
 (func b , b)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(5,42)-(5,43)
+EMPTY
+EmptyG
 
 (5,44)-(5,45)
 func

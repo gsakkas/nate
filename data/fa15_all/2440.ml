@@ -73,6 +73,14 @@ ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
 a2
 VarG
 
+(20,15)-(20,23)
+EMPTY
+EmptyG
+
+(20,17)-(20,18)
+EMPTY
+EmptyG
+
 (20,20)-(20,21)
 []
 ListG EmptyG Nothing

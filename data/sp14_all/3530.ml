@@ -16,4 +16,12 @@ match l with
 | _ :: tl -> listReverse tl
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
 
+(3,36)-(3,57)
+EMPTY
+EmptyG
+
+(3,55)-(3,57)
+EMPTY
+EmptyG
+
 *)

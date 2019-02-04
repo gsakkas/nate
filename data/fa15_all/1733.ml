@@ -26,13 +26,17 @@ LetG NonRec (fromList [LamG EmptyG]) VarG
 fun b -> (f b , b = f b)
 LamG (TupleG (fromList [EmptyG]))
 
-(6,17)-(6,20)
-(f b , b = f b)
-TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-
 (6,33)-(6,34)
 b = f b
 BopG VarG (AppG (fromList [EmptyG]))
+
+(6,42)-(6,48)
+EMPTY
+EmptyG
+
+(6,49)-(6,55)
+EMPTY
+EmptyG
 
 (6,58)-(6,59)
 f'

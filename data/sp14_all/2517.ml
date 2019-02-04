@@ -24,17 +24,17 @@ let fixpoint (f,b) =
 let xx = f x in (xx , xx <> b)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
+(7,49)-(7,50)
+EMPTY
+EmptyG
+
 (7,54)-(7,55)
 (xx , xx <> b)
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
-(7,56)-(7,57)
-xx
-VarG
-
-(7,56)-(7,57)
-xx
-VarG
+(7,54)-(7,57)
+EMPTY
+EmptyG
 
 (7,56)-(7,57)
 xx <> b

@@ -35,17 +35,17 @@ VarG
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (6,8)-(6,13)
-(@)
-VarG
-
-(6,8)-(6,13)
 clone 0
       (List.length l1 - List.length l2)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
 
-(9,9)-(9,14)
-(@)
-VarG
+(6,58)-(6,60)
+EMPTY
+EmptyG
+
+(6,58)-(6,66)
+EMPTY
+EmptyG
 
 (9,9)-(9,14)
 clone 0

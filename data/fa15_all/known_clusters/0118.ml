@@ -1,66 +1,44 @@
-LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
-let rec helper =
-  fun acc ->
-    fun cin ->
-      match l with
-      | [] -> cin :: acc
-      | h :: t -> (let sum =
-                     (i * h) + cin in
-                   helper ((sum mod 10) :: acc)
-                          (sum / 10)) in
-helper [] 0
-let rec helper =
-  fun acc ->
-    fun cin ->
-      match l with
-      | [] -> cin :: acc
-      | h :: t -> (let sum =
-                     (i * h) + cin in
-                   helper ((sum mod 10) :: acc)
-                          (sum / 10)) in
-helper [] 0
-let rec g =
-  fun x ->
-    if f x = b
-    then x
-    else g (x + 1) in
-g 0
-let rec g =
-  fun x ->
-    if f x = b
-    then x
-    else g (x + 1) in
-g 0
-let rec g =
-  fun x ->
-    if f x = b
-    then x
-    else g (x + 1) in
-g 0
-let rec helper =
-  fun curList ->
-    fun lt1 ->
-      fun lt2 ->
-        match lt1 with
-        | [] -> curList
-        | h :: t -> helper ((h , List.hd lt2) :: curList)
-                           t (List.tl lt2) in
-helper [] l1 l2
-let rec helper =
-  fun curList ->
-    fun lt1 ->
-      fun lt2 ->
-        match lt1 with
-        | [] -> curList
-        | h :: t -> helper ((h , List.hd lt2) :: curList)
-                           t (List.tl lt2) in
-helper [] l1 l2
-let rec helper =
-  fun curList ->
-    fun lt1 ->
-      fun lt2 ->
-        match lt1 with
-        | [] -> curList
-        | h :: t -> helper ((h , List.hd lt2) :: curList)
-                           t (List.tl lt2) in
-helper [] l1 l2
+IteG (LetG NonRec (fromList [EmptyG]) EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG)
+if (let (carry , ans) = a in
+    let (y , z) = x in
+    ((y + z) + carry) > 9)
+then (let (carry , ans) = a in
+      (1 , let (y , z) = x in
+           [((y + z) + carry) mod 10] @ ans))
+else (let (carry , ans) = a in
+      (0 , let (y , z) = x in
+           [(y + z) + carry] @ ans))
+if (let (carry , ans) = a in
+    let (y , z) = x in
+    ((y + z) + carry) > 9)
+then (let (carry , ans) = a in
+      (1 , let (y , z) = x in
+           [((y + z) + carry) mod 10] @ ans))
+else (let (carry , ans) = a in
+      (0 , let (y , z) = x in
+           [(y + z) + carry] @ ans))
+if (let (carry , ans) = a in
+    let (y , z) = x in
+    ((y + z) + carry) > 9)
+then (let (carry , ans) = a in
+      (1 , let (y , z) = x in
+           [((y + z) + carry) mod 10] @ ans))
+else (let (carry , ans) = a in
+      (0 , let (y , z) = x in
+           [(y + z) + carry] @ ans))
+if (let (carry , ans) = a in
+    let (y , z) = x in
+    ((y + z) + carry) = 10)
+then (let (carry , ans) = a in
+      (1 , [9] @ ans))
+else (let (carry , ans) = a in
+      (0 , let (y , z) = x in
+           [(y + z) + carry] @ ans))
+if (let (carry , ans) = a in
+    let (y , z) = x in
+    ((y + z) + carry) = 10)
+then (let (carry , ans) = a in
+      (1 , [9] @ ans))
+else (let (carry , ans) = a in
+      (0 , let (y , z) = x in
+           [(y + z) + carry] @ ans))

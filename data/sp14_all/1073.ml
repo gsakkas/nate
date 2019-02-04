@@ -52,10 +52,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (18,16)-(18,17)
-fst
-VarG
-
-(18,16)-(18,17)
 fst a
 AppG (fromList [VarG])
 
@@ -64,30 +60,6 @@ let sum =
   fst a + ((fst x + snd x) mod 10) in
 (sum / 10 , sum mod 10)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
-(19,4)-(21,51)
-sum
-VarG
-
-(19,4)-(21,51)
-sum
-VarG
-
-(19,4)-(21,51)
-sum / 10
-BopG VarG LitG
-
-(19,4)-(21,51)
-sum mod 10
-BopG VarG LitG
-
-(19,4)-(21,51)
-10
-LitG
-
-(19,4)-(21,51)
-10
-LitG
 
 (19,4)-(21,51)
 (sum / 10 , sum mod 10)

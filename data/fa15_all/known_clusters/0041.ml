@@ -1,52 +1,38 @@
-AppG (fromList [VarG,BopG EmptyG EmptyG])
-mulByDigit (i - 1) l
-clone x (n - 1)
-clone x (n - 1)
-cloneHelper x (n - 1)
-cloneHelper x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-clone x (n - 1)
-count (acc + 1) n
-clone x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (o * x) l1
-mulByDigit (place * 10) l1
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l'
-mulByDigit (i - 1) l'
-mulByDigit (i - 1) l'
-mulByDigit (i - 1) l'
-appZero (x - 1) l
-clone x (n - 1)
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-clone x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
+AppG (fromList [VarG,LitG])
+clone 0 absNumZeros
+clone 0 absNumZeros
+clone 0 absNumZeros
+clone 0 absNumZeros
+clone 0 absNumZeros
+clone 0 absNumZeros
+clone 0 absNumZeros
+sepConcat "; " newList
+sepConcat "; " newList
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 diff
+clone 0 n
+itt y' 0
+itt y' 0
+clone 0 n
+clone 0 n
+clone 0 z
+clone 0 z
+clone 0 difference2
+clone 0 difference1
+sepConcat "; " l
+sepConcat "; " l
+sepConcat "; " l
+sepConcat "; " l
+sepConcat "; " l
+sepConcat " " l
+sepConcat " " l
+sepConcat " " l

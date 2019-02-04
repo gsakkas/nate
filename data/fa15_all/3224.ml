@@ -24,13 +24,17 @@ match l with
                                                                             [x'] @ x''))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
 
+(4,10)-(4,13)
+EMPTY
+EmptyG
+
+(4,11)-(4,12)
+EMPTY
+EmptyG
+
 (5,13)-(5,67)
 []
 ListG EmptyG Nothing
-
-(5,14)-(5,28)
-(@)
-VarG
 
 (5,14)-(5,28)
 [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
@@ -38,24 +42,12 @@ VarG
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 
 (5,30)-(5,66)
-(@)
-VarG
-
-(5,30)-(5,66)
 [((x * i) mod 10) + x'] @ (mulByDigit i
                                       [x'] @ x'')
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 
-(5,30)-(5,66)
-[((x * i) mod 10) + x']
-ListG (BopG EmptyG EmptyG) Nothing
-
 (5,49)-(5,66)
 x'
-VarG
-
-(5,50)-(5,60)
-(@)
 VarG
 
 (5,50)-(5,60)

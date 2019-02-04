@@ -30,6 +30,10 @@ let digits = digitsOfInt n in
 sumList digits
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
+(10,32)-(10,53)
+EMPTY
+EmptyG
+
 (10,40)-(10,51)
 digitsOfInt n
 AppG (fromList [VarG])

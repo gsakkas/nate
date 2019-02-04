@@ -31,6 +31,22 @@ let rec digitalRoot n = if n < 10 then n else helper n;;
 *)
 
 (* changed spans
+(11,2)-(14,8)
+EMPTY
+EmptyG
+
+(11,5)-(11,6)
+EMPTY
+EmptyG
+
+(11,5)-(11,12)
+EMPTY
+EmptyG
+
+(11,10)-(11,12)
+EMPTY
+EmptyG
+
 (12,7)-(13,41)
 let n = digitsOfInt n in
 sumList n
@@ -41,9 +57,9 @@ fun n ->
   if n < 10 then n else helper n
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(13,40)-(13,41)
-n < 10
-BopG VarG LitG
+(13,28)-(13,41)
+EMPTY
+EmptyG
 
 (13,40)-(13,41)
 if n < 10 then n else helper n

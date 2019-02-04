@@ -75,47 +75,19 @@ x
 VarG
 
 (27,48)-(27,60)
-y
-VarG
-
-(27,48)-(27,60)
-(**)
-VarG
-
-(27,48)-(27,60)
 eval (circ2 , x , y) ** 2.0
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(27,48)-(27,60)
-2.0
-LitG
 
 (27,54)-(27,59)
 (circ2 , x , y)
 TupleG (fromList [VarG])
 
 (28,19)-(28,27)
-x
-VarG
-
-(28,19)-(28,27)
-y
-VarG
-
-(28,19)-(28,27)
 2.0
 LitG
 
 (28,23)-(28,27)
-eval
-VarG
-
-(28,23)-(28,27)
 eval (nlog , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(28,23)-(28,27)
-(nlog , x , y)
-TupleG (fromList [VarG])
 
 *)

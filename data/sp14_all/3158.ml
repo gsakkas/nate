@@ -69,29 +69,16 @@ match x with
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 (23,58)-(23,59)
-d1
-VarG
-
-(23,58)-(23,59)
-d2
-VarG
-
-(23,58)-(23,59)
-d1 + d2
-BopG VarG VarG
-
-(23,58)-(23,59)
 match a with
 | (a1 , a2) -> a2
 CaseG VarG (fromList [(Nothing,VarG)])
 
-(23,58)-(23,59)
-(d1 + d2) :: (match a with
-              | (a1 , a2) -> a2)
-ConAppG (Just (TupleG (fromList [BopG VarG VarG,CaseG VarG (fromList [(Nothing,VarG)])]))) Nothing
-
 (24,4)-(26,51)
 a2
 VarG
+
+(25,15)-(25,46)
+EMPTY
+EmptyG
 
 *)

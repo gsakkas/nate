@@ -1,3 +1,4 @@
-IteG (BopG EmptyG EmptyG) VarG (ConAppG Nothing (Just (TApp "unit" [])))
-if t = false then h else ()
-if t = false then h else ()
+IteG (AppG (fromList [EmptyG])) (ConAppG (Just EmptyG) Nothing) VarG
+if List.mem h seen
+then h :: seen
+else seen

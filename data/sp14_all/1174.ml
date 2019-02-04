@@ -16,4 +16,8 @@ match xs with
 | x :: y -> x + sumList y
 CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
 
+(3,37)-(3,38)
+EMPTY
+EmptyG
+
 *)

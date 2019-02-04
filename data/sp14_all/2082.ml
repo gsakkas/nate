@@ -82,6 +82,18 @@ VarG
 t
 VarG
 
+(17,69)-(17,71)
+EMPTY
+EmptyG
+
+(21,16)-(21,24)
+EMPTY
+EmptyG
+
+(21,16)-(21,30)
+EMPTY
+EmptyG
+
 (21,25)-(21,30)
 match x with
 | (d1 , d2) -> match a with
@@ -91,137 +103,19 @@ match x with
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
 
 (22,4)-(24,51)
-x
-VarG
-
-(22,4)-(24,51)
-a
-VarG
-
-(22,4)-(24,51)
-d1
-VarG
-
-(22,4)-(24,51)
-d2
-VarG
-
-(22,4)-(24,51)
-carry
-VarG
-
-(22,4)-(24,51)
-d1
-VarG
-
-(22,4)-(24,51)
-d2
-VarG
-
-(22,4)-(24,51)
-result
-VarG
-
-(22,4)-(24,51)
-d1
-VarG
-
-(22,4)-(24,51)
-d2
-VarG
-
-(22,4)-(24,51)
-result
-VarG
-
-(22,4)-(24,51)
-(d1 + d2) + carry
-BopG (BopG EmptyG EmptyG) VarG
-
-(22,4)-(24,51)
-((d1 + d2) + carry) > 9
-BopG (BopG EmptyG EmptyG) LitG
-
-(22,4)-(24,51)
-d1 + d2
-BopG VarG VarG
-
-(22,4)-(24,51)
-((d1 + d2) + 1) - 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(22,4)-(24,51)
-(d1 + d2) + 1
-BopG (BopG EmptyG EmptyG) LitG
-
-(22,4)-(24,51)
-d1 + d2
-BopG VarG VarG
-
-(22,4)-(24,51)
-d1 + d2
-BopG VarG VarG
-
-(22,4)-(24,51)
-9
-LitG
-
-(22,4)-(24,51)
-1
-LitG
-
-(22,4)-(24,51)
-1
-LitG
-
-(22,4)-(24,51)
-10
-LitG
-
-(22,4)-(24,51)
-0
-LitG
-
-(22,4)-(24,51)
-if ((d1 + d2) + carry) > 9
-then (1 , (((d1 + d2) + 1) - 10) :: result)
-else (0 , (d1 + d2) :: result)
-IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
-(22,4)-(24,51)
 match a with
 | (carry , result) -> if ((d1 + d2) + carry) > 9
                       then (1 , (((d1 + d2) + 1) - 10) :: result)
                       else (0 , (d1 + d2) :: result)
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
-(22,4)-(24,51)
-(1 , (((d1 + d2) + 1) - 10) :: result)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) LitG) LitG]))) Nothing])
-
-(22,4)-(24,51)
-(0 , (d1 + d2) :: result)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing])
-
-(22,4)-(24,51)
-(((d1 + d2) + 1) - 10) :: result
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) LitG) LitG]))) Nothing
-
-(22,4)-(24,51)
-(d1 + d2) :: result
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
-
-(22,15)-(22,17)
-0
-LitG
-
 (22,15)-(22,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
-(23,15)-(23,43)
-List.combine
-VarG
+(23,15)-(23,23)
+EMPTY
+EmptyG
 
 (23,15)-(23,43)
 List.combine (List.rev l1)
@@ -230,18 +124,6 @@ AppG (fromList [AppG (fromList [EmptyG])])
 
 (23,24)-(23,43)
 List.rev
-VarG
-
-(24,4)-(24,51)
-l1
-VarG
-
-(24,4)-(24,51)
-List.rev
-VarG
-
-(24,4)-(24,51)
-l2
 VarG
 
 (24,4)-(24,51)

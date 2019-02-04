@@ -11,10 +11,6 @@ let sqsum xs =
 
 (* changed spans
 (2,27)-(2,32)
-a
-VarG
-
-(2,27)-(2,32)
 a + (x * x)
 BopG VarG (BopG EmptyG EmptyG)
 

@@ -71,16 +71,8 @@ exprToString e ^ ("*" ^ exprToString e)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (30,33)-(30,45)
-(^)
-VarG
-
-(30,33)-(30,45)
 exprToString e
 AppG (fromList [VarG])
-
-(30,48)-(30,51)
-(^)
-VarG
 
 (30,48)-(30,51)
 "*" ^ exprToString e

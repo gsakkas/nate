@@ -84,6 +84,10 @@ CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing
 (sin (pi *. eval (e , x , y)) +. cos (pi *. eval (e , x , y))) *. cos (pi *. eval (e , x , y))
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
+(28,6)-(29,38)
+EMPTY
+EmptyG
+
 (28,7)-(28,37)
 sin (pi *. eval (e , x , y)) +. cos (pi *. eval (e , x , y))
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))

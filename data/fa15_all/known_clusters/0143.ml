@@ -1,23 +1,37 @@
-LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let f =
-  fun a ->
-    fun x -> a ^ (sep ^ x) in
-let base = h in
-let l = t in
-List.fold_left f base l
-let f =
-  fun a ->
-    fun x -> a ^ (sep ^ x) in
-let base = h in
-let l = t in
-List.fold_left f base l
-let f =
-  fun a ->
-    fun x -> fun g -> f a x in
-let base = fun f -> f in
-List.fold_left f base fs
-let f =
-  fun a ->
-    fun x -> fun g -> f a x in
-let base = fun f -> f in
-List.fold_left f base fs
+LetG NonRec (fromList [LamG EmptyG]) (LetG Rec (fromList [EmptyG]) EmptyG)
+let assignSeen =
+  fun h ->
+    fun r ->
+      fun seen ->
+        if List.mem h r
+        then seen
+        else h :: seen in
+let rec helper =
+  fun (seen , rest) ->
+    match rest with
+    | [] -> seen
+    | h :: t -> (let r =
+                   List.rev t in
+                 let seen' =
+                   assignSeen h r seen in
+                 let rest' = t in
+                 helper (seen' , rest')) in
+List.rev (helper ([] , l))
+let assignSeen =
+  fun h ->
+    fun r ->
+      fun seen ->
+        if List.mem h r
+        then seen
+        else h :: seen in
+let rec helper =
+  fun (seen , rest) ->
+    match rest with
+    | [] -> seen
+    | h :: t -> (let r =
+                   List.rev t in
+                 let seen' =
+                   assignSeen h r seen in
+                 let rest' = t in
+                 helper (seen' , rest')) in
+List.rev (helper ([] , l))

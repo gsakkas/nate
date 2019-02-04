@@ -18,4 +18,8 @@ ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])]))) Nothing
 h
 VarG
 
+(2,74)-(2,75)
+EMPTY
+EmptyG
+
 *)

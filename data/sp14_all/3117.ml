@@ -59,6 +59,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(23,16)-(23,41)
+EMPTY
+EmptyG
+
 (23,22)-(23,23)
 match x with
 | x' :: xs -> x'

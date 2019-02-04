@@ -1,4 +1,7 @@
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing]))) Nothing])
-(len , (-1) :: (0 :: xs'))
-(len , (-1) :: (0 :: xs'))
-(len , (-1) :: (0 :: xs'))
+CaseG VarG (fromList [(Nothing,LamG EmptyG),(Nothing,AppG (fromList [EmptyG]))])
+match fs with
+| h :: t -> f h h
+| [] -> fun x -> x
+match fs with
+| [] -> fun x -> x
+| h :: t -> f (fun x -> x) h

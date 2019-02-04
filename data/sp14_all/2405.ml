@@ -52,6 +52,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(15,6)-(19,68)
+EMPTY
+EmptyG
+
 (15,12)-(15,18)
 let carry =
   match a with
@@ -70,6 +74,18 @@ match a with
 | (x , y) -> x
 CaseG VarG (fromList [(Nothing,VarG)])
 
+(16,24)-(16,32)
+EMPTY
+EmptyG
+
+(16,25)-(16,26)
+EMPTY
+EmptyG
+
+(16,28)-(16,31)
+EMPTY
+EmptyG
+
 (18,10)-(19,68)
 match x with
 | (addend_a , addend_b) -> (let new_carry =
@@ -81,14 +97,6 @@ match x with
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
 (18,18)-(18,29)
-x
-VarG
-
-(18,18)-(18,29)
-((carry + addend_a) + addend_b) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(18,18)-(18,29)
 let new_carry =
   ((carry + addend_a) + addend_b) / 10 in
 let digit =
@@ -97,17 +105,49 @@ match a with
 | (x , y) -> (new_carry , digit :: y)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(18,19)-(18,20)
+EMPTY
+EmptyG
+
+(18,23)-(18,24)
+EMPTY
+EmptyG
+
+(18,28)-(18,29)
+EMPTY
+EmptyG
+
+(19,10)-(19,68)
+EMPTY
+EmptyG
+
 (19,13)-(19,14)
 carry
 VarG
 
-(19,17)-(19,19)
-addend_a
-VarG
+(19,13)-(19,19)
+EMPTY
+EmptyG
 
 (19,17)-(19,19)
 addend_b
 VarG
+
+(19,25)-(19,40)
+EMPTY
+EmptyG
+
+(19,26)-(19,27)
+EMPTY
+EmptyG
+
+(19,29)-(19,39)
+EMPTY
+EmptyG
+
+(19,30)-(19,31)
+EMPTY
+EmptyG
 
 (19,35)-(19,38)
 let digit =
@@ -117,45 +157,24 @@ match a with
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (19,46)-(19,68)
-carry
-VarG
-
-(19,46)-(19,68)
-addend_a
-VarG
-
-(19,46)-(19,68)
-addend_b
-VarG
-
-(19,46)-(19,68)
-a
-VarG
-
-(19,46)-(19,68)
-(carry + addend_a) + addend_b
-BopG (BopG EmptyG EmptyG) VarG
-
-(19,46)-(19,68)
 ((carry + addend_a) + addend_b) mod 10
 BopG (BopG EmptyG EmptyG) LitG
-
-(19,46)-(19,68)
-carry + addend_a
-BopG VarG VarG
-
-(19,46)-(19,68)
-10
-LitG
-
-(19,46)-(19,68)
-match a with
-| (x , y) -> (new_carry , digit :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 (19,47)-(19,48)
 new_carry
 VarG
+
+(19,51)-(19,59)
+EMPTY
+EmptyG
+
+(19,52)-(19,53)
+EMPTY
+EmptyG
+
+(19,56)-(19,58)
+EMPTY
+EmptyG
 
 (19,63)-(19,66)
 digit

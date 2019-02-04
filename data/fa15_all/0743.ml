@@ -84,31 +84,15 @@ exprToString expr ^ ("^2-" ^ (exprToString expr ^ "-1)"))
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (31,29)-(31,41)
-(^)
-VarG
-
-(31,29)-(31,41)
 exprToString expr
 AppG (fromList [VarG])
-
-(31,47)-(31,52)
-(^)
-VarG
 
 (31,47)-(31,52)
 "^2-" ^ (exprToString expr ^ "-1)")
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (31,53)-(31,65)
-(^)
-VarG
-
-(31,53)-(31,65)
 exprToString expr ^ "-1)"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(31,53)-(31,65)
-exprToString expr
-AppG (fromList [VarG])
 
 *)

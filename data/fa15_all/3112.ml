@@ -14,11 +14,11 @@ wwhile (f , b')
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (2,62)-(2,64)
-f
-VarG
-
-(2,62)-(2,64)
 (f , b')
 TupleG (fromList [VarG])
+
+(2,65)-(2,67)
+EMPTY
+EmptyG
 
 *)

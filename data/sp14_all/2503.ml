@@ -40,6 +40,10 @@ LetG NonRec (fromList [LamG EmptyG]) VarG
 let xx = f x in (xx , xx <> b)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
+(7,47)-(7,60)
+EMPTY
+EmptyG
+
 (7,48)-(7,49)
 xx
 VarG

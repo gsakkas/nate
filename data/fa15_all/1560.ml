@@ -12,10 +12,6 @@ let rec wwhile (f,b) =
 
 (* changed spans
 (3,8)-(3,9)
-f
-VarG
-
-(3,8)-(3,9)
 f b
 AppG (fromList [VarG])
 

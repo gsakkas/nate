@@ -18,9 +18,9 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(6,52)-(6,62)
-(@)
-VarG
+(6,50)-(6,76)
+EMPTY
+EmptyG
 
 (6,52)-(6,62)
 mulByDigit i [x']

@@ -39,6 +39,10 @@ let rec eval (e,x,y) =
 eval (VarX , x , y) +. eval (VarY , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
+(15,35)-(15,37)
+EMPTY
+EmptyG
+
 (15,39)-(15,41)
 x
 VarG

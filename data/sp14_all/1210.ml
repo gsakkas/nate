@@ -19,10 +19,6 @@ match f b with
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
 (3,8)-(3,9)
-f
-VarG
-
-(3,8)-(3,9)
 f b
 AppG (fromList [VarG])
 

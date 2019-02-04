@@ -80,6 +80,26 @@ match a with
                                           l1') a')
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(32,4)-(34,51)
+EMPTY
+EmptyG
+
+(32,10)-(32,11)
+EMPTY
+EmptyG
+
+(33,18)-(33,20)
+EMPTY
+EmptyG
+
+(34,14)-(34,51)
+EMPTY
+EmptyG
+
+(34,15)-(34,18)
+EMPTY
+EmptyG
+
 (34,40)-(34,41)
 x
 VarG

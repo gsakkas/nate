@@ -18,6 +18,14 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(2,17)-(2,55)
+EMPTY
+EmptyG
+
+(2,23)-(2,24)
+EMPTY
+EmptyG
+
 (2,38)-(2,41)
 let rec helper =
   fun x ->
@@ -40,61 +48,9 @@ fun x ->
                          (h :: acc)
 LamG (LamG EmptyG)
 
-(2,39)-(2,40)
-fun l ->
-  fun acc ->
-    match x with
-    | [] -> l
-    | h :: t -> helper t l
-                       (h :: acc)
-LamG (LamG EmptyG)
-
-(2,39)-(2,40)
-fun acc ->
-  match x with
-  | [] -> l
-  | h :: t -> helper t l
-                     (h :: acc)
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(2,39)-(2,40)
-match x with
-| [] -> l
-| h :: t -> helper t l
-                   (h :: acc)
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-
-(2,49)-(2,50)
-h
-VarG
-
-(2,49)-(2,50)
-acc
-VarG
-
-(2,49)-(2,50)
-helper
-VarG
-
 (2,49)-(2,50)
 helper x l []
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(2,49)-(2,55)
-l
-VarG
-
-(2,49)-(2,55)
-helper
-VarG
-
-(2,49)-(2,55)
-t
-VarG
-
-(2,49)-(2,55)
-l
-VarG
 
 (2,49)-(2,55)
 helper t l (h :: acc)

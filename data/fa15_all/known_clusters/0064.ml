@@ -1,24 +1,102 @@
-LamG (BopG EmptyG EmptyG)
-fun (x , y) -> x + y
-fun x -> (f x - x) < 0
-fun s -> (f s - s) < 0
-fun s -> (f s - s) < 0
-fun s -> (f s - s) < 0
-fun s -> (f s - s) < 0
-fun s -> (f s - s) < 0
-fun s -> (f s - s) < 0
-fun s -> (f s - s) < 0
-fun s -> (f s - s) < 0
-fun i -> i + 1
-fun i -> i + 1
-fun i -> i + 1
-fun ss -> ss mod 10
-fun ss -> ss mod 10
-fun (a , b) -> a + b
-fun (a , b) -> a + b
-fun x -> a + (x * x)
-fun x -> a + (x * x)
-fun x -> a + (x * x)
-fun x -> a + (x * x)
-fun x -> a + (x * x)
-fun x -> a + (x * x)
+LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
+let g =
+  fun b ->
+    (f b , if f b = b
+           then false
+           else true) in
+(g , b)
+let g =
+  fun b ->
+    (f b , if f b = b
+           then false
+           else true) in
+(g , b)
+let g =
+  fun b ->
+    (f b , if f b = b
+           then false
+           else true) in
+(g , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let n =
+  fun x ->
+    (let ff = f b in
+     (ff , b = ff)) in
+(n , b)
+let h =
+  fun x -> (f x , f x = x) in
+(h , b)
+let h =
+  fun x -> (f x , f x = x) in
+(h , b)
+let g =
+  fun x ->
+    match f x with
+    | x -> (x , false)
+    | y -> (y , true) in
+(g , b)
+let g =
+  fun x ->
+    match f x with
+    | x -> (x , false)
+    | y -> (y , true) in
+(g , b)
+let g =
+  fun x ->
+    (let calcx = f x in
+     (calcx , calcx = x)) in
+(g , b)

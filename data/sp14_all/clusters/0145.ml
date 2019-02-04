@@ -1,13 +1,16 @@
-AppG (fromList [VarG,LitG,ConAppG (Just (TupleG (fromList [BopG (BopG VarG LitG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing])
-helper 1
-       (((num / 10) mod 10) :: ((num mod 10) :: xs'))
-       xs
-helper 1
-       (((num / 10) mod 10) :: ((num mod 10) :: accum))
-       xs
-helper 1
-       (((num / 10) mod 10) :: ((num mod 10) :: xs'))
-       xs
-helper 1
-       (((num / 10) mod 10) :: ((num mod 10) :: accum))
-       xs
+IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (LetG NonRec (fromList [EmptyG]) EmptyG)
+if n > 10
+then digitsOfInt (n mod 10)
+else (let a = n mod 10 in
+      let b = n / 10 in
+      if b = 0 then [n] else [a])
+if n > 10
+then digitsOfInt (n mod 10)
+else (let a = n mod 10 in
+      let b = n / 10 in
+      if b = 0 then [n] else [a])
+if n > 10
+then digitsOfInt (n mod 10)
+else (let a = n mod 10 in
+      let b = n / 10 in
+      if b = 0 then [n] else [a])

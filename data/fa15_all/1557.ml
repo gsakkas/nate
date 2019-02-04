@@ -11,6 +11,10 @@ let rec wwhile (f,b) =
 *)
 
 (* changed spans
+(3,2)-(3,70)
+EMPTY
+EmptyG
+
 (3,8)-(3,14)
 match f b with
 | (h1 , h2) -> if h2

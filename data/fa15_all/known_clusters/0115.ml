@@ -1,37 +1,11 @@
-CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
-match a with
-| (carry , list) -> (let num =
-                       (l1e + l2e) + carry in
-                     (num mod 9 , [7] @ list))
+LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
+let rest' = t in
+helper (seen' , rest')
+let rest' = t in
+helper (seen' , rest')
+let rest' = t in
+helper (seen' , rest')
+let rest' = t in
+helper (seen' , rest')
+let l = t in
+List.fold_left f base l

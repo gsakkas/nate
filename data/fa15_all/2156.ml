@@ -67,6 +67,10 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 (eval (v , x , y) +. eval (w , x , y)) *. eval (v , x , y)
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
+(27,19)-(27,75)
+EMPTY
+EmptyG
+
 (27,20)-(27,36)
 eval (v , x , y) +. eval (w , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))

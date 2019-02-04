@@ -58,20 +58,8 @@ pi *. eval (e , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
 (17,24)-(17,25)
-eval
-VarG
-
-(17,24)-(17,25)
 eval (e , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(17,24)-(17,25)
-(e , x , y)
-TupleG (fromList [VarG])
-
-(18,16)-(18,43)
-x
-VarG
 
 (18,16)-(18,43)
 y
@@ -85,9 +73,17 @@ BopG VarG (AppG (fromList [EmptyG]))
 (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
+(19,23)-(19,66)
+EMPTY
+EmptyG
+
 (19,24)-(19,41)
 eval (e1 , x , y) +. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+
+(19,65)-(19,66)
+EMPTY
+EmptyG
 
 (20,21)-(20,38)
 eval (e1 , x , y) *. eval (e2 , x , y)

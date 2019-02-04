@@ -53,6 +53,10 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(17,30)-(17,34)
+EMPTY
+EmptyG
+
 (17,36)-(17,40)
 x
 VarG
@@ -60,6 +64,10 @@ VarG
 (18,16)-(18,44)
 y
 VarG
+
+(18,32)-(18,36)
+EMPTY
+EmptyG
 
 (18,38)-(18,42)
 x

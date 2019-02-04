@@ -1,11 +1,7 @@
-AppG (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])])
-listReverse (match n > 0 with
-             | false -> []
-             | true -> match n > 9 with
-                       | false -> n :: (digitsOfInt (n / 10))
-                       | true -> (n mod 10) :: (digitsOfInt (n / 10)))
-listReverse (match n > 0 with
-             | false -> []
-             | true -> match n > 9 with
-                       | false -> n :: (digitsOfInt (n / 10))
-                       | true -> (n mod 10) :: (digitsOfInt (n / 10)))
+ListG (AppG (fromList [EmptyG])) Nothing
+[sqsum (mulByDigit i
+                   (List.rev (List.map (fun x ->
+                                          x * 10)
+                                       t)) @ [h * i])]
+[List.fold_left f base
+                (h :: t)]

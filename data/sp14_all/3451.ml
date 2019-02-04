@@ -38,6 +38,10 @@ let rec additivePersistence n =
 additivePersistence (sumList (digitsOfInt n))
 SeqG (ConAppG (Just EmptyG) Nothing) (AppG (fromList [EmptyG]))
 
+(13,12)-(13,61)
+EMPTY
+EmptyG
+
 (13,15)-(13,34)
 additivePersistence (sumList (digitsOfInt n))
 AppG (fromList [AppG (fromList [EmptyG])])

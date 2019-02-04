@@ -1,2 +1,5 @@
-AppG (fromList [LetG NonRec (fromList [EmptyG]) EmptyG])
-x (let fn = fun d -> d in fn)
+CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
+match f b with
+| (f' , x') -> if x'
+               then wwhile (f , f')
+               else f'

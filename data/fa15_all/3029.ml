@@ -78,6 +78,10 @@ VarG
 sum
 VarG
 
+(16,15)-(16,23)
+EMPTY
+EmptyG
+
 (16,20)-(16,21)
 []
 ListG EmptyG Nothing

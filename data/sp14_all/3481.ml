@@ -85,64 +85,16 @@ let rec build (rand,depth) =
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (33,14)-(33,24)
-build
-VarG
-
-(33,14)-(33,24)
-rand
-VarG
-
-(33,14)-(33,24)
-depth
-VarG
-
-(33,14)-(33,24)
 buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(33,14)-(33,24)
-depth - 1
-BopG VarG LitG
-
-(33,14)-(33,24)
-1
-LitG
-
-(33,14)-(33,24)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 (33,25)-(33,52)
 (build (rand , depth - 1) , build (rand , depth - 1))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (34,14)-(34,25)
-build
-VarG
-
-(34,14)-(34,25)
-rand
-VarG
-
-(34,14)-(34,25)
-depth
-VarG
-
-(34,14)-(34,25)
 buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(34,14)-(34,25)
-depth - 1
-BopG VarG LitG
-
-(34,14)-(34,25)
-1
-LitG
-
-(34,14)-(34,25)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 (34,26)-(34,53)
 (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))

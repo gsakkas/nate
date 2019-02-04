@@ -15,4 +15,8 @@ let rec listReverse l =
 h
 VarG
 
+(3,55)-(3,56)
+EMPTY
+EmptyG
+
 *)

@@ -33,10 +33,6 @@ List.fold_left
 VarG
 
 (11,61)-(11,62)
-List.rev
-VarG
-
-(11,61)-(11,62)
 List.rev l
 AppG (fromList [VarG])
 

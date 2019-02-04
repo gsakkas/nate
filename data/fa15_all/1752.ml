@@ -20,11 +20,19 @@ n mod 10
 BopG VarG LitG
 
 (5,15)-(5,35)
-n
-VarG
-
-(5,15)-(5,35)
 10
 LitG
+
+(5,40)-(5,50)
+EMPTY
+EmptyG
+
+(5,41)-(5,42)
+EMPTY
+EmptyG
+
+(5,47)-(5,49)
+EMPTY
+EmptyG
 
 *)

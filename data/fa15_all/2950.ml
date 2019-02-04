@@ -50,6 +50,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(17,6)-(18,45)
+EMPTY
+EmptyG
+
 (17,16)-(17,75)
 let (lh1 , lh2) = x in
 let (carry , res) = a in
@@ -58,6 +62,22 @@ let num =
 (num / 10 , (num mod 10) :: res)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(17,36)-(17,40)
+EMPTY
+EmptyG
+
+(17,61)-(17,66)
+EMPTY
+EmptyG
+
+(17,61)-(17,75)
+EMPTY
+EmptyG
+
+(17,69)-(17,75)
+EMPTY
+EmptyG
+
 (18,6)-(18,45)
 let (carry , res) = a in
 let num =
@@ -65,63 +85,31 @@ let num =
 (num / 10 , (num mod 10) :: res)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(18,29)-(18,45)
+EMPTY
+EmptyG
+
 (18,30)-(18,44)
 let num =
   (lh1 + lh2) + carry in
 (num / 10 , (num mod 10) :: res)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
 
+(18,31)-(18,32)
+EMPTY
+EmptyG
+
 (18,35)-(18,38)
 lh1 + lh2
 BopG VarG VarG
-
-(18,42)-(18,44)
-lh1
-VarG
-
-(18,42)-(18,44)
-lh2
-VarG
-
-(18,42)-(18,44)
-carry
-VarG
-
-(18,42)-(18,44)
-num
-VarG
-
-(18,42)-(18,44)
-num / 10
-BopG VarG LitG
 
 (18,42)-(18,44)
 (num / 10 , (num mod 10) :: res)
 TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 
 (19,4)-(21,51)
-num
-VarG
-
-(19,4)-(21,51)
-res
-VarG
-
-(19,4)-(21,51)
 num mod 10
 BopG VarG LitG
-
-(19,4)-(21,51)
-10
-LitG
-
-(19,4)-(21,51)
-(num mod 10) :: res
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
-
-(19,15)-(19,17)
-0
-LitG
 
 (19,15)-(19,17)
 (0 , [])

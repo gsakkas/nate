@@ -79,6 +79,10 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
+(35,47)-(35,72)
+EMPTY
+EmptyG
+
 (35,48)-(35,62)
 mulByDigit (o * x) l1
 AppG (fromList [VarG,BopG EmptyG EmptyG])
@@ -86,5 +90,9 @@ AppG (fromList [VarG,BopG EmptyG EmptyG])
 (35,60)-(35,61)
 o * x
 BopG VarG VarG
+
+(35,65)-(35,71)
+EMPTY
+EmptyG
 
 *)

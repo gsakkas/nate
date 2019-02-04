@@ -59,60 +59,8 @@ let m = (r + s) + y in
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (19,16)-(19,17)
-0
-LitG
-
-(19,16)-(19,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(19,16)-(19,21)
-r
-VarG
-
-(19,16)-(19,21)
-s
-VarG
-
-(19,16)-(19,21)
-y
-VarG
-
-(19,16)-(19,21)
-m
-VarG
-
-(19,16)-(19,21)
-m
-VarG
-
-(19,16)-(19,21)
-z
-VarG
-
-(19,16)-(19,21)
-r + s
-BopG VarG VarG
-
-(19,16)-(19,21)
-(r + s) + y
-BopG (BopG EmptyG EmptyG) VarG
-
-(19,16)-(19,21)
-m / 10
-BopG VarG LitG
-
-(19,16)-(19,21)
-m mod 10
-BopG VarG LitG
-
-(19,16)-(19,21)
-10
-LitG
-
-(19,16)-(19,21)
-10
-LitG
 
 (19,16)-(19,21)
 let (y , z) = a in
@@ -120,23 +68,6 @@ let (r , s) = x in
 let m = (r + s) + y in
 (m / 10 , (m mod 10) :: z)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(19,16)-(19,21)
-let m = (r + s) + y in
-(m / 10 , (m mod 10) :: z)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
-(19,16)-(19,21)
-(m / 10 , (m mod 10) :: z)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
-(19,16)-(19,21)
-(m mod 10) :: z
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
-
-(20,4)-(21,68)
-List.combine
-VarG
 
 (20,4)-(21,68)
 List.combine l1 l2

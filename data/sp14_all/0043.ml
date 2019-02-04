@@ -105,36 +105,52 @@ match a with
                                  r)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(44,30)-(44,67)
+EMPTY
+EmptyG
+
+(44,51)-(44,52)
+EMPTY
+EmptyG
+
+(44,53)-(44,55)
+EMPTY
+EmptyG
+
+(44,57)-(44,59)
+EMPTY
+EmptyG
+
 (44,64)-(44,66)
 h1
-VarG
-
-(45,2)-(46,75)
-List.append
-VarG
-
-(45,2)-(46,75)
-r
-VarG
-
-(45,2)-(46,75)
-r
 VarG
 
 (45,2)-(46,75)
 List.append r [0]
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
-(45,2)-(46,75)
-0
-LitG
+(45,14)-(45,27)
+EMPTY
+EmptyG
 
-(45,2)-(46,75)
-[0]
-ListG LitG Nothing
+(45,15)-(45,23)
+EMPTY
+EmptyG
+
+(45,29)-(45,32)
+EMPTY
+EmptyG
 
 (45,30)-(45,31)
 []
 ListG EmptyG Nothing
+
+(46,13)-(46,21)
+EMPTY
+EmptyG
+
+(46,13)-(46,24)
+EMPTY
+EmptyG
 
 *)

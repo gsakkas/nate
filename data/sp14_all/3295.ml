@@ -47,13 +47,29 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(17,44)-(17,56)
+EMPTY
+EmptyG
+
 (17,45)-(17,50)
 v1 :: list1
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
+(17,51)-(17,52)
+EMPTY
+EmptyG
+
+(17,58)-(17,70)
+EMPTY
+EmptyG
+
 (17,59)-(17,64)
 list1
 VarG
+
+(17,65)-(17,66)
+EMPTY
+EmptyG
 
 (17,67)-(17,69)
 v2 :: list2

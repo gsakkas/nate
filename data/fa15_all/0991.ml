@@ -20,11 +20,6 @@ let fixpoint (f,b) = wwhile ((helper (f, b)), b);;
 
 (* changed spans
 (2,19)-(2,46)
-fun b ->
-  (let x = f b in (x , x <> b))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(2,19)-(2,46)
 let f =
   fun b ->
     (let x = f b in

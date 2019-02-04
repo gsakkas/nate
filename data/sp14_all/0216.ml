@@ -62,6 +62,18 @@ LitG
 buildX
 VarG
 
+(18,35)-(18,36)
+EMPTY
+EmptyG
+
+(18,35)-(18,40)
+EMPTY
+EmptyG
+
+(18,39)-(18,40)
+EMPTY
+EmptyG
+
 (18,46)-(18,47)
 buildX ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])

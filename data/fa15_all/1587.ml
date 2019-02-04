@@ -39,4 +39,12 @@ recCounter (sumList (digitsOfInt n))
            count + 1
 BopG (AppG (fromList [EmptyG])) LitG
 
+(11,21)-(11,46)
+EMPTY
+EmptyG
+
+(11,47)-(11,58)
+EMPTY
+EmptyG
+
 *)

@@ -1,17 +1,19 @@
-AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-digits (n / 10)
-       ((n mod 10) :: digitList)
-digits (n / 10)
-       ((n mod 10) :: digitList)
-digits (n / 10)
-       ((n mod 10) :: digitList)
-integers (a / 10)
-         ((a mod 10) :: b)
-integers (a / 10)
-         ((a mod 10) :: b)
-helper ((v mod 10) :: acc)
-       (v / 10)
-helper ((v mod 10) :: acc)
-       (v / 10)
-helper ((v mod 10) :: acc)
-       (v / 10)
+IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (AppG (fromList [EmptyG]))
+if n < 10
+then [n]
+else digitsOfInt (n / 10) @ [n mod 10]
+if n < 10
+then [n]
+else digitsOfInt (n / 10) @ [n mod 10]
+if n < 10
+then [n]
+else digitsOfInt (n / 10) @ [n mod 10]
+if n < 10
+then [n]
+else digitsOfInt (n / 10) @ [n mod 10]
+if n < 10
+then [n]
+else digitsOfInt (n / 10) @ [n mod 10]
+if n < 10
+then [n]
+else digitsOfInt (n / 10) @ [n mod 10]

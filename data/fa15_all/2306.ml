@@ -43,52 +43,52 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(18,12)-(18,24)
-(^)
-VarG
+(18,6)-(18,27)
+EMPTY
+EmptyG
 
 (18,12)-(18,24)
 exprToString y ^ ("+" ^ (exprToString y ^ ")/2)"))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(18,12)-(18,24)
-exprToString y
-AppG (fromList [VarG])
-
 (18,25)-(18,26)
 y
 VarG
 
-(18,39)-(18,51)
-(^)
-VarG
+(18,37)-(18,69)
+EMPTY
+EmptyG
 
 (18,39)-(18,51)
 exprToString y
 AppG (fromList [VarG])
+
+(18,52)-(18,53)
+EMPTY
+EmptyG
 
 (18,54)-(18,57)
 y
 VarG
 
 (18,61)-(18,68)
-(^)
-VarG
-
-(18,61)-(18,68)
 exprToString x ^ ("*" ^ exprToString y)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(18,61)-(18,68)
-")/2)"
-LitG
+(18,62)-(18,63)
+EMPTY
+EmptyG
+
+(18,64)-(18,67)
+EMPTY
+EmptyG
+
+(19,19)-(19,52)
+EMPTY
+EmptyG
 
 (19,32)-(19,33)
 x
-VarG
-
-(19,34)-(19,37)
-(^)
 VarG
 
 (19,34)-(19,37)

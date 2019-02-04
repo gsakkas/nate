@@ -27,18 +27,6 @@ let rec mulByDigit i l =
 ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),BopG VarG LitG]))) Nothing
 
 (7,58)-(7,67)
-mulByDigit
-VarG
-
-(7,58)-(7,67)
-i
-VarG
-
-(7,58)-(7,67)
-t
-VarG
-
-(7,58)-(7,67)
 mulByDigit i t
 AppG (fromList [VarG])
 

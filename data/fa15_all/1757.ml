@@ -15,6 +15,14 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(5,14)-(5,36)
+EMPTY
+EmptyG
+
+(5,15)-(5,30)
+EMPTY
+EmptyG
+
 (5,16)-(5,27)
 n mod 10
 BopG VarG LitG
@@ -22,10 +30,6 @@ BopG VarG LitG
 (5,40)-(5,50)
 digitsOfInt (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
-
-(5,41)-(5,42)
-digitsOfInt
-VarG
 
 (5,41)-(5,42)
 n / 10

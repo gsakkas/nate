@@ -22,4 +22,12 @@ AppG (fromList [VarG])
 z
 VarG
 
+(2,46)-(2,47)
+EMPTY
+EmptyG
+
+(2,46)-(2,49)
+EMPTY
+EmptyG
+
 *)

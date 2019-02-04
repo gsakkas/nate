@@ -63,6 +63,10 @@ let rec eval (e,x,y) =
 (eval (a , x , y) *. eval (a , x , y)) *. eval (a , x , y)
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
+(27,14)-(27,46)
+EMPTY
+EmptyG
+
 (27,15)-(27,23)
 eval (a , x , y) *. eval (a , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
@@ -72,20 +76,12 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 TupleG (fromList [VarG])
 
 (27,26)-(27,34)
-x
-VarG
-
-(27,26)-(27,34)
 y
 VarG
 
 (27,32)-(27,33)
 (a , x , y)
 TupleG (fromList [VarG])
-
-(27,38)-(27,46)
-x
-VarG
 
 (27,38)-(27,46)
 y

@@ -62,24 +62,8 @@ let rec eval (e,x,y) =
 UopG LitG
 
 (20,44)-(20,45)
-eval
-VarG
-
-(20,44)-(20,45)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(20,44)-(20,45)
-1.0
-LitG
-
-(20,44)-(20,45)
-(a , x , y)
-TupleG (fromList [VarG])
-
-(21,21)-(21,65)
-x
-VarG
 
 (21,21)-(21,65)
 y

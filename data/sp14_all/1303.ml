@@ -54,6 +54,10 @@ match x with
 | _ -> a
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,ConAppG (Just (TupleG (fromList [BopG (BopG VarG VarG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing]))) Nothing)])
 
+(19,15)-(19,18)
+EMPTY
+EmptyG
+
 (19,16)-(19,17)
 []
 ListG EmptyG Nothing

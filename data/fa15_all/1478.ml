@@ -36,26 +36,19 @@ fun b ->
    else (t , true))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(5,30)-(5,45)
-let t = f b in
-if b = t
-then (b , false)
-else (t , true)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
+(5,31)-(5,37)
+EMPTY
+EmptyG
 
-(5,47)-(5,48)
-b = t
-BopG VarG VarG
+(5,38)-(5,44)
+EMPTY
+EmptyG
 
 (5,47)-(5,48)
 if b = t
 then (b , false)
 else (t , true)
 IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
-(5,51)-(5,52)
-t
-VarG
 
 (5,51)-(5,52)
 (b , false)

@@ -26,10 +26,6 @@ b'
 VarG
 
 (2,74)-(2,75)
-wwhile
-VarG
-
-(2,74)-(2,75)
 (f , b')
 TupleG (fromList [VarG])
 

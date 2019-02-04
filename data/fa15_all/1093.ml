@@ -14,6 +14,10 @@ let sqsum xs =
 a + x
 BopG VarG VarG
 
+(2,27)-(2,32)
+EMPTY
+EmptyG
+
 (2,36)-(2,76)
 x
 VarG
@@ -21,10 +25,6 @@ VarG
 (2,47)-(2,48)
 List.hd xs
 AppG (fromList [VarG])
-
-(2,52)-(2,76)
-List.hd
-VarG
 
 (2,52)-(2,76)
 xs

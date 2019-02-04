@@ -9,9 +9,17 @@ let pipe fs = let f a x a = a in let base f = f in List.fold_left f base fs;;
 *)
 
 (* changed spans
+(2,24)-(2,31)
+EMPTY
+EmptyG
+
 (2,30)-(2,31)
 a
 VarG
+
+(2,44)-(2,49)
+EMPTY
+EmptyG
 
 (2,48)-(2,49)
 fun f -> f

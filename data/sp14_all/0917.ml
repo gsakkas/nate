@@ -41,17 +41,29 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(14,16)-(14,24)
+EMPTY
+EmptyG
+
+(14,16)-(14,44)
+EMPTY
+EmptyG
+
 (14,25)-(14,44)
 a
 VarG
 
+(15,15)-(15,23)
+EMPTY
+EmptyG
+
+(15,15)-(15,44)
+EMPTY
+EmptyG
+
 (15,24)-(15,44)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(16,4)-(17,51)
-0
-LitG
 
 (16,4)-(17,51)
 []

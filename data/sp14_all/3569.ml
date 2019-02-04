@@ -60,8 +60,16 @@ helper (i - 1) (bigAdd acc l)
        l
 AppG (fromList [VarG,AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
+(24,18)-(24,51)
+EMPTY
+EmptyG
+
 (24,26)-(24,27)
 i - 1
 BopG VarG LitG
+
+(24,31)-(24,51)
+EMPTY
+EmptyG
 
 *)

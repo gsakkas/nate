@@ -88,49 +88,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (37,4)-(38,45)
-numZeros
-VarG
-
-(37,4)-(38,45)
-generatePadding
-VarG
-
-(37,4)-(38,45)
-numZeros
-VarG
-
-(37,4)-(38,45)
-fun numZeros ->
-  if numZeros <= 0
-  then []
-  else 0 :: (generatePadding (numZeros - 1))
-LamG (IteG EmptyG EmptyG EmptyG)
-
-(37,4)-(38,45)
-generatePadding (numZeros - 1)
-AppG (fromList [BopG EmptyG EmptyG])
-
-(37,4)-(38,45)
-numZeros <= 0
-BopG VarG LitG
-
-(37,4)-(38,45)
-numZeros - 1
-BopG VarG LitG
-
-(37,4)-(38,45)
-0
-LitG
-
-(37,4)-(38,45)
-0
-LitG
-
-(37,4)-(38,45)
-1
-LitG
-
-(37,4)-(38,45)
 let rec generatePadding =
   fun numZeros ->
     if numZeros <= 0
@@ -142,31 +99,21 @@ let toSum =
                        toSum)
 LetG Rec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(37,4)-(38,45)
-if numZeros <= 0
-then []
-else 0 :: (generatePadding (numZeros - 1))
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (ConAppG (Just EmptyG) Nothing)
+(37,16)-(37,31)
+EMPTY
+EmptyG
 
-(37,4)-(38,45)
-0 :: (generatePadding (numZeros - 1))
-ConAppG (Just (TupleG (fromList [AppG (fromList [BopG VarG LitG]),LitG]))) Nothing
-
-(37,4)-(38,45)
-[]
-ListG EmptyG Nothing
+(37,16)-(37,50)
+EMPTY
+EmptyG
 
 (37,35)-(37,37)
 (@)
 VarG
 
-(37,41)-(37,49)
-intermediateSum
-VarG
-
-(37,41)-(37,49)
-generatePadding
-VarG
+(37,38)-(37,40)
+EMPTY
+EmptyG
 
 (37,41)-(37,49)
 generatePadding padCount

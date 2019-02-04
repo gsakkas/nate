@@ -35,4 +35,8 @@ let rec mulByDigit i l =
 remainder h i
 AppG (fromList [VarG])
 
+(13,34)-(13,51)
+EMPTY
+EmptyG
+
 *)

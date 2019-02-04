@@ -31,20 +31,12 @@ VarG
 List.mem h seen
 AppG (fromList [VarG])
 
-(8,8)-(8,46)
-h
-VarG
+(7,32)-(7,33)
+EMPTY
+EmptyG
 
 (8,8)-(8,46)
 seen
 VarG
-
-(8,8)-(8,46)
-seen
-VarG
-
-(8,8)-(8,46)
-h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 *)

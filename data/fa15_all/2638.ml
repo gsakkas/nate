@@ -41,9 +41,9 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(16,16)-(16,26)
-(@)
-VarG
+(16,14)-(16,66)
+EMPTY
+EmptyG
 
 (16,16)-(16,26)
 mulByDigit x l1

@@ -83,10 +83,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (11,7)-(11,59)
-l1
-VarG
-
-(11,7)-(11,59)
 (l1 , clone 0
             (List.length l1 - List.length l2) @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
@@ -117,10 +113,6 @@ CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
 AppG (fromList [ListG EmptyG Nothing])
 
 (26,25)-(26,26)
-(@)
-VarG
-
-(26,25)-(26,26)
 [n]
 ListG VarG Nothing
 
@@ -131,10 +123,6 @@ ListG (BopG EmptyG EmptyG) Nothing
 (27,30)-(27,59)
 [n + 1] @ [((n + c) + d) mod 10]
 AppG (fromList [ListG EmptyG Nothing])
-
-(27,31)-(27,36)
-(@)
-VarG
 
 (27,31)-(27,36)
 [n + 1]
@@ -149,32 +137,16 @@ ListG (BopG EmptyG EmptyG) Nothing
 ListG LitG Nothing
 
 (30,29)-(30,40)
-(@)
-VarG
-
-(30,29)-(30,40)
 [(c + d) + h] @ t
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
-(30,29)-(30,40)
-[(c + d) + h]
-ListG (BopG EmptyG EmptyG) Nothing
-
-(32,28)-(32,48)
-(@)
-VarG
+(32,17)-(35,19)
+EMPTY
+EmptyG
 
 (32,28)-(32,48)
 [((h + c) + d) / 10] @ ([((h + c) + d) mod 10] @ t)
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(32,28)-(32,48)
-[((h + c) + d) / 10]
-ListG (BopG EmptyG EmptyG) Nothing
-
-(33,17)-(33,39)
-(@)
-VarG
 
 (33,17)-(33,39)
 [((h + c) + d) mod 10]

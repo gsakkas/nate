@@ -14,6 +14,3 @@ BopG LitG (AppG (fromList [EmptyG]))
 4.0 *. atan 1.0
 4.0 *. atan 1.0
 4.0 *. atan 1.0
-4.0 *. atan 1.0
-4.0 *. atan 1.0
-1 + additivePersistence (sumList (digitsOfInt n))

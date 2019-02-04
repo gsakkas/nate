@@ -24,10 +24,6 @@ let rec mulByDigit i l =
 
 (* changed spans
 (4,7)-(4,14)
-l
-VarG
-
-(4,7)-(4,14)
 let x :: x' = l in [x * i]
 LetG NonRec (fromList [VarG]) (ListG EmptyG Nothing)
 

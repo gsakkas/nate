@@ -50,10 +50,6 @@ let rec eval (e,x,y) =
 TupleG (fromList [VarG])
 
 (19,37)-(19,46)
-x
-VarG
-
-(19,37)-(19,46)
 y
 VarG
 
@@ -66,20 +62,12 @@ x
 VarG
 
 (20,21)-(20,43)
-y
-VarG
-
-(20,21)-(20,43)
 2.0
 LitG
 
 (20,27)-(20,29)
 (e1 , x , y)
 TupleG (fromList [VarG])
-
-(20,34)-(20,43)
-x
-VarG
 
 (20,34)-(20,43)
 y

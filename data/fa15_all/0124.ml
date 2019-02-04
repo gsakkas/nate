@@ -11,6 +11,10 @@ let rec listReverse l =
 *)
 
 (* changed spans
+(3,45)-(3,48)
+EMPTY
+EmptyG
+
 (3,46)-(3,47)
 t
 VarG

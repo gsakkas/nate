@@ -50,29 +50,13 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(11,12)-(11,20)
+EMPTY
+EmptyG
+
 (11,12)-(11,40)
 4.0 *. atan 1.0
 BopG LitG (AppG (fromList [EmptyG]))
-
-(11,12)-(11,40)
-10
-LitG
-
-(11,12)-(11,40)
-13
-LitG
-
-(11,12)-(11,40)
-57
-LitG
-
-(11,12)-(11,40)
-4.0
-LitG
-
-(11,12)-(11,40)
-(10 , 13 , 57)
-TupleG (fromList [LitG])
 
 (11,21)-(11,40)
 atan
@@ -96,16 +80,8 @@ match e with
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
 (17,19)-(17,36)
-pi
-VarG
-
-(17,19)-(17,36)
 pi *. eval (s1 , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
-
-(18,21)-(18,38)
-pi
-VarG
 
 (18,21)-(18,38)
 pi *. eval (c1 , x , y)

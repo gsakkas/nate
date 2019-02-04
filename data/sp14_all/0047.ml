@@ -37,8 +37,16 @@ let padZero l1 l2 =
 List.append zeroes l2
 AppG (fromList [VarG])
 
+(11,50)-(11,61)
+EMPTY
+EmptyG
+
 (14,33)-(14,58)
 List.append zeroes l1
 AppG (fromList [VarG])
+
+(14,46)-(14,57)
+EMPTY
+EmptyG
 
 *)

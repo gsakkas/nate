@@ -36,6 +36,10 @@ VarG
              l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(10,28)-(10,45)
+EMPTY
+EmptyG
+
 (10,38)-(10,39)
 b - a
 BopG VarG VarG

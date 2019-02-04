@@ -92,28 +92,16 @@ y
 VarG
 
 (35,35)-(35,40)
-z
-VarG
-
-(35,35)-(35,40)
-(^)
-VarG
-
-(35,35)-(35,40)
 ")/(" ^ (exprToString x ^ ("+" ^ (exprToString y ^ ("+" ^ (exprToString z ^ ")")))))
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(38,55)-(38,67)
-(^)
-VarG
+(38,50)-(38,68)
+EMPTY
+EmptyG
 
 (38,55)-(38,67)
 exprToString z ^ ")"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(38,55)-(38,67)
-exprToString z
-AppG (fromList [VarG])
 
 (38,71)-(38,74)
 z

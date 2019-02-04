@@ -77,16 +77,8 @@ exprToString e2
 AppG (fromList [VarG])
 
 (32,38)-(32,43)
-(^)
-VarG
-
-(32,38)-(32,43)
 "/3*" ^ (exprToString e3 ^ "/4)")
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(32,48)-(32,60)
-(^)
-VarG
 
 (32,48)-(32,60)
 exprToString e3

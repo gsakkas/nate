@@ -52,6 +52,22 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(14,6)-(21,38)
+EMPTY
+EmptyG
+
+(14,14)-(14,15)
+EMPTY
+EmptyG
+
+(15,6)-(21,38)
+EMPTY
+EmptyG
+
+(15,14)-(15,15)
+EMPTY
+EmptyG
+
 (16,6)-(21,38)
 let (j , k) = x in
 let (l , m) = a in
@@ -61,15 +77,15 @@ else (0 , ((j + k) + l) :: m)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (16,12)-(16,13)
-x
-VarG
-
-(16,12)-(16,13)
 let (l , m) = a in
 if ((j + k) + l) > 9
 then (1 , (((j + k) + l) - 10) :: m)
 else (0 , ((j + k) + l) :: m)
 LetG NonRec (fromList [VarG]) (IteG EmptyG EmptyG EmptyG)
+
+(17,14)-(17,16)
+EMPTY
+EmptyG
 
 (19,14)-(19,15)
 j + k
@@ -83,9 +99,17 @@ VarG
 (1 , (((j + k) + l) - 10) :: m)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing])
 
+(20,23)-(20,24)
+EMPTY
+EmptyG
+
 (20,37)-(20,39)
 l
 VarG
+
+(20,44)-(20,45)
+EMPTY
+EmptyG
 
 (21,15)-(21,16)
 (0 , ((j + k) + l) :: m)
@@ -94,6 +118,10 @@ TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG Var
 (21,15)-(21,38)
 m
 VarG
+
+(21,22)-(21,23)
+EMPTY
+EmptyG
 
 (21,37)-(21,38)
 l

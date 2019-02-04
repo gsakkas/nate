@@ -91,9 +91,9 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 (^)
 VarG
 
-(39,46)-(39,64)
-(^)
-VarG
+(39,41)-(39,65)
+EMPTY
+EmptyG
 
 (39,46)-(39,64)
 exprToString tm3 ^ ")"

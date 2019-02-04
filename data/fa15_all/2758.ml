@@ -27,17 +27,25 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(11,11)-(11,16)
-(@)
-VarG
+(4,8)-(4,17)
+EMPTY
+EmptyG
+
+(4,9)-(4,10)
+EMPTY
+EmptyG
+
+(4,12)-(4,13)
+EMPTY
+EmptyG
+
+(4,15)-(4,16)
+EMPTY
+EmptyG
 
 (11,11)-(11,16)
 [h * i] @ mulByDigit i t
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(11,11)-(11,16)
-[h * i]
-ListG (BopG EmptyG EmptyG) Nothing
 
 (12,11)-(12,26)
 [remainder i h]
@@ -47,17 +55,9 @@ ListG (AppG (fromList [EmptyG])) Nothing
 i
 VarG
 
-(12,27)-(12,28)
-mulByDigit
-VarG
-
-(12,27)-(12,28)
-i
-VarG
-
-(12,27)-(12,28)
-t
-VarG
+(12,24)-(12,25)
+EMPTY
+EmptyG
 
 (12,27)-(12,28)
 [remainder i h] @ mulByDigit i

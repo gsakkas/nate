@@ -17,4 +17,8 @@ LamG VarG
 fun x -> fun a -> a
 LamG (LamG EmptyG)
 
+(2,28)-(2,29)
+EMPTY
+EmptyG
+
 *)

@@ -1,92 +1,228 @@
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
-match l with
-| [] -> []
-| _ :: tl -> listReverse tl
-match l with
-| [] -> []
-| _ :: tl -> listReverse tl
-match n with
-| 0 -> [0]
-| _ -> digits n []
-match n with
-| 0 -> [0]
-| _ -> digits n []
-match n with
-| 0 -> [0]
-| _ -> digits n []
-match l with
-| [] -> []
-| a :: b -> listReverse b @ [a]
-match l with
-| [] -> []
-| a :: b -> listReverse b @ [a]
-match i with
-| 0 -> []
-| _ -> bigAdd (bigAdd l l)
-              (mulByDigit (i - 1) l)
-match i with
-| 0 -> []
-| _ -> bigAdd (bigAdd l l)
-              (mulByDigit (i - 1) l)
-match i with
-| 0 -> []
-| _ -> bigAdd (bigAdd l l)
-              (mulByDigit (i - 1) l)
-match i with
-| 0 -> []
-| _ -> bigAdd (bigAdd l l)
-              (mulByDigit (i - 1) l)
-match n with
-| 0 -> [0]
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> [0]
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> myAppend (getDigits (n / 10))
-                (n mod 10)
-match n with
-| 0 -> []
-| _ -> myAppend (getDigits (n / 10))
-                (n mod 10)
-match n with
-| 0 -> []
-| _ -> myAppend (getDigits (n / 10))
-                (n mod 10)
-match n with
-| 0 -> []
-| n -> [x] @ clone x (n - 1)
-match n with
-| 0 -> []
-| _ -> clone x (n - 1) @ [x]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match l with
-| [] -> []
-| _ :: tl -> listReverse tl
-match l with
-| [] -> []
-| _ :: tl -> listReverse tl
-match l with
-| [] -> []
-| _ :: tl -> listReverse tl
+LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+let max' =
+  fun a ->
+    fun b ->
+      if a > b then a else b in
+let my_log =
+  fun l' ->
+    (let l = max' 0.1 l' in
+     log l /. log 10.0) in
+if eval (c , x , y) < 0.0
+then (my_log (a *. 100.0) ** sin ((pi *. b) *. 100.0)) -. 1.0
+else (- 1.0) *. ((my_log (b *. 100.0) ** (pi *. sin (a *. 100.0))) -. 1.0)
+let f =
+  fun a -> fun x -> a * a in
+let base =
+  match xs with
+  | [] -> 4
+  | hd :: tl -> f (f 2 hd) tl in
+List.fold_left f base xs
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let prevN =
+  fun (n1 , n2) -> n1 in
+let prev = prevN a in
+let sumlist =
+  fun (p1 , p2) -> p2 in
+let sum = sumlist a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + prev in
+if digit > 10
+then (1 , (digit - 10) :: sum)
+else (0 , digit :: sum)
+let getTail =
+  fun l ->
+    match l with
+    | [] -> []
+    | h :: t -> t in
+let getCarry =
+  fun (c , l) -> c in
+let carry = getCarry a in
+let getSum =
+  fun (c , l) -> l in
+let sum =
+  if carry = 1
+  then getTail (getSum a)
+  else getSum a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + carry in
+if digit > 9
+then (1 , 1 :: ((digit - 10) :: sum))
+else (0 , digit :: sum)
+let getCarry =
+  fun (c , l) -> c in
+let carry = getCarry a in
+let getSum =
+  fun (c , l) -> l in
+let sum =
+  if carry = 1
+  then getTail (getSum a)
+  else getSum a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + carry in
+if digit > 9
+then (1 , 1 :: ((digit - 10) :: sum))
+else (0 , digit :: sum)
+let getSum =
+  fun (c , l) -> l in
+let sum =
+  if carry = 1
+  then getTail (getSum a)
+  else getSum a in
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + carry in
+if digit > 9
+then (1 , 1 :: ((digit - 10) :: sum))
+else (0 , digit :: sum)
+let add =
+  fun (m , n) -> m + n in
+let digit = add x + carry in
+if digit > 9
+then (1 , 1 :: ((digit - 10) :: sum))
+else (0 , digit :: sum)

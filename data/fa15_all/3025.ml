@@ -44,10 +44,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (13,39)-(13,70)
-a
-VarG
-
-(13,39)-(13,70)
 let (carry , sum) = a in
 (((num1 + num2) + carry) / 10 , (((num1 + num2) + carry) mod 10) :: sum)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
@@ -56,12 +52,12 @@ LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 ((num1 + num2) + carry) / 10
 BopG (BopG EmptyG EmptyG) LitG
 
+(13,45)-(13,53)
+EMPTY
+EmptyG
+
 (13,46)-(13,47)
 num1
-VarG
-
-(13,50)-(13,52)
-num2
 VarG
 
 (13,50)-(13,52)
@@ -72,29 +68,9 @@ VarG
 ((num1 + num2) + carry) mod 10
 BopG (BopG EmptyG EmptyG) LitG
 
-(13,56)-(13,60)
-(num1 + num2) + carry
-BopG (BopG EmptyG EmptyG) VarG
-
-(13,56)-(13,60)
-num1 + num2
-BopG VarG VarG
-
-(13,56)-(13,60)
-(((num1 + num2) + carry) mod 10) :: sum
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
-(14,4)-(16,51)
-carry
-VarG
-
 (14,4)-(16,51)
 sum
 VarG
-
-(14,4)-(16,51)
-10
-LitG
 
 (14,15)-(14,16)
 (0 , [])

@@ -78,40 +78,21 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(13,10)-(13,13)
+EMPTY
+EmptyG
+
+(13,10)-(13,15)
+EMPTY
+EmptyG
+
+(13,14)-(13,15)
+EMPTY
+EmptyG
+
 (30,6)-(30,9)
 max'
 VarG
-
-(30,6)-(36,22)
-a
-VarG
-
-(30,6)-(36,22)
-b
-VarG
-
-(30,6)-(36,22)
-b
-VarG
-
-(30,6)-(36,22)
-a
-VarG
-
-(30,6)-(36,22)
-fun a ->
-  fun b ->
-    if a < b then b else a
-LamG (LamG EmptyG)
-
-(30,6)-(36,22)
-fun b ->
-  if a < b then b else a
-LamG (IteG EmptyG EmptyG EmptyG)
-
-(30,6)-(36,22)
-a < b
-BopG VarG VarG
 
 (30,6)-(36,22)
 let max' =
@@ -121,9 +102,5 @@ let max' =
 max' 1.0 (min 1.0
               ((2.71 ** ((sin (pi *. eval (a , x , y)) +. cos (pi *. eval (b , x , y))) -. 1.0)) -. 1.0))
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
-
-(30,6)-(36,22)
-if a < b then b else a
-IteG (BopG EmptyG EmptyG) VarG VarG
 
 *)

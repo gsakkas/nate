@@ -25,53 +25,27 @@ let palindrome w =
 
 (* changed spans
 (7,15)-(7,64)
-l
-VarG
-
-(7,15)-(7,64)
-listReverse
-VarG
-
-(7,15)-(7,64)
-xs'
-VarG
-
-(7,15)-(7,64)
-(@)
-VarG
-
-(7,15)-(7,64)
-x
-VarG
-
-(7,15)-(7,64)
 fun l ->
   match l with
   | [] -> []
   | x :: xs' -> listReverse xs' @ [x]
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(7,15)-(7,64)
-listReverse xs'
-AppG (fromList [VarG])
+(7,19)-(7,64)
+EMPTY
+EmptyG
 
-(7,15)-(7,64)
-listReverse xs' @ [x]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+(7,22)-(7,35)
+EMPTY
+EmptyG
 
-(7,15)-(7,64)
-match l with
-| [] -> []
-| x :: xs' -> listReverse xs' @ [x]
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
+(7,22)-(7,39)
+EMPTY
+EmptyG
 
-(7,15)-(7,64)
-[]
-ListG EmptyG Nothing
-
-(7,15)-(7,64)
-[x]
-ListG VarG Nothing
+(7,38)-(7,39)
+EMPTY
+EmptyG
 
 (7,45)-(7,49)
 let wList = explode w in

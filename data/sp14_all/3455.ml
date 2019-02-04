@@ -49,4 +49,12 @@ let rec additivePersistence n =
 print_string "going into then"
 AppG (fromList [LitG])
 
+(15,36)-(15,49)
+EMPTY
+EmptyG
+
+(15,50)-(15,52)
+EMPTY
+EmptyG
+
 *)

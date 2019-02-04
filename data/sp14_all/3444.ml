@@ -36,6 +36,18 @@ let rec additivePersistence n =
 sumList count
 AppG (fromList [VarG])
 
+(13,7)-(13,8)
+EMPTY
+EmptyG
+
+(13,7)-(13,65)
+EMPTY
+EmptyG
+
+(13,12)-(13,65)
+EMPTY
+EmptyG
+
 (13,13)-(13,18)
 additivePersistence (sumList (digitsOfInt n))
 AppG (fromList [AppG (fromList [EmptyG])])

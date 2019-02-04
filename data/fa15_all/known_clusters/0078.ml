@@ -1,92 +1,72 @@
-LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
-let g =
-  fun b ->
-    (f b , if f b = b
-           then false
-           else true) in
-(g , b)
-let g =
-  fun b ->
-    (f b , if f b = b
-           then false
-           else true) in
-(g , b)
-let g =
-  fun b ->
-    (f b , if f b = b
-           then false
-           else true) in
-(g , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let n =
-  fun x ->
-    (let ff = f b in
-     (ff , b = ff)) in
-(n , b)
-let h =
-  fun x -> (f x , f x = x) in
-(h , b)
-let h =
-  fun x -> (f x , f x = x) in
-(h , b)
-let g =
-  fun x ->
-    match f x with
-    | x -> (x , false)
-    | y -> (y , true) in
-(g , b)
-let g =
-  fun x ->
-    match f x with
-    | x -> (x , false)
-    | y -> (y , true) in
-(g , b)
-let g =
-  fun x ->
-    (let calcx = f x in
-     (calcx , calcx = x)) in
-(g , b)
+LetG NonRec (fromList [BopG EmptyG EmptyG]) (IteG EmptyG EmptyG EmptyG)
+let sum = fst x + snd x in
+if sum > 9
+then (1 , ((sum - 10) + fst a) :: (snd a))
+else (0 , (sum + fst a) :: (snd a))
+let sum = fst x + snd x in
+if sum > 9
+then (1 , ((sum - 10) + fst a) :: (snd a))
+else (0 , (sum + fst a) :: (snd a))
+let sum = fst x + snd x in
+if sum > 9
+then (1 , ((sum - 10) + fst a) :: (snd a))
+else (0 , (sum + fst a) :: (snd a))
+let sum = fst x + snd x in
+if sum > 9
+then (1 , ((sum - 10) + fst a) :: (snd a))
+else (0 , (sum + fst a) :: (snd a))
+let sum = o + x in
+if sum < 10
+then (0 , x :: l)
+else (1 , (x mod 10) :: l)
+let sum = o + x in
+if sum < 10
+then (0 , x :: l)
+else (1 , (x mod 10) :: l)
+let sum = o + x in
+if sum < 10
+then (0 , x :: l)
+else (1 , (x mod 10) :: l)
+let sum = x + o in
+if sum < 10
+then (0 , sum :: l)
+else (1 , (sum - 10) :: l)
+let sizDif =
+  List.length l1 - List.length l2 in
+if sizDif > 0
+then (let pad =
+        clone 0 sizDif in
+      (l1 , pad @ l2))
+else (let pad =
+        clone 0 (- sizDif) in
+      (pad @ l1 , l2))
+let sizDif =
+  List.length l1 - List.length l2 in
+if sizDif > 0
+then (let pad =
+        clone 0 sizDif in
+      (l1 , pad @ l2))
+else (let pad =
+        clone 0 (- sizDif) in
+      (pad @ l1 , l2))
+let sizDif =
+  List.length l1 - List.length l2 in
+if sizDif > 0
+then (let pad =
+        clone 0 sizDif in
+      (l1 , pad @ l2))
+else (let pad =
+        clone 0 (- sizDif) in
+      (pad @ l1 , l2))
+let z = (o + p) + m in
+if z > 9
+then (1 , (z - 10) :: n)
+else (0 , z :: n)
+let z = (o + p) + m in
+if z > 9
+then (1 , (z - 10) :: n)
+else (0 , z :: n)
+let z = (o + p) + m in
+if z > 9
+then (1 , (z - 10) :: n)
+else (0 , z :: n)

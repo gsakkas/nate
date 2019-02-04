@@ -62,68 +62,24 @@ match e with
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
 (15,14)-(15,42)
-x
-VarG
-
-(15,14)-(15,42)
 y
-VarG
-
-(17,18)-(17,19)
-eval
-VarG
-
-(17,18)-(17,19)
-e1
 VarG
 
 (17,18)-(17,19)
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(17,18)-(17,19)
-(e1 , x , y)
-TupleG (fromList [VarG])
-
-(17,29)-(17,32)
-eval
-VarG
-
-(17,29)-(17,32)
-e2
-VarG
-
-(17,29)-(17,32)
-x
-VarG
-
-(17,29)-(17,32)
-y
-VarG
 
 (17,29)-(17,32)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(17,29)-(17,32)
-(e2 , x , y)
-TupleG (fromList [VarG])
-
-(18,19)-(18,20)
-eval
-VarG
-
-(18,19)-(18,20)
-e1
-VarG
-
 (18,19)-(18,20)
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(18,19)-(18,20)
-(e1 , x , y)
-TupleG (fromList [VarG])
+(19,24)-(19,32)
+EMPTY
+EmptyG
 
 (19,33)-(19,38)
 eval

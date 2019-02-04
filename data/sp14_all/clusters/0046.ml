@@ -1,48 +1,34 @@
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((c + x') + x'') mod 10) :: s
-(((o + x1) + x2) mod 10) :: z
-(((o + x1) + x2) mod 10) :: z
-(((o + x1) + x2) mod 10) :: z
-(((add1 + add2) + carry) mod 10) :: rest
-(((add1 + add2) + carry) mod 10) :: rest
-(((add1 + add2) + carry) mod 10) :: rest
-(((add1 + add2) + carry) mod 10) :: rest
-(((add1 + add2) + carry) mod 10) :: rest
-(((add1 + add2) + carry) mod 10) :: rest
-(((add1 + add2) + carry) mod 10) :: rest
-(((add1 + add2) + carry) mod 10) :: rest
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((i + j) + s) mod 10) :: t
-(((c + x1) + x2) mod 10) :: ds
+TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(c , c :: s)
+(carry2 , dig :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(new_carry , digit :: y)
+(c , d :: t)
+(c , d :: t)
+(c , d :: t)

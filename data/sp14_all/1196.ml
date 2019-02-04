@@ -81,17 +81,25 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(36,11)-(36,13)
-List.rev
-VarG
+(33,15)-(33,31)
+EMPTY
+EmptyG
+
+(33,16)-(33,24)
+EMPTY
+EmptyG
+
+(33,33)-(33,49)
+EMPTY
+EmptyG
+
+(33,34)-(33,42)
+EMPTY
+EmptyG
 
 (36,11)-(36,13)
 List.rev l1
 AppG (fromList [VarG])
-
-(36,14)-(36,16)
-List.rev
-VarG
 
 (36,14)-(36,16)
 List.rev l2

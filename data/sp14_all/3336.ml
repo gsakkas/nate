@@ -31,18 +31,6 @@ if v = 0 then [1] else [0]
 IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (ListG EmptyG Nothing)
 
 (10,51)-(10,63)
-1
-LitG
-
-(10,51)-(10,63)
-0
-LitG
-
-(10,51)-(10,63)
-[1]
-ListG LitG Nothing
-
-(10,51)-(10,63)
 [0]
 ListG LitG Nothing
 

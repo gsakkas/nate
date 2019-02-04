@@ -35,39 +35,33 @@ fun b ->
          else false)
 LamG (TupleG (fromList [EmptyG]))
 
-(3,8)-(3,9)
-f b
-AppG (fromList [VarG])
-
-(3,8)-(3,9)
-(f b , if f b = b
-       then true
-       else false)
-TupleG (fromList [AppG (fromList [EmptyG]),IteG EmptyG EmptyG EmptyG])
-
 (3,31)-(3,73)
 b
 VarG
+
+(3,34)-(3,38)
+EMPTY
+EmptyG
+
+(3,44)-(3,55)
+EMPTY
+EmptyG
 
 (3,45)-(3,48)
 f b = b
 BopG (AppG (fromList [EmptyG])) VarG
 
 (3,50)-(3,54)
-f
-VarG
-
-(3,50)-(3,54)
-b
-VarG
-
-(3,50)-(3,54)
-b
-VarG
-
-(3,50)-(3,54)
 f b
 AppG (fromList [VarG])
+
+(3,61)-(3,73)
+EMPTY
+EmptyG
+
+(3,62)-(3,65)
+EMPTY
+EmptyG
 
 (8,29)-(8,47)
 fixpointHelper f b

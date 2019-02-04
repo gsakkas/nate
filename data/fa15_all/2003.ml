@@ -76,69 +76,49 @@ let rec eval (e,x,y) =
 
 (* changed spans
 (28,14)-(28,50)
-eval
-VarG
-
-(28,14)-(28,50)
-n
-VarG
-
-(28,14)-(28,50)
-x
-VarG
-
-(28,14)-(28,50)
-y
-VarG
-
-(28,14)-(28,50)
-d
-VarG
-
-(28,14)-(28,50)
-eval
-VarG
-
-(28,14)-(28,50)
-m
-VarG
-
-(28,14)-(28,50)
-x
-VarG
-
-(28,14)-(28,50)
-y
-VarG
-
-(28,14)-(28,50)
-eval (n , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(28,14)-(28,50)
-eval (m , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(28,14)-(28,50)
-d > 1.0
-BopG VarG LitG
-
-(28,14)-(28,50)
-1.0
-LitG
-
-(28,14)-(28,50)
 if d > 1.0
 then eval (m , x , y)
 else eval (m , x , y) ** eval (n , x , y)
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(28,14)-(28,50)
-(n , x , y)
-TupleG (fromList [VarG])
+(29,6)-(29,43)
+EMPTY
+EmptyG
 
-(28,14)-(28,50)
-(m , x , y)
-TupleG (fromList [VarG])
+(29,9)-(29,18)
+EMPTY
+EmptyG
+
+(29,9)-(29,34)
+EMPTY
+EmptyG
+
+(29,10)-(29,11)
+EMPTY
+EmptyG
+
+(29,14)-(29,17)
+EMPTY
+EmptyG
+
+(29,22)-(29,34)
+EMPTY
+EmptyG
+
+(29,23)-(29,24)
+EMPTY
+EmptyG
+
+(29,27)-(29,33)
+EMPTY
+EmptyG
+
+(29,29)-(29,32)
+EMPTY
+EmptyG
+
+(29,40)-(29,43)
+EMPTY
+EmptyG
 
 *)

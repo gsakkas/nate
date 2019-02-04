@@ -18,15 +18,7 @@ f 4 xs
 AppG (fromList [VarG,LitG])
 
 (4,19)-(4,43)
-f
-VarG
-
-(4,19)-(4,43)
 xs
 VarG
-
-(4,19)-(4,43)
-4
-LitG
 
 *)

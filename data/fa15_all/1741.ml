@@ -26,4 +26,24 @@ TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
 fun b -> (f b , b = f b)
 LamG (TupleG (fromList [EmptyG]))
 
+(6,49)-(6,65)
+EMPTY
+EmptyG
+
+(6,50)-(6,61)
+EMPTY
+EmptyG
+
+(6,54)-(6,60)
+EMPTY
+EmptyG
+
+(6,55)-(6,56)
+EMPTY
+EmptyG
+
+(6,63)-(6,64)
+EMPTY
+EmptyG
+
 *)

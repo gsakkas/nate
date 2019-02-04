@@ -37,9 +37,9 @@ AppG (fromList [VarG])
 (pad @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(8,41)-(8,44)
-(@)
-VarG
+(8,40)-(8,57)
+EMPTY
+EmptyG
 
 (8,41)-(8,44)
 pad @ l1

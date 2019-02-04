@@ -62,29 +62,13 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(17,11)-(28,21)
-l
-VarG
+(5,6)-(5,11)
+EMPTY
+EmptyG
 
-(17,11)-(28,21)
-l
-VarG
-
-(17,11)-(28,21)
-h
-VarG
-
-(17,11)-(28,21)
-removeZero
-VarG
-
-(17,11)-(28,21)
-t
-VarG
-
-(17,11)-(28,21)
-l
-VarG
+(5,10)-(5,11)
+EMPTY
+EmptyG
 
 (17,11)-(28,21)
 fun l ->
@@ -96,77 +80,71 @@ fun l ->
         | _ -> l)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(17,11)-(28,21)
-removeZero t
-AppG (fromList [VarG])
-
-(17,11)-(28,21)
-l = []
-BopG VarG (ListG EmptyG Nothing)
-
-(17,11)-(28,21)
-let h :: t = l in
-match h with
-| 0 -> removeZero t
-| _ -> l
-LetG NonRec (fromList [VarG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(17,11)-(28,21)
-if l = []
-then []
-else (let h :: t = l in
-      match h with
-      | 0 -> removeZero t
-      | _ -> l)
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(17,11)-(28,21)
-match h with
-| 0 -> removeZero t
-| _ -> l
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-
-(17,11)-(28,21)
-[]
-ListG EmptyG Nothing
-
-(17,11)-(28,21)
-[]
-ListG EmptyG Nothing
-
 (21,6)-(24,72)
 let (c , a1 :: a2) = a in
 let v = (x1 + x2) + c in
 (v / 10 , [v / 10] @ ([v mod 10] @ a2))
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(22,6)-(24,72)
+EMPTY
+EmptyG
+
+(22,23)-(22,25)
+EMPTY
+EmptyG
+
+(23,6)-(24,72)
+EMPTY
+EmptyG
+
+(23,18)-(23,20)
+EMPTY
+EmptyG
+
 (24,26)-(24,28)
 c
-VarG
-
-(24,33)-(24,53)
-v
 VarG
 
 (24,33)-(24,53)
 v / 10
 BopG VarG LitG
 
-(24,33)-(24,53)
-10
-LitG
+(24,35)-(24,36)
+EMPTY
+EmptyG
+
+(24,35)-(24,40)
+EMPTY
+EmptyG
+
+(24,39)-(24,40)
+EMPTY
+EmptyG
+
+(24,44)-(24,52)
+EMPTY
+EmptyG
+
+(24,56)-(24,57)
+EMPTY
+EmptyG
 
 (25,4)-(27,60)
 a2
 VarG
 
+(25,16)-(25,22)
+EMPTY
+EmptyG
+
+(25,20)-(25,21)
+EMPTY
+EmptyG
+
 (25,25)-(25,26)
 0
 LitG
-
-(26,15)-(26,33)
-List.rev
-VarG
 
 (26,15)-(26,33)
 List.rev (List.combine l1 l2)
@@ -178,9 +156,13 @@ let (_ , res) =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
-(28,2)-(28,5)
-removeZero
-VarG
+(27,50)-(27,60)
+EMPTY
+EmptyG
+
+(27,51)-(27,54)
+EMPTY
+EmptyG
 
 (28,2)-(28,5)
 add (padZero l1 l2)

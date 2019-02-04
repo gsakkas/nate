@@ -58,6 +58,10 @@ then (1 , (((j + k) + l) - 10) :: m)
 else (0 , ((j + k) + l) :: m)
 LetG NonRec (fromList [VarG]) (IteG EmptyG EmptyG EmptyG)
 
+(16,14)-(16,16)
+EMPTY
+EmptyG
+
 (18,14)-(18,15)
 j + k
 BopG VarG VarG
@@ -70,9 +74,17 @@ VarG
 (1 , (((j + k) + l) - 10) :: m)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing])
 
+(19,23)-(19,24)
+EMPTY
+EmptyG
+
 (19,37)-(19,39)
 l
 VarG
+
+(19,44)-(19,45)
+EMPTY
+EmptyG
 
 (20,15)-(20,16)
 (0 , ((j + k) + l) :: m)
@@ -82,6 +94,10 @@ TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG Var
 m
 VarG
 
+(20,22)-(20,23)
+EMPTY
+EmptyG
+
 (20,37)-(20,38)
 l
 VarG
@@ -89,10 +105,6 @@ VarG
 (21,4)-(23,51)
 m
 VarG
-
-(21,15)-(21,17)
-0
-LitG
 
 (21,15)-(21,17)
 (0 , [])

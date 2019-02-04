@@ -1,587 +1,526 @@
-TupleG (fromList [VarG])
-(f , b')
-(a , x , y)
-(a , x , y)
-(b , x , y)
-(a , x , y)
-(b , x , y)
-(c , x , y)
-(helper , b)
-(helper , b)
-(helper , b)
-(helper , b)
-(helper , b)
-(e , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e , x , y)
-(f , value)
-(f , value)
-(f , b)
-(a , x , y)
-(a , x , y)
-(a , x , y)
-(a , x , y)
-(w , b)
-(w , b)
-(w , b)
-(w , b)
-(g , b)
-(g , b)
-(g , b)
-(f , b')
-(g , b)
-(c , x , y)
-(a , x , y)
-(b , x , y)
-(b , x , y)
-(a , x , y)
-(c , x , y)
-(a , x , y)
-(b , x , y)
-(b , x , y)
-(a , x , y)
-(y , b)
-(y , b)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(c , s)
-(rand , nd)
-(expr , x , y)
-(expr , x , y)
-(expr , x , y)
-(expr1 , x , y)
-(expr , x , y)
-(expr1 , x , y)
-(expr , x , y)
-(expr1 , x , y)
-(expr2 , x , y)
-(expr3 , x , y)
-(expr , x , y)
-(expr1 , x , y)
-(h , b)
-(f , a)
-(f , a)
-(f , num)
-(f , num)
-(f , num)
-(f , num)
-(f , num)
-(f , num)
-(next , next)
-(next , next)
-(next , next , next , next)
-(next , next , next)
-(next , next)
-(next , next)
-(next , next , next , next)
-(next , next , next)
-(next , next)
-(next , next , next , next)
-(next , next , next)
-(e , x , y)
-(d , k , t)
-(d , k , t)
-(d , k , t)
-(d , k , t)
-(d , k , t)
-(fx , b)
-(fx , b)
-(fx , b)
-(fx , b)
-(f , b')
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(e' , x , y)
-(e' , x , y)
-(l1 , l2)
-(l1 , l2)
-(f , b')
-(a , x , y)
-(a , x , y)
-(a , x , y)
-(b , x , y)
-(a , x , y)
-(b , x , y)
-(a , x , y)
-(b , x , y)
-(c , x , y)
-(d , x , y)
-(rand , depth)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e , x , y)
-(e , x , y)
-(f , x)
-(f , x)
-(u , x , y)
-(u , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(v , x , y)
-(s , x , y)
-(t , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(u , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(v , x , y)
-(s , x , y)
-(t , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(u , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(v , x , y)
-(s , x , y)
-(t , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(u , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(v , x , y)
-(s , x , y)
-(t , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(u , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(v , x , y)
-(s , x , y)
-(t , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(u , x , y)
-(v , x , y)
-(u , x , y)
-(v , x , y)
-(s , x , y)
-(t , x , y)
-(u , x , y)
-(v , x , y)
-(s , x , y)
-(t , x , y)
-(u , x , y)
-(v , x , y)
-(s , x , y)
-(t , x , y)
-(u , x , y)
-(v , x , y)
-(e1 , x , y)
-(e1 , x , y)
-(e1 , x , y)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(rand , depth)
-(a , x , y)
-(b , x , y)
-(c , x , y)
-(f , b')
-(e1 , x , y)
-(e1 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e1 , x , y)
-(e1 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e' , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e' , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e' , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e3 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e3 , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(e , x , y)
-(g , b)
-(g , b)
-(m , x , y)
-(m , x , y)
-(f , b')
-(f , b')
-(a , x , y)
-(a , x , y)
-(a , b , c , d)
-(s1 , x , y)
-(x1 , x , y)
-(x1 , x , y)
-(x1 , x , y)
-(x2 , x , y)
-(x1 , x , y)
-(x1 , x , y)
-(x1 , x , y)
-(x2 , x , y)
-(x1 , x , y)
-(x2 , x , y)
-(f , b)
-(d , k , ls)
-(d , k , ls)
-(d , k , ls)
-(w , x , y)
-(t , x , y)
-(u , x , y)
-(z , x , y)
-(t , x , y)
-(u , x , y)
-(t , x , y)
-(u , x , y)
-(t , x , y)
-(t , x , y)
-(w , x , y)
-(t , x , y)
-(u , x , y)
-(z , x , y)
-(t , x , y)
-(u , x , y)
-(t , x , y)
-(u , x , y)
-(t , x , y)
-(t , x , y)
-(u , x , y)
-(f , b')
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(l1 , l2)
-(e' , x , y)
-(e' , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(a , x , y)
-(b , x , y)
-(a_less , x , y)
-(b_less , x , y)
-(e' , x , y)
-(e' , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(a , x , y)
-(b , x , y)
-(a_less , x , y)
-(b_less , x , y)
-(e' , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(a , x , y)
-(b , x , y)
-(a_less , x , y)
-(b_less , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(a , x , y)
-(b , x , y)
-(a_less , x , y)
-(b_less , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(a , x , y)
-(b , x , y)
-(a_less , x , y)
-(b_less , x , y)
-(a , x , y)
-(b , x , y)
-(a_less , x , y)
-(b_less , x , y)
-(b , x , y)
-(a_less , x , y)
-(b_less , x , y)
-(f , b)
-(f , b')
-(f , b')
-(f , b')
-(a , x , y)
-(a , x , y)
-(a , x , y)
-(a , x , y)
-(a , x , y)
-(a , x , y)
-(l1 , l2)
-(l1 , l2)
-(e0 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e5 , x , y)
-(e6 , x , y)
-(e7 , x , y)
-(e8 , x , y)
-(e9 , x , y)
-(e0 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e5 , x , y)
-(e6 , x , y)
-(e7 , x , y)
-(e8 , x , y)
-(e9 , x , y)
-(e0 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e5 , x , y)
-(e6 , x , y)
-(e7 , x , y)
-(e8 , x , y)
-(e9 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e5 , x , y)
-(e6 , x , y)
-(e7 , x , y)
-(e8 , x , y)
-(e9 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e5 , x , y)
-(e6 , x , y)
-(e7 , x , y)
-(e8 , x , y)
-(e9 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e' , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(e' , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e1 , x , y)
-(e2 , x , y)
-(e3 , x , y)
-(e4 , x , y)
-(c , d)
-(ex , x , y)
-(ex , x , y)
-(ex , x , y)
-(ex , x , y)
-(ex , x , y)
-(ex , x , y)
-(ex , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex5 , x , y)
-(ex1 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex5 , x , y)
-(ex1 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex1 , x , y)
-(ex2 , x , y)
-(ex3 , x , y)
-(ex4 , x , y)
-(ex5 , x , y)
-(list1 , list2)
+LitG
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+""
+"[]"
+"[]"
+false
+true
+""
+0
+0
+0
+0
+0
+0
+0
+6
+7.0
+2.0
+2.0
+0.0
+1.0
+0.0
+1.0
+1.0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+false
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+1.0
+1.0
+""
+""
+""
+""
+""
+""
+2.0
+2.0
+2.0
+1.0
+"sin"
+0
+2.0
+0.0
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+true
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+0
+""
+2.0
+2.0
+1.0
+")/(abs("
+")+1)"
+100
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+"; "
+2.0
+2.0
+1.0
+1.0
+0
+10
+0
+10
+10
+10
+0
+10
+0
+0
+0
+2.0
+2.0
+2.0
+0
+0
+0
+0
+0
+0
+0
+2.0
+2.0
+10.0
+0
+""
+0
+0
+(-1)
+0
+2
+2
+2.0
+2.0
+0
+0
+0
+0
+0
+0
+0
+9
+9
+2
+8
+8
+4
+2
+9
+0
+0
+0
+"["
+";"
+1
+0
+1.0
+1.0
+false
+false
+false
+false
+2.0
+2.0
+2.0
+2.0
+2.0
+"Sin("
+10
+false
+10
+2.0
+2.0
+":"
+2.0
+0.1
+10
+9
+1
+1
+0
+0
+0
+100.0
+0
+0
+1
+10
+2.0
+2.0
+2.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+0.5
+0.5
+2.0
+2.0
+2.0
+true
+10
+"; "
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+2.0
+0.0
+0.0
+0
+0
+0
+0
+1.0
+1.0
+2.0
+1.0
+2.0
+2.0
+1
+0
+0
+0
+0
+13
+2.718281828
+2.0
+2.0
+2.0
+1.0
+true
+false
+true
+false
+3.0
+0.5
+"sin^.5(pi*"
+","
+","
+","
+","
+10
+10
+10
+10
+10
+0
+0
+0
+"["
+"]"
+";"
+";"
+";"
+";"
+"["
+";"
+"["
+";"
+"["
+"["
+";"
+"]"
+";"
+"]"
+1
+1
+1
+1
+1
+0
+0
+0
+2.0
+1.0
+0.0
+0.0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+2.0
+2.0
+2.0
+2.0
+1.0
+1.0
+"sin(pi*("
+")/3)"
+"sin(pi*("
+")/3)"
+0
+1
+4
+2
+2
+2
+2
+4
+4
+4
+4
+2
+2.0
+2.0
+2.0
+0
+0.0
+2.0
+2.0
+2.0
+1.0
+0.0
+0.0
+2.0
+2.0
+2.0
+10.0
+0
+""
+0
+2.0
+2.0
+3
+3
+3
+5
+2.0
+2.0
+2.0
+2.0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+""
+2.0
+"+"
+"+"
+"+"
+"))"
+"))"
+""
+""
+0
+";"
+1
+1
+1
+0
+0
+0
+0
+2
+2.0
+0.0
+0
+true
+true
+0
+0
+0
+true
+0
+true
+true
+true
+true
+true
+0
+0
+0
+true
+true
+true
+0
+true
+0
+0
+7
+0
+7
+2.0
+2.0
+2.0
+2.0
+2.0
+0
+0
+0

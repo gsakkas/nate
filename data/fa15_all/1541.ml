@@ -24,34 +24,6 @@ else (f b , false)
 IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
 
 (5,54)-(5,56)
-b
-VarG
-
-(5,54)-(5,56)
-f
-VarG
-
-(5,54)-(5,56)
-b
-VarG
-
-(5,54)-(5,56)
-f b
-AppG (fromList [VarG])
-
-(5,54)-(5,56)
-true
-LitG
-
-(5,54)-(5,56)
-false
-LitG
-
-(5,54)-(5,56)
-(b , true)
-TupleG (fromList [VarG,LitG])
-
-(5,54)-(5,56)
 (f b , false)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 

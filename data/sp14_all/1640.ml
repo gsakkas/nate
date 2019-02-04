@@ -59,10 +59,6 @@ LitG
 TupleG (fromList [VarG])
 
 (21,38)-(21,46)
-x
-VarG
-
-(21,38)-(21,46)
 y
 VarG
 
@@ -71,20 +67,12 @@ VarG
 TupleG (fromList [VarG])
 
 (21,52)-(21,58)
-x
-VarG
-
-(21,52)-(21,58)
 y
 VarG
 
 (21,57)-(21,58)
 (u , x , y)
 TupleG (fromList [VarG])
-
-(21,64)-(21,70)
-x
-VarG
 
 (21,64)-(21,70)
 y

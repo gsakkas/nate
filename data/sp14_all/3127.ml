@@ -64,15 +64,7 @@ let bigAdd l1 l2 =
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
 (24,4)-(26,51)
-d
-VarG
-
-(24,4)-(26,51)
 t
 VarG
-
-(24,4)-(26,51)
-d :: t
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 *)

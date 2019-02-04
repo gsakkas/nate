@@ -25,6 +25,10 @@ BopG VarG LitG
 0
 LitG
 
+(3,32)-(3,68)
+EMPTY
+EmptyG
+
 (3,33)-(3,43)
 (n mod 10) :: (digitsOfInt (n / 10))
 ConAppG (Just (TupleG (fromList [AppG (fromList [BopG VarG LitG]),BopG VarG LitG]))) Nothing

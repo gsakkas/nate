@@ -27,4 +27,12 @@ AppG (fromList [VarG])
 b
 VarG
 
+(2,59)-(2,62)
+EMPTY
+EmptyG
+
+(2,61)-(2,62)
+EMPTY
+EmptyG
+
 *)

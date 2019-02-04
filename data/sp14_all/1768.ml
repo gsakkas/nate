@@ -55,6 +55,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(21,23)-(21,61)
+EMPTY
+EmptyG
+
 (21,26)-(21,27)
 i + j
 BopG VarG VarG

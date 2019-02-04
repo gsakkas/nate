@@ -47,14 +47,6 @@ TupleG (fromList [ListG EmptyG Nothing])
 []
 ListG EmptyG Nothing
 
-(16,4)-(16,68)
-[]
-ListG EmptyG Nothing
-
-(16,15)-(16,17)
-([] , [])
-TupleG (fromList [ListG EmptyG Nothing])
-
 (16,15)-(16,17)
 [([] , [])]
 ListG (TupleG (fromList [EmptyG])) Nothing

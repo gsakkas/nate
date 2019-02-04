@@ -27,6 +27,10 @@ let stringOfList f l = sepConcat " " l;;
 sepConcat " " l
 AppG (fromList [VarG,LitG])
 
+(9,33)-(9,45)
+EMPTY
+EmptyG
+
 (9,34)-(9,42)
 " "
 LitG

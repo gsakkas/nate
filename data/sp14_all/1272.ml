@@ -41,26 +41,38 @@ VarG
 accu
 VarG
 
+(9,30)-(10,71)
+EMPTY
+EmptyG
+
 (10,2)-(10,71)
 match n with
 | 0 -> 0
 | _ -> additivePersistence (sumList (digitsOfInt n))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 
-(10,36)-(10,43)
-additivePersistence
-VarG
+(10,23)-(10,28)
+EMPTY
+EmptyG
 
 (10,36)-(10,43)
 additivePersistence (sumList (digitsOfInt n))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(10,36)-(10,43)
-sumList (digitsOfInt n)
-AppG (fromList [AppG (fromList [EmptyG])])
-
 (10,36)-(10,71)
 0
 LitG
+
+(10,60)-(10,71)
+EMPTY
+EmptyG
+
+(10,61)-(10,66)
+EMPTY
+EmptyG
+
+(10,69)-(10,70)
+EMPTY
+EmptyG
 
 *)

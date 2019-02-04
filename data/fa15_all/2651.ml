@@ -72,4 +72,12 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 l
 VarG
 
+(29,43)-(29,54)
+EMPTY
+EmptyG
+
+(29,55)-(29,56)
+EMPTY
+EmptyG
+
 *)

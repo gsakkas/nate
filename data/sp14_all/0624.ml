@@ -53,25 +53,25 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(18,10)-(18,21)
-c
-VarG
+(18,6)-(20,70)
+EMPTY
+EmptyG
 
-(18,10)-(18,21)
-s
-VarG
+(18,9)-(18,24)
+EMPTY
+EmptyG
 
-(18,10)-(18,21)
-c
-VarG
-
-(18,10)-(18,21)
-(c , s)
-TupleG (fromList [VarG])
+(18,9)-(18,28)
+EMPTY
+EmptyG
 
 (18,10)-(18,21)
 (c , c :: s)
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+
+(18,22)-(18,23)
+EMPTY
+EmptyG
 
 (18,27)-(18,28)
 match (c , s) with

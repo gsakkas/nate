@@ -13,6 +13,14 @@ let rec wwhile (f,b) =
 *)
 
 (* changed spans
+(4,8)-(4,14)
+EMPTY
+EmptyG
+
+(4,9)-(4,10)
+EMPTY
+EmptyG
+
 (4,12)-(4,13)
 check
 VarG

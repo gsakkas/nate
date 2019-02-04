@@ -1,3 +1,2 @@
-SeqG (AppG (fromList [EmptyG])) (ListG EmptyG Nothing)
-listReverse t; [h]
-listReverse t; [h]
+UopG (AppG (fromList [EmptyG]))
+(-. eval (e3 , x , y))

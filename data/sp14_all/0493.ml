@@ -61,12 +61,16 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(21,6)-(24,61)
+EMPTY
+EmptyG
+
+(21,18)-(21,19)
+EMPTY
+EmptyG
+
 (22,20)-(22,22)
 a
-VarG
-
-(23,6)-(24,61)
-a1
 VarG
 
 (23,6)-(24,61)
@@ -86,13 +90,13 @@ VarG
 h
 VarG
 
+(24,44)-(24,61)
+EMPTY
+EmptyG
+
 (24,45)-(24,49)
 tens :: a1
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(24,51)-(24,55)
-a1
-VarG
 
 (24,51)-(24,55)
 ones :: a2
@@ -101,6 +105,14 @@ ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 (24,60)-(24,61)
 a2
 VarG
+
+(25,15)-(25,23)
+EMPTY
+EmptyG
+
+(25,17)-(25,18)
+EMPTY
+EmptyG
 
 (25,20)-(25,21)
 []

@@ -23,15 +23,15 @@ let fixpoint (f,b) =
 TupleG (fromList [VarG,LitG])
 
 (6,47)-(6,50)
-true
-LitG
-
-(6,47)-(6,50)
 (f b , false)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (6,54)-(6,58)
 false
 LitG
+
+(6,61)-(6,62)
+EMPTY
+EmptyG
 
 *)

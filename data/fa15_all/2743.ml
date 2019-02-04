@@ -87,10 +87,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (38,15)-(38,17)
-0
-LitG
-
-(38,15)-(38,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 

@@ -15,6 +15,14 @@ let rec clone x n =
 *)
 
 (* changed spans
+(3,22)-(4,63)
+EMPTY
+EmptyG
+
+(3,24)-(4,63)
+EMPTY
+EmptyG
+
 (3,26)-(4,63)
 fun (x , n , acc) ->
   if n < 0

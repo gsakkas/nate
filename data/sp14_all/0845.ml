@@ -29,9 +29,13 @@ let palindrome w = (explode w) = (listReverse (explode w));;
 *)
 
 (* changed spans
-(12,55)-(12,56)
-explode
-VarG
+(12,34)-(12,41)
+EMPTY
+EmptyG
+
+(12,42)-(12,57)
+EMPTY
+EmptyG
 
 (12,55)-(12,56)
 explode w

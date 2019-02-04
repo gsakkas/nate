@@ -90,25 +90,41 @@ CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing
 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
 BopG LitG (AppG (fromList [EmptyG]))
 
-(30,7)-(30,33)
-exp
-VarG
+(30,6)-(31,28)
+EMPTY
+EmptyG
 
 (30,7)-(30,33)
 exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
 AppG (fromList [UopG EmptyG])
 
-(30,7)-(30,33)
-((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+(30,8)-(30,25)
+EMPTY
+EmptyG
 
-(30,7)-(30,33)
-(-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-UopG (BopG EmptyG EmptyG)
+(30,9)-(30,13)
+EMPTY
+EmptyG
 
-(30,7)-(30,33)
-2.0
-LitG
+(30,14)-(30,24)
+EMPTY
+EmptyG
+
+(30,15)-(30,17)
+EMPTY
+EmptyG
+
+(30,19)-(30,20)
+EMPTY
+EmptyG
+
+(30,22)-(30,23)
+EMPTY
+EmptyG
+
+(30,29)-(30,32)
+EMPTY
+EmptyG
 
 (30,37)-(30,76)
 eval (e1 , x , y) -. eval (e2 , x , y)
@@ -117,5 +133,17 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 (31,11)-(31,28)
 2.0
 LitG
+
+(32,9)-(32,17)
+EMPTY
+EmptyG
+
+(32,9)-(32,76)
+EMPTY
+EmptyG
+
+(32,18)-(32,76)
+EMPTY
+EmptyG
 
 *)

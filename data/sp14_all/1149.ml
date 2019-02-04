@@ -24,15 +24,19 @@ ListG VarG Nothing
 ConAppG (Just (TupleG (fromList [AppG (fromList [BopG VarG LitG]),BopG VarG LitG]))) Nothing
 
 (5,30)-(5,50)
-n
-VarG
-
-(5,30)-(5,50)
 n mod 10
 BopG VarG LitG
 
-(5,30)-(5,50)
-10
-LitG
+(5,52)-(5,53)
+EMPTY
+EmptyG
+
+(5,52)-(5,60)
+EMPTY
+EmptyG
+
+(5,58)-(5,60)
+EMPTY
+EmptyG
 
 *)

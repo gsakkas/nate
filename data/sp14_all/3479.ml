@@ -10,6 +10,10 @@ let rec listReverse l =
 *)
 
 (* changed spans
+(2,58)-(2,77)
+EMPTY
+EmptyG
+
 (2,59)-(2,76)
 listReverse t; [h]
 SeqG (AppG (fromList [EmptyG])) (ListG EmptyG Nothing)

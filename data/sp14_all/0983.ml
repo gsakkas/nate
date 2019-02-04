@@ -121,6 +121,22 @@ let updateTotal =
 (upper_mult @ [0] , updateTotal)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(48,4)-(52,67)
+EMPTY
+EmptyG
+
+(48,10)-(48,21)
+EMPTY
+EmptyG
+
+(49,12)-(49,17)
+EMPTY
+EmptyG
+
+(51,34)-(51,35)
+EMPTY
+EmptyG
+
 (52,8)-(52,67)
 upper_mult
 VarG
@@ -128,18 +144,6 @@ VarG
 (52,52)-(52,53)
 upper_mult @ [0]
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(52,55)-(52,66)
-upper_mult
-VarG
-
-(52,55)-(52,66)
-(@)
-VarG
-
-(52,55)-(52,66)
-0
-LitG
 
 (52,55)-(52,66)
 [0]

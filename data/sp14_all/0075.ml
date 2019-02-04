@@ -11,17 +11,9 @@ let pipe fs =
 *)
 
 (* changed spans
-(2,35)-(2,77)
-d
-VarG
-
-(2,35)-(2,77)
-fn
-VarG
-
-(2,35)-(2,77)
-fun d -> d
-LamG VarG
+(2,28)-(2,29)
+EMPTY
+EmptyG
 
 (2,35)-(2,77)
 let fn = fun d -> d in fn

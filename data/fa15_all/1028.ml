@@ -60,6 +60,18 @@ List.combine (List.rev (0 :: l1))
              (List.rev (0 :: l2))
 AppG (fromList [AppG (fromList [EmptyG])])
 
+(23,15)-(23,69)
+EMPTY
+EmptyG
+
+(23,39)-(23,41)
+EMPTY
+EmptyG
+
+(23,47)-(23,64)
+EMPTY
+EmptyG
+
 (23,47)-(23,69)
 l1
 VarG

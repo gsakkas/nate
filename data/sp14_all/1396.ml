@@ -19,6 +19,18 @@ let rec sepConcat sep sl =
 *)
 
 (* changed spans
+(6,22)-(6,25)
+EMPTY
+EmptyG
+
+(7,6)-(7,64)
+EMPTY
+EmptyG
+
+(7,17)-(7,18)
+EMPTY
+EmptyG
+
 (7,28)-(7,64)
 x
 VarG
@@ -28,10 +40,6 @@ let base = h in
 let l = sl in
 List.fold_left f base l
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(7,41)-(7,64)
-sl
-VarG
 
 (7,41)-(7,64)
 let l = sl in

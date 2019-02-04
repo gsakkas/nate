@@ -28,17 +28,17 @@ LamG (BopG EmptyG EmptyG)
 s
 VarG
 
+(7,34)-(7,35)
+EMPTY
+EmptyG
+
 (7,39)-(7,40)
 s
 VarG
 
-(7,54)-(7,55)
-isFPoint
-VarG
-
-(7,54)-(7,55)
-x
-VarG
+(7,50)-(7,51)
+EMPTY
+EmptyG
 
 (7,54)-(7,55)
 wwhile (gs , b)

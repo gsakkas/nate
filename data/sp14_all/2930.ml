@@ -63,93 +63,9 @@ match x with
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (15,22)-(15,23)
-a
-VarG
-
-(15,22)-(15,23)
 match a with
 | (x , y) -> x
 CaseG VarG (fromList [(Nothing,VarG)])
-
-(15,42)-(15,50)
-x
-VarG
-
-(15,42)-(15,50)
-carry
-VarG
-
-(15,42)-(15,50)
-addend_a
-VarG
-
-(15,42)-(15,50)
-addend_b
-VarG
-
-(15,42)-(15,50)
-carry
-VarG
-
-(15,42)-(15,50)
-addend_a
-VarG
-
-(15,42)-(15,50)
-addend_b
-VarG
-
-(15,42)-(15,50)
-a
-VarG
-
-(15,42)-(15,50)
-(carry + addend_a) + addend_b
-BopG (BopG EmptyG EmptyG) VarG
-
-(15,42)-(15,50)
-((carry + addend_a) + addend_b) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(15,42)-(15,50)
-carry + addend_a
-BopG VarG VarG
-
-(15,42)-(15,50)
-(carry + addend_a) + addend_b
-BopG (BopG EmptyG EmptyG) VarG
-
-(15,42)-(15,50)
-((carry + addend_a) + addend_b) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(15,42)-(15,50)
-carry + addend_a
-BopG VarG VarG
-
-(15,42)-(15,50)
-10
-LitG
-
-(15,42)-(15,50)
-10
-LitG
-
-(15,42)-(15,50)
-let new_carry =
-  ((carry + addend_a) + addend_b) / 10 in
-let digit =
-  ((carry + addend_a) + addend_b) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(15,42)-(15,50)
-let digit =
-  ((carry + addend_a) + addend_b) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (15,42)-(15,50)
 match x with
@@ -161,26 +77,17 @@ match x with
                             | (x , y) -> (new_carry , digit :: y))
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
-(15,42)-(15,50)
-match a with
-| (x , y) -> (new_carry , digit :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+(15,43)-(15,45)
+EMPTY
+EmptyG
 
 (15,47)-(15,49)
 new_carry
 VarG
 
 (16,4)-(18,51)
-digit
-VarG
-
-(16,4)-(18,51)
 y
 VarG
-
-(16,4)-(18,51)
-digit :: y
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (16,15)-(16,18)
 (0 , [])

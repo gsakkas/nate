@@ -46,24 +46,10 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (14,16)-(14,56)
-a
-VarG
-
-(14,16)-(14,56)
-list1
-VarG
-
-(14,16)-(14,56)
 match a with
 | (list1 , list2) -> match list1 with
                      | [] -> match x with
                              | (h1 , h2) -> ((h1 + h2) :: list1 , list2)
-CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
-
-(14,16)-(14,56)
-match list1 with
-| [] -> match x with
-        | (h1 , h2) -> ((h1 + h2) :: list1 , list2)
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
 
 (14,43)-(14,52)

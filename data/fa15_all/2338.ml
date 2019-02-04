@@ -15,6 +15,14 @@ let rec assoc (d,k,l) =
 *)
 
 (* changed spans
+(5,43)-(5,46)
+EMPTY
+EmptyG
+
+(5,45)-(5,46)
+EMPTY
+EmptyG
+
 (5,52)-(5,63)
 assoc (d , k , t)
 AppG (fromList [TupleG (fromList [EmptyG])])

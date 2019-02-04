@@ -63,6 +63,14 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(29,6)-(29,7)
+EMPTY
+EmptyG
+
+(29,11)-(29,72)
+EMPTY
+EmptyG
+
 (29,12)-(29,51)
 1.0
 LitG
@@ -70,9 +78,5 @@ LitG
 (29,13)-(29,30)
 (eval (e1 , x , y) -. eval (e2 , x , y)) -. eval (e3 , x , y)
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
-
-(29,13)-(29,30)
-eval (e1 , x , y) -. eval (e2 , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)

@@ -1,13 +1,9 @@
-TupleG (fromList [AppG (fromList [EmptyG]),IteG EmptyG EmptyG EmptyG])
-(f b , if f b = b
-       then false
-       else true)
-(f b , if f b = b
-       then true
-       else false)
-(f b , if f b = b
-       then true
-       else false)
-(f b , if f b = b
-       then true
-       else false)
+IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) VarG
+if i > 0
+then mulByDigit (i - 1)
+                (bigAdd l l)
+else l
+if i > 0
+then mulByDigit (i - 1)
+                (bigAdd l l)
+else l

@@ -14,21 +14,33 @@ let rec digitsOfInt n = if n >= 10 then app [5] [n mod 10] else app [3] [8];;
 *)
 
 (* changed spans
+(5,18)-(5,21)
+EMPTY
+EmptyG
+
+(5,18)-(5,55)
+EMPTY
+EmptyG
+
+(5,23)-(5,34)
+EMPTY
+EmptyG
+
+(5,35)-(5,43)
+EMPTY
+EmptyG
+
+(5,36)-(5,37)
+EMPTY
+EmptyG
+
 (5,40)-(5,42)
 app
 VarG
 
 (5,45)-(5,53)
-5
-LitG
-
-(5,45)-(5,53)
 [n mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
-
-(5,61)-(5,64)
-app
-VarG
 
 (5,61)-(5,64)
 app [3] [8]

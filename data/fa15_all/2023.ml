@@ -50,18 +50,10 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (16,4)-(19,51)
-a
-VarG
-
-(16,4)-(19,51)
 match a with
 | (w , z) -> match x with
              | (x , y) -> (((x + y) + w) / 10 , (((x + y) + w) mod 10) :: z)
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
-
-(16,12)-(16,45)
-((x + y) + w) / 10
-BopG (BopG EmptyG EmptyG) LitG
 
 (16,12)-(16,45)
 (((x + y) + w) / 10 , (((x + y) + w) mod 10) :: z)
@@ -72,59 +64,19 @@ x + y
 BopG VarG VarG
 
 (16,40)-(16,41)
-0
-LitG
-
-(16,40)-(16,41)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(16,40)-(16,45)
-w
-VarG
-
-(16,40)-(16,45)
-x
-VarG
-
-(16,40)-(16,45)
-y
-VarG
-
-(16,40)-(16,45)
-w
-VarG
-
-(16,40)-(16,45)
-z
-VarG
 
 (16,40)-(16,45)
 ((x + y) + w) mod 10
 BopG (BopG EmptyG EmptyG) LitG
 
-(16,40)-(16,45)
-(x + y) + w
-BopG (BopG EmptyG EmptyG) VarG
-
-(16,40)-(16,45)
-x + y
-BopG VarG VarG
-
-(16,40)-(16,45)
-10
-LitG
-
-(16,40)-(16,45)
-10
-LitG
-
-(16,40)-(16,45)
-(((x + y) + w) mod 10) :: z
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
 (18,15)-(18,36)
 List.combine l1 l2
 AppG (fromList [VarG])
+
+(18,28)-(18,36)
+EMPTY
+EmptyG
 
 *)

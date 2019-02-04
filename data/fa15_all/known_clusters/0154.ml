@@ -1,10 +1,11 @@
-IteG (AppG (fromList [EmptyG])) VarG (ConAppG (Just EmptyG) Nothing)
-if List.mem h seen
-then seen
-else h :: seen
-if List.mem h r
-then seen
-else h :: seen
-if List.mem h r
-then seen
-else h :: seen
+CaseG VarG (fromList [(Nothing,VarG),(Nothing,IteG EmptyG EmptyG EmptyG)])
+match l with
+| (ki , vi) :: t -> if k = ki
+                    then vi
+                    else assoc (d , k , t)
+| [] -> d
+match l with
+| (ki , vi) :: t -> if k = ki
+                    then vi
+                    else assoc (d , k , t)
+| [] -> d

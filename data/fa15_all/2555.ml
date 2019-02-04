@@ -21,6 +21,10 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
+(7,35)-(7,50)
+EMPTY
+EmptyG
+
 (7,38)-(7,39)
 (l1 , pad @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
@@ -28,6 +32,10 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 (7,45)-(7,46)
 (@)
 VarG
+
+(8,40)-(8,55)
+EMPTY
+EmptyG
 
 (8,45)-(8,46)
 (@)

@@ -91,37 +91,6 @@ else (0 , digit :: sum)
 LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (20,20)-(20,21)
-l
-VarG
-
-(20,20)-(20,21)
-t
-VarG
-
-(20,20)-(20,21)
-c
-VarG
-
-(20,20)-(20,21)
-getCarry
-VarG
-
-(20,20)-(20,21)
-fun l ->
-  match l with
-  | [] -> []
-  | h :: t -> t
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(20,20)-(20,21)
-fun (c , l) -> c
-LamG VarG
-
-(20,20)-(20,21)
-getCarry a
-AppG (fromList [VarG])
-
-(20,20)-(20,21)
 let getCarry =
   fun (c , l) -> c in
 let carry = getCarry a in
@@ -139,31 +108,9 @@ then (1 , 1 :: ((digit - 10) :: sum))
 else (0 , digit :: sum)
 LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(20,20)-(20,21)
-let carry = getCarry a in
-let getSum =
-  fun (c , l) -> l in
-let sum =
-  if carry = 1
-  then getTail (getSum a)
-  else getSum a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + carry in
-if digit > 9
-then (1 , 1 :: ((digit - 10) :: sum))
-else (0 , digit :: sum)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(20,20)-(20,21)
-match l with
-| [] -> []
-| h :: t -> t
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,ListG EmptyG Nothing)])
-
-(20,20)-(20,21)
-[]
-ListG EmptyG Nothing
+(21,6)-(25,65)
+EMPTY
+EmptyG
 
 (21,12)-(21,13)
 let getSum =
@@ -181,14 +128,6 @@ else (0 , digit :: sum)
 LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (23,10)-(25,65)
-l
-VarG
-
-(23,10)-(25,65)
-fun (c , l) -> l
-LamG VarG
-
-(23,10)-(25,65)
 let sum =
   if carry = 1
   then getTail (getSum a)
@@ -200,50 +139,6 @@ if digit > 9
 then (1 , 1 :: ((digit - 10) :: sum))
 else (0 , digit :: sum)
 LetG NonRec (fromList [IteG EmptyG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(23,13)-(23,24)
-carry
-VarG
-
-(23,13)-(23,24)
-getTail
-VarG
-
-(23,13)-(23,24)
-getSum
-VarG
-
-(23,13)-(23,24)
-a
-VarG
-
-(23,13)-(23,24)
-getSum
-VarG
-
-(23,13)-(23,24)
-a
-VarG
-
-(23,13)-(23,24)
-fun (m , n) -> m + n
-LamG (BopG EmptyG EmptyG)
-
-(23,13)-(23,24)
-getTail (getSum a)
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(23,13)-(23,24)
-getSum a
-AppG (fromList [VarG])
-
-(23,13)-(23,24)
-getSum a
-AppG (fromList [VarG])
-
-(23,13)-(23,24)
-1
-LitG
 
 (23,13)-(23,24)
 let add =
@@ -258,12 +153,28 @@ LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 carry = 1
 BopG VarG LitG
 
+(23,14)-(23,17)
+EMPTY
+EmptyG
+
+(23,20)-(23,23)
+EMPTY
+EmptyG
+
+(23,27)-(23,29)
+EMPTY
+EmptyG
+
+(24,15)-(24,40)
+EMPTY
+EmptyG
+
+(24,16)-(24,18)
+EMPTY
+EmptyG
+
 (24,20)-(24,39)
 m
-VarG
-
-(24,21)-(24,32)
-n
 VarG
 
 (24,21)-(24,32)
@@ -273,33 +184,17 @@ then (1 , 1 :: ((digit - 10) :: sum))
 else (0 , digit :: sum)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (IteG EmptyG EmptyG EmptyG)
 
+(24,22)-(24,25)
+EMPTY
+EmptyG
+
+(24,28)-(24,31)
+EMPTY
+EmptyG
+
 (24,36)-(24,38)
 add x
 AppG (fromList [VarG])
-
-(25,15)-(25,65)
-add
-VarG
-
-(25,15)-(25,65)
-x
-VarG
-
-(25,15)-(25,65)
-carry
-VarG
-
-(25,15)-(25,65)
-digit
-VarG
-
-(25,15)-(25,65)
-digit > 9
-BopG VarG LitG
-
-(25,15)-(25,65)
-9
-LitG
 
 (25,15)-(25,65)
 if digit > 9
@@ -307,49 +202,53 @@ then (1 , 1 :: ((digit - 10) :: sum))
 else (0 , digit :: sum)
 IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
 
+(25,16)-(25,34)
+EMPTY
+EmptyG
+
+(25,17)-(25,28)
+EMPTY
+EmptyG
+
+(25,18)-(25,21)
+EMPTY
+EmptyG
+
+(25,24)-(25,27)
+EMPTY
+EmptyG
+
 (25,31)-(25,33)
 1
 LitG
+
+(25,37)-(25,57)
+EMPTY
+EmptyG
+
+(25,38)-(25,49)
+EMPTY
+EmptyG
+
+(25,39)-(25,42)
+EMPTY
+EmptyG
 
 (25,45)-(25,48)
 1
 LitG
 
 (25,54)-(25,56)
-digit
-VarG
-
-(25,54)-(25,56)
 digit - 10
 BopG VarG LitG
-
-(25,54)-(25,56)
-(digit - 10) :: sum
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
 
 (25,61)-(25,63)
 sum
 VarG
 
 (26,4)-(28,53)
-digit
-VarG
-
-(26,4)-(28,53)
-sum
-VarG
-
-(26,4)-(28,53)
-0
-LitG
-
-(26,4)-(28,53)
 (0 , digit :: sum)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(26,4)-(28,53)
-digit :: sum
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (28,4)-(28,53)
 let (_ , res) =

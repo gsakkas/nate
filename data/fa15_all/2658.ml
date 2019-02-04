@@ -69,6 +69,18 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(27,17)-(27,46)
+EMPTY
+EmptyG
+
+(27,17)-(27,52)
+EMPTY
+EmptyG
+
+(27,18)-(27,19)
+EMPTY
+EmptyG
+
 (27,23)-(27,45)
 atan (eval (e1 , x , y))
 AppG (fromList [AppG (fromList [EmptyG])])
@@ -76,5 +88,9 @@ AppG (fromList [AppG (fromList [EmptyG])])
 (27,29)-(27,33)
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
+
+(27,50)-(27,52)
+EMPTY
+EmptyG
 
 *)

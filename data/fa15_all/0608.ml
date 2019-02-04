@@ -60,15 +60,15 @@ let val2 = (x1 + x2) / 10 in
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (16,23)-(16,24)
-a
-VarG
-
-(16,23)-(16,24)
 let (x1 , x2) = x in
 let val1 = (a1 + x1) + x2 in
 let val2 = (x1 + x2) / 10 in
 (val2 , val1 :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+
+(17,6)-(19,30)
+EMPTY
+EmptyG
 
 (17,9)-(17,22)
 let val1 = (a1 + x1) + x2 in
@@ -77,12 +77,24 @@ let val2 = (x1 + x2) / 10 in
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (17,10)-(17,12)
-a1
-VarG
-
-(17,10)-(17,12)
 a1 + x1
 BopG VarG VarG
+
+(17,21)-(17,22)
+EMPTY
+EmptyG
+
+(18,11)-(18,32)
+EMPTY
+EmptyG
+
+(18,11)-(18,37)
+EMPTY
+EmptyG
+
+(18,12)-(18,13)
+EMPTY
+EmptyG
 
 (18,15)-(18,31)
 let val2 = (x1 + x2) / 10 in
@@ -98,14 +110,6 @@ BopG (BopG EmptyG EmptyG) LitG
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
 (19,11)-(19,25)
-val1
-VarG
-
-(19,11)-(19,25)
-a2
-VarG
-
-(19,11)-(19,25)
 let base = (0 , []) in
 let args =
   List.rev (List.combine l1
@@ -118,5 +122,25 @@ LetG NonRec (fromList [TupleG (fromList [EmptyG])]) (LetG NonRec (fromList [Empt
 (19,11)-(19,30)
 val2
 VarG
+
+(19,15)-(19,24)
+EMPTY
+EmptyG
+
+(19,16)-(19,18)
+EMPTY
+EmptyG
+
+(19,21)-(19,23)
+EMPTY
+EmptyG
+
+(19,29)-(19,30)
+EMPTY
+EmptyG
+
+(20,4)-(22,51)
+EMPTY
+EmptyG
 
 *)

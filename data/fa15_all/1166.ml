@@ -19,4 +19,8 @@ let rec assoc (d,k,l) =
 h
 VarG
 
+(5,51)-(5,54)
+EMPTY
+EmptyG
+
 *)

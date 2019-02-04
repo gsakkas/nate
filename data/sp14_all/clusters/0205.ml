@@ -1,7 +1,4 @@
-CaseG (BopG EmptyG EmptyG) (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ConAppG (Just EmptyG) Nothing)])
-match n > 9 with
-| false -> n :: (digitsOfInt n)
-| true -> digitsOfInt (n mod 10)
-match n > 9 with
-| false -> n :: (digitsOfInt n)
-| true -> digitsOfInt (n mod 10)
+IteG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
+if n < 10
+then count + 1
+else addHelp (count + 1 , addNum n)

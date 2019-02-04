@@ -14,6 +14,10 @@ let pipe fs =
 fun x -> fun a -> x a
 LamG (LamG EmptyG)
 
+(2,28)-(2,29)
+EMPTY
+EmptyG
+
 (2,35)-(2,77)
 a
 VarG

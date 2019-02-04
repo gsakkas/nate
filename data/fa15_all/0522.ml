@@ -19,6 +19,10 @@ match x with
 | _ -> assoc (d , k , l')
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
 
+(3,56)-(3,67)
+EMPTY
+EmptyG
+
 (3,66)-(3,67)
 x
 VarG

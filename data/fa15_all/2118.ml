@@ -27,4 +27,8 @@ let stringOfList f l = "[" ^ ((sepConcat ";" (List.map f l)) ^ "]");;
 sepConcat ";" (List.map f l)
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
+(9,41)-(9,61)
+EMPTY
+EmptyG
+
 *)

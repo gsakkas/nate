@@ -31,8 +31,4 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 List.map f l
 AppG (fromList [VarG])
 
-(9,33)-(9,41)
-"; "
-LitG
-
 *)

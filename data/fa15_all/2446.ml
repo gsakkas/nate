@@ -61,18 +61,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (22,6)-(23,48)
-a1
-VarG
-
-(22,6)-(23,48)
-h
-VarG
-
-(22,6)-(23,48)
-0
-LitG
-
-(22,6)-(23,48)
 let test =
   match a1 with
   | [] -> 0
@@ -81,12 +69,6 @@ let sum =
   (l1x + l2x) + test in
 ((sum / 10) :: a1 , (sum mod 10) :: a2)
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(22,6)-(23,48)
-match a1 with
-| [] -> 0
-| h :: t -> h
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,LitG)])
 
 (22,30)-(22,32)
 test

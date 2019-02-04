@@ -12,17 +12,9 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(3,38)-(3,45)
-digitsOfInt
-VarG
-
-(3,38)-(3,45)
-n
-VarG
-
-(3,38)-(3,45)
-List.hd ((n mod 10) :: ns)
-AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing])
+(3,37)-(3,63)
+EMPTY
+EmptyG
 
 (3,38)-(3,45)
 n - List.hd ((n mod 10) :: ns)

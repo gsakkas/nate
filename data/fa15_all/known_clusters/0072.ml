@@ -1,39 +1,17 @@
-LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let l = t in
-List.fold_left f base l
-let l = t in
-List.fold_left f base l
-let (y , z) = x in
-[((y + z) + carry) mod 10] @ ans
-let (y , z) = x in
-[(y + z) + carry] @ ans
-let (y , z) = x in
-[((y + z) + carry) mod 10] @ ans
-let (y , z) = x in
-[(y + z) + carry] @ ans
-let (y , z) = x in
-[((y + z) + carry) mod 10] @ ans
-let (y , z) = x in
-[(y + z) + carry] @ ans
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
+TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing])
+(1 , (((x1 + x2) + a1) - 10) :: a2)
+(1 , (((x1 + x2) + a1) - 10) :: a2)
+(1 , (((x1 + x2) + a1) - 10) :: a2)
+(1 , (((x1 + x2) + a1) - 10) :: a2)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)
+(1 , (((j + k) + l) - 10) :: m)

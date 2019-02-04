@@ -85,6 +85,14 @@ match a with
              intlist sum @ t)
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
+(22,28)-(22,35)
+EMPTY
+EmptyG
+
+(22,29)-(22,30)
+EMPTY
+EmptyG
+
 (23,46)-(23,59)
 (@)
 VarG

@@ -87,4 +87,8 @@ ListG LitG Nothing
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(38,49)-(38,61)
+EMPTY
+EmptyG
+
 *)

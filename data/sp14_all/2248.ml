@@ -23,12 +23,6 @@ fun f' ->
   else (b , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(5,29)-(5,40)
-if f b = b
-then (b , true)
-else (b , false)
-IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
 (5,42)-(5,43)
 (b , true)
 TupleG (fromList [VarG,LitG])

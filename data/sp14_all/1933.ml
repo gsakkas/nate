@@ -30,22 +30,10 @@ f b
 AppG (fromList [VarG])
 
 (8,27)-(8,40)
-f
-VarG
-
-(8,27)-(8,40)
-b
-VarG
-
-(8,27)-(8,40)
 let g =
   fun b -> (f b , true) in
 wwhile (g , f b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
-
-(8,32)-(8,33)
-f
-VarG
 
 (8,32)-(8,33)
 f b
@@ -54,5 +42,9 @@ AppG (fromList [VarG])
 (8,52)-(8,53)
 g
 VarG
+
+(8,67)-(8,68)
+EMPTY
+EmptyG
 
 *)

@@ -1,188 +1,319 @@
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-fun sl ->
-  match sl with
-  | [] -> ""
-  | h :: t -> (let f =
-                 fun a ->
-                   fun x -> a ^ (sep ^ x) in
-               let base = h in
-               let l = t in
-               List.fold_left f base l)
-fun l ->
-  match l with
-  | x :: [] -> []
-  | hd :: tl -> hd :: (removeLast tl)
-  | [] -> []
-fun l ->
-  match l with
-  | x :: [] -> []
-  | hd :: tl -> hd :: (removeLast tl)
-  | [] -> []
-fun y ->
-  match y with
-  | [] -> [x]
-  | h :: t -> h :: (append x t)
-fun xs ->
-  match xs with
-  | [] -> 0
-  | xs -> List.hd xs + sumList (List.tl xs)
-fun n ->
-  match n with
-  | 0 -> []
-  | n -> if n < 0
-         then []
-         else (n mod 10) :: (digitsOfInt (n / 10))
-fun n ->
-  match n with
-  | 0 -> []
-  | n -> if n < 0
-         then []
-         else (n mod 10) :: (digitsOfInt (n / 10))
-fun n ->
-  match n with
-  | 0 -> []
-  | n -> if n < 0
-         then []
-         else (n mod 10) :: (digitsOfInt (n / 10))
-function | y -> y
-fun b ->
-  match a with
-  | [] -> []
-fun l ->
-  match l with
-  | [] -> []
-  | h :: t -> if h = 0
-              then removeZero t
-              else l
-fun acc ->
-  match x with
-  | [] -> l
-  | h :: t -> helper t l
-                     (h :: acc)
-fun acc ->
-  match x with
-  | [] -> l
-  | h :: t -> helper t l
-                     (h :: acc)
-fun acc ->
-  match x with
-  | [] -> l
-  | h :: t -> helper t l
-                     (h :: acc)
-fun b ->
-  match b with
-  | [] -> [a]
-  | hd :: tl -> [a + hd]
-fun b ->
-  match b with
-  | [] -> [a]
-  | hd :: tl -> [a + hd]
-fun b ->
-  match b with
-  | [] -> [a]
-  | hd :: tl -> [a + hd]
-fun b ->
-  match b with
-  | [] -> [a]
-  | hd :: tl -> [a + hd]
-fun (x , y) ->
-  match x with
-  | [] -> y
-  | h :: t -> reverse (t , h :: y)
-fun l ->
-  match l with
-  | [] -> []
-  | h :: t -> reverse (l , [])
-fun n ->
-  match l with
-  | [] -> [n]
-  | h :: t -> h :: (myAppend t
-                             n)
-fun n ->
-  match n with
-  | 0 -> []
-  | _ -> myAppend (getDigits (n / 10))
-                  (n mod 10)
-fun l ->
-  match l with
-  | [] -> []
-  | h :: t -> t
-fun xs ->
-  match xs with
-  | [] -> 0
-  | h :: t -> h + sumList t
-function | g -> g
-function | x -> x
-function | g -> g
-function | x -> x
-function | g -> g
-function | x -> x
-function | g -> g
-function | x -> x
-fun l ->
-  match l with
-  | [] -> []
-  | hd :: tl -> helper (hd :: xs)
-                       l
-fun list ->
-  match list with
-  | [] -> 0
-  | head :: tail -> head
-fun list ->
-  match list with
-  | [] -> 0
-  | head :: tail -> head
-fun list ->
-  match list with
-  | [] -> 0
-  | head :: tail -> head
-fun list ->
-  match list with
-  | [] -> 0
-  | head :: tail -> head
-fun l ->
-  match l with
-  | [] -> "[]"
-  | x :: xs -> (let g =
-                  fun a ->
-                    fun x -> a ^ ("; " ^ f x) in
-                let base = "[" ^ f x in
-                List.fold_left g base
-                               xs ^ "]")
-fun l ->
-  match l with
-  | [] -> "[]"
-  | x :: xs -> (let g =
-                  fun a ->
-                    fun x -> a ^ ("; " ^ f x) in
-                let base = "[" ^ f x in
-                List.fold_left g base
-                               xs ^ "]")
-fun l ->
-  match l with
-  | [] -> "[]"
-  | x :: xs -> (let g =
-                  fun a ->
-                    fun x -> a ^ ("; " ^ f x) in
-                let base = "[" ^ f x in
-                List.fold_left g base
-                               xs ^ "]")
-fun l ->
-  match l with
-  | [] -> "[]"
-  | x :: xs -> (let g =
-                  fun a ->
-                    fun x -> a ^ ("; " ^ f x) in
-                let base = "[" ^ f x in
-                List.fold_left g base
-                               xs ^ "]")
-fun dest ->
-  match l with
-  | [] -> []
-  | h :: t -> listReverse2 t
-                           (h :: dest)
-fun xs ->
-  match xs with
-  | [] -> 0
-  | h :: t -> h + sumList t
-  | _ -> (-1)
+CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,IteG EmptyG EmptyG EmptyG)])
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Op1 e -> tan (pi *. eval (e , x , y)) -. (tan (pi *. eval (e , x , y)) /. 2.0)
+| Op2 (e1 , e2 , e3) -> if eval (e1 , x , y) > eval (e2 , x , y)
+                        then eval (e3 , x , y)
+                        else eval (e1 , x , y) -. eval (e2 , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Op1 e -> tan (pi *. eval (e , x , y)) -. (tan (pi *. eval (e , x , y)) /. 2.0)
+| Op2 (e1 , e2 , e3) -> if eval (e1 , x , y) > eval (e2 , x , y)
+                        then eval (e3 , x , y)
+                        else eval (e1 , x , y) -. eval (e2 , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Sqrt e -> sqrt (abs_float (eval (e , x , y)))
+| Gauss (e1 , e2 , e3) -> 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Timmy1 (e1 , e2 , e3) -> (sin (pi *. eval (e , x , y)) +. cos (pi *. eval (e , x , y))) *. cos (pi *. eval (e , x , y))
+| Timmy2 (e1 , e2) -> sin (pi *. eval (e , x , y)) /. cos (pi *. eval (e , x , y))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Timmy1 (e1 , e2 , e3) -> (sin (pi *. eval (e , x , y)) +. cos (pi *. eval (e , x , y))) *. cos (pi *. eval (e , x , y))
+| Timmy2 (e1 , e2) -> sin (pi *. eval (e , x , y)) /. cos (pi *. eval (e , x , y))
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (a , b , a_less , b_less) -> if eval (a , x , y) < eval (b , x , y)
+                                      then eval (a_less , x , y)
+                                      else eval (b_less , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (a , b , a_less , b_less) -> if eval (a , x , y) < eval (b , x , y)
+                                      then eval (a_less , x , y)
+                                      else eval (b_less , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (a , b , a_less , b_less) -> if eval (a , x , y) < eval (b , x , y)
+                                      then eval (a_less , x , y)
+                                      else eval (b_less , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e' -> sin (pi *. eval (e' , x , y))
+| Cosine e' -> cos (pi *. eval (e' , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (a , b , a_less , b_less) -> if eval (a , x , y) < eval (b , x , y)
+                                      then eval (a_less , x , y)
+                                      else eval (b_less , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine a -> eval (a , sin (pi *. x) , sin (pi *. y))
+| Cosine a -> eval (a , cos (pi *. x) , cos (pi *. y))
+| Average (a , b) -> (eval (a , x , y) +. eval (b , x , y)) /. 2.0
+| Times (a , b) -> eval (a , x , y) *. eval (b , x , y)
+| Thresh (a , b , c , d) -> if eval (a , x , y) < eval (b , x , y)
+                            then eval (c , x , y)
+                            else eval (d , x , y)
+| Tan a -> eval (a , tan (pi *. x) , tan (pi *. y))
+| Sine_Avg (a , b , c) -> ((eval (a , sin (pi *. x) , sin (pi *. y)) +. eval (b , sin (pi *. x) , sin (pi *. y))) +. eval (c , sin (pi *. x) , sin (pi *. y))) /. 3.0
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e0 -> sin (pi *. eval (e0 , x , y))
+| Cosine e1 -> cos (pi *. eval (e1 , x , y))
+| Average (e2 , e3) -> (eval (e2 , x , y) +. eval (e3 , x , y)) /. 2.0
+| Times (e4 , e5) -> eval (e4 , x , y) *. eval (e5 , x , y)
+| Thresh (e6 , e7 , e8 , e9) -> if eval (e6 , x , y) < eval (e7 , x , y)
+                                then eval (e8 , x , y)
+                                else eval (e9 , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> sin (pi *. eval (e , x , y))
+| Cosine e -> cos (pi *. eval (e , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Square2 (e1 , e2 , e3) -> sqrt (((eval (e1 , x , y) ** 2.0) +. (eval (e2 , x , y) ** 2.0)) +. (eval (e3 , x , y) ** 2.0)) /. 2.0
+| Thresh (a , b , a_less , b_less) -> if eval (a , x , y) < eval (b , x , y)
+                                      then eval (a_less , x , y)
+                                      else eval (b_less , x , y)
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e1 -> sin (pi *. eval (e1 , x , y))
+| Cosine e1 -> cos (pi *. eval (e1 , x , y))
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)
+| Thresh (e1 , e2 , e3 , e4) -> if eval (e1 , x , y) < eval (e2 , x , y)
+                                then eval (e3 , x , y)
+                                else eval (e4 , x , y)
+| Negate e1 -> eval (e1 , x , y) *. (- 1.0)

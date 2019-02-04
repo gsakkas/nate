@@ -1,4 +1,9 @@
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing])
-(1 , (digit - 10) :: sum)
-(1 , (digit - 10) :: sum)
-(1 , (digit - 10) :: sum)
+CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,ConAppG (Just EmptyG) Nothing),(Nothing,ListG EmptyG Nothing)])
+match (List.rev list1 , List.rev list2) with
+| (h1 :: t1 , h2 :: t2) -> (h1 , h2) :: (pair t1
+                                              t2)
+| (_ , _) -> []
+match (List.rev list1 , List.rev list2) with
+| (h1 :: t1 , h2 :: t2) -> (h1 , h2) :: (pair t1
+                                              t2)
+| (_ , _) -> []

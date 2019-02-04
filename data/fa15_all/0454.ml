@@ -37,14 +37,6 @@ s
 VarG
 
 (7,49)-(7,50)
-isFPoint
-VarG
-
-(7,49)-(7,50)
-x
-VarG
-
-(7,49)-(7,50)
 wwhile (gs , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
 

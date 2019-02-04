@@ -54,6 +54,18 @@ match depth with
 | n -> buildSine (build (rand , depth - 1))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(19,9)-(19,11)
+EMPTY
+EmptyG
+
+(20,12)-(20,24)
+EMPTY
+EmptyG
+
+(20,12)-(20,28)
+EMPTY
+EmptyG
+
 (20,13)-(20,17)
 buildX ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
@@ -61,14 +73,6 @@ AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 (20,22)-(20,23)
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(20,22)-(20,23)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
-(20,27)-(20,28)
-true
-LitG
 
 (20,27)-(20,28)
 ()

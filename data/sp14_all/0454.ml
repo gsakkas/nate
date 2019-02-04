@@ -57,6 +57,10 @@ match e with
 | Thresh (e1 , e2 , e3 , e4) -> exprToString e1 ^ (exprToString e2 ^ (exprToString e3 ^ exprToString e4))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 
+(13,13)-(13,17)
+EMPTY
+EmptyG
+
 (14,13)-(14,17)
 ""
 LitG
@@ -64,10 +68,6 @@ LitG
 (15,15)-(15,30)
 ""
 LitG
-
-(20,47)-(20,64)
-(^)
-VarG
 
 (20,47)-(20,64)
 exprToString e3 ^ exprToString e4

@@ -11,9 +11,17 @@ let pipe fs =
 *)
 
 (* changed spans
+(3,14)-(3,30)
+EMPTY
+EmptyG
+
 (3,22)-(3,23)
 fun x -> fun a -> x a
 LamG (LamG EmptyG)
+
+(3,27)-(3,28)
+EMPTY
+EmptyG
 
 (3,27)-(3,30)
 fun a -> x a

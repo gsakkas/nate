@@ -39,9 +39,13 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(17,35)-(17,38)
-additivePersAndRoot
-VarG
+(17,14)-(17,33)
+EMPTY
+EmptyG
+
+(17,14)-(17,43)
+EMPTY
+EmptyG
 
 (17,35)-(17,38)
 abs n

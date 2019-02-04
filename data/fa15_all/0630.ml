@@ -9,9 +9,9 @@ let rec clone x n = (clone x (n - 1)) @ [x];;
 *)
 
 (* changed spans
-(2,21)-(2,26)
-(@)
-VarG
+(2,20)-(2,40)
+EMPTY
+EmptyG
 
 (2,21)-(2,26)
 clone x (n - 1)

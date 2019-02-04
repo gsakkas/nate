@@ -85,98 +85,22 @@ match a with
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
 (22,19)-(22,41)
-arg1
-VarG
-
-(22,19)-(22,41)
-arg2
-VarG
-
-(22,19)-(22,41)
-acc
-VarG
-
-(22,19)-(22,41)
-arg1
-VarG
-
-(22,19)-(22,41)
-arg2
-VarG
-
-(22,19)-(22,41)
-acc
-VarG
-
-(22,19)-(22,41)
-arg1
-VarG
-
-(22,19)-(22,41)
-arg2
-VarG
-
-(22,19)-(22,41)
-(arg1 + arg2) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(22,19)-(22,41)
-arg1 + arg2
-BopG VarG VarG
-
-(22,19)-(22,41)
-arg1 + arg2
-BopG VarG VarG
-
-(22,19)-(22,41)
-arg1 + arg2
-BopG VarG VarG
-
-(22,19)-(22,41)
-(arg1 + arg2) > 9
-BopG (BopG EmptyG EmptyG) LitG
-
-(22,19)-(22,41)
-10
-LitG
-
-(22,19)-(22,41)
-0
-LitG
-
-(22,19)-(22,41)
-9
-LitG
-
-(22,19)-(22,41)
-1
-LitG
-
-(22,19)-(22,41)
 if (arg1 + arg2) > 9
 then (1 , [(arg1 + arg2) mod 10])
 else (0 , [arg1 + arg2])
 IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
 
-(22,19)-(22,41)
-(0 , (arg1 + arg2) :: acc)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing])
-
-(22,19)-(22,41)
-(1 , [(arg1 + arg2) mod 10])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(22,19)-(22,41)
-((arg1 + arg2) mod 10) :: acc
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
-
-(22,19)-(22,41)
-(arg1 + arg2) :: acc
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
+(26,19)-(26,53)
+EMPTY
+EmptyG
 
 (26,20)-(26,48)
 (((arg1 + arg2) + 1) mod 10) :: acc
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) LitG) LitG]))) Nothing
+
+(26,49)-(26,50)
+EMPTY
+EmptyG
 
 (26,51)-(26,52)
 acc

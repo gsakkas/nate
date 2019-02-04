@@ -13,9 +13,9 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(3,46)-(3,56)
-List.append
-VarG
+(3,45)-(3,77)
+EMPTY
+EmptyG
 
 (3,46)-(3,56)
 mulByDigit i t

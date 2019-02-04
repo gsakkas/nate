@@ -30,22 +30,6 @@ x
 VarG
 
 (6,40)-(6,41)
-x
-VarG
-
-(6,40)-(6,41)
-f
-VarG
-
-(6,40)-(6,41)
-x
-VarG
-
-(6,40)-(6,41)
-f x
-AppG (fromList [VarG])
-
-(6,40)-(6,41)
 x <> f x
 BopG VarG (AppG (fromList [EmptyG]))
 

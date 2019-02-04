@@ -71,8 +71,24 @@ let rec mulByDigit i l =
 i >= 0
 BopG VarG LitG
 
+(31,16)-(31,19)
+EMPTY
+EmptyG
+
+(31,17)-(31,18)
+EMPTY
+EmptyG
+
 (31,25)-(31,31)
 List.rev
 VarG
+
+(31,33)-(31,34)
+EMPTY
+EmptyG
+
+(31,46)-(31,57)
+EMPTY
+EmptyG
 
 *)

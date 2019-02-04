@@ -51,13 +51,25 @@ fun absNum ->
                               (persCount + 1))
 LamG (LamG EmptyG)
 
+(10,2)-(15,75)
+EMPTY
+EmptyG
+
+(10,15)-(10,18)
+EMPTY
+EmptyG
+
+(10,15)-(10,22)
+EMPTY
+EmptyG
+
+(10,19)-(10,22)
+EMPTY
+EmptyG
+
 (17,44)-(17,65)
 additivePersAndRoot (abs n) 0
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(17,64)-(17,65)
-abs
-VarG
 
 (17,64)-(17,65)
 abs n

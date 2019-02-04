@@ -62,15 +62,27 @@ else (0 , ((x1 + x2) + a1) :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (16,12)-(16,13)
-x
-VarG
-
-(16,12)-(16,13)
 let (a1 , a2) = a in
 if (x1 + x2) > 10
 then (1 , (((x1 + x2) + a1) - 10) :: a2)
 else (0 , ((x1 + x2) + a1) :: a2)
 LetG NonRec (fromList [VarG]) (IteG EmptyG EmptyG EmptyG)
+
+(17,14)-(17,16)
+EMPTY
+EmptyG
+
+(19,10)-(20,68)
+EMPTY
+EmptyG
+
+(19,22)-(19,23)
+EMPTY
+EmptyG
+
+(20,14)-(20,15)
+EMPTY
+EmptyG
 
 (20,18)-(20,19)
 x1
@@ -84,17 +96,13 @@ VarG
 (((x1 + x2) + a1) - 10) :: a2
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
 
+(20,37)-(20,38)
+EMPTY
+EmptyG
+
 (20,41)-(20,42)
 x1 + x2
 BopG VarG VarG
-
-(20,46)-(20,48)
-x1
-VarG
-
-(20,46)-(20,48)
-x2
-VarG
 
 (20,46)-(20,48)
 a1
@@ -108,21 +116,13 @@ VarG
 ((x1 + x2) + a1) :: a2
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing
 
+(20,61)-(20,62)
+EMPTY
+EmptyG
+
 (20,65)-(20,66)
 x1 + x2
 BopG VarG VarG
-
-(21,4)-(23,51)
-x1
-VarG
-
-(21,4)-(23,51)
-x2
-VarG
-
-(21,4)-(23,51)
-a1
-VarG
 
 (21,4)-(23,51)
 a2
@@ -132,12 +132,24 @@ VarG
 []
 ListG EmptyG Nothing
 
-(22,38)-(22,40)
-List.combine
-VarG
+(22,15)-(22,27)
+EMPTY
+EmptyG
+
+(22,15)-(22,55)
+EMPTY
+EmptyG
 
 (22,38)-(22,40)
 List.combine l1 l2
 AppG (fromList [VarG])
+
+(22,42)-(22,55)
+EMPTY
+EmptyG
+
+(22,43)-(22,51)
+EMPTY
+EmptyG
 
 *)

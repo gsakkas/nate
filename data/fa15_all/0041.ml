@@ -38,10 +38,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (14,14)-(14,29)
-0
-LitG
-
-(14,14)-(14,29)
 (0 , mulByDigit x l1)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 

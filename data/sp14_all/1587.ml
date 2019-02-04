@@ -59,32 +59,20 @@ eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (19,25)-(19,27)
-eval
-VarG
-
-(19,25)-(19,27)
 (e1 , x , y)
 TupleG (fromList [VarG])
+
+(19,30)-(19,34)
+EMPTY
+EmptyG
 
 (19,39)-(19,50)
 x
 VarG
 
 (19,40)-(19,42)
-y
-VarG
-
-(19,40)-(19,42)
-eval
-VarG
-
-(19,40)-(19,42)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(19,40)-(19,42)
-(e2 , x , y)
-TupleG (fromList [VarG])
 
 (19,45)-(19,49)
 x

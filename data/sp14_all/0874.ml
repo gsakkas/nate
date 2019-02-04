@@ -107,12 +107,12 @@ let bigMul l1 l2 =
 mul
 VarG
 
+(46,55)-(46,58)
+EMPTY
+EmptyG
+
 (47,2)-(49,49)
 la
-VarG
-
-(48,37)-(48,39)
-List.rev
 VarG
 
 (48,37)-(48,39)

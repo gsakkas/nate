@@ -79,9 +79,9 @@ VarG
 e2
 VarG
 
-(21,28)-(21,42)
-eval (e1 , x , y) < eval (e2 , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+(21,28)-(21,36)
+EMPTY
+EmptyG
 
 (21,28)-(21,42)
 if eval (e1 , x , y) < eval (e2 , x , y)

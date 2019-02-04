@@ -69,4 +69,12 @@ let (_ , res) =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
+(28,50)-(28,60)
+EMPTY
+EmptyG
+
+(28,51)-(28,54)
+EMPTY
+EmptyG
+
 *)

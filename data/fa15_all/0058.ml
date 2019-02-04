@@ -11,6 +11,10 @@ let pipe fs =
 *)
 
 (* changed spans
+(3,15)-(3,24)
+EMPTY
+EmptyG
+
 (3,21)-(3,24)
 fun x -> x a
 LamG (AppG (fromList [EmptyG]))

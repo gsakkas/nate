@@ -101,6 +101,10 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(27,9)-(27,20)
+EMPTY
+EmptyG
+
 (27,21)-(27,23)
 buildAverage
 VarG
@@ -108,13 +112,5 @@ VarG
 (28,9)-(28,18)
 (VarX , VarY)
 TupleG (fromList [ConAppG Nothing Nothing])
-
-(28,9)-(28,18)
-VarX
-ConAppG Nothing Nothing
-
-(28,9)-(28,18)
-VarY
-ConAppG Nothing Nothing
 
 *)

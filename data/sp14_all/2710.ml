@@ -14,6 +14,10 @@ let rec digitsOfInt n =
 digitsOfInt (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
 
+(2,38)-(2,51)
+EMPTY
+EmptyG
+
 (2,39)-(2,40)
 (n mod 10) :: (digitsOfInt (n / 10))
 ConAppG (Just (TupleG (fromList [AppG (fromList [BopG VarG LitG]),BopG VarG LitG]))) Nothing

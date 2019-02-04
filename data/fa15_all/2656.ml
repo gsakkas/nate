@@ -69,6 +69,18 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(27,17)-(27,45)
+EMPTY
+EmptyG
+
+(27,17)-(27,50)
+EMPTY
+EmptyG
+
+(27,18)-(27,19)
+EMPTY
+EmptyG
+
 (27,22)-(27,44)
 atan (eval (e1 , x , y))
 AppG (fromList [AppG (fromList [EmptyG])])
@@ -77,6 +89,22 @@ AppG (fromList [AppG (fromList [EmptyG])])
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
+(27,48)-(27,50)
+EMPTY
+EmptyG
+
+(29,6)-(31,51)
+EMPTY
+EmptyG
+
+(29,6)-(32,11)
+EMPTY
+EmptyG
+
+(29,7)-(30,50)
+EMPTY
+EmptyG
+
 (29,8)-(29,47)
 (((eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))) +. (eval (e3 , x , y) *. eval (e3 , x , y))) /. 3.0
 BopG (BopG EmptyG EmptyG) LitG
@@ -84,14 +112,6 @@ BopG (BopG EmptyG EmptyG) LitG
 (29,9)-(29,26)
 ((eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))) +. (eval (e3 , x , y) *. eval (e3 , x , y))
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
-
-(29,9)-(29,26)
-(eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))
-BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
-
-(29,9)-(29,26)
-eval (e1 , x , y) *. eval (e1 , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 (30,10)-(30,49)
 eval (e2 , x , y) *. eval (e2 , x , y)

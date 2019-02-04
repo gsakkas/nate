@@ -19,20 +19,16 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(7,5)-(7,74)
+EMPTY
+EmptyG
+
 (7,20)-(7,73)
 fun a ->
   if b = f b
   then (b , false)
   else (f b , true)
 LamG (IteG EmptyG EmptyG EmptyG)
-
-(7,26)-(7,29)
-b
-VarG
-
-(7,26)-(7,29)
-b = f b
-BopG VarG (AppG (fromList [EmptyG]))
 
 (7,26)-(7,29)
 if b = f b

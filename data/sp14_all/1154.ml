@@ -28,6 +28,10 @@ LitG
 a < 10
 BopG VarG LitG
 
+(7,50)-(7,51)
+EMPTY
+EmptyG
+
 (7,57)-(7,72)
 c
 VarG
@@ -39,5 +43,9 @@ LitG
 (7,70)-(7,71)
 a / 10
 BopG VarG LitG
+
+(7,76)-(7,77)
+EMPTY
+EmptyG
 
 *)

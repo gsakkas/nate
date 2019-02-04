@@ -70,6 +70,26 @@ let ones =
 (tens :: a1 , ones :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(21,31)-(21,49)
+EMPTY
+EmptyG
+
+(21,31)-(21,54)
+EMPTY
+EmptyG
+
+(21,32)-(21,34)
+EMPTY
+EmptyG
+
+(21,37)-(21,48)
+EMPTY
+EmptyG
+
+(21,38)-(21,40)
+EMPTY
+EmptyG
+
 (21,45)-(21,47)
 let (a1 , a2) = a in
 let h :: _ = a1 in
@@ -79,10 +99,6 @@ let ones =
   (x1 + x2) + (h mod 10) in
 (tens :: a1 , ones :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(22,23)-(22,39)
-a1
-VarG
 
 (22,23)-(22,39)
 let tens =
@@ -105,9 +121,9 @@ LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 x1 + x2
 BopG VarG VarG
 
-(22,35)-(22,37)
-h
-VarG
+(22,29)-(22,38)
+EMPTY
+EmptyG
 
 (22,35)-(22,37)
 h / 10
@@ -123,9 +139,9 @@ LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
 x1 + x2
 BopG VarG VarG
 
-(22,57)-(22,59)
-h
-VarG
+(22,49)-(22,60)
+EMPTY
+EmptyG
 
 (22,57)-(22,59)
 h mod 10
@@ -136,28 +152,8 @@ BopG VarG LitG
 TupleG (fromList [ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
 (23,4)-(25,51)
-tens
-VarG
-
-(23,4)-(25,51)
-a1
-VarG
-
-(23,4)-(25,51)
-ones
-VarG
-
-(23,4)-(25,51)
 a2
 VarG
-
-(23,4)-(25,51)
-tens :: a1
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(23,4)-(25,51)
-ones :: a2
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (23,15)-(23,17)
 ([] , [])
@@ -166,10 +162,6 @@ TupleG (fromList [ListG EmptyG Nothing])
 (24,4)-(25,51)
 []
 ListG EmptyG Nothing
-
-(24,15)-(24,33)
-List.rev
-VarG
 
 (24,15)-(24,33)
 List.rev (List.combine l1 l2)

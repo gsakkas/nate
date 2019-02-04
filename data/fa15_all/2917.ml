@@ -113,56 +113,12 @@ p
 VarG
 
 (28,28)-(28,31)
-eval
-VarG
-
-(28,28)-(28,31)
-q
-VarG
-
-(28,28)-(28,31)
-x
-VarG
-
-(28,28)-(28,31)
-y
-VarG
-
-(28,28)-(28,31)
 eval (q , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(28,28)-(28,31)
-(q , x , y)
-TupleG (fromList [VarG])
-
-(29,11)-(29,37)
-eval
-VarG
-
-(29,11)-(29,37)
-p
-VarG
-
-(29,11)-(29,37)
-x
-VarG
-
-(29,11)-(29,37)
-y
-VarG
-
-(29,11)-(29,37)
-eval (p , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (29,11)-(29,37)
 eval (p , x , y) -. (eval (q , x , y) *. (- 1.0))
 BopG (AppG (fromList [EmptyG])) (BopG EmptyG EmptyG)
-
-(29,11)-(29,37)
-(p , x , y)
-TupleG (fromList [VarG])
 
 (29,18)-(29,19)
 q
@@ -177,51 +133,27 @@ p
 VarG
 
 (32,6)-(34,25)
-eval
-VarG
-
-(32,6)-(34,25)
-q
-VarG
-
-(32,6)-(34,25)
-x
-VarG
-
-(32,6)-(34,25)
-y
-VarG
-
-(32,6)-(34,25)
-diff
-VarG
-
-(32,6)-(34,25)
 eval (q , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(32,6)-(34,25)
-diff /. 2.0
-BopG VarG LitG
-
-(32,6)-(34,25)
-2.0
-LitG
-
-(32,6)-(34,25)
-(q , x , y)
-TupleG (fromList [VarG])
 
 (33,11)-(33,37)
 eval (c , x , y) *. (- 1.0)
 BopG (AppG (fromList [EmptyG])) (UopG EmptyG)
 
+(33,17)-(33,30)
+EMPTY
+EmptyG
+
+(33,23)-(33,29)
+EMPTY
+EmptyG
+
+(33,25)-(33,28)
+EMPTY
+EmptyG
+
 (34,11)-(34,25)
 (- 1.0)
 UopG LitG
-
-(34,11)-(34,25)
-1.0
-LitG
 
 *)

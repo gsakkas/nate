@@ -33,16 +33,8 @@ fun b ->
 LamG (IteG EmptyG EmptyG EmptyG)
 
 (7,25)-(7,26)
-true
-LitG
-
-(7,25)-(7,26)
 (b , false)
 TupleG (fromList [VarG,LitG])
-
-(7,30)-(7,53)
-false
-LitG
 
 (7,30)-(7,53)
 (b , true)

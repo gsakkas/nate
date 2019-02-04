@@ -29,6 +29,10 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
+(12,46)-(12,51)
+EMPTY
+EmptyG
+
 (12,57)-(12,61)
 1
 LitG

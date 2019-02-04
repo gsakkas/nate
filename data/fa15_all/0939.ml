@@ -34,10 +34,6 @@ l2
 VarG
 
 (7,8)-(7,13)
-(@)
-VarG
-
-(7,8)-(7,13)
 clone 0
       (List.length l1 - List.length l2)
 AppG (fromList [BopG EmptyG EmptyG,LitG])

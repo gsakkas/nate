@@ -37,13 +37,17 @@ helper ((v mod 10) :: acc)
        (v / 10)
 AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 
+(9,31)-(9,68)
+EMPTY
+EmptyG
+
 (9,39)-(9,49)
 (v mod 10) :: acc
 ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
 
-(11,8)-(13,23)
-List.hd
-VarG
+(9,54)-(9,68)
+EMPTY
+EmptyG
 
 (11,8)-(13,23)
 List.hd [List.fold_left f base

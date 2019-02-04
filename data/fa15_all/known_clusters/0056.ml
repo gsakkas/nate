@@ -1,35 +1,93 @@
-TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-(f b , f b = b)
-(num mod 9 , [7] @ list)
-(num mod 9 , [7] @ list)
-(num mod 9 , [7] @ list)
-(num / 10 , [num mod 10] @ list)
-(f b , b = f b)
-(f b , b = f b)
-(f b , b = f b)
-(f b , b = f b)
-(f b , b = f b)
-(f b , b = f b)
-(f b , f b = b)
-(y + z , b @ ([w mod 10] @ [w / 10]))
-(y + z , b @ ([w mod 10] @ [w / 10]))
-(y + z , b @ ([w mod 10] @ [w / 10]))
-(f b , f b = b)
-(f b , 3 < 4)
-(f b , 3 < 4)
-(10 * o , bigAdd (mulByDigit o
-                             l1) l)
-(10 * o , bigAdd (mulByDigit o
-                             l1) l)
-(10 * o , bigAdd (mulByDigit o
-                             l1) l)
-(10 * o , bigAdd (mulByDigit o
-                             l1) l)
-(a1 + 1 , bigAdd a2
-                 (appZero a1 (mulByDigit x
-                                         l2)))
-(f b , b = f b)
-(f b , b = f b)
-(f b , b = f b)
-(f x , x <> f x)
-(f x , x <> f x)
+LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let b = fst x + snd x in
+match a with
+| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
+| _ -> [b / 10 ; b mod 10]
+let sum = fst x + snd x in
+match a with
+| [] -> (sum / 10) :: ((sum mod 10) :: a)
+| h :: t -> (sum / 10) :: ((h + (sum mod 10)) :: t)
+let sum = fst x + snd x in
+match a with
+| [] -> (sum / 10) :: ((sum mod 10) :: a)
+| h :: t -> (sum / 10) :: ((h + (sum mod 10)) :: t)
+let sum = fst x + snd x in
+match a with
+| [] -> (sum / 10) :: ((sum mod 10) :: a)
+| h :: t -> (sum / 10) :: ((h + (sum mod 10)) :: t)
+let sum = fst x + snd x in
+match a with
+| [] -> (sum / 10) :: ((sum mod 10) :: a)
+| h :: t -> (sum / 10) :: ((h + (sum mod 10)) :: t)
+let b = fst x + snd x in
+match a with
+| (0 , []) -> (b / 10 , [b mod 10])
+| (y , h :: t) -> (b / 10 , (b mod 10) :: ((h + y) :: t))
+let b = fst x + snd x in
+match a with
+| (0 , []) -> (b / 10 , [b mod 10])
+| (y , h :: t) -> (b / 10 , (b mod 10) :: ((h + y) :: t))
+let b = fst x + snd x in
+match a with
+| (0 , []) -> (b / 10 , [b mod 10])
+| (y , h :: t) -> (b / 10 , (b mod 10) :: ((h + y) :: t))
+let b = fst x + snd x in
+match a with
+| (0 , []) -> (b / 10 , [b mod 10])
+| (y , h :: t) -> (b / 10 , (b mod 10) :: ((h + y) :: t))
+let sum = fst x + snd x in
+match a with
+| h :: t -> ((h + sum) / 10) :: (((h + sum) mod 10) :: t)
+| _ -> [sum / 10 ; sum mod 10]

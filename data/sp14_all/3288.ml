@@ -54,4 +54,8 @@ match x with
 | (h1 , h2) -> ([(h1 + h2) / 10] , [(h1 + h2) mod 10])
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(18,24)-(18,25)
+EMPTY
+EmptyG
+
 *)

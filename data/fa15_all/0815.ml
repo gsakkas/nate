@@ -36,17 +36,13 @@ loop (sumList (digitsOfInt x))
      (sumList (digitsOfInt x) + y)
 AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(11,33)-(11,44)
-sumList
-VarG
+(11,31)-(11,76)
+EMPTY
+EmptyG
 
 (11,33)-(11,44)
 digitsOfInt x
 AppG (fromList [VarG])
-
-(11,45)-(11,70)
-x
-VarG
 
 (11,45)-(11,70)
 sumList (digitsOfInt x) + y

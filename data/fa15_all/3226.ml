@@ -25,20 +25,12 @@ match l with
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
 
 (5,30)-(5,68)
-(@)
-VarG
-
-(5,30)-(5,68)
 [((x * i) mod 10) + x'] @ (mulByDigit i
                                       [x'] @ x'')
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 
 (5,50)-(5,67)
 x'
-VarG
-
-(5,51)-(5,61)
-(@)
 VarG
 
 (5,51)-(5,61)

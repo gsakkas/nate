@@ -23,9 +23,13 @@ let rec sepConcat sep sl =
 (^)
 VarG
 
-(7,35)-(7,58)
-t
-VarG
+(7,17)-(7,18)
+EMPTY
+EmptyG
+
+(7,22)-(7,58)
+EMPTY
+EmptyG
 
 (7,35)-(7,58)
 let l = t in

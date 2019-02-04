@@ -32,6 +32,10 @@ List.append (clone 0
                    (abs diff)) l1
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(10,21)-(10,47)
+EMPTY
+EmptyG
+
 (11,7)-(11,64)
 (l1 , l2)
 TupleG (fromList [VarG])
@@ -39,5 +43,9 @@ TupleG (fromList [VarG])
 (11,29)-(11,63)
 List.append (clone 0 diff) l2
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(11,42)-(11,62)
+EMPTY
+EmptyG
 
 *)

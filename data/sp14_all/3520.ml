@@ -31,14 +31,6 @@ fun x -> (f b , not (f b = b))
 LamG (TupleG (fromList [EmptyG]))
 
 (6,68)-(6,69)
-func
-VarG
-
-(6,68)-(6,69)
-func b
-AppG (fromList [VarG])
-
-(6,68)-(6,69)
 (func b , b)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 

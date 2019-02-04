@@ -23,9 +23,21 @@ let f' =
 wwhile (f' , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
+(6,2)-(6,63)
+EMPTY
+EmptyG
+
 (6,9)-(6,63)
 fun b' -> (f b' , f b' <> b')
 LamG (TupleG (fromList [EmptyG]))
+
+(6,10)-(6,59)
+EMPTY
+EmptyG
+
+(6,22)-(6,23)
+EMPTY
+EmptyG
 
 (6,27)-(6,58)
 b'
@@ -39,24 +51,16 @@ AppG (fromList [VarG])
 f
 VarG
 
+(6,43)-(6,47)
+EMPTY
+EmptyG
+
 (6,53)-(6,58)
 b'
 VarG
 
 (6,61)-(6,62)
-wwhile
-VarG
-
-(6,61)-(6,62)
-f'
-VarG
-
-(6,61)-(6,62)
 wwhile (f' , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(6,61)-(6,62)
-(f' , b)
-TupleG (fromList [VarG])
 
 *)

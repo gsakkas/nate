@@ -24,6 +24,10 @@ then (b , true)
 else (b , false)
 IteG (AppG (fromList [EmptyG])) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
 
+(6,33)-(6,34)
+EMPTY
+EmptyG
+
 (6,36)-(6,47)
 fun b ->
   if f b
@@ -34,18 +38,6 @@ LamG (IteG EmptyG EmptyG EmptyG)
 (6,37)-(6,42)
 (b , true)
 TupleG (fromList [VarG,LitG])
-
-(6,38)-(6,39)
-b
-VarG
-
-(6,38)-(6,39)
-true
-LitG
-
-(6,38)-(6,39)
-false
-LitG
 
 (6,38)-(6,39)
 (b , false)

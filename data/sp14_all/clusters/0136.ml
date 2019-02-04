@@ -1,54 +1,5 @@
-LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let carry =
-  match a with
-  | (f , g) -> f in
-let newc =
-  match x with
-  | (f , g) -> if ((f + g) + carry) > 9
-               then 1
-               else 0 in
-let digit =
-  match x with
-  | (f , g) -> (f + g) + (carry mod 10) in
-match a with
-| (o , p) -> (newc , digit :: p)
-let newc =
-  match x with
-  | (f , g) -> if ((f + g) + carry) > 9
-               then 1
-               else 0 in
-let digit =
-  match x with
-  | (f , g) -> (f + g) + (carry mod 10) in
-match a with
-| (o , p) -> (newc , digit :: p)
-let newc =
-  match x with
-  | (f , g) -> if ((f + g) + carry) > 9
-               then 1
-               else 0 in
-let digit =
-  match x with
-  | (f , g) -> (f + g) + (carry mod 10) in
-match a with
-| (o , p) -> (newc , digit :: p)
-let newc =
-  match x with
-  | (f , g) -> if ((f + g) + carry) > 9
-               then 1
-               else 0 in
-let digit =
-  match x with
-  | (f , g) -> (f + g) + (carry mod 10) in
-match a with
-| (o , p) -> (newc , digit :: p)
-let newc =
-  match x with
-  | (f , g) -> if ((f + g) + carry) > 9
-               then 1
-               else 0 in
-let digit =
-  match x with
-  | (f , g) -> (f + g) + (carry mod 10) in
-match a with
-| (o , p) -> (newc , digit :: p)
+ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG]))) Nothing
+0 :: (List.rev l2)
+0 :: (List.rev l)
+"[" :: (List.map f l)
+"[" :: (List.map f l)

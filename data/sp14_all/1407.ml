@@ -58,10 +58,6 @@ sumList (digitsOfInt n)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (18,40)-(18,41)
-digitsOfInt
-VarG
-
-(18,40)-(18,41)
 digitsOfInt n
 AppG (fromList [VarG])
 

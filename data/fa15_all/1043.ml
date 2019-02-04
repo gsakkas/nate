@@ -78,6 +78,14 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
+(33,4)-(35,52)
+EMPTY
+EmptyG
+
+(33,16)-(33,17)
+EMPTY
+EmptyG
+
 (34,31)-(34,32)
 x
 VarG
@@ -86,21 +94,9 @@ VarG
 c
 VarG
 
-(35,10)-(35,11)
-0
-LitG
-
-(35,10)-(35,11)
-0 :: c
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
-
 (35,25)-(35,28)
 (0 , 0 :: c)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
-
-(35,39)-(35,52)
-List.hd
-VarG
 
 (35,39)-(35,52)
 List.hd t

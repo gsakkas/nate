@@ -53,6 +53,50 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(11,14)-(11,24)
+EMPTY
+EmptyG
+
+(11,18)-(11,24)
+EMPTY
+EmptyG
+
+(11,23)-(11,24)
+EMPTY
+EmptyG
+
+(13,17)-(13,67)
+EMPTY
+EmptyG
+
+(13,38)-(13,67)
+EMPTY
+EmptyG
+
+(13,46)-(13,47)
+EMPTY
+EmptyG
+
+(13,49)-(13,50)
+EMPTY
+EmptyG
+
+(13,52)-(13,58)
+EMPTY
+EmptyG
+
+(13,60)-(13,66)
+EMPTY
+EmptyG
+
+(15,11)-(15,20)
+EMPTY
+EmptyG
+
+(15,16)-(15,20)
+EMPTY
+EmptyG
+
 (20,2)-(27,68)
 match e with
 | buildX -> x
@@ -64,6 +108,14 @@ match e with
 | Thresh (a , b , a_less , b_less) -> 0.0
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
 
+(21,13)-(21,19)
+EMPTY
+EmptyG
+
+(21,13)-(21,22)
+EMPTY
+EmptyG
+
 (21,20)-(21,22)
 x
 VarG
@@ -73,32 +125,36 @@ sin
 VarG
 
 (23,24)-(23,25)
-pi
-VarG
-
-(23,24)-(23,25)
-eval
-VarG
-
-(23,24)-(23,25)
-eval (e , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(23,24)-(23,25)
 pi *. eval (e , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
-
-(23,24)-(23,25)
-(e , x , y)
-TupleG (fromList [VarG])
-
-(24,16)-(24,44)
-x
-VarG
 
 (24,16)-(24,44)
 y
 VarG
+
+(27,34)-(27,45)
+EMPTY
+EmptyG
+
+(27,34)-(27,68)
+EMPTY
+EmptyG
+
+(27,46)-(27,68)
+EMPTY
+EmptyG
+
+(27,47)-(27,48)
+EMPTY
+EmptyG
+
+(27,50)-(27,51)
+EMPTY
+EmptyG
+
+(27,53)-(27,59)
+EMPTY
+EmptyG
 
 (27,61)-(27,67)
 0.0

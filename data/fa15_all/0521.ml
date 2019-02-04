@@ -13,13 +13,9 @@ let rec assoc (d,k,l) =
 *)
 
 (* changed spans
-(3,56)-(3,67)
-x
-VarG
-
-(3,56)-(3,67)
-y
-VarG
+(3,56)-(3,65)
+EMPTY
+EmptyG
 
 (3,56)-(3,67)
 match x with

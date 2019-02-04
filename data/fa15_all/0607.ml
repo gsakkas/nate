@@ -54,13 +54,57 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(20,9)-(20,18)
-a
-VarG
+(16,6)-(22,34)
+EMPTY
+EmptyG
 
-(20,9)-(20,18)
-x
-VarG
+(16,16)-(16,24)
+EMPTY
+EmptyG
+
+(16,16)-(16,27)
+EMPTY
+EmptyG
+
+(16,25)-(16,27)
+EMPTY
+EmptyG
+
+(17,6)-(22,34)
+EMPTY
+EmptyG
+
+(17,16)-(17,24)
+EMPTY
+EmptyG
+
+(17,16)-(17,27)
+EMPTY
+EmptyG
+
+(17,25)-(17,27)
+EMPTY
+EmptyG
+
+(18,6)-(22,34)
+EMPTY
+EmptyG
+
+(18,19)-(18,22)
+EMPTY
+EmptyG
+
+(19,6)-(22,34)
+EMPTY
+EmptyG
+
+(19,19)-(19,22)
+EMPTY
+EmptyG
+
+(20,6)-(22,34)
+EMPTY
+EmptyG
 
 (20,9)-(20,18)
 let (x1 , x2) = x in
@@ -68,12 +112,6 @@ let val1 = (a1 + x1) + x2 in
 let val2 = (x1 + x2) / 10 in
 (val2 , val1 :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(20,9)-(20,18)
-let val1 = (a1 + x1) + x2 in
-let val2 = (x1 + x2) / 10 in
-(val2 , val1 :: a2)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (20,9)-(20,22)
 let (a1 , a2) = a in
@@ -83,50 +121,62 @@ let val2 = (x1 + x2) / 10 in
 (val2 , val1 :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(20,10)-(20,12)
+EMPTY
+EmptyG
+
+(20,15)-(20,17)
+EMPTY
+EmptyG
+
+(20,21)-(20,22)
+EMPTY
+EmptyG
+
+(21,11)-(21,32)
+EMPTY
+EmptyG
+
+(21,11)-(21,41)
+EMPTY
+EmptyG
+
+(21,12)-(21,13)
+EMPTY
+EmptyG
+
+(21,15)-(21,31)
+EMPTY
+EmptyG
+
+(21,16)-(21,30)
+EMPTY
+EmptyG
+
+(21,17)-(21,19)
+EMPTY
+EmptyG
+
 (21,22)-(21,24)
 a1
 VarG
-
-(21,28)-(21,30)
-x1
-VarG
-
-(21,28)-(21,30)
-x2
-VarG
-
-(21,28)-(21,30)
-x1
-VarG
-
-(21,28)-(21,30)
-x2
-VarG
-
-(21,28)-(21,30)
-x1 + x2
-BopG VarG VarG
-
-(21,28)-(21,30)
-(x1 + x2) / 10
-BopG (BopG EmptyG EmptyG) LitG
 
 (21,28)-(21,30)
 let val2 = (x1 + x2) / 10 in
 (val2 , val1 :: a2)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
 
+(21,36)-(21,41)
+EMPTY
+EmptyG
+
+(21,37)-(21,38)
+EMPTY
+EmptyG
+
 (21,39)-(21,40)
 (val2 , val1 :: a2)
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(22,11)-(22,25)
-val1
-VarG
-
-(22,11)-(22,25)
-a2
-VarG
 
 (22,11)-(22,25)
 let base = (0 , []) in
@@ -141,5 +191,37 @@ LetG NonRec (fromList [TupleG (fromList [EmptyG])]) (LetG NonRec (fromList [Empt
 (22,11)-(22,34)
 val2
 VarG
+
+(22,15)-(22,24)
+EMPTY
+EmptyG
+
+(22,16)-(22,18)
+EMPTY
+EmptyG
+
+(22,16)-(22,23)
+EMPTY
+EmptyG
+
+(22,21)-(22,23)
+EMPTY
+EmptyG
+
+(22,29)-(22,34)
+EMPTY
+EmptyG
+
+(22,30)-(22,31)
+EMPTY
+EmptyG
+
+(22,32)-(22,33)
+EMPTY
+EmptyG
+
+(23,4)-(25,51)
+EMPTY
+EmptyG
 
 *)

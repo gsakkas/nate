@@ -64,10 +64,54 @@ let bigAdd l1 l2 =
 x :: (clone x (n - 1))
 ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])]))) Nothing
 
+(3,45)-(3,68)
+EMPTY
+EmptyG
+
+(3,49)-(3,50)
+EMPTY
+EmptyG
+
+(5,6)-(5,11)
+EMPTY
+EmptyG
+
+(5,10)-(5,11)
+EMPTY
+EmptyG
+
 (25,6)-(25,72)
 let (x1 , x2) = x in
 ([x1 + x2] , [x2])
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+
+(25,27)-(25,72)
+EMPTY
+EmptyG
+
+(25,39)-(25,40)
+EMPTY
+EmptyG
+
+(25,44)-(25,72)
+EMPTY
+EmptyG
+
+(25,56)-(25,57)
+EMPTY
+EmptyG
+
+(25,61)-(25,72)
+EMPTY
+EmptyG
+
+(25,62)-(25,63)
+EMPTY
+EmptyG
+
+(25,66)-(25,67)
+EMPTY
+EmptyG
 
 (25,69)-(25,70)
 ([x1 + x2] , [x2])
@@ -75,14 +119,6 @@ TupleG (fromList [ListG EmptyG Nothing])
 
 (25,71)-(25,72)
 x1
-VarG
-
-(26,4)-(28,51)
-x2
-VarG
-
-(26,4)-(28,51)
-x2
 VarG
 
 (26,4)-(28,51)

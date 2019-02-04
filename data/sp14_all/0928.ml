@@ -41,8 +41,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(14,16)-(14,50)
+EMPTY
+EmptyG
+
+(14,22)-(14,23)
+EMPTY
+EmptyG
+
+(14,49)-(14,50)
+EMPTY
+EmptyG
+
 (16,15)-(16,36)
 List.combine l1 l2
 AppG (fromList [VarG])
+
+(16,28)-(16,36)
+EMPTY
+EmptyG
 
 *)

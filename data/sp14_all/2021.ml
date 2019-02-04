@@ -94,9 +94,57 @@ match a with
                             l2)
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+(39,12)-(39,34)
+EMPTY
+EmptyG
+
+(39,33)-(39,34)
+EMPTY
+EmptyG
+
+(40,14)-(40,59)
+EMPTY
+EmptyG
+
+(40,15)-(40,43)
+EMPTY
+EmptyG
+
+(40,15)-(40,48)
+EMPTY
+EmptyG
+
 (40,23)-(40,40)
 a
 VarG
+
+(40,41)-(40,42)
+EMPTY
+EmptyG
+
+(40,46)-(40,48)
+EMPTY
+EmptyG
+
+(40,50)-(40,51)
+EMPTY
+EmptyG
+
+(40,50)-(40,58)
+EMPTY
+EmptyG
+
+(40,56)-(40,58)
+EMPTY
+EmptyG
+
+(40,60)-(40,61)
+EMPTY
+EmptyG
+
+(40,62)-(40,63)
+EMPTY
+EmptyG
 
 (42,28)-(42,75)
 let res =

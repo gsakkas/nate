@@ -27,10 +27,6 @@ let palindrome w =
 
 (* changed spans
 (10,19)-(10,42)
-explode w = listReverse (explode w)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(10,19)-(10,42)
 if explode w = listReverse (explode w)
 then true
 else false
@@ -38,10 +34,6 @@ IteG (BopG EmptyG EmptyG) LitG LitG
 
 (10,27)-(10,42)
 w
-VarG
-
-(10,40)-(10,41)
-explode
 VarG
 
 (10,40)-(10,41)

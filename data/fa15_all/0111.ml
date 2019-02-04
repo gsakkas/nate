@@ -15,4 +15,12 @@ let rec digitsOfInt n =
 (n mod 10) :: return
 ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
 
+(3,47)-(3,58)
+EMPTY
+EmptyG
+
+(3,59)-(3,60)
+EMPTY
+EmptyG
+
 *)

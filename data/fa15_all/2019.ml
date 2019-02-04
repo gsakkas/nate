@@ -29,19 +29,7 @@ else seen
 IteG (AppG (fromList [EmptyG])) (ConAppG (Just EmptyG) Nothing) VarG
 
 (7,39)-(7,77)
-h
-VarG
-
-(7,39)-(7,77)
 seen
 VarG
-
-(7,39)-(7,77)
-seen
-VarG
-
-(7,39)-(7,77)
-h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 *)

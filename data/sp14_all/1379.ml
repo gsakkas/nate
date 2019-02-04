@@ -13,6 +13,10 @@ let rec clone x n = if n <= 0 then [] else clone x (n - 1);;
 n
 VarG
 
+(2,43)-(2,52)
+EMPTY
+EmptyG
+
 (2,44)-(2,51)
 clone x (n - 1)
 AppG (fromList [VarG,BopG EmptyG EmptyG])

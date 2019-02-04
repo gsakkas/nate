@@ -47,33 +47,21 @@ let rec exprToString e =
 (exprToString e1 ^ ("+" ^ exprToString e2)) ^ "/2"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(17,24)-(17,41)
-(^)
-VarG
-
-(17,24)-(17,41)
-(^)
-VarG
+(17,23)-(17,66)
+EMPTY
+EmptyG
 
 (17,24)-(17,41)
 exprToString e1 ^ ("+" ^ exprToString e2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (17,44)-(17,61)
-(^)
-VarG
-
-(17,44)-(17,61)
 "+" ^ exprToString e2
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(17,44)-(17,61)
-"+"
-LitG
-
-(18,21)-(18,38)
-(^)
-VarG
+(17,65)-(17,66)
+EMPTY
+EmptyG
 
 (18,21)-(18,38)
 exprToString e1 ^ ("*" ^ exprToString e2)
@@ -84,16 +72,8 @@ AppG (fromList [AppG (fromList [EmptyG])])
 LitG
 
 (18,41)-(18,58)
-(^)
-VarG
-
-(18,41)-(18,58)
 "*" ^ exprToString e2
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(18,41)-(18,58)
-"*"
-LitG
 
 (19,28)-(19,45)
 (^)
@@ -104,15 +84,7 @@ exprToString e1 ^ ("+" ^ exprToString e2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (19,48)-(19,65)
-(^)
-VarG
-
-(19,48)-(19,65)
 "+" ^ exprToString e2
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(19,48)-(19,65)
-"+"
-LitG
 
 *)

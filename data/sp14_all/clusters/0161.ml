@@ -1,4 +1,4 @@
-AppG (fromList [VarG,LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-helper 0 (num :: xs') xs
-helper 0 (num :: accum) xs
-helper 0 (num :: accum) xs
+AppG (fromList [ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG]))) Nothing])
+List.combine (0 :: (List.rev l1))
+             (0 :: (List.rev l2))
+List.rev (0 :: (List.rev a))

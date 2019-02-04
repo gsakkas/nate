@@ -43,4 +43,8 @@ LitG
 List.map f l
 AppG (fromList [VarG])
 
+(13,32)-(13,37)
+EMPTY
+EmptyG
+
 *)

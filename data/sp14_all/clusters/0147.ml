@@ -1,7 +1,16 @@
-AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
-padZero (0 :: l1) (0 :: l2)
-List.rev (0 :: l)
-List.combine (0 :: l1)
-             (0 :: l2)
-List.combine (0 :: l1)
-             (0 :: l2)
+CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
+match i with
+| 0 -> [0]
+| 1 -> l
+| _ -> helper (i - 1) l
+              (bigAdd acc l)
+match i with
+| 0 -> [0]
+| 1 -> l
+| _ -> helper (i - 1) l
+              (bigAdd acc l)
+match i with
+| 0 -> [0]
+| 1 -> l
+| _ -> helper (i - 1) l
+              (bigAdd acc l)

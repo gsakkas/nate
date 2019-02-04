@@ -72,10 +72,6 @@ let rec build (rand,depth) =
 
 (* changed spans
 (29,19)-(29,21)
-buildX
-VarG
-
-(29,19)-(29,21)
 buildX ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 

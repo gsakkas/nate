@@ -1,2 +1,2 @@
-BopG (UopG EmptyG) (AppG (fromList [EmptyG]))
-(- 1.0) *. eval (e1 , x , y)
+ConAppG (Just (TupleG (fromList [VarG,BopG VarG (BopG VarG LitG)]))) Nothing
+(h + (sum mod 10)) :: t

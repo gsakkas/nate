@@ -1,107 +1,117 @@
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
-match l with
-| [] -> []
-| hd :: tl -> mulByDigit i
-                         tl @ [hd * i]
-match l with
-| [] -> []
-| x :: xs' -> listReverse xs' @ [x]
-match l with
-| [] -> []
-| head :: [] -> [head]
-| head :: tail -> listReverse tail @ [head]
-match l with
-| [] -> []
-| h :: tail -> listReverse tail @ [h]
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-match n with
-| 0 -> []
-| 1 -> [0]
-| x -> [0] @ listZeros (n - 1)
-match n with
-| 0 -> []
-| 1 -> [0]
-| x -> [0] @ listZeros (n - 1)
-match t with
-| [] -> [remainder i h]
-| h' :: t' -> [h' * i] @ mulByDigit i
-                                    t'
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
-match l with
-| [] -> []
-| x :: x' :: x'' -> [(x * i) / 10] @ ([((x * i) mod 10) + x'] @ (mulByDigit i
-                                                                            [x'] @ x''))
+CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+| 2 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 3 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| _ -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match rand (0 , 7) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+| 2 -> buildSine (build (rand , depth - 1))
+| 3 -> buildCosine (build (rand , depth - 1))
+| 4 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 6 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match rand (0 , 7) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+| 2 -> buildSine (build (rand , depth - 1))
+| 3 -> buildCosine (build (rand , depth - 1))
+| 4 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 6 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match rand (0 , 7) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+| 2 -> buildSine (build (rand , depth - 1))
+| 3 -> buildCosine (build (rand , depth - 1))
+| 4 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 6 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match rand (0 , 1) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+match rand (0 , 7) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+| 2 -> buildSine (build (rand , depth - 1))
+| 3 -> buildCosine (build (rand , depth - 1))
+| 4 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 6 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match rand (0 , 7) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+| 2 -> buildSine (build (rand , depth - 1))
+| 3 -> buildCosine (build (rand , depth - 1))
+| 4 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 6 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+| _ -> buildX ()
+match rand (0 , 7) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+| 2 -> buildSine (build (rand , depth - 1))
+| 3 -> buildCosine (build (rand , depth - 1))
+| 4 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 6 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+| _ -> buildX ()
+match rand (0 , 1) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+match rand (0 , 1) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+match rand (0 , 1) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+match rand (0 , 1) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+match rand (0 , 1) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+match rand (0 , 1) with
+| 0 -> buildX ()
+| 1 -> buildY ()
+match rand (1 , 2) with
+| 1 -> buildX ()
+| 2 -> buildY ()
+match rand (1 , 5) with
+| 1 -> buildSine (build (rand , depth - 1))
+| 2 -> buildCosine (build (rand , depth - 1))
+| 3 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 4 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match rand (1 , 2) with
+| 1 -> buildX ()
+| 2 -> buildY ()
+match rand (1 , 5) with
+| 1 -> buildSine (build (rand , depth - 1))
+| 2 -> buildCosine (build (rand , depth - 1))
+| 3 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 4 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth - 1))
+| 1 -> buildCosine (build (rand , depth - 1))
+| 2 -> buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+| 3 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+| _ -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))

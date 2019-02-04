@@ -25,6 +25,10 @@ AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 (@)
 VarG
 
+(6,31)-(6,37)
+EMPTY
+EmptyG
+
 (6,39)-(6,43)
 [head]
 ListG VarG Nothing

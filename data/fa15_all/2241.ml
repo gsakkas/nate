@@ -61,6 +61,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(26,59)-(26,67)
+EMPTY
+EmptyG
+
 (26,60)-(26,66)
 [0 ; 0]
 ListG LitG Nothing

@@ -72,6 +72,10 @@ bigAdd total
        (mulByDigit (i - 1) l)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(31,34)-(31,66)
+EMPTY
+EmptyG
+
 (31,35)-(31,40)
 bigAdd
 VarG
@@ -83,5 +87,9 @@ AppG (fromList [VarG,BopG EmptyG EmptyG])
 (31,55)-(31,56)
 i - 1
 BopG VarG LitG
+
+(31,61)-(31,66)
+EMPTY
+EmptyG
 
 *)

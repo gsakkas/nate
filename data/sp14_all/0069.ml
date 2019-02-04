@@ -11,13 +11,25 @@ let pipe fs =
 *)
 
 (* changed spans
+(3,12)-(3,21)
+EMPTY
+EmptyG
+
+(3,14)-(3,21)
+EMPTY
+EmptyG
+
+(3,18)-(3,19)
+EMPTY
+EmptyG
+
+(3,18)-(3,21)
+EMPTY
+EmptyG
+
 (3,20)-(3,21)
 let an = a in x
 LetG NonRec (fromList [VarG]) VarG
-
-(3,25)-(3,67)
-a
-VarG
 
 (3,25)-(3,67)
 x

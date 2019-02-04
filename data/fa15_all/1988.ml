@@ -24,6 +24,18 @@ let rec sepConcat sep sl =
 a
 VarG
 
+(6,29)-(6,46)
+EMPTY
+EmptyG
+
+(6,30)-(6,39)
+EMPTY
+EmptyG
+
+(6,40)-(6,43)
+EMPTY
+EmptyG
+
 (6,44)-(6,45)
 x
 VarG
@@ -31,6 +43,14 @@ VarG
 (7,17)-(7,18)
 sep
 VarG
+
+(8,14)-(8,22)
+EMPTY
+EmptyG
+
+(8,14)-(8,42)
+EMPTY
+EmptyG
 
 (8,23)-(8,42)
 t

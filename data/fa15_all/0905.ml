@@ -50,6 +50,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(16,16)-(16,24)
+EMPTY
+EmptyG
+
+(16,16)-(16,44)
+EMPTY
+EmptyG
+
 (16,25)-(16,44)
 match x with
 | (l1e , l2e) -> match a with
@@ -59,89 +67,23 @@ match x with
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
 
 (17,4)-(19,51)
-x
-VarG
-
-(17,4)-(19,51)
-a
-VarG
-
-(17,4)-(19,51)
-l1e
-VarG
-
-(17,4)-(19,51)
-l2e
-VarG
-
-(17,4)-(19,51)
-carry
-VarG
-
-(17,4)-(19,51)
-num
-VarG
-
-(17,4)-(19,51)
-(@)
-VarG
-
-(17,4)-(19,51)
-list
-VarG
-
-(17,4)-(19,51)
-[7] @ list
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(17,4)-(19,51)
-l1e + l2e
-BopG VarG VarG
-
-(17,4)-(19,51)
-(l1e + l2e) + carry
-BopG (BopG EmptyG EmptyG) VarG
-
-(17,4)-(19,51)
-num mod 9
-BopG VarG LitG
-
-(17,4)-(19,51)
-9
-LitG
-
-(17,4)-(19,51)
-7
-LitG
-
-(17,4)-(19,51)
-let num =
-  (l1e + l2e) + carry in
-(num mod 9 , [7] @ list)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
-(17,4)-(19,51)
 match a with
 | (carry , list) -> (let num =
                        (l1e + l2e) + carry in
                      (num mod 9 , [7] @ list))
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
-(17,4)-(19,51)
-(num mod 9 , [7] @ list)
-TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
+(17,15)-(17,23)
+EMPTY
+EmptyG
 
-(17,4)-(19,51)
-[7]
-ListG LitG Nothing
+(17,15)-(17,43)
+EMPTY
+EmptyG
 
 (17,24)-(17,43)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(18,4)-(19,51)
-0
-LitG
 
 (18,4)-(19,51)
 []
@@ -150,5 +92,25 @@ ListG EmptyG Nothing
 (20,18)-(20,64)
 (padZero l1 l2 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(20,35)-(20,63)
+EMPTY
+EmptyG
+
+(20,39)-(20,41)
+EMPTY
+EmptyG
+
+(20,39)-(20,46)
+EMPTY
+EmptyG
+
+(20,52)-(20,54)
+EMPTY
+EmptyG
+
+(20,60)-(20,62)
+EMPTY
+EmptyG
 
 *)

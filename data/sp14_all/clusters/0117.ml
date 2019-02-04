@@ -1,8 +1,6 @@
-BopG VarG (ListG EmptyG Nothing)
-carry <> []
-carry <> []
-carry <> []
-carry <> []
-t = []
-t = []
-t = []
+AppG (fromList [ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+List.rev (h1 :: t1)
+List.rev (h1 :: t1)
+listReverse (hd :: l)
+listReverse (h :: l)
+listReverse (h :: l)

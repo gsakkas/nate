@@ -65,25 +65,17 @@ match x with
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (16,12)-(16,13)
-a
-VarG
-
-(16,12)-(16,13)
 match a with
 | (x , y) -> x
 CaseG VarG (fromList [(Nothing,VarG)])
 
+(17,19)-(17,21)
+EMPTY
+EmptyG
+
 (18,39)-(18,73)
 (new_carry , digit :: y)
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(18,42)-(18,51)
-x
-VarG
-
-(18,42)-(18,51)
-((carry + addend_a) + addend_b) / 10
-BopG (BopG EmptyG EmptyG) LitG
 
 (18,42)-(18,51)
 let new_carry =
@@ -104,49 +96,37 @@ match x with
                             | (x , y) -> (new_carry , digit :: y))
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
+(18,43)-(18,45)
+EMPTY
+EmptyG
+
+(18,48)-(18,50)
+EMPTY
+EmptyG
+
+(18,54)-(18,55)
+EMPTY
+EmptyG
+
+(18,61)-(18,69)
+EMPTY
+EmptyG
+
+(18,61)-(18,73)
+EMPTY
+EmptyG
+
+(18,62)-(18,63)
+EMPTY
+EmptyG
+
 (18,66)-(18,68)
 carry
 VarG
 
-(18,72)-(18,73)
-addend_a
-VarG
-
-(18,72)-(18,73)
-addend_b
-VarG
-
-(18,72)-(18,73)
-carry
-VarG
-
-(18,72)-(18,73)
-addend_a
-VarG
-
-(18,72)-(18,73)
-addend_b
-VarG
-
-(18,72)-(18,73)
-(carry + addend_a) + addend_b
-BopG (BopG EmptyG EmptyG) VarG
-
-(18,72)-(18,73)
-((carry + addend_a) + addend_b) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(18,72)-(18,73)
-carry + addend_a
-BopG VarG VarG
-
-(18,72)-(18,73)
-10
-LitG
-
-(18,72)-(18,73)
-10
-LitG
+(18,70)-(18,71)
+EMPTY
+EmptyG
 
 (18,72)-(18,73)
 let digit =
@@ -155,42 +135,13 @@ match a with
 | (x , y) -> (new_carry , digit :: y)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(18,72)-(18,73)
-match a with
-| (x , y) -> (new_carry , digit :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(19,4)-(20,71)
-new_carry
-VarG
-
-(19,4)-(20,71)
-digit
-VarG
-
 (19,4)-(20,71)
 y
 VarG
 
-(19,4)-(20,71)
-digit :: y
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(19,15)-(19,17)
-0
-LitG
-
 (19,15)-(19,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(20,15)-(20,17)
-List.rev
-VarG
-
-(20,15)-(20,17)
-List.combine
-VarG
 
 (20,15)-(20,17)
 List.combine l1 l2

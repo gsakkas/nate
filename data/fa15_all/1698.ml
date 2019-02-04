@@ -57,17 +57,9 @@ let rec eval (e,x,y) =
 1.0 *. x
 BopG LitG VarG
 
-(15,13)-(15,14)
-1.0
-LitG
-
 (16,13)-(16,14)
 1.0 *. y
 BopG LitG VarG
-
-(16,13)-(16,14)
-1.0
-LitG
 
 (19,23)-(19,67)
 (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0

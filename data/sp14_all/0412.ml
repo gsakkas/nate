@@ -22,11 +22,19 @@ let w =
 wwhile (w , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
+(4,21)-(4,65)
+EMPTY
+EmptyG
+
 (4,28)-(4,65)
 fun b' ->
   (let fb = f b' in
    (fb , fb = b'))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
+
+(4,40)-(4,41)
+EMPTY
+EmptyG
 
 (4,45)-(4,64)
 b'
@@ -37,19 +45,7 @@ b'
 VarG
 
 (4,62)-(4,63)
-wwhile
-VarG
-
-(4,62)-(4,63)
-w
-VarG
-
-(4,62)-(4,63)
 wwhile (w , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(4,62)-(4,63)
-(w , b)
-TupleG (fromList [VarG])
 
 *)

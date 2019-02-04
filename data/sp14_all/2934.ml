@@ -56,6 +56,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(17,6)-(23,11)
+EMPTY
+EmptyG
+
 (18,8)-(22,55)
 let newc =
   match x with
@@ -76,13 +80,13 @@ match x with
              else 0
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(21,17)-(21,55)
+EMPTY
+EmptyG
+
 (21,21)-(21,54)
 0
 LitG
-
-(21,22)-(21,48)
-x
-VarG
 
 (21,22)-(21,48)
 let digit =
@@ -91,11 +95,6 @@ let digit =
 match a with
 | (o , p) -> (newc , digit :: p)
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(21,22)-(21,48)
-match x with
-| (f , g) -> (f + g) + (carry mod 10)
-CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG)])
 
 (21,52)-(21,53)
 match a with
@@ -109,6 +108,38 @@ VarG
 (22,18)-(22,19)
 newc
 VarG
+
+(22,22)-(22,48)
+EMPTY
+EmptyG
+
+(22,23)-(22,30)
+EMPTY
+EmptyG
+
+(22,24)-(22,25)
+EMPTY
+EmptyG
+
+(22,28)-(22,29)
+EMPTY
+EmptyG
+
+(22,33)-(22,47)
+EMPTY
+EmptyG
+
+(22,34)-(22,39)
+EMPTY
+EmptyG
+
+(22,44)-(22,46)
+EMPTY
+EmptyG
+
+(22,52)-(22,53)
+EMPTY
+EmptyG
 
 (24,4)-(26,51)
 p

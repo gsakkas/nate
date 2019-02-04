@@ -51,6 +51,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(18,16)-(18,24)
+EMPTY
+EmptyG
+
+(18,16)-(18,44)
+EMPTY
+EmptyG
+
 (18,25)-(18,44)
 match a with
 | (o , []) -> (o , [x])
@@ -58,90 +66,30 @@ match a with
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 (19,4)-(21,51)
-a
-VarG
-
-(19,4)-(21,51)
-o
-VarG
-
-(19,4)-(21,51)
-x
-VarG
-
-(19,4)-(21,51)
-o
-VarG
-
-(19,4)-(21,51)
-x
-VarG
-
-(19,4)-(21,51)
-l
-VarG
-
-(19,4)-(21,51)
 (o , [x])
 TupleG (fromList [VarG,ListG EmptyG Nothing])
 
-(19,4)-(21,51)
-(o , x :: l)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+(19,15)-(19,23)
+EMPTY
+EmptyG
 
-(19,4)-(21,51)
-x :: l
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(19,4)-(21,51)
-[x]
-ListG VarG Nothing
+(19,15)-(19,43)
+EMPTY
+EmptyG
 
 (19,24)-(19,43)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
 (20,4)-(21,51)
-0
-LitG
-
-(20,4)-(21,51)
 []
 ListG EmptyG Nothing
-
-(20,15)-(20,23)
-a
-VarG
-
-(20,15)-(20,23)
-b
-VarG
-
-(20,15)-(20,23)
-List.map
-VarG
-
-(20,15)-(20,23)
-combine
-VarG
-
-(20,15)-(20,23)
-fun (a , b) -> a + b
-LamG (BopG EmptyG EmptyG)
 
 (20,15)-(20,23)
 List.map combine
          (List.rev (List.combine l1
                                  l2))
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(20,15)-(20,23)
-List.rev (List.combine l1 l2)
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(20,15)-(20,23)
-a + b
-BopG VarG VarG
 
 (20,15)-(20,42)
 let combine =

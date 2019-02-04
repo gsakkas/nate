@@ -85,9 +85,41 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(4,10)-(4,28)
+EMPTY
+EmptyG
+
+(4,12)-(4,28)
+EMPTY
+EmptyG
+
+(4,16)-(4,23)
+EMPTY
+EmptyG
+
+(4,16)-(4,28)
+EMPTY
+EmptyG
+
+(4,17)-(4,18)
+EMPTY
+EmptyG
+
+(4,21)-(4,22)
+EMPTY
+EmptyG
+
+(4,26)-(4,28)
+EMPTY
+EmptyG
+
 (36,26)-(36,31)
 ((h + x1) + x2) / 10
 BopG (BopG EmptyG EmptyG) LitG
+
+(36,26)-(36,47)
+EMPTY
+EmptyG
 
 (37,27)-(37,57)
 10

@@ -1,4 +1,13 @@
-IteG (BopG EmptyG EmptyG) VarG VarG
-if a > b then a else b
-if a < b then b else a
-if a < b then b else a
+LetG NonRec (fromList [LamG EmptyG]) (IteG EmptyG EmptyG EmptyG)
+let int =
+  fun list ->
+    fun digInt -> n mod 10 in
+if n > 0
+then digitsOfInt (n / 10)
+else []
+let int =
+  fun list ->
+    fun digInt -> n mod 10 in
+if n > 0
+then digitsOfInt (n / 10)
+else []

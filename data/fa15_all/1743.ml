@@ -16,8 +16,16 @@ let fixpoint (f,b) = wwhile ((let f' b = ((f b), ((f b) != b)) in f'), b);;
 *)
 
 (* changed spans
+(6,30)-(6,47)
+EMPTY
+EmptyG
+
 (6,31)-(6,42)
 f b <> b
 BopG (AppG (fromList [EmptyG])) VarG
+
+(6,38)-(6,41)
+EMPTY
+EmptyG
 
 *)

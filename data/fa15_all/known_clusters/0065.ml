@@ -1,24 +1,21 @@
-BopG LitG VarG
-0 - n
-0 - n
-1.0 *. x
-1.0 *. y
-1.0 *. x
-1.0 *. y
-1.0 *. x
-1.0 *. y
-10 * o
-10 * o
-10 * o
-10 * o
-10 * o
-1 + h'
-1 + h'
-1 + h'
-1 + h'
-1 + h'
-1 + h'
-1 + h'
-1 + h'
-1 + h'
-1 + h'
+TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(val2 , val1 :: a2)
+(o , x :: l)
+(o , x :: l)
+(o , x :: l)

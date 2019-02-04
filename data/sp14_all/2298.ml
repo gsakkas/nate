@@ -57,4 +57,12 @@ TupleG (fromList [ListG EmptyG Nothing])
 []
 ListG EmptyG Nothing
 
+(21,15)-(21,23)
+EMPTY
+EmptyG
+
+(21,16)-(21,18)
+EMPTY
+EmptyG
+
 *)

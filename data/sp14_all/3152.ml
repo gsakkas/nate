@@ -68,17 +68,13 @@ match x with
                                         | (a1 , a2) -> a2))
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(23,68)-(23,69)
-d1
-VarG
+(23,53)-(23,64)
+EMPTY
+EmptyG
 
-(23,68)-(23,69)
-d2
-VarG
-
-(23,68)-(23,69)
-d1 + d2
-BopG VarG VarG
+(23,61)-(23,63)
+EMPTY
+EmptyG
 
 (23,68)-(23,69)
 match a with

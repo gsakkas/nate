@@ -1,115 +1,79 @@
-LamG (AppG (fromList [EmptyG]))
-fun x -> a x
-fun x -> x a
-fun a -> x a
-fun a -> x a
-fun n -> digitsOfInt (abs n)
-fun n -> digitsOfInt (abs n)
-fun n -> digitsOfInt (abs n)
-fun n -> cloneHelper x n
-fun p_pre -> x (a p_pre)
-fun n -> x n
-fun n -> x (a n)
-fun n -> x (a n)
-fun n -> x (a n)
-fun n -> x (a n)
-fun n -> x (a n)
-fun n -> x (a n)
-fun n -> x (a n)
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun g -> x (a g)
-fun y -> x (a y)
-fun q -> x q
-fun q -> x q
-fun q -> x q
-fun q -> x q
-fun a -> x a
-fun a -> x a
-fun x -> a x
-fun x -> a ^ (sep ^ x)
-fun l ->
-  int_of_string (sepConcat ""
-                           (List.map string_of_int l))
-fun x -> a ^ (sep ^ x)
-fun l ->
-  int_of_string (sepConcat ""
-                           (List.map string_of_int l))
-fun l ->
-  int_of_string (sepConcat ""
-                           (List.map string_of_int l))
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun x' -> x (a x')
-fun b -> x (a b)
-fun b -> x (a b)
-fun f' -> x (a f')
-fun y -> x (a y)
-fun y -> x (a y)
-fun z -> x (a z)
-fun b -> x b
-fun b -> x b
-fun b -> x b
-fun b -> x b
-fun b -> x b
-fun b -> x b
-fun b -> x b
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun y -> x (a y)
-fun y -> x (a y)
-fun a -> x a
-fun y -> x (a y)
-fun y -> x (a y)
-fun c -> x (a c)
-fun b -> x (a b)
-fun b -> x (a b)
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun y -> x (a y)
-fun y -> x (a y)
-fun l ->
-  List.map string_of_int
-fun x -> x a
-fun x -> x a
-fun a -> a x
-fun g -> f a x
-fun a -> a x
-fun g -> f a x
-fun y -> x (a y)
-fun y -> x (a y)
-fun y -> x (a y)
-fun y -> x (a y)
-fun y -> x (a y)
-fun y -> x (a y)
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun a -> x a
-fun x -> a x
-fun a -> x a
-fun y -> x (a y)
-fun y -> x (a y)
+LamG VarG
+fun y -> y
+fun y -> y
+fun y -> y
+fun y -> y
+fun y -> y
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun n -> n
+fun a -> x
+fun fs -> fs
+fun fs -> fs
+fun fs -> fs
+fun a -> a
+fun fs -> fs
+fun k -> k
+fun k -> k
+fun fs -> fs
+fun fs -> fs
+fun fs -> fs
+fun x -> x
+fun x -> x
+fun x -> x
+fun x -> x
+fun x -> x
+fun x -> x
+fun i -> i
+fun i -> i
+fun x -> x
+fun b -> b
+fun y -> y
+fun x -> x
+fun x -> x
+fun x -> x
+fun x -> x
+fun x -> x
+fun x -> x
+fun y -> y
+fun x -> x
+fun x -> x
+fun x -> x
+fun x -> x
+fun x -> x
+fun a -> a
+fun a -> a
+fun a -> a
+fun a -> f
+fun x -> x
+fun x -> x
+fun a -> a
+fun x -> x
+fun f -> f
+fun a -> a
+fun f -> f
+fun f -> f
+fun f -> f
+fun x -> x
+fun y -> y
+fun y -> y
+fun y -> y
+fun y -> y
+fun y -> y
+fun y -> y
+fun y -> y
+fun y -> y
+fun i -> i
+fun i -> i
+fun i -> i
+fun y -> y
+fun y -> y

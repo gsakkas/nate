@@ -27,41 +27,6 @@ let rec mulByDigit i l =
 
 (* changed spans
 (3,2)-(10,15)
-b
-VarG
-
-(3,2)-(10,15)
-a
-VarG
-
-(3,2)-(10,15)
-a
-VarG
-
-(3,2)-(10,15)
-hd
-VarG
-
-(3,2)-(10,15)
-fun a ->
-  fun b ->
-    match b with
-    | [] -> [a]
-    | hd :: tl -> [a + hd]
-LamG (LamG EmptyG)
-
-(3,2)-(10,15)
-fun b ->
-  match b with
-  | [] -> [a]
-  | hd :: tl -> [a + hd]
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(3,2)-(10,15)
-a + hd
-BopG VarG VarG
-
-(3,2)-(10,15)
 let comb =
   fun a ->
     fun b ->
@@ -82,20 +47,6 @@ let rec mBDhelper =
 mBDhelper i l
 LetG NonRec (fromList [LamG EmptyG]) (LetG Rec (fromList [EmptyG]) EmptyG)
 
-(3,2)-(10,15)
-match b with
-| [] -> [a]
-| hd :: tl -> [a + hd]
-CaseG VarG (fromList [(Nothing,ListG EmptyG Nothing)])
-
-(3,2)-(10,15)
-[a]
-ListG VarG Nothing
-
-(3,2)-(10,15)
-[a + hd]
-ListG (BopG EmptyG EmptyG) Nothing
-
 (7,11)-(7,26)
 (hd * i) - 9
 BopG (BopG EmptyG EmptyG) LitG
@@ -108,14 +59,14 @@ LitG
 (hd * i) / 10
 BopG (BopG EmptyG EmptyG) LitG
 
+(8,34)-(8,70)
+EMPTY
+EmptyG
+
 (8,35)-(8,50)
 comb ((hd * i) mod 10)
      (mBDhelper i tl)
 AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-
-(8,36)-(8,44)
-comb
-VarG
 
 (8,36)-(8,44)
 (hd * i) mod 10

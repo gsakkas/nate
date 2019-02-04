@@ -55,6 +55,26 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(21,6)-(21,63)
+EMPTY
+EmptyG
+
+(21,9)-(21,16)
+EMPTY
+EmptyG
+
+(21,9)-(21,20)
+EMPTY
+EmptyG
+
+(21,10)-(21,11)
+EMPTY
+EmptyG
+
+(21,14)-(21,15)
+EMPTY
+EmptyG
+
 (21,19)-(21,20)
 let (s , t) = a in
 (((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
@@ -63,6 +83,10 @@ LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 (21,26)-(21,45)
 a
 VarG
+
+(21,27)-(21,28)
+EMPTY
+EmptyG
 
 (21,30)-(21,44)
 ((i + j) + s) / 10
@@ -75,6 +99,10 @@ BopG VarG VarG
 (21,41)-(21,43)
 s
 VarG
+
+(21,51)-(21,63)
+EMPTY
+EmptyG
 
 (21,52)-(21,53)
 (((i + j) + s) mod 10) :: t
@@ -89,20 +117,8 @@ i + j
 BopG VarG VarG
 
 (22,4)-(24,51)
-s
-VarG
-
-(22,4)-(24,51)
 t
 VarG
-
-(22,4)-(24,51)
-10
-LitG
-
-(22,15)-(22,17)
-0
-LitG
 
 (22,15)-(22,17)
 (0 , [])

@@ -79,10 +79,6 @@ match e with
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 
 (29,22)-(29,34)
-(^)
-VarG
-
-(29,22)-(29,34)
 exprToString i
 AppG (fromList [VarG])
 
@@ -95,10 +91,6 @@ i
 VarG
 
 (29,38)-(29,41)
-(^)
-VarG
-
-(29,38)-(29,41)
 "*" ^ exprToString i
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
@@ -106,13 +98,9 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 exprToString i
 AppG (fromList [VarG])
 
-(30,27)-(30,39)
-(^)
-VarG
-
-(30,27)-(30,39)
-exprToString i1
-AppG (fromList [VarG])
+(29,55)-(29,57)
+EMPTY
+EmptyG
 
 (30,27)-(30,39)
 exprToString i1 ^ ("^" ^ exprToString i2)
@@ -120,10 +108,6 @@ AppG (fromList [AppG (fromList [EmptyG])])
 
 (30,27)-(30,62)
 i
-VarG
-
-(30,43)-(30,46)
-(^)
 VarG
 
 (30,43)-(30,46)

@@ -11,9 +11,17 @@ let rec clone x n =
 *)
 
 (* changed spans
+(3,45)-(3,66)
+EMPTY
+EmptyG
+
 (3,47)-(3,48)
 x :: (clone x (n - 1))
 ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])]))) Nothing
+
+(3,49)-(3,66)
+EMPTY
+EmptyG
 
 (3,59)-(3,60)
 n - 1

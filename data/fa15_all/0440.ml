@@ -27,6 +27,10 @@ LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 b
 VarG
 
+(6,38)-(6,40)
+EMPTY
+EmptyG
+
 (6,41)-(6,42)
 f
 VarG

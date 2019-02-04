@@ -64,6 +64,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(25,31)-(25,61)
+EMPTY
+EmptyG
+
+(25,32)-(25,36)
+EMPTY
+EmptyG
+
 (25,38)-(25,60)
 let (_ , asd4) =
   padZero asd3 (asd2 :: b) in
@@ -74,20 +82,16 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 padZero asd3 (asd2 :: b)
 AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
+(25,47)-(25,59)
+EMPTY
+EmptyG
+
 (25,54)-(25,58)
 asd2 :: b
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (26,11)-(26,30)
 b
-VarG
-
-(26,12)-(26,13)
-asd3
-VarG
-
-(26,12)-(26,13)
-asd4
 VarG
 
 (26,12)-(26,13)

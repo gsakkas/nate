@@ -17,6 +17,10 @@ let fixpoint (f,b) = wwhile ((fun b  -> ((f b), (b != (f b)))), b);;
 *)
 
 (* changed spans
+(6,21)-(6,68)
+EMPTY
+EmptyG
+
 (6,30)-(6,63)
 (fun b ->
    (f b , b <> f b) , b)

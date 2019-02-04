@@ -23,6 +23,10 @@ let stringOfList f l = sepConcat "; " (List.map f l);;
 *)
 
 (* changed spans
+(9,21)-(9,52)
+EMPTY
+EmptyG
+
 (9,40)-(9,52)
 List.map f l
 AppG (fromList [VarG])

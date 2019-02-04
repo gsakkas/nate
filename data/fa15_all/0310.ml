@@ -11,9 +11,9 @@ let pipe fs =
 *)
 
 (* changed spans
-(3,18)-(3,19)
-x
-VarG
+(3,14)-(3,21)
+EMPTY
+EmptyG
 
 (3,18)-(3,19)
 a n

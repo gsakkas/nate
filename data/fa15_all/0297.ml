@@ -11,12 +11,12 @@ let pipe fs =
 
 (* changed spans
 (2,26)-(2,27)
-n
-VarG
-
-(2,26)-(2,27)
 fun n -> n
 LamG VarG
+
+(2,28)-(2,29)
+EMPTY
+EmptyG
 
 (2,44)-(2,46)
 fun n -> n

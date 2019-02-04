@@ -43,6 +43,10 @@ VarG
 accu
 VarG
 
+(9,30)-(12,66)
+EMPTY
+EmptyG
+
 (10,2)-(12,66)
 match n with
 | 0 -> 0
@@ -56,5 +60,17 @@ LitG
 (12,29)-(12,66)
 sumList (digitsOfInt n)
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(12,54)-(12,65)
+EMPTY
+EmptyG
+
+(12,55)-(12,60)
+EMPTY
+EmptyG
+
+(12,63)-(12,64)
+EMPTY
+EmptyG
 
 *)

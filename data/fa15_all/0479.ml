@@ -32,9 +32,9 @@ let rec additivePersistence n =
 sumList (digits n)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(11,76)-(11,77)
-digits
-VarG
+(11,61)-(11,77)
+EMPTY
+EmptyG
 
 (11,76)-(11,77)
 digits n

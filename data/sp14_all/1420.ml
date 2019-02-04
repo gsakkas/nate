@@ -33,10 +33,6 @@ BopG VarG LitG
 LitG
 
 (5,9)-(5,12)
-n
-VarG
-
-(5,9)-(5,12)
 match n with
 | 0 -> [0]
 | _ -> digitsOfInt (n / 10) @ [n mod 10]

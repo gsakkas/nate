@@ -1,5 +1,2 @@
-AppG (fromList [VarG,AppG (fromList [EmptyG]),ConAppG (Just EmptyG) Nothing])
-helper ((h , List.hd lt2) :: curList)
-       t (List.tl lt2)
-helper ((h , List.hd lt2) :: curList)
-       t (List.tl lt2)
+LetG NonRec (fromList [VarG]) (ListG EmptyG Nothing)
+let x :: x' = l in [x * i]

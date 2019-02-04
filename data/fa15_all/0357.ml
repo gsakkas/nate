@@ -55,6 +55,18 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(11,20)-(11,28)
+EMPTY
+EmptyG
+
+(11,27)-(11,28)
+EMPTY
+EmptyG
+
+(13,14)-(13,24)
+EMPTY
+EmptyG
+
 (20,15)-(20,18)
 (0 , depth)
 TupleG (fromList [VarG,LitG])
@@ -62,10 +74,6 @@ TupleG (fromList [VarG,LitG])
 (21,2)-(26,46)
 depth
 VarG
-
-(21,2)-(26,46)
-0
-LitG
 
 (22,31)-(22,37)
 buildX ()
@@ -75,10 +83,6 @@ AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 
-(22,43)-(22,49)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
 (24,6)-(26,46)
 ()
 ConAppG Nothing (Just (TApp "unit" []))
@@ -86,5 +90,13 @@ ConAppG Nothing (Just (TApp "unit" []))
 (25,36)-(25,37)
 depth
 VarG
+
+(26,11)-(26,22)
+EMPTY
+EmptyG
+
+(26,23)-(26,46)
+EMPTY
+EmptyG
 
 *)

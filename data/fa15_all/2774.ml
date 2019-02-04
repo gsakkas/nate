@@ -90,6 +90,14 @@ bigAdd (mulByDigit (i - 1) l)
        l
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(40,39)-(40,67)
+EMPTY
+EmptyG
+
+(40,40)-(40,64)
+EMPTY
+EmptyG
+
 (40,41)-(40,55)
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
@@ -97,5 +105,9 @@ AppG (fromList [VarG,BopG EmptyG EmptyG])
 (40,53)-(40,54)
 i - 1
 BopG VarG LitG
+
+(40,58)-(40,63)
+EMPTY
+EmptyG
 
 *)

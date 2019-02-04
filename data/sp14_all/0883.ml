@@ -15,9 +15,17 @@ let sqsum xs =
 a * a
 BopG VarG VarG
 
+(3,14)-(3,26)
+EMPTY
+EmptyG
+
 (3,16)-(3,17)
 (a * a) + x
 BopG (BopG EmptyG EmptyG) VarG
+
+(3,18)-(3,26)
+EMPTY
+EmptyG
 
 (3,19)-(3,20)
 a

@@ -23,20 +23,32 @@ let rec digitalRoot n =
 *)
 
 (* changed spans
+(7,20)-(8,64)
+EMPTY
+EmptyG
+
+(8,2)-(8,64)
+EMPTY
+EmptyG
+
+(8,8)-(8,14)
+EMPTY
+EmptyG
+
+(8,8)-(8,16)
+EMPTY
+EmptyG
+
+(8,15)-(8,16)
+EMPTY
+EmptyG
+
 (8,33)-(8,34)
 fun xs ->
   match xs with
   | [] -> 0
   | h :: t -> h + sumList t
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(8,45)-(8,64)
-xs
-VarG
-
-(8,45)-(8,64)
-0
-LitG
 
 (8,45)-(8,64)
 match xs with

@@ -1,11 +1,2 @@
-LetG NonRec (fromList [IteG EmptyG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let sum =
-  if carry = 1
-  then getTail (getSum a)
-  else getSum a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + carry in
-if digit > 9
-then (1 , 1 :: ((digit - 10) :: sum))
-else (0 , digit :: sum)
+TupleG (fromList [BopG EmptyG EmptyG])
+(sum / 10 , sum mod 10)

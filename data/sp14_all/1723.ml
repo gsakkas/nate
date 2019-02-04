@@ -15,4 +15,8 @@ let rec digitsOfInt n =
 [n mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
 
+(3,38)-(3,60)
+EMPTY
+EmptyG
+
 *)

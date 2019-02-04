@@ -83,6 +83,10 @@ let rec mulByDigit i l =
 [0]
 ListG LitG Nothing
 
+(38,28)-(38,67)
+EMPTY
+EmptyG
+
 (38,29)-(38,39)
 bigAdd l (mulByDigit (i - 1)
                      l)
@@ -91,5 +95,9 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 (38,41)-(38,66)
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
+
+(38,53)-(38,65)
+EMPTY
+EmptyG
 
 *)

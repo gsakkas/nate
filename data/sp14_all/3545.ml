@@ -53,6 +53,10 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(19,71)-(19,72)
+EMPTY
+EmptyG
+
 (20,23)-(20,41)
 eval (ex1 , x , y) *. eval (ex2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))

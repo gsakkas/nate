@@ -67,13 +67,17 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(30,10)-(30,77)
+EMPTY
+EmptyG
+
+(30,11)-(30,48)
+EMPTY
+EmptyG
+
 (30,12)-(30,34)
 (eval (e1 , x , y) +. eval (e2 , x , y)) +. (eval (e3 , x , y) /. pi)
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
-
-(30,13)-(30,17)
-eval (e1 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
 
 (30,13)-(30,17)
 eval (e1 , x , y) +. eval (e2 , x , y)

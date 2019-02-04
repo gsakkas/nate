@@ -15,4 +15,8 @@ let rec listReverse l =
 listReverse (hd :: l)
 AppG (fromList [ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
+(3,60)-(3,62)
+EMPTY
+EmptyG
+
 *)

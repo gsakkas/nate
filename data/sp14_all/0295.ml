@@ -11,6 +11,14 @@ let rec listReverse l =
 *)
 
 (* changed spans
+(3,2)-(3,57)
+EMPTY
+EmptyG
+
+(3,8)-(3,9)
+EMPTY
+EmptyG
+
 (3,23)-(3,26)
 match l with
 | h :: t -> h :: (listReverse t)

@@ -47,9 +47,9 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(16,6)-(16,74)
-a
-VarG
+(15,14)-(16,74)
+EMPTY
+EmptyG
 
 (16,6)-(16,74)
 let (x' , x'') = x in
@@ -77,6 +77,10 @@ VarG
 (16,49)-(16,50)
 x''
 VarG
+
+(16,53)-(16,54)
+EMPTY
+EmptyG
 
 (16,58)-(16,59)
 x'

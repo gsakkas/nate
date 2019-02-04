@@ -13,4 +13,8 @@ let rec listReverse l = match l with | [] -> [] | a::b -> listReverse [a];;
 listReverse [a]
 AppG (fromList [ListG EmptyG Nothing])
 
+(2,74)-(2,75)
+EMPTY
+EmptyG
+
 *)

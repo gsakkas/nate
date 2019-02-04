@@ -17,6 +17,10 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
+(4,13)-(4,15)
+EMPTY
+EmptyG
+
 (6,4)-(6,77)
 l2
 VarG

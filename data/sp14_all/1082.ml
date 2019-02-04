@@ -13,13 +13,6 @@ let rec clone x n =
 
 (* changed spans
 (2,20)-(2,60)
-fun (x , n , acc) ->
-  if n < 0
-  then acc
-  else cloneHelper (x , n - 1 , x :: acc)
-LamG (IteG EmptyG EmptyG EmptyG)
-
-(2,20)-(2,60)
 let rec cloneHelper =
   fun (x , n , acc) ->
     if n < 0
@@ -31,6 +24,10 @@ LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 (2,34)-(2,36)
 acc
 VarG
+
+(2,42)-(2,47)
+EMPTY
+EmptyG
 
 (2,48)-(2,60)
 cloneHelper

@@ -17,8 +17,16 @@ fun y ->
    List.fold_left f base fs)
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(2,24)-(2,31)
+EMPTY
+EmptyG
+
 (2,28)-(2,29)
 x
 VarG
+
+(2,44)-(2,49)
+EMPTY
+EmptyG
 
 *)

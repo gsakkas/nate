@@ -26,6 +26,10 @@ fun xs ->
   | h :: t -> h + sumList t
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
+(6,8)-(6,9)
+EMPTY
+EmptyG
+
 (6,23)-(6,25)
 xs
 VarG
@@ -43,45 +47,11 @@ sumList
 VarG
 
 (6,53)-(6,76)
-t
-VarG
-
-(6,53)-(6,76)
-n
-VarG
-
-(6,53)-(6,76)
 fun n ->
   if n < 10
   then 1
   else 1 + additivePersistence (sumList (digitsOfInt n))
 LamG (IteG EmptyG EmptyG EmptyG)
-
-(6,53)-(6,76)
-n < 10
-BopG VarG LitG
-
-(6,53)-(6,76)
-1 + additivePersistence (sumList (digitsOfInt n))
-BopG LitG (AppG (fromList [EmptyG]))
-
-(6,53)-(6,76)
-10
-LitG
-
-(6,53)-(6,76)
-1
-LitG
-
-(6,53)-(6,76)
-1
-LitG
-
-(6,53)-(6,76)
-if n < 10
-then 1
-else 1 + additivePersistence (sumList (digitsOfInt n))
-IteG (BopG EmptyG EmptyG) LitG (BopG EmptyG EmptyG)
 
 (6,74)-(6,75)
 sumList (digitsOfInt n)

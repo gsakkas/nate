@@ -37,14 +37,6 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 (7,63)-(7,64)
-xx
-VarG
-
-(7,63)-(7,64)
-xx
-VarG
-
-(7,63)-(7,64)
 xx <> b
 BopG VarG VarG
 

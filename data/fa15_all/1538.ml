@@ -25,28 +25,28 @@ fun b ->
   else (f b , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(6,49)-(6,53)
-b
-VarG
-
-(6,49)-(6,53)
-true
-LitG
-
-(6,49)-(6,53)
-(b , true)
-TupleG (fromList [VarG,LitG])
+(6,29)-(6,31)
+EMPTY
+EmptyG
 
 (6,49)-(6,53)
 (f b , false)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
+(6,51)-(6,53)
+EMPTY
+EmptyG
+
+(6,57)-(6,59)
+EMPTY
+EmptyG
+
+(6,57)-(6,61)
+EMPTY
+EmptyG
+
 (6,64)-(6,65)
 f'
 VarG
-
-(6,64)-(6,65)
-false
-LitG
 
 *)

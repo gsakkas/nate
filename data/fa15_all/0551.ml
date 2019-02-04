@@ -15,6 +15,10 @@ let pipe fs =
 fun x -> fun a -> x a
 LamG (LamG EmptyG)
 
+(3,14)-(3,24)
+EMPTY
+EmptyG
+
 (3,18)-(3,24)
 fun a -> x a
 LamG (AppG (fromList [EmptyG]))

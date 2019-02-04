@@ -18,14 +18,6 @@ f b
 AppG (fromList [VarG])
 
 (4,44)-(4,55)
-b
-VarG
-
-(4,44)-(4,55)
-not
-VarG
-
-(4,44)-(4,55)
 not (b = f b)
 AppG (fromList [BopG EmptyG EmptyG])
 

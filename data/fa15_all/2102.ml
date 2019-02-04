@@ -90,4 +90,8 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(36,64)-(36,75)
+EMPTY
+EmptyG
+
 *)

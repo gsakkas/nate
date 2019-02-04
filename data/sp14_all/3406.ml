@@ -108,15 +108,7 @@ x' :: xs'
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (40,12)-(45,65)
-x'
-VarG
-
-(40,12)-(45,65)
 xs'
-VarG
-
-(44,22)-(44,53)
-len
 VarG
 
 (44,22)-(44,53)

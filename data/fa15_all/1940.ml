@@ -55,65 +55,33 @@ x1 + x2
 BopG VarG VarG
 
 (17,35)-(17,42)
-a
-VarG
-
-(17,35)-(17,42)
-((x1 + x2) + carry) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(17,35)-(17,42)
 let (carry , res) = a in
 (((x1 + x2) + carry) / 10 , (((x1 + x2) + carry) mod 10) :: res)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(17,35)-(17,42)
-(((x1 + x2) + carry) / 10 , (((x1 + x2) + carry) mod 10) :: res)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
-(18,4)-(20,51)
-carry
-VarG
-
-(18,4)-(20,51)
-x1
-VarG
-
-(18,4)-(20,51)
-x2
-VarG
-
-(18,4)-(20,51)
-carry
-VarG
-
-(18,4)-(20,51)
-res
-VarG
 
 (18,4)-(20,51)
 ((x1 + x2) + carry) mod 10
 BopG (BopG EmptyG EmptyG) LitG
 
-(18,4)-(20,51)
-(x1 + x2) + carry
-BopG (BopG EmptyG EmptyG) VarG
+(18,15)-(18,23)
+EMPTY
+EmptyG
 
-(18,4)-(20,51)
-x1 + x2
-BopG VarG VarG
+(18,15)-(18,42)
+EMPTY
+EmptyG
 
-(18,4)-(20,51)
-10
-LitG
+(18,20)-(18,21)
+EMPTY
+EmptyG
 
-(18,4)-(20,51)
-10
-LitG
+(18,24)-(18,36)
+EMPTY
+EmptyG
 
-(18,4)-(20,51)
-(((x1 + x2) + carry) mod 10) :: res
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
+(18,37)-(18,39)
+EMPTY
+EmptyG
 
 (18,40)-(18,42)
 []

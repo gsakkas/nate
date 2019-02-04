@@ -31,40 +31,8 @@ else (false , f b)
 IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
 
 (4,45)-(4,51)
-f
-VarG
-
-(4,45)-(4,51)
-b
-VarG
-
-(4,45)-(4,51)
-f
-VarG
-
-(4,45)-(4,51)
-b
-VarG
-
-(4,45)-(4,51)
-f b
-AppG (fromList [VarG])
-
-(4,45)-(4,51)
 wwhile (helper , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(4,45)-(4,51)
-false
-LitG
-
-(4,45)-(4,51)
-(false , f b)
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(4,45)-(4,59)
-true
-LitG
 
 (4,45)-(4,59)
 (true , f b)

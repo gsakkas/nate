@@ -83,23 +83,11 @@ let rec eval (e,x,y) =
 
 (* changed spans
 (33,9)-(33,10)
-eval
-VarG
-
-(33,9)-(33,10)
 eval (c , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(33,9)-(33,10)
-(c , x , y)
-TupleG (fromList [VarG])
-
 (33,13)-(33,14)
 x
-VarG
-
-(34,11)-(34,56)
-y
 VarG
 
 (34,11)-(34,56)
@@ -107,20 +95,8 @@ VarG
 LitG
 
 (34,18)-(34,19)
-eval
-VarG
-
-(34,18)-(34,19)
-a
-VarG
-
-(34,18)-(34,19)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(34,18)-(34,19)
-(a , x , y)
-TupleG (fromList [VarG])
 
 (34,23)-(34,26)
 y
@@ -131,20 +107,8 @@ VarG
 LitG
 
 (34,38)-(34,39)
-eval
-VarG
-
-(34,38)-(34,39)
-b
-VarG
-
-(34,38)-(34,39)
 eval (b , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(34,38)-(34,39)
-(b , x , y)
-TupleG (fromList [VarG])
 
 (34,43)-(34,46)
 y
@@ -155,20 +119,8 @@ VarG
 LitG
 
 (35,29)-(35,30)
-eval
-VarG
-
-(35,29)-(35,30)
-b
-VarG
-
-(35,29)-(35,30)
 eval (b , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(35,29)-(35,30)
-(b , x , y)
-TupleG (fromList [VarG])
 
 (35,34)-(35,37)
 y
@@ -179,20 +131,8 @@ VarG
 LitG
 
 (35,49)-(35,50)
-eval
-VarG
-
-(35,49)-(35,50)
-a
-VarG
-
-(35,49)-(35,50)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(35,49)-(35,50)
-(a , x , y)
-TupleG (fromList [VarG])
 
 (35,54)-(35,57)
 y

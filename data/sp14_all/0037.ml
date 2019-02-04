@@ -69,6 +69,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(26,11)-(26,40)
+EMPTY
+EmptyG
+
 (26,12)-(26,33)
 List.tl (List.rev (h1 :: t1))
 AppG (fromList [AppG (fromList [EmptyG])])
@@ -80,6 +84,10 @@ AppG (fromList [ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 (26,30)-(26,32)
 h1 :: t1
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+
+(28,11)-(28,40)
+EMPTY
+EmptyG
 
 (28,12)-(28,33)
 List.tl (List.rev (h1 :: t1))

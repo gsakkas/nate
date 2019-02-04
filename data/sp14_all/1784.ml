@@ -30,12 +30,16 @@ let padZero l1 l2 =
 
 (* changed spans
 (11,9)-(11,55)
-l1
-VarG
-
-(11,9)-(11,55)
 (l1 , List.append (clone 0
                          (first - sec)) l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(11,21)-(11,23)
+EMPTY
+EmptyG
+
+(11,24)-(11,55)
+EMPTY
+EmptyG
 
 *)

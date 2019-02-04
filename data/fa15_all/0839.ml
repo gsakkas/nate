@@ -18,20 +18,8 @@ let rec digitsOfInt n =
 
 (* changed spans
 (2,20)-(5,67)
-ss
-VarG
-
-(2,20)-(5,67)
 fun ss -> ss mod 10
 LamG (BopG EmptyG EmptyG)
-
-(2,20)-(5,67)
-ss mod 10
-BopG VarG LitG
-
-(2,20)-(5,67)
-10
-LitG
 
 (5,29)-(5,51)
 (@)
@@ -46,11 +34,11 @@ AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 ListG (AppG (fromList [EmptyG])) Nothing
 
 (5,56)-(5,58)
-modulus
-VarG
-
-(5,56)-(5,58)
 modulus n'
 AppG (fromList [VarG])
+
+(5,63)-(5,65)
+EMPTY
+EmptyG
 
 *)

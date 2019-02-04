@@ -138,42 +138,18 @@ let bigMul l1 l2 =
 
 (* changed spans
 (52,14)-(52,24)
-a
-VarG
-
-(52,14)-(52,24)
-0
-LitG
-
-(52,14)-(52,24)
 match a with
 | (_ , z) -> (0 , bigAdd z x)
 | _ -> (0 , [])
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(52,14)-(52,24)
-(0 , bigAdd z x)
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (52,21)-(52,22)
 z
 VarG
 
 (53,2)-(66,49)
-0
-LitG
-
-(53,2)-(66,49)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(53,2)-(66,49)
-[]
-ListG EmptyG Nothing
-
-(53,13)-(53,15)
-0
-LitG
 
 (53,13)-(53,15)
 (0 , [])

@@ -23,6 +23,10 @@ LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 x a
 AppG (fromList [VarG])
 
+(3,35)-(3,36)
+EMPTY
+EmptyG
+
 (3,44)-(3,45)
 a
 VarG

@@ -41,8 +41,20 @@ AppG (fromList [VarG])
 f
 VarG
 
+(3,31)-(3,40)
+EMPTY
+EmptyG
+
 (3,32)-(3,33)
 b
 VarG
+
+(3,46)-(3,56)
+EMPTY
+EmptyG
+
+(3,47)-(3,48)
+EMPTY
+EmptyG
 
 *)

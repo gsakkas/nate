@@ -17,8 +17,16 @@ let rec clone x n =
 helper (x :: acc) (n' - 1)
 AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 
+(3,49)-(3,77)
+EMPTY
+EmptyG
+
 (3,57)-(3,58)
 x :: acc
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+
+(3,63)-(3,77)
+EMPTY
+EmptyG
 
 *)

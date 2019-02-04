@@ -63,36 +63,8 @@ let (x1 , x2) = x in
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (23,4)-(25,51)
-x
-VarG
-
-(23,4)-(25,51)
-x1
-VarG
-
-(23,4)-(25,51)
-x2
-VarG
-
-(23,4)-(25,51)
-x2
-VarG
-
-(23,4)-(25,51)
-x1 + x2
-BopG VarG VarG
-
-(23,4)-(25,51)
 ([x1 + x2] , [x2])
 TupleG (fromList [ListG EmptyG Nothing])
-
-(23,4)-(25,51)
-[x1 + x2]
-ListG (BopG EmptyG EmptyG) Nothing
-
-(23,4)-(25,51)
-[x2]
-ListG VarG Nothing
 
 (23,15)-(23,17)
 ([] , [])

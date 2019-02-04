@@ -73,89 +73,12 @@ let bigMul l1 l2 =
 
 (* changed spans
 (13,11)-(24,34)
-x
-VarG
-
-(13,11)-(24,34)
-l
-VarG
-
-(13,11)-(24,34)
-(@)
-VarG
-
-(13,11)-(24,34)
-appZero
-VarG
-
-(13,11)-(24,34)
-x
-VarG
-
-(13,11)-(24,34)
-l
-VarG
-
-(13,11)-(24,34)
 fun x ->
   fun l ->
     if x > 0
     then l @ []
     else appZero (x - 1) l
 LamG (LamG EmptyG)
-
-(13,11)-(24,34)
-fun l ->
-  if x > 0
-  then l @ []
-  else appZero (x - 1) l
-LamG (IteG EmptyG EmptyG EmptyG)
-
-(13,11)-(24,34)
-l @ []
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(13,11)-(24,34)
-appZero (x - 1) l
-AppG (fromList [VarG,BopG EmptyG EmptyG])
-
-(13,11)-(24,34)
-x > 0
-BopG VarG LitG
-
-(13,11)-(24,34)
-x - 1
-BopG VarG LitG
-
-(13,11)-(24,34)
-0
-LitG
-
-(13,11)-(24,34)
-1
-LitG
-
-(13,11)-(24,34)
-if x > 0
-then l @ []
-else appZero (x - 1) l
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(13,11)-(24,34)
-[]
-ListG EmptyG Nothing
-
-(30,33)-(30,73)
-a1
-VarG
-
-(30,33)-(30,73)
-a1 + 1
-BopG VarG LitG
-
-(30,33)-(30,73)
-1
-LitG
 
 (30,33)-(30,73)
 (a1 + 1 , bigAdd a2
@@ -166,6 +89,18 @@ TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 (30,44)-(30,66)
 a1
 VarG
+
+(30,56)-(30,62)
+EMPTY
+EmptyG
+
+(30,59)-(30,61)
+EMPTY
+EmptyG
+
+(30,63)-(30,65)
+EMPTY
+EmptyG
 
 (30,67)-(30,69)
 appZero

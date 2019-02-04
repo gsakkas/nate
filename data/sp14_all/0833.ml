@@ -24,4 +24,8 @@ match res with
                else b'
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(5,66)-(5,68)
+EMPTY
+EmptyG
+
 *)

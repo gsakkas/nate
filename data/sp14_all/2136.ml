@@ -40,14 +40,6 @@ Format.sprintf "%expr" 1.0
 AppG (fromList [LitG])
 
 (15,31)-(15,34)
-Format.sprintf
-VarG
-
-(15,31)-(15,34)
-"%expr"
-LitG
-
-(15,31)-(15,34)
 1.0
 LitG
 

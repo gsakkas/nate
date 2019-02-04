@@ -15,4 +15,8 @@ let pipe fs =
 (fun n -> n) a
 AppG (fromList [VarG])
 
+(3,30)-(3,31)
+EMPTY
+EmptyG
+
 *)

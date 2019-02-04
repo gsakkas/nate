@@ -131,4 +131,8 @@ ListG EmptyG Nothing
 res
 VarG
 
+(59,38)-(59,41)
+EMPTY
+EmptyG
+
 *)

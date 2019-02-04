@@ -31,4 +31,8 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 List.map f l
 AppG (fromList [VarG])
 
+(9,54)-(9,59)
+EMPTY
+EmptyG
+
 *)

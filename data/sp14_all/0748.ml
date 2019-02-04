@@ -20,19 +20,11 @@ fun x -> (f x , false)
 LamG (TupleG (fromList [EmptyG]))
 
 (5,43)-(5,53)
-f
-VarG
-
-(5,43)-(5,53)
-x
-VarG
-
-(5,43)-(5,53)
 f x
 AppG (fromList [VarG])
 
-(5,43)-(5,53)
-false
-LitG
+(5,47)-(5,52)
+EMPTY
+EmptyG
 
 *)

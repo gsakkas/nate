@@ -128,21 +128,9 @@ let rec build (rand,depth) =
 
 (* changed spans
 (21,17)-(21,67)
-e1
-VarG
-
-(21,17)-(21,67)
-e2
-VarG
-
-(21,17)-(21,67)
 fun (e1 , e2) ->
   Special2 (e1 , e2)
 LamG (ConAppG (Just (TupleG (fromList [VarG]))) Nothing)
-
-(21,17)-(21,67)
-Special2 (e1 , e2)
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (39,5)-(58,51)
 match recurse with
@@ -159,99 +147,15 @@ match recurse with
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
 (54,11)-(54,69)
-build
-VarG
-
-(54,11)-(54,69)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(54,11)-(54,69)
 (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (54,12)-(54,39)
-rand
-VarG
-
-(54,12)-(54,39)
-depth
-VarG
-
-(54,12)-(54,39)
 depth - 1
 BopG VarG LitG
-
-(54,12)-(54,39)
-1
-LitG
-
-(56,9)-(58,51)
-buildSpecial2
-VarG
-
-(56,9)-(58,51)
-build
-VarG
-
-(56,9)-(58,51)
-rand
-VarG
-
-(56,9)-(58,51)
-depth
-VarG
-
-(56,9)-(58,51)
-build
-VarG
-
-(56,9)-(58,51)
-rand
-VarG
-
-(56,9)-(58,51)
-depth
-VarG
 
 (56,9)-(58,51)
 buildSpecial2 (build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(56,9)-(58,51)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(56,9)-(58,51)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(56,9)-(58,51)
-depth - 1
-BopG VarG LitG
-
-(56,9)-(58,51)
-depth - 1
-BopG VarG LitG
-
-(56,9)-(58,51)
-1
-LitG
-
-(56,9)-(58,51)
-1
-LitG
-
-(56,9)-(58,51)
-(build (rand , depth - 1) , build (rand , depth - 1))
-TupleG (fromList [AppG (fromList [EmptyG])])
-
-(56,9)-(58,51)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(56,9)-(58,51)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)

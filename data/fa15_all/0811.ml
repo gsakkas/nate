@@ -31,4 +31,8 @@ let rec additivePersistence n =
 digitsOfInt x
 AppG (fromList [VarG])
 
+(10,65)-(10,69)
+EMPTY
+EmptyG
+
 *)

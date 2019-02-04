@@ -42,9 +42,29 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(19,7)-(19,22)
-buildX
-VarG
+(16,2)-(19,22)
+EMPTY
+EmptyG
+
+(16,10)-(16,14)
+EMPTY
+EmptyG
+
+(16,10)-(16,21)
+EMPTY
+EmptyG
+
+(16,15)-(16,21)
+EMPTY
+EmptyG
+
+(16,16)-(16,17)
+EMPTY
+EmptyG
+
+(16,19)-(16,20)
+EMPTY
+EmptyG
 
 (19,7)-(19,22)
 buildX ()
@@ -55,17 +75,13 @@ let y = rand (2 , 6) in
 buildX ()
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
-(19,14)-(19,15)
-rand
-VarG
+(19,10)-(19,15)
+EMPTY
+EmptyG
 
 (19,14)-(19,15)
 rand (2 , 6)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(19,14)-(19,15)
-(2 , 6)
-TupleG (fromList [LitG])
 
 (19,21)-(19,22)
 6

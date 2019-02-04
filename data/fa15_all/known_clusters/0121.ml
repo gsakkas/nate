@@ -1,15 +1,6 @@
-LetG NonRec (fromList [TupleG (fromList [EmptyG])]) VarG
-let retTuple = (l1 , l2) in
-retTuple
-let retTuple = (l1 , l2) in
-retTuple
-let retTuple = (l1 , l2) in
-retTuple
-let retTuple = (l1 , l2) in
-retTuple
-let retTuple = (l1 , l2) in
-retTuple
-let retTuple = (l1 , l2) in
-retTuple
-let retTuple = (l1 , l2) in
-retTuple
+ListG (TupleG (fromList [EmptyG])) Nothing
+[(0 , 0)]
+[(0 , 0)]
+[(0 , 0)]
+[(0 , 0)]
+[(k , d)]

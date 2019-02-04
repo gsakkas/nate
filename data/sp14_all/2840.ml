@@ -46,6 +46,10 @@ VarG
 []
 ListG EmptyG Nothing
 
+(8,72)-(8,74)
+EMPTY
+EmptyG
+
 (9,2)-(9,8)
 helper [] l
 AppG (fromList [VarG,ListG EmptyG Nothing])

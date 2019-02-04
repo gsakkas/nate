@@ -28,12 +28,12 @@ seen
 VarG
 
 (7,41)-(7,42)
-seen
-VarG
-
-(7,41)-(7,42)
 h :: seen
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+
+(7,48)-(7,51)
+EMPTY
+EmptyG
 
 (7,49)-(7,50)
 seen

@@ -25,14 +25,6 @@ TupleG (fromList [VarG,LamG EmptyG])
 fun b -> (f b , f b = b)
 LamG (TupleG (fromList [EmptyG]))
 
-(6,29)-(6,30)
-f b
-AppG (fromList [VarG])
-
-(6,29)-(6,30)
-(f b , f b = b)
-TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-
 (6,32)-(6,43)
 b
 VarG

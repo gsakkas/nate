@@ -54,53 +54,71 @@ let palindrome w =
 
 (* changed spans
 (6,12)-(9,6)
-l
-VarG
-
-(6,12)-(9,6)
-listReverse
-VarG
-
-(6,12)-(9,6)
-t
-VarG
-
-(6,12)-(9,6)
-(@)
-VarG
-
-(6,12)-(9,6)
-h
-VarG
-
-(6,12)-(9,6)
 fun l ->
   match l with
   | [] -> []
   | h :: t -> listReverse t @ [h]
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(6,12)-(9,6)
-listReverse t
-AppG (fromList [VarG])
+(11,20)-(12,57)
+EMPTY
+EmptyG
 
-(6,12)-(9,6)
-listReverse t @ [h]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+(12,2)-(12,57)
+EMPTY
+EmptyG
 
-(6,12)-(9,6)
-match l with
-| [] -> []
-| h :: t -> listReverse t @ [h]
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
+(12,8)-(12,9)
+EMPTY
+EmptyG
 
-(6,12)-(9,6)
-[]
-ListG EmptyG Nothing
+(12,23)-(12,25)
+EMPTY
+EmptyG
 
-(6,12)-(9,6)
-[h]
-ListG VarG Nothing
+(12,36)-(12,51)
+EMPTY
+EmptyG
+
+(12,36)-(12,57)
+EMPTY
+EmptyG
+
+(12,37)-(12,48)
+EMPTY
+EmptyG
+
+(12,49)-(12,50)
+EMPTY
+EmptyG
+
+(12,52)-(12,53)
+EMPTY
+EmptyG
+
+(12,54)-(12,57)
+EMPTY
+EmptyG
+
+(12,55)-(12,56)
+EMPTY
+EmptyG
+
+(25,23)-(25,48)
+EMPTY
+EmptyG
+
+(25,24)-(25,35)
+EMPTY
+EmptyG
+
+(25,36)-(25,47)
+EMPTY
+EmptyG
+
+(25,37)-(25,44)
+EMPTY
+EmptyG
 
 (25,45)-(25,46)
 [["b"]]

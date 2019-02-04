@@ -1,4 +1,11 @@
-TupleG (fromList [BopG EmptyG EmptyG])
-(x * x , x < 100)
-(x * x , x < 100)
-(sum / 10 , sum mod 10)
+CaseG (BopG EmptyG EmptyG) (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)])),(Nothing,ListG EmptyG Nothing)])
+match n > 0 with
+| false -> []
+| true -> match n > 9 with
+          | false -> n :: (digitsOfInt (n / 10))
+          | true -> (n mod 10) :: (digitsOfInt (n / 10))
+match n > 0 with
+| false -> []
+| true -> match n > 9 with
+          | false -> n :: (digitsOfInt (n / 10))
+          | true -> (n mod 10) :: (digitsOfInt (n / 10))

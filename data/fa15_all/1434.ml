@@ -57,60 +57,44 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(22,4)-(26,56)
+EMPTY
+EmptyG
+
+(22,10)-(22,14)
+EMPTY
+EmptyG
+
+(23,15)-(23,21)
+EMPTY
+EmptyG
+
+(23,15)-(23,24)
+EMPTY
+EmptyG
+
 (23,22)-(23,24)
 match rand (0 , 4) with
 | 0 -> buildSine (build (rand , depth - 1))
 | 1 -> buildCosine (build (rand , depth - 1))
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+(24,15)-(24,21)
+EMPTY
+EmptyG
+
 (24,22)-(24,24)
 rand
 VarG
-
-(25,16)-(25,53)
-0
-LitG
-
-(25,16)-(25,53)
-4
-LitG
 
 (25,16)-(25,53)
 (0 , 4)
 TupleG (fromList [LitG])
 
 (27,7)-(27,9)
-rand
-VarG
-
-(27,7)-(27,9)
-buildX
-VarG
-
-(27,7)-(27,9)
-rand (0 , 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(27,7)-(27,9)
-buildX ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(27,7)-(27,9)
-0
-LitG
-
-(27,7)-(27,9)
-1
-LitG
-
-(27,7)-(27,9)
 match rand (0 , 1) with
 | 0 -> buildX ()
 | 1 -> buildY ()
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
-
-(27,7)-(27,9)
-(0 , 1)
-TupleG (fromList [LitG])
 
 *)

@@ -165,10 +165,6 @@ let rec build (rand,depth) =
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (77,9)-(77,14)
-buildSine
-VarG
-
-(77,9)-(77,14)
 build (rand , depth - 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
 

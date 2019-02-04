@@ -28,10 +28,6 @@ seen
 VarG
 
 (7,23)-(7,38)
-not
-VarG
-
-(7,23)-(7,38)
 not (List.mem h seen)
 AppG (fromList [AppG (fromList [EmptyG])])
 

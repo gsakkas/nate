@@ -53,10 +53,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (16,6)-(18,66)
-a
-VarG
-
-(16,6)-(18,66)
 match a with
 | (carry , rest) -> match x with
                     | (add1 , add2) -> (((add1 + add2) + carry) / 10 , (((add1 + add2) + carry) mod 10) :: rest)

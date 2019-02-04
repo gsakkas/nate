@@ -55,10 +55,6 @@ let rec eval (e,x,y) =
 
 (* changed spans
 (19,67)-(19,68)
-float_of_int
-VarG
-
-(19,67)-(19,68)
 float_of_int 2
 AppG (fromList [LitG])
 

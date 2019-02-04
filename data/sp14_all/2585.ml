@@ -53,21 +53,13 @@ let bigAdd l1 l2 =
 ([x + 1] , [x + 1])
 TupleG (fromList [ListG EmptyG Nothing])
 
-(19,17)-(19,18)
-x + 1
-BopG VarG LitG
+(19,16)-(19,29)
+EMPTY
+EmptyG
 
 (19,17)-(19,18)
 [x + 1]
 ListG (BopG EmptyG EmptyG) Nothing
-
-(19,22)-(19,23)
-x + 1
-BopG VarG LitG
-
-(19,22)-(19,23)
-1
-LitG
 
 (19,22)-(19,23)
 [x + 1]
@@ -80,10 +72,6 @@ LitG
 (20,15)-(20,17)
 ([] , [])
 TupleG (fromList [ListG EmptyG Nothing])
-
-(21,4)-(21,68)
-[]
-ListG EmptyG Nothing
 
 (21,4)-(21,68)
 []

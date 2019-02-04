@@ -29,9 +29,13 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(12,47)-(12,48)
-digits
-VarG
+(12,31)-(12,37)
+EMPTY
+EmptyG
+
+(12,38)-(12,49)
+EMPTY
+EmptyG
 
 (12,47)-(12,48)
 digits n

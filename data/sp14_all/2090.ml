@@ -30,16 +30,8 @@ let padZero l1 l2 =
 
 (* changed spans
 (9,24)-(9,26)
-List.hd
-VarG
-
-(9,24)-(9,26)
 List.hd l1
 AppG (fromList [VarG])
-
-(10,24)-(10,26)
-List.hd
-VarG
 
 (10,24)-(10,26)
 List.hd l2

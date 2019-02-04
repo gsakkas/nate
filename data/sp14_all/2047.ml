@@ -24,16 +24,16 @@ fun b -> (f b , b = f b)
 LamG (TupleG (fromList [EmptyG]))
 
 (4,31)-(4,32)
-f
-VarG
-
-(4,31)-(4,32)
 f b
 AppG (fromList [VarG])
 
 (4,35)-(4,40)
 b
 VarG
+
+(4,43)-(4,44)
+EMPTY
+EmptyG
 
 (4,61)-(4,63)
 b

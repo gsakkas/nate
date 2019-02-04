@@ -50,6 +50,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(16,16)-(16,24)
+EMPTY
+EmptyG
+
 (16,16)-(16,44)
 match snd a with
 | [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
@@ -61,140 +65,16 @@ snd
 VarG
 
 (17,4)-(19,51)
-a
-VarG
-
-(17,4)-(19,51)
-fst
-VarG
-
-(17,4)-(19,51)
-x
-VarG
-
-(17,4)-(19,51)
-snd
-VarG
-
-(17,4)-(19,51)
-x
-VarG
-
-(17,4)-(19,51)
-fst
-VarG
-
-(17,4)-(19,51)
-x
-VarG
-
-(17,4)-(19,51)
-snd
-VarG
-
-(17,4)-(19,51)
-x
-VarG
-
-(17,4)-(19,51)
-fst
-VarG
-
-(17,4)-(19,51)
-x
-VarG
-
-(17,4)-(19,51)
-snd
-VarG
-
-(17,4)-(19,51)
-x
-VarG
-
-(17,4)-(19,51)
-fst x
-AppG (fromList [VarG])
-
-(17,4)-(19,51)
-snd x
-AppG (fromList [VarG])
-
-(17,4)-(19,51)
-fst x
-AppG (fromList [VarG])
-
-(17,4)-(19,51)
-snd x
-AppG (fromList [VarG])
-
-(17,4)-(19,51)
-fst x
-AppG (fromList [VarG])
-
-(17,4)-(19,51)
-snd x
-AppG (fromList [VarG])
-
-(17,4)-(19,51)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(17,4)-(19,51)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(17,4)-(19,51)
-(fst x + snd x) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(17,4)-(19,51)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(17,4)-(19,51)
-(fst x + snd x) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(17,4)-(19,51)
-10
-LitG
-
-(17,4)-(19,51)
-10
-LitG
-
-(17,4)-(19,51)
-0
-LitG
-
-(17,4)-(19,51)
 (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
 TupleG (fromList [BopG EmptyG EmptyG,ListG EmptyG Nothing])
 
-(17,4)-(19,51)
-(0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(17,4)-(19,51)
-[(fst x + snd x) / 10 ; (fst x + snd x) mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
-
-(17,4)-(19,51)
-[]
-ListG EmptyG Nothing
-
-(17,15)-(17,17)
-0
-LitG
-
 (17,15)-(17,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
-(18,15)-(18,43)
-List.combine
-VarG
+(18,15)-(18,23)
+EMPTY
+EmptyG
 
 (18,15)-(18,43)
 List.combine (List.rev l1)
@@ -203,18 +83,6 @@ AppG (fromList [AppG (fromList [EmptyG])])
 
 (18,24)-(18,43)
 List.rev
-VarG
-
-(19,4)-(19,51)
-l1
-VarG
-
-(19,4)-(19,51)
-List.rev
-VarG
-
-(19,4)-(19,51)
-l2
 VarG
 
 (19,4)-(19,51)

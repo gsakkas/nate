@@ -18,6 +18,14 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(6,2)-(6,8)
+EMPTY
+EmptyG
+
+(6,2)-(6,63)
+EMPTY
+EmptyG
+
 (6,9)-(6,63)
 let helper =
   fun x ->
@@ -51,19 +59,7 @@ x
 VarG
 
 (6,61)-(6,62)
-wwhile
-VarG
-
-(6,61)-(6,62)
-helper
-VarG
-
-(6,61)-(6,62)
 wwhile (helper , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(6,61)-(6,62)
-(helper , b)
-TupleG (fromList [VarG])
 
 *)

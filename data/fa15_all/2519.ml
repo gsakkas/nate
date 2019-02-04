@@ -27,6 +27,10 @@ let removeDuplicates l =
 List.mem h seen
 AppG (fromList [VarG])
 
+(7,32)-(7,41)
+EMPTY
+EmptyG
+
 (7,47)-(7,49)
 seen
 VarG

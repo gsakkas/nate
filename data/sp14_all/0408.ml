@@ -66,24 +66,8 @@ BopG LitG (AppG (fromList [EmptyG]))
 UopG LitG
 
 (20,43)-(20,44)
-eval
-VarG
-
-(20,43)-(20,44)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(20,43)-(20,44)
-1.0
-LitG
-
-(20,43)-(20,44)
-(a , x , y)
-TupleG (fromList [VarG])
-
-(21,21)-(21,65)
-x
-VarG
 
 (21,21)-(21,65)
 y

@@ -14,6 +14,10 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(4,28)-(4,75)
+EMPTY
+EmptyG
+
 (4,29)-(4,71)
 let g =
   fun x ->
@@ -28,19 +32,19 @@ let calcx = f x in
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
 (4,58)-(4,69)
-calcx
-VarG
-
-(4,58)-(4,69)
 (calcx , calcx = x)
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
+(4,59)-(4,60)
+EMPTY
+EmptyG
+
+(4,63)-(4,68)
+EMPTY
+EmptyG
+
 (4,64)-(4,65)
 calcx
-VarG
-
-(4,73)-(4,74)
-g
 VarG
 
 (4,73)-(4,74)

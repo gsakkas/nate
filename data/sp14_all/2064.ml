@@ -51,9 +51,9 @@ let rec eval (e,x,y) =
 (eval (a , x , y) *. eval (b , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
-(17,22)-(17,26)
-eval (a , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(17,21)-(17,63)
+EMPTY
+EmptyG
 
 (17,22)-(17,26)
 eval (a , x , y) *. eval (b , x , y)
@@ -74,6 +74,14 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 (18,21)-(18,23)
 (**)
 VarG
+
+(18,27)-(18,39)
+EMPTY
+EmptyG
+
+(18,40)-(18,56)
+EMPTY
+EmptyG
 
 (19,18)-(19,41)
 pi ** eval (a , x , y)

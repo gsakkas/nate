@@ -14,10 +14,6 @@ a
 VarG
 
 (2,45)-(2,46)
-f
-VarG
-
-(2,45)-(2,46)
 f 2 xs
 AppG (fromList [VarG,LitG])
 

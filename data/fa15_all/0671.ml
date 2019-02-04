@@ -146,79 +146,39 @@ let rec build (rand,depth) =
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (42,24)-(42,29)
-buildX
-VarG
-
-(42,24)-(42,29)
 build (rand , d)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(42,24)-(42,29)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 (43,23)-(43,40)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (43,24)-(43,29)
-buildX
-VarG
-
-(43,24)-(43,29)
 build (rand , d)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(43,24)-(43,29)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 (44,23)-(44,40)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (44,24)-(44,29)
-buildX
-VarG
-
-(44,24)-(44,29)
 build (rand , d)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(44,24)-(44,29)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 (45,23)-(45,40)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (45,24)-(45,29)
-buildX
-VarG
-
-(45,24)-(45,29)
 build (rand , d)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(45,24)-(45,29)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 (46,23)-(46,40)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (46,24)-(46,29)
-buildX
-VarG
-
-(46,24)-(46,29)
 build (rand , d)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(46,24)-(46,29)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 *)

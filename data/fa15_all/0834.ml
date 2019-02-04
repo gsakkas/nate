@@ -27,10 +27,6 @@ n_ mod 10
 BopG VarG LitG
 
 (3,53)-(3,68)
-n_
-VarG
-
-(3,53)-(3,68)
 10
 LitG
 

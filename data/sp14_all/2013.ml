@@ -59,6 +59,10 @@ LamG (ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothi
 ((x + y) / 10) :: a
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
 
+(19,17)-(19,18)
+EMPTY
+EmptyG
+
 (19,26)-(19,28)
 y
 VarG
@@ -70,14 +74,6 @@ VarG
 (20,15)-(20,16)
 []
 ListG EmptyG Nothing
-
-(21,15)-(21,17)
-List.combine
-VarG
-
-(21,15)-(21,17)
-l1
-VarG
 
 (21,15)-(21,17)
 List.combine l1 l2

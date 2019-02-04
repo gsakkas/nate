@@ -73,46 +73,33 @@ d1 + d2
 BopG VarG VarG
 
 (23,47)-(23,48)
-d1
-VarG
-
-(23,47)-(23,48)
-d2
-VarG
-
-(23,47)-(23,48)
-d1
-VarG
-
-(23,47)-(23,48)
-d2
-VarG
-
-(23,47)-(23,48)
-d1 + d2
-BopG VarG VarG
-
-(23,47)-(23,48)
 match a with
 | (a1 , a2) -> a2
 CaseG VarG (fromList [(Nothing,VarG)])
-
-(23,47)-(23,48)
-(d1 + d2) :: (match a with
-              | (a1 , a2) -> a2)
-ConAppG (Just (TupleG (fromList [BopG VarG VarG,CaseG VarG (fromList [(Nothing,VarG)])]))) Nothing
 
 (24,4)-(26,51)
 a2
 VarG
 
-(25,54)-(25,56)
-List.combine
-VarG
+(25,15)-(25,59)
+EMPTY
+EmptyG
 
-(25,54)-(25,56)
-l1
-VarG
+(25,21)-(25,23)
+EMPTY
+EmptyG
+
+(25,39)-(25,59)
+EMPTY
+EmptyG
+
+(25,40)-(25,58)
+EMPTY
+EmptyG
+
+(25,41)-(25,42)
+EMPTY
+EmptyG
 
 (25,54)-(25,56)
 List.combine l1 l2

@@ -27,6 +27,10 @@ let helper =
 wwhile (helper , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
+(6,2)-(6,59)
+EMPTY
+EmptyG
+
 (6,9)-(6,59)
 fun x ->
   if b = f b
@@ -34,20 +38,12 @@ fun x ->
   else (b , true)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(6,56)-(6,57)
-wwhile
-VarG
-
-(6,56)-(6,57)
-helper
-VarG
+(6,45)-(6,54)
+EMPTY
+EmptyG
 
 (6,56)-(6,57)
 wwhile (helper , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(6,56)-(6,57)
-(helper , b)
-TupleG (fromList [VarG])
 
 *)

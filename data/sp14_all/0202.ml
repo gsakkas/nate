@@ -13,6 +13,10 @@ let rec sumList xs = match xs with | [] -> 0 | x::xs' -> x + (sumList xs');;
 0
 LitG
 
+(2,62)-(2,77)
+EMPTY
+EmptyG
+
 (2,63)-(2,64)
 sumList xs'
 AppG (fromList [VarG])

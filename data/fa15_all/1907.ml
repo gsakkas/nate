@@ -19,6 +19,10 @@ let fixpoint (f,b) = wwhile ((func (f, b)), b);;
 *)
 
 (* changed spans
+(2,13)-(2,39)
+EMPTY
+EmptyG
+
 (2,15)-(2,39)
 fun (f , b) ->
   fun b -> (f b , f b = b)
@@ -28,6 +32,10 @@ LamG (LamG EmptyG)
 fun b -> (f b , f b = b)
 LamG (TupleG (fromList [EmptyG]))
 
+(2,23)-(2,24)
+EMPTY
+EmptyG
+
 (2,27)-(2,38)
 b
 VarG
@@ -35,6 +43,10 @@ VarG
 (2,28)-(2,33)
 f b = b
 BopG (AppG (fromList [EmptyG])) VarG
+
+(2,31)-(2,32)
+EMPTY
+EmptyG
 
 (2,36)-(2,37)
 b
@@ -47,14 +59,6 @@ VarG
 (7,29)-(7,37)
 func (f , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(7,39)-(7,40)
-func
-VarG
-
-(7,39)-(7,40)
-f
-VarG
 
 (7,39)-(7,40)
 (f , b)

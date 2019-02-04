@@ -68,27 +68,9 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(16,23)-(16,51)
-l
-VarG
-
-(16,23)-(16,51)
-h
-VarG
-
-(16,23)-(16,51)
-h = 0
-BopG VarG LitG
-
-(16,23)-(16,51)
-0
-LitG
-
-(16,23)-(16,51)
-if h = 0
-then removeZero t
-else l
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) VarG
+(16,23)-(16,31)
+EMPTY
+EmptyG
 
 (16,23)-(16,51)
 match l with
@@ -98,16 +80,8 @@ match l with
             else l
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG Nothing)])
 
-(16,23)-(16,51)
-[]
-ListG EmptyG Nothing
-
 (16,32)-(16,51)
 removeZero
-VarG
-
-(18,11)-(31,34)
-t
 VarG
 
 (18,11)-(31,34)

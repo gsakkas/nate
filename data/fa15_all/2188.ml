@@ -26,17 +26,21 @@ let result = f b in
 (result , result = b)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
+(7,52)-(7,57)
+EMPTY
+EmptyG
+
+(7,52)-(7,72)
+EMPTY
+EmptyG
+
+(7,60)-(7,72)
+EMPTY
+EmptyG
+
 (7,61)-(7,64)
 (result , result = b)
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(8,6)-(8,12)
-result
-VarG
-
-(8,6)-(8,12)
-b
-VarG
 
 (8,6)-(8,12)
 result = b

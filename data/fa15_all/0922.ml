@@ -79,43 +79,7 @@ ListG VarG Nothing
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
 (25,4)-(27,51)
-num
-VarG
-
-(25,4)-(27,51)
-num
-VarG
-
-(25,4)-(27,51)
-(@)
-VarG
-
-(25,4)-(27,51)
-list
-VarG
-
-(25,4)-(27,51)
 [num mod 10] @ list
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(25,4)-(27,51)
-num / 10
-BopG VarG LitG
-
-(25,4)-(27,51)
-num mod 10
-BopG VarG LitG
-
-(25,4)-(27,51)
-10
-LitG
-
-(25,4)-(27,51)
-10
-LitG
-
-(25,4)-(27,51)
-[num mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
 
 *)

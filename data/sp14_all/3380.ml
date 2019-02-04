@@ -33,10 +33,6 @@ let rec mulByDigit i l =
 
 (* changed spans
 (11,8)-(13,23)
-List.hd
-VarG
-
-(11,8)-(13,23)
 List.hd [List.fold_left f base
                         (mulByDigit i
                                     (List.rev (List.map (fun x ->

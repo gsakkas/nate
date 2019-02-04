@@ -63,6 +63,10 @@ let rec eval (e,x,y) =
 eval (t , x , y) /. 30.0
 BopG (AppG (fromList [EmptyG])) LitG
 
+(27,28)-(27,30)
+EMPTY
+EmptyG
+
 (27,35)-(27,74)
 30.0
 LitG

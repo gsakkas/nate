@@ -66,27 +66,7 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (25,27)-(25,29)
-cout
-VarG
-
-(25,27)-(25,29)
-List.append
-VarG
-
-(25,27)-(25,29)
-r
-VarG
-
-(25,27)-(25,29)
-List.append [r] []
-AppG (fromList [ListG EmptyG Nothing])
-
-(25,27)-(25,29)
 (cout , List.append [r] [])
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(25,27)-(25,29)
-[r]
-ListG VarG Nothing
 
 *)

@@ -18,9 +18,17 @@ let fixpoint (f,b) = wwhile (let func x = ((f x), ((f x) = x)) in (func, b));;
 *)
 
 (* changed spans
+(7,21)-(7,45)
+EMPTY
+EmptyG
+
 (7,29)-(7,30)
 x
 VarG
+
+(7,37)-(7,38)
+EMPTY
+EmptyG
 
 (7,42)-(7,43)
 x

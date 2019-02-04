@@ -69,8 +69,16 @@ let bigAdd l1 l2 =
 [fst']
 ListG VarG Nothing
 
+(25,34)-(25,38)
+EMPTY
+EmptyG
+
 (26,27)-(26,39)
 [fst']
 ListG VarG Nothing
+
+(26,34)-(26,38)
+EMPTY
+EmptyG
 
 *)

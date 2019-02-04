@@ -53,8 +53,16 @@ let rec additivePersistence n =
 count (acc + 1) n
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(21,57)-(21,76)
+EMPTY
+EmptyG
+
 (21,64)-(21,67)
 acc + 1
 BopG VarG LitG
+
+(21,71)-(21,76)
+EMPTY
+EmptyG
 
 *)

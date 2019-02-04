@@ -80,10 +80,6 @@ LitG
 TupleG (fromList [VarG])
 
 (30,22)-(30,74)
-x
-VarG
-
-(30,22)-(30,74)
 y
 VarG
 

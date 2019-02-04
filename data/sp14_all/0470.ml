@@ -40,8 +40,4 @@ VarG
 exprToString ex
 AppG (fromList [VarG])
 
-(12,62)-(12,74)
-"sin"
-LitG
-
 *)

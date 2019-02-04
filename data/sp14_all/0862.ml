@@ -20,15 +20,19 @@ match l with
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),AppG (fromList [AppG (fromList [VarG])])]))) Nothing)])
 
 (4,34)-(4,45)
-List.hd
-VarG
-
-(4,34)-(4,45)
-l
-VarG
-
-(4,34)-(4,45)
 listReverse (List.tl l)
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(4,62)-(4,73)
+EMPTY
+EmptyG
+
+(4,63)-(4,70)
+EMPTY
+EmptyG
+
+(4,71)-(4,72)
+EMPTY
+EmptyG
 
 *)

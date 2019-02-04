@@ -15,4 +15,8 @@ let rec listReverse l =
 listReverse l
 AppG (fromList [VarG])
 
+(3,56)-(3,57)
+EMPTY
+EmptyG
+
 *)

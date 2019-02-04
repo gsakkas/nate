@@ -1,9 +1,11 @@
-ListG (AppG (fromList [EmptyG])) Nothing
-[cout (hd , i)]
-[modulus n']
-[modulus n']
-[remainder i h]
-[remainder i h]
-[remainder i h]
-[remainder i h]
-[remainder i h]
+TupleG (fromList [LitG,LetG NonRec (fromList [EmptyG]) EmptyG])
+(0 , let (y , z) = x in
+     [(y + z) + carry] @ ans)
+(0 , let (y , z) = x in
+     [(y + z) + carry] @ ans)
+(0 , let (y , z) = x in
+     [(y + z) + carry] @ ans)
+(0 , let (y , z) = x in
+     [(y + z) + carry] @ ans)
+(0 , let (y , z) = x in
+     [(y + z) + carry] @ ans)

@@ -27,10 +27,6 @@ let stringOfList f l = sepConcat "; " (List.map f l);;
 List.map f l
 AppG (fromList [VarG])
 
-(9,33)-(9,41)
-"; "
-LitG
-
 (9,42)-(9,43)
 f
 VarG

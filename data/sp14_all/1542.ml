@@ -14,13 +14,17 @@ let sqsum xs =
 *)
 
 (* changed spans
-(4,13)-(4,19)
-xs
-VarG
+(3,14)-(3,61)
+EMPTY
+EmptyG
 
-(4,13)-(4,19)
-0
-LitG
+(3,20)-(3,22)
+EMPTY
+EmptyG
+
+(3,36)-(3,37)
+EMPTY
+EmptyG
 
 (4,13)-(4,19)
 match xs with

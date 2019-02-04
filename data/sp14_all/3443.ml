@@ -40,9 +40,17 @@ ListG LitG Nothing
 sumList count
 AppG (fromList [VarG])
 
-(12,2)-(13,65)
-0
-LitG
+(13,7)-(13,8)
+EMPTY
+EmptyG
+
+(13,7)-(13,65)
+EMPTY
+EmptyG
+
+(13,12)-(13,65)
+EMPTY
+EmptyG
 
 (13,13)-(13,18)
 additivePersistence (sumList (digitsOfInt n))

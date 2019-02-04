@@ -34,10 +34,6 @@ let padZero l1 l2 =
 
 (* changed spans
 (8,4)-(8,15)
-l1
-VarG
-
-(8,4)-(8,15)
 List.append (clone 0 l1G) l2
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
@@ -46,13 +42,21 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
                          l1G) l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+(8,17)-(8,19)
+EMPTY
+EmptyG
+
+(8,26)-(8,33)
+EMPTY
+EmptyG
+
 (10,4)-(14,17)
 l2
 VarG
 
-(13,7)-(13,18)
-List.append (clone 0 l2G) l1
-AppG (fromList [VarG,AppG (fromList [EmptyG])])
+(12,49)-(12,51)
+EMPTY
+EmptyG
 
 (13,7)-(13,18)
 (List.append (clone 0 l2G)
@@ -62,6 +66,10 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 (13,7)-(13,37)
 l1
 VarG
+
+(13,26)-(13,33)
+EMPTY
+EmptyG
 
 (13,34)-(13,36)
 l1

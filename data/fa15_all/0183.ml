@@ -21,18 +21,6 @@ let rec assoc (d,k,l) =
 
 (* changed spans
 (3,2)-(6,62)
-l
-VarG
-
-(3,2)-(6,62)
-d
-VarG
-
-(3,2)-(6,62)
-l = []
-BopG VarG (ListG EmptyG Nothing)
-
-(3,2)-(6,62)
 if l = []
 then d
 else (let h :: t = l in
@@ -43,10 +31,6 @@ else (let h :: t = l in
             then y
             else assoc (d , k , t)))
 IteG (BopG EmptyG EmptyG) VarG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(3,2)-(6,62)
-[]
-ListG EmptyG Nothing
 
 (4,5)-(4,6)
 t

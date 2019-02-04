@@ -33,16 +33,8 @@ let padZero l1 l2 =
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (11,7)-(11,53)
-l2
-VarG
-
-(11,7)-(11,53)
 (l1 , l2)
 TupleG (fromList [VarG])
-
-(11,24)-(11,53)
-l1
-VarG
 
 (11,24)-(11,53)
 (l1 , List.append (clone 0

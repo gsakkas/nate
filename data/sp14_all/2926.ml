@@ -63,10 +63,6 @@ match x with
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (15,22)-(15,23)
-a
-VarG
-
-(15,22)-(15,23)
 match a with
 | (x , y) -> x
 CaseG VarG (fromList [(Nothing,VarG)])
@@ -82,82 +78,6 @@ match x with
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
 (16,4)-(18,51)
-x
-VarG
-
-(16,4)-(18,51)
-carry
-VarG
-
-(16,4)-(18,51)
-addend_a
-VarG
-
-(16,4)-(18,51)
-addend_b
-VarG
-
-(16,4)-(18,51)
-carry
-VarG
-
-(16,4)-(18,51)
-addend_a
-VarG
-
-(16,4)-(18,51)
-addend_b
-VarG
-
-(16,4)-(18,51)
-a
-VarG
-
-(16,4)-(18,51)
-new_carry
-VarG
-
-(16,4)-(18,51)
-digit
-VarG
-
-(16,4)-(18,51)
-y
-VarG
-
-(16,4)-(18,51)
-(carry + addend_a) + addend_b
-BopG (BopG EmptyG EmptyG) VarG
-
-(16,4)-(18,51)
-((carry + addend_a) + addend_b) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,4)-(18,51)
-carry + addend_a
-BopG VarG VarG
-
-(16,4)-(18,51)
-(carry + addend_a) + addend_b
-BopG (BopG EmptyG EmptyG) VarG
-
-(16,4)-(18,51)
-((carry + addend_a) + addend_b) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,4)-(18,51)
-carry + addend_a
-BopG VarG VarG
-
-(16,4)-(18,51)
-10
-LitG
-
-(16,4)-(18,51)
-10
-LitG
-
-(16,4)-(18,51)
 let new_carry =
   ((carry + addend_a) + addend_b) / 10 in
 let digit =
@@ -165,26 +85,6 @@ let digit =
 match a with
 | (x , y) -> (new_carry , digit :: y)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(16,4)-(18,51)
-let digit =
-  ((carry + addend_a) + addend_b) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(16,4)-(18,51)
-match a with
-| (x , y) -> (new_carry , digit :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(16,4)-(18,51)
-(new_carry , digit :: y)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(16,4)-(18,51)
-digit :: y
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (16,15)-(16,18)
 (0 , [])

@@ -25,4 +25,8 @@ AppG (fromList [VarG])
 x
 VarG
 
+(2,42)-(2,47)
+EMPTY
+EmptyG
+
 *)

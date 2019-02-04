@@ -27,4 +27,8 @@ let rec assoc (d,k,l) =
 acc
 VarG
 
+(9,19)-(9,22)
+EMPTY
+EmptyG
+
 *)

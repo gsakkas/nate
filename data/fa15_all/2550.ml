@@ -39,30 +39,50 @@ LetG NonRec (fromList [BopG EmptyG EmptyG]) (IteG EmptyG EmptyG EmptyG)
 List.length l1 - List.length l2
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
+(6,2)-(10,39)
+EMPTY
+EmptyG
+
+(7,2)-(10,39)
+EMPTY
+EmptyG
+
+(7,15)-(7,22)
+EMPTY
+EmptyG
+
+(7,15)-(7,32)
+EMPTY
+EmptyG
+
+(7,25)-(7,32)
+EMPTY
+EmptyG
+
+(9,7)-(9,9)
+EMPTY
+EmptyG
+
+(9,7)-(9,35)
+EMPTY
+EmptyG
+
 (9,13)-(9,35)
 let pad = clone 0 sizDif in
 (l1 , pad @ l2)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
 (9,33)-(9,35)
-l1
-VarG
-
-(9,33)-(9,35)
-pad
-VarG
-
-(9,33)-(9,35)
-(@)
-VarG
-
-(9,33)-(9,35)
-pad @ l2
-AppG (fromList [VarG])
-
-(9,33)-(9,35)
 (l1 , pad @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(10,7)-(10,27)
+EMPTY
+EmptyG
+
+(10,7)-(10,39)
+EMPTY
+EmptyG
 
 (10,8)-(10,17)
 let pad =
@@ -77,14 +97,6 @@ AppG (fromList [UopG EmptyG,LitG])
 (10,20)-(10,26)
 (- sizDif)
 UopG VarG
-
-(10,31)-(10,33)
-pad
-VarG
-
-(10,31)-(10,33)
-(@)
-VarG
 
 (10,31)-(10,33)
 pad @ l1

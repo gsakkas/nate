@@ -53,6 +53,14 @@ let bigAdd l1 l2 =
  else 0 , ((a1 + x1) + x2) :: a2)
 TupleG (fromList [IteG EmptyG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 
+(17,44)-(17,73)
+EMPTY
+EmptyG
+
+(18,15)-(18,23)
+EMPTY
+EmptyG
+
 (18,20)-(18,21)
 [0]
 ListG LitG Nothing

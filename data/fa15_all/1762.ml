@@ -53,6 +53,10 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(24,47)-(24,68)
+EMPTY
+EmptyG
+
 (24,54)-(24,60)
 (b_less , x , y)
 TupleG (fromList [VarG])

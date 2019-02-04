@@ -1,20 +1,46 @@
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing])
-(0 , ((x1 + x2) + a1) :: a2)
-(0 , ((x1 + x2) + a1) :: a2)
-(0 , ((x1 + x2) + a1) :: a2)
-(0 , ((x1 + x2) + a1) :: a2)
-(0 , ((x1 + x2) + a1) :: a2)
-(0 , ((x1 + x2) + a1) :: a2)
-(0 , ((x1 + x2) + a1) :: a2)
-(0 , ((x1 + x2) + a1) :: a2)
-(0 , ((i + j) + m) :: n)
-(0 , ((i + j) + m) :: n)
-(0 , ((j + k) + l) :: m)
-(0 , ((j + k) + l) :: m)
-(0 , ((j + k) + l) :: m)
-(0 , ((j + k) + l) :: m)
-(0 , ((j + k) + l) :: m)
-(0 , ((j + k) + l) :: m)
-(0 , ((j + k) + l) :: m)
-(0 , ((j + k) + l) :: m)
-(0 , ((j + k) + l) :: m)
+IteG (BopG EmptyG EmptyG) LitG LitG
+if f b = b
+then false
+else true
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if ((a1 + x1) + x2) >= 10
+then 1
+else 0
+if explode w = listReverse (explode w)
+then true
+else false
+if h = List.hd (listReverse w)
+then true
+else false

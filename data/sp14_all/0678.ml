@@ -11,10 +11,6 @@ let pipe fs =
 
 (* changed spans
 (2,30)-(2,31)
-x
-VarG
-
-(2,30)-(2,31)
 x a
 AppG (fromList [VarG])
 

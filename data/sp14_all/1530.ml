@@ -13,6 +13,22 @@ let sqsum xs =
 *)
 
 (* changed spans
+(4,13)-(4,57)
+EMPTY
+EmptyG
+
+(4,19)-(4,21)
+EMPTY
+EmptyG
+
+(4,35)-(4,37)
+EMPTY
+EmptyG
+
+(4,52)-(4,53)
+EMPTY
+EmptyG
+
 (4,54)-(4,57)
 2
 LitG

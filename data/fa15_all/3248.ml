@@ -24,10 +24,6 @@ a y
 AppG (fromList [VarG])
 
 (2,35)-(2,77)
-y
-VarG
-
-(2,35)-(2,77)
 c
 VarG
 

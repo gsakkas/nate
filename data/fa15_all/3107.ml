@@ -17,24 +17,8 @@ let fixpoint (f,b) =
 
 (* changed spans
 (5,35)-(5,40)
-b
-VarG
-
-(5,35)-(5,40)
 (b , false)
 TupleG (fromList [VarG,LitG])
-
-(5,46)-(5,50)
-f
-VarG
-
-(5,46)-(5,50)
-b
-VarG
-
-(5,46)-(5,50)
-f b
-AppG (fromList [VarG])
 
 (5,46)-(5,50)
 (f b , true)

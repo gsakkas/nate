@@ -83,9 +83,17 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(39,9)-(39,15)
-(@)
-VarG
+(38,6)-(38,71)
+EMPTY
+EmptyG
+
+(38,7)-(38,12)
+EMPTY
+EmptyG
+
+(39,8)-(39,27)
+EMPTY
+EmptyG
 
 (39,9)-(39,15)
 helper [] (h * i)

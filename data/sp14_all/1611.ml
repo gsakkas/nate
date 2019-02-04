@@ -27,6 +27,14 @@ let removeDuplicates l =
 seen
 VarG
 
+(7,23)-(7,34)
+EMPTY
+EmptyG
+
+(7,23)-(7,44)
+EMPTY
+EmptyG
+
 (7,24)-(7,25)
 List.mem h seen = false
 BopG (AppG (fromList [EmptyG])) LitG
@@ -34,6 +42,10 @@ BopG (AppG (fromList [EmptyG])) LitG
 (7,25)-(7,33)
 List.mem h seen
 AppG (fromList [VarG])
+
+(7,35)-(7,44)
+EMPTY
+EmptyG
 
 (7,50)-(7,60)
 false

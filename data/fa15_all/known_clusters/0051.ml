@@ -1,66 +1,26 @@
-AppG (fromList [LitG,ListG EmptyG Nothing])
-helper [] 0
-String.concat ""
-              ["sin(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["cos(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["((" ; exprToString s ; "+" ; exprToString p ; ")/2"]
-String.concat ""
-              [exprToString s ; "*" ; exprToString p]
-String.concat ""
-              ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
-String.concat ""
-              ["sin(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["cos(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["((" ; exprToString s ; "+" ; exprToString p ; ")/2"]
-String.concat ""
-              [exprToString s ; "*" ; exprToString p]
-String.concat ""
-              ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
-String.concat ""
-              ["sin(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["cos(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["((" ; exprToString s ; "+" ; exprToString p ; ")/2"]
-String.concat ""
-              [exprToString s ; "*" ; exprToString p]
-String.concat ""
-              ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
-String.concat ""
-              ["sin(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["cos(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["((" ; exprToString s ; "+" ; exprToString p ; ")/2"]
-String.concat ""
-              [exprToString s ; "*" ; exprToString p]
-String.concat ""
-              ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
-String.concat ""
-              ["sin(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["cos(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["((" ; exprToString s ; "+" ; exprToString p ; ")/2"]
-String.concat ""
-              [exprToString s ; "*" ; exprToString p]
-String.concat ""
-              ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
-String.concat ""
-              ["cos(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["((" ; exprToString s ; "+" ; exprToString p ; ")/2"]
-String.concat ""
-              [exprToString s ; "*" ; exprToString p]
-String.concat ""
-              ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
-String.concat ""
-              ["((" ; exprToString s ; "+" ; exprToString p ; ")/2"]
-String.concat ""
-              [exprToString s ; "*" ; exprToString p]
-String.concat ""
-              ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
+LamG (BopG EmptyG EmptyG)
+fun (x , y) -> x + y
+fun (x , y) -> x + y
+fun x -> (f x - x) < 0
+fun s -> (f s - s) < 0
+fun s -> (f s - s) < 0
+fun s -> (f s - s) < 0
+fun s -> (f s - s) < 0
+fun s -> (f s - s) < 0
+fun i -> i + 1
+fun ss -> ss mod 10
+fun ss -> ss mod 10
+fun x -> a + (x * x)
+fun x -> a + (x * x)
+fun x -> a + (x * x)
+fun x -> a + (x * x)
+fun x -> a + (x * x)
+fun x -> a + (x * x)
+fun y -> y / 10
+fun x -> x mod 10
+fun y -> y / 10
+fun x -> x mod 10
+fun y -> y / 10
+fun x -> x mod 10
+fun y -> y / 10
+fun x -> x mod 10

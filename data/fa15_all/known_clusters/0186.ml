@@ -1,3 +1,9 @@
-ConAppG (Just (TupleG (fromList [BopG (BopG VarG VarG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing]))) Nothing
-((h + b) / 10) :: (((h + b) mod 10) :: t)
-((h + b) / 10) :: (((h + b) mod 10) :: t)
+CaseG (TupleG (fromList [EmptyG])) (fromList [(Just (BopG EmptyG EmptyG),AppG (fromList [EmptyG]))])
+match (rand (243 , 98723) , depth) with
+| (x , 0) when (x mod 2) = 0 -> buildY ()
+| (x , 0) when (x mod 2) = 1 -> buildX ()
+| (x , n) when (n > 0) && ((x mod 5) = 0) -> buildSine (build (rand , n - 1))
+| (x , n) when (n > 0) && ((x mod 5) = 1) -> buildCosine (build (rand , n - 1))
+| (x , n) when (n > 0) && ((x mod 5) = 2) -> buildAverage (build (rand , n - 1) , build (rand , n - 1))
+| (x , n) when (n > 0) && ((x mod 5) = 3) -> buildTimes (build (rand , n - 1) , build (rand , n - 1))
+| (x , n) when (n > 0) && ((x mod 5) = 4) -> buildThresh (build (rand , n - 1) , build (rand , n - 1) , build (rand , n - 1) , build (rand , n - 1))

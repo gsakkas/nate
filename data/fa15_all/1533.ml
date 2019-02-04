@@ -19,16 +19,29 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(7,29)-(7,40)
-fun b ->
-  if f b = b
-  then (b , true)
-  else (f b , false)
-LamG (IteG EmptyG EmptyG EmptyG)
+(2,15)-(2,20)
+EMPTY
+EmptyG
 
-(7,29)-(7,40)
-f b = b
-BopG (AppG (fromList [EmptyG])) VarG
+(2,15)-(2,24)
+EMPTY
+EmptyG
+
+(2,16)-(2,17)
+EMPTY
+EmptyG
+
+(2,18)-(2,19)
+EMPTY
+EmptyG
+
+(2,23)-(2,24)
+EMPTY
+EmptyG
+
+(4,16)-(5,63)
+EMPTY
+EmptyG
 
 (7,29)-(7,40)
 let f' =
@@ -39,12 +52,6 @@ let f' =
 f'
 LetG NonRec (fromList [LamG EmptyG]) VarG
 
-(7,29)-(7,40)
-if f b = b
-then (b , true)
-else (f b , false)
-IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
 (7,30)-(7,32)
 f
 VarG
@@ -53,22 +60,6 @@ VarG
 b
 VarG
 
-(7,33)-(7,39)
-b
-VarG
-
-(7,34)-(7,35)
-b
-VarG
-
-(7,34)-(7,35)
-f b
-AppG (fromList [VarG])
-
-(7,34)-(7,35)
-true
-LitG
-
 (7,34)-(7,35)
 (f b , false)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
@@ -76,9 +67,5 @@ TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 (7,42)-(7,43)
 f'
 VarG
-
-(7,42)-(7,43)
-false
-LitG
 
 *)

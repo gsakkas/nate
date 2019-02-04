@@ -24,14 +24,6 @@ let palindrome w = match explode w with | [] -> true | h::t -> matchHeads w;;
 
 (* changed spans
 (7,23)-(7,24)
-explode
-VarG
-
-(7,23)-(7,24)
-explode x
-AppG (fromList [VarG])
-
-(7,23)-(7,24)
 match explode x with
 | h :: t -> false
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,LitG)])

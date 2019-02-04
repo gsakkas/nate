@@ -14,6 +14,10 @@ let pipe fs = let f a x x = x in let base x = x in List.fold_left f base fs;;
 fun x -> x
 LamG VarG
 
+(3,14)-(3,24)
+EMPTY
+EmptyG
+
 (3,39)-(3,40)
 fun x -> x
 LamG VarG

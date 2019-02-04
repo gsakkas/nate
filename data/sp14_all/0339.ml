@@ -64,79 +64,27 @@ let rec eval (e,x,y) =
 
 (* changed spans
 (27,33)-(27,35)
-eval
-VarG
-
-(27,33)-(27,35)
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(27,33)-(27,35)
-(e1 , x , y)
-TupleG (fromList [VarG])
-
-(27,40)-(27,49)
-x
-VarG
-
 (27,40)-(27,49)
 y
-VarG
-
-(27,46)-(27,48)
-eval
 VarG
 
 (27,46)-(27,48)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(27,46)-(27,48)
-(e2 , x , y)
-TupleG (fromList [VarG])
-
-(27,54)-(27,56)
-x
-VarG
-
-(27,54)-(27,56)
-y
-VarG
-
-(27,54)-(27,56)
-eval
-VarG
-
 (27,54)-(27,56)
 eval (e3 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(27,54)-(27,56)
-(e3 , x , y)
-TupleG (fromList [VarG])
-
-(28,17)-(28,18)
-eval
-VarG
 
 (28,17)-(28,18)
 eval (e , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(28,17)-(28,18)
-(e , x , y)
-TupleG (fromList [VarG])
-
-(28,17)-(28,25)
-x
-VarG
-
 (28,17)-(28,25)
 y
-VarG
-
-(28,22)-(28,25)
-x
 VarG
 
 (28,22)-(28,25)

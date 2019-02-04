@@ -104,4 +104,12 @@ match r with
 | 5 -> buildThresh (build (rand , d - 1) , build (rand , d - 1) , build (rand , d - 1) , build (rand , d - 1))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+(45,18)-(45,20)
+EMPTY
+EmptyG
+
+(46,18)-(46,20)
+EMPTY
+EmptyG
+
 *)

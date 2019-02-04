@@ -26,11 +26,11 @@ t = []
 BopG VarG (ListG EmptyG Nothing)
 
 (7,27)-(7,29)
-"A"
-LitG
-
-(7,27)-(7,29)
 []
 ListG EmptyG Nothing
+
+(7,35)-(7,38)
+EMPTY
+EmptyG
 
 *)

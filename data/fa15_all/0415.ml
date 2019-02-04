@@ -18,6 +18,14 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(6,34)-(6,50)
+EMPTY
+EmptyG
+
+(6,35)-(6,36)
+EMPTY
+EmptyG
+
 (6,38)-(6,49)
 if f b
 then (b , true)
@@ -27,18 +35,6 @@ IteG (AppG (fromList [EmptyG])) (TupleG (fromList [EmptyG])) (TupleG (fromList [
 (6,39)-(6,44)
 (b , true)
 TupleG (fromList [VarG,LitG])
-
-(6,40)-(6,41)
-b
-VarG
-
-(6,40)-(6,41)
-true
-LitG
-
-(6,40)-(6,41)
-false
-LitG
 
 (6,40)-(6,41)
 (b , false)

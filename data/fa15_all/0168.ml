@@ -25,28 +25,12 @@ let rec additivePersistence n =
 
 (* changed spans
 (5,16)-(5,70)
-digitsOfInt
-VarG
-
-(5,16)-(5,70)
-abs
-VarG
-
-(5,16)-(5,70)
-n
-VarG
-
-(5,16)-(5,70)
 fun n -> digitsOfInt (abs n)
 LamG (AppG (fromList [EmptyG]))
 
-(5,16)-(5,70)
-digitsOfInt (abs n)
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(5,16)-(5,70)
-abs n
-AppG (fromList [VarG])
+(8,2)-(8,71)
+EMPTY
+EmptyG
 
 (8,5)-(8,35)
 let x = sumList (digits n) in
@@ -58,14 +42,6 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
 (8,15)-(8,26)
 digits
 VarG
-
-(8,33)-(8,35)
-x
-VarG
-
-(8,33)-(8,35)
-x > 10
-BopG VarG LitG
 
 (8,33)-(8,35)
 if x > 10

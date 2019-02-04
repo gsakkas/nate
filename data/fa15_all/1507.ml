@@ -88,6 +88,10 @@ ListG (BopG EmptyG EmptyG) Nothing
 b
 VarG
 
+(22,44)-(22,45)
+EMPTY
+EmptyG
+
 (23,16)-(23,53)
 (b / 10 , (b mod 10) :: ((h + y) :: t))
 TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
@@ -96,29 +100,21 @@ TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 b
 VarG
 
-(23,35)-(23,47)
-h
-VarG
+(23,30)-(23,48)
+EMPTY
+EmptyG
 
-(23,35)-(23,47)
-y
-VarG
+(23,31)-(23,32)
+EMPTY
+EmptyG
 
 (23,35)-(23,47)
 h + y
 BopG VarG VarG
 
-(23,35)-(23,47)
-(h + y) :: t
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
-
 (23,36)-(23,39)
 b
 VarG
-
-(23,44)-(23,46)
-0
-LitG
 
 (23,44)-(23,46)
 (0 , [])

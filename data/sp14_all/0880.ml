@@ -30,14 +30,6 @@ function | y -> y
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (3,53)-(3,77)
-$x
-VarG
-
-(3,53)-(3,77)
-y
-VarG
-
-(3,53)-(3,77)
 match $x with
 | y -> y
 CaseG VarG (fromList [(Nothing,VarG)])

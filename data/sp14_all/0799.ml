@@ -89,6 +89,26 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(28,11)-(28,20)
+EMPTY
+EmptyG
+
+(28,16)-(28,20)
+EMPTY
+EmptyG
+
+(30,11)-(30,20)
+EMPTY
+EmptyG
+
+(30,16)-(30,20)
+EMPTY
+EmptyG
+
+(34,40)-(34,46)
+EMPTY
+EmptyG
+
 (34,54)-(34,60)
 VarX
 ConAppG Nothing Nothing

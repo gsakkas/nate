@@ -59,9 +59,17 @@ BopG VarG (AppG (fromList [EmptyG]))
 (eval (expr1 , x , y) +. eval (expr2 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
+(20,6)-(20,55)
+EMPTY
+EmptyG
+
 (20,7)-(20,27)
 eval (expr1 , x , y) +. eval (expr2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+
+(20,54)-(20,55)
+EMPTY
+EmptyG
 
 (21,27)-(21,47)
 eval (expr1 , x , y) *. eval (expr2 , x , y)

@@ -23,4 +23,8 @@ VarG
 (l1 , l2)
 TupleG (fromList [VarG])
 
+(5,51)-(5,58)
+EMPTY
+EmptyG
+
 *)

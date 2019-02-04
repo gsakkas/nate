@@ -21,4 +21,8 @@ let rec digitsOfInt n =
 front :: (add back next)
 ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])]))) Nothing
 
+(6,52)-(6,62)
+EMPTY
+EmptyG
+
 *)

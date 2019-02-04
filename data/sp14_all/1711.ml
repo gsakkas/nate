@@ -24,16 +24,20 @@ let removeDuplicates l =
 *)
 
 (* changed spans
+(7,20)-(7,21)
+EMPTY
+EmptyG
+
+(8,8)-(9,29)
+EMPTY
+EmptyG
+
 (8,44)-(8,48)
 seen
 VarG
 
 (8,59)-(8,63)
 seen
-VarG
-
-(9,8)-(9,29)
-t
 VarG
 
 (9,8)-(9,29)

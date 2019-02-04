@@ -21,4 +21,8 @@ CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
 0
 LitG
 
+(3,50)-(3,57)
+EMPTY
+EmptyG
+
 *)

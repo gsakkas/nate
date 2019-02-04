@@ -19,4 +19,8 @@ let rec listReverse l =
 append t [h]
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
+(5,69)-(5,76)
+EMPTY
+EmptyG
+
 *)

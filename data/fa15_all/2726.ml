@@ -56,78 +56,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (4,12)-(9,43)
-List.rev
-VarG
-
-(4,12)-(9,43)
-t
-VarG
-
-(4,12)-(9,43)
-List.rev
-VarG
-
-(4,12)-(9,43)
-u
-VarG
-
-(4,12)-(9,43)
-h
-VarG
-
-(4,12)-(9,43)
-h'
-VarG
-
-(4,12)-(9,43)
-addHelper
-VarG
-
-(4,12)-(9,43)
-t
-VarG
-
-(4,12)-(9,43)
-t'
-VarG
-
-(4,12)-(9,43)
-(@)
-VarG
-
-(4,12)-(9,43)
-h'
-VarG
-
-(4,12)-(9,43)
-h
-VarG
-
-(4,12)-(9,43)
-addHelper
-VarG
-
-(4,12)-(9,43)
-t
-VarG
-
-(4,12)-(9,43)
-t'
-VarG
-
-(4,12)-(9,43)
-(@)
-VarG
-
-(4,12)-(9,43)
-h'
-VarG
-
-(4,12)-(9,43)
-h
-VarG
-
-(4,12)-(9,43)
 fun (t , u) ->
   match List.rev t with
   | [] -> []
@@ -138,117 +66,37 @@ fun (t , u) ->
                             else addHelper (t , t') @ [h' + h]
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(4,12)-(9,43)
-List.rev t
-AppG (fromList [VarG])
+(14,6)-(14,32)
+EMPTY
+EmptyG
 
-(4,12)-(9,43)
-List.rev u
-AppG (fromList [VarG])
+(14,10)-(14,18)
+EMPTY
+EmptyG
 
-(4,12)-(9,43)
-addHelper (t , t')
-AppG (fromList [TupleG (fromList [EmptyG])])
+(14,10)-(14,32)
+EMPTY
+EmptyG
 
-(4,12)-(9,43)
-addHelper (t , t') @ [(1 + h') + h]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(4,12)-(9,43)
-addHelper (t , t')
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(4,12)-(9,43)
-addHelper (t , t') @ [h' + h]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(4,12)-(9,43)
-h + h'
-BopG VarG VarG
-
-(4,12)-(9,43)
-(h + h') > 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(4,12)-(9,43)
-1 + h'
-BopG LitG VarG
-
-(4,12)-(9,43)
-(1 + h') + h
-BopG (BopG EmptyG EmptyG) VarG
-
-(4,12)-(9,43)
-h' + h
-BopG VarG VarG
-
-(4,12)-(9,43)
-10
-LitG
-
-(4,12)-(9,43)
-1
-LitG
-
-(4,12)-(9,43)
-if (h + h') > 10
-then addHelper (t , t') @ [(1 + h') + h]
-else addHelper (t , t') @ [h' + h]
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(4,12)-(9,43)
-match List.rev t with
-| [] -> []
-| h :: t -> match List.rev u with
-            | [] -> []
-            | h' :: t' -> if (h + h') > 10
-                          then addHelper (t , t') @ [(1 + h') + h]
-                          else addHelper (t , t') @ [h' + h]
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)])),(Nothing,ListG EmptyG Nothing)])
-
-(4,12)-(9,43)
-match List.rev u with
-| [] -> []
-| h' :: t' -> if (h + h') > 10
-              then addHelper (t , t') @ [(1 + h') + h]
-              else addHelper (t , t') @ [h' + h]
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG Nothing)])
-
-(4,12)-(9,43)
-(t , t')
-TupleG (fromList [VarG])
-
-(4,12)-(9,43)
-(t , t')
-TupleG (fromList [VarG])
-
-(4,12)-(9,43)
-[]
-ListG EmptyG Nothing
-
-(4,12)-(9,43)
-[]
-ListG EmptyG Nothing
-
-(4,12)-(9,43)
-[(1 + h') + h]
-ListG (BopG EmptyG EmptyG) Nothing
-
-(4,12)-(9,43)
-[h' + h]
-ListG (BopG EmptyG EmptyG) Nothing
+(14,19)-(14,32)
+EMPTY
+EmptyG
 
 (18,16)-(18,17)
 addHelper (a , x)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(18,20)-(18,21)
-addHelper
-VarG
+(18,16)-(18,21)
+EMPTY
+EmptyG
 
 (18,20)-(18,21)
 (a , x)
 TupleG (fromList [VarG])
+
+(19,4)-(20,74)
+EMPTY
+EmptyG
 
 (20,4)-(20,74)
 let base = [] in
@@ -256,12 +104,24 @@ let args = [] in
 List.fold_left f base args
 LetG NonRec (fromList [ListG EmptyG Nothing]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(20,4)-(20,74)
-[]
-ListG EmptyG Nothing
+(20,15)-(20,23)
+EMPTY
+EmptyG
+
+(20,16)-(20,18)
+EMPTY
+EmptyG
+
+(20,20)-(20,22)
+EMPTY
+EmptyG
 
 (20,27)-(20,74)
 []
 ListG EmptyG Nothing
+
+(20,71)-(20,74)
+EMPTY
+EmptyG
 
 *)

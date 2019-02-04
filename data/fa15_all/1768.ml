@@ -23,4 +23,8 @@ let fixpoint (f,b) = wwhile ((helper f), b);;
 helper f
 AppG (fromList [VarG])
 
+(7,43)-(7,44)
+EMPTY
+EmptyG
+
 *)

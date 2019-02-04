@@ -27,6 +27,10 @@ let _ = digitsOfInt 3124;;
 digitsOfInt (n / 10) @ [n mod 10]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 
+(8,11)-(8,47)
+EMPTY
+EmptyG
+
 (8,12)-(8,32)
 (@)
 VarG

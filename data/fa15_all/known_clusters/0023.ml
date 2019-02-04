@@ -1,107 +1,129 @@
-BopG (BopG EmptyG EmptyG) VarG
-(toSum1 + toSum2) + carry
-(cin + d1) + d2
-(cin + d1) + d2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(l1e + l2e) + carry
-(l1e + l2e) + carry
-(l1e + l2e) + carry
-(l1e + l2e) + carry
-(r + s) + y
-(r + s) + y
-(r + s) + y
-(r + s) + y
-(r + s) + y
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(y + z) + carry
-(y + z) + carry
-(y + z) + carry
-(y + z) + carry
-(y + z) + carry
-(y + z) + carry
-(y + z) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x1 + x2) + carry
-(x + y) + w
-(x + y) + w
-(x + y) + w
-(x + y) + w
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(i + j) + m
-(i + j) + m
-(i + j) + m
-(i + j) + m
-(a1 + x1) + x2
-(a1 + x1) + x2
-(a1 + x1) + x2
-(1 + h') + h
-(1 + h') + h
-(1 + h') + h
-(1 + h') + h
-(1 + h') + h
-(1 + h') + h
-(1 + h') + h
-(1 + h') + h
-(1 + h') + h
-(1 + h') + h
-(o + p) + m
-(o + p) + m
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(lh1 + lh2) + carry
-(num1 + num2) + carry
-(num1 + num2) + carry
-(num1 + num2) + carry
-(num1 + num2) + carry
-(num1 + num2) + carry
-(x1 + x2) + c
-(x1 + x2) + c
-((x * i) mod 10) + x'
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
+bigAdd l (mulByDigit (i - 1)
+                     l)
+digitsOfInt 0 @ return
+digitsOfInt 0 @ return
+t @ listReverse [h]
+l1 @ clone 0 diff
+l1 @ clone 0 diff
+l1 @ clone 0 diff
+l2 @ clone 0 diff
+l1 @ clone 0 diff
+l2 @ clone 0 diff
+l1 @ clone 0 diff
+l2 @ clone 0 diff
+List.nth l1 (List.length l1)
+List.nth l1 (List.length l1)
+List.nth l2 (List.length l2)
+clone 0 (- n) @ l1
+List.combine (List.rev l1) l2
+clone y (List.length y)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+clone 0
+      (List.length l2 - List.length l1) @ l1
+clone 0
+      (List.length l2 - List.length l1) @ l1
+mulByDigit x (List.rev l2)
+mulByDigit x (List.rev l2)
+mulByDigit x (List.rev l2)
+mulByDigit x (List.rev l2)
+clone 0
+      (List.length l1 - List.length l2) @ l2
+clone 0
+      (List.length l1 - List.length l2) @ l2
+res @ helper (List.length l2 * 2)
+             x
+List.append (clone 0
+                   (List.length l1 - List.length l2))
+            l2
+recCounter (sumList (digitsOfInt n))
+           count
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd (mulByDigit x1
+                   x2 @ carry) res
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+mod_float comb
+          (eval (e3 , x , y))
+mod_float comb
+          (eval (e3 , x , y))
+mod_float comb
+          (eval (e3 , x , y))
+mod_float comb
+          (eval (e3 , x , y))
+mod_float comb
+          (eval (e3 , x , y))
+List.map combine
+         (List.rev (List.combine l1
+                                 l2))
+bigAdd (mulByDigit o l1) l
+bigAdd (mulByDigit o l1) l
+bigAdd (mulByDigit o l1) l
+bigAdd (mulByDigit prod l1) l
+bigAdd (mulByDigit prod l1) l
+bigAdd (mulByDigit (place * 10)
+                   l1) l
+bigAdd (mulByDigit (place * 10)
+                   l1) l
+bigAdd total (mulByDigit x l2)
+bigAdd total (mulByDigit x l2)
+bigAdd total (mulByDigit x l2)
+bigAdd total
+       (mulByDigit (i - 1) l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+notEqual b (f b)
+bigAdd (mulByDigit (i - 1) l)
+       l
+bigAdd (mulByDigit (i - 1) l)
+       l
+bigAdd (mulByDigit (i - 1) l)
+       l
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)
+bigAdd l (mulByDigit (i - 1)
+                     l)

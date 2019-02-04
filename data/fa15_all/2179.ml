@@ -18,13 +18,13 @@ LamG (AppG (fromList [EmptyG]))
 a y
 AppG (fromList [VarG])
 
-(2,53)-(2,77)
-x
-VarG
+(2,35)-(2,77)
+EMPTY
+EmptyG
 
-(2,53)-(2,77)
-fun x -> x
-LamG VarG
+(2,44)-(2,49)
+EMPTY
+EmptyG
 
 (2,53)-(2,77)
 let base = fun x -> x in

@@ -15,14 +15,6 @@ let pipe fs =
 AppG (fromList [VarG])
 
 (2,32)-(2,72)
-n
-VarG
-
-(2,32)-(2,72)
-a
-VarG
-
-(2,32)-(2,72)
 fun n -> n
 LamG VarG
 

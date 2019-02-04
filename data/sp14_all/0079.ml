@@ -51,14 +51,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (16,16)-(16,38)
-snd
-VarG
-
-(16,16)-(16,38)
-a
-VarG
-
-(16,16)-(16,38)
 snd a
 AppG (fromList [VarG])
 
@@ -69,80 +61,20 @@ match snd a with
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 (16,17)-(16,25)
-fst
-VarG
-
-(16,17)-(16,25)
-x
-VarG
-
-(16,17)-(16,25)
-snd
-VarG
-
-(16,17)-(16,25)
-x
-VarG
-
-(16,17)-(16,25)
-fst x
-AppG (fromList [VarG])
-
-(16,17)-(16,25)
-snd x
-AppG (fromList [VarG])
-
-(16,17)-(16,25)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,17)-(16,25)
 [(fst x + snd x) / 10 ; (fst x + snd x) mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
 
 (16,18)-(16,19)
-fst
-VarG
-
-(16,18)-(16,19)
-fst x
-AppG (fromList [VarG])
-
-(16,18)-(16,19)
 fst x + snd x
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,22)-(16,24)
-snd
-VarG
-
-(16,22)-(16,24)
-x
-VarG
 
 (16,22)-(16,24)
 snd x
 AppG (fromList [VarG])
 
 (16,28)-(16,29)
-fst
-VarG
-
-(16,28)-(16,29)
-fst x
-AppG (fromList [VarG])
-
-(16,28)-(16,29)
 fst x + snd x
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(16,34)-(16,36)
-snd
-VarG
-
-(16,34)-(16,36)
-x
-VarG
 
 (16,34)-(16,36)
 snd x
@@ -153,24 +85,16 @@ AppG (fromList [VarG])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
 (17,4)-(19,51)
-0
-LitG
-
-(17,4)-(19,51)
 []
 ListG EmptyG Nothing
-
-(17,15)-(17,17)
-0
-LitG
 
 (17,15)-(17,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
-(18,15)-(18,43)
-List.combine
-VarG
+(18,15)-(18,23)
+EMPTY
+EmptyG
 
 (18,15)-(18,43)
 List.combine (List.rev l1)
@@ -179,18 +103,6 @@ AppG (fromList [AppG (fromList [EmptyG])])
 
 (18,24)-(18,43)
 List.rev
-VarG
-
-(19,4)-(19,51)
-l1
-VarG
-
-(19,4)-(19,51)
-List.rev
-VarG
-
-(19,4)-(19,51)
-l2
 VarG
 
 (19,4)-(19,51)

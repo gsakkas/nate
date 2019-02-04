@@ -41,9 +41,17 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(16,28)-(16,48)
+EMPTY
+EmptyG
+
 (16,39)-(16,40)
 0 :: l1
 ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
+
+(16,49)-(16,69)
+EMPTY
+EmptyG
 
 (16,60)-(16,61)
 0 :: l2

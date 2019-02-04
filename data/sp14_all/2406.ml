@@ -53,14 +53,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (15,6)-(19,61)
-a
-VarG
-
-(15,6)-(19,61)
-x
-VarG
-
-(15,6)-(19,61)
 let carry =
   match a with
   | (x , y) -> x in
@@ -72,11 +64,6 @@ match x with
                 match a with
                 | (x , y) -> (new_carry , digit :: y))
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(15,6)-(19,61)
-match a with
-| (x , y) -> x
-CaseG VarG (fromList [(Nothing,VarG)])
 
 (17,28)-(17,29)
 carry

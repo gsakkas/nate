@@ -1,11 +1,21 @@
-AppG (fromList [VarG,AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-helper (i - 1) l (bigAdd acc
-                         l)
-helper (i - 1) l (bigAdd acc
-                         l)
-helper (i - 1) l (bigAdd acc
-                         l)
-helper (x - 1) l (bigAdd l
-                         accum)
-helper (i - 1) (bigAdd acc l)
-       l
+LetG NonRec (fromList [LitG]) (SeqG EmptyG EmptyG)
+let x = 1 in
+(x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x)
+let x = 1 in
+(x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x)
+let x = 1 in
+(x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x)
+let x = 1 in
+(x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x)

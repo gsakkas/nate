@@ -1,3 +1,6 @@
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing])
-(1 , (z - 10) :: n)
-(1 , (z - 10) :: n)
+CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,IteG EmptyG EmptyG EmptyG)])
+match depth with
+| 0 -> if true
+       then buildX ()
+       else buildY ()
+| n -> buildSine (build (rand , depth - 1))

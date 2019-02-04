@@ -28,58 +28,6 @@ let removeDuplicates l =
 
 (* changed spans
 (3,2)-(11,27)
-List.mem
-VarG
-
-(3,2)-(11,27)
-h
-VarG
-
-(3,2)-(11,27)
-r
-VarG
-
-(3,2)-(11,27)
-seen
-VarG
-
-(3,2)-(11,27)
-h
-VarG
-
-(3,2)-(11,27)
-seen
-VarG
-
-(3,2)-(11,27)
-fun h ->
-  fun r ->
-    fun seen ->
-      if List.mem h r
-      then seen
-      else h :: seen
-LamG (LamG EmptyG)
-
-(3,2)-(11,27)
-fun r ->
-  fun seen ->
-    if List.mem h r
-    then seen
-    else h :: seen
-LamG (LamG EmptyG)
-
-(3,2)-(11,27)
-fun seen ->
-  if List.mem h r
-  then seen
-  else h :: seen
-LamG (IteG EmptyG EmptyG EmptyG)
-
-(3,2)-(11,27)
-List.mem h r
-AppG (fromList [VarG])
-
-(3,2)-(11,27)
 let assignSeen =
   fun h ->
     fun r ->
@@ -100,15 +48,41 @@ let rec helper =
 List.rev (helper ([] , l))
 LetG NonRec (fromList [LamG EmptyG]) (LetG Rec (fromList [EmptyG]) EmptyG)
 
-(3,2)-(11,27)
-if List.mem h r
-then seen
-else h :: seen
-IteG (AppG (fromList [EmptyG])) VarG (ConAppG (Just EmptyG) Nothing)
+(8,20)-(8,24)
+EMPTY
+EmptyG
 
-(3,2)-(11,27)
-h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+(9,8)-(10,50)
+EMPTY
+EmptyG
+
+(9,9)-(9,43)
+EMPTY
+EmptyG
+
+(9,12)-(9,13)
+EMPTY
+EmptyG
+
+(9,12)-(9,17)
+EMPTY
+EmptyG
+
+(9,16)-(9,17)
+EMPTY
+EmptyG
+
+(9,23)-(9,28)
+EMPTY
+EmptyG
+
+(9,23)-(9,43)
+EMPTY
+EmptyG
+
+(9,29)-(9,31)
+EMPTY
+EmptyG
 
 (9,32)-(9,43)
 assignSeen h r seen

@@ -132,10 +132,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (54,8)-(54,75)
-a
-VarG
-
-(54,8)-(54,75)
 let (l2digit2 , templ12) =
   a in
 let multres =
@@ -143,10 +139,6 @@ let multres =
 (0 , bigAdd (templ12 @ [0])
             multres)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(54,51)-(54,75)
-0
-LitG
 
 (54,51)-(54,75)
 (0 , bigAdd (templ12 @ [0])

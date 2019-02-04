@@ -19,6 +19,26 @@ let fixpoint (f,b) = wwhile ((fun x  -> ((f b), (3 < 4))), b);;
 (fun x -> (f b , 3 < 4) , b)
 TupleG (fromList [VarG,LamG EmptyG])
 
+(5,42)-(5,43)
+EMPTY
+EmptyG
+
+(5,47)-(5,72)
+EMPTY
+EmptyG
+
+(5,48)-(5,49)
+EMPTY
+EmptyG
+
+(5,51)-(5,68)
+EMPTY
+EmptyG
+
+(5,52)-(5,55)
+EMPTY
+EmptyG
+
 (5,56)-(5,67)
 (f b , 3 < 4)
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
@@ -26,10 +46,6 @@ TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 (5,65)-(5,66)
 3 < 4
 BopG LitG LitG
-
-(5,70)-(5,71)
-3
-LitG
 
 (5,70)-(5,71)
 4

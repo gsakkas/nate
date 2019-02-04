@@ -69,8 +69,32 @@ let bigAdd l1 l2 =
 digits
 VarG
 
+(25,19)-(25,31)
+EMPTY
+EmptyG
+
+(25,26)-(25,30)
+EMPTY
+EmptyG
+
+(25,35)-(25,41)
+EMPTY
+EmptyG
+
 (26,18)-(26,32)
 digits
 VarG
+
+(26,19)-(26,31)
+EMPTY
+EmptyG
+
+(26,26)-(26,30)
+EMPTY
+EmptyG
+
+(26,35)-(26,41)
+EMPTY
+EmptyG
 
 *)

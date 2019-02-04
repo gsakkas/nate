@@ -1,17 +1,4 @@
-IteG (BopG EmptyG EmptyG) (LamG EmptyG) (LamG EmptyG)
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
+TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing]))) Nothing])
+(len , (-1) :: (0 :: xs'))
+(len , (-1) :: (0 :: xs'))
+(len , (-1) :: (0 :: xs'))

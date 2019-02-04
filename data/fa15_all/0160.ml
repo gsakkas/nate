@@ -23,6 +23,10 @@ LamG (TupleG (fromList [EmptyG]))
 x
 VarG
 
+(5,37)-(5,38)
+EMPTY
+EmptyG
+
 (5,42)-(5,43)
 x
 VarG

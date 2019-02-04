@@ -47,18 +47,6 @@ let rec mulByDigit i l =
 ListG (AppG (fromList [EmptyG])) Nothing
 
 (16,32)-(16,33)
-remainder
-VarG
-
-(16,32)-(16,33)
-i
-VarG
-
-(16,32)-(16,33)
-h
-VarG
-
-(16,32)-(16,33)
 mulByDigit i
            t' @ ([remainder h'
                             i + carry h i] @ [remainder h

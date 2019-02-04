@@ -25,20 +25,16 @@ let palindrome w =
 *)
 
 (* changed spans
+(9,19)-(9,72)
+EMPTY
+EmptyG
+
 (9,22)-(9,51)
 let explosion = explode w in
 if explosion = listReverse explosion
 then true
 else false
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
-
-(9,36)-(9,51)
-explosion
-VarG
-
-(9,36)-(9,51)
-explosion = listReverse explosion
-BopG VarG (AppG (fromList [EmptyG]))
 
 (9,36)-(9,51)
 if explosion = listReverse explosion

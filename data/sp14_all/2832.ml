@@ -58,6 +58,18 @@ let rec mulByDigit i l = bigAdd l (mulByDigit (i - 1) l);;
 *)
 
 (* changed spans
+(27,2)-(27,57)
+EMPTY
+EmptyG
+
+(27,5)-(27,6)
+EMPTY
+EmptyG
+
+(27,5)-(27,10)
+EMPTY
+EmptyG
+
 (27,9)-(27,10)
 bigAdd l (mulByDigit (i - 1)
                      l)
@@ -70,5 +82,21 @@ VarG
 (27,23)-(27,57)
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
+
+(27,34)-(27,57)
+EMPTY
+EmptyG
+
+(27,44)-(27,56)
+EMPTY
+EmptyG
+
+(27,45)-(27,51)
+EMPTY
+EmptyG
+
+(27,54)-(27,55)
+EMPTY
+EmptyG
 
 *)

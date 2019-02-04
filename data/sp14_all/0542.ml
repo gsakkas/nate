@@ -25,10 +25,6 @@ else (fun b'' -> (f b , true))
 IteG (BopG EmptyG EmptyG) (LamG EmptyG) (LamG EmptyG)
 
 (4,30)-(4,31)
-f b
-AppG (fromList [VarG])
-
-(4,30)-(4,31)
 f b = b
 BopG (AppG (fromList [EmptyG])) VarG
 
@@ -37,36 +33,12 @@ b
 VarG
 
 (4,34)-(4,39)
-b
-VarG
-
-(4,34)-(4,39)
 fun b'' -> (f b , false)
 LamG (TupleG (fromList [EmptyG]))
-
-(4,34)-(4,39)
-(f b , false)
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(4,43)-(4,44)
-f
-VarG
 
 (4,43)-(4,44)
 fun b'' -> (f b , true)
 LamG (TupleG (fromList [EmptyG]))
-
-(4,43)-(4,44)
-f b
-AppG (fromList [VarG])
-
-(4,43)-(4,44)
-false
-LitG
-
-(4,43)-(4,44)
-(f b , true)
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (4,48)-(4,49)
 true

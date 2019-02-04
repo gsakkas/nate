@@ -20,6 +20,10 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(7,21)-(7,76)
+EMPTY
+EmptyG
+
 (7,30)-(7,71)
 (let helper =
    fun x -> (f x , f x = f b) in
@@ -33,14 +37,6 @@ TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 (7,55)-(7,60)
 f x = f b
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(7,58)-(7,59)
-x
-VarG
-
-(7,58)-(7,59)
-f
-VarG
 
 (7,58)-(7,59)
 f b

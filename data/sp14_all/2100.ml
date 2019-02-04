@@ -100,4 +100,8 @@ let rec build (rand,depth) =
                                  else build (rand , depth - 1))
 TupleG (fromList [IteG EmptyG EmptyG EmptyG])
 
+(39,11)-(40,74)
+EMPTY
+EmptyG
+
 *)

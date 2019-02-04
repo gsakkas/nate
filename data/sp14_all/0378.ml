@@ -13,6 +13,14 @@ let rec clone x n = match n with | 0 -> [] | _ -> x :: (clone x (n - 1));;
 clone x (n - 1)
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(2,62)-(2,73)
+EMPTY
+EmptyG
+
+(2,63)-(2,68)
+EMPTY
+EmptyG
+
 (2,66)-(2,67)
 n - 1
 BopG VarG LitG

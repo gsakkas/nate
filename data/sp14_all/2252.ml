@@ -29,4 +29,16 @@ LamG (IteG EmptyG EmptyG EmptyG)
 b
 VarG
 
+(7,31)-(7,32)
+EMPTY
+EmptyG
+
+(7,39)-(7,44)
+EMPTY
+EmptyG
+
+(7,40)-(7,41)
+EMPTY
+EmptyG
+
 *)

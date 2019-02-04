@@ -67,16 +67,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (5,12)-(13,41)
-y
-VarG
-
-(5,12)-(13,41)
 fun y -> y
 LamG VarG
-
-(25,6)-(25,65)
-a1
-VarG
 
 (25,6)-(25,65)
 let c :: c' = a1 in

@@ -27,6 +27,18 @@ let removeDuplicates l =
 seen
 VarG
 
+(7,54)-(7,63)
+EMPTY
+EmptyG
+
+(7,55)-(7,59)
+EMPTY
+EmptyG
+
+(7,60)-(7,62)
+EMPTY
+EmptyG
+
 (8,8)-(8,46)
 seen
 VarG

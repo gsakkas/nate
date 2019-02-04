@@ -26,33 +26,9 @@ TupleG (fromList [VarG,LamG EmptyG])
 fun x -> (f x , x <> f x)
 LamG (TupleG (fromList [EmptyG]))
 
-(6,29)-(6,30)
-f x
-AppG (fromList [VarG])
-
-(6,29)-(6,30)
-(f x , x <> f x)
-TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-
 (6,32)-(6,36)
 x
 VarG
-
-(6,38)-(6,39)
-x
-VarG
-
-(6,38)-(6,39)
-f
-VarG
-
-(6,38)-(6,39)
-x
-VarG
-
-(6,38)-(6,39)
-f x
-AppG (fromList [VarG])
 
 (6,38)-(6,39)
 x <> f x

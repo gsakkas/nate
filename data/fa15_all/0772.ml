@@ -12,16 +12,16 @@ let rec clone x n =
 
 (* changed spans
 (3,48)-(3,49)
-(@)
-VarG
-
-(3,48)-(3,49)
 [x]
 ListG VarG Nothing
 
 (3,48)-(3,70)
 [x] @ clone x (n - 1)
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+
+(3,53)-(3,70)
+EMPTY
+EmptyG
 
 (3,63)-(3,64)
 n - 1

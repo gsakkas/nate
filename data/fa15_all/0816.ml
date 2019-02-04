@@ -37,23 +37,7 @@ loop (sumList (digitsOfInt x))
 AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
 (11,31)-(11,62)
-sumList
-VarG
-
-(11,31)-(11,62)
-digitsOfInt
-VarG
-
-(11,31)-(11,62)
-x
-VarG
-
-(11,31)-(11,62)
 sumList (digitsOfInt x)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(11,31)-(11,62)
-digitsOfInt x
-AppG (fromList [VarG])
 
 *)

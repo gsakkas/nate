@@ -40,10 +40,6 @@ let rec exprToString e =
 LitG
 
 (15,22)-(15,39)
-(^)
-VarG
-
-(15,22)-(15,39)
 exprToString e1 ^ ")"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 

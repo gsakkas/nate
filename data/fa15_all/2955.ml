@@ -68,21 +68,9 @@ let bigMul l1 l2 =
 
 (* changed spans
 (29,14)-(29,28)
-a
-VarG
-
-(29,14)-(29,28)
-0
-LitG
-
-(29,14)-(29,28)
 let (0 , res) = a in
 (0 , mulByDigit x res)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(29,14)-(29,28)
-(0 , mulByDigit x res)
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (29,27)-(29,28)
 res

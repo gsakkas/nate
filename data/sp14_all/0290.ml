@@ -9,6 +9,10 @@ let rec listReverse l = match l with | [] -> l | h::t -> listReverse (h :: l);;
 *)
 
 (* changed spans
+(2,45)-(2,47)
+EMPTY
+EmptyG
+
 (2,58)-(2,76)
 l
 VarG

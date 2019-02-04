@@ -15,15 +15,15 @@ let fixpoint (f,b) =
 
 (* changed spans
 (4,49)-(4,64)
-not
-VarG
-
-(4,49)-(4,64)
 not (f x = x)
 AppG (fromList [BopG EmptyG EmptyG])
 
 (4,50)-(4,59)
 f x
 AppG (fromList [VarG])
+
+(4,55)-(4,58)
+EMPTY
+EmptyG
 
 *)

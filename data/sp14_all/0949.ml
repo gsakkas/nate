@@ -19,14 +19,6 @@ x (a c)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (2,33)-(2,73)
-a
-VarG
-
-(2,33)-(2,73)
-c
-VarG
-
-(2,33)-(2,73)
 a c
 AppG (fromList [VarG])
 

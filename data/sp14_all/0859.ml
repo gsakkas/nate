@@ -24,6 +24,18 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(6,2)-(9,67)
+EMPTY
+EmptyG
+
+(6,13)-(6,24)
+EMPTY
+EmptyG
+
+(6,13)-(6,26)
+EMPTY
+EmptyG
+
 (6,25)-(6,26)
 let xxx =
   fun n ->

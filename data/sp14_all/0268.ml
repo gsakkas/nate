@@ -15,6 +15,18 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(4,25)-(4,71)
+EMPTY
+EmptyG
+
+(4,26)-(4,37)
+EMPTY
+EmptyG
+
+(4,26)-(4,48)
+EMPTY
+EmptyG
+
 (4,38)-(4,48)
 if n < 10
 then [n]
@@ -26,19 +38,7 @@ n < 10
 BopG VarG LitG
 
 (4,50)-(4,70)
-n
-VarG
-
-(4,50)-(4,70)
-(@)
-VarG
-
-(4,50)-(4,70)
 digitsOfInt (n / 10) @ [n mod 10]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(4,50)-(4,70)
-[n]
-ListG VarG Nothing
 
 *)

@@ -19,4 +19,8 @@ TupleG (fromList [VarG])
 (l1 , l2)
 TupleG (fromList [VarG])
 
+(3,46)-(3,64)
+EMPTY
+EmptyG
+
 *)

@@ -16,55 +16,42 @@ let fixpoint (f,b) = wwhile (h, b);;
 
 (* changed spans
 (2,16)-(2,77)
-x
-VarG
-
-(2,16)-(2,77)
-x
-VarG
-
-(2,16)-(2,77)
-x
-VarG
-
-(2,16)-(2,77)
-xx
-VarG
-
-(2,16)-(2,77)
-xx
-VarG
-
-(2,16)-(2,77)
 fun x ->
   (let xx = (x * x) * x in
    (xx , xx < 512))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(2,16)-(2,77)
-x * x
-BopG VarG VarG
+(4,21)-(4,56)
+EMPTY
+EmptyG
 
-(2,16)-(2,77)
-(x * x) * x
-BopG (BopG EmptyG EmptyG) VarG
+(4,31)-(4,32)
+EMPTY
+EmptyG
 
-(2,16)-(2,77)
-xx < 512
-BopG VarG LitG
+(4,34)-(4,50)
+EMPTY
+EmptyG
 
-(2,16)-(2,77)
-512
-LitG
+(4,35)-(4,36)
+EMPTY
+EmptyG
 
-(2,16)-(2,77)
-let xx = (x * x) * x in
-(xx , xx < 512)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
+(4,38)-(4,49)
+EMPTY
+EmptyG
 
-(2,16)-(2,77)
-(xx , xx < 512)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
+(4,39)-(4,44)
+EMPTY
+EmptyG
+
+(4,40)-(4,41)
+EMPTY
+EmptyG
+
+(4,42)-(4,43)
+EMPTY
+EmptyG
 
 (4,47)-(4,48)
 h

@@ -62,24 +62,8 @@ let rec eval (e,x,y) =
 BopG (UopG EmptyG) (AppG (fromList [EmptyG]))
 
 (20,38)-(20,39)
-eval
-VarG
-
-(20,38)-(20,39)
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(20,38)-(20,39)
-1.0
-LitG
-
-(20,38)-(20,39)
-(a , x , y)
-TupleG (fromList [VarG])
-
-(21,21)-(21,65)
-x
-VarG
 
 (21,21)-(21,65)
 y

@@ -1,10 +1,5 @@
-CaseG VarG (fromList [(Nothing,VarG)])
-match e with
-| VarX -> x
-| VarY -> y
-match e with
-| VarX -> x
-| VarY -> y
-match e with
-| VarX -> x
-| VarY -> y
+CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,LitG)])
+match explode x with
+| h :: t -> false
+match explode x with
+| h :: t -> false

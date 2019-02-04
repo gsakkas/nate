@@ -26,17 +26,21 @@ let y =
 (y , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
+(6,49)-(6,75)
+EMPTY
+EmptyG
+
 (6,50)-(6,71)
 let xx = f x in (xx , xx <> x)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
 (6,58)-(6,70)
-xx
-VarG
-
-(6,58)-(6,70)
 (xx , xx <> x)
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
+
+(6,59)-(6,64)
+EMPTY
+EmptyG
 
 (6,60)-(6,61)
 xx

@@ -27,4 +27,12 @@ fun b ->
   else (f b , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
+(7,69)-(7,73)
+EMPTY
+EmptyG
+
+(8,6)-(8,7)
+EMPTY
+EmptyG
+
 *)

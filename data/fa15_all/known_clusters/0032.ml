@@ -1,74 +1,57 @@
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-valueToAddToArray :: currentSum
-valueToAddToArray :: currentSum
-x :: acc
-cin :: acc
-cin :: acc
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-val1 :: a2
-val1 :: a2
-val1 :: a2
-val1 :: a2
-Thresh (a , b , a_less , b_less)
-h :: seen
-h :: seen
-h :: x
-h :: x
-x :: m
-x :: m
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-rem :: temp
-carry' :: acc
-h :: seen
-Thresh (a , b , a_less , b_less)
-Times (e1 , e2)
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-x :: l
-x :: l
-x :: l
-x :: l
-x :: l
-x :: l
-x :: l
-x :: l
-h :: t
-z :: n
-z :: n
-z :: n
-h :: seen
-h :: seen
-h :: seen
+LamG (TupleG (fromList [EmptyG]))
+fun x -> (x , f x = x)
+fun x -> (x , f x = x)
+fun x -> (x , f x = x)
+fun x -> (x , f x = x)
+fun x -> (x , f x = x)
+fun x -> (x , f x = x)
+fun x -> (x , f x = x)
+fun b ->
+  (f b , if f b = b
+         then true
+         else false)
+fun b ->
+  (f b , if f b = b
+         then true
+         else false)
+fun x -> (2 , f b = b)
+fun x -> (2 , f b = b)
+fun x -> (2 , f b = b)
+fun x -> (f b , f b = b)
+fun x -> (b , f b = b)
+fun bt -> (bt , f bt = bt)
+fun bt -> (bt , f bt = bt)
+fun bt -> (bt , f bt = bt)
+fun bt -> (bt , f bt = bt)
+fun b -> (f b , b = f b)
+fun b -> (f b , b = f b)
+fun b -> (f b , b = f b)
+fun b -> (f b , b = f b)
+fun b -> (f b , b = f b)
+fun b -> (f b , b = f b)
+fun b -> (f b , b = f b)
+fun b -> (f b , b = f b)
+fun x -> (f x , f x = x)
+fun x -> (f x , f x = x)
+fun b -> (f b , f b = b)
+fun b -> (f b , f b <> b)
+fun x -> (f b , 3 < 4)
+fun x -> (f b , 3 < 4)
+fun b' -> (f b' , f b' <> b')
+fun b' -> (f b' , f b' <> b')
+fun b' -> (f b' , f b' <> b')
+fun b' -> (f b' , f b' <> b')
+fun input ->
+  (f input , f input = b)
+fun x -> (f b , not (b = f b))
+fun b ->
+  (f b , (b = f b) = false)
+fun y -> (f b , b = f b)
+fun y -> (f b , b = f b)
+fun x -> (f x , x <> f x)
+fun x -> (f x , x <> f x)
+fun x -> (f x , x <> f x)
+fun x -> (f x , x <> f x)
+fun x -> (f x , x <> f x)
+fun x -> (f x , x <> f x)
+fun x -> (f x , x <> f x)

@@ -26,10 +26,6 @@ f b
 AppG (fromList [VarG])
 
 (6,33)-(6,38)
-b
-VarG
-
-(6,33)-(6,38)
 f b = b
 BopG (AppG (fromList [EmptyG])) VarG
 

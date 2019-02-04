@@ -39,10 +39,6 @@ l2
 VarG
 
 (12,21)-(12,53)
-l1
-VarG
-
-(12,21)-(12,53)
 (l1 , List.append (clone 0
                          (a - b)) l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])

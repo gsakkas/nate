@@ -19,9 +19,13 @@ let rec digitsOfInt n =
 [n]
 ListG VarG Nothing
 
-(5,32)-(5,43)
-append
-VarG
+(5,24)-(5,30)
+EMPTY
+EmptyG
+
+(5,24)-(5,64)
+EMPTY
+EmptyG
 
 (5,32)-(5,43)
 digitsOfInt (n / 10)

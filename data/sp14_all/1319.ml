@@ -63,17 +63,9 @@ let rec mulByDigit i l =
 
 (* changed spans
 (28,25)-(28,31)
-i
-VarG
-
-(28,25)-(28,31)
 bigAdd (bigAdd l l)
        (mulByDigit (i - 1) l)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(28,25)-(28,31)
-[]
-ListG EmptyG Nothing
 
 (28,25)-(28,72)
 match i with
@@ -82,8 +74,16 @@ match i with
               (mulByDigit (i - 1) l)
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
 
+(28,32)-(28,72)
+EMPTY
+EmptyG
+
 (28,33)-(28,47)
 bigAdd l l
 AppG (fromList [VarG])
+
+(28,41)-(28,46)
+EMPTY
+EmptyG
 
 *)

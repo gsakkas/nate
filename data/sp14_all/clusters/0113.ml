@@ -1,17 +1,31 @@
-LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
-let l = t in
-List.fold_left f base l
-let l = t in
-List.fold_left f base l
-let l = t in
-List.fold_left f base l
-let l = t in
-List.fold_left f base l
-let l = sl in
-List.fold_left f base l
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
+CaseG (BopG EmptyG EmptyG) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+match List.length l1 > List.length l2 with
+| true -> (l1 , clone 0
+                      (List.length l1 - List.length l2) @ l2)
+| false -> (clone 0
+                  (List.length l2 - List.length l1) @ l1 , l2)
+match List.length l1 > List.length l2 with
+| true -> (l1 , clone 0
+                      (List.length l1 - List.length l2) @ l2)
+| false -> (clone 0
+                  (List.length l2 - List.length l1) @ l1 , l2)
+match List.length l1 > List.length l2 with
+| true -> (l1 , clone 0
+                      (List.length l1 - List.length l2) @ l2)
+| false -> (clone 0
+                  (List.length l2 - List.length l1) @ l1 , l2)
+match List.length l1 > List.length l2 with
+| true -> (l1 , clone 0
+                      (List.length l1 - List.length l2) @ l2)
+| false -> (clone 0
+                  (List.length l2 - List.length l1) @ l1 , l2)
+match List.length l1 > List.length l2 with
+| true -> (l1 , clone 0
+                      (List.length l1 - List.length l2) @ l2)
+| false -> (clone 0
+                  (List.length l2 - List.length l1) @ l1 , l2)
+match List.length l1 > List.length l2 with
+| true -> (l1 , clone 0
+                      (List.length l1 - List.length l2) @ l2)
+| false -> (clone 0
+                  (List.length l2 - List.length l1) @ l1 , l2)

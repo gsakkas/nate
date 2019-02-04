@@ -51,9 +51,9 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(18,16)-(18,30)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+(18,16)-(18,24)
+EMPTY
+EmptyG
 
 (18,16)-(18,30)
 let z = fst x + snd x in
@@ -66,104 +66,20 @@ fst
 VarG
 
 (19,4)-(21,51)
-x
-VarG
-
-(19,4)-(21,51)
-snd
-VarG
-
-(19,4)-(21,51)
-x
-VarG
-
-(19,4)-(21,51)
-a
-VarG
-
-(19,4)-(21,51)
-w
-VarG
-
-(19,4)-(21,51)
-z
-VarG
-
-(19,4)-(21,51)
-w
-VarG
-
-(19,4)-(21,51)
-z
-VarG
-
-(19,4)-(21,51)
-y
-VarG
-
-(19,4)-(21,51)
-snd x
-AppG (fromList [VarG])
-
-(19,4)-(21,51)
-(w + z) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(19,4)-(21,51)
-w + z
-BopG VarG VarG
-
-(19,4)-(21,51)
-(w + z) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(19,4)-(21,51)
-w + z
-BopG VarG VarG
-
-(19,4)-(21,51)
-10
-LitG
-
-(19,4)-(21,51)
-10
-LitG
-
-(19,4)-(21,51)
 match a with
 | (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(19,4)-(21,51)
-((w + z) / 10 , ((w + z) mod 10) :: y)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
-(19,4)-(21,51)
-((w + z) mod 10) :: y
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
-
-(19,15)-(19,17)
-0
-LitG
 
 (19,15)-(19,17)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 
+(20,15)-(20,23)
+EMPTY
+EmptyG
+
 (20,24)-(20,29)
 List.rev
-VarG
-
-(21,4)-(21,51)
-List.combine
-VarG
-
-(21,4)-(21,51)
-l1
-VarG
-
-(21,4)-(21,51)
-l2
 VarG
 
 (21,4)-(21,51)

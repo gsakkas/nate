@@ -57,6 +57,18 @@ let bigAdd l1 l2 =
 (o , x :: l)
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 
+(18,19)-(18,20)
+EMPTY
+EmptyG
+
+(18,19)-(18,25)
+EMPTY
+EmptyG
+
+(18,23)-(18,25)
+EMPTY
+EmptyG
+
 (18,31)-(18,42)
 match a with
 | (o , []) -> (o , [x])
@@ -72,19 +84,7 @@ VarG
 ListG VarG Nothing
 
 (19,4)-(23,51)
-o
-VarG
-
-(19,4)-(23,51)
-x
-VarG
-
-(19,4)-(23,51)
 l
 VarG
-
-(19,4)-(23,51)
-x :: l
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 *)

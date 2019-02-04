@@ -21,16 +21,8 @@ fun x -> x * 1
 LamG (BopG EmptyG EmptyG)
 
 (4,47)-(4,64)
-x
-VarG
-
-(4,47)-(4,64)
 x * 1
 BopG VarG LitG
-
-(4,47)-(4,64)
-1
-LitG
 
 (4,60)-(4,61)
 x * 1

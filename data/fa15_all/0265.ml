@@ -18,6 +18,10 @@ match l with
                          tl @ [hd * i]
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
 
+(3,33)-(3,35)
+EMPTY
+EmptyG
+
 (3,68)-(3,76)
 [hd * i]
 ListG (BopG EmptyG EmptyG) Nothing

@@ -1,7 +1,9 @@
-TupleG (fromList [IteG EmptyG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-(if ((a1 + x1) + x2) >= 10
- then 1
- else 0 , ((a1 + x1) + x2) :: a2)
-(if ((a1 + x1) + x2) >= 10
- then 1
- else 0 , ((a1 + x1) + x2) :: a2)
+CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)])),(Nothing,ListG EmptyG Nothing)])
+match i with
+| i -> []
+| _ -> match l with
+       | [] -> []
+       | h :: t -> if List.length t = 0
+                   then [h * i] @ mulByDigit i t
+                   else (remainder i
+                                   h) :: (mulByDigit i t)

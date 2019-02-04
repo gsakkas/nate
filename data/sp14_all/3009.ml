@@ -53,6 +53,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(22,15)-(22,44)
+EMPTY
+EmptyG
+
+(22,16)-(22,17)
+EMPTY
+EmptyG
+
 (22,19)-(22,43)
 clone 0 (List.length l1)
 AppG (fromList [AppG (fromList [EmptyG]),LitG])

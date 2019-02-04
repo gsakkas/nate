@@ -21,18 +21,18 @@ let rec sepConcat sep sl =
 
 (* changed spans
 (6,18)-(6,31)
-a
-VarG
-
-(6,18)-(6,31)
-x
-VarG
-
-(6,18)-(6,31)
 match a with
 | "" -> x
 | _ -> a ^ (sep ^ x)
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
+
+(7,17)-(7,42)
+EMPTY
+EmptyG
+
+(7,23)-(7,24)
+EMPTY
+EmptyG
 
 (7,41)-(7,42)
 ""

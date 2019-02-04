@@ -15,13 +15,17 @@ let pipe fs =
 x
 VarG
 
-(3,45)-(3,69)
-fun f -> 0
-LamG LitG
+(3,21)-(3,22)
+EMPTY
+EmptyG
 
-(3,45)-(3,69)
-0
-LitG
+(3,27)-(3,69)
+EMPTY
+EmptyG
+
+(3,36)-(3,41)
+EMPTY
+EmptyG
 
 (3,45)-(3,69)
 let base = fun f -> 0 in

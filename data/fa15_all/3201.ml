@@ -62,30 +62,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (15,11)-(27,21)
-l
-VarG
-
-(15,11)-(27,21)
-l
-VarG
-
-(15,11)-(27,21)
-h
-VarG
-
-(15,11)-(27,21)
-removeZero
-VarG
-
-(15,11)-(27,21)
-t
-VarG
-
-(15,11)-(27,21)
-l
-VarG
-
-(15,11)-(27,21)
 fun l ->
   if l = []
   then []
@@ -95,65 +71,55 @@ fun l ->
         | _ -> l)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(15,11)-(27,21)
-removeZero t
-AppG (fromList [VarG])
-
-(15,11)-(27,21)
-l = []
-BopG VarG (ListG EmptyG Nothing)
-
-(15,11)-(27,21)
-let h :: t = l in
-match h with
-| 0 -> removeZero t
-| _ -> l
-LetG NonRec (fromList [VarG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(15,11)-(27,21)
-if l = []
-then []
-else (let h :: t = l in
-      match h with
-      | 0 -> removeZero t
-      | _ -> l)
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(15,11)-(27,21)
-match h with
-| 0 -> removeZero t
-| _ -> l
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-
-(15,11)-(27,21)
-[]
-ListG EmptyG Nothing
-
-(15,11)-(27,21)
-[]
-ListG EmptyG Nothing
-
 (19,6)-(23,54)
 let (c , a1 :: a2) = a in
 let v = (x1 + x2) + c in
 (v / 10 , [v / 10] @ ([v mod 10] @ a2))
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(20,6)-(23,54)
+EMPTY
+EmptyG
+
+(20,18)-(20,20)
+EMPTY
+EmptyG
+
+(21,6)-(23,54)
+EMPTY
+EmptyG
+
+(21,18)-(21,20)
+EMPTY
+EmptyG
+
 (22,26)-(22,28)
 c
 VarG
+
+(23,7)-(23,15)
+EMPTY
+EmptyG
+
+(23,30)-(23,32)
+EMPTY
+EmptyG
+
+(23,36)-(23,50)
+EMPTY
+EmptyG
 
 (23,49)-(23,50)
 a2
 VarG
 
+(24,16)-(24,19)
+EMPTY
+EmptyG
+
 (24,22)-(24,23)
 0
 LitG
-
-(25,15)-(25,33)
-List.rev
-VarG
 
 (25,15)-(25,33)
 List.rev (List.combine l1 l2)
@@ -165,9 +131,13 @@ let (_ , res) =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
-(27,2)-(27,5)
-removeZero
-VarG
+(26,50)-(26,60)
+EMPTY
+EmptyG
+
+(26,51)-(26,54)
+EMPTY
+EmptyG
 
 (27,2)-(27,5)
 add (padZero l1 l2)

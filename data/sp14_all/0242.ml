@@ -46,10 +46,6 @@ let rec additivePersistence n =
 
 (* changed spans
 (20,36)-(20,37)
-digits
-VarG
-
-(20,36)-(20,37)
 digits n
 AppG (fromList [VarG])
 

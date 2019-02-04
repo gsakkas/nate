@@ -1,157 +1,168 @@
-TupleG (fromList [AppG (fromList [EmptyG])])
-(buildAverage (build (rand , depth - 1) , build (rand , depth - 1)) , build (rand , depth - 1))
-(buildAverage (build (rand , depth - 1) , build (rand , depth - 1)) , buildSine (build (rand , depth - 1)))
-(build (rand , depth - 1) , buildCosine (build (rand , depth - 1)))
-(build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
-(f x , not (f x = x))
-(f x , not (f x = x))
-(build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
-(build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
-(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
-(List.length l1 , List.length l2)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1) expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr)
-(buildhelper (depth - 1)
-             (depth - 1)
-             expr , buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr)
-(build (rand , depth - 2) , build (rand , depth - 2))
-(build (rand , depth - 2) , build (rand , depth - 2))
-(build (rand , depth - 4) , build (rand , depth - 4) , build (rand , depth - 4) , build (rand , depth - 4))
-(build (rand , depth - 2) , build (rand , depth - 2))
-(build (rand , depth - 4) , build (rand , depth - 4) , build (rand , depth - 4) , build (rand , depth - 4))
-(build (rand , depth - 2) , build (rand , depth - 2))
-(build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , buildCosine (build (rand , depth - 1)) , build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1))
-(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+(g , b)
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+(g , b)
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+(g , b)
+let g =
+  fun x ->
+    (let bb = f b in
+     (bb , bb = b)) in
+(g , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x ->
+      (f b , not (f b = b)) in
+(func b , b)

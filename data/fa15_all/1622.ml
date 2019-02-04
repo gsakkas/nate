@@ -11,6 +11,10 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(3,24)-(3,56)
+EMPTY
+EmptyG
+
 (3,25)-(3,40)
 (@)
 VarG

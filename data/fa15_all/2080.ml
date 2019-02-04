@@ -34,6 +34,18 @@ let palindrome w =
 *)
 
 (* changed spans
+(11,2)-(16,43)
+EMPTY
+EmptyG
+
+(11,8)-(11,9)
+EMPTY
+EmptyG
+
+(12,10)-(12,14)
+EMPTY
+EmptyG
+
 (16,9)-(16,10)
 separated
 VarG

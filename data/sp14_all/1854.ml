@@ -15,4 +15,8 @@ let pipe fs =
 x
 VarG
 
+(3,19)-(3,20)
+EMPTY
+EmptyG
+
 *)

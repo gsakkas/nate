@@ -22,10 +22,6 @@ fun x -> (f b , f b = b)
 LamG (TupleG (fromList [EmptyG]))
 
 (6,21)-(6,27)
-b
-VarG
-
-(6,21)-(6,27)
 let funt =
   fun x -> (f b , f b = b) in
 wwhile (funt , b)
@@ -36,23 +32,7 @@ f b
 AppG (fromList [VarG])
 
 (6,34)-(6,35)
-wwhile
-VarG
-
-(6,34)-(6,35)
-funt
-VarG
-
-(6,34)-(6,35)
-b
-VarG
-
-(6,34)-(6,35)
 wwhile (funt , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(6,34)-(6,35)
-(funt , b)
-TupleG (fromList [VarG])
 
 *)

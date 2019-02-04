@@ -103,9 +103,9 @@ AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 
-(27,51)-(27,57)
-()
-ConAppG Nothing (Just (TApp "unit" []))
+(27,65)-(27,71)
+EMPTY
+EmptyG
 
 (29,4)-(41,71)
 ()
@@ -127,27 +127,7 @@ CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
 LitG
 
 (30,12)-(30,21)
-buildX
-VarG
-
-(30,12)-(30,21)
-buildY
-VarG
-
-(30,12)-(30,21)
-buildY ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(30,12)-(30,21)
 buildSine (build (rand , depth - 1))
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(30,12)-(30,21)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
-(30,12)-(30,21)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 *)

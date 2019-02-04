@@ -30,14 +30,6 @@ let fixpoint (f,b) =
 TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
 
 (6,16)-(6,19)
-fun b ->
-  (let t = f b in
-   if b = t
-   then (b , false)
-   else (t , true))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(6,16)-(6,19)
 let g =
   fun b ->
     (let t = f b in
@@ -47,12 +39,17 @@ let g =
 g
 LetG NonRec (fromList [LamG EmptyG]) VarG
 
-(6,16)-(6,19)
-let t = f b in
-if b = t
-then (b , false)
-else (t , true)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
+(6,37)-(6,43)
+EMPTY
+EmptyG
+
+(6,37)-(6,50)
+EMPTY
+EmptyG
+
+(6,44)-(6,50)
+EMPTY
+EmptyG
 
 (6,45)-(6,46)
 if b = t
@@ -67,22 +64,6 @@ BopG VarG VarG
 (6,58)-(6,64)
 t
 VarG
-
-(6,62)-(6,63)
-t
-VarG
-
-(6,62)-(6,63)
-g
-VarG
-
-(6,62)-(6,63)
-false
-LitG
-
-(6,62)-(6,63)
-true
-LitG
 
 (6,62)-(6,63)
 (t , true)

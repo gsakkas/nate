@@ -45,10 +45,18 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(18,24)-(18,58)
+EMPTY
+EmptyG
+
 (18,25)-(18,41)
 List.combine (0 :: l1)
              (0 :: l2)
 AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
+
+(18,39)-(18,40)
+EMPTY
+EmptyG
 
 (18,45)-(18,51)
 0

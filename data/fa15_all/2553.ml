@@ -25,9 +25,9 @@ let padZero l1 l2 =
 (l1 , pad @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(7,42)-(7,45)
-(@)
-VarG
+(7,35)-(7,52)
+EMPTY
+EmptyG
 
 (7,42)-(7,45)
 pad @ l2
@@ -37,9 +37,9 @@ AppG (fromList [VarG])
 (pad @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(8,41)-(8,44)
-(@)
-VarG
+(8,40)-(8,57)
+EMPTY
+EmptyG
 
 (8,41)-(8,44)
 pad @ l1

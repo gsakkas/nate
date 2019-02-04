@@ -10,10 +10,6 @@ let rec sumList xs = let x::t = xs in x + (if t = [] then 0 else sumList t);;
 
 (* changed spans
 (2,38)-(2,69)
-x
-VarG
-
-(2,38)-(2,69)
 x + (if t = []
      then 0
      else sumList t)
@@ -26,5 +22,9 @@ BopG VarG (ListG EmptyG Nothing)
 (2,54)-(2,55)
 0
 LitG
+
+(2,54)-(2,69)
+EMPTY
+EmptyG
 
 *)

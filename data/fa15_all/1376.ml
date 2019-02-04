@@ -63,25 +63,29 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(28,6)-(28,36)
+EMPTY
+EmptyG
+
+(28,6)-(28,67)
+EMPTY
+EmptyG
+
 (28,7)-(28,10)
 (eval (circ1 , x , y) ** 2.0) +. (eval (circ2 , x , y) ** 2.0)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 (28,12)-(28,16)
-(**)
-VarG
-
-(28,12)-(28,16)
 eval (circ1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
+
+(28,39)-(28,67)
+EMPTY
+EmptyG
 
 (28,40)-(28,43)
 eval (circ2 , x , y) ** 2.0
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(28,44)-(28,48)
-(**)
-VarG
 
 (28,44)-(28,48)
 eval (circ2 , x , y)

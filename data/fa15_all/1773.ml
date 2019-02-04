@@ -52,6 +52,26 @@ fun h ->
                 else filter tl h
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
+(5,22)-(5,23)
+EMPTY
+EmptyG
+
+(5,29)-(5,35)
+EMPTY
+EmptyG
+
+(5,29)-(5,43)
+EMPTY
+EmptyG
+
+(5,36)-(5,43)
+EMPTY
+EmptyG
+
+(5,37)-(5,39)
+EMPTY
+EmptyG
+
 (5,41)-(5,42)
 h
 VarG
@@ -60,19 +80,11 @@ VarG
 filter tl h
 AppG (fromList [VarG])
 
+(5,63)-(5,70)
+EMPTY
+EmptyG
+
 (5,68)-(5,69)
-h
-VarG
-
-(7,21)-(14,27)
-filter
-VarG
-
-(7,21)-(14,27)
-tl
-VarG
-
-(7,21)-(14,27)
 h
 VarG
 

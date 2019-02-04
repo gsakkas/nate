@@ -22,6 +22,26 @@ let fixpoint (f,b) = wwhile (let func x x = (0, true) in ((func b), b));;
 fun x -> (0 , true)
 LamG (TupleG (fromList [EmptyG]))
 
+(7,26)-(7,27)
+EMPTY
+EmptyG
+
+(7,29)-(7,41)
+EMPTY
+EmptyG
+
+(7,30)-(7,35)
+EMPTY
+EmptyG
+
+(7,31)-(7,32)
+EMPTY
+EmptyG
+
+(7,33)-(7,34)
+EMPTY
+EmptyG
+
 (7,39)-(7,40)
 0
 LitG
@@ -33,5 +53,9 @@ LitG
 (7,47)-(7,57)
 func b
 AppG (fromList [VarG])
+
+(7,53)-(7,54)
+EMPTY
+EmptyG
 
 *)

@@ -27,4 +27,16 @@ let fixpoint (f,b) =
  helper , b)
 TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
 
+(8,53)-(8,68)
+EMPTY
+EmptyG
+
+(8,54)-(8,64)
+EMPTY
+EmptyG
+
+(8,66)-(8,67)
+EMPTY
+EmptyG
+
 *)

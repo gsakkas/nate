@@ -15,21 +15,13 @@ let pipe fs =
 let c = fun y -> x (a y) in c
 LetG NonRec (fromList [LamG EmptyG]) VarG
 
+(2,28)-(2,29)
+EMPTY
+EmptyG
+
 (2,28)-(2,31)
 fun y -> x (a y)
 LamG (AppG (fromList [EmptyG]))
-
-(2,35)-(2,77)
-a
-VarG
-
-(2,35)-(2,77)
-y
-VarG
-
-(2,35)-(2,77)
-c
-VarG
 
 (2,35)-(2,77)
 a y

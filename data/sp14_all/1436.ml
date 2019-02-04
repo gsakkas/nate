@@ -44,6 +44,18 @@ let rec build (rand,depth) =
 buildX ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 
+(18,55)-(18,75)
+EMPTY
+EmptyG
+
+(18,58)-(18,59)
+EMPTY
+EmptyG
+
+(18,58)-(18,63)
+EMPTY
+EmptyG
+
 (18,62)-(18,63)
 ()
 ConAppG Nothing (Just (TApp "unit" []))

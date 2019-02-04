@@ -24,10 +24,6 @@ let rec sepConcat sep sl =
 fun x -> x ^ sep
 LamG (AppG (fromList [EmptyG]))
 
-(7,31)-(7,34)
-x ^ sep
-AppG (fromList [VarG])
-
 (7,31)-(7,38)
 [fun x -> x ^ sep]
 ListG (LamG EmptyG) Nothing

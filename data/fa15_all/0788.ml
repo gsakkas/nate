@@ -24,4 +24,8 @@ append (digitsOfInt (n / 10))
        [n mod 10]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 
+(5,31)-(5,67)
+EMPTY
+EmptyG
+
 *)

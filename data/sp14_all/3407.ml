@@ -104,10 +104,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (44,22)-(44,53)
-len
-VarG
-
-(44,22)-(44,53)
 (len , (-1) :: (((sum mod 10) + 1) :: xs'))
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG LitG) LitG]))) Nothing]))) Nothing])
 

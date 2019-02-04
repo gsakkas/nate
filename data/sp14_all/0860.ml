@@ -49,9 +49,9 @@ LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 listReverse (xxx n)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(10,19)-(10,20)
-xxx
-VarG
+(10,2)-(10,20)
+EMPTY
+EmptyG
 
 (10,19)-(10,20)
 xxx n

@@ -81,4 +81,12 @@ let rec mulByDigit i l =
 [0]
 ListG LitG Nothing
 
+(36,51)-(36,54)
+EMPTY
+EmptyG
+
+(36,55)-(36,77)
+EMPTY
+EmptyG
+
 *)

@@ -87,6 +87,26 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
+(21,9)-(21,12)
+EMPTY
+EmptyG
+
+(21,9)-(21,26)
+EMPTY
+EmptyG
+
+(21,16)-(21,26)
+EMPTY
+EmptyG
+
+(21,17)-(21,21)
+EMPTY
+EmptyG
+
+(21,22)-(21,25)
+EMPTY
+EmptyG
+
 (27,6)-(39,24)
 match rand (1 , 13) with
 | 1 -> buildSine (build (rand , depth - 1))
@@ -107,200 +127,60 @@ CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
 13
 LitG
 
-(32,14)-(32,23)
-buildThresh
-VarG
+(28,24)-(28,59)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-build
-VarG
+(28,25)-(28,27)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-rand
-VarG
+(29,26)-(29,61)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-depth
-VarG
+(29,27)-(29,29)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-build
-VarG
+(30,24)-(30,59)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-rand
-VarG
+(30,25)-(30,27)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-depth
-VarG
+(31,26)-(31,61)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-build
-VarG
-
-(32,14)-(32,23)
-rand
-VarG
-
-(32,14)-(32,23)
-depth
-VarG
-
-(32,14)-(32,23)
-build
-VarG
-
-(32,14)-(32,23)
-rand
-VarG
-
-(32,14)-(32,23)
-depth
-VarG
-
-(32,14)-(32,23)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(32,14)-(32,23)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(32,14)-(32,23)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(32,14)-(32,23)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(31,27)-(31,29)
+EMPTY
+EmptyG
 
 (32,14)-(32,23)
 buildSine (build (rand , depth - 1))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(32,14)-(32,23)
-depth - 1
-BopG VarG LitG
+(32,24)-(32,59)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-depth - 1
-BopG VarG LitG
+(32,25)-(32,27)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-depth - 1
-BopG VarG LitG
+(33,26)-(33,61)
+EMPTY
+EmptyG
 
-(32,14)-(32,23)
-depth - 1
-BopG VarG LitG
-
-(32,14)-(32,23)
-1
-LitG
-
-(32,14)-(32,23)
-1
-LitG
-
-(32,14)-(32,23)
-1
-LitG
-
-(32,14)-(32,23)
-1
-LitG
-
-(32,14)-(32,23)
-(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
-TupleG (fromList [AppG (fromList [EmptyG])])
-
-(32,14)-(32,23)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(32,14)-(32,23)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(32,14)-(32,23)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(32,14)-(32,23)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(35,11)-(35,22)
-buildSine
-VarG
-
-(35,11)-(35,22)
-build
-VarG
-
-(35,11)-(35,22)
-rand
-VarG
-
-(35,11)-(35,22)
-depth
-VarG
-
-(35,11)-(35,22)
-buildCosine
-VarG
-
-(35,11)-(35,22)
-build
-VarG
-
-(35,11)-(35,22)
-rand
-VarG
-
-(35,11)-(35,22)
-depth
-VarG
-
-(35,11)-(35,22)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(35,11)-(35,22)
-buildCosine (build (rand , depth - 1))
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(35,11)-(35,22)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(33,27)-(33,29)
+EMPTY
+EmptyG
 
 (35,11)-(35,22)
 buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(35,11)-(35,22)
-depth - 1
-BopG VarG LitG
-
-(35,11)-(35,22)
-depth - 1
-BopG VarG LitG
-
-(35,11)-(35,22)
-1
-LitG
-
-(35,11)-(35,22)
-1
-LitG
-
-(35,11)-(35,22)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(35,11)-(35,22)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)

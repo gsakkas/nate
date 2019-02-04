@@ -64,74 +64,10 @@ let num =
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (17,4)-(19,51)
-a
-VarG
-
-(17,4)-(19,51)
-lh1
-VarG
-
-(17,4)-(19,51)
-lh2
-VarG
-
-(17,4)-(19,51)
-carry
-VarG
-
-(17,4)-(19,51)
-num
-VarG
-
-(17,4)-(19,51)
-num
-VarG
-
-(17,4)-(19,51)
-res
-VarG
-
-(17,4)-(19,51)
-lh1 + lh2
-BopG VarG VarG
-
-(17,4)-(19,51)
-(lh1 + lh2) + carry
-BopG (BopG EmptyG EmptyG) VarG
-
-(17,4)-(19,51)
-num / 10
-BopG VarG LitG
-
-(17,4)-(19,51)
-num mod 10
-BopG VarG LitG
-
-(17,4)-(19,51)
-10
-LitG
-
-(17,4)-(19,51)
-10
-LitG
-
-(17,4)-(19,51)
 let num =
   (lh1 + lh2) + carry in
 (num / 10 , (num mod 10) :: res)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
-(17,4)-(19,51)
-(num / 10 , (num mod 10) :: res)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
-(17,4)-(19,51)
-(num mod 10) :: res
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
-
-(17,15)-(17,17)
-0
-LitG
 
 (17,15)-(17,17)
 (0 , [])

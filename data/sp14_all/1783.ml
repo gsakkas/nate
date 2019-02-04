@@ -33,10 +33,6 @@ let padZero l1 l2 =
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (8,8)-(8,13)
-List.append
-VarG
-
-(8,8)-(8,13)
 clone 0 (sec - first)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
 
@@ -44,9 +40,9 @@ AppG (fromList [BopG EmptyG EmptyG,LitG])
 l2
 VarG
 
-(10,31)-(10,36)
-List.append
-VarG
+(10,29)-(10,60)
+EMPTY
+EmptyG
 
 (10,31)-(10,36)
 clone 0 (first - sec)

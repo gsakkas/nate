@@ -62,10 +62,6 @@ cos
 VarG
 
 (26,31)-(26,48)
-pi
-VarG
-
-(26,31)-(26,48)
 pi *. eval (e' , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 

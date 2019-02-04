@@ -87,10 +87,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (37,4)-(38,75)
-a
-VarG
-
-(37,4)-(38,75)
 let (a1 , a2) = a in
 let test =
   match a1 with

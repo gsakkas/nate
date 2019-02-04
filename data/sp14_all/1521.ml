@@ -12,15 +12,15 @@ let pipe fs =
 
 (* changed spans
 (3,16)-(3,17)
-x
-VarG
-
-(3,16)-(3,17)
 a k
 AppG (fromList [VarG])
 
 (3,16)-(3,21)
 x (a k)
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(3,20)-(3,21)
+EMPTY
+EmptyG
 
 *)

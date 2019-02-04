@@ -1,2 +1,4 @@
-AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
-List.combine l1 (0 :: l2)
+CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
+match f b with
+| (x , true) -> wwhile (f , x)
+| (x , false) -> x

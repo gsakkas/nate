@@ -19,6 +19,10 @@ match x with
              else wwhile (f , x)
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(3,43)-(3,44)
+EMPTY
+EmptyG
+
 (3,47)-(3,51)
 y
 VarG
@@ -27,9 +31,9 @@ VarG
 x
 VarG
 
-(3,57)-(3,70)
-false
-LitG
+(3,68)-(3,69)
+EMPTY
+EmptyG
 
 (3,76)-(3,77)
 x

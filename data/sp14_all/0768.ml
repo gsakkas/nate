@@ -49,10 +49,6 @@ let rec build (rand,depth) =
 fun () -> VarY
 LamG (ConAppG Nothing Nothing)
 
-(15,16)-(15,20)
-VarX
-ConAppG Nothing Nothing
-
 (19,33)-(19,39)
 buildX
 VarG

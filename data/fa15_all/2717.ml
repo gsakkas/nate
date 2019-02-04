@@ -18,18 +18,6 @@ fun y -> (f b , b = f b)
 LamG (TupleG (fromList [EmptyG]))
 
 (4,40)-(4,49)
-f
-VarG
-
-(4,40)-(4,49)
-b
-VarG
-
-(4,40)-(4,49)
-f b
-AppG (fromList [VarG])
-
-(4,40)-(4,49)
 (f b , b = f b)
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 

@@ -69,9 +69,9 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(30,16)-(30,28)
-(@)
-VarG
+(30,15)-(30,65)
+EMPTY
+EmptyG
 
 (30,16)-(30,28)
 List.combine (List.rev l1)

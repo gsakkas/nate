@@ -84,6 +84,10 @@ let bigMul l1 l2 =
 place * 10
 BopG VarG LitG
 
+(35,42)-(35,43)
+EMPTY
+EmptyG
+
 (35,46)-(35,70)
 10
 LitG
@@ -100,10 +104,6 @@ AppG (fromList [VarG,BopG EmptyG EmptyG])
 (35,65)-(35,66)
 place * 10
 BopG VarG LitG
-
-(35,67)-(35,69)
-place
-VarG
 
 (35,67)-(35,69)
 10

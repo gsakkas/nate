@@ -38,48 +38,36 @@ let rec build (rand,depth) =
 
 (* changed spans
 (11,15)-(14,47)
-fun () -> VarX
-LamG (ConAppG Nothing Nothing)
-
-(11,15)-(14,47)
 fun () -> VarY
 LamG (ConAppG Nothing Nothing)
 
-(11,15)-(14,47)
-VarX
-ConAppG Nothing Nothing
-
-(11,15)-(14,47)
-VarY
-ConAppG Nothing Nothing
+(13,34)-(13,38)
+EMPTY
+EmptyG
 
 (13,44)-(13,48)
 buildX ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 
 (14,7)-(14,47)
-buildX
-VarG
-
-(14,7)-(14,47)
-buildY
-VarG
-
-(14,7)-(14,47)
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(14,7)-(14,47)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
-(14,7)-(14,47)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 (14,31)-(14,46)
 buildX
 VarG
+
+(14,34)-(14,35)
+EMPTY
+EmptyG
+
+(14,34)-(14,39)
+EMPTY
+EmptyG
+
+(14,38)-(14,39)
+EMPTY
+EmptyG
 
 (14,45)-(14,46)
 buildX ()

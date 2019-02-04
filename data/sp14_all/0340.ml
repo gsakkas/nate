@@ -65,33 +65,17 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(28,16)-(28,20)
-cos
-VarG
-
-(28,16)-(28,20)
-pi
-VarG
-
-(28,16)-(28,20)
-eval (e1 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(28,7)-(28,33)
+EMPTY
+EmptyG
 
 (28,16)-(28,20)
 pi *. eval (e1 , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
-(28,44)-(28,48)
-sin
-VarG
-
-(28,44)-(28,48)
-pi
-VarG
-
-(28,44)-(28,48)
-eval (e2 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(28,37)-(28,61)
+EMPTY
+EmptyG
 
 (28,44)-(28,48)
 pi *. eval (e2 , x , y)
@@ -103,10 +87,6 @@ AppG (fromList [BopG EmptyG EmptyG])
 
 (30,22)-(30,47)
 sin
-VarG
-
-(30,23)-(30,39)
-pi
 VarG
 
 (30,23)-(30,39)

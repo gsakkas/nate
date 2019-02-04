@@ -16,6 +16,10 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(5,29)-(5,30)
+EMPTY
+EmptyG
+
 (5,32)-(5,37)
 let f =
   fun x ->
@@ -25,54 +29,9 @@ f
 LetG NonRec (fromList [LamG EmptyG]) VarG
 
 (5,33)-(5,34)
-x
-VarG
-
-(5,33)-(5,34)
-x
-VarG
-
-(5,33)-(5,34)
-x
-VarG
-
-(5,33)-(5,34)
-xx
-VarG
-
-(5,33)-(5,34)
-xx
-VarG
-
-(5,33)-(5,34)
 fun x ->
   (let xx = (x * x) * x in
    (xx , xx < 100))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(5,33)-(5,34)
-x * x
-BopG VarG VarG
-
-(5,33)-(5,34)
-(x * x) * x
-BopG (BopG EmptyG EmptyG) VarG
-
-(5,33)-(5,34)
-xx < 100
-BopG VarG LitG
-
-(5,33)-(5,34)
-100
-LitG
-
-(5,33)-(5,34)
-let xx = (x * x) * x in
-(xx , xx < 100)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
-
-(5,33)-(5,34)
-(xx , xx < 100)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)

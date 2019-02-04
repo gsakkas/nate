@@ -50,24 +50,8 @@ let rec eval (e,x,y) =
 
 (* changed spans
 (13,14)-(21,25)
-atan
-VarG
-
-(13,14)-(21,25)
-atan 1.0
-AppG (fromList [LitG])
-
-(13,14)-(21,25)
 4.0 *. atan 1.0
 BopG LitG (AppG (fromList [EmptyG]))
-
-(13,14)-(21,25)
-4.0
-LitG
-
-(13,14)-(21,25)
-1.0
-LitG
 
 (17,18)-(17,40)
 eval (a , x , y) *. pi

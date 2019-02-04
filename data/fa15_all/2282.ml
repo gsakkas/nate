@@ -15,9 +15,9 @@ let pipe fs =
 x (a x')
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(3,21)-(3,23)
-a
-VarG
+(3,17)-(3,23)
+EMPTY
+EmptyG
 
 (3,21)-(3,23)
 a x'

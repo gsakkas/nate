@@ -10,17 +10,13 @@ let pipe fs =
 *)
 
 (* changed spans
+(2,26)-(2,27)
+EMPTY
+EmptyG
+
 (2,26)-(2,29)
 fun n -> x (a n)
 LamG (AppG (fromList [EmptyG]))
-
-(2,33)-(2,73)
-a
-VarG
-
-(2,33)-(2,73)
-n
-VarG
 
 (2,33)-(2,73)
 a n

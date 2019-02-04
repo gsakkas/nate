@@ -23,6 +23,10 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
+(9,16)-(9,45)
+EMPTY
+EmptyG
+
 (9,27)-(9,28)
 0 :: (List.rev l)
 ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG]))) Nothing

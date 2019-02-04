@@ -19,6 +19,10 @@ let sqsum xs =
 f 0 hd
 AppG (fromList [VarG,LitG])
 
+(4,53)-(4,59)
+EMPTY
+EmptyG
+
 (4,54)-(4,55)
 0
 LitG

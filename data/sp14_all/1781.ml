@@ -34,10 +34,6 @@ let rec mulByDigit i l =
 
 (* changed spans
 (7,11)-(7,13)
-0
-LitG
-
-(7,11)-(7,13)
 (0 , [])
 TupleG (fromList [LitG,ListG EmptyG Nothing])
 

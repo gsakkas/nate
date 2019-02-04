@@ -16,22 +16,6 @@ x (let fn = fun d -> d in fn)
 AppG (fromList [LetG NonRec (fromList [EmptyG]) EmptyG])
 
 (2,33)-(2,75)
-x
-VarG
-
-(2,33)-(2,75)
-d
-VarG
-
-(2,33)-(2,75)
-fn
-VarG
-
-(2,33)-(2,75)
-fun d -> d
-LamG VarG
-
-(2,33)-(2,75)
 let fn = fun d -> d in fn
 LetG NonRec (fromList [LamG EmptyG]) VarG
 

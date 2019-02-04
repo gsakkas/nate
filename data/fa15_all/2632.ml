@@ -54,6 +54,30 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(18,6)-(21,31)
+EMPTY
+EmptyG
+
+(18,14)-(18,21)
+EMPTY
+EmptyG
+
+(18,14)-(18,31)
+EMPTY
+EmptyG
+
+(18,15)-(18,18)
+EMPTY
+EmptyG
+
+(18,19)-(18,20)
+EMPTY
+EmptyG
+
+(18,24)-(18,31)
+EMPTY
+EmptyG
+
 (18,25)-(18,28)
 let (x1 , x2) = x in
 let (a1 , a2) = a in
@@ -73,25 +97,33 @@ VarG
 ((x1 + x2) / 10 , (((a1 + x1) + x2) mod 10) :: a2)
 TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
 
+(20,18)-(20,19)
+EMPTY
+EmptyG
+
 (20,22)-(20,23)
 x1
 VarG
 
-(21,13)-(21,31)
-a1
-VarG
+(20,36)-(20,37)
+EMPTY
+EmptyG
 
-(21,13)-(21,31)
-x1
-VarG
+(20,40)-(20,41)
+EMPTY
+EmptyG
+
+(20,47)-(20,49)
+EMPTY
+EmptyG
+
+(20,54)-(20,55)
+EMPTY
+EmptyG
 
 (21,13)-(21,31)
 x2
 VarG
-
-(21,14)-(21,15)
-0
-LitG
 
 (21,14)-(21,15)
 (0 , [])
@@ -101,13 +133,13 @@ TupleG (fromList [LitG,ListG EmptyG Nothing])
 a2
 VarG
 
+(21,18)-(21,20)
+EMPTY
+EmptyG
+
 (21,22)-(21,23)
 a1 + x1
 BopG VarG VarG
-
-(21,22)-(21,30)
-List.rev
-VarG
 
 (21,22)-(21,30)
 List.rev (List.combine l1 l2)

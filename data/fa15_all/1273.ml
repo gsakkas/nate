@@ -18,6 +18,14 @@ let rec listReverse l =
 *)
 
 (* changed spans
+(3,2)-(7,42)
+EMPTY
+EmptyG
+
+(3,16)-(3,18)
+EMPTY
+EmptyG
+
 (7,18)-(7,42)
 listReverse tail @ [head]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])

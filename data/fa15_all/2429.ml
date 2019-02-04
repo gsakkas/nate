@@ -56,6 +56,10 @@ let bigAdd l1 l2 =
 a
 VarG
 
+(19,37)-(19,57)
+EMPTY
+EmptyG
+
 (19,38)-(19,39)
 a1
 VarG
@@ -73,6 +77,14 @@ LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 a2
 VarG
 
+(20,15)-(20,23)
+EMPTY
+EmptyG
+
+(20,17)-(20,18)
+EMPTY
+EmptyG
+
 (20,20)-(20,21)
 []
 ListG EmptyG Nothing
@@ -80,10 +92,6 @@ ListG EmptyG Nothing
 (21,4)-(22,51)
 []
 ListG EmptyG Nothing
-
-(21,15)-(21,33)
-List.rev
-VarG
 
 (21,15)-(21,33)
 List.rev (List.combine l1 l2)

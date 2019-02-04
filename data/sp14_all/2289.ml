@@ -32,10 +32,6 @@ List.mem h seen
 AppG (fromList [VarG])
 
 (7,39)-(7,40)
-seen
-VarG
-
-(7,39)-(7,40)
 h :: seen
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 

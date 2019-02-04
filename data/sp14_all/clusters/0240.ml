@@ -1,2 +1,2 @@
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (ListG EmptyG Nothing)
-if v = 0 then [1] else [0]
+ConAppG (Just (TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing]))) Nothing
+v2 :: (h2 :: t2)

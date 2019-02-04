@@ -16,11 +16,19 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(3,23)-(3,60)
+EMPTY
+EmptyG
+
 (3,26)-(3,29)
 match c' with
 | false -> b'
 | _ -> wwhile (f , b')
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
+
+(3,26)-(3,32)
+EMPTY
+EmptyG
 
 (5,29)-(5,59)
 fun f' ->
@@ -36,6 +44,10 @@ TupleG (fromList [VarG,LitG])
 (5,55)-(5,56)
 true
 LitG
+
+(5,55)-(5,58)
+EMPTY
+EmptyG
 
 (5,57)-(5,58)
 (b , false)

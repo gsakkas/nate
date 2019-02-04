@@ -1,7 +1,13 @@
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
-(0 :: l1 , l2)
-(l1 , 0 :: l2)
-(0 :: l1 , l2)
-(l1 , 0 :: l2)
-(0 :: l1 , l2)
-(l1 , 0 :: l2)
+CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
+match xs with
+| [] -> 0
+| h :: t -> h + sumList t
+match xs with
+| [] -> 0
+| h :: t -> h + sumList t
+match xs with
+| [] -> 0
+| h :: t -> h + sumList t
+match xs with
+| [] -> 0
+| h :: t -> h + sumList t

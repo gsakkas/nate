@@ -19,8 +19,20 @@ BopG VarG LitG
 []
 ListG EmptyG Nothing
 
+(3,35)-(3,52)
+EMPTY
+EmptyG
+
 (3,45)-(3,46)
 n - 1
 BopG VarG LitG
+
+(3,65)-(3,68)
+EMPTY
+EmptyG
+
+(3,66)-(3,67)
+EMPTY
+EmptyG
 
 *)

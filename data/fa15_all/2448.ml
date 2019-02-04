@@ -65,17 +65,13 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(24,6)-(26,41)
+EMPTY
+EmptyG
+
 (25,14)-(25,15)
 a2
 VarG
-
-(25,29)-(25,39)
-a1
-VarG
-
-(25,29)-(25,39)
-0
-LitG
 
 (25,29)-(25,39)
 (sum / 10) :: ((sum mod 10) :: a2)
@@ -84,6 +80,14 @@ ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList 
 (25,29)-(25,55)
 (0 :: a1 , (sum / 10) :: ((sum mod 10) :: a2))
 TupleG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing,ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing])
+
+(25,43)-(25,55)
+EMPTY
+EmptyG
+
+(25,44)-(25,47)
+EMPTY
+EmptyG
 
 (25,52)-(25,54)
 (sum mod 10) :: a2
@@ -96,10 +100,6 @@ VarG
 (26,28)-(26,33)
 sum mod 10
 BopG VarG LitG
-
-(26,37)-(26,39)
-sum
-VarG
 
 (26,37)-(26,39)
 10

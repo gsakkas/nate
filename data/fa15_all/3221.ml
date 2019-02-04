@@ -34,24 +34,12 @@ AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 VarG
 
 (5,30)-(5,66)
-(@)
-VarG
-
-(5,30)-(5,66)
 [((x * i) mod 10) + x'] @ (mulByDigit i
                                       [x'] @ x'')
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
 
-(5,30)-(5,66)
-[((x * i) mod 10) + x']
-ListG (BopG EmptyG EmptyG) Nothing
-
 (5,49)-(5,66)
 x'
-VarG
-
-(5,50)-(5,60)
-(@)
 VarG
 
 (5,50)-(5,60)

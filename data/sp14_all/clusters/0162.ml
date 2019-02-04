@@ -1,4 +1,5 @@
-BopG VarG (BopG EmptyG EmptyG)
-a + (x * x)
-a + (x * x)
-a + (x * x)
+AppG (fromList [ConAppG (Just EmptyG) Nothing,ListG EmptyG Nothing])
+List.append ("[" :: (List.map f
+                              l)) ["]"]
+List.append ("[" :: (List.map f
+                              l)) ["]"]

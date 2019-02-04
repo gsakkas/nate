@@ -83,24 +83,16 @@ exp b
 AppG (fromList [VarG])
 
 (26,49)-(26,64)
-exp
-VarG
-
-(26,49)-(26,64)
 b
-VarG
-
-(26,50)-(26,57)
-(^)
 VarG
 
 (26,50)-(26,57)
 exp c ^ ")"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(26,50)-(26,57)
-")/("
-LitG
+(26,55)-(26,56)
+EMPTY
+EmptyG
 
 (26,60)-(26,63)
 c

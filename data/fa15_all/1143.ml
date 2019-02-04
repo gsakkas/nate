@@ -116,38 +116,22 @@ let bigMul l1 l2 =
 
 (* changed spans
 (50,15)-(50,24)
-intListToInt
-VarG
-
-(50,15)-(50,24)
 carryFunc (mulByDigit (intListToInt l1)
                       [s])
 AppG (fromList [AppG (fromList [EmptyG])])
+
+(50,25)-(50,34)
+EMPTY
+EmptyG
+
+(50,26)-(50,29)
+EMPTY
+EmptyG
 
 (50,32)-(50,33)
 mulByDigit (intListToInt l1)
            [s]
 AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-
-(50,37)-(50,62)
-mulByDigit
-VarG
-
-(50,37)-(50,62)
-intListToInt
-VarG
-
-(50,37)-(50,62)
-l1
-VarG
-
-(50,37)-(50,62)
-s
-VarG
-
-(50,37)-(50,62)
-intListToInt l1
-AppG (fromList [VarG])
 
 (50,37)-(50,62)
 [s]

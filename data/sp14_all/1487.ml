@@ -133,10 +133,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (54,8)-(55,39)
-a
-VarG
-
-(54,8)-(55,39)
 let (l2digit2 , templ12) =
   a in
 let multres =

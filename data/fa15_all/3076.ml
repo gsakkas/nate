@@ -11,6 +11,10 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(3,47)-(3,67)
+EMPTY
+EmptyG
+
 (3,48)-(3,52)
 digitsOfInt n
 AppG (fromList [VarG])

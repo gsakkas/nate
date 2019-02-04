@@ -52,6 +52,10 @@ let rec eval (e,x,y) =
             y *. evalhelper p2 x y) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
+(20,25)-(20,72)
+EMPTY
+EmptyG
+
 (20,26)-(20,45)
 evalhelper p1 x
            y *. evalhelper p2 x y

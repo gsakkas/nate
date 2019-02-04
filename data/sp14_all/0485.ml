@@ -74,12 +74,16 @@ let ones =
 (tens :: a1 , ones :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(22,10)-(25,66)
+EMPTY
+EmptyG
+
+(22,22)-(22,23)
+EMPTY
+EmptyG
+
 (23,24)-(23,26)
 a
-VarG
-
-(24,10)-(25,66)
-a1
 VarG
 
 (24,10)-(25,66)
@@ -99,13 +103,25 @@ VarG
 h
 VarG
 
+(25,48)-(25,49)
+EMPTY
+EmptyG
+
+(25,48)-(25,66)
+EMPTY
+EmptyG
+
+(25,50)-(25,51)
+EMPTY
+EmptyG
+
+(25,52)-(25,66)
+EMPTY
+EmptyG
+
 (25,54)-(25,58)
 tens :: a1
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(25,60)-(25,64)
-a1
-VarG
 
 (25,60)-(25,64)
 ones :: a2
@@ -114,6 +130,14 @@ ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 (26,14)-(26,15)
 a2
 VarG
+
+(27,15)-(27,23)
+EMPTY
+EmptyG
+
+(27,17)-(27,18)
+EMPTY
+EmptyG
 
 (27,20)-(27,21)
 []

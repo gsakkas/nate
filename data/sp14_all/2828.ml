@@ -30,4 +30,8 @@ TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 b
 VarG
 
+(6,61)-(6,62)
+EMPTY
+EmptyG
+
 *)

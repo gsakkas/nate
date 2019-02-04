@@ -18,20 +18,12 @@ let sqsum xs =
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
 
 (3,20)-(3,21)
-a
-VarG
-
-(3,20)-(3,21)
-a
-VarG
-
-(3,20)-(3,21)
-a * a
-BopG VarG VarG
-
-(3,20)-(3,21)
 x * x
 BopG VarG VarG
+
+(3,35)-(3,36)
+EMPTY
+EmptyG
 
 (3,47)-(3,48)
 x

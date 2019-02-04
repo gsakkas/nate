@@ -61,12 +61,96 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(5,15)-(8,66)
+EMPTY
+EmptyG
+
+(5,23)-(8,66)
+EMPTY
+EmptyG
+
+(5,27)-(8,66)
+EMPTY
+EmptyG
+
+(6,2)-(8,66)
+EMPTY
+EmptyG
+
+(6,8)-(6,11)
+EMPTY
+EmptyG
+
+(7,10)-(7,17)
+EMPTY
+EmptyG
+
+(8,12)-(8,18)
+EMPTY
+EmptyG
+
+(8,12)-(8,66)
+EMPTY
+EmptyG
+
+(8,19)-(8,50)
+EMPTY
+EmptyG
+
+(8,20)-(8,38)
+EMPTY
+EmptyG
+
+(8,21)-(8,22)
+EMPTY
+EmptyG
+
+(8,24)-(8,37)
+EMPTY
+EmptyG
+
+(8,25)-(8,32)
+EMPTY
+EmptyG
+
+(8,33)-(8,36)
+EMPTY
+EmptyG
+
+(8,42)-(8,49)
+EMPTY
+EmptyG
+
+(8,51)-(8,52)
+EMPTY
+EmptyG
+
+(8,53)-(8,66)
+EMPTY
+EmptyG
+
+(8,54)-(8,61)
+EMPTY
+EmptyG
+
+(8,62)-(8,65)
+EMPTY
+EmptyG
+
 (22,50)-(22,68)
 let z = (o + p) + m in
 if z > 9
 then (1 , (z - 10) :: n)
 else (0 , z :: n)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (IteG EmptyG EmptyG EmptyG)
+
+(22,52)-(22,53)
+EMPTY
+EmptyG
+
+(22,56)-(22,57)
+EMPTY
+EmptyG
 
 (22,61)-(22,62)
 o
@@ -77,58 +161,14 @@ m
 VarG
 
 (23,15)-(23,21)
-z
-VarG
-
-(23,15)-(23,21)
-z > 9
-BopG VarG LitG
-
-(23,15)-(23,21)
-9
-LitG
-
-(23,15)-(23,21)
 if z > 9
 then (1 , (z - 10) :: n)
 else (0 , z :: n)
 IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
 
 (23,16)-(23,17)
-z
-VarG
-
-(23,16)-(23,17)
-n
-VarG
-
-(23,16)-(23,17)
-z - 10
-BopG VarG LitG
-
-(23,16)-(23,17)
-1
-LitG
-
-(23,16)-(23,17)
-10
-LitG
-
-(23,16)-(23,17)
 (0 , z :: n)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(23,16)-(23,17)
-(z - 10) :: n
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
-
-(23,19)-(23,20)
-z
-VarG
-
-(23,19)-(23,20)
-n
-VarG
 
 (23,19)-(23,20)
 let base = (0 , []) in
@@ -147,52 +187,9 @@ let (_ , res) =
 res
 LetG NonRec (fromList [TupleG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(23,19)-(23,20)
-(0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(23,19)-(23,20)
-z :: n
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
 (24,4)-(25,51)
 []
 ListG EmptyG Nothing
-
-(24,15)-(24,30)
-lt1
-VarG
-
-(24,15)-(24,30)
-curList
-VarG
-
-(24,15)-(24,30)
-fun curList ->
-  fun lt1 ->
-    fun lt2 ->
-      match lt1 with
-      | [] -> curList
-      | h :: t -> helper ((h , List.hd lt2) :: curList)
-                         t (List.tl lt2)
-LamG (LamG EmptyG)
-
-(24,15)-(24,30)
-fun lt1 ->
-  fun lt2 ->
-    match lt1 with
-    | [] -> curList
-    | h :: t -> helper ((h , List.hd lt2) :: curList)
-                       t (List.tl lt2)
-LamG (LamG EmptyG)
-
-(24,15)-(24,30)
-fun lt2 ->
-  match lt1 with
-  | [] -> curList
-  | h :: t -> helper ((h , List.hd lt2) :: curList)
-                     t (List.tl lt2)
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (24,15)-(24,30)
 let rec helper =
@@ -206,63 +203,8 @@ let rec helper =
 helper [] l1 l2
 LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
-(24,15)-(24,30)
-match lt1 with
-| [] -> curList
-| h :: t -> helper ((h , List.hd lt2) :: curList)
-                   t (List.tl lt2)
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-
-(24,22)-(24,24)
-h
-VarG
-
-(24,22)-(24,24)
-List.hd
-VarG
-
-(24,22)-(24,24)
-lt2
-VarG
-
-(24,22)-(24,24)
-curList
-VarG
-
-(24,22)-(24,24)
-t
-VarG
-
-(24,22)-(24,24)
-List.tl
-VarG
-
-(24,22)-(24,24)
-lt2
-VarG
-
-(24,22)-(24,24)
-helper
-VarG
-
-(24,22)-(24,24)
-List.hd lt2
-AppG (fromList [VarG])
-
-(24,22)-(24,24)
-List.tl lt2
-AppG (fromList [VarG])
-
 (24,22)-(24,24)
 helper [] l1 l2
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(24,22)-(24,24)
-(h , List.hd lt2)
-TupleG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(24,22)-(24,24)
-(h , List.hd lt2) :: curList
-ConAppG (Just (TupleG (fromList [VarG,TupleG (fromList [VarG,AppG (fromList [VarG])])]))) Nothing
 
 *)

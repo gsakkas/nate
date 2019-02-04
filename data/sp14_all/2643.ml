@@ -74,6 +74,10 @@ factorial (eval (e' , x , y))
           1.0
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
+(30,30)-(30,52)
+EMPTY
+EmptyG
+
 (30,50)-(30,51)
 1.0
 LitG

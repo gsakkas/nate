@@ -25,15 +25,9 @@ fun b ->
   else (b , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(6,21)-(6,55)
-if f b
-then (b , true)
-else (b , false)
-IteG (AppG (fromList [EmptyG])) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
-(6,32)-(6,33)
-b
-VarG
+(6,28)-(6,33)
+EMPTY
+EmptyG
 
 (6,32)-(6,33)
 let funt =
@@ -49,35 +43,11 @@ f
 VarG
 
 (6,45)-(6,51)
-true
-LitG
-
-(6,45)-(6,51)
 (b , false)
 TupleG (fromList [VarG,LitG])
 
 (6,46)-(6,48)
-wwhile
-VarG
-
-(6,46)-(6,48)
-funt
-VarG
-
-(6,46)-(6,48)
-b
-VarG
-
-(6,46)-(6,48)
 wwhile (funt , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(6,46)-(6,48)
-false
-LitG
-
-(6,46)-(6,48)
-(funt , b)
-TupleG (fromList [VarG])
 
 *)

@@ -47,6 +47,22 @@ IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 sumList (digits n) > 9
 BopG (AppG (fromList [EmptyG])) LitG
 
+(15,32)-(15,74)
+EMPTY
+EmptyG
+
+(15,35)-(15,36)
+EMPTY
+EmptyG
+
+(15,35)-(15,40)
+EMPTY
+EmptyG
+
+(15,58)-(15,59)
+EMPTY
+EmptyG
+
 (15,73)-(15,74)
 digits n
 AppG (fromList [VarG])

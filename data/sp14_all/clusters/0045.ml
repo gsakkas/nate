@@ -1,97 +1,154 @@
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-let (l1 , l2) = x in
-(0 , l1 :: num)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (h :: t , _) = a in
-([] , [])
-let (h :: t , _) = a in
-([] , [])
-let (h :: t , _) = a in
-([] , [])
+LetG NonRec (fromList [LamG EmptyG]) VarG
+let fn = fun d -> d in fn
+let fn = fun d -> d in fn
+let fn = fun d -> d in fn
+let d =
+  fun x ->
+    (let xx = f b in
+     (xx , xx = b)) in
+d
+let d =
+  fun x ->
+    (let xx = f b in
+     (xx , xx = b)) in
+d
+let a =
+  fun x ->
+    (let xx = f x in
+     (xx , x <> b)) in
+a
+let a =
+  fun x ->
+    (let xx = f x in
+     (xx , x <> b)) in
+a
+let a =
+  fun x ->
+    (let xx = f x in
+     (xx , x <> b)) in
+a
+let a =
+  fun x ->
+    (let xx = f x in
+     (xx , x <> b)) in
+a
+let a =
+  fun x ->
+    (let xx = f x in
+     (xx , x <> b)) in
+a
+let a =
+  fun x ->
+    (let xx = f x in
+     (xx , x <> b)) in
+a
+let a =
+  fun x ->
+    (let xx = f x in
+     (xx , x <> b)) in
+a
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g

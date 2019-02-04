@@ -87,16 +87,8 @@ let rec build (rand,depth) =
 
 (* changed spans
 (16,18)-(16,24)
-e
-VarG
-
-(16,18)-(16,24)
 fun e -> Sine e
 LamG (ConAppG (Just VarG) Nothing)
-
-(16,18)-(16,24)
-SinCos e
-ConAppG (Just VarG) Nothing
 
 (31,5)-(39,23)
 match r with
@@ -107,6 +99,10 @@ match r with
 | 4 -> buildThresh (build (rand , depth - 1) , buildX () , buildY () , buildX ())
 | 5 -> buildSinCos (build (rand , depth - 1))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
+
+(37,9)-(39,23)
+EMPTY
+EmptyG
 
 (38,13)-(38,68)
 (build (rand , depth - 1) , buildX () , buildY () , buildX ())

@@ -68,6 +68,10 @@ match x with
                                         | (a1 , a2) -> a2))
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(23,45)-(23,47)
+EMPTY
+EmptyG
+
 (23,45)-(23,52)
 (d1 + d2 , (d1 + d2) :: (match a with
                          | (a1 , a2) -> a2))
@@ -78,37 +82,8 @@ d1
 VarG
 
 (24,4)-(26,51)
-d2
-VarG
-
-(24,4)-(26,51)
-d1
-VarG
-
-(24,4)-(26,51)
-d2
-VarG
-
-(24,4)-(26,51)
-a
-VarG
-
-(24,4)-(26,51)
-a2
-VarG
-
-(24,4)-(26,51)
-d1 + d2
-BopG VarG VarG
-
-(24,4)-(26,51)
 match a with
 | (a1 , a2) -> a2
 CaseG VarG (fromList [(Nothing,VarG)])
-
-(24,4)-(26,51)
-(d1 + d2) :: (match a with
-              | (a1 , a2) -> a2)
-ConAppG (Just (TupleG (fromList [BopG VarG VarG,CaseG VarG (fromList [(Nothing,VarG)])]))) Nothing
 
 *)

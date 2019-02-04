@@ -19,6 +19,10 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(6,2)-(7,6)
+EMPTY
+EmptyG
+
 (6,11)-(6,77)
 (let f' =
    fun b ->

@@ -1,6 +1,5 @@
-BopG VarG (ListG EmptyG Nothing)
-l = []
-l = []
-l = []
-l = []
-l = []
+ListG (ListG EmptyG Nothing) Nothing
+[["b"]]
+[["b"]]
+[["b"]]
+[["b"]]

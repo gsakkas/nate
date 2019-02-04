@@ -23,4 +23,16 @@ AppG (fromList [VarG])
 y
 VarG
 
+(3,32)-(3,39)
+EMPTY
+EmptyG
+
+(3,36)-(3,39)
+EMPTY
+EmptyG
+
+(3,38)-(3,39)
+EMPTY
+EmptyG
+
 *)

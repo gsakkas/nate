@@ -77,6 +77,14 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
+(34,8)-(34,66)
+EMPTY
+EmptyG
+
+(34,8)-(35,68)
+EMPTY
+EmptyG
+
 (34,9)-(34,46)
 ((eval (m , x , y) *. eval (n , x , y)) *. eval (o , x , y)) /. ((eval (m , x , y) +. eval (n , x , y)) +. eval (o , x , y))
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
@@ -85,9 +93,9 @@ BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
 (eval (m , x , y) *. eval (n , x , y)) *. eval (o , x , y)
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
-(34,10)-(34,26)
-eval (m , x , y) *. eval (n , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+(35,10)-(35,68)
+EMPTY
+EmptyG
 
 (35,11)-(35,48)
 (eval (m , x , y) +. eval (n , x , y)) +. eval (o , x , y)

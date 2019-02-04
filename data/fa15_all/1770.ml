@@ -33,21 +33,33 @@ let removeDuplicates l =
 *)
 
 (* changed spans
+(5,15)-(5,16)
+EMPTY
+EmptyG
+
 (5,26)-(5,36)
 a
 VarG
+
+(12,20)-(12,21)
+EMPTY
+EmptyG
+
+(13,8)-(13,64)
+EMPTY
+EmptyG
 
 (13,25)-(13,39)
 seen
 VarG
 
 (13,26)-(13,32)
-filter t h
-AppG (fromList [VarG])
-
-(13,26)-(13,32)
 let rest' = filter t h in
 helper (seen' , rest')
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
+
+(13,33)-(13,38)
+EMPTY
+EmptyG
 
 *)

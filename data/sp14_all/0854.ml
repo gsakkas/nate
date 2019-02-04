@@ -16,15 +16,27 @@ let rec digitsOfInt n =
 
 (* changed spans
 (6,9)-(6,31)
-n
-VarG
-
-(6,9)-(6,31)
 n mod 10
 BopG VarG LitG
 
-(6,9)-(6,31)
-10
-LitG
+(6,35)-(6,45)
+EMPTY
+EmptyG
+
+(6,35)-(6,51)
+EMPTY
+EmptyG
+
+(6,36)-(6,37)
+EMPTY
+EmptyG
+
+(6,42)-(6,44)
+EMPTY
+EmptyG
+
+(6,49)-(6,51)
+EMPTY
+EmptyG
 
 *)

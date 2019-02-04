@@ -91,4 +91,8 @@ let rec eval (e,x,y) =
 0.1
 LitG
 
+(34,17)-(34,20)
+EMPTY
+EmptyG
+
 *)

@@ -36,14 +36,6 @@ a < b
 BopG VarG VarG
 
 (10,12)-(10,38)
-a
-VarG
-
-(10,12)-(10,38)
-b
-VarG
-
-(10,12)-(10,38)
 (List.append (clone 0 (b - a))
              l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
@@ -51,10 +43,6 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 (10,33)-(10,34)
 b - a
 BopG VarG VarG
-
-(10,36)-(10,38)
-b
-VarG
 
 (10,36)-(10,38)
 a

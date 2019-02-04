@@ -67,6 +67,10 @@ let rec eval (e,x,y) =
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
+(27,25)-(27,26)
+EMPTY
+EmptyG
+
 (27,30)-(27,31)
 0.0
 LitG

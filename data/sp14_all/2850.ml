@@ -63,25 +63,17 @@ let rec build (rand,depth) =
 
 (* changed spans
 (13,27)-(13,43)
-e1
-VarG
-
-(13,27)-(13,43)
-e2
-VarG
-
-(13,27)-(13,43)
 fun (e1 , e2) ->
   Tangent (e1 , e2)
 LamG (ConAppG (Just (TupleG (fromList [VarG]))) Nothing)
 
-(13,27)-(13,43)
-Average (e1 , e2)
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
 (23,6)-(26,38)
 buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
+
+(25,8)-(26,38)
+EMPTY
+EmptyG
 
 (25,23)-(25,50)
 (build (rand , depth - 1) , build (rand , depth - 1))

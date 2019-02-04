@@ -58,4 +58,20 @@ BopG VarG LitG
 0
 LitG
 
+(18,32)-(18,56)
+EMPTY
+EmptyG
+
+(18,35)-(18,36)
+EMPTY
+EmptyG
+
+(18,35)-(18,41)
+EMPTY
+EmptyG
+
+(18,40)-(18,41)
+EMPTY
+EmptyG
+
 *)

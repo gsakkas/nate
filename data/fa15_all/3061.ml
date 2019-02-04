@@ -17,6 +17,10 @@ let bigMul l1 l2 =
 a @ [0]
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
+(3,14)-(3,22)
+EMPTY
+EmptyG
+
 (3,15)-(3,16)
 (@)
 VarG

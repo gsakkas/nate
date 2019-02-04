@@ -18,4 +18,12 @@ match f b with
                else h1
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
+(3,56)-(3,64)
+EMPTY
+EmptyG
+
+(3,61)-(3,63)
+EMPTY
+EmptyG
+
 *)

@@ -70,16 +70,20 @@ x
 VarG
 
 (28,14)-(28,33)
-y
-VarG
-
-(28,14)-(28,33)
 2.0
 LitG
 
 (28,20)-(28,21)
 (e , x , y)
 TupleG (fromList [VarG])
+
+(28,26)-(28,33)
+EMPTY
+EmptyG
+
+(28,27)-(28,28)
+EMPTY
+EmptyG
 
 (28,31)-(28,32)
 x

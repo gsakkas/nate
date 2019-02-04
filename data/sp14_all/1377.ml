@@ -74,10 +74,6 @@ rest
 VarG
 
 (23,20)-(23,33)
-0
-LitG
-
-(23,20)-(23,33)
 (0 , carry :: rest)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
 

@@ -97,40 +97,16 @@ AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 
-(27,46)-(27,52)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
 (29,4)-(42,71)
 ()
 ConAppG Nothing (Just (TApp "unit" []))
 
-(32,12)-(32,23)
-build
-VarG
-
-(32,12)-(32,23)
-rand
-VarG
-
-(32,12)-(32,23)
-depth
-VarG
+(31,22)-(31,28)
+EMPTY
+EmptyG
 
 (32,12)-(32,23)
 buildCosine (build (rand , depth - 1))
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(32,12)-(32,23)
-depth - 1
-BopG VarG LitG
-
-(32,12)-(32,23)
-1
-LitG
-
-(32,12)-(32,23)
-(rand , depth - 1)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)

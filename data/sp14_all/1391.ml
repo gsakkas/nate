@@ -15,10 +15,6 @@ let pipe fs =
 fun a -> f a x
 LamG (AppG (fromList [EmptyG]))
 
-(3,18)-(3,19)
-f a x
-AppG (fromList [VarG])
-
 (3,18)-(3,21)
 fun f -> fun a -> f a x
 LamG (LamG EmptyG)

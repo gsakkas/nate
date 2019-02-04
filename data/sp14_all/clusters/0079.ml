@@ -1,18 +1,14 @@
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
-0 :: ns
-0 :: l2
-0 :: l2
-0 :: l1
-0 :: l2
-0 :: l2
-0 :: l1
-0 :: l2
-0 :: l1
-0 :: l1
-0 :: l2
-0 :: l1
-0 :: l2
-0 :: l2
-0 :: l2
-0 :: l2
-0 :: l2
+TupleG (fromList [VarG,LitG])
+(b , false)
+(0 , acc)
+(0 , n)
+(b , true)
+(b , true)
+(b , true)
+(b , false)
+(b , true)
+(b , false)
+(b , true)
+(b , true)
+(e , 0.0 , 0.0)
+(e , 0.0 , 0.0)

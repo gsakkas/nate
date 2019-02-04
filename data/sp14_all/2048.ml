@@ -23,17 +23,17 @@ LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 fun b -> (f b , b = f b)
 LamG (TupleG (fromList [EmptyG]))
 
+(4,31)-(4,32)
+EMPTY
+EmptyG
+
+(4,34)-(4,45)
+EMPTY
+EmptyG
+
 (4,43)-(4,44)
 b = f b
 BopG VarG (AppG (fromList [EmptyG]))
-
-(4,50)-(4,56)
-f
-VarG
-
-(4,50)-(4,56)
-b
-VarG
 
 (4,50)-(4,56)
 wwhile (f , b)

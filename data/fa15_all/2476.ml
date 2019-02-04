@@ -88,15 +88,7 @@ ListG (BopG EmptyG EmptyG) Nothing
 ListG (BopG EmptyG EmptyG) Nothing
 
 (34,50)-(34,72)
-(@)
-VarG
-
-(34,50)-(34,72)
 [((h + b) + c) mod 10] @ t
 AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(34,50)-(34,72)
-[((h + b) + c) mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
 
 *)

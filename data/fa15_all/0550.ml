@@ -19,8 +19,8 @@ VarG
 fun x -> fun a -> x a
 LamG (LamG EmptyG)
 
-(3,14)-(3,18)
-fun a -> x a
-LamG (AppG (fromList [EmptyG]))
+(3,16)-(3,18)
+EMPTY
+EmptyG
 
 *)

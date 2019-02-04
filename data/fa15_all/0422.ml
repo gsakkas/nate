@@ -23,6 +23,10 @@ let fixpoint (f,b) =
 b
 VarG
 
+(7,28)-(7,29)
+EMPTY
+EmptyG
+
 (7,31)-(7,32)
 b
 VarG
@@ -30,6 +34,10 @@ VarG
 (7,39)-(7,45)
 b
 VarG
+
+(7,40)-(7,41)
+EMPTY
+EmptyG
 
 (7,43)-(7,44)
 b

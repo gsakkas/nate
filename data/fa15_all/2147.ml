@@ -92,14 +92,6 @@ rand (0 , 4)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (30,14)-(30,51)
-0
-LitG
-
-(30,14)-(30,51)
-4
-LitG
-
-(30,14)-(30,51)
 (0 , 4)
 TupleG (fromList [LitG])
 

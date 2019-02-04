@@ -69,10 +69,6 @@ let bigMul l1 l2 =
 
 (* changed spans
 (31,42)-(31,68)
-0
-LitG
-
-(31,42)-(31,68)
 (0 , List.fold_left f base
                     args)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])

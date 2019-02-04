@@ -18,6 +18,14 @@ let rec listReverse l =
 *)
 
 (* changed spans
+(3,2)-(7,44)
+EMPTY
+EmptyG
+
+(3,16)-(3,18)
+EMPTY
+EmptyG
+
 (7,18)-(7,36)
 (@)
 VarG

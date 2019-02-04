@@ -1,21 +1,28 @@
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (AppG (fromList [EmptyG]))
-let comb =
-  eval (e1 , x , y) +. eval (e2 , x , y) in
-mod_float comb
-          (eval (e3 , x , y))
-let comb =
-  eval (e1 , x , y) +. eval (e2 , x , y) in
-mod_float comb
-          (eval (e3 , x , y))
-let comb =
-  eval (e1 , x , y) +. eval (e2 , x , y) in
-mod_float comb
-          (eval (e3 , x , y))
-let comb =
-  eval (e1 , x , y) +. eval (e2 , x , y) in
-mod_float comb
-          (eval (e3 , x , y))
-let comb =
-  eval (e1 , x , y) +. eval (e2 , x , y) in
-mod_float comb
-          (eval (e3 , x , y))
+LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+let rec helper =
+  fun curList ->
+    fun lt1 ->
+      fun lt2 ->
+        match lt1 with
+        | [] -> curList
+        | h :: t -> helper ((h , List.hd lt2) :: curList)
+                           t (List.tl lt2) in
+helper [] l1 l2
+let rec helper =
+  fun curList ->
+    fun lt1 ->
+      fun lt2 ->
+        match lt1 with
+        | [] -> curList
+        | h :: t -> helper ((h , List.hd lt2) :: curList)
+                           t (List.tl lt2) in
+helper [] l1 l2
+let rec helper =
+  fun curList ->
+    fun lt1 ->
+      fun lt2 ->
+        match lt1 with
+        | [] -> curList
+        | h :: t -> helper ((h , List.hd lt2) :: curList)
+                           t (List.tl lt2) in
+helper [] l1 l2

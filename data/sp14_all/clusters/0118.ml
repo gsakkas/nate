@@ -1,29 +1,17 @@
-IteG (BopG EmptyG EmptyG) VarG (AppG (fromList [EmptyG]))
-if a = 0
-then b
-else integers (a / 10)
-              ((a mod 10) :: b)
-if x < 10
-then count
-else helper (count + 1)
-            (sumList (digits n))
-if i = 1
-then l
-else bigAdd (bigAdd l l)
-            (mulByDigit (i - 2) l)
-if i = 1
-then l
-else bigAdd (bigAdd l l)
-            (mulByDigit (i - 2) l)
-if i = 1
-then l
-else bigAdd (bigAdd l l)
-            (mulByDigit (i - 2) l)
-if n = 0
-then a
-else loop (n / 10)
-          ((n mod 10) :: a)
-if v = 0
-then acc
-else helper ((v mod 10) :: acc)
-            (v / 10)
+LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
+let ones =
+  (x1 + x2) + (h mod 10) in
+(tens :: a1 , ones :: a2)
+let sum =
+  fst a + ((fst x + snd x) mod 10) in
+(sum / 10 , sum mod 10)
+let xx = (x * x) * x in
+(xx , xx < 100)
+let l1G =
+  List.length l1 - List.length l2 in
+(l1 , List.append (clone 0
+                         l1G) l2)
+let l2G =
+  List.length l2 - List.length l1 in
+(List.append (clone 0 l2G)
+             l1 , l2)

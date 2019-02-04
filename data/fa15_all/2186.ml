@@ -24,30 +24,14 @@ fun func ->
    (result , result = b))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+(5,45)-(5,48)
+EMPTY
+EmptyG
+
 (5,45)-(5,50)
 let result = f b in
 (result , result = b)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-
-(5,54)-(5,60)
-b
-VarG
-
-(5,54)-(5,60)
-result
-VarG
-
-(5,54)-(5,60)
-result
-VarG
-
-(5,54)-(5,60)
-b
-VarG
-
-(5,54)-(5,60)
-result = b
-BopG VarG VarG
 
 (5,54)-(5,60)
 (result , result = b)

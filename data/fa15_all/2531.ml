@@ -51,6 +51,18 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(16,6)-(18,72)
+EMPTY
+EmptyG
+
+(16,12)-(16,13)
+EMPTY
+EmptyG
+
+(17,14)-(17,16)
+EMPTY
+EmptyG
+
 (18,16)-(18,72)
 let (x1 , x2) = x in
 let (a1 , a2) = a in
@@ -60,15 +72,15 @@ else (0 , ((x1 + x2) + a1) :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (18,33)-(18,72)
-a
-VarG
-
-(18,33)-(18,72)
 let (a1 , a2) = a in
 if (x1 + x2) > 10
 then (1 , (((x1 + x2) + a1) - 10) :: a2)
 else (0 , ((x1 + x2) + a1) :: a2)
 LetG NonRec (fromList [VarG]) (IteG EmptyG EmptyG EmptyG)
+
+(18,37)-(18,38)
+EMPTY
+EmptyG
 
 (18,41)-(18,42)
 x1
@@ -82,80 +94,48 @@ VarG
 (1 , (((x1 + x2) + a1) - 10) :: a2)
 TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing])
 
-(18,66)-(18,67)
-x1
-VarG
-
-(18,66)-(18,67)
-x2
-VarG
-
-(18,66)-(18,67)
-a1
-VarG
-
-(18,66)-(18,67)
-a2
-VarG
+(18,59)-(18,60)
+EMPTY
+EmptyG
 
 (18,66)-(18,67)
 ((x1 + x2) + a1) - 10
 BopG (BopG EmptyG EmptyG) LitG
-
-(18,66)-(18,67)
-(x1 + x2) + a1
-BopG (BopG EmptyG EmptyG) VarG
-
-(18,66)-(18,67)
-x1 + x2
-BopG VarG VarG
-
-(18,66)-(18,67)
-10
-LitG
-
-(18,66)-(18,67)
-(0 , ((x1 + x2) + a1) :: a2)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing])
 
 (18,71)-(18,72)
 ((x1 + x2) + a1) :: a2
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing
 
 (19,4)-(21,51)
-x1
-VarG
-
-(19,4)-(21,51)
-x2
-VarG
-
-(19,4)-(21,51)
-a1
-VarG
-
-(19,4)-(21,51)
-a2
-VarG
-
-(19,4)-(21,51)
 (x1 + x2) + a1
 BopG (BopG EmptyG EmptyG) VarG
-
-(19,4)-(21,51)
-x1 + x2
-BopG VarG VarG
 
 (19,19)-(19,20)
 []
 ListG EmptyG Nothing
 
-(20,38)-(20,40)
-List.combine
-VarG
+(20,15)-(20,27)
+EMPTY
+EmptyG
+
+(20,28)-(20,54)
+EMPTY
+EmptyG
+
+(20,29)-(20,40)
+EMPTY
+EmptyG
 
 (20,38)-(20,40)
 List.combine l1 l2
 AppG (fromList [VarG])
+
+(20,42)-(20,50)
+EMPTY
+EmptyG
+
+(20,42)-(20,53)
+EMPTY
+EmptyG
 
 *)

@@ -58,6 +58,10 @@ BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
 2.0
 LitG
 
+(17,72)-(17,73)
+EMPTY
+EmptyG
+
 (18,21)-(18,38)
 eval (e1 , x , y) *. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))

@@ -64,6 +64,14 @@ List.combine (0 :: (List.rev l1))
              (0 :: (List.rev l2))
 AppG (fromList [ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG]))) Nothing])
 
+(25,15)-(25,69)
+EMPTY
+EmptyG
+
+(25,29)-(25,30)
+EMPTY
+EmptyG
+
 (25,35)-(25,52)
 0
 LitG

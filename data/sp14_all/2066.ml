@@ -55,6 +55,14 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 (**)
 VarG
 
+(18,27)-(18,39)
+EMPTY
+EmptyG
+
+(18,40)-(18,56)
+EMPTY
+EmptyG
+
 (19,18)-(19,41)
 pi ** eval (a , x , y)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])

@@ -58,4 +58,12 @@ let rec eval (e,x,y) =
 (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
+(20,7)-(20,33)
+EMPTY
+EmptyG
+
+(20,8)-(20,11)
+EMPTY
+EmptyG
+
 *)

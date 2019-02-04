@@ -28,27 +28,11 @@ f
 VarG
 
 (5,54)-(5,58)
-b
-VarG
-
-(5,54)-(5,58)
-true
-LitG
-
-(5,54)-(5,58)
-(b , true)
-TupleG (fromList [VarG,LitG])
-
-(5,54)-(5,58)
 (f b , false)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (5,61)-(5,62)
 f'
 VarG
-
-(5,61)-(5,62)
-false
-LitG
 
 *)

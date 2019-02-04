@@ -54,10 +54,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,33)-(19,74)
-a
-VarG
-
-(19,33)-(19,74)
 let (s , t) = a in
 (((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
@@ -73,6 +69,10 @@ BopG VarG VarG
 (19,47)-(19,49)
 s
 VarG
+
+(19,53)-(19,54)
+EMPTY
+EmptyG
 
 (19,58)-(19,72)
 ((i + j) + s) mod 10

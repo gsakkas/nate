@@ -82,14 +82,6 @@ AppG (fromList [AppG (fromList [EmptyG])])
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
 (29,46)-(29,48)
-(@)
-VarG
-
-(29,46)-(29,48)
-0
-LitG
-
-(29,46)-(29,48)
 [0]
 ListG LitG Nothing
 

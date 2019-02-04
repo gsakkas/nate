@@ -23,4 +23,8 @@ TupleG (fromList [VarG])
 assoc (d , k , t)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
+(3,71)-(3,72)
+EMPTY
+EmptyG
+
 *)

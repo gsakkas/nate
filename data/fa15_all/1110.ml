@@ -65,34 +65,42 @@ match a with
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (18,12)-(18,13)
-fst
-VarG
-
-(18,12)-(18,13)
-fst x
-AppG (fromList [VarG])
-
-(18,12)-(18,13)
 fst x + snd x
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+
+(20,10)-(24,53)
+EMPTY
+EmptyG
+
+(20,17)-(20,18)
+EMPTY
+EmptyG
 
 (22,15)-(24,52)
 snd x
 AppG (fromList [VarG])
 
 (22,22)-(22,23)
-snd
-VarG
-
-(22,22)-(22,23)
-x
-VarG
-
-(22,22)-(22,23)
 match a with
 | h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
 | _ -> [b / 10 ; b mod 10]
 CaseG VarG (fromList [(Nothing,ConAppG (Just EmptyG) Nothing),(Nothing,ListG EmptyG Nothing)])
+
+(23,26)-(23,50)
+EMPTY
+EmptyG
+
+(23,27)-(23,38)
+EMPTY
+EmptyG
+
+(23,28)-(23,31)
+EMPTY
+EmptyG
+
+(23,34)-(23,37)
+EMPTY
+EmptyG
 
 (23,42)-(23,43)
 h + b
@@ -102,36 +110,32 @@ BopG VarG VarG
 b
 VarG
 
+(24,22)-(24,33)
+EMPTY
+EmptyG
+
+(24,23)-(24,26)
+EMPTY
+EmptyG
+
+(24,29)-(24,32)
+EMPTY
+EmptyG
+
 (24,43)-(24,45)
 b
 VarG
 
 (25,4)-(27,51)
-b
-VarG
-
-(25,4)-(27,51)
-b
-VarG
-
-(25,4)-(27,51)
-b / 10
-BopG VarG LitG
-
-(25,4)-(27,51)
-b mod 10
-BopG VarG LitG
-
-(25,4)-(27,51)
-10
-LitG
-
-(25,4)-(27,51)
-10
-LitG
-
-(25,4)-(27,51)
 [b / 10 ; b mod 10]
 ListG (BopG EmptyG EmptyG) Nothing
+
+(27,4)-(27,51)
+EMPTY
+EmptyG
+
+(27,48)-(27,51)
+EMPTY
+EmptyG
 
 *)

@@ -83,9 +83,17 @@ let rec mulByDigit i l =
 i <= 1
 BopG VarG LitG
 
+(37,16)-(37,18)
+EMPTY
+EmptyG
+
 (37,24)-(37,34)
 l
 VarG
+
+(37,24)-(37,61)
+EMPTY
+EmptyG
 
 (37,25)-(37,31)
 bigAdd l (mulByDigit (i - 1)
@@ -95,5 +103,9 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 (37,37)-(37,61)
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
+
+(37,54)-(37,59)
+EMPTY
+EmptyG
 
 *)

@@ -66,10 +66,6 @@ match x with
 LetG NonRec (fromList [VarG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (19,22)-(19,23)
-a
-VarG
-
-(19,22)-(19,23)
 match x with
 | (fir , sec) -> if (fir + sec) < 10
                  then ([] , (fir + sec) :: b2)
@@ -86,6 +82,10 @@ then ([] , (fir + sec) :: b2)
 else ([] , (fir + sec) :: b2)
 IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
 
+(19,41)-(19,42)
+EMPTY
+EmptyG
+
 (19,45)-(19,46)
 fir
 VarG
@@ -95,59 +95,7 @@ sec
 VarG
 
 (20,4)-(22,53)
-fir
-VarG
-
-(20,4)-(22,53)
-sec
-VarG
-
-(20,4)-(22,53)
-b2
-VarG
-
-(20,4)-(22,53)
-fir
-VarG
-
-(20,4)-(22,53)
-sec
-VarG
-
-(20,4)-(22,53)
-b2
-VarG
-
-(20,4)-(22,53)
-fir + sec
-BopG VarG VarG
-
-(20,4)-(22,53)
-fir + sec
-BopG VarG VarG
-
-(20,4)-(22,53)
 ([] , (fir + sec) :: b2)
 TupleG (fromList [ConAppG (Just EmptyG) Nothing,ListG EmptyG Nothing])
-
-(20,4)-(22,53)
-([] , (fir + sec) :: b2)
-TupleG (fromList [ConAppG (Just EmptyG) Nothing,ListG EmptyG Nothing])
-
-(20,4)-(22,53)
-(fir + sec) :: b2
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
-
-(20,4)-(22,53)
-(fir + sec) :: b2
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
-
-(20,4)-(22,53)
-[]
-ListG EmptyG Nothing
-
-(20,4)-(22,53)
-[]
-ListG EmptyG Nothing
 
 *)

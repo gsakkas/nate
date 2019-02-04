@@ -25,6 +25,10 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
+(9,8)-(9,72)
+EMPTY
+EmptyG
+
 (9,9)-(9,68)
 List.append (clone 0
                    (List.length l2 - List.length l1))

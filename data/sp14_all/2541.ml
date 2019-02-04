@@ -28,17 +28,25 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(9,4)-(12,61)
+EMPTY
+EmptyG
+
+(9,13)-(9,23)
+EMPTY
+EmptyG
+
+(9,13)-(9,25)
+EMPTY
+EmptyG
+
+(9,24)-(9,25)
+EMPTY
+EmptyG
+
 (10,13)-(10,14)
 reverseInt n 0
 AppG (fromList [VarG,LitG])
-
-(10,17)-(10,19)
-reverseInt
-VarG
-
-(10,17)-(10,19)
-n
-VarG
 
 (10,17)-(10,19)
 0
@@ -47,14 +55,6 @@ LitG
 (11,13)-(11,14)
 reverseInt n 0
 AppG (fromList [VarG,LitG])
-
-(11,19)-(11,21)
-reverseInt
-VarG
-
-(11,19)-(11,21)
-n
-VarG
 
 (11,19)-(11,21)
 0

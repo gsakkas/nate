@@ -1,4 +1,8 @@
-TupleG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-(mulByDigit x q , [])
-(List.length l1 , [])
-(List.length l1 , [])
+CaseG VarG (fromList [(Nothing,ListG EmptyG Nothing)])
+match b with
+| [] -> [a]
+| hd :: tl -> [a + hd]
+match l with
+| [] -> []
+| x :: [] -> [x]
+| head :: tail :: third :: fourth :: fifth -> [fourth ; third ; tail ; head]

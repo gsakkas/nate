@@ -33,17 +33,33 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(8,23)-(8,28)
-List.append
-VarG
+(8,4)-(8,15)
+EMPTY
+EmptyG
+
+(8,4)-(8,40)
+EMPTY
+EmptyG
+
+(8,21)-(8,39)
+EMPTY
+EmptyG
 
 (8,23)-(8,28)
 clone 0 l1G
 AppG (fromList [VarG,LitG])
 
-(13,22)-(13,27)
-List.append
-VarG
+(13,7)-(13,18)
+EMPTY
+EmptyG
+
+(13,7)-(13,43)
+EMPTY
+EmptyG
+
+(13,20)-(13,38)
+EMPTY
+EmptyG
 
 (13,22)-(13,27)
 clone 0 l2G

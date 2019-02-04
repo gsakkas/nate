@@ -43,8 +43,28 @@ VarG
 accu
 VarG
 
+(9,30)-(12,68)
+EMPTY
+EmptyG
+
 (11,9)-(11,14)
 0
 LitG
+
+(12,30)-(12,55)
+EMPTY
+EmptyG
+
+(12,56)-(12,67)
+EMPTY
+EmptyG
+
+(12,57)-(12,62)
+EMPTY
+EmptyG
+
+(12,65)-(12,66)
+EMPTY
+EmptyG
 
 *)

@@ -55,6 +55,10 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(25,13)-(25,40)
+EMPTY
+EmptyG
+
 (25,19)-(25,34)
 (padZero l1 l2 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])

@@ -98,25 +98,9 @@ match i with
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
 
 (34,37)-(34,43)
-l
-VarG
-
-(34,37)-(34,43)
-(@)
-VarG
-
-(34,37)-(34,43)
 bigAdd l (mulByDigit (i - 1)
                      l)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(34,37)-(34,43)
-0
-LitG
-
-(34,37)-(34,43)
-[0]
-ListG LitG Nothing
 
 (37,14)-(37,20)
 let (c , a') = a in
@@ -125,9 +109,9 @@ let s = bigAdd m a' in
 (c + 1 , s)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(37,21)-(37,38)
-a
-VarG
+(37,14)-(37,40)
+EMPTY
+EmptyG
 
 (37,21)-(37,38)
 let m = mulByDigit x l2 in
@@ -141,44 +125,8 @@ let s = bigAdd m a' in
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
 (38,2)-(39,66)
-bigAdd
-VarG
-
-(38,2)-(39,66)
-m
-VarG
-
-(38,2)-(39,66)
-a'
-VarG
-
-(38,2)-(39,66)
-c
-VarG
-
-(38,2)-(39,66)
-s
-VarG
-
-(38,2)-(39,66)
-bigAdd m a'
-AppG (fromList [VarG])
-
-(38,2)-(39,66)
-c + 1
-BopG VarG LitG
-
-(38,2)-(39,66)
-1
-LitG
-
-(38,2)-(39,66)
 (c + 1 , s)
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(38,13)-(38,16)
-0
-LitG
 
 (38,13)-(38,16)
 (0 , [0])

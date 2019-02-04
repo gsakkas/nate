@@ -61,6 +61,10 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 (eval (t , x , y) *. eval (u , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
+(20,21)-(20,62)
+EMPTY
+EmptyG
+
 (20,22)-(20,38)
 eval (t , x , y) *. eval (u , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))

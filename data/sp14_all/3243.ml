@@ -141,10 +141,6 @@ exprToString ex2
 AppG (fromList [VarG])
 
 (39,51)-(39,54)
-(^)
-VarG
-
-(39,51)-(39,54)
 "+" ^ (exprToString ex3 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ ("+" ^ (exprToString ex5 ^ "))")))))))))))))))))))
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
@@ -152,21 +148,17 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 exprToString ex2
 AppG (fromList [VarG])
 
+(44,66)-(44,69)
+EMPTY
+EmptyG
+
 (45,51)-(45,73)
 "+"
 LitG
 
 (45,52)-(45,64)
-(^)
-VarG
-
-(45,52)-(45,64)
 exprToString ex3
 AppG (fromList [VarG])
-
-(45,69)-(45,72)
-(^)
-VarG
 
 (45,69)-(45,72)
 "+" ^ (exprToString ex4 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ ("+" ^ (exprToString ex5 ^ "))")))))))))))
@@ -176,33 +168,29 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 exprToString ex2
 AppG (fromList [VarG])
 
+(52,72)-(52,75)
+EMPTY
+EmptyG
+
 (55,68)-(56,76)
 "+"
 LitG
 
 (55,69)-(55,81)
-(^)
-VarG
-
-(55,69)-(55,81)
 exprToString ex3
 AppG (fromList [VarG])
+
+(56,72)-(56,75)
+EMPTY
+EmptyG
 
 (58,69)-(59,76)
 "+"
 LitG
 
 (58,70)-(58,82)
-(^)
-VarG
-
-(58,70)-(58,82)
 exprToString ex4
 AppG (fromList [VarG])
-
-(59,72)-(59,75)
-(^)
-VarG
 
 (59,72)-(59,75)
 "+" ^ (exprToString ex5 ^ "))")

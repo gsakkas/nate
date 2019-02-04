@@ -63,9 +63,13 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(27,28)-(27,36)
-List.append
-VarG
+(27,15)-(27,26)
+EMPTY
+EmptyG
+
+(27,15)-(27,65)
+EMPTY
+EmptyG
 
 (27,28)-(27,36)
 List.rev (List.combine l1 l2)

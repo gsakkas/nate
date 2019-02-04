@@ -27,13 +27,33 @@ let fixpoint (f,b) =
 b = f b
 BopG VarG (AppG (fromList [EmptyG]))
 
-(9,41)-(9,46)
-b
-VarG
+(9,7)-(9,47)
+EMPTY
+EmptyG
 
-(9,41)-(9,46)
-fun b -> (f b , true)
-LamG (TupleG (fromList [EmptyG]))
+(9,13)-(9,26)
+EMPTY
+EmptyG
+
+(9,17)-(9,26)
+EMPTY
+EmptyG
+
+(9,18)-(9,19)
+EMPTY
+EmptyG
+
+(9,21)-(9,25)
+EMPTY
+EmptyG
+
+(9,30)-(9,36)
+EMPTY
+EmptyG
+
+(9,37)-(9,47)
+EMPTY
+EmptyG
 
 (9,41)-(9,46)
 let g =
@@ -41,17 +61,9 @@ let g =
 wwhile (g , f b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
-(9,41)-(9,46)
-(f b , true)
-TupleG (fromList [AppG (fromList [EmptyG]),LitG])
-
 (10,7)-(10,19)
 true
 LitG
-
-(10,14)-(10,19)
-g
-VarG
 
 (10,14)-(10,19)
 (g , f b)

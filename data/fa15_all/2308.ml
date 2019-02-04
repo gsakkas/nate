@@ -48,28 +48,36 @@ let rec exprToString e =
 y
 VarG
 
+(19,50)-(19,51)
+EMPTY
+EmptyG
+
+(19,55)-(19,70)
+EMPTY
+EmptyG
+
 (19,56)-(19,59)
 y
-VarG
-
-(19,62)-(19,69)
-(^)
 VarG
 
 (19,62)-(19,69)
 exprToString x ^ ("*" ^ exprToString y)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(19,62)-(19,69)
-")/2)"
-LitG
+(19,63)-(19,64)
+EMPTY
+EmptyG
+
+(19,65)-(19,68)
+EMPTY
+EmptyG
+
+(20,19)-(20,52)
+EMPTY
+EmptyG
 
 (20,32)-(20,33)
 x
-VarG
-
-(20,34)-(20,37)
-(^)
 VarG
 
 (20,34)-(20,37)

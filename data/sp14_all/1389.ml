@@ -21,9 +21,9 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(8,14)-(8,19)
-(@)
-VarG
+(8,12)-(8,31)
+EMPTY
+EmptyG
 
 (8,14)-(8,19)
 clone 0 l

@@ -35,10 +35,6 @@ a / 10
 BopG VarG LitG
 
 (4,50)-(4,67)
-a
-VarG
-
-(4,50)-(4,67)
 10
 LitG
 

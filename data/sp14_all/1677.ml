@@ -67,9 +67,13 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(27,23)-(27,25)
-sin
-VarG
+(27,16)-(27,19)
+EMPTY
+EmptyG
+
+(27,16)-(27,58)
+EMPTY
+EmptyG
 
 (27,23)-(27,25)
 pi *. cos (pi *. eval (e1 , x , y))

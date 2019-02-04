@@ -69,11 +69,15 @@ bigAdd l (mulByDigit (i - 1)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (29,31)-(29,41)
-l
-VarG
-
-(29,31)-(29,41)
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
+
+(29,42)-(29,53)
+EMPTY
+EmptyG
+
+(29,54)-(29,55)
+EMPTY
+EmptyG
 
 *)

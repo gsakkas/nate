@@ -24,14 +24,6 @@ x ^ a
 AppG (fromList [VarG])
 
 (7,6)-(7,74)
-x
-VarG
-
-(7,6)-(7,74)
-(^)
-VarG
-
-(7,6)-(7,74)
 a
 VarG
 

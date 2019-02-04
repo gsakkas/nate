@@ -34,6 +34,10 @@ LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 h
 VarG
 
+(2,42)-(2,43)
+EMPTY
+EmptyG
+
 (2,44)-(2,46)
 h
 VarG

@@ -114,10 +114,6 @@ match a with
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,TupleG (fromList [EmptyG]))])
 
 (31,21)-(31,24)
-len
-VarG
-
-(31,21)-(31,24)
 [sum]
 ListG VarG Nothing
 
@@ -125,45 +121,33 @@ ListG VarG Nothing
 (len , [sum])
 TupleG (fromList [VarG,ListG EmptyG Nothing])
 
-(35,36)-(35,52)
-len
-VarG
+(31,28)-(31,29)
+EMPTY
+EmptyG
 
 (35,36)-(35,52)
 (len , (-1) :: (0 :: xs'))
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing]))) Nothing])
 
 (35,58)-(35,74)
-len
-VarG
-
-(35,58)-(35,74)
 (len , (sum + 1) :: xs')
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing])
-
-(36,22)-(36,30)
-len
-VarG
 
 (36,22)-(36,30)
 (len , sum :: (x' :: xs'))
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing]))) Nothing])
 
-(39,21)-(39,25)
-x'
-VarG
+(36,29)-(36,30)
+EMPTY
+EmptyG
 
-(39,21)-(39,25)
-xs'
-VarG
+(38,12)-(43,48)
+EMPTY
+EmptyG
 
-(39,21)-(39,25)
-a
-VarG
-
-(39,21)-(39,25)
-len
-VarG
+(38,19)-(38,20)
+EMPTY
+EmptyG
 
 (39,21)-(39,25)
 match a with
@@ -173,17 +157,13 @@ match a with
                        else (len , (-1) :: ((sum mod 10) :: (x' :: xs')))
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,TupleG (fromList [EmptyG]))])
 
-(39,21)-(39,25)
-(len , [(-1) ; sum mod 10])
-TupleG (fromList [VarG,ListG EmptyG Nothing])
+(39,29)-(39,46)
+EMPTY
+EmptyG
 
-(39,21)-(39,25)
-[(-1) ; sum mod 10]
-ListG LitG Nothing
-
-(42,22)-(42,47)
-len
-VarG
+(39,45)-(39,46)
+EMPTY
+EmptyG
 
 (42,22)-(42,47)
 (len , (-1) :: (((sum mod 10) + 1) :: xs'))
@@ -198,14 +178,6 @@ BopG (BopG EmptyG EmptyG) LitG
 LitG
 
 (43,22)-(43,47)
-xs'
-VarG
-
-(43,22)-(43,47)
-len
-VarG
-
-(43,22)-(43,47)
 (len , (-1) :: ((sum mod 10) :: (x' :: xs')))
 TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing]))) Nothing]))) Nothing])
 
@@ -214,12 +186,40 @@ x' :: xs'
 ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (44,4)-(48,51)
-x'
-VarG
-
-(44,4)-(48,51)
 xs'
 VarG
+
+(44,15)-(44,17)
+EMPTY
+EmptyG
+
+(45,4)-(48,51)
+EMPTY
+EmptyG
+
+(46,6)-(46,18)
+EMPTY
+EmptyG
+
+(46,6)-(47,50)
+EMPTY
+EmptyG
+
+(46,19)-(46,60)
+EMPTY
+EmptyG
+
+(46,20)-(46,25)
+EMPTY
+EmptyG
+
+(46,26)-(46,42)
+EMPTY
+EmptyG
+
+(46,27)-(46,38)
+EMPTY
+EmptyG
 
 (46,39)-(46,41)
 (List.length l1 , [])
@@ -233,9 +233,5 @@ let (_ , res) =
   List.fold_left f base args in
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(47,8)-(47,50)
-[]
-ListG EmptyG Nothing
 
 *)

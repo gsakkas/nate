@@ -15,6 +15,14 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
+(5,46)-(5,61)
+EMPTY
+EmptyG
+
+(5,46)-(5,66)
+EMPTY
+EmptyG
+
 (5,47)-(5,58)
 let c = [a ; b] in c
 LetG NonRec (fromList [ListG EmptyG Nothing]) VarG

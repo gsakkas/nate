@@ -1,331 +1,206 @@
-BopG VarG LitG
-addit > 10
-addit mod 10
-addit > 10
-addit mod 10
-addit / 10
-addit > 10
-addit mod 10
-addit / 10
-i - 2
-n > 0
-n - 1
-n mod 10
-depth = 0
-depth = 0
-depth = 0
-depth = 0
-depth = 0
-depth = 0
-n - 50
-n < 0
-n < 10
-n < 10
-n / 10
-n < 10
-n / 10
-n < 10
-n <= 0
-n <= 0
-n <= 0
-n mod 10
-h = 0
-sum / 10
-sum mod 10
-sum / 10
-sum mod 10
-sum / 10
-sum mod 10
-rem = 1
-rem = 1
-n - 1
-n - 1
-i - 1
-i - 1
-x + 1
-n mod 10
-n / 10
-depth - 1
-h / 10
-h mod 10
-h / 10
-h mod 10
-h / 10
-h mod 10
-h / 10
-h mod 10
-h / 10
-h mod 10
-h / 10
-h mod 10
-h / 10
-h mod 10
-h / 10
-h mod 10
-depth - 1
-x < 100
-x < 100
-x < 100
-tf = true
-n / 2
-depth = 0
-depth = 0
-n < 10
-n < 10
-count + 1
-n mod 10
-n mod 10
-n mod 10
-n mod 10
-n < 0
-n < 0
-n < 0
-n < 1
-n - 1
-depth < 1
-depth < 1
-sum / 10
-sum mod 10
-n - 1
-n - 1
-n - 1
-n < 10
-n mod 10
-n = 0
-n > 10
-n mod 10
-n = 0
-n > 10
-n mod 10
-n = 0
-n mod 10
-n / 10
-a < 10
-a / 10
-a = 0
-a = 0
-a = 0
-a / 10
-n = 0
-h = 0
-z mod 10
-n mod 10
-depth - 1
-depth - 1
-n / 10
-n < 0
-n = 0
-n - 1
-n = 0
-n - 1
-n = 0
-n - 1
-n = 0
-n - 1
-n - 1
-n - 1
-n mod 10
-n mod 10
-n / 10
-n <= 0
-n / 10
-n / 10
-n mod 10
-n / 10
-n mod 10
-n mod 10
-x * 1
-x * 1
-n mod 10
-n mod 10
-x < 10
-n / 10
-digit > 10
-digit - 10
-digit > 10
-digit - 10
-i = 0
-n - 1
-h = 0
-h = 0
-xx < 100
-xx < 100
-xx < 100
-xx < 100
-xx < 100
-xx < 100
-xx < 100
-xx < 100
-n < 1
-n - 1
-n < 1
-i = 0
-i = 1
-i = 0
-i = 1
-i = 0
-i = 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-q + 1
-n < 1
-n < 1
-x - 1
-n / 10
-n mod 10
-n > 0
-n > 9
-n > 9
-n / 10
-n mod 10
-n mod 10
-n > 0
-n > 9
-n / 10
-n mod 10
-n / 10
-n > 0
-n > 9
-n / 10
-n mod 10
-n / 10
-prod mod 10
-prod mod 10
-prod mod 10
-prod mod 10
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-depth - 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-x + 1
-carry = 1
-digit > 9
-digit - 10
-xx < 512
-xx < 512
-xx < 512
-xx < 512
-xx < 512
-n < 10
-n mod 10
-n / 10
-n mod 10
-n < 1
-n - 1
-depth <= 0
-depth - 2
-depth - 2
-depth - 2
-depth - 4
-depth - 4
-depth <= 0
-depth - 2
-depth - 2
-depth - 4
-depth - 4
-depth <= 0
-depth <= 0
-depth - 1
-depth - 2
-depth - 1
-depth - 1
-carry mod 10
-i - 1
-i - 1
-n / 10
-n >= 100
-n >= 100
-n >= 10
-n / 10
-n = 0
-n / 10
-depth - 1
-depth - 1
-depth - 1
-n / 10
-n / 10
-n mod 10
-i - 1
-n - 1
-x * 10
-x * 10
-v mod 10
-v / 10
-x * 10
-x * 10
-x <> 0
-n > 0
-x + 1
-x + 1
-x + 1
-depth - 1
-depth - 1
-n / 10
-i > 0
-i - 1
+AppG (fromList [TupleG (fromList [EmptyG])])
+rand (2 , 6)
+rand (0 , 1)
+rand (0 , 6)
+rand (0 , 4)
+rand (0 , 1)
+wwhile (helper , b)
+wwhile (helper , b)
+wwhile (helper , b)
+wwhile (helper , b)
+wwhile (helper , b)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e3 , x , y)
+eval (e , x , y)
+eval (a , x , y)
+eval (a , x , y)
+eval (a , x , y)
+eval (a , x , y)
+wwhile (w , b)
+wwhile (w , b)
+build (rand , depth - 1)
+build (rand , depth - 1)
+build (rand , depth - 1)
+build (rand , depth - 1)
+build (rand , depth - 1)
+build (rand , depth - 1)
+build (rand , depth - 1)
+build (rand , depth - 1)
+build (rand , depth - 1)
+helperDigits (n , [])
+buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+buildECosSin (build (rand , depth - 1) , build (rand , depth - 1))
+eval (c , x , y)
+eval (a , x , y)
+eval (b , x , y)
+eval (b , x , y)
+eval (a , x , y)
+eval (c , x , y)
+eval (a , x , y)
+eval (b , x , y)
+eval (b , x , y)
+eval (a , x , y)
+eval (expr , x , y)
+eval (expr , x , y)
+eval (expr , x , y)
+eval (expr1 , x , y)
+eval (expr , x , y)
+eval (expr1 , x , y)
+eval (expr , x , y)
+eval (expr1 , x , y)
+eval (expr2 , x , y)
+eval (expr3 , x , y)
+helper ([] , l)
+wwhile (f , a)
+build (rand , depth - 1)
+buildAverage (next , next)
+buildTimes (next , next)
+buildThresh (next , next , next , next)
+buildGauss (next , next , next)
+buildTimes (next , next)
+buildThresh (next , next , next , next)
+buildGauss (next , next , next)
+buildTimes (next , next)
+buildThresh (next , next , next , next)
+buildGauss (next , next , next)
+addHelp (count + 1 , addNum n)
+eval (e1 , x , y)
+eval (e2 , x , y)
+wwhile (fx , b)
+wwhile (fx , b)
+wwhile (fx , b)
+wwhile (f , b')
+cloneHelper (x , n , [])
+build (rand , depth - 1)
+buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+wwhile (g , b)
+buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e , x , y)
+eval (e , x , y)
+buildTimes (build (rand , depth) , build (rand , depth))
+buildThresh (build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
+buildTimes (build (rand , depth) , build (rand , depth))
+buildThresh (build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
+buildTimes (build (rand , depth) , build (rand , depth))
+buildThresh (build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
+build (rand , depth)
+build (rand , depth)
+eval (Average (e1 , e2) , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e3 , x , y)
+eval (e3 , x , y)
+eval (e , x , y)
+eval (e , x , y)
+eval (e , x , y)
+wwhile (g , b)
+wwhile (g , b)
+wwhile (g , b)
+wwhile (g , b)
+wwhile (g , b)
+wwhile (g , b)
+wwhile (g , f b)
+wwhile (g , f b)
+rand (0 , 2)
+rand (0 , 5)
+wwhile (f , b)
+eval (a , x , y)
+eval (a , x , y)
+eval (b , x , y)
+eval (b , x , y)
+eval (b , x , y)
+eval (b , x , y)
+eval (a , x , y)
+buildThresh (a , b , c , d)
+buildThresh (a , b , c , d)
+buildThresh (a , b , c , d)
+eval (s1 , x , y)
+eval (a , x , y)
+eval (a , x , y)
+eval (a , x , y)
+eval (b , x , y)
+eval (c , x , y)
+buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+eval (x1 , x , y)
+assoc (d , k , ls)
+assoc (d , k , ls)
+assoc (d , k , ls)
+build (rand , depth - 1)
+build (rand , depth - 1)
+eval (u , x , y)
+eval (u , x , y)
+wwhile (f , b')
+rand (0 , 100)
+rand (0 , 100)
+eval (e , x , y)
+eval (e , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+buildThresh (buildhelper (depth - 1)
+                         (depth - 1)
+                         expr , buildhelper (depth - 1)
+                                            (depth - 1)
+                                            expr , buildhelper (depth - 1)
+                                                               (depth - 1)
+                                                               expr , buildhelper (depth - 1)
+                                                                                  (depth - 1)
+                                                                                  expr)
+rand (1 , 4)
+rand (1 , 4)
+eval (e' , x , y)
+eval (e' , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e' , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e' , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e1 , x , y)
+eval (e2 , x , y)
+eval (e' , x , y)
+wwhile (f , b')
+eval (b , x , y)
+rand (0 , 4)
+build (rand , depth - 2)
+rand (0 , 4)
+eval (e1 , x , y)
+build (rand , depth - (depth - 1))
+buildAverage (build (rand , depth - 1) , build (rand , depth - 1))
+rand (0 , 2)
+build (rand , depth - 1)
+build (rand , depth - 1)
+buildSpecial2 (build (rand , depth - 1) , build (rand , depth - 1))
+eval (ex , x , y)
+buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
+buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+rand (0 , 2)
+rand (0 , 2)
+rand (0 , 2)
+helper (h :: seen , t)
+helper (h :: seen , t)

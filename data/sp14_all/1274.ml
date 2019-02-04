@@ -43,6 +43,10 @@ VarG
 accu
 VarG
 
+(9,30)-(12,68)
+EMPTY
+EmptyG
+
 (10,2)-(12,68)
 match n with
 | 0 -> 0
@@ -52,5 +56,21 @@ CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 (11,10)-(11,15)
 0
 LitG
+
+(12,30)-(12,55)
+EMPTY
+EmptyG
+
+(12,56)-(12,67)
+EMPTY
+EmptyG
+
+(12,57)-(12,62)
+EMPTY
+EmptyG
+
+(12,65)-(12,66)
+EMPTY
+EmptyG
 
 *)

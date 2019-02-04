@@ -18,15 +18,7 @@ f 2 xs
 AppG (fromList [VarG,LitG])
 
 (2,50)-(2,74)
-f
-VarG
-
-(2,50)-(2,74)
 xs
 VarG
-
-(2,50)-(2,74)
-2
-LitG
 
 *)

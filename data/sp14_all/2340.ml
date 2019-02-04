@@ -41,10 +41,6 @@ b - a
 BopG VarG VarG
 
 (10,40)-(10,42)
-b
-VarG
-
-(10,40)-(10,42)
 a
 VarG
 

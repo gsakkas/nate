@@ -21,12 +21,20 @@ let padZero l1 l2 =
 (clone 0 (0 - d) @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(6,51)-(6,74)
-l1
-VarG
+(6,36)-(6,45)
+EMPTY
+EmptyG
+
+(6,51)-(6,69)
+EMPTY
+EmptyG
 
 (6,51)-(6,74)
 (l1 , clone 0 d @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(6,52)-(6,54)
+EMPTY
+EmptyG
 
 *)

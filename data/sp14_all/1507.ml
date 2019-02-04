@@ -48,6 +48,30 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 l2
 VarG
 
+(13,7)-(13,23)
+EMPTY
+EmptyG
+
+(13,7)-(13,42)
+EMPTY
+EmptyG
+
+(13,8)-(13,19)
+EMPTY
+EmptyG
+
+(13,20)-(13,22)
+EMPTY
+EmptyG
+
+(13,26)-(13,42)
+EMPTY
+EmptyG
+
+(13,27)-(13,38)
+EMPTY
+EmptyG
+
 (13,39)-(13,41)
 (clone 0
        (List.length l2 - List.length l1) @ l1 , l2)

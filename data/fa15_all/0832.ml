@@ -53,6 +53,10 @@ let x0 = digitsOfInt n in
 sumList x0
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
+(16,54)-(16,66)
+EMPTY
+EmptyG
+
 (16,63)-(16,65)
 x0
 VarG

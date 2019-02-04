@@ -90,21 +90,13 @@ VarG
 (e , x , y)
 TupleG (fromList [VarG])
 
-(28,9)-(28,76)
-x
-VarG
-
-(28,9)-(28,76)
-y
-VarG
+(28,9)-(28,17)
+EMPTY
+EmptyG
 
 (28,9)-(28,76)
 2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
 BopG LitG (AppG (fromList [EmptyG]))
-
-(28,9)-(28,76)
-2.0
-LitG
 
 (28,18)-(28,76)
 exp

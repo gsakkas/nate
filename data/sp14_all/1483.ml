@@ -142,10 +142,6 @@ match x with
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
 (54,8)-(54,75)
-a
-VarG
-
-(54,8)-(54,75)
 let (l2digit2 , templ12) =
   a in
 let multres =
@@ -153,10 +149,6 @@ let multres =
 (0 , bigAdd (templ12 @ [0])
             multres)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(54,51)-(54,75)
-0
-LitG
 
 (54,51)-(54,75)
 (0 , bigAdd (templ12 @ [0])
@@ -167,9 +159,17 @@ TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 templ12
 VarG
 
+(60,36)-(60,37)
+EMPTY
+EmptyG
+
 (60,49)-(60,75)
 x
 VarG
+
+(60,50)-(60,51)
+EMPTY
+EmptyG
 
 (60,60)-(60,75)
 x

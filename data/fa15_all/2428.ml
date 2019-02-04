@@ -69,10 +69,6 @@ VarG
 l1x + l2x
 BopG VarG VarG
 
-(19,41)-(19,44)
-(l1x + l2x) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing
-
 (19,49)-(19,50)
 l2x
 VarG
@@ -81,6 +77,14 @@ VarG
 a2
 VarG
 
+(20,15)-(20,23)
+EMPTY
+EmptyG
+
+(20,17)-(20,18)
+EMPTY
+EmptyG
+
 (20,20)-(20,21)
 []
 ListG EmptyG Nothing
@@ -88,10 +92,6 @@ ListG EmptyG Nothing
 (21,4)-(22,51)
 []
 ListG EmptyG Nothing
-
-(21,15)-(21,33)
-List.rev
-VarG
 
 (21,15)-(21,33)
 List.rev (List.combine l1 l2)

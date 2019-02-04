@@ -61,10 +61,6 @@ TupleG (fromList [VarG,LitG])
 depth
 VarG
 
-(19,2)-(24,32)
-0
-LitG
-
 (20,31)-(20,37)
 buildX ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
@@ -72,10 +68,6 @@ AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
 (20,43)-(20,49)
 buildY ()
 AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(20,43)-(20,49)
-()
-ConAppG Nothing (Just (TApp "unit" []))
 
 (22,6)-(24,32)
 ()

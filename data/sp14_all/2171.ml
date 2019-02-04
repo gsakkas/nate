@@ -30,10 +30,6 @@ List.append ("[" :: (List.map f
 AppG (fromList [ConAppG (Just EmptyG) Nothing,ListG EmptyG Nothing])
 
 (9,39)-(9,42)
-List.append
-VarG
-
-(9,39)-(9,42)
 "[" :: (List.map f l)
 ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG]))) Nothing
 

@@ -67,98 +67,6 @@ match x with
 LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (16,4)-(17,67)
-x
-VarG
-
-(16,4)-(17,67)
-carry
-VarG
-
-(16,4)-(17,67)
-add1
-VarG
-
-(16,4)-(17,67)
-add2
-VarG
-
-(16,4)-(17,67)
-carry
-VarG
-
-(16,4)-(17,67)
-add1
-VarG
-
-(16,4)-(17,67)
-add2
-VarG
-
-(16,4)-(17,67)
-a
-VarG
-
-(16,4)-(17,67)
-new_carry
-VarG
-
-(16,4)-(17,67)
-digit
-VarG
-
-(16,4)-(17,67)
-y
-VarG
-
-(16,4)-(17,67)
-(carry + add1) + add2
-BopG (BopG EmptyG EmptyG) VarG
-
-(16,4)-(17,67)
-((carry + add1) + add2) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,4)-(17,67)
-carry + add1
-BopG VarG VarG
-
-(16,4)-(17,67)
-(carry + add1) + add2
-BopG (BopG EmptyG EmptyG) VarG
-
-(16,4)-(17,67)
-((carry + add1) + add2) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,4)-(17,67)
-carry + add1
-BopG VarG VarG
-
-(16,4)-(17,67)
-10
-LitG
-
-(16,4)-(17,67)
-10
-LitG
-
-(16,4)-(17,67)
-let new_carry =
-  ((carry + add1) + add2) / 10 in
-let digit =
-  ((carry + add1) + add2) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(16,4)-(17,67)
-let digit =
-  ((carry + add1) + add2) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(16,4)-(17,67)
 match x with
 | (add1 , add2) -> (let new_carry =
                       ((carry + add1) + add2) / 10 in
@@ -167,19 +75,6 @@ match x with
                     match a with
                     | (x , y) -> (new_carry , digit :: y))
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
-
-(16,4)-(17,67)
-match a with
-| (x , y) -> (new_carry , digit :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(16,4)-(17,67)
-(new_carry , digit :: y)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(16,4)-(17,67)
-digit :: y
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
 
 (16,15)-(16,16)
 (0 , [])
@@ -192,22 +87,6 @@ ListG EmptyG Nothing
 (17,15)-(17,16)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(17,20)-(17,67)
-List.rev
-VarG
-
-(17,20)-(17,67)
-List.combine
-VarG
-
-(17,20)-(17,67)
-l1
-VarG
-
-(17,20)-(17,67)
-l2
-VarG
 
 (17,20)-(17,67)
 List.combine l1 l2

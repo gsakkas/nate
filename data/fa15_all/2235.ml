@@ -69,16 +69,16 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(22,35)-(22,43)
+EMPTY
+EmptyG
+
 (22,36)-(22,37)
 l @ [x]
 AppG (fromList [VarG,ListG EmptyG Nothing])
 
 (22,41)-(22,42)
 (@)
-VarG
-
-(22,50)-(22,72)
-x
 VarG
 
 (22,50)-(22,72)

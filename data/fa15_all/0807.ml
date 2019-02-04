@@ -35,6 +35,10 @@ BopG VarG LitG
 10
 LitG
 
+(10,42)-(10,72)
+EMPTY
+EmptyG
+
 (10,43)-(10,47)
 sumList (digitsOfInt x)
 AppG (fromList [AppG (fromList [EmptyG])])

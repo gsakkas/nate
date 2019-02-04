@@ -74,10 +74,6 @@ sin
 VarG
 
 (30,23)-(30,39)
-pi
-VarG
-
-(30,23)-(30,39)
 pi *. eval (e , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 

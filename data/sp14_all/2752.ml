@@ -28,26 +28,6 @@ List.length t < 2
 BopG (AppG (fromList [EmptyG])) LitG
 
 (7,6)-(7,60)
-a
-VarG
-
-(7,6)-(7,60)
-(^)
-VarG
-
-(7,6)-(7,60)
-x
-VarG
-
-(7,6)-(7,60)
-(^)
-VarG
-
-(7,6)-(7,60)
-sep
-VarG
-
-(7,6)-(7,60)
 x ^ sep
 AppG (fromList [VarG])
 

@@ -36,4 +36,8 @@ let nl = List.map f l in
 sepConcat "" nl
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
+(11,32)-(11,41)
+EMPTY
+EmptyG
+
 *)

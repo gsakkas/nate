@@ -49,16 +49,8 @@ let rec build (rand,depth) =
 
 (* changed spans
 (11,11)-(11,20)
-e
-VarG
-
-(11,11)-(11,20)
 fun e -> Sine e
 LamG (ConAppG (Just VarG) Nothing)
-
-(11,11)-(11,20)
-Sine e
-ConAppG (Just VarG) Nothing
 
 (16,2)-(17,70)
 let subtreeSize1 =

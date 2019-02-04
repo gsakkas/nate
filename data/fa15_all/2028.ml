@@ -51,18 +51,10 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (16,4)-(20,51)
-a
-VarG
-
-(16,4)-(20,51)
 match a with
 | (w , z) -> match x with
              | (x , y) -> (((x + y) + w) / 10 , (((x + y) + w) mod 10) :: z)
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
-
-(17,30)-(17,69)
-x + y
-BopG VarG VarG
 
 (17,30)-(17,69)
 (((x + y) + w) / 10 , (((x + y) + w) mod 10) :: z)
@@ -79,10 +71,6 @@ BopG VarG VarG
 (17,49)-(17,56)
 w
 VarG
-
-(17,61)-(17,63)
-0
-LitG
 
 (17,61)-(17,63)
 (0 , [])

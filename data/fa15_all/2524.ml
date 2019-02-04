@@ -23,6 +23,14 @@ let removeDuplicates l =
 *)
 
 (* changed spans
+(7,44)-(7,50)
+EMPTY
+EmptyG
+
+(7,56)-(7,62)
+EMPTY
+EmptyG
+
 (7,65)-(7,66)
 [h]
 ListG VarG Nothing

@@ -52,10 +52,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (15,9)-(15,37)
-a
-VarG
-
-(15,9)-(15,37)
 let (carry , ans) = a in
 let (y , z) = x in
 ((y + z) + carry) > 9
@@ -70,23 +66,10 @@ carry
 VarG
 
 (16,11)-(16,46)
-a
-VarG
-
-(16,11)-(16,46)
-1
-LitG
-
-(16,11)-(16,46)
 let (carry , ans) = a in
 (1 , let (y , z) = x in
      [((y + z) + carry) mod 10] @ ans)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(16,11)-(16,46)
-(1 , let (y , z) = x in
-     [((y + z) + carry) mod 10] @ ans)
-TupleG (fromList [LitG,LetG NonRec (fromList [EmptyG]) EmptyG])
 
 (16,29)-(16,41)
 ((y + z) + carry) mod 10
@@ -101,18 +84,10 @@ carry
 VarG
 
 (16,45)-(16,46)
-ans
-VarG
-
-(16,45)-(16,46)
 let (carry , ans) = a in
 (0 , let (y , z) = x in
      [(y + z) + carry] @ ans)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(17,11)-(17,41)
-0
-LitG
 
 (17,11)-(17,41)
 (0 , let (y , z) = x in

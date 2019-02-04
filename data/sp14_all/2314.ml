@@ -49,6 +49,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
+(19,16)-(19,48)
+EMPTY
+EmptyG
+
+(19,31)-(19,32)
+EMPTY
+EmptyG
+
 (19,36)-(19,48)
 let (h :: t , _) = a in
 ([] , [])

@@ -52,10 +52,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (15,9)-(15,37)
-a
-VarG
-
-(15,9)-(15,37)
 let (carry , ans) = a in
 let (y , z) = x in
 ((y + z) + carry) > 9
@@ -67,10 +63,6 @@ BopG VarG VarG
 
 (15,36)-(15,37)
 carry
-VarG
-
-(16,11)-(16,53)
-a
 VarG
 
 (16,11)-(16,53)
@@ -92,10 +84,6 @@ carry
 VarG
 
 (16,50)-(16,51)
-ans
-VarG
-
-(16,50)-(16,51)
 let (carry , ans) = a in
 (0 , let (y , z) = x in
      [(y + z) + carry] @ ans)
@@ -112,10 +100,6 @@ VarG
 (18,4)-(20,51)
 ans
 VarG
-
-(18,15)-(18,17)
-0
-LitG
 
 (18,15)-(18,17)
 (0 , [])

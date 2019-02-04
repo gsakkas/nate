@@ -15,17 +15,17 @@ let _ = digitsOfInt 3124;;
 *)
 
 (* changed spans
-(3,47)-(3,62)
-n
-VarG
+(3,45)-(3,69)
+EMPTY
+EmptyG
+
+(3,46)-(3,68)
+EMPTY
+EmptyG
 
 (3,47)-(3,62)
 n mod 10
 BopG VarG LitG
-
-(3,47)-(3,62)
-10
-LitG
 
 (3,47)-(3,67)
 (n mod 10) :: (digitsOfInt (n / 10))

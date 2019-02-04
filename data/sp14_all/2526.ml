@@ -21,6 +21,10 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
+(8,2)-(8,67)
+EMPTY
+EmptyG
+
 (8,11)-(8,62)
 (let helper =
    fun x -> (f x , f x = f b) in

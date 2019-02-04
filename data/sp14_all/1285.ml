@@ -15,4 +15,8 @@ let rec digitsOfInt n =
 n mod 10
 BopG VarG LitG
 
+(3,47)-(3,60)
+EMPTY
+EmptyG
+
 *)

@@ -54,6 +54,14 @@ let bigAdd l1 l2 =
 ((x + y) / 10) :: a
 ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
 
+(19,21)-(19,28)
+EMPTY
+EmptyG
+
+(19,31)-(19,32)
+EMPTY
+EmptyG
+
 (20,4)-(21,63)
 a
 VarG

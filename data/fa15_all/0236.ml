@@ -18,6 +18,14 @@ let fixpoint (f,b) = wwhile (let n x = ((f x), (x = (f x))) in (n, b));;
 *)
 
 (* changed spans
+(7,20)-(7,50)
+EMPTY
+EmptyG
+
+(7,29)-(7,30)
+EMPTY
+EmptyG
+
 (7,35)-(7,36)
 f x
 AppG (fromList [VarG])

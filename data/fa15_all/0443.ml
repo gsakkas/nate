@@ -29,8 +29,16 @@ TupleG (fromList [VarG,BopG EmptyG EmptyG])
 xx
 VarG
 
+(8,59)-(8,60)
+EMPTY
+EmptyG
+
 (8,68)-(8,69)
 xx = x
 BopG VarG VarG
+
+(8,68)-(8,71)
+EMPTY
+EmptyG
 
 *)

@@ -71,6 +71,10 @@ mod_float comb
           (eval (e3 , x , y))
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (AppG (fromList [EmptyG]))
 
+(29,6)-(29,65)
+EMPTY
+EmptyG
+
 (29,7)-(29,24)
 eval (e1 , x , y) +. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
@@ -79,14 +83,6 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 mod_float comb
           (eval (e3 , x , y))
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(29,50)-(29,54)
-mod_float
-VarG
-
-(29,50)-(29,54)
-comb
-VarG
 
 (29,50)-(29,54)
 eval (e3 , x , y)

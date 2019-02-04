@@ -54,10 +54,6 @@ sumList (digits n)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (20,35)-(20,36)
-digits
-VarG
-
-(20,35)-(20,36)
 digits n
 AppG (fromList [VarG])
 
