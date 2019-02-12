@@ -1,0 +1,32 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 05eeaf58fc1b21ce8d424690b3d1039567801df72e558cc097743a2bf42333e0
+
+name:           patches
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/patches#readme>
+homepage:       https://github.com/githubuser/patches#readme
+bug-reports:    https://github.com/githubuser/patches/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+build-type:     Simple
+cabal-version:  >= 1.10
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/patches
+
+executable patches
+  main-is: Main.hs
+  hs-source-dirs: src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , aeson
+    , bytestring
+    , cassava
+    , vector
+  default-language: Haskell2010
