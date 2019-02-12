@@ -1,55 +1,12 @@
-{-# LANGUAGE OverloadedStrings, ScopedTypeVariables, LambdaCase #-}
+{-# LANGUAGE ScopedTypeVariables #-}
 
-import Control.Applicative
 import Control.Exception
-import Control.Monad
 import Data.Aeson
-import Data.Aeson.Types (typeMismatch)
 import qualified Data.ByteString.Lazy as BL
 import qualified Data.Csv as C
 import qualified Data.Vector as V
-import Debug.Trace
 
--- Datatypes for program pairs, which are read from
---   ../features/data/ucsd/data/derived/sp14/pairs.json
-
-data Pair = Pair { hw :: String
-                 , index :: Int
-                 , problem :: String
-                 , bad :: String
-                 , fix :: String
-                 } deriving (Show)
-
-instance FromJSON Pair where
-  parseJSON (Object v) = Pair <$> v .: "hw"
-                              <*> v .: "index"
-                              <*> v .: "problem"
-                              <*> v .: "bad"
-                              <*> v .: "fix"
-  parseJSON invalid    = typeMismatch "Pair" invalid 
-
--- Datatypes for patches, which are read from
---   ../data/sp14_all/spans+trees+all/0000.csv
-
-type SourceSpan = ((Int, Int), (Int, Int))
-readSourceSpan :: String -> SourceSpan
-readSourceSpan = read                             -- read as ((Int, Int), (Int, Int))                           
-               . (\s -> "(" ++ s ++ ")")          -- add parens                           
-               . map (\case {'-' -> ','; c -> c}) -- convert dash to comma
-
-data Patch = Patch { sourceSpan :: SourceSpan
-                   , lCluster1 :: Double
-                   , lCluster2 :: Double
-                   , lCluster3 :: Double
-                   } deriving (Show)
-
-instance C.FromNamedRecord Patch where
-    parseNamedRecord r = Patch <$> fmap readSourceSpan (r C..: "SourceSpan")
-                               <*> r C..: "L-Cluster1"
-                               <*> r C..: "L-Cluster2"
-                               <*> r C..: "L-Cluster3"
-
--- Apply a patch to a string (program)
+import Types (Diff(..), SourceSpan, Patch(..), patchContent)
 
 -- Cut a string at the given location (row, column)
 cut :: (Int, Int) -> String -> (String, String)
@@ -65,37 +22,43 @@ cut loc = f (1, 1) ""
 splice :: SourceSpan -> String -> String -> String
 splice (a, b) replacement str = left ++ replacement ++ right
   where
-    (str', right)             = cut b str
+    b'                        = let (r, c) = b in (r, c+1) -- include endpoint
+    (str', right)             = cut b' str
     (left, _)                 = cut a str'
 
 -- Apply the patch to the given program, returns a program
 applyPatch :: String -> Patch -> String
-applyPatch bad patch = splice (sourceSpan patch) replacement bad
+applyPatch bad patch = splice (sourceSpan patch) replacement' bad
   where
     replacement
-      | lCluster1 patch > 0.0 = "L-Cluster1"
-      | lCluster2 patch > 0.0 = "L-Cluster2"
-      | lCluster3 patch > 0.0 = "L-Cluster3"
+      | lCluster1 patch > 0.0 = patchContent !! 0
+      | lCluster2 patch > 0.0 = patchContent !! 1
+      | lCluster3 patch > 0.0 = patchContent !! 2
       | otherwise             = "unknown patch"
+    replacement' = " (" ++ replacement ++ ") "
 
 
 
 -- Main function
 
+badProgramPath = "pairs.json"
+patchesPath = "patches.csv"
+
 main :: IO ()
 main = do
+  -- Read in bad programs and their patches
   let mkError msg reason = ioError $ userError (msg ++ ": " ++ reason)
-  bads <- maybe (mkError "Can't read pairs.json" "Aeson parsing failure")
+  bads <- maybe (mkError ("Can't read " ++ badProgramPath) "Aeson parse failed")
                 (pure . map bad)
-                =<< decodeFileStrict' "pairs.json"
-  patches <- either (mkError "Can't read patches.csv")
+                =<< decodeFileStrict' badProgramPath
+  patches <- either (mkError ("Can't read " ++ patchesPath))
                     (pure . V.toList . snd)
-                    =<< C.decodeByName <$> BL.readFile "patches.csv"
+                    =<< C.decodeByName <$> BL.readFile patchesPath
 
   -- Print out pairs of programs and patches
   let pairs = zip bads patches :: [(String, Patch)]
-  forM_ pairs $ \(bad, patch) -> print (bad, sourceSpan patch)
+  print pairs -- forM_ pairs $ \(bad, patch) -> print (bad, sourceSpan patch)
 
   -- Fix all patches
-  let fixedPairs = zipWith applyPatch bads patches :: [String]
-  print fixedPairs
+  let fixed = zipWith applyPatch bads patches :: [String]
+  print fixed
