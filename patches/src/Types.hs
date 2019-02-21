@@ -1,15 +1,23 @@
-{-# LANGUAGE OverloadedStrings, LambdaCase #-}
+{-# LANGUAGE OverloadedStrings, LambdaCase, RecordWildCards #-}
 
 module Types (
   Diff(..),
   SourceSpan,
+  Cluster(..),
   Patch(..),
-  patchContent
+  patchContent,
   ) where
 
+import Control.Applicative (empty)
 import Data.Aeson
 import Data.Aeson.Types
+import Data.List (findIndex)
+import Data.Maybe (catMaybes)
+import qualified Data.ByteString.Char8 as BL
 import qualified Data.Csv as C
+import qualified Data.HashMap.Lazy as HM
+import qualified Data.Vector as V
+import Debug.Trace
 
 -- Datatypes for program pairs, which are read from
 --   ../features/data/ucsd/data/derived/sp14/pairs.json
@@ -38,24 +46,68 @@ readSourceSpan = read                             -- read as ((Int, Int), (Int, 
                . (\s -> "(" ++ s ++ ")")          -- add parens                           
                . map (\case {'-' -> ','; c -> c}) -- convert dash to comma
 
+data Cluster = Cluster Int | NoCluster deriving (Show)
 data Patch = Patch { sourceSpan :: SourceSpan
-                   , lCluster1 :: Double
-                   , lCluster2 :: Double
-                   , lCluster3 :: Double
+                   , cluster    :: Cluster
                    } deriving (Show)
 
 instance C.FromNamedRecord Patch where
-    parseNamedRecord r = Patch <$> fmap readSourceSpan (r C..: "SourceSpan")
-                               <*> r C..: "L-Cluster1"
-                               <*> r C..: "L-Cluster2"
-                               <*> r C..: "L-Cluster3"
+  parseNamedRecord r = do
+    sourceSpan <- readSourceSpan <$> (r C..: "SourceSpan")
+    -- fields = value of the corresponding fields if they exist (Nothing if field missing)
+    fields <- mapM (safeLookup r) ["L-Cluster" <> i | i <- map (BL.pack . show) [1..40]]
+           :: C.Parser [(Maybe Double)]
+    -- get the index of the first column with value not 0.0, return cluster -1 if not found
+    -- add one since index 0 maps to LCluster1
+    let i = findIndex (maybe False (>0.0)) (take 40 fields)
+    pure . Patch sourceSpan $ maybe NoCluster (Cluster . (+1)) i
+    where
+      -- a version of lookup that returns C.Parser Nothing on parse failure
+      -- this probably exists, but I can't find it
+      safeLookup :: (C.FromField a) => C.NamedRecord -> BL.ByteString -> C.Parser (Maybe a)
+      safeLookup r name = maybe (pure Nothing) C.parseField (HM.lookup name r)
 
 -- Hardcoded patch string, taken from
 --   ../data/sp14_all/clusters/top_clusters.txt
 
+-- instantiate :: String -> String
+-- instantiate "EmptyG"
+-- -- recurse on the subtrees
+
 patchContent :: [String]
 patchContent = [
-    "EmptyG",
+    "",
+    "x",
+    "(x y z)",
+    "123",
+    "[]",
+    "(x, y, ..., z)",
+    "(a b) (c d)",
+    "x * y",
+    "(a b c) + (x y z)",
+    "(x, 1, ..., \"abc\")",
+    "x * 5",
+    "(_ * _) + 1",
+    "(x y z) 4 1 2",
+    "[(_ * _), ..., (_ * _)]",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo",
+    "todo"
+  ]
+patchAST :: [String]
+patchAST = [
+    "EmptyG",     -- _
     "VarG",
     "AppG (fromList [VarG])",
     "LitG",

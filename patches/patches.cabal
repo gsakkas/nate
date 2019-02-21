@@ -29,5 +29,7 @@ executable patches
     , aeson
     , bytestring
     , cassava
+    , safe-exceptions
+    , unordered-containers
     , vector
   default-language: Haskell2010

@@ -1,3 +1,2 @@
-[
-  {"hw": "hw3", "index": 0, "problem": "bigAdd", "bad": "badddddddd1\naaaaaaaaa", "fix": "fixxxxxxx1"}
-]
+{"hw": "hw3", "index": 0, "problem": "bigAdd", "bad": "badddddddd1\naaaaaaaaa", "fix": "asd"}
+{"hw": "hw3", "index": 36, "problem": "bigAdd", "bad": "badddddddd1\naaaaaaaaa", "fix": "asd"}
