@@ -10,6 +10,11 @@ import Text.Printf
 import Types
 import Patches
 
+-- parameters
+pairsPath, patchesDir :: FilePath
+pairsPath = "../features/data/ucsd/data/derived/sp14/pairs.json"
+patchesDir = "../data/sp14_all/spans+trees+all"
+
 -- Cut a string at the given location (row, column)
 cut :: (Int, Int) -> String -> (String, String)
 cut loc = f (1, 1) ""
@@ -36,18 +41,24 @@ applyPatch patch bad = splice (sourceSpan patch) replacement' bad
       NoCluster                         -> bad -- means no patch found in csv, will not apply
       (Cluster n) | (n >= 1 && n <= 40) -> patchContent !! (n - 1)
       c                                 -> "UNKNOWN PATCH " ++ show c
-    replacement' = "\x1b[32m" ++ replacement ++ "\x1b[0m"
+    replacement' = replacement --"\x1b[32m" ++ replacement ++ "\x1b[0m" -- highlight green
 
+-- (mkError "a" "b") returns an error that reads "a: b"
+mkError :: String -> String -> IO IOException
+mkError msg reason = ioError $ userError (msg ++ ": " ++ reason)
 
-
--- Main function
-
-pairsPath, patchesDir :: FilePath
-pairsPath = "../features/data/ucsd/data/derived/sp14/pairs.json"
-patchesDir = "../data/sp14_all/spans+trees+all"
-
--- pairsPath = "pairs.json"
--- patchesDir = "."
+-- Given a diff, look up the right patch csv and use it
+--   to create a patched version of the bad program
+patch :: Diff -> IO String
+patch Diff{..} = do
+  let patchesPath = printf "%s/%04d.csv" patchesDir index
+  fileContents <- try (BL.readFile patchesPath) :: IO (Either IOException BL.ByteString)
+  case fileContents of
+    Left  _    -> pure $ "" -- "couldn't find patch file: " ++ patchesPath
+    Right file ->
+      case snd <$> C.decodeByName file :: Either String (V.Vector Patch) of
+        Left  err     -> mkError ("Can't read " ++ patchesPath) err >>= throw
+        Right patches -> pure $ V.foldr applyPatch bad patches -- apply patches in reverse order
 
 main :: IO ()
 main = do
@@ -56,23 +67,13 @@ main = do
   -- diffs :: [Diff], fixed :: [Maybe String]
   diffs <- catMaybes . map decode' . BL.lines <$> BL.readFile pairsPath
   fixed <- mapM patch diffs
-  let list = filter ((/="") . snd) (zip [0..] fixed)
+
+  -- filter out all programs that we were unable to patch
+  let list = filter ((/="") . snd) (zip diffs fixed)
+  -- print the first 30 patches
   forM_ (take 30 list) printProgram
   where
-    -- (mkError "a" "b") throws an error "a: b"
-    mkError :: String -> String -> IO IOException
-    mkError msg reason = ioError $ userError (msg ++ ": " ++ reason)
-    patch :: Diff -> IO String
-    patch Diff{..} = do
-      let patchesPath = printf "%s/%04d.csv" patchesDir index
-      fileContents <- try (BL.readFile patchesPath) :: IO (Either IOException BL.ByteString)
-      case fileContents of
-        Left  _    -> pure $ "" -- "couldn't find patch file: " ++ patchesPath
-        Right file ->
-          case snd <$> C.decodeByName file :: Either String (V.Vector Patch) of
-            Left  err     -> mkError ("Can't read " ++ patchesPath) err >>= throw
-            Right patches -> pure $ V.foldr applyPatch bad patches -- apply patches in reverse order
-    printProgram :: (Int, String) -> IO ()
-    printProgram (i, prog) = do
-      printf "Program %04d: \n" i
-      putStrLn prog
+    printProgram :: (Diff, String) -> IO ()
+    printProgram (Diff{..}, patched) = do
+      printf "Program %04d: \n" index
+      putStrLn patched
