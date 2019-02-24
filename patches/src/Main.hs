@@ -9,6 +9,7 @@ import Text.Printf
 
 import Types
 import Patches
+import Export
 
 -- parameters
 pairsPath, patchesDir :: FilePath
@@ -68,10 +69,12 @@ main = do
   diffs <- catMaybes . map decode' . BL.lines <$> BL.readFile pairsPath
   fixed <- mapM patch diffs
 
-  -- filter out all programs that we were unable to patch
+  -- filter out all programs that we were unable to pa
   let list = filter ((/="") . snd) (zip diffs fixed)
   -- print the first 30 patches
   forM_ (take 30 list) printProgram
+  -- export fixes to json file
+  export "output.json" list
   where
     printProgram :: (Diff, String) -> IO ()
     printProgram (Diff{..}, patched) = do
