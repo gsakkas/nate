@@ -9,7 +9,7 @@ import Text.Printf
 
 import Types
 import Patches
-import Export
+import Export hiding (index, bad, fix)
 
 -- parameters
 pairsPath, patchesDir :: FilePath
@@ -69,12 +69,20 @@ main = do
   diffs <- catMaybes . map decode' . BL.lines <$> BL.readFile pairsPath
   fixed <- mapM patch diffs
 
-  -- filter out all programs that we were unable to pa
-  let list = filter ((/="") . snd) (zip diffs fixed)
-  -- print the first 30 patches
-  forM_ (take 30 list) printProgram
+  -- filter out all programs that we were unable to patch
+  let list = filter ((/="") . snd) (zip diffs fixed) :: [(Diff, String)]
+  let diffs              = map fst list
+  let patchedPrograms    = map snd list
+  let indices            = map index diffs
+  let studentBadPrograms = map bad diffs
+  let studentFixPrograms = map fix diffs
+
   -- export fixes to json file
-  export "output.json" list
+  export "student_bad_patched_fix.json" (zipWith3 ExportType indices studentBadPrograms patchedPrograms)
+  export "student_bad_student_fix.json" (zipWith3 ExportType indices studentBadPrograms studentFixPrograms)
+  export "patched_bad_student_fix.json" (zipWith3 ExportType indices patchedPrograms studentFixPrograms)
+  -- print the first 30 patches
+  -- forM_ (take 30 list) printProgram
   where
     printProgram :: (Diff, String) -> IO ()
     printProgram (Diff{..}, patched) = do

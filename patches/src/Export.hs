@@ -1,7 +1,8 @@
 {-# LANGUAGE DeriveGeneric #-}
 
 module Export (
-  export
+  export,
+  ExportType(..),
   ) where
 
 import Control.Monad
@@ -18,10 +19,7 @@ data ExportType = ExportType { index :: Int
 instance ToJSON ExportType where
   toEncoding = genericToEncoding defaultOptions
 
--- Given a list of (input diff, patched program) we'll export a JSON file containing the pairs.
+-- Given a list of ExportType we'll export a JSON file containing the pairs.
 -- It will just be an array of objects with keys {index, bad, fix}.
-export :: FilePath -> [(Diff, String)] -> IO ()
-export path = encodeFile path . map convert
-  where
-    convert :: (Diff, String) -> ExportType
-    convert (Diff{..}, patched) = ExportType index bad patched
+export :: FilePath -> [ExportType] -> IO ()
+export = encodeFile
