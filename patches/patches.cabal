@@ -22,7 +22,7 @@ source-repository head
 executable patches
   main-is: Main.hs
   hs-source-dirs: src
-  other-modules: Types
+  other-modules: Types, Patches
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
@@ -33,3 +33,8 @@ executable patches
     , unordered-containers
     , vector
   default-language: Haskell2010
+  default-extensions:
+      LambdaCase
+    , ScopedTypeVariables
+    , RecordWildCards
+    , OverloadedStrings

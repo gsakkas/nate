@@ -1,11 +1,8 @@
-{-# LANGUAGE OverloadedStrings, LambdaCase, RecordWildCards #-}
-
 module Types (
   Diff(..),
   SourceSpan,
   Cluster(..),
   Patch(..),
-  patchContent,
   ) where
 
 import Control.Applicative (empty)
@@ -66,85 +63,3 @@ instance C.FromNamedRecord Patch where
       -- this probably exists, but I can't find it
       safeLookup :: (C.FromField a) => C.NamedRecord -> BL.ByteString -> C.Parser (Maybe a)
       safeLookup r name = maybe (pure Nothing) C.parseField (HM.lookup name r)
-
--- Hardcoded patch string, taken from
---   ../data/sp14_all/clusters/top_clusters.txt
-
--- instantiate :: String -> String
--- instantiate "EmptyG"
--- -- recurse on the subtrees
-
-patchContent :: [String]
-patchContent = [
-    "",
-    "x",
-    "(x y z)",
-    "123",
-    "[]",
-    "(x, y, ..., z)",
-    "(a b) (c d)",
-    "x * y",
-    "(a b c) + (x y z)",
-    "(x, 1, ..., \"abc\")",
-    "x * 5",
-    "(_ * _) + 1",
-    "(x y z) 4 1 2",
-    "[(_ * _), ..., (_ * _)]",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo",
-    "todo"
-  ]
-patchAST :: [String]
-patchAST = [
-    "EmptyG",     -- _
-    "VarG",
-    "AppG (fromList [VarG])",
-    "LitG",
-    "ListG EmptyG Nothing",
-    "TupleG (fromList [VarG])",
-    "AppG (fromList [AppG (fromList [EmptyG])])",
-    "AppG (fromList [TupleG (fromList [EmptyG])])",
-    "BopG VarG VarG",
-    "BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))",
-    "TupleG (fromList [LitG,ListG EmptyG Nothing])",
-    "BopG VarG LitG",
-    "BopG (BopG EmptyG EmptyG) LitG",
-    "AppG (fromList [AppG (fromList [EmptyG]),LitG])",
-    "LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)",
-    "CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])",
-    "ListG (BopG EmptyG EmptyG) Nothing",
-    "CaseG VarG (fromList [(Nothing,VarG)])",
-    "LamG (LamG EmptyG)",
-    "CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])",
-    "AppG (fromList [VarG,AppG (fromList [EmptyG])])",
-    "LamG VarG",
-    "TupleG (fromList [VarG,AppG (fromList [EmptyG])])",
-    "ListG LitG Nothing",
-    "BopG VarG (AppG (fromList [EmptyG]))",
-    "LamG (LetG NonRec (fromList [EmptyG]) EmptyG)",
-    "LamG (AppG (fromList [EmptyG]))",
-    "LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))",
-    "ConAppG (Just (TupleG (fromList [VarG]))) Nothing",
-    "LamG (TupleG (fromList [EmptyG]))",
-    "AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])",
-    "LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))",
-    "TupleG (fromList [ListG EmptyG Nothing])",
-    "ListG VarG Nothing",
-    "LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))",
-    "LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))",
-    "LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))",
-    "BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))",
-    "LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))",
-    "AppG (fromList [ConAppG Nothing (Just (TApp \"unit\" []))])"
-  ]

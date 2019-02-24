@@ -1,5 +1,3 @@
-{-# LANGUAGE ScopedTypeVariables, RecordWildCards #-}
-
 import Control.Exception.Safe
 import Control.Monad
 import Data.Aeson
@@ -10,6 +8,7 @@ import qualified Data.Vector as V
 import Text.Printf
 
 import Types
+import Patches
 
 -- Cut a string at the given location (row, column)
 cut :: (Int, Int) -> String -> (String, String)
@@ -37,12 +36,13 @@ applyPatch patch bad = splice (sourceSpan patch) replacement' bad
       NoCluster                         -> bad -- means no patch found in csv, will not apply
       (Cluster n) | (n >= 1 && n <= 40) -> patchContent !! (n - 1)
       c                                 -> "UNKNOWN PATCH " ++ show c
-    replacement' = " (" ++ replacement ++ ") "
+    replacement' = "\x1b[32m" ++ replacement ++ "\x1b[0m"
 
 
 
 -- Main function
 
+pairsPath, patchesDir :: FilePath
 pairsPath = "../features/data/ucsd/data/derived/sp14/pairs.json"
 patchesDir = "../data/sp14_all/spans+trees+all"
 
@@ -52,12 +52,12 @@ patchesDir = "../data/sp14_all/spans+trees+all"
 main :: IO ()
 main = do
   -- Read in bad programs and their patches
-  -- Sometimes there are no patches generated for a program, in which case we get Nothing
+  -- Sometimes there is no patch file 0000.csv generated for a program, in which case we get Nothing
   -- diffs :: [Diff], fixed :: [Maybe String]
   diffs <- catMaybes . map decode' . BL.lines <$> BL.readFile pairsPath
   fixed <- mapM patch diffs
-  print (take 30 fixed)
-
+  let list = filter ((/="") . snd) (zip [0..] fixed)
+  forM_ (take 30 list) printProgram
   where
     -- (mkError "a" "b") throws an error "a: b"
     mkError :: String -> String -> IO IOException
@@ -72,4 +72,7 @@ main = do
           case snd <$> C.decodeByName file :: Either String (V.Vector Patch) of
             Left  err     -> mkError ("Can't read " ++ patchesPath) err >>= throw
             Right patches -> pure $ V.foldr applyPatch bad patches -- apply patches in reverse order
-
+    printProgram :: (Int, String) -> IO ()
+    printProgram (i, prog) = do
+      printf "Program %04d: \n" i
+      putStrLn prog
