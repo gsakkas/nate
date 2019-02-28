@@ -23,36 +23,24 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,23)-(7,26)
-EMPTY
-EmptyG
-
 (7,23)-(7,44)
-EMPTY
-EmptyG
-
-(7,27)-(7,44)
-EMPTY
-EmptyG
-
-(7,28)-(7,36)
-EMPTY
-EmptyG
-
-(7,37)-(7,43)
-EMPTY
-EmptyG
-
-(7,38)-(7,39)
-EMPTY
-EmptyG
-
-(7,41)-(7,42)
 3 > 0
 BopG LitG LitG
 
-(7,50)-(7,59)
-0
-LitG
+*)
 
+(* changed exprs
+Bop (Just (7,23)-(7,28)) Gt (Lit (Just (7,23)-(7,24)) (LI 3)) (Lit (Just (7,27)-(7,28)) (LI 0))
+*)
+
+(* typed spans
+(7,23)-(7,28)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+bool
 *)

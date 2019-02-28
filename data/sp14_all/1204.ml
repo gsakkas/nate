@@ -139,10 +139,30 @@ let bigMul l1 l2 =
 (* changed spans
 (52,67)-(52,68)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (53,13)-(53,15)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* changed exprs
+List (Just (52,67)-(52,69)) [] Nothing
+Tuple (Just (53,13)-(53,20)) [Lit (Just (53,14)-(53,15)) (LI 0),List (Just (53,17)-(53,19)) [] Nothing]
+*)
+
+(* typed spans
+(52,67)-(52,69)
+(53,13)-(53,20)
+*)
+
+(* correct types
+int list
+(int * int list)
+*)
+
+(* bad types
+int
+'a list
 *)

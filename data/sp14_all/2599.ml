@@ -55,3 +55,19 @@ List.hd l2
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (20,14)-(20,24)) (Var (Just (20,14)-(20,21)) "List.hd") [Var (Just (20,22)-(20,24)) "l2"]
+*)
+
+(* typed spans
+(20,14)-(20,24)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int list
+*)

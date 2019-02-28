@@ -70,31 +70,43 @@ digits
 VarG
 
 (25,19)-(25,31)
-EMPTY
-EmptyG
+fst'
+VarG
 
-(25,26)-(25,30)
-EMPTY
-EmptyG
-
-(25,35)-(25,41)
-EMPTY
-EmptyG
-
-(26,18)-(26,32)
+(26,33)-(26,34)
 digits
 VarG
 
 (26,19)-(26,31)
-EMPTY
-EmptyG
+fst'
+VarG
 
-(26,26)-(26,30)
-EMPTY
-EmptyG
+*)
 
-(26,35)-(26,41)
-EMPTY
-EmptyG
+(* changed exprs
+Var (Just (24,30)-(24,36)) "digits"
+Var (Just (24,40)-(24,44)) "fst'"
+Var (Just (24,58)-(24,64)) "digits"
+Var (Just (24,68)-(24,72)) "fst'"
+*)
 
+(* typed spans
+(24,30)-(24,36)
+(24,40)-(24,44)
+(24,58)-(24,64)
+(24,68)-(24,72)
+*)
+
+(* correct types
+int list
+int
+int list
+int
+*)
+
+(* bad types
+(int * int) list
+(int * int)
+(int * int) list -> (int * int) list -> (int * int) list
+(int * int)
 *)

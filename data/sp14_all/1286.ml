@@ -11,12 +11,24 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(3,47)-(3,58)
-EMPTY
-EmptyG
-
 (3,47)-(3,69)
-EMPTY
-EmptyG
+n mod 10
+BopG VarG LitG
 
+*)
+
+(* changed exprs
+Bop (Just (3,47)-(3,55)) Mod (Var (Just (3,47)-(3,48)) "n") (Lit (Just (3,53)-(3,55)) (LI 10))
+*)
+
+(* typed spans
+(3,47)-(3,55)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+'a
 *)

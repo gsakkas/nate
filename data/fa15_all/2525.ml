@@ -33,6 +33,18 @@ EmptyG
 
 (7,64)-(7,65)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* typed spans
+(7,61)-(7,64)
+*)
+
+(* typed spans
+'a list
+*)
+
+(* typed spans
+'a
 *)

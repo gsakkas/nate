@@ -81,156 +81,48 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(15,14)-(15,53)
-EMPTY
-EmptyG
+(17,14)-(17,24)
+Op1 e
+ConAppG (Just VarG)
 
-(15,35)-(15,53)
-EMPTY
-EmptyG
-
-(15,40)-(15,41)
-EMPTY
-EmptyG
-
-(15,43)-(15,44)
-EMPTY
-EmptyG
-
-(15,46)-(15,52)
-EMPTY
-EmptyG
-
-(17,18)-(17,24)
+(17,14)-(17,24)
 fun e -> Sine e
-LamG (ConAppG (Just VarG) Nothing)
-
-(35,17)-(35,25)
-EMPTY
-EmptyG
+LamG (ConAppG (Just VarG))
 
 (36,19)-(37,49)
-EMPTY
-EmptyG
-
-(36,20)-(36,47)
-EMPTY
-EmptyG
-
-(36,21)-(36,26)
-EMPTY
-EmptyG
-
-(36,27)-(36,46)
-EMPTY
-EmptyG
-
-(36,28)-(36,32)
-EMPTY
-EmptyG
-
-(36,34)-(36,45)
-EMPTY
-EmptyG
-
-(36,35)-(36,40)
-EMPTY
-EmptyG
-
-(36,43)-(36,44)
-EMPTY
-EmptyG
-
-(36,49)-(36,76)
-EMPTY
-EmptyG
-
-(36,50)-(36,55)
-EMPTY
-EmptyG
-
-(36,56)-(36,75)
-EMPTY
-EmptyG
-
-(36,57)-(36,61)
-EMPTY
-EmptyG
-
-(36,63)-(36,74)
-EMPTY
-EmptyG
-
-(36,64)-(36,69)
-EMPTY
-EmptyG
-
-(36,72)-(36,73)
 buildOp1
 VarG
-
-(40,17)-(40,25)
-EMPTY
-EmptyG
 
 (41,19)-(42,49)
-EMPTY
-EmptyG
-
-(41,20)-(41,47)
-EMPTY
-EmptyG
-
-(41,21)-(41,26)
-EMPTY
-EmptyG
-
-(41,27)-(41,46)
-EMPTY
-EmptyG
-
-(41,28)-(41,32)
-EMPTY
-EmptyG
-
-(41,34)-(41,45)
-EMPTY
-EmptyG
-
-(41,35)-(41,40)
-EMPTY
-EmptyG
-
-(41,43)-(41,44)
-EMPTY
-EmptyG
-
-(41,49)-(41,76)
-EMPTY
-EmptyG
-
-(41,50)-(41,55)
-EMPTY
-EmptyG
-
-(41,56)-(41,75)
-EMPTY
-EmptyG
-
-(41,57)-(41,61)
-EMPTY
-EmptyG
-
-(41,63)-(41,74)
-EMPTY
-EmptyG
-
-(41,64)-(41,69)
-EMPTY
-EmptyG
-
-(41,72)-(41,73)
 buildOp1
 VarG
 
+*)
+
+(* changed exprs
+ConApp (Just (15,17)-(15,22)) "Op1" (Just (Var (Just (15,21)-(15,22)) "e")) Nothing
+Lam (Just (17,14)-(17,24)) (VarPat (Just (17,14)-(17,15)) "e") (ConApp (Just (17,18)-(17,24)) "Sine" (Just (Var (Just (17,23)-(17,24)) "e")) Nothing) Nothing
+Var (Just (33,28)-(33,36)) "buildOp1"
+Var (Just (34,30)-(34,38)) "buildOp1"
+*)
+
+(* typed spans
+(15,17)-(15,22)
+(17,14)-(17,24)
+(33,28)-(33,36)
+(34,30)-(34,38)
+*)
+
+(* correct types
+expr
+expr -> expr
+expr -> expr
+expr -> expr
+*)
+
+(* bad types
+expr -> expr
+expr -> expr
+(expr * expr * expr)
+(expr * expr * expr)
 *)

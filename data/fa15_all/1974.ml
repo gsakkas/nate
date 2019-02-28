@@ -30,3 +30,19 @@ let padZero l1 l2 =
 TupleG (fromList [VarG])
 
 *)
+
+(* changed exprs
+Tuple (Just (10,9)-(10,17)) [Var (Just (10,10)-(10,12)) "l1",Var (Just (10,14)-(10,16)) "l2"]
+*)
+
+(* typed spans
+(10,9)-(10,17)
+*)
+
+(* correct types
+(int list * int list)
+*)
+
+(* bad types
+'a list
+*)

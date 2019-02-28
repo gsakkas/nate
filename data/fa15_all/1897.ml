@@ -66,3 +66,23 @@ LitG
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (26,41)-(26,44)) (LD 2.0)
+Lit (Just (26,70)-(26,73)) (LD 2.0)
+*)
+
+(* typed spans
+(26,41)-(26,44)
+(26,70)-(26,73)
+*)
+
+(* correct types
+float
+float
+*)
+
+(* bad types
+int
+int
+*)

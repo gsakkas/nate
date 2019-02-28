@@ -46,107 +46,31 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (15,6)-(18,11)
-EMPTY
-EmptyG
-
-(15,12)-(15,13)
-EMPTY
-EmptyG
-
-(17,16)-(17,74)
-EMPTY
-EmptyG
-
-(17,16)-(18,11)
-EMPTY
-EmptyG
-
-(17,17)-(17,43)
-EMPTY
-EmptyG
-
-(17,18)-(17,37)
-EMPTY
-EmptyG
-
-(17,19)-(17,26)
-EMPTY
-EmptyG
-
-(17,20)-(17,23)
-EMPTY
-EmptyG
-
-(17,24)-(17,25)
-EMPTY
-EmptyG
-
-(17,29)-(17,36)
-EMPTY
-EmptyG
-
-(17,30)-(17,33)
-EMPTY
-EmptyG
-
-(17,34)-(17,35)
-EMPTY
-EmptyG
-
-(17,40)-(17,42)
-EMPTY
-EmptyG
-
-(17,45)-(17,73)
-EMPTY
-EmptyG
-
-(17,46)-(17,65)
-EMPTY
-EmptyG
-
-(17,47)-(17,54)
-EMPTY
-EmptyG
-
-(17,48)-(17,51)
-EMPTY
-EmptyG
-
-(17,52)-(17,53)
-EMPTY
-EmptyG
-
-(17,57)-(17,64)
-EMPTY
-EmptyG
-
-(17,58)-(17,61)
-EMPTY
-EmptyG
-
-(17,62)-(17,63)
-EMPTY
-EmptyG
-
-(17,70)-(17,72)
-EMPTY
-EmptyG
-
-(18,10)-(18,11)
-EMPTY
-EmptyG
+a
+VarG
 
 (20,15)-(20,40)
-EMPTY
-EmptyG
-
-(20,16)-(20,39)
-EMPTY
-EmptyG
-
-(20,17)-(20,34)
 List.combine l1 l2
 AppG (fromList [VarG])
 
+*)
+
+(* changed exprs
+Var (Just (14,16)-(14,17)) "a"
+App (Just (16,15)-(16,33)) (Var (Just (16,15)-(16,27)) "List.combine") [Var (Just (16,28)-(16,30)) "l1",Var (Just (16,31)-(16,33)) "l2"]
+*)
+
+(* typed spans
+(14,16)-(14,17)
+(16,15)-(16,33)
+*)
+
+(* correct types
+(int * int list)
+(int * int) list
+*)
+
+(* bad types
+(int * int) list
+('a list -> (int * 'a) list * int list) list
 *)

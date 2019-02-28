@@ -33,66 +33,18 @@ wwhile (gs , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
 (8,2)-(10,16)
-EMPTY
-EmptyG
-
-(8,15)-(8,25)
 (f x , isFPoint x)
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (8,22)-(8,23)
-EMPTY
-EmptyG
-
-(8,24)-(8,25)
-EMPTY
-EmptyG
+f
+VarG
 
 (9,2)-(10,16)
 x
 VarG
 
-(9,13)-(9,62)
-EMPTY
-EmptyG
-
-(9,17)-(9,62)
-f
-VarG
-
 (9,29)-(9,30)
-EMPTY
-EmptyG
-
-(9,36)-(9,37)
-EMPTY
-EmptyG
-
-(9,43)-(9,45)
-EMPTY
-EmptyG
-
-(9,43)-(9,62)
-EMPTY
-EmptyG
-
-(9,46)-(9,62)
-EMPTY
-EmptyG
-
-(9,47)-(9,54)
-EMPTY
-EmptyG
-
-(9,55)-(9,61)
-EMPTY
-EmptyG
-
-(9,56)-(9,57)
-EMPTY
-EmptyG
-
-(9,59)-(9,60)
 x
 VarG
 
@@ -100,4 +52,31 @@ VarG
 gs
 VarG
 
+*)
+
+(* typed spans
+(7,2)-(8,16)
+(7,49)-(7,70)
+(7,51)-(7,52)
+(7,53)-(7,54)
+(7,67)-(7,68)
+(8,10)-(8,12)
+*)
+
+(* typed spans
+int
+(int * bool)
+int -> int
+int
+int
+int -> (int * bool)
+*)
+
+(* typed spans
+int
+'a
+int -> int
+'a
+int
+int -> int
 *)

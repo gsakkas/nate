@@ -1,10 +1,3 @@
-TupleG (fromList [VarG,ListG EmptyG Nothing])
-(t1 , [(h1 + x) mod 10])
-(l1 , [])
-(l1 , [])
-(x , n , [])
-(p1 , [res / 10 ; res mod 10])
-([k] , v)
-(len , [sum])
-(len , [sum])
-(len , [sum])
+ConAppG (Just (TupleG (fromList [AppG (fromList [AppG (fromList [VarG])]),TupleG (fromList [LitG])])))
+(3 , 3) :: (List.rev (List.combine l1
+                                   l2))

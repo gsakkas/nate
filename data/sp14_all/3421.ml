@@ -27,8 +27,20 @@ let stringOfList f l = "[" ^ ((sepConcat "; " (List.map f l)) ^ "]");;
 List.map f l
 AppG (fromList [VarG])
 
-(9,58)-(9,60)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (9,46)-(9,60)) (Var (Just (9,47)-(9,55)) "List.map") [Var (Just (9,56)-(9,57)) "f",Var (Just (9,58)-(9,59)) "l"]
+*)
+
+(* typed spans
+(9,46)-(9,60)
+*)
+
+(* correct types
+string list
+*)
+
+(* bad types
+string list
 *)

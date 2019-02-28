@@ -32,3 +32,15 @@ seen
 VarG
 
 *)
+
+(* typed spans
+(7,44)-(7,48)
+*)
+
+(* typed spans
+'a list
+*)
+
+(* typed spans
+'a list
+*)

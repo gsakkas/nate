@@ -33,3 +33,15 @@ EmptyG
 TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
 
 *)
+
+(* typed spans
+(7,4)-(7,75)
+*)
+
+(* typed spans
+('a -> ('a * bool) * 'a)
+*)
+
+(* typed spans
+'a -> ('a * bool)
+*)

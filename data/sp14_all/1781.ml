@@ -35,6 +35,22 @@ let rec mulByDigit i l =
 (* changed spans
 (7,11)-(7,13)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* changed exprs
+Tuple (Just (7,11)-(7,18)) [Lit (Just (7,12)-(7,13)) (LI 0),List (Just (7,15)-(7,17)) [] Nothing]
+*)
+
+(* typed spans
+(7,11)-(7,18)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+'a list
 *)

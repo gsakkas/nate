@@ -37,8 +37,20 @@ let palindrome w = (explode w) = (listReverse (explode w));;
 listReverse (explode w)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(14,46)-(14,53)
-explode w
-AppG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (14,33)-(14,58)) (Var (Just (14,34)-(14,45)) "listReverse") [App (Just (14,46)-(14,57)) (Var (Just (14,47)-(14,54)) "explode") [Var (Just (14,55)-(14,56)) "w"]]
+*)
+
+(* typed spans
+(14,33)-(14,58)
+*)
+
+(* correct types
+char list
+*)
+
+(* bad types
+char list
 *)

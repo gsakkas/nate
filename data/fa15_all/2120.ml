@@ -59,7 +59,7 @@ EmptyG
 
 (22,39)-(22,40)
 0 :: l1
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,LitG])))
 
 (22,49)-(22,69)
 EMPTY
@@ -67,6 +67,21 @@ EmptyG
 
 (22,60)-(22,61)
 0 :: l2
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,LitG])))
 
+*)
+
+(* typed spans
+(22,38)-(22,47)
+(22,59)-(22,68)
+*)
+
+(* typed spans
+int list
+int list
+*)
+
+(* typed spans
+int
+int
 *)

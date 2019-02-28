@@ -1,45 +1,6 @@
-CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG Nothing)])
-match l with
-| [] -> []
-| h :: t -> if h = 0
-            then removeZero t
-            else l
-match y with
-| [] -> []
-| hd :: tl -> if tl = []
-              then [(hd , x)]
-              else (hd , x) :: (argmaker x
-                                         tl)
-match y with
-| [] -> []
-| hd :: tl -> if tl = []
-              then [(hd , x)]
-              else (hd , x) :: (argmaker x
-                                         tl)
-match y with
-| [] -> []
-| hd :: tl -> if tl = []
-              then [(hd , x)]
-              else (hd , x) :: (argmaker x
-                                         tl)
-match y with
-| [] -> []
-| hd :: tl -> if tl = []
-              then [(hd , x)]
-              else (hd , x) :: (argmaker x
-                                         tl)
-match l with
-| [] -> []
-| h :: t -> if h = 0
-            then removeZero t
-            else l
-match l with
-| [] -> []
-| h :: t -> if h = 0
-            then removeZero t
-            else l
-match l with
-| [] -> []
-| h :: t -> if h = 0
-            then removeZero t
-            else l
+TupleG (fromList [VarG,ListG EmptyG])
+(l1 , [0 ; 0 ; 0 ; 0])
+(t1 , [(h1 + x) mod 10])
+(l1 , [])
+([] , l)
+(p1 , [res / 10 ; res mod 10])

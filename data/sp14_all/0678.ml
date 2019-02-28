@@ -18,8 +18,24 @@ AppG (fromList [VarG])
 fun x -> x
 LamG VarG
 
-(2,51)-(2,75)
-x
-VarG
+*)
 
+(* changed exprs
+App (Just (3,18)-(3,21)) (Var (Just (3,18)-(3,19)) "x") [Var (Just (3,20)-(3,21)) "a"]
+Lam (Just (3,34)-(3,39)) (VarPat (Just (3,34)-(3,35)) "x") (Var (Just (3,38)-(3,39)) "x") Nothing
+*)
+
+(* typed spans
+(3,18)-(3,21)
+(3,34)-(3,39)
+*)
+
+(* correct types
+'a
+('a -> 'b) -> 'a -> 'b
+*)
+
+(* bad types
+'a
+int
 *)

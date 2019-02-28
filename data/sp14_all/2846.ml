@@ -14,3 +14,19 @@ xs
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (2,27)-(2,29)) "xs"
+*)
+
+(* typed spans
+(2,27)-(2,29)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list -> int
+*)

@@ -31,3 +31,19 @@ let padZero l1 l2 =
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
+
+(* changed exprs
+Tuple (Just (11,49)-(11,71)) [Var (Just (11,50)-(11,52)) "l1",App (Just (11,54)-(11,70)) (Var (Just (11,65)-(11,66)) "@") [Var (Just (11,55)-(11,64)) "to_append",Var (Just (11,67)-(11,69)) "l2"]]
+*)
+
+(* typed spans
+(11,49)-(11,71)
+*)
+
+(* correct types
+(int list * int list)
+*)
+
+(* bad types
+unit
+*)

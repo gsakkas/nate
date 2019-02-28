@@ -14,28 +14,13 @@ let rec digitsOfInt n = if n < 0 then [] else [] @ [n mod 10];;
 EMPTY
 EmptyG
 
-(3,25)-(3,40)
-EMPTY
-EmptyG
+*)
 
-(3,26)-(3,37)
-EMPTY
-EmptyG
+(* typed spans
+*)
 
-(3,38)-(3,39)
-EMPTY
-EmptyG
+(* typed spans
+*)
 
-(3,43)-(3,45)
-EMPTY
-EmptyG
-
-(3,49)-(3,66)
-EMPTY
-EmptyG
-
-(3,53)-(3,54)
-EMPTY
-EmptyG
-
+(* typed spans
 *)

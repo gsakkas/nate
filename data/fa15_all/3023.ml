@@ -49,10 +49,6 @@ let (carry , sum) = a in
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (13,40)-(13,48)
-EMPTY
-EmptyG
-
-(13,41)-(13,42)
 num1
 VarG
 
@@ -70,6 +66,33 @@ VarG
 
 (14,19)-(14,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* typed spans
+(15,6)-(17,13)
+(16,10)-(16,14)
+(16,25)-(16,30)
+(16,40)-(16,72)
+(17,8)-(17,11)
+(18,19)-(18,21)
+*)
+
+(* typed spans
+(int * int list)
+int
+int
+int
+int list
+int list
+*)
+
+(* typed spans
+int
+int
+int
+int
+int list
+int
 *)

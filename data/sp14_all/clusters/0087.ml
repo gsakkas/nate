@@ -1,12 +1,5 @@
-ConAppG (Just (TupleG (fromList [AppG (fromList [BopG VarG LitG]),BopG VarG LitG]))) Nothing
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (helper (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
-(n mod 10) :: (digitsOfInt (n / 10))
+AppG (fromList [LitG])
+float_of_int 2
+(+) 0
+int_of_char '3'
+print_string "going into then"

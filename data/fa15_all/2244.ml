@@ -88,17 +88,13 @@ let bigMul l1 l2 =
 
 (* changed spans
 (37,8)-(40,48)
-EMPTY
-EmptyG
+(10 * o , bigAdd (mulByDigit o
+                             l1) l)
+TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
 (37,19)-(37,35)
 10 * o
 BopG LitG VarG
-
-(37,19)-(37,39)
-(10 * o , bigAdd (mulByDigit o
-                             l1) l)
-TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
 (37,20)-(37,30)
 mulByDigit o l1
@@ -108,75 +104,7 @@ AppG (fromList [VarG])
 EMPTY
 EmptyG
 
-(37,33)-(37,34)
-EMPTY
-EmptyG
-
 (38,8)-(40,48)
-EMPTY
-EmptyG
-
-(38,11)-(38,15)
-EMPTY
-EmptyG
-
-(38,11)-(38,20)
-EMPTY
-EmptyG
-
-(38,18)-(38,20)
-EMPTY
-EmptyG
-
-(39,13)-(39,29)
-EMPTY
-EmptyG
-
-(39,14)-(39,15)
-EMPTY
-EmptyG
-
-(39,17)-(39,28)
-EMPTY
-EmptyG
-
-(39,18)-(39,22)
-EMPTY
-EmptyG
-
-(39,26)-(39,27)
-EMPTY
-EmptyG
-
-(40,13)-(40,48)
-EMPTY
-EmptyG
-
-(40,14)-(40,25)
-EMPTY
-EmptyG
-
-(40,15)-(40,19)
-EMPTY
-EmptyG
-
-(40,22)-(40,24)
-EMPTY
-EmptyG
-
-(40,27)-(40,47)
-EMPTY
-EmptyG
-
-(40,28)-(40,41)
-EMPTY
-EmptyG
-
-(40,29)-(40,33)
-EMPTY
-EmptyG
-
-(40,38)-(40,40)
 l1
 VarG
 
@@ -188,68 +116,32 @@ LitG
 EMPTY
 EmptyG
 
-(43,17)-(43,29)
-EMPTY
-EmptyG
-
-(43,24)-(43,25)
-EMPTY
-EmptyG
-
-(43,24)-(43,29)
-EMPTY
-EmptyG
-
-(43,28)-(43,29)
-EMPTY
-EmptyG
-
-(44,4)-(44,54)
-EMPTY
-EmptyG
-
-(44,4)-(44,60)
-EMPTY
-EmptyG
-
-(44,5)-(44,13)
-EMPTY
-EmptyG
-
-(44,14)-(44,21)
-EMPTY
-EmptyG
-
-(44,22)-(44,53)
-EMPTY
-EmptyG
-
-(44,23)-(44,31)
-EMPTY
-EmptyG
-
-(44,32)-(44,52)
-EMPTY
-EmptyG
-
-(44,33)-(44,45)
-EMPTY
-EmptyG
-
-(44,46)-(44,48)
-EMPTY
-EmptyG
-
-(44,55)-(44,56)
-EMPTY
-EmptyG
-
 (44,57)-(44,60)
 EMPTY
 EmptyG
 
-(44,58)-(44,59)
-EMPTY
-EmptyG
+*)
 
+(* typed spans
+(35,28)-(35,68)
+(35,29)-(35,37)
+(35,47)-(35,64)
+(35,61)-(35,63)
+(36,14)-(36,15)
+*)
+
+(* typed spans
+(int * int list)
+int
+int list
+int list
+int
+*)
+
+(* typed spans
+(int * int list)
+int list
+int -> int list -> int list
+(int * int list)
+int
 *)

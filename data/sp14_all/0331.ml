@@ -20,11 +20,31 @@ let fixpoint (f,b) =
 
 (* changed spans
 (7,10)-(7,20)
-EMPTY
-EmptyG
+helper
+VarG
 
-(7,22)-(7,23)
-EMPTY
-EmptyG
+(7,10)-(7,20)
+b
+VarG
 
+*)
+
+(* changed exprs
+Var (Just (7,10)-(7,16)) "helper"
+Var (Just (7,18)-(7,19)) "b"
+*)
+
+(* typed spans
+(7,10)-(7,16)
+(7,18)-(7,19)
+*)
+
+(* correct types
+'a -> ('a * bool)
+'a
+*)
+
+(* bad types
+('a * bool)
+('a * bool)
 *)

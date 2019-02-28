@@ -46,63 +46,58 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(15,16)-(15,24)
-EMPTY
-EmptyG
-
 (15,16)-(15,44)
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(15,25)-(15,44)
 let (x' , x'') = x in
 let (c , s) = a in
 (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(16,16)-(16,19)
-EMPTY
-EmptyG
-
 (16,21)-(16,24)
-EMPTY
-EmptyG
-
-(16,22)-(16,23)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (17,15)-(17,65)
-EMPTY
-EmptyG
+0
+LitG
 
-(17,17)-(17,25)
-List.combine
-VarG
+(17,15)-(17,65)
+[]
+ListG EmptyG
 
-(17,26)-(17,38)
-EMPTY
-EmptyG
-
-(17,27)-(17,34)
+(17,15)-(17,65)
 List.combine l1 l2
 AppG (fromList [VarG])
 
-(17,41)-(17,64)
-EMPTY
-EmptyG
+*)
 
-(17,42)-(17,50)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (16,6)-(18,65)) NonRec [(TuplePat (Just (16,11)-(16,17)) [VarPat (Just (16,11)-(16,13)) "x'",VarPat (Just (16,14)-(16,17)) "x''"],Var (Just (16,21)-(16,22)) "x")] (Let (Just (17,6)-(18,65)) NonRec [(TuplePat (Just (17,11)-(17,14)) [VarPat (Just (17,11)-(17,12)) "c",VarPat (Just (17,13)-(17,14)) "s"],Var (Just (17,18)-(17,19)) "a")] (Tuple (Just (18,6)-(18,65)) [Bop (Just (18,7)-(18,30)) Div (Bop (Just (18,8)-(18,24)) Plus (Bop (Just (18,9)-(18,17)) Plus (Var (Just (18,10)-(18,11)) "c") (Var (Just (18,14)-(18,16)) "x'")) (Var (Just (18,20)-(18,23)) "x''")) (Lit (Just (18,27)-(18,29)) (LI 10)),ConApp (Just (18,32)-(18,64)) "::" (Just (Tuple (Just (18,33)-(18,63)) [Bop (Just (18,33)-(18,58)) Mod (Bop (Just (18,34)-(18,50)) Plus (Bop (Just (18,35)-(18,43)) Plus (Var (Just (18,36)-(18,37)) "c") (Var (Just (18,40)-(18,42)) "x'")) (Var (Just (18,46)-(18,49)) "x''")) (Lit (Just (18,55)-(18,57)) (LI 10)),Var (Just (18,62)-(18,63)) "s"])) Nothing]))
+List (Just (19,19)-(19,21)) [] Nothing
+Lit (Just (19,16)-(19,17)) (LI 0)
+List (Just (19,19)-(19,21)) [] Nothing
+App (Just (20,24)-(20,44)) (Var (Just (20,25)-(20,37)) "List.combine") [Var (Just (20,38)-(20,40)) "l1",Var (Just (20,41)-(20,43)) "l2"]
+*)
 
-(17,51)-(17,63)
-EMPTY
-EmptyG
+(* typed spans
+(16,6)-(18,65)
+(19,19)-(19,21)
+(19,16)-(19,17)
+(19,19)-(19,21)
+(20,24)-(20,44)
+*)
 
-(17,52)-(17,59)
-EMPTY
-EmptyG
+(* correct types
+(int * int list)
+int list
+int
+int list
+(int * int) list
+*)
 
+(* bad types
+(int list * int list)
+int list
+('a list * 'b list)
+('a list * 'b list)
+('a list * 'b list)
 *)

@@ -15,22 +15,22 @@ let myList = [] in
 if n <= 0
 then []
 else (n mod 10) :: myList
-LetG NonRec (fromList [ListG EmptyG Nothing]) (IteG EmptyG EmptyG EmptyG)
+LetG NonRec (fromList [ListG EmptyG]) (IteG EmptyG EmptyG EmptyG)
 
-(2,47)-(2,72)
-(n mod 10) :: myList
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
+*)
 
-(2,58)-(2,69)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (3,2)-(3,64)) NonRec [(VarPat (Just (3,6)-(3,12)) "myList",List (Just (3,15)-(3,17)) [] Nothing)] (Ite (Just (3,21)-(3,64)) (Bop (Just (3,24)-(3,30)) Le (Var (Just (3,24)-(3,25)) "n") (Lit (Just (3,29)-(3,30)) (LI 0))) (List (Just (3,36)-(3,38)) [] Nothing) (ConApp (Just (3,44)-(3,64)) "::" (Just (Tuple (Just (3,44)-(3,64)) [Bop (Just (3,44)-(3,54)) Mod (Var (Just (3,45)-(3,46)) "n") (Lit (Just (3,51)-(3,53)) (LI 10)),Var (Just (3,58)-(3,64)) "myList"])) Nothing))
+*)
 
-(2,58)-(2,71)
-EMPTY
-EmptyG
+(* typed spans
+(3,2)-(3,64)
+*)
 
-(2,70)-(2,71)
-myList
-VarG
+(* correct types
+int list
+*)
 
+(* bad types
+int list
 *)

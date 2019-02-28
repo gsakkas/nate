@@ -116,28 +116,24 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(56,3)-(56,11)
-EMPTY
-EmptyG
-
 (56,3)-(56,34)
-EMPTY
-EmptyG
+x mod 10
+BopG VarG LitG
 
-(56,12)-(56,32)
-EMPTY
-EmptyG
+*)
 
-(56,23)-(56,24)
-EMPTY
-EmptyG
+(* changed exprs
+Bop (Just (55,47)-(55,55)) Mod (Var (Just (55,47)-(55,48)) "x") (Lit (Just (55,53)-(55,55)) (LI 10))
+*)
 
-(56,29)-(56,31)
-EMPTY
-EmptyG
+(* typed spans
+(55,47)-(55,55)
+*)
 
-(56,38)-(56,41)
-10
-LitG
+(* correct types
+int
+*)
 
+(* bad types
+int
 *)

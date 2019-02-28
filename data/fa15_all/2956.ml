@@ -72,12 +72,20 @@ let (0 , res) = a in
 (0 , mulByDigit x res)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
-(29,30)-(29,31)
-EMPTY
-EmptyG
+*)
 
-(30,2)-(31,75)
-res
-VarG
+(* changed exprs
+Let (Just (29,14)-(29,56)) NonRec [(TuplePat (Just (29,19)-(29,24)) [LitPat (Just (29,19)-(29,20)) (LI 0),VarPat (Just (29,21)-(29,24)) "res"],Var (Just (29,28)-(29,29)) "a")] (Tuple (Just (29,33)-(29,56)) [Lit (Just (29,34)-(29,35)) (LI 0),App (Just (29,37)-(29,55)) (Var (Just (29,38)-(29,48)) "mulByDigit") [Var (Just (29,49)-(29,50)) "x",Var (Just (29,51)-(29,54)) "res"]])
+*)
 
+(* typed spans
+(29,14)-(29,56)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+(int * int list)
 *)

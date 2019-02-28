@@ -19,27 +19,7 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(2,15)-(2,20)
-EMPTY
-EmptyG
-
 (2,15)-(2,24)
-EMPTY
-EmptyG
-
-(2,16)-(2,17)
-EMPTY
-EmptyG
-
-(2,18)-(2,19)
-EMPTY
-EmptyG
-
-(2,23)-(2,24)
-EMPTY
-EmptyG
-
-(4,16)-(5,63)
 EMPTY
 EmptyG
 
@@ -68,4 +48,28 @@ TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 f'
 VarG
 
+*)
+
+(* typed spans
+(7,5)-(7,71)
+(7,21)-(7,22)
+(7,28)-(7,29)
+(7,50)-(7,64)
+(7,68)-(7,70)
+*)
+
+(* typed spans
+'a -> ('a * bool)
+'a -> 'a
+'a
+('a * bool)
+'a -> ('a * bool)
+*)
+
+(* typed spans
+bool
+('a -> 'a * 'a) -> bool
+('a -> 'a * 'a)
+'a -> 'a
+'a
 *)

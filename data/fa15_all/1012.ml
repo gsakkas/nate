@@ -39,6 +39,22 @@ let removeDuplicates l =
 (* changed spans
 (14,37)-(14,38)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (14,37)-(14,40)) [Var (Just (14,38)-(14,39)) "h"] Nothing
+*)
+
+(* typed spans
+(14,37)-(14,40)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a
 *)

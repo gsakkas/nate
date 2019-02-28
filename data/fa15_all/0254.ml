@@ -75,8 +75,20 @@ let bigMul l1 l2 = mulByDigit 9 (bigAdd l1 l2);;
 mulByDigit 9 (bigAdd l1 l2)
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(33,30)-(33,44)
-9
-LitG
+*)
 
+(* changed exprs
+App (Just (33,19)-(33,46)) (Var (Just (33,19)-(33,29)) "mulByDigit") [Lit (Just (33,30)-(33,31)) (LI 9),App (Just (33,32)-(33,46)) (Var (Just (33,33)-(33,39)) "bigAdd") [Var (Just (33,40)-(33,42)) "l1",Var (Just (33,43)-(33,45)) "l2"]]
+*)
+
+(* typed spans
+(33,19)-(33,46)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a
 *)

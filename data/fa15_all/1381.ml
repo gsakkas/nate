@@ -67,12 +67,20 @@ let rec eval (e,x,y) =
 eval (m4 , x , y) *. (1.0 +. sqrt 5.0)
 BopG (AppG (fromList [EmptyG])) (BopG EmptyG EmptyG)
 
-(29,42)-(29,43)
-1.0
-LitG
+*)
 
-(29,53)-(29,54)
-5.0
-LitG
+(* changed exprs
+Bop (Just (29,20)-(29,62)) FTimes (App (Just (29,21)-(29,38)) (Var (Just (29,22)-(29,26)) "eval") [Tuple (Just (29,27)-(29,37)) [Var (Just (29,28)-(29,30)) "m4",Var (Just (29,32)-(29,33)) "x",Var (Just (29,35)-(29,36)) "y"]]) (Bop (Just (29,42)-(29,61)) FPlus (Lit (Just (29,43)-(29,46)) (LD 1.0)) (App (Just (29,50)-(29,60)) (Var (Just (29,51)-(29,55)) "sqrt") [Lit (Just (29,56)-(29,59)) (LD 5.0)]))
+*)
 
+(* typed spans
+(29,20)-(29,62)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
 *)

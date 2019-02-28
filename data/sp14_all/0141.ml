@@ -49,6 +49,22 @@ let bigAdd l1 l2 =
 (* changed spans
 (17,28)-(17,42)
 [addit mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
+ListG (BopG EmptyG EmptyG)
 
+*)
+
+(* changed exprs
+List (Just (17,28)-(17,42)) [Bop (Just (17,29)-(17,41)) Mod (Var (Just (17,29)-(17,34)) "addit") (Lit (Just (17,39)-(17,41)) (LI 10))] Nothing
+*)
+
+(* typed spans
+(17,28)-(17,42)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

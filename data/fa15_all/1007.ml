@@ -34,6 +34,26 @@ VarG
 
 (10,31)-(10,32)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+Var (Just (11,23)-(11,27)) "seen"
+List (Just (11,30)-(11,33)) [Var (Just (11,31)-(11,32)) "h"] Nothing
+*)
+
+(* typed spans
+(11,23)-(11,27)
+(11,30)-(11,33)
+*)
+
+(* correct types
+'a list
+'a list
+*)
+
+(* bad types
+'a list
+'a list
 *)

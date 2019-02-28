@@ -142,41 +142,36 @@ match x with
                                      multres))
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
-(54,8)-(55,36)
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(55,20)-(55,26)
-EMPTY
-EmptyG
-
-(55,21)-(55,22)
-templ12 @ [0]
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(55,24)-(55,25)
-[0]
-ListG LitG Nothing
-
-(61,36)-(61,37)
-EMPTY
-EmptyG
-
-(61,49)-(61,75)
+(61,39)-(61,41)
 x
 VarG
 
 (61,50)-(61,51)
-EMPTY
-EmptyG
-
-(61,60)-(61,75)
 x
 VarG
 
+*)
+
+(* changed exprs
+Case (Just (52,4)-(56,45)) (Var (Just (52,10)-(52,11)) "x") [(TuplePat (Just (53,7)-(53,21)) [VarPat (Just (53,7)-(53,14)) "l2digit",VarPat (Just (53,15)-(53,21)) "templ1"],Nothing,Let (Just (54,8)-(56,45)) NonRec [(TuplePat (Just (54,13)-(54,29)) [VarPat (Just (54,13)-(54,21)) "l2digit2",VarPat (Just (54,22)-(54,29)) "templ12"],Var (Just (54,33)-(54,34)) "a")] (Let (Just (55,8)-(56,45)) NonRec [(VarPat (Just (55,12)-(55,19)) "multres",App (Just (55,22)-(55,47)) (Var (Just (55,22)-(55,32)) "mulByDigit") [Var (Just (55,33)-(55,40)) "l2digit",Var (Just (55,41)-(55,47)) "templ1"])] (Tuple (Just (56,8)-(56,45)) [Lit (Just (56,9)-(56,10)) (LI 0),App (Just (56,12)-(56,44)) (Var (Just (56,13)-(56,19)) "bigAdd") [App (Just (56,20)-(56,35)) (Var (Just (56,29)-(56,30)) "@") [Var (Just (56,21)-(56,28)) "templ12",List (Just (56,31)-(56,34)) [Lit (Just (56,32)-(56,33)) (LI 0)] Nothing],Var (Just (56,36)-(56,43)) "multres"]])))]
+Var (Just (62,40)-(62,41)) "x"
+Var (Just (62,54)-(62,55)) "x"
+*)
+
+(* typed spans
+(52,4)-(56,45)
+(62,40)-(62,41)
+(62,54)-(62,55)
+*)
+
+(* correct types
+(int * int list)
+int list
+int list
+*)
+
+(* bad types
+(int * int list)
+'a
+'a
 *)

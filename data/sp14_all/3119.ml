@@ -63,8 +63,20 @@ let bigAdd l1 l2 =
 (c , d)
 TupleG (fromList [VarG])
 
-(24,4)-(26,51)
-d
-VarG
+*)
 
+(* changed exprs
+Tuple (Just (23,40)-(23,46)) [Var (Just (23,41)-(23,42)) "c",Var (Just (23,44)-(23,45)) "d"]
+*)
+
+(* typed spans
+(23,40)-(23,46)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+'a
 *)

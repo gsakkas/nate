@@ -11,11 +11,23 @@ let rec digitsOfInt n = if n <= 0 then [] else (digitsOfInt n) @ [n mod 10];;
 
 (* changed spans
 (3,25)-(3,47)
-EMPTY
-EmptyG
+digitsOfInt n
+AppG (fromList [VarG])
 
-(3,44)-(3,46)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (2,47)-(2,62)) (Var (Just (2,48)-(2,59)) "digitsOfInt") [Var (Just (2,60)-(2,61)) "n"]
+*)
+
+(* typed spans
+(2,47)-(2,62)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

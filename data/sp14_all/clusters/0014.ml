@@ -1,138 +1,66 @@
-AppG (fromList [AppG (fromList [EmptyG]),LitG])
-List.fold_left (fun x ->
-                  fun acc -> x ^ ("; " ^ acc))
-               "" (List.map f l) ^ "]"
-"sin (pi*" ^ exprToString e
-exprToString e3 ^ ")"
-"sin" ^ exprToString ex
-max' 1.0 (min 1.0
-              ((2.71 ** ((sin (pi *. eval (a , x , y)) +. cos (pi *. eval (b , x , y))) -. 1.0)) -. 1.0))
-exprToString e4 ^ ")/2)"
-exprToString e3 ^ ")"
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f
-                         l) ^ "]"
-sepConcat "; " (List.map f l)
-exprToString expr3 ^ ")"
-exprToString ds4 ^ "))"
-exprToString tm3 ^ ")"
-exprToString t2 ^ ")"
-clone 0 (abs diff)
-clone 0 (abs diff)
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat "[" (List.map f l)
-sepConcat "[" (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat "; " (List.map f l)
-lengthOfList (digitsOfInt n) 0
-exprToString c ^ ")^0"
-sepConcat "" (List.map f l)
-sepConcat "" (List.map f l)
-exprToString y ^ ")/2)"
-sepConcat ";" (List.map f l)
-"*" ^ exprToString y
-exprToString e1 ^ ")"
-exprToString w ^ ")"
-sepConcat "; " (List.map f l)
-additivePersAndRoot (abs n) 0
-additivePersAndRoot (abs n) 0
-additivePersAndRoot (abs n) 0
-additivePersAndRoot (abs n) 0
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f l)
-exprToString b ^ ")/20"
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat "; " (List.map f l)
-expr a ^ ")"
-exprToString e3 ^ "))"
-exprToString e3 ^ "))"
-sepConcat "," (List.map f l)
-sepConcat "," (List.map f l)
-sepConcat "," (List.map f l)
-sepConcat "," (List.map f l)
-sepConcat "," (List.map f l)
-"[" ^ (sepConcat ";"
-                 (List.map f l) ^ "]")
-sepConcat ";" (List.map f
-                        l) ^ "]"
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f
-                        l) ^ "]"
-sepConcat ";" (List.map f
-                        l) ^ "]"
-"[" ^ (sepConcat ";"
-                 (List.map f l) ^ "]")
-sepConcat ";" (List.map f
-                        l) ^ "]"
-sepConcat ";" (List.map f
-                        l) ^ "]"
-sepConcat ";" (List.map f
-                        l) ^ "]"
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f
-                        l) ^ "]"
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f
-                        l) ^ "]"
-"[" ^ (sepConcat ";"
-                 (List.map f l) ^ "]")
-sepConcat ";" (List.map f
-                        l) ^ "]"
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-factorial (eval (e' , x , y))
-          1.0
-factorial (eval (e' , x , y))
-          1.0
-exprToString a ^ ")"
-exprToString b ^ ")"
-"+" ^ (exprToString b ^ (exprToString c ^ ")/3)"))
-exprToString c ^ ")/3)"
-"+" ^ (exprToString b ^ (exprToString c ^ ")/3)"))
-exprToString c ^ ")/3)"
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat ";" (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f l)
-sepConcat "; " (List.map f l)
-"pi* " ^ exprToString s
-"pi* " ^ exprToString s
-"?" ^ (exprToString e3 ^ ("?" ^ exprToString e4))
-"[" ^ (sepConcat ";"
-                 (List.map f l) ^ "]")
-sepConcat ";" (List.map f
-                        l) ^ "]"
-clone 0 (abs diff)
-clone 0 (abs diff)
-clone 0 (List.length l1)
-clone 0 (List.length l1)
-clone 0 (List.length l1)
-clone 0 (List.length l1)
-clone 0 (List.length l1)
-sepConcat "" (List.map f l)
-"+" ^ (exprToString ex3 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ ("+" ^ (exprToString ex5 ^ "))")))))))))))))))))))
-"+" ^ (exprToString ex4 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ ("+" ^ (exprToString ex5 ^ "))")))))))))))
-"+" ^ (exprToString ex5 ^ "))")
-exprToString ex3 ^ "))"
-sepConcat ";" (List.map f
-                        l) ^ "]"
-"[" ^ (sepConcat ";"
-                 (List.map f l) ^ "]")
-sepConcat ";" (List.map f
-                        l) ^ "]"
-sepConcat ";" (List.map f l)
+LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+let args = l2 in
+let (_ , res) =
+  List.fold_left f base args in
+res
+let (carry , num) = a in
+let (l1' , l2') = x in
+let addit =
+  (l1' + l2') + carry in
+(if addit > 10
+ then addit mod 10
+ else 0 , (addit / 10) :: num)
+let (l1' , l2') = x in
+let addit =
+  (l1' + l2') + carry in
+(if addit > 10
+ then addit mod 10
+ else 0 , (addit / 10) :: num)
+let (l1' , l2') = x in
+let addit =
+  (l1' + l2') + carry in
+(addit / 10 , (addit mod 10) :: num)
+let (carry , num) = a in
+let (l1 , l2) = x in
+(0 , l1 :: num)
+let (x1 , x2) = x in
+let (a1 , a2) = a in
+let h :: _ = a1 in
+let tens =
+  (x1 + x2) + (h / 10) in
+let ones =
+  (x1 + x2) + (h mod 10) in
+(tens :: a1 , ones :: a2)
+let (a1 , a2) = a in
+let h :: _ = a1 in
+let tens =
+  (x1 + x2) + (h / 10) in
+let ones =
+  (x1 + x2) + (h mod 10) in
+(tens :: a1 , ones :: a2)
+let (x' , x'') = x in
+let (c , s) = a in
+(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
+let (upper_mult , total) =
+  a in
+let newTotal =
+  mulByDigit x upper_mult in
+let updateTotal =
+  bigAdd newTotal total in
+(upper_mult @ [0] , updateTotal)
+let base = h in
+let l = sl in
+List.fold_left f base l
+let (l2digit2 , templ12) =
+  a in
+let multres =
+  mulByDigit l2digit templ1 in
+(0 , bigAdd (templ12 @ [0])
+            multres)
+let (i , j) = x in
+let (s , t) = a in
+(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
+let args = l1 in
+let (_ , res) =
+  List.fold_left f base args in
+res

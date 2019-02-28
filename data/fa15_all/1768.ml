@@ -23,8 +23,20 @@ let fixpoint (f,b) = wwhile ((helper f), b);;
 helper f
 AppG (fromList [VarG])
 
-(7,43)-(7,44)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (7,29)-(7,39)) (Var (Just (7,30)-(7,36)) "helper") [Var (Just (7,37)-(7,38)) "f"]
+*)
+
+(* typed spans
+(7,29)-(7,39)
+*)
+
+(* correct types
+bool -> (bool * bool)
+*)
+
+(* bad types
+(bool * 'a)
 *)

@@ -17,20 +17,20 @@ match f b with
                else wwhile (f , b')
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
-(2,52)-(2,53)
-c'
-VarG
+*)
 
-(2,67)-(2,68)
-b'
-VarG
+(* changed exprs
+Case (Just (3,2)-(3,71)) (App (Just (3,8)-(3,11)) (Var (Just (3,8)-(3,9)) "f") [Var (Just (3,10)-(3,11)) "b"]) [(TuplePat (Just (3,20)-(3,25)) [VarPat (Just (3,20)-(3,22)) "b'",VarPat (Just (3,23)-(3,25)) "c'"],Nothing,Ite (Just (3,30)-(3,71)) (Bop (Just (3,33)-(3,43)) Eq (Var (Just (3,33)-(3,35)) "c'") (Lit (Just (3,38)-(3,43)) (LB False))) (Var (Just (3,49)-(3,51)) "b'") (App (Just (3,57)-(3,71)) (Var (Just (3,57)-(3,63)) "wwhile") [Tuple (Just (3,64)-(3,71)) [Var (Just (3,65)-(3,66)) "f",Var (Just (3,68)-(3,70)) "b'"]]))]
+*)
 
-(2,74)-(2,75)
-(f , b')
-TupleG (fromList [VarG])
+(* typed spans
+(3,2)-(3,71)
+*)
 
-(2,76)-(2,77)
-b'
-VarG
+(* correct types
+'a
+*)
 
+(* bad types
+'a
 *)

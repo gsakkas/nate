@@ -47,27 +47,7 @@ EmptyG
 EMPTY
 EmptyG
 
-(7,15)-(7,22)
-EMPTY
-EmptyG
-
-(7,15)-(7,32)
-EMPTY
-EmptyG
-
-(7,25)-(7,32)
-EMPTY
-EmptyG
-
-(9,7)-(9,9)
-EMPTY
-EmptyG
-
 (9,7)-(9,35)
-EMPTY
-EmptyG
-
-(9,13)-(9,35)
 let pad = clone 0 sizDif in
 (l1 , pad @ l2)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
@@ -76,19 +56,7 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 (l1 , pad @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(10,7)-(10,35)
-EMPTY
-EmptyG
-
 (10,7)-(10,41)
-EMPTY
-EmptyG
-
-(10,8)-(10,28)
-EMPTY
-EmptyG
-
-(10,9)-(10,18)
 let pad =
   clone 0 (- sizDif) in
 (pad @ l1 , l2)
@@ -106,4 +74,37 @@ UopG VarG
 (pad @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+*)
+
+(* typed spans
+(5,2)-(8,57)
+(5,15)-(5,50)
+(7,7)-(7,51)
+(7,35)-(7,51)
+(8,7)-(8,57)
+(8,18)-(8,36)
+(8,26)-(8,36)
+(8,40)-(8,56)
+*)
+
+(* typed spans
+(int list * int list)
+int
+(int list * int list)
+(int list * int list)
+(int list * int list)
+int list
+int
+(int list * int list)
+*)
+
+(* typed spans
+int list list
+int
+int list list
+int list list
+int list list
+int -> int -> int list
+int
+int list
 *)

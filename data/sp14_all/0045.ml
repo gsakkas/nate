@@ -37,8 +37,20 @@ let padZero l1 l2 =
 List.append zeroes l1
 AppG (fromList [VarG])
 
-(14,55)-(14,57)
-l1
-VarG
+*)
 
+(* changed exprs
+App (Just (14,33)-(14,56)) (Var (Just (14,34)-(14,45)) "List.append") [Var (Just (14,46)-(14,52)) "zeroes",Var (Just (14,53)-(14,55)) "l1"]
+*)
+
+(* typed spans
+(14,33)-(14,56)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list -> int list
 *)

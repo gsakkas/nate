@@ -67,12 +67,24 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(31,52)-(31,56)
-EMPTY
-EmptyG
-
 (31,62)-(31,63)
 (- 1.0)
 UopG LitG
 
+*)
+
+(* changed exprs
+Uop (Just (31,52)-(31,58)) Neg (Lit (Just (31,54)-(31,57)) (LD 1.0))
+*)
+
+(* typed spans
+(31,52)-(31,58)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

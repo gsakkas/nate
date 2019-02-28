@@ -20,17 +20,29 @@ let rec additivePersistence n =
 fun i -> i + 1
 LamG (BopG EmptyG EmptyG)
 
-(4,54)-(4,56)
-EMPTY
-EmptyG
-
 (4,54)-(4,62)
-EMPTY
-EmptyG
-
-(4,60)-(4,62)
 match n with
 | n -> incre n
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+*)
+
+(* changed exprs
+Lam (Just (2,10)-(2,19)) (VarPat (Just (2,10)-(2,11)) "i") (Bop (Just (2,14)-(2,19)) Plus (Var (Just (2,14)-(2,15)) "i") (Lit (Just (2,18)-(2,19)) (LI 1))) Nothing
+Case (Just (7,24)-(7,53)) (Var (Just (7,31)-(7,32)) "n") [(VarPat (Just (7,40)-(7,41)) "n",Nothing,App (Just (7,45)-(7,52)) (Var (Just (7,45)-(7,50)) "incre") [Var (Just (7,51)-(7,52)) "n"])]
+*)
+
+(* typed spans
+(2,10)-(2,19)
+(7,24)-(7,53)
+*)
+
+(* correct types
+int -> int
+int
+*)
+
+(* bad types
+int -> bool
+int list
 *)

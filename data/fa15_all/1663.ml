@@ -59,3 +59,19 @@ ans
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (21,51)-(21,54)) "ans"
+*)
+
+(* typed spans
+(21,51)-(21,54)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+(int * int list)
+*)

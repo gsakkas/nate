@@ -17,6 +17,22 @@ let rec listReverse l =
 (* changed spans
 (5,64)-(5,76)
 [head ; tail]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (5,64)-(5,76)) [Var (Just (5,65)-(5,69)) "head",Var (Just (5,71)-(5,75)) "tail"] Nothing
+*)
+
+(* typed spans
+(5,64)-(5,76)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list
 *)

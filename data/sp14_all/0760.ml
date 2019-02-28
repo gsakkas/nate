@@ -27,16 +27,28 @@ let removeDuplicates l =
 seen
 VarG
 
-(8,20)-(8,28)
-EMPTY
-EmptyG
-
 (8,20)-(8,44)
-EMPTY
-EmptyG
-
-(8,29)-(8,44)
 t
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (7,69)-(7,73)) "seen"
+Var (Just (8,20)-(8,21)) "t"
+*)
+
+(* typed spans
+(7,69)-(7,73)
+(8,20)-(8,21)
+*)
+
+(* correct types
+'a list
+'a list
+*)
+
+(* bad types
+unit
+'a
 *)

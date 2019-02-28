@@ -90,3 +90,19 @@ l1
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (38,55)-(38,57)) "l1"
+*)
+
+(* typed spans
+(38,55)-(38,57)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
+*)

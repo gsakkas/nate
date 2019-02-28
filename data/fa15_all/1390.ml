@@ -72,3 +72,19 @@ exprToString nlog
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (31,28)-(31,47)) (Var (Just (31,29)-(31,41)) "exprToString") [Var (Just (31,42)-(31,46)) "nlog"]
+*)
+
+(* typed spans
+(31,28)-(31,47)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+expr
+*)

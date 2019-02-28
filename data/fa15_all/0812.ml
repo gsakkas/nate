@@ -29,11 +29,23 @@ let rec additivePersistence n =
 
 (* changed spans
 (11,48)-(11,56)
-EMPTY
-EmptyG
+x
+VarG
 
-(11,49)-(11,53)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (10,65)-(10,66)) "x"
+*)
+
+(* typed spans
+(10,65)-(10,66)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

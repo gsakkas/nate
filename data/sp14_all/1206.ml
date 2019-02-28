@@ -40,3 +40,19 @@ length2 > length1
 BopG VarG VarG
 
 *)
+
+(* changed exprs
+Bop (Just (13,7)-(13,24)) Gt (Var (Just (13,7)-(13,14)) "length2") (Var (Just (13,17)-(13,24)) "length1")
+*)
+
+(* typed spans
+(13,7)-(13,24)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+bool
+*)

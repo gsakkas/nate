@@ -31,3 +31,9 @@ n / 10
 BopG VarG LitG
 
 *)
+
+(* typed spans
+unit
+unit
+int
+*)

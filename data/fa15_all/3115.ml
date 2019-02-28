@@ -25,12 +25,20 @@ let rec additivePersistence n =
 additivePersistence (sumList (digitsOfInt n))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(8,44)-(8,51)
-sumList (digitsOfInt n)
-AppG (fromList [AppG (fromList [EmptyG])])
+*)
 
-(8,52)-(8,63)
-digitsOfInt n
-AppG (fromList [VarG])
+(* changed exprs
+App (Just (8,24)-(8,69)) (Var (Just (8,24)-(8,43)) "additivePersistence") [App (Just (8,44)-(8,69)) (Var (Just (8,45)-(8,52)) "sumList") [App (Just (8,53)-(8,68)) (Var (Just (8,54)-(8,65)) "digitsOfInt") [Var (Just (8,66)-(8,67)) "n"]]]
+*)
 
+(* typed spans
+(8,24)-(8,69)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

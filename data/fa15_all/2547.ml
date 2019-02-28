@@ -60,74 +60,26 @@ let rec mulByDigit i l = if i > 0 then mulByDigit (i - 1) (bigAdd l l) else l;;
 
 (* changed spans
 (27,2)-(28,69)
-EMPTY
-EmptyG
-
-(27,8)-(27,24)
-EMPTY
-EmptyG
-
-(27,10)-(27,24)
 if i > 0
 then mulByDigit (i - 1)
                 (bigAdd l l)
 else l
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) VarG
 
-(27,14)-(27,20)
-bigAdd l l
-AppG (fromList [VarG])
+*)
 
-(27,14)-(27,24)
-i > 0
-BopG VarG LitG
+(* changed exprs
+Ite (Just (26,25)-(26,77)) (Bop (Just (26,28)-(26,33)) Gt (Var (Just (26,28)-(26,29)) "i") (Lit (Just (26,32)-(26,33)) (LI 0))) (App (Just (26,39)-(26,70)) (Var (Just (26,39)-(26,49)) "mulByDigit") [Bop (Just (26,50)-(26,57)) Minus (Var (Just (26,51)-(26,52)) "i") (Lit (Just (26,55)-(26,56)) (LI 1)),App (Just (26,58)-(26,70)) (Var (Just (26,59)-(26,65)) "bigAdd") [Var (Just (26,66)-(26,67)) "l",Var (Just (26,68)-(26,69)) "l"]]) (Var (Just (26,76)-(26,77)) "l")
+*)
 
-(27,21)-(27,22)
-EMPTY
-EmptyG
+(* typed spans
+(26,25)-(26,77)
+*)
 
-(27,23)-(27,24)
-EMPTY
-EmptyG
+(* correct types
+int list
+*)
 
-(28,2)-(28,69)
-EMPTY
-EmptyG
-
-(28,13)-(28,14)
-EMPTY
-EmptyG
-
-(28,18)-(28,69)
-EMPTY
-EmptyG
-
-(28,29)-(28,37)
-EMPTY
-EmptyG
-
-(28,29)-(28,39)
-EMPTY
-EmptyG
-
-(28,43)-(28,57)
-EMPTY
-EmptyG
-
-(28,43)-(28,69)
-EMPTY
-EmptyG
-
-(28,58)-(28,59)
-EMPTY
-EmptyG
-
-(28,60)-(28,64)
-EMPTY
-EmptyG
-
-(28,65)-(28,69)
-l
-VarG
-
+(* bad types
+'a
 *)

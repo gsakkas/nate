@@ -70,3 +70,31 @@ lr2
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (16,25)-(16,27)) "l1"
+Var (Just (17,25)-(17,27)) "l2"
+Var (Just (18,19)-(18,22)) "lr1"
+Var (Just (19,19)-(19,22)) "lr2"
+*)
+
+(* typed spans
+(16,25)-(16,27)
+(17,25)-(17,27)
+(18,19)-(18,22)
+(19,19)-(19,22)
+*)
+
+(* correct types
+int list
+int list
+int list
+int list
+*)
+
+(* bad types
+int list
+int list
+int list
+int list
+*)

@@ -32,11 +32,43 @@ f b
 AppG (fromList [VarG])
 
 (7,37)-(7,43)
-EMPTY
-EmptyG
+f
+VarG
 
-(7,46)-(7,47)
-EMPTY
-EmptyG
+(7,37)-(7,43)
+b
+VarG
 
+*)
+
+(* changed exprs
+Tuple (Just (2,35)-(2,44)) [Lit (Just (2,36)-(2,40)) (LB True),Var (Just (2,42)-(2,43)) "b"]
+Tuple (Just (2,50)-(2,64)) [Lit (Just (2,51)-(2,56)) (LB False),App (Just (2,58)-(2,63)) (Var (Just (2,59)-(2,60)) "f") [Var (Just (2,61)-(2,62)) "b"]]
+App (Just (2,58)-(2,63)) (Var (Just (2,59)-(2,60)) "f") [Var (Just (2,61)-(2,62)) "b"]
+Var (Just (7,37)-(7,38)) "f"
+Var (Just (7,41)-(7,42)) "b"
+*)
+
+(* typed spans
+(2,35)-(2,44)
+(2,50)-(2,64)
+(2,58)-(2,63)
+(7,37)-(7,38)
+(7,41)-(7,42)
+*)
+
+(* correct types
+(bool * bool)
+(bool * bool)
+bool
+bool -> bool
+bool
+*)
+
+(* bad types
+bool
+bool
+('a -> ('a * bool) * 'a) -> 'a
+('a * 'b)
+('a * 'b)
 *)

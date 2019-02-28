@@ -53,14 +53,6 @@ EMPTY
 EmptyG
 
 (9,31)-(9,45)
-EMPTY
-EmptyG
-
-(9,32)-(9,35)
-EMPTY
-EmptyG
-
-(9,36)-(9,44)
 absNumZeros
 VarG
 
@@ -80,14 +72,6 @@ EmptyG
 EMPTY
 EmptyG
 
-(11,67)-(11,72)
-EMPTY
-EmptyG
-
-(12,10)-(12,76)
-EMPTY
-EmptyG
-
 (12,41)-(12,75)
 EMPTY
 EmptyG
@@ -96,16 +80,25 @@ EmptyG
 EMPTY
 EmptyG
 
-(12,60)-(12,74)
-EMPTY
-EmptyG
+*)
 
-(12,61)-(12,66)
-EMPTY
-EmptyG
+(* typed spans
+(6,2)-(11,77)
+(10,21)-(10,40)
+(10,29)-(10,40)
+(11,26)-(11,48)
+*)
 
-(12,68)-(12,73)
-EMPTY
-EmptyG
+(* typed spans
+(int list * int list)
+int list
+int
+(int list * int list)
+*)
 
+(* typed spans
+('a list * 'b list) list
+int -> (int * int) list
+int
+('a list * 'b list) list
 *)

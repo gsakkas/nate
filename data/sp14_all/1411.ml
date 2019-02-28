@@ -21,16 +21,24 @@ let rec digitalRoot n =
 *)
 
 (* changed spans
-(8,36)-(8,53)
+(8,36)-(8,57)
 r_digitalRoot n (-1)
 AppG (fromList [VarG,LitG])
 
-(8,36)-(8,57)
-EMPTY
-EmptyG
+*)
 
-(8,56)-(8,57)
-(-1)
-LitG
+(* changed exprs
+App (Just (8,36)-(8,56)) (Var (Just (8,36)-(8,49)) "r_digitalRoot") [Var (Just (8,50)-(8,51)) "n",Lit (Just (8,52)-(8,56)) (LI (-1))]
+*)
 
+(* typed spans
+(8,36)-(8,56)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

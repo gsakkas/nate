@@ -39,34 +39,6 @@ LamG (BopG EmptyG EmptyG)
 EMPTY
 EmptyG
 
-(7,26)-(7,27)
-EMPTY
-EmptyG
-
-(7,31)-(7,32)
-EMPTY
-EmptyG
-
-(8,2)-(9,22)
-EMPTY
-EmptyG
-
-(8,15)-(8,70)
-EMPTY
-EmptyG
-
-(8,19)-(8,70)
-EMPTY
-EmptyG
-
-(8,22)-(8,30)
-EMPTY
-EmptyG
-
-(8,22)-(8,32)
-EMPTY
-EmptyG
-
 (8,38)-(8,47)
 EMPTY
 EmptyG
@@ -91,4 +63,31 @@ EmptyG
 gs
 VarG
 
+*)
+
+(* typed spans
+(7,2)-(8,16)
+(7,26)-(7,45)
+(7,50)-(7,51)
+(7,44)-(7,45)
+(7,54)-(7,62)
+(8,10)-(8,12)
+*)
+
+(* typed spans
+int
+int -> bool
+int
+int
+int -> bool
+int -> (int * bool)
+*)
+
+(* typed spans
+'a
+'a
+'a
+bool
+'a -> 'a
+bool
 *)

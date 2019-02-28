@@ -118,43 +118,23 @@ let bigMul l1 l2 =
 
 (* changed spans
 (55,13)-(55,65)
-EMPTY
-EmptyG
+List.rev (List.combine l2 l2)
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(55,45)-(55,46)
-EMPTY
-EmptyG
+*)
 
-(55,47)-(55,65)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (55,13)-(55,42)) (Var (Just (55,13)-(55,21)) "List.rev") [App (Just (55,22)-(55,42)) (Var (Just (55,23)-(55,35)) "List.combine") [Var (Just (55,36)-(55,38)) "l2",Var (Just (55,39)-(55,41)) "l2"]]
+*)
 
-(55,48)-(55,64)
-EMPTY
-EmptyG
+(* typed spans
+(55,13)-(55,42)
+*)
 
-(55,49)-(55,55)
-EMPTY
-EmptyG
+(* correct types
+(int * int) list
+*)
 
-(55,50)-(55,51)
-EMPTY
-EmptyG
-
-(55,53)-(55,54)
-EMPTY
-EmptyG
-
-(55,57)-(55,63)
-EMPTY
-EmptyG
-
-(55,58)-(55,59)
-EMPTY
-EmptyG
-
-(55,61)-(55,62)
-EMPTY
-EmptyG
-
+(* bad types
+((int * int) * (int * int)) list
 *)

@@ -26,56 +26,32 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(2,19)-(3,74)
-EMPTY
-EmptyG
-
-(2,23)-(3,74)
-EMPTY
-EmptyG
-
-(3,2)-(3,74)
-EMPTY
-EmptyG
-
-(3,8)-(3,11)
-EMPTY
-EmptyG
-
-(3,25)-(3,28)
-EMPTY
-EmptyG
-
-(3,45)-(3,49)
-EMPTY
-EmptyG
-
-(3,45)-(3,74)
-EMPTY
-EmptyG
-
-(3,53)-(3,74)
-EMPTY
-EmptyG
-
-(3,54)-(3,64)
-EMPTY
-EmptyG
-
-(3,65)-(3,69)
-EMPTY
-EmptyG
-
-(3,70)-(3,73)
-EMPTY
-EmptyG
-
 (10,54)-(10,64)
 (@)
 VarG
 
-(10,65)-(10,66)
+(10,54)-(10,64)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+Var (Just (7,58)-(7,59)) "@"
+List (Just (7,54)-(7,57)) [Var (Just (7,55)-(7,56)) "h"] Nothing
+*)
+
+(* typed spans
+(7,58)-(7,59)
+(7,54)-(7,57)
+*)
+
+(* correct types
+'a list -> 'a list -> 'a list
+'a list
+*)
+
+(* bad types
+'a list -> 'a list -> 'a list
+'a list -> 'a list -> 'a list
 *)

@@ -79,24 +79,36 @@ let rec eval (e,x,y) =
 1.0 /. eval (e , x , y)
 BopG LitG (AppG (fromList [EmptyG]))
 
-(28,65)-(28,66)
-EMPTY
-EmptyG
-
 (28,65)-(28,70)
-EMPTY
-EmptyG
-
-(28,69)-(28,70)
 1.0 /. 3.0
 BopG LitG LitG
-
-(30,6)-(35,23)
-3.0
-LitG
 
 (35,11)-(35,23)
 (- 1.0) /. 3.0
 BopG (UopG EmptyG) LitG
 
+*)
+
+(* changed exprs
+Bop (Just (28,37)-(28,60)) FDiv (Lit (Just (28,37)-(28,40)) (LD 1.0)) (App (Just (28,44)-(28,60)) (Var (Just (28,45)-(28,49)) "eval") [Tuple (Just (28,50)-(28,59)) [Var (Just (28,51)-(28,52)) "e",Var (Just (28,54)-(28,55)) "x",Var (Just (28,57)-(28,58)) "y"]])
+Bop (Just (28,66)-(28,76)) FDiv (Lit (Just (28,66)-(28,69)) (LD 1.0)) (Lit (Just (28,73)-(28,76)) (LD 3.0))
+Bop (Just (35,11)-(35,24)) FDiv (Uop (Just (35,11)-(35,17)) Neg (Lit (Just (35,13)-(35,16)) (LD 1.0))) (Lit (Just (35,21)-(35,24)) (LD 3.0))
+*)
+
+(* typed spans
+(28,37)-(28,60)
+(28,66)-(28,76)
+(35,11)-(35,24)
+*)
+
+(* correct types
+float
+float
+float
+*)
+
+(* bad types
+int
+int
+int
 *)

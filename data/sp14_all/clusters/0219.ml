@@ -1,4 +1,2 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-match f b with
-| (x , true) -> wwhile (f , x)
-| (x , false) -> x
+ConAppG (Just (TupleG (fromList [AppG (fromList [BopG VarG LitG]),BopG VarG (BopG (BopG VarG LitG) LitG)])))
+(n - ((n / 10) * 10)) :: (digitsOfInt (n / 10))

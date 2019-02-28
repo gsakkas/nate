@@ -72,14 +72,30 @@ let bigAdd l1 l2 =
 (* changed spans
 (23,25)-(23,28)
 [num]
-ListG VarG Nothing
+ListG VarG
 
 (24,20)-(24,54)
 (num / 10 , [num mod 10] @ list)
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(25,4)-(27,51)
-[num mod 10] @ list
-AppG (fromList [VarG,ListG EmptyG Nothing])
+*)
 
+(* changed exprs
+List (Just (23,25)-(23,30)) [Var (Just (23,26)-(23,29)) "num"] Nothing
+Tuple (Just (27,22)-(27,57)) [Bop (Just (27,23)-(27,33)) Div (Var (Just (27,24)-(27,27)) "num") (Lit (Just (27,30)-(27,32)) (LI 10)),App (Just (27,35)-(27,56)) (Var (Just (27,49)-(27,50)) "@") [List (Just (27,36)-(27,48)) [Bop (Just (27,37)-(27,47)) Mod (Var (Just (27,37)-(27,40)) "num") (Lit (Just (27,45)-(27,47)) (LI 10))] Nothing,Var (Just (27,51)-(27,55)) "list"]]
+*)
+
+(* typed spans
+(23,25)-(23,30)
+(27,22)-(27,57)
+*)
+
+(* correct types
+int list
+(int * int list)
+*)
+
+(* bad types
+int
+unit
 *)

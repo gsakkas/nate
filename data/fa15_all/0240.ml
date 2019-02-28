@@ -26,14 +26,22 @@ let removeDuplicates l =
 if List.mem h seen
 then seen
 else h :: seen
-IteG (AppG (fromList [EmptyG])) VarG (ConAppG (Just EmptyG) Nothing)
+IteG (AppG (fromList [EmptyG])) VarG (ConAppG (Just EmptyG))
 
-(7,31)-(7,32)
-seen
-VarG
+*)
 
-(7,36)-(7,74)
-seen
-VarG
+(* changed exprs
+Ite (Just (7,20)-(7,63)) (App (Just (7,23)-(7,38)) (Var (Just (7,23)-(7,31)) "List.mem") [Var (Just (7,32)-(7,33)) "h",Var (Just (7,34)-(7,38)) "seen"]) (Var (Just (7,44)-(7,48)) "seen") (ConApp (Just (7,54)-(7,63)) "::" (Just (Tuple (Just (7,54)-(7,63)) [Var (Just (7,54)-(7,55)) "h",Var (Just (7,59)-(7,63)) "seen"])) Nothing)
+*)
 
+(* typed spans
+(7,20)-(7,63)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+bool
 *)

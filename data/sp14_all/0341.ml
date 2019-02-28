@@ -69,12 +69,20 @@ let rec eval (e,x,y) =
 sin ((pi *. eval (e , x , y)) *. 0.5)
 AppG (fromList [BopG EmptyG EmptyG])
 
-(30,22)-(30,47)
-sin
-VarG
+*)
 
-(30,23)-(30,39)
-pi *. eval (e , x , y)
-BopG VarG (AppG (fromList [EmptyG]))
+(* changed exprs
+App (Just (30,17)-(30,54)) (Var (Just (30,17)-(30,20)) "sin") [Bop (Just (30,21)-(30,54)) FTimes (Bop (Just (30,22)-(30,46)) FTimes (Var (Just (30,23)-(30,25)) "pi") (App (Just (30,29)-(30,45)) (Var (Just (30,30)-(30,34)) "eval") [Tuple (Just (30,35)-(30,44)) [Var (Just (30,36)-(30,37)) "e",Var (Just (30,39)-(30,40)) "x",Var (Just (30,42)-(30,43)) "y"]])) (Lit (Just (30,50)-(30,53)) (LD 0.5))]
+*)
 
+(* typed spans
+(30,17)-(30,54)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+expr
 *)

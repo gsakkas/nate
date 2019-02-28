@@ -23,16 +23,24 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,54)-(7,55)
-EMPTY
-EmptyG
-
 (7,54)-(7,62)
-EMPTY
-EmptyG
+seen
+VarG
 
-(7,56)-(7,57)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (7,54)-(7,58)) "seen"
+*)
+
+(* typed spans
+(7,54)-(7,58)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list list
 *)

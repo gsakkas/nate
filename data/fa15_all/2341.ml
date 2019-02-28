@@ -136,3 +136,27 @@ VarG
 TupleG (fromList [VarG])
 
 *)
+
+(* typed spans
+(expr * float * float)
+float
+(expr * float * float)
+float
+float
+(expr * float * float)
+float
+(expr * float * float)
+float
+float
+(expr * float * float)
+float
+(expr * float * float)
+float
+(expr * float * float)
+float
+(expr * float * float)
+float
+(expr * float * float)
+float
+(expr * float * float)
+*)

@@ -21,12 +21,28 @@ let fixpoint (f,b) = wwhile (let n x = ((f x), (x = (f x))) in (n, b));;
 f x
 AppG (fromList [VarG])
 
-(6,43)-(6,54)
-x
-VarG
-
 (6,60)-(6,61)
 n
 VarG
 
+*)
+
+(* changed exprs
+App (Just (6,40)-(6,45)) (Var (Just (6,41)-(6,42)) "f") [Var (Just (6,43)-(6,44)) "x"]
+Var (Just (6,64)-(6,65)) "n"
+*)
+
+(* typed spans
+(6,40)-(6,45)
+(6,64)-(6,65)
+*)
+
+(* correct types
+'a
+'a -> ('a * bool)
+*)
+
+(* bad types
+'a -> 'a
+'a -> 'a
 *)

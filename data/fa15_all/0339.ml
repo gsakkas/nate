@@ -27,34 +27,20 @@ fun b ->
          else false)
 LamG (TupleG (fromList [EmptyG]))
 
-(3,10)-(3,13)
-(f b , if f b = b
-       then true
-       else false)
-TupleG (fromList [AppG (fromList [EmptyG]),IteG EmptyG EmptyG EmptyG])
+*)
 
-(3,20)-(3,21)
-f b
-AppG (fromList [VarG])
+(* changed exprs
+Lam (Just (2,23)-(2,71)) (VarPat (Just (2,23)-(2,24)) "b") (Tuple (Just (2,27)-(2,71)) [App (Just (2,28)-(2,33)) (Var (Just (2,29)-(2,30)) "f") [Var (Just (2,31)-(2,32)) "b"],Ite (Just (2,35)-(2,70)) (Bop (Just (2,39)-(2,48)) Eq (App (Just (2,39)-(2,44)) (Var (Just (2,40)-(2,41)) "f") [Var (Just (2,42)-(2,43)) "b"]) (Var (Just (2,47)-(2,48)) "b")) (Lit (Just (2,54)-(2,58)) (LB True)) (Lit (Just (2,64)-(2,69)) (LB False))]) Nothing
+*)
 
-(3,24)-(3,25)
-f
-VarG
+(* typed spans
+(2,23)-(2,71)
+*)
 
-(3,31)-(3,40)
-EMPTY
-EmptyG
+(* correct types
+'a -> ('a * bool)
+*)
 
-(3,32)-(3,33)
-b
-VarG
-
-(3,46)-(3,56)
-EMPTY
-EmptyG
-
-(3,47)-(3,48)
-EMPTY
-EmptyG
-
+(* bad types
+('a * bool)
 *)

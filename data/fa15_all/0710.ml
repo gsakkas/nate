@@ -71,8 +71,20 @@ let rec eval (e,x,y) =
 e1
 VarG
 
-(31,51)-(31,53)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (31,45)-(31,47)) "e1"
+*)
+
+(* typed spans
+(31,45)-(31,47)
+*)
+
+(* correct types
+expr
+*)
+
+(* bad types
+expr
 *)

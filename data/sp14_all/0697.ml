@@ -20,3 +20,23 @@ x'
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (3,17)-(3,18)) "x"
+Var (Just (3,22)-(3,24)) "x'"
+*)
+
+(* typed spans
+(3,17)-(3,18)
+(3,22)-(3,24)
+*)
+
+(* correct types
+'a -> 'a
+'a
+*)
+
+(* bad types
+'a -> 'a
+'a -> 'a
+*)

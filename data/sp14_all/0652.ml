@@ -78,37 +78,28 @@ match a with
                                           l1') a')
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(32,4)-(32,68)
-l1'
-VarG
-
-(32,10)-(32,11)
-EMPTY
-EmptyG
-
-(32,25)-(32,27)
-(l1' , bigAdd (mulByDigit x
-                          l1') a')
-TupleG (fromList [VarG,AppG (fromList [EmptyG])])
-
-(32,45)-(32,65)
-mulByDigit x l1'
-AppG (fromList [VarG])
-
-(32,57)-(32,64)
-EMPTY
-EmptyG
-
-(32,58)-(32,59)
-x
-VarG
-
 (33,18)-(33,21)
-EMPTY
-EmptyG
-
-(33,19)-(33,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+Case (Just (31,4)-(31,68)) (Var (Just (31,10)-(31,11)) "a") [(TuplePat (Just (31,20)-(31,26)) [VarPat (Just (31,20)-(31,23)) "l1'",VarPat (Just (31,24)-(31,26)) "a'"],Nothing,Tuple (Just (31,31)-(31,68)) [Var (Just (31,32)-(31,35)) "l1'",App (Just (31,37)-(31,67)) (Var (Just (31,38)-(31,44)) "bigAdd") [App (Just (31,45)-(31,63)) (Var (Just (31,46)-(31,56)) "mulByDigit") [Var (Just (31,57)-(31,58)) "x",Var (Just (31,59)-(31,62)) "l1'"],Var (Just (31,64)-(31,66)) "a'"]])]
+List (Just (32,18)-(32,20)) [] Nothing
+*)
+
+(* typed spans
+(31,4)-(31,68)
+(32,18)-(32,20)
+*)
+
+(* correct types
+(int list * int list)
+int list
+*)
+
+(* bad types
+'a
+int list
 *)

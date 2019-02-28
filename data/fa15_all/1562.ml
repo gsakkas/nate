@@ -40,3 +40,19 @@ n
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (14,66)-(14,67)) "n"
+*)
+
+(* typed spans
+(14,66)-(14,67)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+unit
+*)

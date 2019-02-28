@@ -23,24 +23,24 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,23)-(7,31)
-EMPTY
-EmptyG
-
 (7,23)-(7,41)
-EMPTY
-EmptyG
-
-(7,32)-(7,41)
-EMPTY
-EmptyG
-
-(7,33)-(7,34)
-EMPTY
-EmptyG
-
-(7,36)-(7,40)
 true
 LitG
 
+*)
+
+(* changed exprs
+Lit (Just (7,23)-(7,27)) (LB True)
+*)
+
+(* typed spans
+(7,23)-(7,27)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+('a * 'a list) list -> bool
 *)

@@ -63,12 +63,16 @@ TupleG (fromList [LitG])
 EMPTY
 EmptyG
 
-(23,62)-(23,63)
-EMPTY
-EmptyG
+*)
 
-(23,65)-(23,66)
-EMPTY
-EmptyG
+(* typed spans
+(23,15)-(23,21)
+*)
 
+(* typed spans
+(int * int)
+*)
+
+(* typed spans
+int list
 *)

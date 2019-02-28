@@ -99,16 +99,12 @@ exprToString i
 AppG (fromList [VarG])
 
 (29,55)-(29,57)
-EMPTY
-EmptyG
+i
+VarG
 
 (30,27)-(30,39)
 exprToString i1 ^ ("^" ^ exprToString i2)
 AppG (fromList [AppG (fromList [EmptyG])])
-
-(30,27)-(30,62)
-i
-VarG
 
 (30,43)-(30,46)
 "^" ^ exprToString i2
@@ -118,4 +114,43 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 exprToString i2
 AppG (fromList [VarG])
 
+*)
+
+(* typed spans
+(14,2)-(30,72)
+(29,16)-(29,32)
+(29,16)-(29,59)
+(29,30)-(29,31)
+(29,35)-(29,59)
+(29,42)-(29,58)
+(29,56)-(29,57)
+(30,27)-(30,72)
+(30,47)-(30,72)
+(30,54)-(30,71)
+*)
+
+(* typed spans
+string
+string
+string
+expr
+string
+string
+expr
+string
+string
+string
+*)
+
+(* typed spans
+string
+expr -> string
+string
+expr
+string
+expr -> string
+expr
+expr -> string
+string
+expr -> string
 *)

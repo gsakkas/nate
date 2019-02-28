@@ -14,3 +14,19 @@ fun a -> a
 LamG VarG
 
 *)
+
+(* changed exprs
+Lam (Just (2,26)-(2,31)) (VarPat (Just (2,26)-(2,27)) "a") (Var (Just (2,30)-(2,31)) "a") Nothing
+*)
+
+(* typed spans
+(2,26)-(2,31)
+*)
+
+(* correct types
+'a -> 'a
+*)
+
+(* bad types
+'a
+*)

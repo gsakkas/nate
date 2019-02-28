@@ -84,3 +84,23 @@ TupleG (fromList [LitG])
 TupleG (fromList [LitG])
 
 *)
+
+(* changed exprs
+Tuple (Just (29,15)-(29,21)) [Lit (Just (29,16)-(29,17)) (LI 0),Lit (Just (29,19)-(29,20)) (LI 4)]
+Tuple (Just (35,19)-(35,25)) [Lit (Just (35,20)-(35,21)) (LI 0),Lit (Just (35,23)-(35,24)) (LI 1)]
+*)
+
+(* typed spans
+(29,15)-(29,21)
+(35,19)-(35,25)
+*)
+
+(* correct types
+(int * int)
+(int * int)
+*)
+
+(* bad types
+'a
+'a
+*)

@@ -52,3 +52,19 @@ let palindrome w =
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (2,37)-(2,40)) (LC 'u')
+*)
+
+(* typed spans
+(2,37)-(2,40)
+*)
+
+(* correct types
+char
+*)
+
+(* bad types
+string
+*)

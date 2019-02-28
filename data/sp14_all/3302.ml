@@ -29,6 +29,22 @@ let bigMul l1 l2 =
 (* changed spans
 (3,39)-(3,40)
 [k]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (3,39)-(3,42)) [Var (Just (3,40)-(3,41)) "k"] Nothing
+*)
+
+(* typed spans
+(3,39)-(3,42)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
 *)

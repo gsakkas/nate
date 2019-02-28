@@ -58,3 +58,19 @@ let rec eval (e,x,y) =
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (19,65)-(19,67)) (LD 2.0)
+*)
+
+(* typed spans
+(19,65)-(19,67)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

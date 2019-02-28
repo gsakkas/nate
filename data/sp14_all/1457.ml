@@ -20,3 +20,19 @@ h
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (5,65)-(5,66)) "h"
+*)
+
+(* typed spans
+(5,65)-(5,66)
+*)
+
+(* correct types
+'a -> ('a * bool)
+*)
+
+(* bad types
+'a -> 'a
+*)

@@ -18,12 +18,6 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(6,14)-(6,72)
-if f b
-then (b , true)
-else (b , false)
-IteG (AppG (fromList [EmptyG])) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
 (6,32)-(6,52)
 fun b ->
   if f b
@@ -31,16 +25,20 @@ fun b ->
   else (b , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(6,40)-(6,51)
-EMPTY
-EmptyG
+*)
 
-(6,41)-(6,46)
-(b , false)
-TupleG (fromList [VarG,LitG])
+(* changed exprs
+Lam (Just (7,11)-(7,52)) (VarPat (Just (7,11)-(7,12)) "b") (Ite (Just (7,15)-(7,52)) (App (Just (7,18)-(7,21)) (Var (Just (7,18)-(7,19)) "f") [Var (Just (7,20)-(7,21)) "b"]) (Tuple (Just (7,27)-(7,36)) [Var (Just (7,28)-(7,29)) "b",Lit (Just (7,31)-(7,35)) (LB True)]) (Tuple (Just (7,42)-(7,52)) [Var (Just (7,43)-(7,44)) "b",Lit (Just (7,46)-(7,51)) (LB False)])) Nothing
+*)
 
-(6,42)-(6,43)
-(b , true)
-TupleG (fromList [VarG,LitG])
+(* typed spans
+(7,11)-(7,52)
+*)
 
+(* correct types
+'a -> ('a * bool)
+*)
+
+(* bad types
+('a * bool)
 *)

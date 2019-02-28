@@ -17,8 +17,20 @@ let sqsum xs =
 f 4 xs
 AppG (fromList [VarG,LitG])
 
-(4,19)-(4,43)
-xs
-VarG
+*)
 
+(* changed exprs
+App (Just (4,13)-(4,19)) (Var (Just (4,13)-(4,14)) "f") [Lit (Just (4,15)-(4,16)) (LI 4),Var (Just (4,17)-(4,19)) "xs"]
+*)
+
+(* typed spans
+(4,13)-(4,19)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+'a list
 *)

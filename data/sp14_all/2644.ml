@@ -74,12 +74,20 @@ factorial (eval (e' , x , y))
           1.0
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(30,30)-(30,34)
-eval (e' , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
+*)
 
-(30,46)-(30,47)
-1.0
-LitG
+(* changed exprs
+App (Just (30,20)-(30,51)) (Var (Just (30,20)-(30,29)) "factorial") [App (Just (30,30)-(30,47)) (Var (Just (30,31)-(30,35)) "eval") [Tuple (Just (30,36)-(30,46)) [Var (Just (30,37)-(30,39)) "e'",Var (Just (30,41)-(30,42)) "x",Var (Just (30,44)-(30,45)) "y"]],Lit (Just (30,48)-(30,51)) (LD 1.0)]
+*)
 
+(* typed spans
+(30,20)-(30,51)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+float
 *)

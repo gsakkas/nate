@@ -21,20 +21,20 @@ match fs with
 | h :: t -> f (fun x -> x) h
 CaseG VarG (fromList [(Nothing,LamG EmptyG),(Nothing,AppG (fromList [EmptyG]))])
 
-(4,37)-(4,38)
-f (fun x -> x) h
-AppG (fromList [VarG,LamG EmptyG])
+*)
 
-(4,37)-(4,40)
-fun x -> x
-LamG VarG
+(* changed exprs
+Case (Just (4,13)-(4,76)) (Var (Just (4,19)-(4,21)) "fs") [(ConPat (Just (4,29)-(4,31)) "[]" Nothing,Nothing,Lam (Just (4,35)-(4,48)) (VarPat (Just (4,40)-(4,41)) "x") (Var (Just (4,46)-(4,47)) "x") Nothing),(ConsPat (Just (4,51)-(4,55)) (VarPat (Just (4,51)-(4,52)) "h") (VarPat (Just (4,54)-(4,55)) "t"),Nothing,App (Just (4,59)-(4,76)) (Var (Just (4,59)-(4,60)) "f") [Lam (Just (4,61)-(4,74)) (VarPat (Just (4,66)-(4,67)) "x") (Var (Just (4,72)-(4,73)) "x") Nothing,Var (Just (4,75)-(4,76)) "h"])]
+*)
 
-(4,39)-(4,40)
-EMPTY
-EmptyG
+(* typed spans
+(4,13)-(4,76)
+*)
 
-(5,2)-(5,26)
-h
-VarG
+(* correct types
+'a -> 'a
+*)
 
+(* bad types
+('a -> 'a) -> 'a -> 'a
 *)

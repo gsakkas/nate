@@ -72,3 +72,19 @@ res
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (29,51)-(29,54)) "res"
+*)
+
+(* typed spans
+(29,51)-(29,54)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+(int * 'a list)
+*)

@@ -71,30 +71,22 @@ else if i = 1
      then l
      else bigAdd (bigAdd l l)
                  (mulByDigit (i - 2) l)
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (IteG EmptyG EmptyG EmptyG)
+IteG (BopG EmptyG EmptyG) (ListG EmptyG) (IteG EmptyG EmptyG EmptyG)
 
-(27,8)-(27,9)
-i = 0
-BopG VarG LitG
+*)
 
-(28,9)-(28,11)
-0
-LitG
+(* changed exprs
+Ite (Just (27,2)-(29,70)) (Bop (Just (27,5)-(27,10)) Eq (Var (Just (27,5)-(27,6)) "i") (Lit (Just (27,9)-(27,10)) (LI 0))) (List (Just (28,7)-(28,9)) [] Nothing) (Ite (Just (29,7)-(29,70)) (Bop (Just (29,10)-(29,15)) Eq (Var (Just (29,10)-(29,11)) "i") (Lit (Just (29,14)-(29,15)) (LI 1))) (Var (Just (29,21)-(29,22)) "l") (App (Just (29,28)-(29,70)) (Var (Just (29,28)-(29,34)) "bigAdd") [App (Just (29,35)-(29,47)) (Var (Just (29,36)-(29,42)) "bigAdd") [Var (Just (29,43)-(29,44)) "l",Var (Just (29,45)-(29,46)) "l"],App (Just (29,48)-(29,70)) (Var (Just (29,49)-(29,59)) "mulByDigit") [Bop (Just (29,60)-(29,67)) Minus (Var (Just (29,61)-(29,62)) "i") (Lit (Just (29,65)-(29,66)) (LI 2)),Var (Just (29,68)-(29,69)) "l"]]))
+*)
 
-(29,9)-(29,10)
-if i = 1
-then l
-else bigAdd (bigAdd l l)
-            (mulByDigit (i - 2) l)
-IteG (BopG EmptyG EmptyG) VarG (AppG (fromList [EmptyG]))
+(* typed spans
+(27,2)-(29,70)
+*)
 
-(30,9)-(30,53)
-bigAdd (bigAdd l l)
-       (mulByDigit (i - 2) l)
-AppG (fromList [AppG (fromList [EmptyG])])
+(* correct types
+int list
+*)
 
-(30,16)-(30,53)
-EMPTY
-EmptyG
-
+(* bad types
+int list
 *)

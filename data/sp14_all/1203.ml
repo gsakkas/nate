@@ -143,16 +143,28 @@ match a with
 | _ -> (0 , [])
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(52,21)-(52,22)
-z
-VarG
-
-(53,2)-(66,49)
-(0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
 (53,13)-(53,15)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* changed exprs
+Case (Just (52,14)-(52,70)) (Var (Just (52,20)-(52,21)) "a") [(TuplePat (Just (52,30)-(52,33)) [WildPat (Just (52,30)-(52,31)),VarPat (Just (52,32)-(52,33)) "z"],Nothing,Tuple (Just (52,38)-(52,55)) [Lit (Just (52,39)-(52,40)) (LI 0),App (Just (52,42)-(52,54)) (Var (Just (52,43)-(52,49)) "bigAdd") [Var (Just (52,50)-(52,51)) "z",Var (Just (52,52)-(52,53)) "x"]]),(WildPat (Just (52,58)-(52,59)),Nothing,Tuple (Just (52,63)-(52,70)) [Lit (Just (52,64)-(52,65)) (LI 0),List (Just (52,67)-(52,69)) [] Nothing])]
+Tuple (Just (53,13)-(53,20)) [Lit (Just (53,14)-(53,15)) (LI 0),List (Just (53,17)-(53,19)) [] Nothing]
+*)
+
+(* typed spans
+(52,14)-(52,70)
+(53,13)-(53,20)
+*)
+
+(* correct types
+(int * int list)
+(int * int list)
+*)
+
+(* bad types
+int list
+int list
 *)

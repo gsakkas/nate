@@ -20,14 +20,6 @@ let padZero l1 l2 =
 
 (* changed spans
 (7,17)-(7,40)
-EMPTY
-EmptyG
-
-(7,18)-(7,33)
-EMPTY
-EmptyG
-
-(7,19)-(7,28)
 clone 0 (- n) @ l1
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
@@ -47,4 +39,25 @@ EmptyG
 clone 0 n
 AppG (fromList [VarG,LitG])
 
+*)
+
+(* typed spans
+(7,17)-(7,39)
+(7,18)-(7,33)
+(7,27)-(7,32)
+(7,56)-(7,67)
+*)
+
+(* typed spans
+int list
+int list
+int
+int list
+*)
+
+(* typed spans
+int list
+int -> int -> int list
+int
+int -> int -> int list
 *)

@@ -22,3 +22,8 @@ y
 VarG
 
 *)
+
+(* typed spans
+(bool -> ('t7 * bool) * bool)
+bool
+*)

@@ -69,12 +69,20 @@ let (_ , res) =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
-(28,50)-(28,60)
-EMPTY
-EmptyG
+*)
 
-(28,51)-(28,54)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (28,4)-(28,51)) NonRec [(TuplePat (Just (28,9)-(28,14)) [WildPat (Just (28,9)-(28,10)),VarPat (Just (28,11)-(28,14)) "res"],App (Just (28,18)-(28,44)) (Var (Just (28,18)-(28,32)) "List.fold_left") [Var (Just (28,33)-(28,34)) "f",Var (Just (28,35)-(28,39)) "base",Var (Just (28,40)-(28,44)) "args"])] (Var (Just (28,48)-(28,51)) "res")
+*)
 
+(* typed spans
+(28,4)-(28,51)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+(int * int list)
 *)

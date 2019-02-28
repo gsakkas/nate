@@ -53,39 +53,15 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(18,16)-(18,24)
-EMPTY
-EmptyG
-
 (18,16)-(18,44)
-EMPTY
-EmptyG
-
-(18,25)-(18,44)
 match a with
 | (o , []) -> (o , [x])
 | (o , l) -> (o , x :: l)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(19,4)-(23,51)
-(o , [x])
-TupleG (fromList [VarG,ListG EmptyG Nothing])
-
-(19,15)-(19,23)
-EMPTY
-EmptyG
-
 (19,15)-(19,43)
-EMPTY
-EmptyG
-
-(19,24)-(19,43)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(20,4)-(23,51)
-[]
-ListG EmptyG Nothing
+TupleG (fromList [LitG,ListG EmptyG])
 
 (22,15)-(22,16)
 combine
@@ -95,8 +71,32 @@ VarG
 List.combine l1 l2
 AppG (fromList [VarG])
 
-(22,41)-(22,48)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Case (Just (18,16)-(18,74)) (Var (Just (18,22)-(18,23)) "a") [(TuplePat (Just (18,32)-(18,36)) [VarPat (Just (18,32)-(18,33)) "o",ConPat (Just (18,34)-(18,36)) "[]" Nothing],Nothing,Tuple (Just (18,41)-(18,49)) [Var (Just (18,42)-(18,43)) "o",List (Just (18,45)-(18,48)) [Var (Just (18,46)-(18,47)) "x"] Nothing]),(TuplePat (Just (18,53)-(18,56)) [VarPat (Just (18,53)-(18,54)) "o",VarPat (Just (18,55)-(18,56)) "l"],Nothing,Tuple (Just (18,61)-(18,74)) [Var (Just (18,62)-(18,63)) "o",ConApp (Just (18,65)-(18,73)) "::" (Just (Tuple (Just (18,66)-(18,72)) [Var (Just (18,66)-(18,67)) "x",Var (Just (18,71)-(18,72)) "l"])) Nothing])]
+Tuple (Just (19,15)-(19,22)) [Lit (Just (19,16)-(19,17)) (LI 0),List (Just (19,19)-(19,21)) [] Nothing]
+Var (Just (22,15)-(22,22)) "combine"
+App (Just (22,33)-(22,53)) (Var (Just (22,34)-(22,46)) "List.combine") [Var (Just (22,47)-(22,49)) "l1",Var (Just (22,50)-(22,52)) "l2"]
+*)
+
+(* typed spans
+(18,16)-(18,74)
+(19,15)-(19,22)
+(22,15)-(22,22)
+(22,33)-(22,53)
+*)
+
+(* correct types
+(int * int list)
+(int * int list)
+(int * int) -> int
+(int * int) list
+*)
+
+(* bad types
+'a
+'a
+'a -> 'b -> 'a
+'a list -> ('b * 'a) list
 *)

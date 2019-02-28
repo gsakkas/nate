@@ -1,135 +1,53 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let args =
-  List.combine (List.rev l1)
-               (List.rev l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.rev (List.combine l1
-                         l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.combine l1 l2 in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.rev (List.combine l1
-                         l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.rev (List.combine l1
-                         l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.rev (List.combine l1
-                         l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.combine (List.rev l1)
-               (List.rev l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let ll1 = List.length l1 in
-let ll2 = List.length l2 in
-(clone 0
-       (ll2 - ll1) @ l1 , clone 0
-                                (ll1 - ll2) @ l2)
-let prev = prevN a in
-let sumlist =
-  fun (p1 , p2) -> p2 in
-let sum = sumlist a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + prev in
-if digit > 10
-then (1 , (digit - 10) :: sum)
-else (0 , digit :: sum)
-let prev = prevN a in
-let sumlist =
-  fun (p1 , p2) -> p2 in
-let sum = sumlist a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + prev in
-if digit > 10
-then (1 , (digit - 10) :: sum)
-else (0 , digit :: sum)
-let prev = prevN a in
-let sumlist =
-  fun (p1 , p2) -> p2 in
-let sum = sumlist a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + prev in
-if digit > 10
-then (1 , (digit - 10) :: sum)
-else (0 , digit :: sum)
-let prev = prevN a in
-let sumlist =
-  fun (p1 , p2) -> p2 in
-let sum = sumlist a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + prev in
-if digit > 10
-then (1 , (digit - 10) :: sum)
-else (0 , digit :: sum)
-let prev = prevN a in
-let sumlist =
-  fun (p1 , p2) -> p2 in
-let sum = sumlist a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + prev in
-if digit > 10
-then (1 , (digit - 10) :: sum)
-else (0 , digit :: sum)
-let prev = prevN a in
-let sumlist =
-  fun (p1 , p2) -> p2 in
-let sum = sumlist a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + prev in
-if digit > 10
-then (1 , (digit - 10) :: sum)
-else (0 , digit :: sum)
-let prev = prevN a in
-let sumlist =
-  fun (p1 , p2) -> p2 in
-let sum = sumlist a in
-let add =
-  fun (m , n) -> m + n in
-let digit = add x + prev in
-if digit > 10
-then (1 , (digit - 10) :: sum)
-else (0 , digit :: sum)
-let args =
-  List.append (List.rev (List.combine l1
-                                      l2)) [(0 , 0)] in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.combine (List.rev l1)
-               (List.rev l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.combine (List.rev l1)
-               (List.rev l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
+LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+let rec listReverseHelper =
+  fun l ->
+    fun ans ->
+      match ans with
+      | [] -> []
+      | h :: t -> listReverseHelper t
+                                    (h :: ans) in
+listReverseHelper l []
+let rec cloneHelper =
+  fun (x , n , acc) ->
+    if n < 0
+    then acc
+    else cloneHelper (x , n - 1 , x :: acc) in
+cloneHelper (x , n , [])
+let rec getList =
+  fun a ->
+    fun b ->
+      match a with
+      | [] -> [] in
+getList [] l
+let rec helper =
+  fun x ->
+    fun l ->
+      fun acc ->
+        match x with
+        | [] -> l
+        | h :: t -> helper t l
+                           (h :: acc) in
+helper x l []
+let rec helper =
+  fun (f , b) ->
+    (let b' = f b in
+     if b' = b
+     then b'
+     else helper (f , b')) in
+helper (f , b)
+let rec helper =
+  fun acc ->
+    fun v ->
+      if v = 0
+      then acc
+      else helper ((v mod 10) :: acc)
+                  (v / 10) in
+helper [] h
+let rec helper =
+  fun i ->
+    fun acc ->
+      fun l ->
+        if i > 0
+        then helper i (bigAdd acc l) l
+        else acc in
+helper i [] l

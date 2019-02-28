@@ -22,3 +22,12 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+*)
+
+(* typed spans
+*)
+
+(* typed spans
+*)

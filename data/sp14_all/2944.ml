@@ -67,6 +67,22 @@ let rec mulByDigit i l =
 (* changed spans
 (29,17)-(29,18)
 [0]
-ListG LitG Nothing
+ListG LitG
 
+*)
+
+(* changed exprs
+List (Just (30,7)-(30,10)) [Lit (Just (30,8)-(30,9)) (LI 0)] Nothing
+*)
+
+(* typed spans
+(30,7)-(30,10)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

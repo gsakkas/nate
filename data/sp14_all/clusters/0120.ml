@@ -1,25 +1,8 @@
-LetG NonRec (fromList [ListG EmptyG Nothing]) (IteG EmptyG EmptyG EmptyG)
-let myList = [] in
-if n <= 0
-then []
-else if n < 10
-     then [n]
-     else digitsOfInt (n / 10) @ [n mod 10]
-let myList = [] in
-if n <= 0
-then []
-else if n < 10
-     then [n]
-     else digitsOfInt (n / 10) @ [n mod 10]
-let myList = [] in
-if n <= 0
-then []
-else if n < 10
-     then [n]
-     else digitsOfInt (n / 10) @ [n mod 10]
-let l = [] in
-if n < 0 then l else l
-let myList = [] in
-if n <= 0
-then []
-else (n mod 10) :: myList
+CaseG VarG (fromList [(Nothing,VarG),(Nothing,BopG EmptyG EmptyG)])
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> pi *. x
+| Cosine e -> pi *. y
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)

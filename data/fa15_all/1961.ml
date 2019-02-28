@@ -134,11 +134,11 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (7,13)-(7,15)
 ([] , [])
-TupleG (fromList [ListG EmptyG Nothing])
+TupleG (fromList [ListG EmptyG])
 
 (8,2)-(9,53)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (9,2)-(9,53)
 let (_ , res) =
@@ -146,4 +146,17 @@ let (_ , res) =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
+*)
+
+(* typed spans
+int -> int -> int list
+(int list * int list)
+int list -> int list -> int list
+int list -> int list -> (int * int list) list
+int -> int list -> int list
+(int list * int list)
+int list
+(int list * int list)
+int list
+int list
 *)

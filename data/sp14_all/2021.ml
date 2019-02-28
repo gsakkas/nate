@@ -94,62 +94,30 @@ match a with
                             l2)
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
-(39,12)-(39,34)
-EMPTY
-EmptyG
-
-(39,33)-(39,34)
-EMPTY
-EmptyG
-
-(40,14)-(40,59)
-EMPTY
-EmptyG
-
-(40,15)-(40,43)
-EMPTY
-EmptyG
-
-(40,15)-(40,48)
-EMPTY
-EmptyG
-
-(40,23)-(40,40)
-a
-VarG
-
-(40,41)-(40,42)
-EMPTY
-EmptyG
-
-(40,46)-(40,48)
-EMPTY
-EmptyG
-
-(40,50)-(40,51)
-EMPTY
-EmptyG
-
-(40,50)-(40,58)
-EMPTY
-EmptyG
-
-(40,56)-(40,58)
-EMPTY
-EmptyG
-
-(40,60)-(40,61)
-EMPTY
-EmptyG
-
-(40,62)-(40,63)
-EMPTY
-EmptyG
-
 (42,28)-(42,75)
 let res =
   List.fold_left f base args in
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
+*)
+
+(* changed exprs
+Case (Just (38,4)-(38,74)) (Var (Just (38,10)-(38,11)) "a") [(ConPat (Just (38,19)-(38,21)) "[]" Nothing,Nothing,App (Just (38,25)-(38,40)) (Var (Just (38,25)-(38,35)) "mulByDigit") [Var (Just (38,36)-(38,37)) "x",Var (Just (38,38)-(38,40)) "l2"]),(WildPat (Just (38,43)-(38,44)),Nothing,App (Just (38,48)-(38,74)) (Var (Just (38,48)-(38,54)) "bigAdd") [Var (Just (38,55)-(38,56)) "a",App (Just (38,57)-(38,74)) (Var (Just (38,58)-(38,68)) "mulByDigit") [Var (Just (38,69)-(38,70)) "x",Var (Just (38,71)-(38,73)) "l2"]])]
+Let (Just (40,28)-(40,71)) NonRec [(VarPat (Just (40,32)-(40,35)) "res",App (Just (40,38)-(40,64)) (Var (Just (40,38)-(40,52)) "List.fold_left") [Var (Just (40,53)-(40,54)) "f",Var (Just (40,55)-(40,59)) "base",Var (Just (40,60)-(40,64)) "args"])] (Var (Just (40,68)-(40,71)) "res")
+*)
+
+(* typed spans
+(38,4)-(38,74)
+(40,28)-(40,71)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+int list list
+'a
 *)

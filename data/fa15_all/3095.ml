@@ -56,3 +56,23 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 LitG
 
 *)
+
+(* changed exprs
+Bop (Just (20,6)-(20,52)) FPlus (App (Just (20,7)-(20,27)) (Var (Just (20,8)-(20,12)) "eval") [Tuple (Just (20,13)-(20,26)) [Var (Just (20,14)-(20,19)) "expr1",Var (Just (20,21)-(20,22)) "x",Var (Just (20,24)-(20,25)) "y"]]) (App (Just (20,31)-(20,51)) (Var (Just (20,32)-(20,36)) "eval") [Tuple (Just (20,37)-(20,50)) [Var (Just (20,38)-(20,43)) "expr2",Var (Just (20,45)-(20,46)) "x",Var (Just (20,48)-(20,49)) "y"]])
+Lit (Just (20,56)-(20,59)) (LD 2.0)
+*)
+
+(* typed spans
+(20,6)-(20,52)
+(20,56)-(20,59)
+*)
+
+(* correct types
+float
+float
+*)
+
+(* bad types
+int
+int
+*)

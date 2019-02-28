@@ -22,3 +22,19 @@ let rec sepConcat sep sl =
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (6,34)-(6,36)) (LS "")
+*)
+
+(* typed spans
+(6,34)-(6,36)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+'a list
+*)

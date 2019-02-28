@@ -17,44 +17,42 @@ let fixpoint (f,b) =
 
 (* changed spans
 (5,17)-(5,37)
-EMPTY
-EmptyG
-
-(5,18)-(5,29)
 let fb = f b in
 if fb = b
 then (true , fb)
 else (false , fb)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
 
-(5,27)-(5,28)
-EMPTY
-EmptyG
-
-(5,31)-(5,36)
-EMPTY
-EmptyG
-
-(5,32)-(5,33)
-if fb = b
-then (true , fb)
-else (false , fb)
-IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
-(5,34)-(5,35)
-fb = b
-BopG VarG VarG
-
-(5,41)-(5,63)
-(false , fb)
-TupleG (fromList [VarG,LitG])
+(5,49)-(5,59)
+helper
+VarG
 
 (5,49)-(5,59)
-EMPTY
-EmptyG
+b
+VarG
 
-(5,61)-(5,62)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Let (Just (5,17)-(5,75)) NonRec [(VarPat (Just (5,21)-(5,23)) "fb",App (Just (5,26)-(5,29)) (Var (Just (5,26)-(5,27)) "f") [Var (Just (5,28)-(5,29)) "b"])] (Ite (Just (5,33)-(5,75)) (Bop (Just (5,36)-(5,42)) Eq (Var (Just (5,36)-(5,38)) "fb") (Var (Just (5,41)-(5,42)) "b")) (Tuple (Just (5,48)-(5,58)) [Lit (Just (5,49)-(5,53)) (LB True),Var (Just (5,55)-(5,57)) "fb"]) (Tuple (Just (5,64)-(5,75)) [Lit (Just (5,65)-(5,70)) (LB False),Var (Just (5,72)-(5,74)) "fb"]))
+Var (Just (6,10)-(6,16)) "helper"
+Var (Just (6,18)-(6,19)) "b"
+*)
+
+(* typed spans
+(5,17)-(5,75)
+(6,10)-(6,16)
+(6,18)-(6,19)
+*)
+
+(* correct types
+(bool * bool)
+bool -> (bool * bool)
+bool
+*)
+
+(* bad types
+(bool * 'a)
+(bool * 'a)
+(bool * 'a)
 *)

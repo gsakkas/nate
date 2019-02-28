@@ -28,3 +28,23 @@ t
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (6,20)-(6,21)) "^"
+Var (Just (7,30)-(7,31)) "t"
+*)
+
+(* typed spans
+(6,20)-(6,21)
+(7,30)-(7,31)
+*)
+
+(* correct types
+string -> string -> string
+string list
+*)
+
+(* bad types
+'a list -> 'a list -> 'a list
+'a list list
+*)

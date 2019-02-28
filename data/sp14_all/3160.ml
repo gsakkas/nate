@@ -70,3 +70,19 @@ o
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (26,34)-(26,35)) "o"
+*)
+
+(* typed spans
+(26,34)-(26,35)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+(int * int list)
+*)

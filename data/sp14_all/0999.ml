@@ -14,3 +14,19 @@ a
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (2,30)-(2,31)) "a"
+*)
+
+(* typed spans
+(2,30)-(2,31)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a
+*)

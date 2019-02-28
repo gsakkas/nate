@@ -36,3 +36,18 @@ helper ([] , l)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
+
+(* typed spans
+(7,56)-(7,60)
+(9,11)-(9,27)
+*)
+
+(* typed spans
+'a list
+'a list
+*)
+
+(* typed spans
+'a
+('a list * 'a list list) -> 'a
+*)

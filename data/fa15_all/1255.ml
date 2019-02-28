@@ -57,76 +57,24 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,14)-(19,56)
-EMPTY
-EmptyG
-
-(19,17)-(19,20)
-EMPTY
-EmptyG
-
-(19,17)-(19,24)
-EMPTY
-EmptyG
-
-(19,23)-(19,24)
-EMPTY
-EmptyG
-
-(19,30)-(19,42)
-EMPTY
-EmptyG
-
-(19,31)-(19,32)
-EMPTY
-EmptyG
-
-(19,34)-(19,37)
-EMPTY
-EmptyG
-
-(19,34)-(19,41)
-EMPTY
-EmptyG
-
-(19,40)-(19,41)
-EMPTY
-EmptyG
-
-(19,48)-(19,56)
-EMPTY
-EmptyG
-
-(19,49)-(19,50)
 [sum]
-ListG VarG Nothing
+ListG VarG
 
 (21,13)-(21,22)
-EMPTY
-EmptyG
+c
+VarG
 
-(21,14)-(21,17)
-EMPTY
-EmptyG
-
-(22,15)-(22,16)
+(22,15)-(22,42)
 sum + 1
 BopG VarG LitG
 
 (22,21)-(22,30)
-EMPTY
-EmptyG
-
-(22,22)-(22,25)
-EMPTY
-EmptyG
+c
+VarG
 
 (23,15)-(23,24)
-EMPTY
-EmptyG
-
-(23,22)-(23,23)
-EMPTY
-EmptyG
+sum
+VarG
 
 (23,28)-(23,30)
 a
@@ -138,4 +86,44 @@ let res =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
+*)
+
+(* changed exprs
+List (Just (19,14)-(19,19)) [Var (Just (19,15)-(19,18)) "sum"] Nothing
+Var (Just (20,20)-(20,21)) "c"
+Bop (Just (20,31)-(20,40)) Plus (Var (Just (20,32)-(20,35)) "sum") (Lit (Just (20,38)-(20,39)) (LI 1))
+Var (Just (20,45)-(20,46)) "c"
+Var (Just (20,64)-(20,67)) "sum"
+Var (Just (20,71)-(20,72)) "a"
+Let (Just (23,4)-(23,47)) NonRec [(VarPat (Just (23,8)-(23,11)) "res",App (Just (23,14)-(23,40)) (Var (Just (23,14)-(23,28)) "List.fold_left") [Var (Just (23,29)-(23,30)) "f",Var (Just (23,31)-(23,35)) "base",Var (Just (23,36)-(23,40)) "args"])] (Var (Just (23,44)-(23,47)) "res")
+*)
+
+(* typed spans
+(19,14)-(19,19)
+(20,20)-(20,21)
+(20,31)-(20,40)
+(20,45)-(20,46)
+(20,64)-(20,67)
+(20,71)-(20,72)
+(23,4)-(23,47)
+*)
+
+(* correct types
+int list
+int
+int
+int
+int
+int list
+int list
+*)
+
+(* bad types
+int list
+int
+int list
+int
+int
+int list
+int list
 *)

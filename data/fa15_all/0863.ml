@@ -31,12 +31,20 @@ let padZero l1 l2 =
 clone 0 (n * (-1))
 AppG (fromList [BopG EmptyG EmptyG,LitG])
 
-(10,22)-(10,25)
-n * (-1)
-BopG VarG LitG
+*)
 
-(10,31)-(10,33)
-(-1)
-LitG
+(* changed exprs
+App (Just (10,13)-(10,33)) (Var (Just (10,14)-(10,19)) "clone") [Lit (Just (10,20)-(10,21)) (LI 0),Bop (Just (10,22)-(10,32)) Times (Var (Just (10,23)-(10,24)) "n") (Lit (Just (10,27)-(10,31)) (LI (-1)))]
+*)
 
+(* typed spans
+(10,13)-(10,33)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

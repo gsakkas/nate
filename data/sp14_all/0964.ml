@@ -65,10 +65,22 @@ let bigAdd l1 l2 =
 List.append [result / 10]
             (List.append [result mod 10]
                          l)
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
-(24,35)-(24,46)
-List.append [result mod 10] l
-AppG (fromList [VarG,ListG EmptyG Nothing])
+*)
 
+(* changed exprs
+App (Just (24,8)-(24,67)) (Var (Just (24,9)-(24,20)) "List.append") [List (Just (24,21)-(24,34)) [Bop (Just (24,22)-(24,33)) Div (Var (Just (24,22)-(24,28)) "result") (Lit (Just (24,31)-(24,33)) (LI 10))] Nothing,App (Just (24,35)-(24,66)) (Var (Just (24,36)-(24,47)) "List.append") [List (Just (24,48)-(24,63)) [Bop (Just (24,49)-(24,62)) Mod (Var (Just (24,49)-(24,55)) "result") (Lit (Just (24,60)-(24,62)) (LI 10))] Nothing,Var (Just (24,64)-(24,65)) "l"]]
+*)
+
+(* typed spans
+(24,8)-(24,67)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

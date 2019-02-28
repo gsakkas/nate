@@ -24,3 +24,19 @@ t
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,30)-(7,31)) "t"
+*)
+
+(* typed spans
+(7,30)-(7,31)
+*)
+
+(* correct types
+string list
+*)
+
+(* bad types
+string
+*)

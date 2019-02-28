@@ -25,3 +25,9 @@ x
 VarG
 
 *)
+
+(* typed spans
+'t3 -> int list -> string list
+'t3 -> int list -> string list
+'t3 -> int list -> string list
+*)

@@ -64,3 +64,19 @@ depth
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (18,8)-(18,13)) "depth"
+*)
+
+(* typed spans
+(18,8)-(18,13)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+(int * int) -> int
+*)

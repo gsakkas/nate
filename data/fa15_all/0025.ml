@@ -44,23 +44,28 @@ EMPTY
 EmptyG
 
 (9,48)-(9,65)
-EMPTY
-EmptyG
-
-(9,49)-(9,57)
-EMPTY
-EmptyG
-
-(9,58)-(9,64)
-EMPTY
-EmptyG
-
-(9,59)-(9,60)
-EMPTY
-EmptyG
-
-(9,62)-(9,63)
 newList
 VarG
 
+*)
+
+(* typed spans
+(10,2)-(10,70)
+(10,32)-(10,70)
+(10,39)-(10,63)
+(10,55)-(10,62)
+*)
+
+(* typed spans
+string
+string
+string
+string list
+*)
+
+(* typed spans
+string
+string -> string -> string
+string
+'a
 *)

@@ -27,39 +27,7 @@ let rec mulByDigit i l =
 EMPTY
 EmptyG
 
-(4,10)-(4,18)
-EMPTY
-EmptyG
-
-(4,10)-(4,32)
-EMPTY
-EmptyG
-
-(4,19)-(4,32)
-EMPTY
-EmptyG
-
-(6,8)-(6,17)
-EMPTY
-EmptyG
-
-(6,9)-(6,10)
-EMPTY
-EmptyG
-
-(6,12)-(6,13)
-EMPTY
-EmptyG
-
-(6,15)-(6,16)
-EMPTY
-EmptyG
-
 (11,23)-(11,24)
-EMPTY
-EmptyG
-
-(11,25)-(11,26)
 i
 VarG
 
@@ -67,4 +35,19 @@ VarG
 h
 VarG
 
+*)
+
+(* typed spans
+(7,23)-(7,24)
+(7,25)-(7,26)
+*)
+
+(* typed spans
+int
+int
+*)
+
+(* typed spans
+'a -> int list -> string list
+'a list
 *)

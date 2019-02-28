@@ -27,14 +27,6 @@ match a with
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
 
 (7,17)-(7,42)
-EMPTY
-EmptyG
-
-(7,23)-(7,24)
-EMPTY
-EmptyG
-
-(7,41)-(7,42)
 ""
 LitG
 
@@ -42,4 +34,28 @@ LitG
 sl
 VarG
 
+*)
+
+(* changed exprs
+Case (Just (6,18)-(6,61)) (Var (Just (6,24)-(6,25)) "a") [(LitPat (Just (6,33)-(6,35)) (LS ""),Nothing,Var (Just (6,39)-(6,40)) "x"),(WildPat (Just (6,43)-(6,44)),Nothing,App (Just (6,48)-(6,61)) (Var (Just (6,50)-(6,51)) "^") [Var (Just (6,48)-(6,49)) "a",App (Just (6,52)-(6,61)) (Var (Just (6,57)-(6,58)) "^") [Var (Just (6,53)-(6,56)) "sep",Var (Just (6,59)-(6,60)) "x"]])]
+Lit (Just (7,17)-(7,19)) (LS "")
+Var (Just (7,31)-(7,33)) "sl"
+*)
+
+(* typed spans
+(6,18)-(6,61)
+(7,17)-(7,19)
+(7,31)-(7,33)
+*)
+
+(* correct types
+string
+string
+string list
+*)
+
+(* bad types
+string
+string
+string list list
 *)

@@ -28,3 +28,23 @@ List.fold_left f base l
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+Var (Just (6,24)-(6,25)) "a"
+App (Just (7,37)-(7,60)) (Var (Just (7,37)-(7,51)) "List.fold_left") [Var (Just (7,52)-(7,53)) "f",Var (Just (7,54)-(7,58)) "base",Var (Just (7,59)-(7,60)) "l"]
+*)
+
+(* typed spans
+(6,24)-(6,25)
+(7,37)-(7,60)
+*)
+
+(* correct types
+string
+string
+*)
+
+(* bad types
+string
+string list -> string
+*)

@@ -25,6 +25,22 @@ let rec sepConcat sep sl =
 (* changed spans
 (8,50)-(8,51)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (8,50)-(8,53)) [Var (Just (8,51)-(8,52)) "h"] Nothing
+*)
+
+(* typed spans
+(8,50)-(8,53)
+*)
+
+(* correct types
+string list
+*)
+
+(* bad types
+string list
 *)

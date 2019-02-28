@@ -66,3 +66,19 @@ eval (b , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
+
+(* changed exprs
+App (Just (28,42)-(28,58)) (Var (Just (28,43)-(28,47)) "eval") [Tuple (Just (28,48)-(28,57)) [Var (Just (28,49)-(28,50)) "b",Var (Just (28,52)-(28,53)) "x",Var (Just (28,55)-(28,56)) "y"]]
+*)
+
+(* typed spans
+(28,42)-(28,58)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+(expr * float * float) -> float
+*)

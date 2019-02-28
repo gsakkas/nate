@@ -1,57 +1,27 @@
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
-match l with
-| [] -> []
-| _ :: tl -> listReverse tl
-match l with
-| [] -> []
-| a :: b -> listReverse b @ [a]
-match i with
-| 0 -> []
-| _ -> bigAdd (bigAdd l l)
-              (mulByDigit (i - 1) l)
-match i with
-| 0 -> []
-| _ -> bigAdd (bigAdd l l)
-              (mulByDigit (i - 1) l)
-match i with
-| 0 -> []
-| _ -> bigAdd (bigAdd l l)
-              (mulByDigit (i - 1) l)
-match i with
-| 0 -> []
-| _ -> bigAdd (bigAdd l l)
-              (mulByDigit (i - 1) l)
-match n with
-| 0 -> [0]
-| _ -> loop n []
-match n with
-| 0 -> [0]
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> [0]
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> digitsOfInt (n / 10) @ [n mod 10]
-match n with
-| 0 -> []
-| _ -> myAppend (getDigits (n / 10))
-                (n mod 10)
-match n with
-| 0 -> []
-| _ -> clone x (n - 1) @ [x]
-match l with
-| [] -> []
-| _ :: tl -> listReverse tl
+LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+let args =
+  List.combine (List.rev l1)
+               (List.rev l2) in
+let (_ , res) =
+  List.fold_left f base args in
+res
+let args =
+  List.rev (List.combine l1
+                         l2) in
+let (_ , res) =
+  List.fold_left f base args in
+res
+let args = List.rev l2 in
+let (_ , res) =
+  List.fold_left f base args in
+res
+let args =
+  List.combine l1 l2 in
+let (_ , res) =
+  List.fold_left f base args in
+res
+let ll1 = List.length l1 in
+let ll2 = List.length l2 in
+(clone 0
+       (ll2 - ll1) @ l1 , clone 0
+                                (ll1 - ll2) @ l2)

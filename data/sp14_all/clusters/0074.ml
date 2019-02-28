@@ -1,37 +1,26 @@
-TupleG (fromList [VarG,LamG EmptyG])
-(fun x ->
-   if x = f x
-   then (x , false)
-   else (f x , true) , b)
-(fun xx ->
-   (xx , f xx = xx) , b)
-(fun x ->
-   (f x , not (f x = x)) , b)
-(fun x ->
-   (f x , not (f x = x)) , b)
-(fun x ->
-   if x = b
-   then (b , false)
-   else (f x , true) , b)
-(fun x ->
-   if x = b
-   then (b , false)
-   else (f x , true) , b)
-(fun x ->
-   (let xx = f x in
-    (xx , xx <> b)) , b)
-(fun x ->
-   (let b = f x in
-    (b , b <> x)) , b)
-(fun x ->
-   (let b = f x in
-    (b , b <> x)) , b)
-(fun b -> (f b , f b = b) , b)
-(fun b -> (f b , f b = b) , b)
-(fun b -> (f b , f b = b) , b)
-(fun b ->
-   (f b , b <> f b) , b)
-(fun b ->
-   (f b , b <> f b) , b)
-(fun a ->
-   (f a , f a <> a) , b)
+TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
+(let d =
+   fun x ->
+     (let xx = f b in
+      (xx , xx = b)) in
+ d , b)
+(let func =
+   fun b ->
+     (let ans = f b in
+      if b = ans
+      then (ans , false)
+      else (ans , true)) in
+ func , b)
+(let f =
+   fun x ->
+     (let xx = (x * x) * x in
+      (xx , xx < 100)) in
+ f , b)
+(let g =
+   fun x ->
+     (let xx = f x in
+      (xx , xx <> b)) in
+ g , b)
+(let helper =
+   fun x -> (f x , f x = f b) in
+ helper , b)

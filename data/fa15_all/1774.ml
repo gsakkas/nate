@@ -20,3 +20,23 @@ LitG
 TupleG (fromList [VarG])
 
 *)
+
+(* changed exprs
+Lit (Just (3,31)-(3,35)) (LB True)
+Tuple (Just (3,48)-(3,55)) [Var (Just (3,49)-(3,50)) "f",Var (Just (3,52)-(3,54)) "b'"]
+*)
+
+(* typed spans
+(3,31)-(3,35)
+(3,48)-(3,55)
+*)
+
+(* correct types
+bool
+('a -> ('a * bool) * 'a)
+*)
+
+(* bad types
+bool
+('a * bool)
+*)

@@ -40,3 +40,27 @@ seen
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,20)-(7,24)) "seen"
+Var (Just (8,22)-(8,27)) "seen'"
+Var (Just (9,18)-(9,22)) "seen"
+*)
+
+(* typed spans
+(7,20)-(7,24)
+(8,22)-(8,27)
+(9,18)-(9,22)
+*)
+
+(* correct types
+'a list
+'a list
+'a list
+*)
+
+(* bad types
+'a list
+'a list list
+'a list
+*)

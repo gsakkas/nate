@@ -28,11 +28,23 @@ let rec eval (e,x,y) = match e with | VarX  -> x;;
 
 (* changed spans
 (11,47)-(11,54)
-EMPTY
-EmptyG
+x
+VarG
 
-(11,51)-(11,54)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (11,47)-(11,48)) "x"
+*)
+
+(* typed spans
+(11,47)-(11,48)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+int
 *)

@@ -45,6 +45,22 @@ let palindrome w =
 (* changed spans
 (18,17)-(18,18)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (18,17)-(18,20)) [Var (Just (18,18)-(18,19)) "h"] Nothing
+*)
+
+(* typed spans
+(18,17)-(18,20)
+*)
+
+(* correct types
+char list
+*)
+
+(* bad types
+char
 *)

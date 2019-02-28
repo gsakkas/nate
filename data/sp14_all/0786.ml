@@ -66,3 +66,19 @@ e
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (28,53)-(28,54)) "e"
+*)
+
+(* typed spans
+(28,53)-(28,54)
+*)
+
+(* correct types
+expr
+*)
+
+(* bad types
+expr
+*)

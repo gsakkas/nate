@@ -31,3 +31,19 @@ explode w
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (11,5)-(11,16)) (Var (Just (11,6)-(11,13)) "explode") [Var (Just (11,14)-(11,15)) "w"]
+*)
+
+(* typed spans
+(11,5)-(11,16)
+*)
+
+(* correct types
+char list
+*)
+
+(* bad types
+string
+*)

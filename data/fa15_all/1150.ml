@@ -116,50 +116,38 @@ let bigMul l1 l2 =
 (* changed spans
 (47,61)-(47,62)
 [x]
-ListG VarG Nothing
+ListG VarG
 
 (50,66)-(50,67)
 [x]
-ListG VarG Nothing
-
-(54,13)-(54,34)
-EMPTY
-EmptyG
+ListG VarG
 
 (54,13)-(54,39)
-EMPTY
-EmptyG
+l2
+VarG
 
-(54,14)-(54,15)
-EMPTY
-EmptyG
+*)
 
-(54,17)-(54,18)
-EMPTY
-EmptyG
+(* changed exprs
+List (Just (47,61)-(47,64)) [Var (Just (47,62)-(47,63)) "x"] Nothing
+List (Just (50,66)-(50,69)) [Var (Just (50,67)-(50,68)) "x"] Nothing
+Var (Just (54,13)-(54,15)) "l2"
+*)
 
-(54,20)-(54,21)
-EMPTY
-EmptyG
+(* typed spans
+(47,61)-(47,64)
+(50,66)-(50,69)
+(54,13)-(54,15)
+*)
 
-(54,23)-(54,24)
-EMPTY
-EmptyG
+(* correct types
+int list
+int list
+int list
+*)
 
-(54,26)-(54,27)
-EMPTY
-EmptyG
-
-(54,29)-(54,30)
-EMPTY
-EmptyG
-
-(54,32)-(54,33)
-EMPTY
-EmptyG
-
-(54,35)-(54,36)
-EMPTY
-EmptyG
-
+(* bad types
+int list
+int list
+int list
 *)

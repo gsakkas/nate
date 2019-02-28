@@ -71,8 +71,20 @@ bigAdd l (mulByDigit (i - 1)
                      l)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(30,56)-(30,66)
-mulByDigit (i - 1) l
-AppG (fromList [VarG,BopG EmptyG EmptyG])
+*)
 
+(* changed exprs
+App (Just (31,24)-(31,55)) (Var (Just (31,24)-(31,30)) "bigAdd") [Var (Just (31,31)-(31,32)) "l",App (Just (31,33)-(31,55)) (Var (Just (31,34)-(31,44)) "mulByDigit") [Bop (Just (31,45)-(31,52)) Minus (Var (Just (31,46)-(31,47)) "i") (Lit (Just (31,50)-(31,51)) (LI 1)),Var (Just (31,53)-(31,54)) "l"]]
+*)
+
+(* typed spans
+(31,24)-(31,55)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
 *)

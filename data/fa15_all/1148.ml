@@ -125,10 +125,86 @@ let bigMul l1 l2 =
 (* changed spans
 (38,21)-(38,58)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (59,8)-(59,41)
-EMPTY
-EmptyG
+helper (List.length l2 * 2) x
+AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(59,8)-(59,41)
+helper
+VarG
+
+(59,8)-(59,41)
+List.length l2 * 2
+BopG (AppG (fromList [EmptyG])) LitG
+
+(59,8)-(59,41)
+List.length l2
+AppG (fromList [VarG])
+
+(59,8)-(59,41)
+List.length
+VarG
+
+(59,8)-(59,41)
+l2
+VarG
+
+(59,8)-(59,41)
+2
+LitG
+
+(59,8)-(59,41)
+x
+VarG
+
+*)
+
+(* changed exprs
+List (Just (38,64)-(38,66)) [] Nothing
+App (Just (59,8)-(59,41)) (Var (Just (59,9)-(59,15)) "helper") [Bop (Just (59,16)-(59,38)) Times (App (Just (59,17)-(59,33)) (Var (Just (59,18)-(59,29)) "List.length") [Var (Just (59,30)-(59,32)) "l2"]) (Lit (Just (59,36)-(59,37)) (LI 2)),Var (Just (59,39)-(59,40)) "x"]
+Var (Just (59,9)-(59,15)) "helper"
+Bop (Just (59,16)-(59,38)) Times (App (Just (59,17)-(59,33)) (Var (Just (59,18)-(59,29)) "List.length") [Var (Just (59,30)-(59,32)) "l2"]) (Lit (Just (59,36)-(59,37)) (LI 2))
+App (Just (59,17)-(59,33)) (Var (Just (59,18)-(59,29)) "List.length") [Var (Just (59,30)-(59,32)) "l2"]
+Var (Just (59,18)-(59,29)) "List.length"
+Var (Just (59,30)-(59,32)) "l2"
+Lit (Just (59,36)-(59,37)) (LI 2)
+Var (Just (59,39)-(59,40)) "x"
+*)
+
+(* typed spans
+(38,64)-(38,66)
+(59,8)-(59,41)
+(59,9)-(59,15)
+(59,16)-(59,38)
+(59,17)-(59,33)
+(59,18)-(59,29)
+(59,30)-(59,32)
+(59,36)-(59,37)
+(59,39)-(59,40)
+*)
+
+(* correct types
+int list
+int list
+int -> int -> int list
+int
+int
+int list -> int
+int list
+int
+int
+*)
+
+(* bad types
+unit
+unit list
+unit list
+unit list
+unit list
+unit list
+unit list
+unit list
+unit list
 *)

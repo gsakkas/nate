@@ -27,12 +27,23 @@ TupleG (fromList [VarG,LamG EmptyG])
 EMPTY
 EmptyG
 
-(5,50)-(5,56)
-EMPTY
-EmptyG
-
 (5,54)-(5,55)
 x
 VarG
 
+*)
+
+(* typed spans
+(5,28)-(5,65)
+(5,44)-(5,45)
+*)
+
+(* typed spans
+('a -> ('a * bool) * 'a)
+'a
+*)
+
+(* typed spans
+'a -> ('b * bool)
+'a
 *)

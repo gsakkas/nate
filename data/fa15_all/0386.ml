@@ -61,13 +61,9 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(27,6)-(27,69)
+(27,6)-(28,37)
 (sin (pi *. eval (r , x , y)) +. tan (pi *. eval (s , x , y))) *. sin (pi *. eval (t , x , y))
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
-
-(27,6)-(28,37)
-EMPTY
-EmptyG
 
 (27,7)-(27,36)
 sin (pi *. eval (r , x , y)) +. tan (pi *. eval (s , x , y))
@@ -85,4 +81,28 @@ BopG VarG (AppG (fromList [EmptyG]))
 pi *. eval (t , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
+*)
+
+(* typed spans
+(27,6)-(28,38)
+(27,6)-(27,72)
+(27,12)-(27,36)
+(27,46)-(27,70)
+(28,13)-(28,37)
+*)
+
+(* typed spans
+float
+float
+float
+float
+float
+*)
+
+(* typed spans
+int
+int
+int
+int
+int
 *)

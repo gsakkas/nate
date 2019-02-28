@@ -57,48 +57,28 @@ match a with
                      (num mod 9 , [7] @ list))
 CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
 
-(16,54)-(16,57)
-l1e + l2e
-BopG VarG VarG
-
-(16,67)-(16,77)
-carry
-VarG
-
-(16,68)-(16,71)
-num mod 9
-BopG VarG LitG
-
-(16,73)-(16,76)
-[7] @ list
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(17,4)-(19,51)
-list
-VarG
-
 (20,18)-(20,64)
 (padZero l1 l2 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(20,35)-(20,63)
-EMPTY
-EmptyG
+*)
 
-(20,39)-(20,41)
-EMPTY
-EmptyG
+(* changed exprs
+Case (Just (19,10)-(21,76)) (Var (Just (19,17)-(19,18)) "a") [(TuplePat (Just (20,14)-(20,24)) [VarPat (Just (20,14)-(20,19)) "carry",VarPat (Just (20,20)-(20,24)) "list"],Nothing,Let (Just (21,15)-(21,75)) NonRec [(VarPat (Just (21,19)-(21,22)) "num",Bop (Just (21,25)-(21,44)) Plus (Bop (Just (21,25)-(21,36)) Plus (Var (Just (21,26)-(21,29)) "l1e") (Var (Just (21,32)-(21,35)) "l2e")) (Var (Just (21,39)-(21,44)) "carry"))] (Tuple (Just (21,48)-(21,75)) [Bop (Just (21,49)-(21,60)) Mod (Var (Just (21,50)-(21,53)) "num") (Lit (Just (21,58)-(21,59)) (LI 9)),App (Just (21,62)-(21,74)) (Var (Just (21,67)-(21,68)) "@") [List (Just (21,63)-(21,66)) [Lit (Just (21,64)-(21,65)) (LI 7)] Nothing,Var (Just (21,69)-(21,73)) "list"]]))]
+Tuple (Just (25,18)-(25,39)) [App (Just (25,19)-(25,34)) (Var (Just (25,20)-(25,27)) "padZero") [Var (Just (25,28)-(25,30)) "l1",Var (Just (25,31)-(25,33)) "l2"],Var (Just (25,36)-(25,38)) "l2"]
+*)
 
-(20,39)-(20,46)
-EMPTY
-EmptyG
+(* typed spans
+(19,10)-(21,76)
+(25,18)-(25,39)
+*)
 
-(20,52)-(20,54)
-EMPTY
-EmptyG
+(* correct types
+(int * int list)
+(int list * int list)
+*)
 
-(20,60)-(20,62)
-EMPTY
-EmptyG
-
+(* bad types
+(int * int list)
+(int list * int list)
 *)

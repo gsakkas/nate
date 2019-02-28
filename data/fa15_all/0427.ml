@@ -18,48 +18,45 @@ let fixpoint (f,b) = let funt x = (2, ((f b) = b)) in wwhile (funt, b);;
 *)
 
 (* changed spans
-(7,2)-(7,77)
-(2 , f b = b)
-TupleG (fromList [BopG EmptyG EmptyG,LitG])
-
 (7,11)-(7,53)
-EMPTY
-EmptyG
-
-(7,16)-(7,53)
 fun x -> (2 , f b = b)
 LamG (TupleG (fromList [EmptyG]))
 
-(7,22)-(7,24)
-EMPTY
-EmptyG
-
-(7,35)-(7,41)
-EMPTY
-EmptyG
-
-(7,36)-(7,37)
-EMPTY
-EmptyG
-
-(7,47)-(7,53)
-EMPTY
-EmptyG
-
-(7,48)-(7,49)
-EMPTY
-EmptyG
-
-(7,51)-(7,52)
-EMPTY
-EmptyG
+(7,65)-(7,73)
+wwhile (funt , b)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 (7,65)-(7,73)
-EMPTY
-EmptyG
+wwhile
+VarG
 
 (7,75)-(7,76)
 EMPTY
 EmptyG
 
+*)
+
+(* changed exprs
+Lam (Just (6,30)-(6,50)) (VarPat (Just (6,30)-(6,31)) "x") (Tuple (Just (6,34)-(6,50)) [Lit (Just (6,35)-(6,36)) (LI 2),Bop (Just (6,38)-(6,49)) Eq (App (Just (6,39)-(6,44)) (Var (Just (6,40)-(6,41)) "f") [Var (Just (6,42)-(6,43)) "b"]) (Var (Just (6,47)-(6,48)) "b")]) Nothing
+App (Just (6,54)-(6,70)) (Var (Just (6,54)-(6,60)) "wwhile") [Tuple (Just (6,61)-(6,70)) [Var (Just (6,62)-(6,66)) "funt",Var (Just (6,68)-(6,69)) "b"]]
+Var (Just (6,54)-(6,60)) "wwhile"
+Var (Just (7,75)-(7,76)) "EMPTY"
+*)
+
+(* typed spans
+(6,30)-(6,50)
+(6,54)-(6,70)
+(6,54)-(6,60)
+*)
+
+(* correct types
+int -> (int * bool)
+int
+(int -> (int * bool) * int) -> int
+*)
+
+(* bad types
+'a -> (int * 'a)
+(int * 'a)
+(int * 'a)
 *)

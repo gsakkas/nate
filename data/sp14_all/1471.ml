@@ -77,6 +77,22 @@ let bigAdd l1 l2 =
 (* changed spans
 (30,35)-(30,55)
 [new_carry ; digit]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (30,35)-(30,53)) [Var (Just (30,36)-(30,45)) "new_carry",Var (Just (30,47)-(30,52)) "digit"] Nothing
+*)
+
+(* typed spans
+(30,35)-(30,53)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

@@ -47,3 +47,19 @@ match x with
 CaseG VarG (fromList [(Nothing,VarG)])
 
 *)
+
+(* changed exprs
+Case (Just (14,16)-(14,41)) (Var (Just (14,22)-(14,23)) "x") [(TuplePat (Just (14,32)-(14,35)) [WildPat (Just (14,32)-(14,33)),WildPat (Just (14,34)-(14,35))],Nothing,Var (Just (14,40)-(14,41)) "a")]
+*)
+
+(* typed spans
+(14,16)-(14,41)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+(int * 'a list)
+*)

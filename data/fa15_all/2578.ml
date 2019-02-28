@@ -60,10 +60,6 @@ BopG LitG (AppG (fromList [EmptyG]))
 EMPTY
 EmptyG
 
-(12,11)-(12,12)
-EMPTY
-EmptyG
-
 (16,18)-(16,41)
 pi *. eval (a , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
@@ -72,28 +68,50 @@ BopG VarG (AppG (fromList [EmptyG]))
 pi *. eval (a , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
-(18,21)-(18,58)
+(18,21)-(18,62)
 (eval (a , x , y) +. eval (b , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
-
-(18,21)-(18,62)
-EMPTY
-EmptyG
 
 (18,22)-(18,38)
 eval (a , x , y) +. eval (b , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 (18,61)-(18,62)
-EMPTY
-EmptyG
+2.0
+LitG
 
 (19,19)-(19,35)
 eval (a , x , y) *. eval (b , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(19,19)-(19,54)
-2.0
-LitG
+*)
 
+(* typed spans
+(11,9)-(11,26)
+(17,18)-(17,42)
+(18,20)-(18,44)
+(19,21)-(19,66)
+(19,21)-(19,59)
+(19,63)-(19,66)
+(20,19)-(20,55)
+*)
+
+(* typed spans
+float
+float
+float
+float
+float
+float
+float
+*)
+
+(* typed spans
+(expr * int * int) -> int
+int
+int
+int
+int
+int
+int
 *)

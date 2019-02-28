@@ -1,45 +1,10 @@
-IteG (BopG EmptyG EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG)
-if carry <> []
-then (let ch :: _ = carry in
-      let tens =
-        ((x1 + x2) + ch) / 10 in
-      let ones =
-        ((x1 + x2) + ch) mod 10 in
-      ([tens] , tens :: (ones :: res)))
-else (let tens =
-        (x1 + x2) / 10 in
-      let ones = (x1 + x2) mod 10 in
-      ([tens] , tens :: (ones :: res)))
-if carry <> []
-then (let ch :: _ = carry in
-      let tens =
-        ((x1 + x2) + ch) / 10 in
-      let ones =
-        ((x1 + x2) + ch) mod 10 in
-      ([tens] , tens :: (ones :: res)))
-else (let tens =
-        (x1 + x2) / 10 in
-      let ones = (x1 + x2) mod 10 in
-      ([tens] , tens :: (ones :: res)))
-if carry <> []
-then (let ch :: _ = carry in
-      let tens =
-        ((x1 + x2) + ch) / 10 in
-      let ones =
-        ((x1 + x2) + ch) mod 10 in
-      ([tens] , tens :: (ones :: res)))
-else (let tens =
-        (x1 + x2) / 10 in
-      let ones = (x1 + x2) mod 10 in
-      ([tens] , tens :: (ones :: res)))
-if carry <> []
-then (let ch :: _ = carry in
-      let tens =
-        ((x1 + x2) + ch) / 10 in
-      let ones =
-        ((x1 + x2) + ch) mod 10 in
-      ([tens] , tens :: (ones :: res)))
-else (let tens =
-        (x1 + x2) / 10 in
-      let ones = (x1 + x2) mod 10 in
-      ([tens] , tens :: (ones :: res)))
+LetG NonRec (fromList [VarG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+let (b1 , b2) = a in
+match x with
+| (fir , sec) -> if (fir + sec) < 10
+                 then ([] , (fir + sec) :: b2)
+                 else ([] , (fir + sec) :: b2)
+let h :: t = l in
+match l with
+| [] -> []
+| h :: t -> listReverse t

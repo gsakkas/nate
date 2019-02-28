@@ -53,30 +53,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (17,6)-(20,31)
-EMPTY
-EmptyG
-
-(17,14)-(17,21)
-EMPTY
-EmptyG
-
-(17,14)-(17,31)
-EMPTY
-EmptyG
-
-(17,15)-(17,18)
-EMPTY
-EmptyG
-
-(17,19)-(17,20)
-EMPTY
-EmptyG
-
-(17,24)-(17,31)
-EMPTY
-EmptyG
-
-(17,25)-(17,28)
 let (lh1 , lh2) = x in
 let (carry , res) = a in
 let num =
@@ -91,53 +67,17 @@ let num =
 (num / 10 , (num mod 10) :: res)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(19,16)-(19,30)
+(19,16)-(19,55)
 let num =
   (lh1 + lh2) + carry in
 (num / 10 , (num mod 10) :: res)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
 
-(19,16)-(19,55)
-EMPTY
-EmptyG
-
 (19,18)-(19,19)
 EMPTY
 EmptyG
 
-(19,22)-(19,23)
-EMPTY
-EmptyG
-
-(19,27)-(19,29)
-EMPTY
-EmptyG
-
-(19,34)-(19,50)
-EMPTY
-EmptyG
-
-(19,34)-(19,55)
-EMPTY
-EmptyG
-
 (19,36)-(19,37)
-EMPTY
-EmptyG
-
-(19,40)-(19,41)
-EMPTY
-EmptyG
-
-(19,47)-(19,49)
-EMPTY
-EmptyG
-
-(19,54)-(19,55)
-EMPTY
-EmptyG
-
-(20,13)-(20,31)
 lh1
 VarG
 
@@ -147,7 +87,7 @@ VarG
 
 (20,14)-(20,20)
 (num / 10 , (num mod 10) :: res)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
+TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
 
 (20,22)-(20,23)
 num
@@ -155,7 +95,7 @@ VarG
 
 (20,22)-(20,30)
 (num mod 10) :: res
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))
 
 (21,4)-(23,51)
 res
@@ -163,6 +103,45 @@ VarG
 
 (21,15)-(21,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* typed spans
+(17,6)-(19,74)
+(18,6)-(19,74)
+(19,6)-(19,74)
+(19,17)-(19,20)
+(19,41)-(19,44)
+(19,39)-(19,74)
+(19,54)-(19,57)
+(19,52)-(19,73)
+(19,69)-(19,72)
+(20,15)-(20,22)
+*)
+
+(* typed spans
+(int * int list)
+(int * int list)
+(int * int list)
+int
+int
+(int * int list)
+int
+int list
+int list
+(int * int list)
+*)
+
+(* typed spans
+int list
+int list
+int list
+int
+int
+int
+int
+int
+int list
+int list
 *)

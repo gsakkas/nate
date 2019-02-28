@@ -22,24 +22,20 @@ let helper =
 helper x (n - 1)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
-(3,34)-(3,36)
-accum
-VarG
+*)
 
-(3,42)-(3,51)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (4,2)-(4,74)) NonRec [(VarPat (Just (4,6)-(4,12)) "helper",Lam (Just (4,13)-(4,54)) (VarPat (Just (4,13)-(4,14)) "x") (Lam (Just (4,15)-(4,54)) (VarPat (Just (4,15)-(4,16)) "n") (Ite (Just (4,19)-(4,54)) (Bop (Just (4,22)-(4,27)) Lt (Var (Just (4,22)-(4,23)) "n") (Lit (Just (4,26)-(4,27)) (LI 1))) (Var (Just (4,33)-(4,38)) "accum") (ConApp (Just (4,44)-(4,54)) "::" (Just (Tuple (Just (4,44)-(4,54)) [Var (Just (4,44)-(4,45)) "x",Var (Just (4,49)-(4,54)) "accum"])) Nothing)) Nothing) Nothing)] (App (Just (4,58)-(4,74)) (Var (Just (4,58)-(4,64)) "helper") [Var (Just (4,65)-(4,66)) "x",Bop (Just (4,67)-(4,74)) Minus (Var (Just (4,68)-(4,69)) "n") (Lit (Just (4,72)-(4,73)) (LI 1))])
+*)
 
-(3,43)-(3,48)
-EMPTY
-EmptyG
+(* typed spans
+(4,2)-(4,74)
+*)
 
-(3,55)-(3,70)
-EMPTY
-EmptyG
+(* correct types
+'a list
+*)
 
-(3,62)-(3,69)
-helper x (n - 1)
-AppG (fromList [VarG,BopG EmptyG EmptyG])
-
+(* bad types
+'a list
 *)

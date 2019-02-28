@@ -60,50 +60,6 @@ fun l ->
   | h :: t -> listReverse t @ [h]
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(11,20)-(12,57)
-EMPTY
-EmptyG
-
-(12,2)-(12,57)
-EMPTY
-EmptyG
-
-(12,8)-(12,9)
-EMPTY
-EmptyG
-
-(12,23)-(12,25)
-EMPTY
-EmptyG
-
-(12,36)-(12,51)
-EMPTY
-EmptyG
-
-(12,36)-(12,57)
-EMPTY
-EmptyG
-
-(12,37)-(12,48)
-EMPTY
-EmptyG
-
-(12,49)-(12,50)
-EMPTY
-EmptyG
-
-(12,52)-(12,53)
-EMPTY
-EmptyG
-
-(12,54)-(12,57)
-EMPTY
-EmptyG
-
-(12,55)-(12,56)
-EMPTY
-EmptyG
-
 (14,20)-(20,16)
 fun x ->
   match x with
@@ -113,72 +69,40 @@ fun x ->
               else false
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(18,32)-(18,33)
-EMPTY
-EmptyG
-
-(19,11)-(19,21)
-matchHeads (getTail (listReverse t))
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(19,22)-(19,38)
-EMPTY
-EmptyG
-
-(19,23)-(19,24)
-EMPTY
-EmptyG
-
-(19,35)-(19,36)
-listReverse t
-AppG (fromList [VarG])
-
-(20,11)-(20,16)
-t
-VarG
-
-(25,12)-(25,22)
-EMPTY
-EmptyG
+(25,12)-(25,74)
+matchHeads [["b"]]
+AppG (fromList [ListG EmptyG])
 
 (25,12)-(25,74)
-EMPTY
-EmptyG
-
-(25,24)-(25,35)
-EMPTY
-EmptyG
-
-(25,36)-(25,47)
-EMPTY
-EmptyG
-
-(25,37)-(25,44)
-EMPTY
-EmptyG
-
-(25,45)-(25,46)
-EMPTY
-EmptyG
-
-(25,49)-(25,74)
-EMPTY
-EmptyG
-
-(25,50)-(25,61)
-EMPTY
-EmptyG
-
-(25,62)-(25,73)
-EMPTY
-EmptyG
-
-(25,63)-(25,70)
-EMPTY
-EmptyG
-
-(25,71)-(25,72)
 matchHeads
 VarG
 
+*)
+
+(* changed exprs
+Lam (Just (6,20)-(7,57)) (VarPat (Just (6,20)-(6,21)) "l") (Case (Just (7,2)-(7,57)) (Var (Just (7,8)-(7,9)) "l") [(ConPat (Just (7,17)-(7,19)) "[]" Nothing,Nothing,List (Just (7,23)-(7,25)) [] Nothing),(ConsPat (Just (7,28)-(7,32)) (VarPat (Just (7,28)-(7,29)) "h") (VarPat (Just (7,31)-(7,32)) "t"),Nothing,App (Just (7,36)-(7,57)) (Var (Just (7,52)-(7,53)) "@") [App (Just (7,36)-(7,51)) (Var (Just (7,37)-(7,48)) "listReverse") [Var (Just (7,49)-(7,50)) "t"],List (Just (7,54)-(7,57)) [Var (Just (7,55)-(7,56)) "h"] Nothing])]) Nothing
+Lam (Just (14,19)-(20,16)) (VarPat (Just (14,19)-(14,20)) "x") (Case (Just (15,2)-(20,16)) (Var (Just (15,8)-(15,9)) "x") [(ConPat (Just (16,4)-(16,6)) "[]" Nothing,Nothing,Lit (Just (16,10)-(16,14)) (LB True)),(ConsPat (Just (17,4)-(17,8)) (VarPat (Just (17,4)-(17,5)) "h") (VarPat (Just (17,7)-(17,8)) "t"),Nothing,Ite (Just (18,6)-(20,16)) (Bop (Just (18,9)-(18,48)) Eq (App (Just (18,9)-(18,20)) (Var (Just (18,10)-(18,17)) "getHead") [Var (Just (18,18)-(18,19)) "x"]) (App (Just (18,23)-(18,48)) (Var (Just (18,24)-(18,31)) "getHead") [App (Just (18,32)-(18,47)) (Var (Just (18,33)-(18,44)) "listReverse") [Var (Just (18,45)-(18,46)) "x"]])) (App (Just (19,11)-(19,47)) (Var (Just (19,11)-(19,21)) "matchHeads") [App (Just (19,22)-(19,47)) (Var (Just (19,23)-(19,30)) "getTail") [App (Just (19,31)-(19,46)) (Var (Just (19,32)-(19,43)) "listReverse") [Var (Just (19,44)-(19,45)) "t"]]]) (Lit (Just (20,11)-(20,16)) (LB False)))]) Nothing
+App (Just (23,46)-(23,64)) (Var (Just (23,46)-(23,56)) "matchHeads") [List (Just (23,57)-(23,64)) [List (Just (23,58)-(23,63)) [Lit (Just (23,59)-(23,62)) (LS "b")] Nothing] Nothing]
+Var (Just (23,46)-(23,56)) "matchHeads"
+*)
+
+(* typed spans
+(6,20)-(7,57)
+(14,19)-(20,16)
+(23,46)-(23,64)
+(23,46)-(23,56)
+*)
+
+(* correct types
+string list list -> string list list
+string list list -> bool
+bool
+string list list -> bool
+*)
+
+(* bad types
+string -> char list
+('a list list * 'a list list) -> bool
+bool
+bool
 *)

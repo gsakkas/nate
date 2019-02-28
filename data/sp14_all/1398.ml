@@ -24,3 +24,19 @@ sep
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,17)-(7,20)) "sep"
+*)
+
+(* typed spans
+(7,17)-(7,20)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+'a list
+*)

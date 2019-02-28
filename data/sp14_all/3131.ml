@@ -64,3 +64,19 @@ t
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (23,47)-(23,48)) "t"
+*)
+
+(* typed spans
+(23,47)-(23,48)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
+*)

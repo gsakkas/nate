@@ -25,10 +25,25 @@ let rec mulByDigit i l =
 (* changed spans
 (4,7)-(4,14)
 let x :: x' = l in [x * i]
-LetG NonRec (fromList [VarG]) (ListG EmptyG Nothing)
+LetG NonRec (fromList [VarG]) (ListG EmptyG)
 
 (4,8)-(4,9)
 x
 VarG
 
+*)
+
+(* typed spans
+(4,7)-(4,31)
+(4,25)-(4,26)
+*)
+
+(* typed spans
+int list
+int
+*)
+
+(* typed spans
+int list
+int list
 *)

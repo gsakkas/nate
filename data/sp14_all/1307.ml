@@ -50,12 +50,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,15)-(19,23)
-EMPTY
-EmptyG
-
-(19,20)-(19,22)
-EMPTY
-EmptyG
+[]
+ListG EmptyG
 
 (21,4)-(21,51)
 let res =
@@ -63,4 +59,24 @@ let res =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
+*)
+
+(* changed exprs
+List (Just (19,15)-(19,17)) [] Nothing
+Let (Just (21,4)-(21,47)) NonRec [(VarPat (Just (21,8)-(21,11)) "res",App (Just (21,14)-(21,40)) (Var (Just (21,14)-(21,28)) "List.fold_left") [Var (Just (21,29)-(21,30)) "f",Var (Just (21,31)-(21,35)) "base",Var (Just (21,36)-(21,40)) "args"])] (Var (Just (21,44)-(21,47)) "res")
+*)
+
+(* typed spans
+(19,15)-(19,17)
+(21,4)-(21,47)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+('a list * 'b list)
+int list
 *)

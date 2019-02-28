@@ -51,18 +51,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (17,16)-(17,63)
-EMPTY
-EmptyG
-
-(17,22)-(17,24)
-EMPTY
-EmptyG
-
-(17,38)-(17,40)
-EMPTY
-EmptyG
-
-(17,51)-(17,63)
 let sum = fst x + snd x in
 if sum > 9
 then (1 , ((sum - 10) + fst a) :: (snd a))
@@ -87,10 +75,40 @@ BopG VarG (AppG (fromList [EmptyG]))
 
 (18,15)-(18,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (19,15)-(19,17)
 List.combine l1 l2
 AppG (fromList [VarG])
 
+*)
+
+(* typed spans
+(18,6)-(21,44)
+(18,16)-(18,23)
+(18,26)-(18,33)
+(20,16)-(20,38)
+(21,16)-(21,31)
+(22,15)-(22,22)
+(23,15)-(23,33)
+*)
+
+(* typed spans
+(int * int list)
+int
+int
+int
+int
+(int * int list)
+(int * int) list
+*)
+
+(* typed spans
+int list
+int
+int
+int list
+int list
+int list
+int list
 *)

@@ -31,12 +31,24 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(13,34)-(13,47)
+(13,34)-(13,51)
 remainder h i
 AppG (fromList [VarG])
 
-(13,34)-(13,51)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (13,34)-(13,47)) (Var (Just (13,34)-(13,43)) "remainder") [Var (Just (13,44)-(13,45)) "h",Var (Just (13,46)-(13,47)) "i"]
+*)
+
+(* typed spans
+(13,34)-(13,47)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

@@ -49,20 +49,24 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(21,57)-(21,68)
+(21,57)-(21,76)
 count (acc + 1) n
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
-(21,57)-(21,76)
-EMPTY
-EmptyG
+*)
 
-(21,64)-(21,67)
-acc + 1
-BopG VarG LitG
+(* changed exprs
+App (Just (21,57)-(21,74)) (Var (Just (21,57)-(21,62)) "count") [Bop (Just (21,63)-(21,72)) Plus (Var (Just (21,64)-(21,67)) "acc") (Lit (Just (21,70)-(21,71)) (LI 1)),Var (Just (21,73)-(21,74)) "n"]
+*)
 
-(21,71)-(21,76)
-EMPTY
-EmptyG
+(* typed spans
+(21,57)-(21,74)
+*)
 
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

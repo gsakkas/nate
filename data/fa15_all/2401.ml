@@ -56,10 +56,30 @@ let palindrome w =
 (* changed spans
 (14,60)-(14,61)
 [h]
-ListG VarG Nothing
+ListG VarG
 
 (23,67)-(23,68)
 explode w
 AppG (fromList [VarG])
 
+*)
+
+(* changed exprs
+List (Just (15,40)-(15,43)) [Var (Just (15,41)-(15,42)) "h"] Nothing
+App (Just (26,33)-(26,44)) (Var (Just (26,34)-(26,41)) "explode") [Var (Just (26,42)-(26,43)) "w"]
+*)
+
+(* typed spans
+(15,40)-(15,43)
+(26,33)-(26,44)
+*)
+
+(* correct types
+char list
+char list
+*)
+
+(* bad types
+'a list
+string
 *)

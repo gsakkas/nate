@@ -53,3 +53,19 @@ evalhelper p1 x
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)
+
+(* changed exprs
+Bop (Just (20,25)-(20,69)) FTimes (App (Just (20,26)-(20,45)) (Var (Just (20,27)-(20,37)) "evalhelper") [Var (Just (20,38)-(20,40)) "p1",Var (Just (20,41)-(20,42)) "x",Var (Just (20,43)-(20,44)) "y"]) (App (Just (20,49)-(20,68)) (Var (Just (20,50)-(20,60)) "evalhelper") [Var (Just (20,61)-(20,63)) "p2",Var (Just (20,64)-(20,65)) "x",Var (Just (20,66)-(20,67)) "y"])
+*)
+
+(* typed spans
+(20,25)-(20,69)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

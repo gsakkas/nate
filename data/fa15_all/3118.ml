@@ -14,8 +14,20 @@ let rec listReverse l =
 listReverse l'
 AppG (fromList [VarG])
 
-(2,73)-(2,76)
-l'
-VarG
+*)
 
+(* changed exprs
+App (Just (3,37)-(3,53)) (Var (Just (3,38)-(3,49)) "listReverse") [Var (Just (3,50)-(3,52)) "l'"]
+*)
+
+(* typed spans
+(3,37)-(3,53)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list
 *)

@@ -67,8 +67,20 @@ match a with
 | (a1 , a2) -> a2
 CaseG VarG (fromList [(Nothing,VarG)])
 
-(24,4)-(26,51)
-a2
-VarG
+*)
 
+(* changed exprs
+Case (Just (26,36)-(26,68)) (Var (Just (26,44)-(26,45)) "a") [(TuplePat (Just (26,54)-(26,59)) [VarPat (Just (26,54)-(26,56)) "a1",VarPat (Just (26,57)-(26,59)) "a2"],Nothing,Var (Just (26,64)-(26,66)) "a2")]
+*)
+
+(* typed spans
+(26,36)-(26,68)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

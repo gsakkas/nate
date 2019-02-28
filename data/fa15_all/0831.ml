@@ -52,37 +52,20 @@ let n1 =
 additivePersistence n1
 LetG NonRec (fromList [LetG NonRec (fromList [EmptyG]) EmptyG]) (AppG (fromList [EmptyG]))
 
-(19,18)-(19,31)
-let x0 = digitsOfInt n in
-sumList x0
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
+*)
 
-(20,9)-(20,71)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (19,9)-(20,31)) NonRec [(VarPat (Just (19,13)-(19,15)) "n1",Let (Just (19,18)-(19,54)) NonRec [(VarPat (Just (19,22)-(19,24)) "x0",App (Just (19,27)-(19,40)) (Var (Just (19,27)-(19,38)) "digitsOfInt") [Var (Just (19,39)-(19,40)) "n"])] (App (Just (19,44)-(19,54)) (Var (Just (19,44)-(19,51)) "sumList") [Var (Just (19,52)-(19,54)) "x0"]))] (App (Just (20,9)-(20,31)) (Var (Just (20,9)-(20,28)) "additivePersistence") [Var (Just (20,29)-(20,31)) "n1"])
+*)
 
-(20,18)-(20,20)
-EMPTY
-EmptyG
+(* typed spans
+(19,9)-(20,31)
+*)
 
-(20,24)-(20,71)
-EMPTY
-EmptyG
+(* correct types
+int
+*)
 
-(20,34)-(20,41)
-EMPTY
-EmptyG
-
-(20,34)-(20,44)
-EMPTY
-EmptyG
-
-(20,42)-(20,44)
-x0
-VarG
-
-(20,68)-(20,70)
-n1
-VarG
-
+(* bad types
+bool
 *)

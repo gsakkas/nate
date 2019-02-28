@@ -24,3 +24,27 @@ fun f -> 0
 LamG LitG
 
 *)
+
+(* changed exprs
+Var (Just (3,16)-(3,17)) "x"
+Var (Just (3,21)-(3,22)) "n"
+Lam (Just (3,36)-(3,41)) (VarPat (Just (3,36)-(3,37)) "f") (Lit (Just (3,40)-(3,41)) (LI 0)) Nothing
+*)
+
+(* typed spans
+(3,16)-(3,17)
+(3,21)-(3,22)
+(3,36)-(3,41)
+*)
+
+(* correct types
+int -> int
+'a
+'a -> int
+*)
+
+(* bad types
+'a -> 'a
+'a -> 'a
+int
+*)

@@ -54,3 +54,19 @@ let rec eval (e,x,y) =
 BopG (BopG EmptyG EmptyG) LitG
 
 *)
+
+(* changed exprs
+Bop (Just (18,23)-(18,70)) FDiv (Bop (Just (18,23)-(18,63)) FPlus (App (Just (18,24)-(18,41)) (Var (Just (18,25)-(18,29)) "eval") [Tuple (Just (18,30)-(18,40)) [Var (Just (18,31)-(18,33)) "e1",Var (Just (18,35)-(18,36)) "x",Var (Just (18,38)-(18,39)) "y"]]) (App (Just (18,45)-(18,62)) (Var (Just (18,46)-(18,50)) "eval") [Tuple (Just (18,51)-(18,61)) [Var (Just (18,52)-(18,54)) "e2",Var (Just (18,56)-(18,57)) "x",Var (Just (18,59)-(18,60)) "y"]])) (Lit (Just (18,67)-(18,70)) (LD 2.0))
+*)
+
+(* typed spans
+(18,23)-(18,70)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

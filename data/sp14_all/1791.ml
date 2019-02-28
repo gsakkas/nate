@@ -20,10 +20,6 @@ let pipe fs =
 fun x -> x * 1
 LamG (BopG EmptyG EmptyG)
 
-(4,47)-(4,64)
-x * 1
-BopG VarG LitG
-
 (4,60)-(4,61)
 x * 1
 BopG VarG LitG
@@ -32,4 +28,28 @@ BopG VarG LitG
 1
 LitG
 
+*)
+
+(* changed exprs
+Lam (Just (5,26)-(5,43)) (VarPat (Just (5,31)-(5,32)) "x") (Bop (Just (5,37)-(5,42)) Times (Var (Just (5,37)-(5,38)) "x") (Lit (Just (5,41)-(5,42)) (LI 1))) Nothing
+Bop (Just (5,67)-(5,72)) Times (Var (Just (5,67)-(5,68)) "x") (Lit (Just (5,71)-(5,72)) (LI 1))
+Lit (Just (5,71)-(5,72)) (LI 1)
+*)
+
+(* typed spans
+(5,26)-(5,43)
+(5,67)-(5,72)
+(5,71)-(5,72)
+*)
+
+(* correct types
+int -> int
+int
+int
+*)
+
+(* bad types
+int
+'a
+'a -> 'a
 *)

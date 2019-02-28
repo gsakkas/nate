@@ -36,3 +36,15 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+(9,38)-(9,52)
+*)
+
+(* typed spans
+string list
+*)
+
+(* typed spans
+string list
+*)

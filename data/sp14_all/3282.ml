@@ -52,10 +52,22 @@ let bigAdd l1 l2 =
 (* changed spans
 (18,25)-(18,41)
 ((h1 + h2) / 10) :: list1
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG])))
 
-(18,43)-(18,72)
-list1
-VarG
+*)
 
+(* changed exprs
+ConApp (Just (19,16)-(19,43)) "::" (Just (Tuple (Just (19,17)-(19,42)) [Bop (Just (19,17)-(19,33)) Div (Bop (Just (19,18)-(19,27)) Plus (Var (Just (19,19)-(19,21)) "h1") (Var (Just (19,24)-(19,26)) "h2")) (Lit (Just (19,30)-(19,32)) (LI 10)),Var (Just (19,37)-(19,42)) "list1"])) Nothing
+*)
+
+(* typed spans
+(19,16)-(19,43)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

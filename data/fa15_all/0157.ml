@@ -20,30 +20,14 @@ fun x -> (x , f x = x)
 LamG (TupleG (fromList [EmptyG]))
 
 (5,30)-(5,35)
-EMPTY
-EmptyG
-
-(5,31)-(5,32)
-EMPTY
-EmptyG
-
-(5,33)-(5,34)
 x
 VarG
 
 (5,38)-(5,47)
-EMPTY
-EmptyG
-
-(5,39)-(5,42)
 f x
 AppG (fromList [VarG])
 
 (5,45)-(5,46)
-EMPTY
-EmptyG
-
-(5,50)-(5,51)
 x
 VarG
 
@@ -51,4 +35,28 @@ VarG
 x
 VarG
 
+*)
+
+(* typed spans
+(5,29)-(5,57)
+(5,41)-(5,42)
+(5,45)-(5,50)
+(5,48)-(5,49)
+(5,53)-(5,54)
+*)
+
+(* typed spans
+'a -> ('a * bool)
+'a
+'a
+'a
+'a
+*)
+
+(* typed spans
+('a * bool)
+'a
+'a
+'a
+'a
 *)

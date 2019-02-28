@@ -63,3 +63,12 @@ sum
 VarG
 
 *)
+
+(* typed spans
+int -> int list
+int
+int -> int list
+int
+int
+int
+*)

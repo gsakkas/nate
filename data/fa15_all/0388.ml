@@ -44,3 +44,23 @@ VarG
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (15,21)-(15,22)) "^"
+Var (Just (15,41)-(15,42)) "^"
+*)
+
+(* typed spans
+(15,21)-(15,22)
+(15,41)-(15,42)
+*)
+
+(* correct types
+string -> string -> string
+string -> string -> string
+*)
+
+(* bad types
+'a list -> 'a list -> 'a list
+'a list -> 'a list -> 'a list
+*)

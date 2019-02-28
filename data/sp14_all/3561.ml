@@ -49,108 +49,52 @@ match (a , x) with
 | ((b , c) , (d , e)) -> (b , (d + e) :: c)
 CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(15,37)-(15,51)
-EMPTY
-EmptyG
-
-(15,37)-(15,71)
-(b , (d + e) :: c)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing])
-
-(15,39)-(15,40)
-EMPTY
-EmptyG
-
-(15,48)-(15,50)
-EMPTY
-EmptyG
-
-(15,55)-(15,71)
-EMPTY
-EmptyG
-
-(15,56)-(15,63)
-EMPTY
-EmptyG
-
-(15,57)-(15,58)
-EMPTY
-EmptyG
-
-(15,61)-(15,62)
-EMPTY
-EmptyG
-
-(15,68)-(15,70)
-e
-VarG
-
-(16,4)-(21,51)
-c
-VarG
-
-(16,16)-(16,17)
-EMPTY
-EmptyG
-
 (16,19)-(16,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (17,4)-(21,51)
 []
-ListG EmptyG Nothing
-
-(19,22)-(19,51)
-EMPTY
-EmptyG
-
-(19,23)-(19,31)
-EMPTY
-EmptyG
-
-(19,32)-(19,47)
-EMPTY
-EmptyG
-
-(19,43)-(19,46)
-EMPTY
-EmptyG
-
-(19,44)-(19,45)
-EMPTY
-EmptyG
-
-(19,48)-(19,50)
-EMPTY
-EmptyG
+ListG EmptyG
 
 (20,11)-(20,40)
-EMPTY
-EmptyG
-
-(20,12)-(20,20)
-EMPTY
-EmptyG
-
-(20,21)-(20,36)
-EMPTY
-EmptyG
-
-(20,32)-(20,35)
-EMPTY
-EmptyG
-
-(20,33)-(20,34)
-EMPTY
-EmptyG
-
-(20,37)-(20,39)
 [0 ; 0 ; 9 ; 9]
-ListG LitG Nothing
+ListG LitG
 
 (21,4)-(21,51)
 [1 ; 0 ; 0 ; 2]
-ListG LitG Nothing
+ListG LitG
 
+*)
+
+(* changed exprs
+Case (Just (13,16)-(13,72)) (Tuple (Just (13,22)-(13,28)) [Var (Just (13,23)-(13,24)) "a",Var (Just (13,26)-(13,27)) "x"]) [(TuplePat (Just (13,38)-(13,47)) [TuplePat (Just (13,38)-(13,41)) [VarPat (Just (13,38)-(13,39)) "b",VarPat (Just (13,40)-(13,41)) "c"],TuplePat (Just (13,44)-(13,47)) [VarPat (Just (13,44)-(13,45)) "d",VarPat (Just (13,46)-(13,47)) "e"]],Nothing,Tuple (Just (13,53)-(13,72)) [Var (Just (13,54)-(13,55)) "b",ConApp (Just (13,57)-(13,71)) "::" (Just (Tuple (Just (13,58)-(13,70)) [Bop (Just (13,58)-(13,65)) Plus (Var (Just (13,59)-(13,60)) "d") (Var (Just (13,63)-(13,64)) "e"),Var (Just (13,69)-(13,70)) "c"])) Nothing])]
+List (Just (14,16)-(14,18)) [] Nothing
+List (Just (14,20)-(14,22)) [] Nothing
+List (Just (15,38)-(15,50)) [Lit (Just (15,39)-(15,40)) (LI 0),Lit (Just (15,42)-(15,43)) (LI 0),Lit (Just (15,45)-(15,46)) (LI 9),Lit (Just (15,48)-(15,49)) (LI 9)] Nothing
+List (Just (15,51)-(15,63)) [Lit (Just (15,52)-(15,53)) (LI 1),Lit (Just (15,55)-(15,56)) (LI 0),Lit (Just (15,58)-(15,59)) (LI 0),Lit (Just (15,61)-(15,62)) (LI 2)] Nothing
+*)
+
+(* typed spans
+(13,16)-(13,72)
+(14,16)-(14,18)
+(14,20)-(14,22)
+(15,38)-(15,50)
+(15,51)-(15,63)
+*)
+
+(* correct types
+('a list * int list)
+'a list
+int list
+int list
+int list
+*)
+
+(* bad types
+int list
+int
+int list
+int list list
+int list
 *)

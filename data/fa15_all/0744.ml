@@ -28,3 +28,15 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+(5,2)-(5,62)
+*)
+
+(* typed spans
+'a
+*)
+
+(* typed spans
+'a
+*)

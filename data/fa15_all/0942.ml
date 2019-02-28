@@ -23,8 +23,16 @@ LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 EMPTY
 EmptyG
 
-(4,19)-(4,21)
-EMPTY
-EmptyG
+*)
 
+(* typed spans
+(2,12)-(2,75)
+*)
+
+(* typed spans
+'a -> 'a
+*)
+
+(* typed spans
+'a
 *)

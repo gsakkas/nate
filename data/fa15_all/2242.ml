@@ -248,3 +248,9 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+int
+int list
+int
+*)

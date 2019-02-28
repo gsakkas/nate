@@ -16,12 +16,20 @@ let pipe fs =
 x (fun a -> a)
 AppG (fromList [LamG EmptyG])
 
-(3,17)-(3,23)
-x
-VarG
+*)
 
-(3,21)-(3,23)
-a
-VarG
+(* changed exprs
+App (Just (3,17)-(3,32)) (Var (Just (3,17)-(3,18)) "x") [Lam (Just (3,19)-(3,32)) (VarPat (Just (3,24)-(3,25)) "a") (Var (Just (3,30)-(3,31)) "a") Nothing]
+*)
 
+(* typed spans
+(3,17)-(3,32)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a -> 'b -> 'c
 *)

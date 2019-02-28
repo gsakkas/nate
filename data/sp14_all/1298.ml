@@ -17,12 +17,24 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(6,46)-(6,47)
+(6,46)-(6,61)
 wwhile (g , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(6,46)-(6,61)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (6,46)-(6,59)) (Var (Just (6,46)-(6,52)) "wwhile") [Tuple (Just (6,53)-(6,59)) [Var (Just (6,54)-(6,55)) "g",Var (Just (6,57)-(6,58)) "b"]]
+*)
+
+(* typed spans
+(6,46)-(6,59)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a
 *)

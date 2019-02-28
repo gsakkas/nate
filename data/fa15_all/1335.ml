@@ -71,7 +71,7 @@ let rec build (rand,depth) =
 (11,11)-(11,20)
 fun (e1 , e2) ->
   Times (e1 , e2)
-LamG (ConAppG (Just (TupleG (fromList [VarG]))) Nothing)
+LamG (ConAppG (Just (TupleG (fromList [VarG]))))
 
 (16,2)-(18,77)
 match rand (0 , 7) with
@@ -85,4 +85,19 @@ match rand (0 , 7) with
 | _ -> buildX ()
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
 
+*)
+
+(* typed spans
+(19,16)-(19,39)
+(30,4)-(45,22)
+*)
+
+(* typed spans
+(expr * expr) -> expr
+expr
+*)
+
+(* typed spans
+unit -> expr
+unit
 *)

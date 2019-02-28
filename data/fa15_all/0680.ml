@@ -74,10 +74,6 @@ CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 EMPTY
 EmptyG
 
-(26,36)-(26,65)
-EMPTY
-EmptyG
-
 (26,37)-(26,46)
 ")*cos(pi*"
 LitG
@@ -90,4 +86,25 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 exp c ^ ")"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
+*)
+
+(* typed spans
+(14,2)-(27,73)
+(27,20)-(27,31)
+(27,45)-(27,70)
+(27,54)-(27,69)
+*)
+
+(* typed spans
+string
+string
+string
+string
+*)
+
+(* typed spans
+string
+string
+string
+string
 *)

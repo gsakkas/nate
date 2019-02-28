@@ -49,32 +49,32 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(19,16)-(19,23)
-[x + 1]
-ListG (BopG EmptyG EmptyG) Nothing
-
 (19,16)-(19,28)
 ([x + 1] , [x + 1])
-TupleG (fromList [ListG EmptyG Nothing])
-
-(19,21)-(19,22)
-[x + 1]
-ListG (BopG EmptyG EmptyG) Nothing
-
-(19,27)-(19,28)
-1
-LitG
+TupleG (fromList [ListG EmptyG])
 
 (21,15)-(21,25)
-EMPTY
-EmptyG
+l1
+VarG
 
-(21,16)-(21,24)
-EMPTY
-EmptyG
+*)
 
-(21,21)-(21,23)
-EMPTY
-EmptyG
+(* changed exprs
+Tuple (Just (19,16)-(19,34)) [List (Just (19,17)-(19,24)) [Bop (Just (19,18)-(19,23)) Plus (Var (Just (19,18)-(19,19)) "x") (Lit (Just (19,22)-(19,23)) (LI 1))] Nothing,List (Just (19,26)-(19,33)) [Bop (Just (19,27)-(19,32)) Plus (Var (Just (19,27)-(19,28)) "x") (Lit (Just (19,31)-(19,32)) (LI 1))] Nothing]
+Var (Just (21,15)-(21,17)) "l1"
+*)
 
+(* typed spans
+(19,16)-(19,34)
+(21,15)-(21,17)
+*)
+
+(* correct types
+(int list * int list)
+int list
+*)
+
+(* bad types
+int list
+(int list * int list) list
 *)

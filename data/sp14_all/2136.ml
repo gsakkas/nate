@@ -39,8 +39,19 @@ let rec exprToString e =
 Format.sprintf "%expr" 1.0
 AppG (fromList [LitG])
 
-(15,31)-(15,34)
-1.0
-LitG
+*)
 
+(* changed exprs
+App (Just (15,27)-(15,55)) (Var (Just (15,28)-(15,42)) "Format.sprintf") [Lit (Just (15,43)-(15,50)) (LS "%expr"),Lit (Just (15,51)-(15,54)) (LD 1.0)]
+*)
+
+(* typed spans
+(15,27)-(15,55)
+*)
+
+(* correct types
+*)
+
+(* bad types
+expr
 *)

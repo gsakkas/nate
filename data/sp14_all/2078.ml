@@ -67,28 +67,32 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(21,11)-(21,20)
-EMPTY
-EmptyG
-
-(21,16)-(21,20)
-EMPTY
-EmptyG
-
-(23,11)-(23,20)
-EMPTY
-EmptyG
-
-(23,16)-(23,20)
-EMPTY
-EmptyG
-
 (32,26)-(32,32)
 VarX
-ConAppG Nothing Nothing
+ConAppG Nothing
 
 (33,26)-(33,32)
 VarY
-ConAppG Nothing Nothing
+ConAppG Nothing
 
+*)
+
+(* changed exprs
+ConApp (Just (28,26)-(28,30)) "VarX" Nothing Nothing
+ConApp (Just (29,26)-(29,30)) "VarY" Nothing Nothing
+*)
+
+(* typed spans
+(28,26)-(28,30)
+(29,26)-(29,30)
+*)
+
+(* correct types
+expr
+expr
+*)
+
+(* bad types
+unit -> expr
+unit -> expr
 *)

@@ -68,3 +68,23 @@ eval (r , x , y) /. eval (s , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)
+
+(* changed exprs
+Bop (Just (27,6)-(27,32)) FDiv (App (Just (27,7)-(27,23)) (Var (Just (27,8)-(27,12)) "eval") [Tuple (Just (27,13)-(27,22)) [Var (Just (27,14)-(27,15)) "t",Var (Just (27,17)-(27,18)) "x",Var (Just (27,20)-(27,21)) "y"]]) (Lit (Just (27,27)-(27,31)) (LD 30.0))
+Bop (Just (27,36)-(27,74)) FDiv (App (Just (27,37)-(27,53)) (Var (Just (27,38)-(27,42)) "eval") [Tuple (Just (27,43)-(27,52)) [Var (Just (27,44)-(27,45)) "r",Var (Just (27,47)-(27,48)) "x",Var (Just (27,50)-(27,51)) "y"]]) (App (Just (27,57)-(27,73)) (Var (Just (27,58)-(27,62)) "eval") [Tuple (Just (27,63)-(27,72)) [Var (Just (27,64)-(27,65)) "s",Var (Just (27,67)-(27,68)) "x",Var (Just (27,70)-(27,71)) "y"]])
+*)
+
+(* typed spans
+(27,6)-(27,32)
+(27,36)-(27,74)
+*)
+
+(* correct types
+float
+float
+*)
+
+(* bad types
+int
+int
+*)

@@ -1,73 +1,8 @@
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-h1 :: t1
-h1 :: t1
-h1 :: t1
-h1 :: t1
-rh :: rt
-rh :: rt
-h1 :: t1
-h :: l
-norm_sum :: acc
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-tens :: a1
-ones :: a2
-h :: l2
-digit :: sum
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-h :: seen
-asd2 :: b
-asd2 :: b
-asd2 :: b
-asd2 :: b
-d :: t
-d :: t
-d :: t
-h2 :: t2
-v1 :: list1
-v2 :: list2
-v1 :: list1
-v2 :: list2
-m :: t
-m :: t
-m :: t
-x' :: xs'
-x' :: xs'
-x' :: xs'
-x' :: xs'
-num :: xs'
-num :: accum
-num :: accum
-h :: seen
+LamG (TupleG (fromList [EmptyG]))
+fun b'' -> (f b , false)
+fun b'' -> (f b , true)
+fun x -> (x * x , x < 100)
+fun b -> (f b , f b = b)
+fun x -> (x , x = b)
+fun x -> (f b , b = f b)
+fun x -> (0 , true)

@@ -24,3 +24,19 @@ let rec sepConcat sep sl =
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (7,17)-(7,19)) (LS "")
+*)
+
+(* typed spans
+(7,17)-(7,19)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+unit
+*)

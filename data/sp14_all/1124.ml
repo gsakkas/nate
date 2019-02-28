@@ -32,3 +32,19 @@ let rec eval (e,x,y) = match e with | Average (x',y') -> (x +. y) /. 2.0;;
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (11,69)-(11,72)) (LD 2.0)
+*)
+
+(* typed spans
+(11,69)-(11,72)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

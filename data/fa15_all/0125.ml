@@ -17,6 +17,26 @@ VarG
 
 (3,62)-(3,63)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+Var (Just (3,45)-(3,46)) "t"
+List (Just (3,62)-(3,65)) [Var (Just (3,63)-(3,64)) "h"] Nothing
+*)
+
+(* typed spans
+(3,45)-(3,46)
+(3,62)-(3,65)
+*)
+
+(* correct types
+'a list
+'a list
+*)
+
+(* bad types
+'a list
+'a list list
 *)

@@ -13,6 +13,22 @@ let rec listReverse l =
 (* changed spans
 (3,23)-(3,24)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+List (Just (3,23)-(3,25)) [] Nothing
+*)
+
+(* typed spans
+(3,23)-(3,25)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+int
 *)

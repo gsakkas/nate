@@ -34,3 +34,18 @@ List.map f l
 AppG (fromList [VarG])
 
 *)
+
+(* typed spans
+(2,18)-(7,58)
+(9,45)-(9,59)
+*)
+
+(* typed spans
+string -> string list -> string
+string list
+*)
+
+(* typed spans
+('a -> 'b) -> 'a list -> string
+('a -> 'b) -> 'a list -> 'b list
+*)

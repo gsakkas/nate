@@ -22,3 +22,19 @@ g
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (6,55)-(6,56)) "g"
+*)
+
+(* typed spans
+(6,55)-(6,56)
+*)
+
+(* correct types
+'a -> ('a * bool)
+*)
+
+(* bad types
+'a -> 'a
+*)

@@ -97,47 +97,31 @@ match i with
               (mulByDigit (i - 1) l)
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
 
-(34,37)-(34,43)
-bigAdd l (mulByDigit (i - 1)
-                     l)
-AppG (fromList [VarG,AppG (fromList [EmptyG])])
-
 (37,14)-(37,49)
-EMPTY
-EmptyG
-
-(37,15)-(37,16)
-EMPTY
-EmptyG
-
-(37,18)-(37,48)
-EMPTY
-EmptyG
-
-(37,19)-(37,25)
-EMPTY
-EmptyG
-
-(37,26)-(37,47)
 let (c , a') = a in
 let m = mulByDigit x l2 in
 let s = bigAdd m a' in
 (c + 1 , s)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(37,27)-(37,44)
-let m = mulByDigit x l2 in
-let s = bigAdd m a' in
-(c + 1 , s)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+*)
 
-(37,45)-(37,46)
-let s = bigAdd m a' in
-(c + 1 , s)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
+(* changed exprs
+Case (Just (35,4)-(38,44)) (Var (Just (35,11)-(35,12)) "i") [(LitPat (Just (36,7)-(36,8)) (LI 1),Nothing,Var (Just (36,12)-(36,13)) "l"),(LitPat (Just (37,7)-(37,9)) (LI 10),Nothing,App (Just (37,13)-(37,20)) (Var (Just (37,15)-(37,16)) "@") [Var (Just (37,13)-(37,14)) "l",List (Just (37,17)-(37,20)) [Lit (Just (37,18)-(37,19)) (LI 0)] Nothing]),(WildPat (Just (38,7)-(38,8)),Nothing,App (Just (38,12)-(38,43)) (Var (Just (38,12)-(38,18)) "bigAdd") [Var (Just (38,19)-(38,20)) "l",App (Just (38,21)-(38,43)) (Var (Just (38,22)-(38,32)) "mulByDigit") [Bop (Just (38,33)-(38,40)) Minus (Var (Just (38,34)-(38,35)) "i") (Lit (Just (38,38)-(38,39)) (LI 1)),Var (Just (38,41)-(38,42)) "l"]])]
+Let (Just (42,4)-(43,66)) NonRec [(TuplePat (Just (42,9)-(42,13)) [VarPat (Just (42,9)-(42,10)) "c",VarPat (Just (42,11)-(42,13)) "a'"],Var (Just (42,17)-(42,18)) "a")] (Let (Just (43,4)-(43,66)) NonRec [(VarPat (Just (43,8)-(43,9)) "m",App (Just (43,12)-(43,27)) (Var (Just (43,12)-(43,22)) "mulByDigit") [Var (Just (43,23)-(43,24)) "x",Var (Just (43,25)-(43,27)) "l2"])] (Let (Just (43,31)-(43,66)) NonRec [(VarPat (Just (43,35)-(43,36)) "s",App (Just (43,39)-(43,50)) (Var (Just (43,39)-(43,45)) "bigAdd") [Var (Just (43,46)-(43,47)) "m",Var (Just (43,48)-(43,50)) "a'"])] (Tuple (Just (43,54)-(43,66)) [Bop (Just (43,55)-(43,62)) Plus (Var (Just (43,56)-(43,57)) "c") (Lit (Just (43,60)-(43,61)) (LI 1)),Var (Just (43,64)-(43,65)) "s"])))
+*)
 
-(38,2)-(39,66)
-(c + 1 , s)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
+(* typed spans
+(35,4)-(38,44)
+(42,4)-(43,66)
+*)
 
+(* correct types
+int list
+(int * int list)
+*)
+
+(* bad types
+int list
+(int * int list -> int list)
 *)

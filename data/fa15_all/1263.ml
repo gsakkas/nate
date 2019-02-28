@@ -28,3 +28,19 @@ let stringOfList f l =
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (5,10)-(5,12)) (LS "")
+*)
+
+(* typed spans
+(5,10)-(5,12)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+'a list
+*)

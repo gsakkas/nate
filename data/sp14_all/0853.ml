@@ -13,16 +13,32 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(4,22)-(4,23)
-EMPTY
-EmptyG
+(4,31)-(4,75)
+0
+LitG
 
-(4,31)-(4,69)
+(4,31)-(4,75)
 ns
 VarG
 
-(4,73)-(4,75)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lit (Just (4,22)-(4,23)) (LI 0)
+Var (Just (4,27)-(4,29)) "ns"
+*)
+
+(* typed spans
+(4,22)-(4,23)
+(4,27)-(4,29)
+*)
+
+(* correct types
+int
+int list
+*)
+
+(* bad types
+int list list
+int list list
 *)

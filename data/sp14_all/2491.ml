@@ -66,7 +66,39 @@ evalhelper p2 x y
 AppG (fromList [VarG])
 
 (23,8)-(25,30)
+x
+VarG
+
+(23,8)-(25,30)
 y
 VarG
 
+*)
+
+(* changed exprs
+App (Just (21,23)-(21,42)) (Var (Just (21,24)-(21,34)) "evalhelper") [Var (Just (21,35)-(21,37)) "p1",Var (Just (21,38)-(21,39)) "x",Var (Just (21,40)-(21,41)) "y"]
+App (Just (21,46)-(21,65)) (Var (Just (21,47)-(21,57)) "evalhelper") [Var (Just (21,58)-(21,60)) "p2",Var (Just (21,61)-(21,62)) "x",Var (Just (21,63)-(21,64)) "y"]
+Var (Just (21,61)-(21,62)) "x"
+Var (Just (21,63)-(21,64)) "y"
+*)
+
+(* typed spans
+(21,23)-(21,42)
+(21,46)-(21,65)
+(21,61)-(21,62)
+(21,63)-(21,64)
+*)
+
+(* correct types
+float
+float
+float
+float
+*)
+
+(* bad types
+expr
+expr
+float
+float
 *)

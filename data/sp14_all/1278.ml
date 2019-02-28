@@ -50,3 +50,23 @@ AppG (fromList [VarG])
 LitG
 
 *)
+
+(* changed exprs
+App (Just (16,28)-(16,43)) (Var (Just (16,29)-(16,40)) "digitsOfInt") [Var (Just (16,41)-(16,42)) "n"]
+Lit (Just (16,44)-(16,45)) (LI 0)
+*)
+
+(* typed spans
+(16,28)-(16,43)
+(16,44)-(16,45)
+*)
+
+(* correct types
+int list
+int
+*)
+
+(* bad types
+int -> int list
+int
+*)

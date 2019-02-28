@@ -20,11 +20,23 @@ let rec sepConcat sep sl =
 
 (* changed spans
 (6,29)-(6,34)
-EMPTY
-EmptyG
+a
+VarG
 
-(6,32)-(6,33)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (6,29)-(6,30)) "a"
+*)
+
+(* typed spans
+(6,29)-(6,30)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+string
 *)

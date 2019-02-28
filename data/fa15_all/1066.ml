@@ -20,8 +20,24 @@ LamG (LamG EmptyG)
 f a
 AppG (fromList [VarG])
 
-(2,35)-(2,77)
-a
-VarG
+*)
 
+(* changed exprs
+Lam (Just (2,6)-(2,23)) (VarPat (Just (2,6)-(2,7)) "a") (Lam (Just (2,8)-(2,23)) (VarPat (Just (2,8)-(2,9)) "x") (Bop (Just (2,12)-(2,23)) Plus (Bop (Just (2,12)-(2,19)) Times (Var (Just (2,13)-(2,14)) "a") (Var (Just (2,17)-(2,18)) "a")) (Var (Just (2,22)-(2,23)) "x")) Nothing) Nothing
+App (Just (5,18)-(5,21)) (Var (Just (5,18)-(5,19)) "f") [Var (Just (5,20)-(5,21)) "a"]
+*)
+
+(* typed spans
+(2,6)-(2,23)
+(5,18)-(5,21)
+*)
+
+(* correct types
+int -> int -> int
+int -> int
+*)
+
+(* bad types
+'a -> 'b
+'a
 *)

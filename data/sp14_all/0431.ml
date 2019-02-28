@@ -54,3 +54,19 @@ num
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (19,9)-(19,12)) "num"
+*)
+
+(* typed spans
+(19,9)-(19,12)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+(int * int) -> 'a
+*)

@@ -20,11 +20,23 @@ let stringOfList f l =
 
 (* changed spans
 (6,18)-(6,35)
-EMPTY
-EmptyG
+a
+VarG
 
-(6,19)-(6,32)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (6,18)-(6,19)) "a"
+*)
+
+(* typed spans
+(6,18)-(6,19)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+string
 *)

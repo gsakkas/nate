@@ -16,37 +16,25 @@ let fixpoint (f,b) = wwhile ((fun b'  -> let x = f b' in (x, (b' != x))), b);;
 
 (* changed spans
 (5,29)-(5,65)
-EMPTY
-EmptyG
-
-(5,40)-(5,56)
-EMPTY
-EmptyG
-
-(5,47)-(5,52)
-let x = f b' in (x , b' <> x)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-
-(5,47)-(5,56)
 fun b' ->
   (let x = f b' in
    (x , b' <> x))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(5,50)-(5,51)
-(x , b' <> x)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
+*)
 
-(5,55)-(5,56)
-EMPTY
-EmptyG
+(* changed exprs
+Lam (Just (5,29)-(5,72)) (VarPat (Just (5,34)-(5,36)) "b'") (Let (Just (5,41)-(5,71)) NonRec [(VarPat (Just (5,45)-(5,46)) "x",App (Just (5,49)-(5,53)) (Var (Just (5,49)-(5,50)) "f") [Var (Just (5,51)-(5,53)) "b'"])] (Tuple (Just (5,57)-(5,71)) [Var (Just (5,58)-(5,59)) "x",Bop (Just (5,61)-(5,70)) Neq (Var (Just (5,62)-(5,64)) "b'") (Var (Just (5,68)-(5,69)) "x")])) Nothing
+*)
 
-(5,60)-(5,64)
-b' <> x
-BopG VarG VarG
+(* typed spans
+(5,29)-(5,72)
+*)
 
-(5,67)-(5,68)
-x
-VarG
+(* correct types
+'a -> ('a * bool)
+*)
 
+(* bad types
+('a * 'b) -> bool
 *)

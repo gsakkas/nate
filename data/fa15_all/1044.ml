@@ -78,7 +78,23 @@ let bigMul l1 l2 =
 
 (* changed spans
 (34,30)-(34,33)
-EMPTY
-EmptyG
+(0 , 0 :: c)
+TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])
 
+*)
+
+(* changed exprs
+Tuple (Just (34,25)-(34,38)) [Lit (Just (34,26)-(34,27)) (LI 0),ConApp (Just (34,29)-(34,37)) "::" (Just (Tuple (Just (34,30)-(34,36)) [Lit (Just (34,30)-(34,31)) (LI 0),Var (Just (34,35)-(34,36)) "c"])) Nothing]
+*)
+
+(* typed spans
+(34,25)-(34,38)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+int list
 *)

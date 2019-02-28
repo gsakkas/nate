@@ -29,10 +29,6 @@ fun n -> digitsOfInt (abs n)
 LamG (AppG (fromList [EmptyG]))
 
 (8,2)-(8,71)
-EMPTY
-EmptyG
-
-(8,5)-(8,35)
 let x = sumList (digits n) in
 if x > 10
 then 1 + additivePersistence x
@@ -57,4 +53,31 @@ AppG (fromList [VarG])
 x
 VarG
 
+*)
+
+(* typed spans
+(5,11)-(5,34)
+(10,2)-(11,51)
+(10,19)-(10,25)
+(11,2)-(11,51)
+(11,21)-(11,44)
+(11,42)-(11,43)
+*)
+
+(* typed spans
+int -> int list
+int
+int -> int list
+int
+int
+int
+*)
+
+(* typed spans
+int list -> int
+int
+int -> int list
+int
+int
+int
 *)

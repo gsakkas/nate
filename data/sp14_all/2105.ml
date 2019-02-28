@@ -107,10 +107,50 @@ VarG
 
 (27,20)-(27,24)
 (VarX , VarX , VarX , VarX)
-TupleG (fromList [ConAppG Nothing Nothing])
+TupleG (fromList [ConAppG Nothing])
 
 (28,9)-(28,18)
 VarX
-ConAppG Nothing Nothing
+ConAppG Nothing
 
+(28,9)-(28,18)
+VarX
+ConAppG Nothing
+
+(28,9)-(28,18)
+VarX
+ConAppG Nothing
+
+*)
+
+(* changed exprs
+Var (Just (27,9)-(27,20)) "buildThresh"
+Tuple (Just (27,21)-(27,45)) [ConApp (Just (27,22)-(27,26)) "VarX" Nothing Nothing,ConApp (Just (27,28)-(27,32)) "VarX" Nothing Nothing,ConApp (Just (27,34)-(27,38)) "VarX" Nothing Nothing,ConApp (Just (27,40)-(27,44)) "VarX" Nothing Nothing]
+ConApp (Just (27,28)-(27,32)) "VarX" Nothing Nothing
+ConApp (Just (27,34)-(27,38)) "VarX" Nothing Nothing
+ConApp (Just (27,40)-(27,44)) "VarX" Nothing Nothing
+*)
+
+(* typed spans
+(27,9)-(27,20)
+(27,21)-(27,45)
+(27,28)-(27,32)
+(27,34)-(27,38)
+(27,40)-(27,44)
+*)
+
+(* correct types
+(expr * expr * expr * expr) -> expr
+(expr * expr * expr * expr)
+expr
+expr
+expr
+*)
+
+(* bad types
+(expr * expr) -> expr
+expr
+expr
+expr
+expr
 *)

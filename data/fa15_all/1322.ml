@@ -23,10 +23,6 @@ let rec sepConcat sep sl =
 EMPTY
 EmptyG
 
-(7,23)-(7,72)
-EMPTY
-EmptyG
-
 (7,35)-(7,45)
 EMPTY
 EmptyG
@@ -36,4 +32,16 @@ let l = t in
 List.fold_left f base l
 LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
 
+*)
+
+(* typed spans
+(7,28)-(7,64)
+*)
+
+(* typed spans
+string
+*)
+
+(* typed spans
+string list
 *)

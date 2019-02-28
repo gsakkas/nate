@@ -15,10 +15,22 @@ let rec digitsOfInt n =
 (* changed spans
 (4,22)-(4,23)
 0 :: ns
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,LitG])))
 
-(4,31)-(4,67)
-ns
-VarG
+*)
 
+(* changed exprs
+ConApp (Just (4,22)-(4,29)) "::" (Just (Tuple (Just (4,22)-(4,29)) [Lit (Just (4,22)-(4,23)) (LI 0),Var (Just (4,27)-(4,29)) "ns"])) Nothing
+*)
+
+(* typed spans
+(4,22)-(4,29)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

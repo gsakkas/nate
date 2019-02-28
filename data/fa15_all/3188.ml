@@ -77,18 +77,38 @@ LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (25,7)-(25,30)
 [((x1 + x2) + c) / 10 ; 0]
-ListG LitG Nothing
-
-(25,21)-(25,23)
-c
-VarG
-
-(25,32)-(25,64)
-0
-LitG
+ListG LitG
 
 (25,52)-(25,54)
 c
 VarG
 
+*)
+
+(* changed exprs
+Lam (Just (5,6)-(5,11)) (VarPat (Just (5,6)-(5,7)) "y") (Var (Just (5,10)-(5,11)) "y") Nothing
+Let (Just (27,6)-(28,66)) NonRec [(ConsPat (Just (27,10)-(27,15)) (VarPat (Just (27,10)-(27,11)) "c") (VarPat (Just (27,13)-(27,15)) "c'"),Var (Just (27,18)-(27,20)) "a1")] (Tuple (Just (28,6)-(28,66)) [List (Just (28,7)-(28,32)) [Bop (Just (28,8)-(28,28)) Div (Bop (Just (28,8)-(28,23)) Plus (Bop (Just (28,9)-(28,18)) Plus (Var (Just (28,10)-(28,12)) "x1") (Var (Just (28,15)-(28,17)) "x2")) (Var (Just (28,21)-(28,22)) "c")) (Lit (Just (28,26)-(28,28)) (LI 10)),Lit (Just (28,30)-(28,31)) (LI 0)] Nothing,App (Just (28,34)-(28,65)) (Var (Just (28,38)-(28,39)) "@") [Var (Just (28,35)-(28,37)) "a2",List (Just (28,40)-(28,64)) [Bop (Just (28,41)-(28,63)) Mod (Bop (Just (28,41)-(28,56)) Plus (Bop (Just (28,42)-(28,51)) Plus (Var (Just (28,43)-(28,45)) "x1") (Var (Just (28,48)-(28,50)) "x2")) (Var (Just (28,54)-(28,55)) "c")) (Lit (Just (28,61)-(28,63)) (LI 10))] Nothing]])
+List (Just (28,7)-(28,32)) [Bop (Just (28,8)-(28,28)) Div (Bop (Just (28,8)-(28,23)) Plus (Bop (Just (28,9)-(28,18)) Plus (Var (Just (28,10)-(28,12)) "x1") (Var (Just (28,15)-(28,17)) "x2")) (Var (Just (28,21)-(28,22)) "c")) (Lit (Just (28,26)-(28,28)) (LI 10)),Lit (Just (28,30)-(28,31)) (LI 0)] Nothing
+Var (Just (28,54)-(28,55)) "c"
+*)
+
+(* typed spans
+(5,6)-(5,11)
+(27,6)-(28,66)
+(28,7)-(28,32)
+(28,54)-(28,55)
+*)
+
+(* correct types
+'a -> 'a
+(int list * int list)
+int list
+int
+*)
+
+(* bad types
+int list -> int list -> (int list * int list)
+(int list * int list)
+int list
+int
 *)

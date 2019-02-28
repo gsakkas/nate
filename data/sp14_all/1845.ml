@@ -19,28 +19,40 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(4,10)-(4,13)
-EMPTY
-EmptyG
-
-(4,43)-(4,49)
+(4,43)-(4,64)
 xs2
 VarG
 
-(4,43)-(4,64)
-EMPTY
-EmptyG
-
-(4,51)-(4,54)
-EMPTY
-EmptyG
-
-(4,62)-(4,64)
+(4,58)-(4,60)
 append tl xs2
 AppG (fromList [VarG])
 
-(5,2)-(7,10)
+(4,62)-(4,64)
 xs2
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (4,27)-(4,30)) "xs2"
+App (Just (4,49)-(4,64)) (Var (Just (4,50)-(4,56)) "append") [Var (Just (4,57)-(4,59)) "tl",Var (Just (4,60)-(4,63)) "xs2"]
+Var (Just (4,60)-(4,63)) "xs2"
+*)
+
+(* typed spans
+(4,27)-(4,30)
+(4,49)-(4,64)
+(4,60)-(4,63)
+*)
+
+(* correct types
+int list
+int list
+int list
+*)
+
+(* bad types
+'a
+'a list
+'a list list
 *)

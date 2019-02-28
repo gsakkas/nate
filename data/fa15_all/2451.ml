@@ -97,16 +97,20 @@ let multi =
 (test :: a1 , bigAdd multi a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(37,21)-(37,22)
-a1
-VarG
+*)
 
-(38,54)-(38,55)
-a1
-VarG
+(* changed exprs
+Let (Just (37,4)-(39,77)) NonRec [(TuplePat (Just (37,9)-(37,14)) [VarPat (Just (37,9)-(37,11)) "a1",VarPat (Just (37,12)-(37,14)) "a2"],Var (Just (37,18)-(37,19)) "a")] (Let (Just (38,4)-(39,77)) NonRec [(VarPat (Just (38,8)-(38,12)) "test",Case (Just (38,15)-(38,55)) (Var (Just (38,21)-(38,23)) "a1") [(ConPat (Just (38,31)-(38,33)) "[]" Nothing,Nothing,Lit (Just (38,37)-(38,38)) (LI 1)),(ConsPat (Just (38,41)-(38,45)) (VarPat (Just (38,41)-(38,42)) "h") (VarPat (Just (38,44)-(38,45)) "t"),Nothing,Bop (Just (38,49)-(38,55)) Times (Lit (Just (38,49)-(38,51)) (LI 10)) (Var (Just (38,54)-(38,55)) "h"))])] (Let (Just (39,4)-(39,77)) NonRec [(VarPat (Just (39,8)-(39,13)) "multi",App (Just (39,16)-(39,40)) (Var (Just (39,16)-(39,26)) "mulByDigit") [Bop (Just (39,27)-(39,37)) Times (Var (Just (39,28)-(39,32)) "test") (Var (Just (39,35)-(39,36)) "x"),Var (Just (39,38)-(39,40)) "l1"])] (Tuple (Just (39,44)-(39,77)) [ConApp (Just (39,45)-(39,57)) "::" (Just (Tuple (Just (39,46)-(39,56)) [Var (Just (39,46)-(39,50)) "test",Var (Just (39,54)-(39,56)) "a1"])) Nothing,App (Just (39,59)-(39,76)) (Var (Just (39,60)-(39,66)) "bigAdd") [Var (Just (39,67)-(39,72)) "multi",Var (Just (39,73)-(39,75)) "a2"]])))
+*)
 
-(38,72)-(38,73)
-a2
-VarG
+(* typed spans
+(37,4)-(39,77)
+*)
 
+(* correct types
+(int list * int list)
+*)
+
+(* bad types
+(int list * int list)
 *)

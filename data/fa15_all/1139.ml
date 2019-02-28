@@ -114,16 +114,52 @@ intListToInt (mulByDigit (intListToInt l1)
                          [s])
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(46,47)-(46,48)
-[s]
-ListG VarG Nothing
-
-(51,13)-(51,21)
-EMPTY
-EmptyG
+(51,13)-(51,42)
+List.combine l2 l2
+AppG (fromList [VarG])
 
 (51,13)-(51,42)
-EMPTY
-EmptyG
+List.combine
+VarG
 
+(51,13)-(51,42)
+l2
+VarG
+
+(51,13)-(51,42)
+l2
+VarG
+
+*)
+
+(* changed exprs
+App (Just (46,18)-(46,65)) (Var (Just (46,18)-(46,30)) "intListToInt") [App (Just (46,31)-(46,65)) (Var (Just (46,32)-(46,42)) "mulByDigit") [App (Just (46,43)-(46,60)) (Var (Just (46,44)-(46,56)) "intListToInt") [Var (Just (46,57)-(46,59)) "l1"],List (Just (46,61)-(46,64)) [Var (Just (46,62)-(46,63)) "s"] Nothing]]
+App (Just (51,13)-(51,31)) (Var (Just (51,13)-(51,25)) "List.combine") [Var (Just (51,26)-(51,28)) "l2",Var (Just (51,29)-(51,31)) "l2"]
+Var (Just (51,13)-(51,25)) "List.combine"
+Var (Just (51,26)-(51,28)) "l2"
+Var (Just (51,29)-(51,31)) "l2"
+*)
+
+(* typed spans
+(46,18)-(46,65)
+(51,13)-(51,31)
+(51,13)-(51,25)
+(51,26)-(51,28)
+(51,29)-(51,31)
+*)
+
+(* correct types
+int
+(int * int) list
+int list -> int list -> (int * int) list
+int list
+int list
+*)
+
+(* bad types
+int list
+(int list * int list) list
+(int list * int list) list
+(int list * int list) list
+(int list * int list) list
 *)

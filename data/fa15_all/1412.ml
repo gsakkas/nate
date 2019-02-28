@@ -22,73 +22,25 @@ let rec digitalRoot n = match digits n with | x::[] -> x;;
 *)
 
 (* changed spans
-(7,16)-(7,70)
-EMPTY
-EmptyG
-
-(7,21)-(7,70)
-EMPTY
-EmptyG
-
-(7,27)-(7,29)
-EMPTY
-EmptyG
-
-(7,43)-(7,44)
-EMPTY
-EmptyG
-
-(7,55)-(7,56)
-EMPTY
-EmptyG
-
-(7,55)-(7,70)
-EMPTY
-EmptyG
-
-(7,59)-(7,70)
-EMPTY
-EmptyG
-
-(7,60)-(7,67)
-EMPTY
-EmptyG
-
-(7,68)-(7,69)
-EMPTY
-EmptyG
-
 (10,2)-(10,77)
 match digits n with
 | x :: [] -> x
 CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,VarG)])
 
-(10,45)-(10,56)
-EMPTY
-EmptyG
+*)
 
-(10,45)-(10,77)
-EMPTY
-EmptyG
+(* changed exprs
+Case (Just (7,24)-(7,56)) (App (Just (7,30)-(7,38)) (Var (Just (7,30)-(7,36)) "digits") [Var (Just (7,37)-(7,38)) "n"]) [(ConsPat (Just (7,46)-(7,51)) (VarPat (Just (7,46)-(7,47)) "x") (ConPat (Just (7,49)-(7,51)) "[]" Nothing),Nothing,Var (Just (7,55)-(7,56)) "x")]
+*)
 
-(10,57)-(10,77)
-EMPTY
-EmptyG
+(* typed spans
+(7,24)-(7,56)
+*)
 
-(10,58)-(10,64)
-EMPTY
-EmptyG
+(* correct types
+int
+*)
 
-(10,65)-(10,76)
-EMPTY
-EmptyG
-
-(10,66)-(10,73)
-EMPTY
-EmptyG
-
-(10,74)-(10,75)
-EMPTY
-EmptyG
-
+(* bad types
+int
 *)

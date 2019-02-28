@@ -48,35 +48,23 @@ let rec exprToString e =
 y
 VarG
 
-(19,50)-(19,51)
-EMPTY
-EmptyG
-
 (19,55)-(19,70)
-EMPTY
-EmptyG
-
-(19,56)-(19,59)
 y
 VarG
+
+(19,62)-(19,69)
+")/2)"
+LitG
 
 (19,62)-(19,69)
 exprToString x ^ ("*" ^ exprToString y)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(19,63)-(19,64)
-EMPTY
-EmptyG
-
-(19,65)-(19,68)
-EMPTY
-EmptyG
+(20,19)-(20,52)
+exprToString
+VarG
 
 (20,19)-(20,52)
-EMPTY
-EmptyG
-
-(20,32)-(20,33)
 x
 VarG
 
@@ -92,4 +80,52 @@ AppG (fromList [VarG])
 y
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (18,28)-(18,29)) "y"
+Var (Just (18,55)-(18,56)) "y"
+Lit (Just (18,60)-(18,66)) (LS ")/2)")
+App (Just (19,19)-(19,62)) (Var (Just (19,36)-(19,37)) "^") [App (Just (19,19)-(19,35)) (Var (Just (19,20)-(19,32)) "exprToString") [Var (Just (19,33)-(19,34)) "x"],App (Just (19,38)-(19,62)) (Var (Just (19,43)-(19,44)) "^") [Lit (Just (19,39)-(19,42)) (LS "*"),App (Just (19,45)-(19,61)) (Var (Just (19,46)-(19,58)) "exprToString") [Var (Just (19,59)-(19,60)) "y"]]]
+Var (Just (19,20)-(19,32)) "exprToString"
+Var (Just (19,33)-(19,34)) "x"
+App (Just (19,38)-(19,62)) (Var (Just (19,43)-(19,44)) "^") [Lit (Just (19,39)-(19,42)) (LS "*"),App (Just (19,45)-(19,61)) (Var (Just (19,46)-(19,58)) "exprToString") [Var (Just (19,59)-(19,60)) "y"]]
+App (Just (19,45)-(19,61)) (Var (Just (19,46)-(19,58)) "exprToString") [Var (Just (19,59)-(19,60)) "y"]
+Var (Just (19,59)-(19,60)) "y"
+*)
+
+(* typed spans
+(18,28)-(18,29)
+(18,55)-(18,56)
+(18,60)-(18,66)
+(19,19)-(19,62)
+(19,20)-(19,32)
+(19,33)-(19,34)
+(19,38)-(19,62)
+(19,45)-(19,61)
+(19,59)-(19,60)
+*)
+
+(* correct types
+expr
+expr
+string
+string
+expr -> string
+expr
+string
+string
+expr
+*)
+
+(* bad types
+expr
+int
+int
+int
+string
+string
+string
+expr -> string
+expr
 *)

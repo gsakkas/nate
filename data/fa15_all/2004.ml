@@ -93,3 +93,8 @@ sqrt (d ** d) /. 3.0
 BopG (AppG (fromList [EmptyG])) LitG
 
 *)
+
+(* typed spans
+float
+float
+*)

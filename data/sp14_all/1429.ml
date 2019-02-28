@@ -23,10 +23,22 @@ let rec listReverse l =
 (* changed spans
 (8,36)-(8,60)
 append (listReverse t) [h]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
-(8,43)-(8,54)
-listReverse t
-AppG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (8,36)-(8,62)) (Var (Just (8,36)-(8,42)) "append") [App (Just (8,43)-(8,58)) (Var (Just (8,44)-(8,55)) "listReverse") [Var (Just (8,56)-(8,57)) "t"],List (Just (8,59)-(8,62)) [Var (Just (8,60)-(8,61)) "h"] Nothing]
+*)
+
+(* typed spans
+(8,36)-(8,62)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list
 *)

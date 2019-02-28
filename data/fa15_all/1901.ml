@@ -66,3 +66,23 @@ AppG (fromList [VarG])
 AppG (fromList [LitG])
 
 *)
+
+(* changed exprs
+App (Just (26,46)-(26,52)) (Var (Just (26,47)-(26,49)) "ex") [Var (Just (26,50)-(26,51)) "y"]
+App (Just (26,55)-(26,67)) (Var (Just (26,60)-(26,61)) "^") [Lit (Just (26,56)-(26,59)) (LS ")"),Lit (Just (26,62)-(26,66)) (LS "^2")]
+*)
+
+(* typed spans
+(26,46)-(26,52)
+(26,55)-(26,67)
+*)
+
+(* correct types
+string
+string
+*)
+
+(* bad types
+string
+string
+*)

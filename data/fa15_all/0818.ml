@@ -42,3 +42,19 @@ itt y' 0
 AppG (fromList [VarG,LitG])
 
 *)
+
+(* changed exprs
+App (Just (16,32)-(16,40)) (Var (Just (16,32)-(16,35)) "itt") [Var (Just (16,36)-(16,38)) "y'",Lit (Just (16,39)-(16,40)) (LI 0)]
+*)
+
+(* typed spans
+(16,32)-(16,40)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int -> int
+*)

@@ -69,40 +69,28 @@ let bigAdd l1 l2 =
 ((x1 + x2) + c) / 10
 BopG (BopG EmptyG EmptyG) LitG
 
-(26,52)-(26,74)
-EMPTY
-EmptyG
-
-(26,53)-(26,68)
-EMPTY
-EmptyG
-
-(26,53)-(26,73)
-EMPTY
-EmptyG
-
-(26,54)-(26,63)
-EMPTY
-EmptyG
-
-(26,55)-(26,57)
-EMPTY
-EmptyG
-
-(26,60)-(26,62)
-EMPTY
-EmptyG
-
-(26,66)-(26,67)
-EMPTY
-EmptyG
-
-(26,71)-(26,73)
-EMPTY
-EmptyG
-
 (27,16)-(27,19)
-EMPTY
-EmptyG
+0
+LitG
 
+*)
+
+(* changed exprs
+Bop (Just (26,7)-(26,29)) Div (Bop (Just (26,8)-(26,23)) Plus (Bop (Just (26,9)-(26,18)) Plus (Var (Just (26,10)-(26,12)) "x1") (Var (Just (26,15)-(26,17)) "x2")) (Var (Just (26,21)-(26,22)) "c")) (Lit (Just (26,26)-(26,28)) (LI 10))
+Lit (Just (27,16)-(27,17)) (LI 0)
+*)
+
+(* typed spans
+(26,7)-(26,29)
+(27,16)-(27,17)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+int list
+int list
 *)

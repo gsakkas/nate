@@ -69,11 +69,7 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(30,37)-(30,39)
-EMPTY
-EmptyG
-
-(30,45)-(30,66)
+(30,40)-(30,41)
 l1
 VarG
 
@@ -81,12 +77,32 @@ VarG
 snd a
 AppG (fromList [VarG])
 
-(31,2)-(32,75)
-a
-VarG
-
 (31,14)-(31,16)
 0
 LitG
 
+*)
+
+(* changed exprs
+Var (Just (30,39)-(30,41)) "l1"
+App (Just (30,63)-(30,70)) (Var (Just (30,64)-(30,67)) "snd") [Var (Just (30,68)-(30,69)) "a"]
+Lit (Just (31,14)-(31,15)) (LI 0)
+*)
+
+(* typed spans
+(30,39)-(30,41)
+(30,63)-(30,70)
+(31,14)-(31,15)
+*)
+
+(* correct types
+int list
+int list
+int
+*)
+
+(* bad types
+int list
+int list
+'a list
 *)

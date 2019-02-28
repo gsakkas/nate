@@ -60,20 +60,32 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (23,16)-(23,41)
-EMPTY
-EmptyG
-
-(23,22)-(23,23)
 match x with
 | x' :: xs -> x'
 CaseG VarG (fromList [(Nothing,VarG)])
 
-(24,4)-(26,51)
-x'
-VarG
-
 (25,40)-(25,47)
 [(h , l2)]
-ListG (TupleG (fromList [EmptyG])) Nothing
+ListG (TupleG (fromList [EmptyG]))
 
+*)
+
+(* changed exprs
+Case (Just (23,16)-(23,43)) (Var (Just (23,22)-(23,23)) "x") [(ConsPat (Just (23,31)-(23,37)) (VarPat (Just (23,31)-(23,33)) "x'") (VarPat (Just (23,35)-(23,37)) "xs"),Nothing,Var (Just (23,41)-(23,43)) "x'")]
+List (Just (25,40)-(25,49)) [Tuple (Just (25,41)-(25,48)) [Var (Just (25,42)-(25,43)) "h",Var (Just (25,45)-(25,47)) "l2"]] Nothing
+*)
+
+(* typed spans
+(23,16)-(23,43)
+(25,40)-(25,49)
+*)
+
+(* correct types
+(int * int list)
+(int * int list) list
+*)
+
+(* bad types
+(int * 'a list)
+(int * int list)
 *)

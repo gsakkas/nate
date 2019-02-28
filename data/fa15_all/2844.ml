@@ -24,15 +24,19 @@ let stringOfList f l = sepConcat " " l;;
 
 (* changed spans
 (9,33)-(9,41)
-EMPTY
-EmptyG
-
-(9,42)-(9,47)
-EMPTY
-EmptyG
-
-(9,43)-(9,44)
 " "
 LitG
 
+*)
+
+(* typed spans
+(9,33)-(9,36)
+*)
+
+(* typed spans
+string
+*)
+
+(* typed spans
+('a -> 'b) -> 'a list -> 'b list
 *)

@@ -29,35 +29,28 @@ let rec digitsOfInt n =
 
 (* changed spans
 (9,4)-(12,61)
-EMPTY
-EmptyG
+let x = reverseInt n 0 / 10
+and y =
+  reverseInt n 0 mod 10 in
+if (x = 0) && (y = 0)
+then []
+else y :: (digitsOfInt x)
+LetG NonRec (fromList [BopG EmptyG EmptyG]) (IteG EmptyG EmptyG EmptyG)
 
-(9,13)-(9,23)
-EMPTY
-EmptyG
+*)
 
-(9,13)-(9,25)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (9,4)-(11,61)) NonRec [(VarPat (Just (9,9)-(9,10)) "x",Bop (Just (9,13)-(9,34)) Div (App (Just (9,13)-(9,29)) (Var (Just (9,14)-(9,24)) "reverseInt") [Var (Just (9,25)-(9,26)) "n",Lit (Just (9,27)-(9,28)) (LI 0)]) (Lit (Just (9,32)-(9,34)) (LI 10))),(VarPat (Just (10,9)-(10,10)) "y",Bop (Just (10,13)-(10,36)) Mod (App (Just (10,13)-(10,29)) (Var (Just (10,14)-(10,24)) "reverseInt") [Var (Just (10,25)-(10,26)) "n",Lit (Just (10,27)-(10,28)) (LI 0)]) (Lit (Just (10,34)-(10,36)) (LI 10)))] (Ite (Just (11,5)-(11,60)) (Bop (Just (11,8)-(11,26)) And (Bop (Just (11,8)-(11,15)) Eq (Var (Just (11,9)-(11,10)) "x") (Lit (Just (11,13)-(11,14)) (LI 0))) (Bop (Just (11,19)-(11,26)) Eq (Var (Just (11,20)-(11,21)) "y") (Lit (Just (11,24)-(11,25)) (LI 0)))) (List (Just (11,32)-(11,34)) [] Nothing) (ConApp (Just (11,40)-(11,60)) "::" (Just (Tuple (Just (11,40)-(11,60)) [Var (Just (11,40)-(11,41)) "y",App (Just (11,45)-(11,60)) (Var (Just (11,46)-(11,57)) "digitsOfInt") [Var (Just (11,58)-(11,59)) "x"]])) Nothing))
+*)
 
-(9,24)-(9,25)
-EMPTY
-EmptyG
+(* typed spans
+(9,4)-(11,61)
+*)
 
-(10,13)-(10,14)
-reverseInt n 0
-AppG (fromList [VarG,LitG])
+(* correct types
+int list
+*)
 
-(10,17)-(10,19)
-0
-LitG
-
-(11,13)-(11,14)
-reverseInt n 0
-AppG (fromList [VarG,LitG])
-
-(11,19)-(11,21)
-0
-LitG
-
+(* bad types
+int list
 *)

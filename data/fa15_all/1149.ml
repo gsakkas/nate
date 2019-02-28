@@ -124,7 +124,23 @@ let bigMul l1 l2 =
 
 (* changed spans
 (59,8)-(59,41)
-EMPTY
-EmptyG
+helper (List.length l2 * 2) x
+AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+*)
+
+(* changed exprs
+App (Just (59,8)-(59,41)) (Var (Just (59,9)-(59,15)) "helper") [Bop (Just (59,16)-(59,38)) Times (App (Just (59,17)-(59,33)) (Var (Just (59,18)-(59,29)) "List.length") [Var (Just (59,30)-(59,32)) "l2"]) (Lit (Just (59,36)-(59,37)) (LI 2)),Var (Just (59,39)-(59,40)) "x"]
+*)
+
+(* typed spans
+(59,8)-(59,41)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list list
 *)

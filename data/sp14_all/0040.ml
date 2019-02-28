@@ -96,19 +96,24 @@ let bigMul l1 l2 =
 
 (* changed spans
 (43,30)-(43,64)
-EMPTY
-EmptyG
+bigAdd (mulByDigit h1
+                   (rh :: rt)) rt
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(43,31)-(43,57)
-EMPTY
-EmptyG
+*)
 
-(43,33)-(43,43)
-mulByDigit h1 (rh :: rt)
-AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+(* changed exprs
+App (Just (43,30)-(43,68)) (Var (Just (43,31)-(43,37)) "bigAdd") [App (Just (43,38)-(43,64)) (Var (Just (43,39)-(43,49)) "mulByDigit") [Var (Just (43,50)-(43,52)) "h1",ConApp (Just (43,53)-(43,63)) "::" (Just (Tuple (Just (43,54)-(43,62)) [Var (Just (43,54)-(43,56)) "rh",Var (Just (43,60)-(43,62)) "rt"])) Nothing],Var (Just (43,65)-(43,67)) "rt"]
+*)
 
-(43,47)-(43,49)
-rh :: rt
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+(* typed spans
+(43,30)-(43,68)
+*)
 
+(* correct types
+int list
+*)
+
+(* bad types
+int list list list
 *)

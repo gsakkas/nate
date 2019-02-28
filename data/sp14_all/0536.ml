@@ -89,20 +89,24 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(13,10)-(13,13)
-EMPTY
-EmptyG
-
-(13,10)-(13,15)
-EMPTY
-EmptyG
-
-(13,14)-(13,15)
-EMPTY
-EmptyG
-
 (38,30)-(38,33)
 max'
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (36,30)-(36,34)) "max'"
+*)
+
+(* typed spans
+(36,30)-(36,34)
+*)
+
+(* correct types
+float -> float -> float
+*)
+
+(* bad types
+int ref
 *)

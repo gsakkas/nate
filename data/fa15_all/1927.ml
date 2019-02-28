@@ -19,16 +19,24 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(6,16)-(6,17)
-(@)
-VarG
-
-(7,15)-(7,16)
-[digit]
-ListG VarG Nothing
-
 (7,20)-(7,44)
 digitsOfInt r @ [digit]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
+*)
+
+(* changed exprs
+App (Just (7,20)-(7,45)) (Var (Just (7,36)-(7,37)) "@") [App (Just (7,20)-(7,35)) (Var (Just (7,21)-(7,32)) "digitsOfInt") [Var (Just (7,33)-(7,34)) "r"],List (Just (7,38)-(7,45)) [Var (Just (7,39)-(7,44)) "digit"] Nothing]
+*)
+
+(* typed spans
+(7,20)-(7,45)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
 *)

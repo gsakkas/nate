@@ -70,10 +70,6 @@ EmptyG
 EMPTY
 EmptyG
 
-(26,37)-(26,40)
-EMPTY
-EmptyG
-
 (26,42)-(26,51)
 ")*cos(pi*"
 LitG
@@ -86,4 +82,19 @@ AppG (fromList [AppG (fromList [EmptyG]),LitG])
 EMPTY
 EmptyG
 
+*)
+
+(* typed spans
+(27,20)-(27,31)
+(27,45)-(27,70)
+*)
+
+(* typed spans
+string
+string
+*)
+
+(* typed spans
+string
+string
 *)

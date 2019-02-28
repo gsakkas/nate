@@ -54,7 +54,7 @@ let bigAdd l1 l2 =
 (19,6)-(21,39)
 match a with
 | h :: t -> ((h + sum) / 10) :: (((h + sum) mod 10) :: t)
-CaseG VarG (fromList [(Nothing,ConAppG (Just (TupleG (fromList [BopG (BopG VarG VarG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing]))) Nothing)])
+CaseG VarG (fromList [(Nothing,ConAppG (Just (TupleG (fromList [BopG (BopG VarG VarG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG])))]))))])
 
 (20,16)-(20,32)
 (h + sum) / 10
@@ -64,32 +64,23 @@ BopG (BopG EmptyG EmptyG) LitG
 EMPTY
 EmptyG
 
-(21,13)-(21,23)
-EMPTY
-EmptyG
-
 (21,13)-(21,39)
 EMPTY
 EmptyG
 
-(21,14)-(21,17)
-EMPTY
-EmptyG
+*)
 
-(21,20)-(21,22)
-EMPTY
-EmptyG
+(* typed spans
+(19,6)-(19,72)
+(19,29)-(19,45)
+*)
 
-(21,27)-(21,39)
-EMPTY
-EmptyG
+(* typed spans
+int list
+int
+*)
 
-(21,28)-(21,31)
-EMPTY
-EmptyG
-
-(21,36)-(21,38)
-EMPTY
-EmptyG
-
+(* typed spans
+int list
+int
 *)

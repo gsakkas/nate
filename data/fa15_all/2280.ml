@@ -15,8 +15,20 @@ let pipe fs =
 x
 VarG
 
-(3,20)-(3,21)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (3,17)-(3,18)) "x"
+*)
+
+(* typed spans
+(3,17)-(3,18)
+*)
+
+(* correct types
+'a -> 'a
+*)
+
+(* bad types
+'a -> 'b
 *)

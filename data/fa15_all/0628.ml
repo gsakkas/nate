@@ -14,10 +14,22 @@ let rec clone x n =
 (3,34)-(3,64)
 List.append (clone x (n - 1))
             []
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
-(3,46)-(3,51)
-clone x (n - 1)
-AppG (fromList [VarG,BopG EmptyG EmptyG])
+*)
 
+(* changed exprs
+App (Just (3,34)-(3,66)) (Var (Just (3,34)-(3,45)) "List.append") [App (Just (3,46)-(3,63)) (Var (Just (3,47)-(3,52)) "clone") [Var (Just (3,53)-(3,54)) "x",Bop (Just (3,55)-(3,62)) Minus (Var (Just (3,56)-(3,57)) "n") (Lit (Just (3,60)-(3,61)) (LI 1))],List (Just (3,64)-(3,66)) [] Nothing]
+*)
+
+(* typed spans
+(3,34)-(3,66)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list list
 *)

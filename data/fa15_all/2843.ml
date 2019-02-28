@@ -28,3 +28,19 @@ let stringOfList f l = sepConcat " " l;;
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (9,33)-(9,36)) (LS " ")
+*)
+
+(* typed spans
+(9,33)-(9,36)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+('a -> 'b) -> 'a list -> 'b list
+*)

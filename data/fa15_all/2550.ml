@@ -107,3 +107,15 @@ AppG (fromList [VarG])
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
+
+(* typed spans
+(int list * int list)
+int
+(int list * int list)
+(int list * int list)
+(int list * int list)
+int list
+int
+int list
+(int list * int list)
+*)

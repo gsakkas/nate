@@ -70,11 +70,23 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (27,18)-(27,34)
-EMPTY
-EmptyG
-
-(27,28)-(27,29)
 norm_sum :: acc
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG])))
 
+*)
+
+(* changed exprs
+ConApp (Just (27,18)-(27,35)) "::" (Just (Tuple (Just (27,19)-(27,34)) [Var (Just (27,19)-(27,27)) "norm_sum",Var (Just (27,31)-(27,34)) "acc"])) Nothing
+*)
+
+(* typed spans
+(27,18)-(27,35)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

@@ -1,8 +1,6 @@
-CaseG VarG (fromList [(Nothing,ListG EmptyG Nothing)])
-match b with
-| [] -> [a]
-| hd :: tl -> [a + hd]
-match l with
-| [] -> []
-| x :: [] -> [x]
-| head :: tail :: third :: fourth :: fifth -> [fourth ; third ; tail ; head]
+LamG (CaseG EmptyG (fromList [(Nothing,EmptyG),(Just EmptyG,EmptyG)]))
+fun n ->
+  match n with
+  | 1 -> 1
+  | _ when (n mod 2) = 0 -> n / 2
+  | _ -> (3 * n) + 1

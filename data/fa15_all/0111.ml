@@ -13,14 +13,22 @@ let rec digitsOfInt n =
 (* changed spans
 (3,36)-(3,60)
 (n mod 10) :: return
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))
 
-(3,47)-(3,58)
-EMPTY
-EmptyG
+*)
 
-(3,59)-(3,60)
-EMPTY
-EmptyG
+(* changed exprs
+ConApp (Just (3,36)-(3,56)) "::" (Just (Tuple (Just (3,36)-(3,56)) [Bop (Just (3,36)-(3,46)) Mod (Var (Just (3,37)-(3,38)) "n") (Lit (Just (3,43)-(3,45)) (LI 10)),Var (Just (3,50)-(3,56)) "return"])) Nothing
+*)
 
+(* typed spans
+(3,36)-(3,56)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
 *)

@@ -72,3 +72,30 @@ n1
 VarG
 
 *)
+
+(* typed spans
+(19,9)-(20,31)
+(19,18)-(19,54)
+(19,44)-(19,54)
+(19,52)-(19,54)
+(20,9)-(20,31)
+(20,29)-(20,31)
+*)
+
+(* typed spans
+int
+int
+int
+int list
+int
+int
+*)
+
+(* typed spans
+int
+int list
+int
+int list
+int -> int
+int
+*)

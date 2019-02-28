@@ -20,11 +20,27 @@ h
 VarG
 
 (5,51)-(5,59)
-EMPTY
-EmptyG
+t
+VarG
 
-(5,57)-(5,58)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (5,24)-(5,25)) "h"
+Var (Just (5,51)-(5,52)) "t"
+*)
+
+(* typed spans
+(5,24)-(5,25)
+(5,51)-(5,52)
+*)
+
+(* correct types
+('a * 'b)
+('a * 'b) list
+*)
+
+(* bad types
+('a * 'b)
+('a * 'b) list list
 *)

@@ -68,3 +68,19 @@ pi *. 1.0
 BopG VarG LitG
 
 *)
+
+(* changed exprs
+Bop (Just (29,25)-(29,36)) FTimes (Var (Just (29,26)-(29,28)) "pi") (Lit (Just (29,32)-(29,35)) (LD 1.0))
+*)
+
+(* typed spans
+(29,25)-(29,36)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

@@ -72,3 +72,27 @@ AppG (fromList [TupleG (fromList [EmptyG])])
 TupleG (fromList [LitG])
 
 *)
+
+(* changed exprs
+Var (Just (18,8)-(18,13)) "depth"
+App (Just (22,18)-(22,29)) (Var (Just (22,18)-(22,22)) "rand") [Tuple (Just (22,23)-(22,29)) [Lit (Just (22,24)-(22,25)) (LI 0),Lit (Just (22,27)-(22,28)) (LI 2)]]
+Tuple (Just (22,23)-(22,29)) [Lit (Just (22,24)-(22,25)) (LI 0),Lit (Just (22,27)-(22,28)) (LI 2)]
+*)
+
+(* typed spans
+(18,8)-(18,13)
+(22,18)-(22,29)
+(22,23)-(22,29)
+*)
+
+(* correct types
+int
+int
+(int * int)
+*)
+
+(* bad types
+(int * int) -> int
+(int * int) -> int
+expr
+*)

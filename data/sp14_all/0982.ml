@@ -72,9 +72,20 @@ List.rev (removeZero (add (padZero l1
                                    l2)))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(31,11)-(31,21)
-removeZero (add (padZero l1
-                         l2))
-AppG (fromList [AppG (fromList [EmptyG])])
+*)
 
+(* changed exprs
+App (Just (31,2)-(31,45)) (Var (Just (31,2)-(31,10)) "List.rev") [App (Just (31,11)-(31,45)) (Var (Just (31,12)-(31,22)) "removeZero") [App (Just (31,23)-(31,44)) (Var (Just (31,24)-(31,27)) "add") [App (Just (31,28)-(31,43)) (Var (Just (31,29)-(31,36)) "padZero") [Var (Just (31,37)-(31,39)) "l1",Var (Just (31,40)-(31,42)) "l2"]]]]
+*)
+
+(* typed spans
+(31,2)-(31,45)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a
 *)

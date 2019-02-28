@@ -52,15 +52,23 @@ let palindrome w =
 
 (* changed spans
 (23,57)-(23,68)
-EMPTY
-EmptyG
-
-(23,58)-(23,65)
-EMPTY
-EmptyG
-
-(23,66)-(23,67)
 [["b"]]
-ListG (ListG EmptyG Nothing) Nothing
+ListG (ListG EmptyG)
 
+*)
+
+(* changed exprs
+List (Just (23,57)-(23,64)) [List (Just (23,58)-(23,63)) [Lit (Just (23,59)-(23,62)) (LS "b")] Nothing] Nothing
+*)
+
+(* typed spans
+(23,57)-(23,64)
+*)
+
+(* correct types
+string list list
+*)
+
+(* bad types
+char list
 *)

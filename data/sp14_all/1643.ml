@@ -84,3 +84,31 @@ abs_float
 VarG
 
 *)
+
+(* changed exprs
+Lit (Just (27,35)-(27,38)) (LD 2.0)
+Var (Just (30,11)-(30,20)) "abs_float"
+Var (Just (30,43)-(30,52)) "abs_float"
+Var (Just (31,12)-(31,21)) "abs_float"
+*)
+
+(* typed spans
+(27,35)-(27,38)
+(30,11)-(30,20)
+(30,43)-(30,52)
+(31,12)-(31,21)
+*)
+
+(* correct types
+float
+float -> float
+float -> float
+float -> float
+*)
+
+(* bad types
+int
+int -> int
+int -> int
+int -> int
+*)

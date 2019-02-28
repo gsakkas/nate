@@ -84,16 +84,27 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(38,6)-(38,11)
-EMPTY
-EmptyG
-
 (38,6)-(40,31)
-EMPTY
-EmptyG
+mulByDigit i
+           (List.rev (List.map (fun x ->
+                                  x * 10) t)) @ helper []
+                                                       (h * i)
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(40,11)-(40,30)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (38,6)-(39,27)) (Var (Just (38,64)-(38,65)) "@") [App (Just (38,6)-(38,63)) (Var (Just (38,7)-(38,17)) "mulByDigit") [Var (Just (38,18)-(38,19)) "i",App (Just (38,20)-(38,62)) (Var (Just (38,21)-(38,29)) "List.rev") [App (Just (38,30)-(38,61)) (Var (Just (38,31)-(38,39)) "List.map") [Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing,Var (Just (38,59)-(38,60)) "t"]]],App (Just (39,8)-(39,27)) (Var (Just (39,9)-(39,15)) "helper") [List (Just (39,16)-(39,18)) [] Nothing,Bop (Just (39,19)-(39,26)) Times (Var (Just (39,20)-(39,21)) "h") (Var (Just (39,24)-(39,25)) "i")]]
+*)
+
+(* typed spans
+(38,6)-(39,27)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

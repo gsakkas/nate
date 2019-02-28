@@ -47,14 +47,6 @@ EMPTY
 EmptyG
 
 (9,31)-(9,45)
-EMPTY
-EmptyG
-
-(9,32)-(9,35)
-EMPTY
-EmptyG
-
-(9,36)-(9,44)
 absNumZeros
 VarG
 
@@ -62,4 +54,25 @@ VarG
 (listZeros @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
+*)
+
+(* typed spans
+(6,2)-(11,77)
+(10,21)-(10,40)
+(10,29)-(10,40)
+(11,54)-(11,76)
+*)
+
+(* typed spans
+(int list * int list)
+int list
+int
+(int list * int list)
+*)
+
+(* typed spans
+unit
+int -> (int * int) list
+int
+unit
 *)

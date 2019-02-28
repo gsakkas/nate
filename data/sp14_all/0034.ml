@@ -63,3 +63,19 @@ match a with
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 *)
+
+(* changed exprs
+Case (Just (23,16)-(23,63)) (Var (Just (23,22)-(23,23)) "a") [(TuplePat (Just (23,32)-(23,40)) [ConsPat (Just (23,32)-(23,38)) (VarPat (Just (23,32)-(23,34)) "h1") (VarPat (Just (23,36)-(23,38)) "t1"),WildPat (Just (23,39)-(23,40))],Nothing,Tuple (Just (23,45)-(23,63)) [Var (Just (23,46)-(23,48)) "l1",List (Just (23,50)-(23,62)) [Lit (Just (23,51)-(23,52)) (LI 0),Lit (Just (23,54)-(23,55)) (LI 0),Lit (Just (23,57)-(23,58)) (LI 0),Lit (Just (23,60)-(23,61)) (LI 0)] Nothing])]
+*)
+
+(* typed spans
+(23,16)-(23,63)
+*)
+
+(* correct types
+(int list * int list)
+*)
+
+(* bad types
+(int list * int list)
+*)

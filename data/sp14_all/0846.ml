@@ -31,8 +31,20 @@ let rec digitalRoot n = sumList (digitsOfInt n);;
 sumList (digitsOfInt n)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(11,32)-(11,43)
-digitsOfInt n
-AppG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (11,24)-(11,47)) (Var (Just (11,24)-(11,31)) "sumList") [App (Just (11,32)-(11,47)) (Var (Just (11,33)-(11,44)) "digitsOfInt") [Var (Just (11,45)-(11,46)) "n"]]
+*)
+
+(* typed spans
+(11,24)-(11,47)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+'a
 *)

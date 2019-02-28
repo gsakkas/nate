@@ -19,3 +19,23 @@ List.fold_left
 VarG
 
 *)
+
+(* changed exprs
+Bop (Just (3,14)-(3,25)) Plus (Var (Just (3,14)-(3,15)) "a") (Bop (Just (3,18)-(3,25)) Times (Var (Just (3,19)-(3,20)) "x") (Var (Just (3,23)-(3,24)) "x"))
+Var (Just (3,45)-(3,59)) "List.fold_left"
+*)
+
+(* typed spans
+(3,14)-(3,25)
+(3,45)-(3,59)
+*)
+
+(* correct types
+int
+(int -> int -> int) -> int -> int list -> int
+*)
+
+(* bad types
+int
+('a -> int -> int) -> 'a list -> int -> int
+*)

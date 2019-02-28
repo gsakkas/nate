@@ -1,2 +1,2 @@
-LamG LitG
-fun n -> 0
+UopG (AppG (fromList [EmptyG]))
+(-. eval (e3 , x , y))

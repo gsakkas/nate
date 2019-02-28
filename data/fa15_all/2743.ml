@@ -88,7 +88,7 @@ let bigAdd l1 l2 =
 (* changed spans
 (38,15)-(38,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (39,48)-(39,74)
 let (_ , res) =
@@ -100,4 +100,28 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 res
 VarG
 
+*)
+
+(* changed exprs
+Tuple (Just (38,15)-(38,22)) [Lit (Just (38,16)-(38,17)) (LI 0),List (Just (38,19)-(38,21)) [] Nothing]
+Let (Just (40,4)-(40,51)) NonRec [(TuplePat (Just (40,9)-(40,14)) [WildPat (Just (40,9)-(40,10)),VarPat (Just (40,11)-(40,14)) "res"],App (Just (40,18)-(40,44)) (Var (Just (40,18)-(40,32)) "List.fold_left") [Var (Just (40,33)-(40,34)) "f",Var (Just (40,35)-(40,39)) "base",Var (Just (40,40)-(40,44)) "args"])] (Var (Just (40,48)-(40,51)) "res")
+Var (Just (40,48)-(40,51)) "res"
+*)
+
+(* typed spans
+(38,15)-(38,22)
+(40,4)-(40,51)
+(40,48)-(40,51)
+*)
+
+(* correct types
+(int * int list)
+int list
+int list
+*)
+
+(* bad types
+'a list
+int list
+int list
 *)

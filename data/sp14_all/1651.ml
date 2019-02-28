@@ -81,8 +81,20 @@ let rec exprToString e =
 exprToString x
 AppG (fromList [VarG])
 
-(19,37)-(19,42)
-x
-VarG
+*)
 
+(* changed exprs
+App (Just (19,22)-(19,38)) (Var (Just (19,23)-(19,35)) "exprToString") [Var (Just (19,36)-(19,37)) "x"]
+*)
+
+(* typed spans
+(19,22)-(19,38)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+expr -> string
 *)

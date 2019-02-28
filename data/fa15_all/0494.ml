@@ -52,19 +52,23 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,25)-(19,61)
-EMPTY
-EmptyG
-
-(19,26)-(19,29)
 (((x1 + x2) + carry) mod 10) :: sum
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG])))
 
-(19,30)-(19,31)
-EMPTY
-EmptyG
+*)
 
-(20,4)-(22,51)
-sum
-VarG
+(* changed exprs
+ConApp (Just (19,25)-(19,62)) "::" (Just (Tuple (Just (19,26)-(19,61)) [Bop (Just (19,26)-(19,54)) Mod (Bop (Just (19,27)-(19,46)) Plus (Bop (Just (19,28)-(19,37)) Plus (Var (Just (19,29)-(19,31)) "x1") (Var (Just (19,34)-(19,36)) "x2")) (Var (Just (19,40)-(19,45)) "carry")) (Lit (Just (19,51)-(19,53)) (LI 10)),Var (Just (19,58)-(19,61)) "sum"])) Nothing
+*)
 
+(* typed spans
+(19,25)-(19,62)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

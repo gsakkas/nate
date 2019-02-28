@@ -56,3 +56,19 @@ eval (a , x , y) *. pi
 BopG (AppG (fromList [EmptyG])) VarG
 
 *)
+
+(* changed exprs
+Bop (Just (19,18)-(19,42)) FTimes (App (Just (19,19)-(19,35)) (Var (Just (19,20)-(19,24)) "eval") [Tuple (Just (19,25)-(19,34)) [Var (Just (19,26)-(19,27)) "a",Var (Just (19,29)-(19,30)) "x",Var (Just (19,32)-(19,33)) "y"]]) (Var (Just (19,39)-(19,41)) "pi")
+*)
+
+(* typed spans
+(19,18)-(19,42)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

@@ -91,11 +91,37 @@ exp c ^ ")"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (26,55)-(26,56)
-EMPTY
-EmptyG
-
-(26,60)-(26,63)
 c
 VarG
 
+*)
+
+(* typed spans
+(14,2)-(27,73)
+(27,32)-(27,33)
+(27,20)-(27,31)
+(27,35)-(27,42)
+(27,40)-(27,41)
+(27,54)-(27,69)
+(27,60)-(27,61)
+*)
+
+(* typed spans
+string
+string -> string -> string
+string
+string
+expr
+string
+expr
+*)
+
+(* typed spans
+string
+string
+string
+string
+string
+string
+expr
 *)

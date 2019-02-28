@@ -20,11 +20,23 @@ let rec digitsOfInt n = digitsOfIntHelper n;;
 
 (* changed spans
 (7,42)-(7,50)
-EMPTY
-EmptyG
+n
+VarG
 
-(7,47)-(7,49)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (7,42)-(7,43)) "n"
+*)
+
+(* typed spans
+(7,42)-(7,43)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+bool
 *)

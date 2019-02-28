@@ -29,8 +29,20 @@ let stringOfList f l =
 sepConcat ";" (List.map f l)
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(10,45)-(10,59)
-";"
-LitG
+*)
 
+(* changed exprs
+App (Just (10,35)-(10,63)) (Var (Just (10,35)-(10,44)) "sepConcat") [Lit (Just (10,45)-(10,48)) (LS ";"),App (Just (10,49)-(10,63)) (Var (Just (10,50)-(10,58)) "List.map") [Var (Just (10,59)-(10,60)) "f",Var (Just (10,61)-(10,62)) "l"]]
+*)
+
+(* typed spans
+(10,35)-(10,63)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+string
 *)

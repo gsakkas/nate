@@ -19,33 +19,25 @@ let fixpoint (f,b) = let g b = (b, (f b)) in wwhile (g, b);;
 *)
 
 (* changed spans
-(7,21)-(7,27)
-EMPTY
-EmptyG
-
 (7,21)-(7,51)
-EMPTY
-EmptyG
-
-(7,28)-(7,51)
-EMPTY
-EmptyG
-
-(7,29)-(7,47)
 let g = fun b -> (b , f b) in
 wwhile (g , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
-(7,40)-(7,41)
-(b , f b)
-TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+*)
 
-(7,45)-(7,46)
-f b
-AppG (fromList [VarG])
+(* changed exprs
+Let (Just (7,21)-(7,58)) NonRec [(VarPat (Just (7,25)-(7,26)) "g",Lam (Just (7,27)-(7,41)) (VarPat (Just (7,27)-(7,28)) "b") (Tuple (Just (7,31)-(7,41)) [Var (Just (7,32)-(7,33)) "b",App (Just (7,35)-(7,40)) (Var (Just (7,36)-(7,37)) "f") [Var (Just (7,38)-(7,39)) "b"]]) Nothing)] (App (Just (7,45)-(7,58)) (Var (Just (7,45)-(7,51)) "wwhile") [Tuple (Just (7,52)-(7,58)) [Var (Just (7,53)-(7,54)) "g",Var (Just (7,56)-(7,57)) "b"]])
+*)
 
-(7,49)-(7,50)
-wwhile (g , b)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(* typed spans
+(7,21)-(7,58)
+*)
 
+(* correct types
+'a
+*)
+
+(* bad types
+'a
 *)

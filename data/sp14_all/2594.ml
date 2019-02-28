@@ -50,19 +50,31 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,18)-(19,29)
-EMPTY
-EmptyG
-
-(19,19)-(19,26)
-EMPTY
-EmptyG
+x
+VarG
 
 (19,37)-(19,48)
-EMPTY
-EmptyG
+x
+VarG
 
-(19,38)-(19,45)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (19,18)-(19,19)) "x"
+Var (Just (19,27)-(19,28)) "x"
+*)
+
+(* typed spans
+(19,18)-(19,19)
+(19,27)-(19,28)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+int
+int
 *)

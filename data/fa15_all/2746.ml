@@ -85,44 +85,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(4,10)-(4,28)
-EMPTY
-EmptyG
-
-(4,12)-(4,28)
-EMPTY
-EmptyG
-
-(4,16)-(4,23)
-EMPTY
-EmptyG
-
-(4,16)-(4,28)
-EMPTY
-EmptyG
-
-(4,17)-(4,18)
-EMPTY
-EmptyG
-
-(4,21)-(4,22)
-EMPTY
-EmptyG
-
-(4,26)-(4,28)
-EMPTY
-EmptyG
-
-(36,26)-(36,31)
+(36,26)-(36,47)
 ((h + x1) + x2) / 10
 BopG (BopG EmptyG EmptyG) LitG
 
-(36,26)-(36,47)
-EMPTY
-EmptyG
+*)
 
-(37,27)-(37,57)
-10
-LitG
+(* changed exprs
+Bop (Just (34,26)-(34,46)) Div (Bop (Just (34,26)-(34,41)) Plus (Bop (Just (34,27)-(34,35)) Plus (Var (Just (34,28)-(34,29)) "h") (Var (Just (34,32)-(34,34)) "x1")) (Var (Just (34,38)-(34,40)) "x2")) (Lit (Just (34,44)-(34,46)) (LI 10))
+*)
 
+(* typed spans
+(34,26)-(34,46)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int -> int
 *)

@@ -1,7 +1,7 @@
-CaseG VarG (fromList [(Nothing,LamG EmptyG),(Nothing,AppG (fromList [EmptyG]))])
-match fs with
-| h :: t -> f h h
-| [] -> fun x -> x
-match fs with
-| [] -> fun x -> x
-| h :: t -> f (fun x -> x) h
+ListG (AppG (fromList [EmptyG]))
+[sqsum (mulByDigit i
+                   (List.rev (List.map (fun x ->
+                                          x * 10)
+                                       t)) @ [h * i])]
+[List.fold_left f base
+                (h :: t)]

@@ -55,14 +55,6 @@ let bigAdd l1 l2 =
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(21,24)-(21,36)
-List.combine l1 l2
-AppG (fromList [VarG])
-
-(22,44)-(22,47)
-EMPTY
-EmptyG
-
 (23,2)-(23,43)
 List.rev res
 AppG (fromList [VarG])
@@ -72,4 +64,28 @@ removeZero (add (padZero l1
                          l2))
 AppG (fromList [AppG (fromList [EmptyG])])
 
+*)
+
+(* changed exprs
+App (Just (21,15)-(21,44)) (Var (Just (21,15)-(21,23)) "List.rev") [App (Just (21,24)-(21,44)) (Var (Just (21,25)-(21,37)) "List.combine") [Var (Just (21,38)-(21,40)) "l1",Var (Just (21,41)-(21,43)) "l2"]]
+App (Just (22,44)-(22,56)) (Var (Just (22,44)-(22,52)) "List.rev") [Var (Just (22,53)-(22,56)) "res"]
+App (Just (23,2)-(23,34)) (Var (Just (23,2)-(23,12)) "removeZero") [App (Just (23,13)-(23,34)) (Var (Just (23,14)-(23,17)) "add") [App (Just (23,18)-(23,33)) (Var (Just (23,19)-(23,26)) "padZero") [Var (Just (23,27)-(23,29)) "l1",Var (Just (23,30)-(23,32)) "l2"]]]
+*)
+
+(* typed spans
+(21,15)-(21,44)
+(22,44)-(22,56)
+(23,2)-(23,34)
+*)
+
+(* correct types
+(int * int) list
+int list
+int list
+*)
+
+(* bad types
+(int * int) list
+'a
+int list -> int list
 *)

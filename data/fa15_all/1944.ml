@@ -54,11 +54,23 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (21,16)-(21,22)
-EMPTY
-EmptyG
+0
+LitG
 
-(21,20)-(21,21)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lit (Just (21,16)-(21,17)) (LI 0)
+*)
+
+(* typed spans
+(21,16)-(21,17)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+(int * int)
 *)

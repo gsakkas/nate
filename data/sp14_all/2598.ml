@@ -53,16 +53,28 @@ let bigAdd l1 l2 =
 x + 1
 BopG VarG LitG
 
-(19,23)-(19,24)
-1
-LitG
-
 (19,28)-(19,34)
 x + 1
 BopG VarG LitG
 
-(19,33)-(19,34)
-1
-LitG
+*)
 
+(* changed exprs
+Bop (Just (19,18)-(19,23)) Plus (Var (Just (19,18)-(19,19)) "x") (Lit (Just (19,22)-(19,23)) (LI 1))
+Bop (Just (19,27)-(19,32)) Plus (Var (Just (19,27)-(19,28)) "x") (Lit (Just (19,31)-(19,32)) (LI 1))
+*)
+
+(* typed spans
+(19,18)-(19,23)
+(19,27)-(19,32)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+'a list
+'a list
 *)

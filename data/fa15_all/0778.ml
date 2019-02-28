@@ -40,3 +40,8 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+int list
+int
+*)

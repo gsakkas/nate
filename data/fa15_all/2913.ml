@@ -134,3 +134,36 @@ EmptyG
 UopG LitG
 
 *)
+
+(* typed spans
+(16,2)-(36,25)
+(29,13)-(29,17)
+(28,6)-(32,17)
+(29,18)-(29,27)
+(29,39)-(29,40)
+(30,13)-(30,61)
+(35,11)-(35,37)
+(35,31)-(35,37)
+*)
+
+(* typed spans
+float
+(expr * float * float) -> float
+float
+(expr * float * float)
+expr
+float
+float
+int
+*)
+
+(* typed spans
+float
+int -> int
+float
+float
+expr
+float
+float
+float
+*)

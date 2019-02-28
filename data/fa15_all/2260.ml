@@ -86,3 +86,19 @@ digit
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (36,63)-(36,68)) "digit"
+*)
+
+(* typed spans
+(36,63)-(36,68)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
+*)

@@ -32,22 +32,10 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(9,31)-(9,50)
+(9,31)-(9,68)
 helper ((v mod 10) :: acc)
        (v / 10)
-AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
-(9,31)-(9,68)
-EMPTY
-EmptyG
-
-(9,39)-(9,49)
-(v mod 10) :: acc
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
-
-(9,54)-(9,68)
-EMPTY
-EmptyG
+AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
 
 (11,8)-(13,23)
 List.hd [List.fold_left f base
@@ -55,6 +43,26 @@ List.hd [List.fold_left f base
                                     (List.rev (List.map (fun x ->
                                                            x * 10)
                                                         t)) @ [h * i])]
-AppG (fromList [ListG EmptyG Nothing])
+AppG (fromList [ListG EmptyG])
 
+*)
+
+(* changed exprs
+App (Just (9,31)-(9,66)) (Var (Just (9,31)-(9,37)) "helper") [ConApp (Just (9,38)-(9,57)) "::" (Just (Tuple (Just (9,39)-(9,56)) [Bop (Just (9,39)-(9,49)) Mod (Var (Just (9,40)-(9,41)) "v") (Lit (Just (9,46)-(9,48)) (LI 10)),Var (Just (9,53)-(9,56)) "acc"])) Nothing,Bop (Just (9,58)-(9,66)) Div (Var (Just (9,59)-(9,60)) "v") (Lit (Just (9,63)-(9,65)) (LI 10))]
+App (Just (11,8)-(14,27)) (Var (Just (11,9)-(11,16)) "List.hd") [List (Just (12,11)-(14,26)) [App (Just (12,12)-(14,25)) (Var (Just (12,12)-(12,26)) "List.fold_left") [Var (Just (12,27)-(12,28)) "f",Var (Just (12,29)-(12,33)) "base",App (Just (13,14)-(14,25)) (Var (Just (13,73)-(13,74)) "@") [App (Just (13,15)-(13,72)) (Var (Just (13,16)-(13,26)) "mulByDigit") [Var (Just (13,27)-(13,28)) "i",App (Just (13,29)-(13,71)) (Var (Just (13,30)-(13,38)) "List.rev") [App (Just (13,39)-(13,70)) (Var (Just (13,40)-(13,48)) "List.map") [Lam (Just (13,49)-(13,67)) (VarPat (Just (13,54)-(13,55)) "x") (Bop (Just (13,60)-(13,66)) Times (Var (Just (13,60)-(13,61)) "x") (Lit (Just (13,64)-(13,66)) (LI 10))) Nothing,Var (Just (13,68)-(13,69)) "t"]]],List (Just (14,17)-(14,24)) [Bop (Just (14,18)-(14,23)) Times (Var (Just (14,18)-(14,19)) "h") (Var (Just (14,22)-(14,23)) "i")] Nothing]]] Nothing]
+*)
+
+(* typed spans
+(9,31)-(9,66)
+(11,8)-(14,27)
+*)
+
+(* correct types
+int list
+int
+*)
+
+(* bad types
+'a list
+int list
 *)

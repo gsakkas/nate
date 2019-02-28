@@ -1,4 +1,4 @@
-AppG (fromList [ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG]))) Nothing])
-List.combine (0 :: (List.rev l1))
-             (0 :: (List.rev l2))
-List.rev (0 :: (List.rev a))
+CaseG VarG (fromList [(Nothing,VarG),(Nothing,ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])]))))])
+match l with
+| [] -> l
+| h :: t -> h :: (listReverse t)

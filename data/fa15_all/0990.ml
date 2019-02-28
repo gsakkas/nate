@@ -28,28 +28,20 @@ let f =
 f
 LetG NonRec (fromList [LamG EmptyG]) VarG
 
-(3,17)-(3,64)
-EMPTY
-EmptyG
+*)
 
-(3,23)-(3,24)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (2,19)-(2,62)) NonRec [(VarPat (Just (2,23)-(2,24)) "f",Lam (Just (2,25)-(2,57)) (VarPat (Just (2,25)-(2,26)) "b") (Let (Just (2,29)-(2,57)) NonRec [(VarPat (Just (2,33)-(2,34)) "x",App (Just (2,37)-(2,40)) (Var (Just (2,37)-(2,38)) "f") [Var (Just (2,39)-(2,40)) "b"])] (Tuple (Just (2,44)-(2,57)) [Var (Just (2,45)-(2,46)) "x",Bop (Just (2,48)-(2,56)) Neq (Var (Just (2,49)-(2,50)) "x") (Var (Just (2,54)-(2,55)) "b")])) Nothing)] (Var (Just (2,61)-(2,62)) "f")
+*)
 
-(3,41)-(3,46)
-EMPTY
-EmptyG
+(* typed spans
+(2,19)-(2,62)
+*)
 
-(3,55)-(3,64)
-x <> b
-BopG VarG VarG
+(* correct types
+'a -> ('a * bool)
+*)
 
-(3,59)-(3,63)
-b
-VarG
-
-(5,16)-(6,72)
-f
-VarG
-
+(* bad types
+('a * bool)
 *)

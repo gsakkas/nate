@@ -49,12 +49,28 @@ let rec eval (e,x,y) =
 (e1 , x , y)
 TupleG (fromList [VarG])
 
-(20,34)-(20,43)
-y
-VarG
-
 (20,40)-(20,42)
 (e2 , x , y)
 TupleG (fromList [VarG])
 
+*)
+
+(* changed exprs
+Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]
+Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "e2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]
+*)
+
+(* typed spans
+(20,27)-(20,37)
+(20,48)-(20,58)
+*)
+
+(* correct types
+(expr * float * float)
+(expr * float * float)
+*)
+
+(* bad types
+expr
+expr
 *)

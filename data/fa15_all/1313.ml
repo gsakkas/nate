@@ -26,28 +26,16 @@ let padZero l1 l2 =
 
 (* changed spans
 (8,8)-(8,37)
-EMPTY
-EmptyG
-
-(8,9)-(8,11)
-EMPTY
-EmptyG
-
-(8,16)-(8,21)
-clone 0 difference2
-AppG (fromList [VarG,LitG])
-
-(8,39)-(8,41)
-l1
-VarG
+clone 0 difference2 @ l1
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (10,33)-(10,62)
-EMPTY
-EmptyG
+clone 0 difference1 @ l2
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(10,34)-(10,36)
-EMPTY
-EmptyG
+(10,33)-(10,62)
+(@)
+VarG
 
 (10,41)-(10,46)
 clone 0 difference1
@@ -57,4 +45,36 @@ AppG (fromList [VarG,LitG])
 l2
 VarG
 
+*)
+
+(* changed exprs
+App (Just (8,8)-(8,36)) (Var (Just (8,31)-(8,32)) "@") [App (Just (8,9)-(8,30)) (Var (Just (8,10)-(8,15)) "clone") [Lit (Just (8,16)-(8,17)) (LI 0),Var (Just (8,18)-(8,29)) "difference2"],Var (Just (8,33)-(8,35)) "l1"]
+App (Just (10,33)-(10,61)) (Var (Just (10,56)-(10,57)) "@") [App (Just (10,34)-(10,55)) (Var (Just (10,35)-(10,40)) "clone") [Lit (Just (10,41)-(10,42)) (LI 0),Var (Just (10,43)-(10,54)) "difference1"],Var (Just (10,58)-(10,60)) "l2"]
+Var (Just (10,56)-(10,57)) "@"
+App (Just (10,34)-(10,55)) (Var (Just (10,35)-(10,40)) "clone") [Lit (Just (10,41)-(10,42)) (LI 0),Var (Just (10,43)-(10,54)) "difference1"]
+Var (Just (10,58)-(10,60)) "l2"
+*)
+
+(* typed spans
+(8,8)-(8,36)
+(10,33)-(10,61)
+(10,56)-(10,57)
+(10,34)-(10,55)
+(10,58)-(10,60)
+*)
+
+(* correct types
+int list
+int list
+int list -> int list -> int list
+int list
+int list
+*)
+
+(* bad types
+'a list list
+'a list list
+'a list list
+int -> int -> int list
+('a list * 'b list)
 *)

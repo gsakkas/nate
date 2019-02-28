@@ -86,3 +86,8 @@ eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
+
+(* typed spans
+float
+float
+*)

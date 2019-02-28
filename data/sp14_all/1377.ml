@@ -75,6 +75,30 @@ VarG
 
 (23,20)-(23,33)
 (0 , carry :: rest)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG])))])
 
+*)
+
+(* changed exprs
+Var (Just (21,31)-(21,35)) "rest"
+Var (Just (22,33)-(22,37)) "rest"
+Tuple (Just (23,20)-(23,40)) [Lit (Just (23,21)-(23,22)) (LI 0),ConApp (Just (23,24)-(23,39)) "::" (Just (Tuple (Just (23,25)-(23,38)) [Var (Just (23,25)-(23,30)) "carry",Var (Just (23,34)-(23,38)) "rest"])) Nothing]
+*)
+
+(* typed spans
+(21,31)-(21,35)
+(22,33)-(22,37)
+(23,20)-(23,40)
+*)
+
+(* correct types
+int list
+int list
+(int * int list)
+*)
+
+(* bad types
+'a list
+'a list
+int list
 *)

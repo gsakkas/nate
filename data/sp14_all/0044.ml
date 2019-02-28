@@ -100,11 +100,23 @@ let bigMul l1 l2 =
 
 (* changed spans
 (44,41)-(44,66)
-EMPTY
-EmptyG
+mulByDigit x (h1 :: t1)
+AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG])))])
 
-(44,56)-(44,58)
-h1 :: t1
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+*)
 
+(* changed exprs
+App (Just (44,41)-(44,66)) (Var (Just (44,42)-(44,52)) "mulByDigit") [Var (Just (44,53)-(44,54)) "x",ConApp (Just (44,55)-(44,65)) "::" (Just (Tuple (Just (44,56)-(44,64)) [Var (Just (44,56)-(44,58)) "h1",Var (Just (44,62)-(44,64)) "t1"])) Nothing]
+*)
+
+(* typed spans
+(44,41)-(44,66)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list list
 *)

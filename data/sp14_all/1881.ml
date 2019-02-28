@@ -93,12 +93,24 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(44,15)-(44,19)
-EMPTY
-EmptyG
-
 (44,15)-(44,36)
-EMPTY
-EmptyG
+(- 1.0) *. res3
+BopG (UopG EmptyG) VarG
 
+*)
+
+(* changed exprs
+Bop (Just (44,15)-(44,29)) FTimes (Uop (Just (44,15)-(44,21)) Neg (Lit (Just (44,17)-(44,20)) (LD 1.0))) (Var (Just (44,25)-(44,29)) "res3")
+*)
+
+(* typed spans
+(44,15)-(44,29)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+float
 *)

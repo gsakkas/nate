@@ -24,40 +24,26 @@ let rec digitalRoot n =
 
 (* changed spans
 (7,20)-(8,64)
-EMPTY
-EmptyG
-
-(8,2)-(8,64)
-EMPTY
-EmptyG
-
-(8,8)-(8,14)
-EMPTY
-EmptyG
-
-(8,8)-(8,16)
-EMPTY
-EmptyG
-
-(8,15)-(8,16)
-EMPTY
-EmptyG
-
-(8,33)-(8,34)
 fun xs ->
   match xs with
   | [] -> 0
   | h :: t -> h + sumList t
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(8,45)-(8,64)
-match xs with
-| [] -> 0
-| h :: t -> h + sumList t
-CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
+*)
 
-(8,50)-(8,61)
-sumList
-VarG
+(* changed exprs
+Lam (Just (7,16)-(7,70)) (VarPat (Just (7,16)-(7,18)) "xs") (Case (Just (7,21)-(7,70)) (Var (Just (7,27)-(7,29)) "xs") [(ConPat (Just (7,37)-(7,39)) "[]" Nothing,Nothing,Lit (Just (7,43)-(7,44)) (LI 0)),(ConsPat (Just (7,47)-(7,51)) (VarPat (Just (7,47)-(7,48)) "h") (VarPat (Just (7,50)-(7,51)) "t"),Nothing,Bop (Just (7,55)-(7,70)) Plus (Var (Just (7,55)-(7,56)) "h") (App (Just (7,59)-(7,70)) (Var (Just (7,60)-(7,67)) "sumList") [Var (Just (7,68)-(7,69)) "t"]))]) Nothing
+*)
 
+(* typed spans
+(7,16)-(7,70)
+*)
+
+(* correct types
+int list -> int
+*)
+
+(* bad types
+int -> int
 *)

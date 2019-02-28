@@ -24,3 +24,23 @@ x
 VarG
 
 *)
+
+(* changed exprs
+App (Just (5,48)-(5,51)) (Var (Just (5,48)-(5,49)) "f") [Var (Just (5,50)-(5,51)) "x"]
+Var (Just (5,65)-(5,66)) "x"
+*)
+
+(* typed spans
+(5,48)-(5,51)
+(5,65)-(5,66)
+*)
+
+(* correct types
+'a
+'a
+*)
+
+(* bad types
+('a * 'b)
+('a * 'b)
+*)

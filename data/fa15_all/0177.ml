@@ -18,3 +18,8 @@ sumList xs
 AppG (fromList [VarG])
 
 *)
+
+(* typed spans
+int
+int
+*)

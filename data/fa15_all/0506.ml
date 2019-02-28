@@ -37,3 +37,9 @@ List.fold_left f base fs
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
 *)
+
+(* typed spans
+'t14 -> int
+'t14 -> int
+'t14 -> int
+*)

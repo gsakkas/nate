@@ -45,8 +45,20 @@ let (l1 , l2) = x in
 (0 , l1 :: num)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(13,46)-(13,47)
-num
-VarG
+*)
 
+(* changed exprs
+Let (Just (13,16)-(13,74)) NonRec [(TuplePat (Just (13,21)-(13,30)) [VarPat (Just (13,21)-(13,26)) "carry",VarPat (Just (13,27)-(13,30)) "num"],Var (Just (13,34)-(13,35)) "a")] (Let (Just (13,39)-(13,74)) NonRec [(TuplePat (Just (13,44)-(13,49)) [VarPat (Just (13,44)-(13,46)) "l1",VarPat (Just (13,47)-(13,49)) "l2"],Var (Just (13,53)-(13,54)) "x")] (Tuple (Just (13,58)-(13,74)) [Lit (Just (13,59)-(13,60)) (LI 0),ConApp (Just (13,62)-(13,73)) "::" (Just (Tuple (Just (13,63)-(13,72)) [Var (Just (13,63)-(13,65)) "l1",Var (Just (13,69)-(13,72)) "num"])) Nothing]))
+*)
+
+(* typed spans
+(13,16)-(13,74)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+(int * 'a list)
 *)

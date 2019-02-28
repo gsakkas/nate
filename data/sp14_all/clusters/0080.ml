@@ -1,14 +1,5 @@
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG VarG]))) Nothing])
-(t , (x + h) :: b)
-(t , (x + h) :: b)
-(t , (x + h) :: b)
-(t , (x + h) :: b)
-(t , (x + h) :: b)
-(t , (x + h) :: b)
-((h1 + h2) :: list1 , list2)
-((h1 + h2) :: list1 , list2)
-((h1 + h2) :: list1 , list2)
-((h1 + h2) :: list1 , list2)
-((h1 + h2) :: list1 , list2)
-(b , (d + e) :: c)
-(b , (d + e) :: c)
+BopG (BopG EmptyG EmptyG) VarG
+(c + x') + x''
+(a * a) + x
+((fir + sec) / 10) + b1
+(x * x) + a

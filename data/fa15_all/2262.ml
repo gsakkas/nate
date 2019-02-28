@@ -64,18 +64,6 @@ fun l1 ->
 LamG (LamG EmptyG)
 
 (5,19)-(14,23)
-EMPTY
-EmptyG
-
-(5,21)-(14,23)
-EMPTY
-EmptyG
-
-(6,2)-(14,23)
-EMPTY
-EmptyG
-
-(6,12)-(13,67)
 fun l1 ->
   fun l2 ->
     (let add =
@@ -161,7 +149,7 @@ LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 List.map combine
          (List.rev (List.combine l1
                                  l2)) @ [0]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
 (14,13)-(14,23)
 add (padZero l1 l2)
@@ -183,4 +171,52 @@ LamG (LamG EmptyG)
 bigAdd l l
 AppG (fromList [VarG])
 
+*)
+
+(* typed spans
+(4,12)-(11,17)
+(16,11)-(28,34)
+(16,14)-(28,34)
+(21,10)-(22,70)
+(22,13)-(22,16)
+(22,32)-(22,35)
+(22,54)-(22,57)
+(25,6)-(26,62)
+(26,6)-(26,62)
+(28,13)-(28,34)
+(28,19)-(28,26)
+(30,19)-(30,58)
+(30,48)-(30,58)
+*)
+
+(* typed spans
+int list -> int list -> (int list * int list)
+int list -> int list -> int list
+int list -> int list
+(int * int list)
+int
+int
+int
+int list
+int list
+int list
+int list -> int list -> (int list * int list)
+int -> int list -> int list
+int list
+*)
+
+(* typed spans
+int list -> int list
+('a * int list) -> 'b -> int list
+int list
+(int * int list)
+int
+int
+int
+int list
+int list
+int list
+('a * int list) -> int list
+('a * int list)
+'a
 *)

@@ -65,10 +65,6 @@ let bigAdd l1 l2 =
 EMPTY
 EmptyG
 
-(5,10)-(5,11)
-EMPTY
-EmptyG
-
 (17,11)-(27,21)
 fun l ->
   if l = []
@@ -89,10 +85,6 @@ LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 EMPTY
 EmptyG
 
-(22,18)-(22,20)
-EMPTY
-EmptyG
-
 (23,26)-(23,28)
 c
 VarG
@@ -101,25 +93,13 @@ VarG
 v / 10
 BopG VarG LitG
 
-(23,35)-(23,36)
-EMPTY
-EmptyG
-
 (23,35)-(23,40)
-EMPTY
-EmptyG
-
-(23,39)-(23,40)
-EMPTY
-EmptyG
-
-(23,44)-(23,52)
 EMPTY
 EmptyG
 
 (23,55)-(23,65)
 [v mod 10] @ a2
-AppG (fromList [VarG,ListG EmptyG Nothing])
+AppG (fromList [VarG,ListG EmptyG])
 
 (24,4)-(26,60)
 a2
@@ -147,12 +127,47 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 EMPTY
 EmptyG
 
-(26,51)-(26,54)
-EMPTY
-EmptyG
-
 (27,2)-(27,5)
 add (padZero l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
+*)
+
+(* typed spans
+(15,19)-(18,66)
+(24,6)-(25,73)
+(25,26)-(25,27)
+(25,32)-(25,40)
+(25,54)-(25,71)
+(25,68)-(25,70)
+(26,20)-(26,21)
+(27,15)-(27,44)
+(28,4)-(28,51)
+(29,13)-(29,34)
+*)
+
+(* typed spans
+int list -> int list
+(int * int list)
+int
+int
+int list
+int list
+int
+(int * int) list
+int list
+int list
+*)
+
+(* typed spans
+int list -> int list -> (int list * int list)
+(int list * int list)
+int list
+int list
+int list
+(int list * int list)
+int
+(int * int) list
+(int list * int list)
+(int list * int list) -> (int list * int list)
 *)

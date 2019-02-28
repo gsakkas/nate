@@ -28,3 +28,19 @@ h
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,32)-(7,33)) "h"
+*)
+
+(* typed spans
+(7,32)-(7,33)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a
+*)

@@ -68,49 +68,44 @@ match x with
                                         | (a1 , a2) -> a2))
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(23,44)-(23,45)
-d1 + d2
-BopG VarG VarG
+(25,15)-(25,59)
+List.rev (List.combine l1 l2)
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(23,47)-(23,55)
-d2
-VarG
-
-(23,48)-(23,49)
-d1 + d2
-BopG VarG VarG
-
-(23,53)-(23,54)
-match a with
-| (a1 , a2) -> a2
-CaseG VarG (fromList [(Nothing,VarG)])
-
-(24,4)-(26,51)
-a2
+(25,15)-(25,59)
+List.rev
 VarG
 
 (25,15)-(25,59)
-EMPTY
-EmptyG
-
-(25,21)-(25,23)
-EMPTY
-EmptyG
-
-(25,39)-(25,59)
-EMPTY
-EmptyG
-
-(25,40)-(25,58)
-EMPTY
-EmptyG
-
-(25,41)-(25,42)
-EMPTY
-EmptyG
-
-(25,54)-(25,56)
 List.combine l1 l2
 AppG (fromList [VarG])
 
+*)
+
+(* changed exprs
+Case (Just (24,6)-(26,70)) (Var (Just (24,12)-(24,13)) "x") [(TuplePat (Just (25,9)-(25,14)) [VarPat (Just (25,9)-(25,11)) "d1",VarPat (Just (25,12)-(25,14)) "d2"],Nothing,Tuple (Just (26,10)-(26,70)) [Bop (Just (26,11)-(26,20)) Plus (Var (Just (26,12)-(26,14)) "d1") (Var (Just (26,17)-(26,19)) "d2"),ConApp (Just (26,22)-(26,69)) "::" (Just (Tuple (Just (26,23)-(26,68)) [Bop (Just (26,23)-(26,32)) Plus (Var (Just (26,24)-(26,26)) "d1") (Var (Just (26,29)-(26,31)) "d2"),Case (Just (26,36)-(26,68)) (Var (Just (26,44)-(26,45)) "a") [(TuplePat (Just (26,54)-(26,59)) [VarPat (Just (26,54)-(26,56)) "a1",VarPat (Just (26,57)-(26,59)) "a2"],Nothing,Var (Just (26,64)-(26,66)) "a2")]])) Nothing])]
+App (Just (28,15)-(28,44)) (Var (Just (28,15)-(28,23)) "List.rev") [App (Just (28,24)-(28,44)) (Var (Just (28,25)-(28,37)) "List.combine") [Var (Just (28,38)-(28,40)) "l1",Var (Just (28,41)-(28,43)) "l2"]]
+Var (Just (28,15)-(28,23)) "List.rev"
+App (Just (28,24)-(28,44)) (Var (Just (28,25)-(28,37)) "List.combine") [Var (Just (28,38)-(28,40)) "l1",Var (Just (28,41)-(28,43)) "l2"]
+*)
+
+(* typed spans
+(24,6)-(26,70)
+(28,15)-(28,44)
+(28,15)-(28,23)
+(28,24)-(28,44)
+*)
+
+(* correct types
+(int * int list)
+(int * int) list
+(int * int) list -> (int * int) list
+(int * int) list
+*)
+
+(* bad types
+('a * 'b list list)
+(int * int list) list
+(int * int list) list
+(int * int list) list
 *)

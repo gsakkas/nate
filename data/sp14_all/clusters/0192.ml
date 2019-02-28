@@ -1,2 +1,6 @@
-AppG (fromList [LetG NonRec (fromList [EmptyG]) EmptyG])
-x (let fn = fun d -> d in fn)
+LetG NonRec (fromList [LitG]) (SeqG EmptyG EmptyG)
+let x = 1 in
+(x + 1;
+if sumList (digitsOfInt n) > 9
+then additivePersistence (sumList (digitsOfInt n))
+else x)

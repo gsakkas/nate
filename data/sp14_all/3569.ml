@@ -55,21 +55,25 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(24,18)-(24,28)
+(24,18)-(24,51)
 helper (i - 1) (bigAdd acc l)
        l
 AppG (fromList [VarG,AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(24,18)-(24,51)
-EMPTY
-EmptyG
+*)
 
-(24,26)-(24,27)
-i - 1
-BopG VarG LitG
+(* changed exprs
+App (Just (24,18)-(24,49)) (Var (Just (24,18)-(24,24)) "helper") [Bop (Just (24,25)-(24,32)) Minus (Var (Just (24,26)-(24,27)) "i") (Lit (Just (24,30)-(24,31)) (LI 1)),App (Just (24,33)-(24,47)) (Var (Just (24,34)-(24,40)) "bigAdd") [Var (Just (24,41)-(24,44)) "acc",Var (Just (24,45)-(24,46)) "l"],Var (Just (24,48)-(24,49)) "l"]
+*)
 
-(24,31)-(24,51)
-EMPTY
-EmptyG
+(* typed spans
+(24,18)-(24,49)
+*)
 
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

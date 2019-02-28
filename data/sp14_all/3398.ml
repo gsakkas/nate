@@ -14,3 +14,19 @@ let sqsum xs = let f a x = a * a in let base = 0 in List.fold_left f base xs;;
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (2,47)-(2,48)) (LI 0)
+*)
+
+(* typed spans
+(2,47)-(2,48)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+'a list
+*)

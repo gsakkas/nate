@@ -84,3 +84,13 @@ helper
 VarG
 
 *)
+
+(* typed spans
+('t30 -> ('t30 * bool) * 't30)
+'t30 -> ('t30 * bool)
+('t30 * bool)
+bool
+bool
+'t30
+'t30 -> ('t30 * bool)
+*)

@@ -50,3 +50,19 @@ digits n
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (20,36)-(20,46)) (Var (Just (20,37)-(20,43)) "digits") [Var (Just (20,44)-(20,45)) "n"]
+*)
+
+(* typed spans
+(20,36)-(20,46)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
+*)

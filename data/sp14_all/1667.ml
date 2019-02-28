@@ -118,10 +118,30 @@ let rec build (rand,depth) =
 (25,16)-(25,49)
 fun (e1 , e2 , e3) ->
   Weird (e1 , e2 , e3)
-LamG (ConAppG (Just (TupleG (fromList [VarG]))) Nothing)
+LamG (ConAppG (Just (TupleG (fromList [VarG]))))
 
 (35,20)-(35,21)
 10
 LitG
 
+*)
+
+(* changed exprs
+Lam (Just (25,16)-(25,46)) (TuplePat (Just (25,16)-(25,24)) [VarPat (Just (25,16)-(25,18)) "e1",VarPat (Just (25,19)-(25,21)) "e2",VarPat (Just (25,22)-(25,24)) "e3"]) (ConApp (Just (25,28)-(25,46)) "Weird" (Just (Tuple (Just (25,34)-(25,46)) [Var (Just (25,35)-(25,37)) "e1",Var (Just (25,39)-(25,41)) "e2",Var (Just (25,43)-(25,45)) "e3"])) Nothing) Nothing
+Lit (Just (35,20)-(35,22)) (LI 10)
+*)
+
+(* typed spans
+(25,16)-(25,46)
+(35,20)-(35,22)
+*)
+
+(* correct types
+(expr * expr * expr) -> expr
+int
+*)
+
+(* bad types
+(expr * expr * expr * 'a) -> expr
+int
 *)

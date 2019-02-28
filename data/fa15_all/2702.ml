@@ -19,20 +19,20 @@ match x with
              else wwhile (f , x)
 CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
 
-(3,43)-(3,44)
-y = false
-BopG VarG LitG
+*)
 
-(3,50)-(3,63)
-x
-VarG
+(* changed exprs
+Case (Just (4,2)-(4,64)) (Var (Just (4,8)-(4,9)) "x") [(TuplePat (Just (4,18)-(4,21)) [VarPat (Just (4,18)-(4,19)) "x",VarPat (Just (4,20)-(4,21)) "y"],Nothing,Ite (Just (4,26)-(4,64)) (Bop (Just (4,29)-(4,38)) Eq (Var (Just (4,29)-(4,30)) "y") (Lit (Just (4,33)-(4,38)) (LB False))) (Var (Just (4,44)-(4,45)) "x") (App (Just (4,51)-(4,64)) (Var (Just (4,51)-(4,57)) "wwhile") [Tuple (Just (4,58)-(4,64)) [Var (Just (4,59)-(4,60)) "f",Var (Just (4,62)-(4,63)) "x"]]))]
+*)
 
-(3,61)-(3,62)
-EMPTY
-EmptyG
+(* typed spans
+(4,2)-(4,64)
+*)
 
-(3,69)-(3,70)
-x
-VarG
+(* correct types
+'a
+*)
 
+(* bad types
+'a
 *)

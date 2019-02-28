@@ -52,3 +52,7 @@ l
 VarG
 
 *)
+
+(* typed spans
+string list
+*)

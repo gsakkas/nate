@@ -64,3 +64,8 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+string list
+'t57 -> string
+*)

@@ -13,16 +13,24 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(3,14)-(3,15)
-(@)
-VarG
-
 (3,14)-(3,20)
 a @ [0]
-AppG (fromList [VarG,ListG EmptyG Nothing])
+AppG (fromList [VarG,ListG EmptyG])
 
-(3,19)-(3,20)
-[0]
-ListG LitG Nothing
+*)
 
+(* changed exprs
+App (Just (3,14)-(3,21)) (Var (Just (3,16)-(3,17)) "@") [Var (Just (3,14)-(3,15)) "a",List (Just (3,18)-(3,21)) [Lit (Just (3,19)-(3,20)) (LI 0)] Nothing]
+*)
+
+(* typed spans
+(3,14)-(3,21)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
 *)

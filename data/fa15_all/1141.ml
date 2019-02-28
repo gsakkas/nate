@@ -110,11 +110,23 @@ let bigMul l1 l2 =
 
 (* changed spans
 (48,14)-(48,38)
-EMPTY
-EmptyG
+sum + r
+BopG VarG VarG
 
-(48,15)-(48,27)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Bop (Just (48,14)-(48,23)) Plus (Var (Just (48,15)-(48,18)) "sum") (Var (Just (48,21)-(48,22)) "r")
+*)
+
+(* typed spans
+(48,14)-(48,23)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

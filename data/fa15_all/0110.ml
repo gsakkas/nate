@@ -19,12 +19,13 @@ EmptyG
 EMPTY
 EmptyG
 
-(3,57)-(3,58)
-EMPTY
-EmptyG
+*)
 
-(3,60)-(3,73)
-EMPTY
-EmptyG
+(* typed spans
+*)
 
+(* typed spans
+*)
+
+(* typed spans
 *)

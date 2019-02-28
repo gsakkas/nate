@@ -80,19 +80,23 @@ let bigMul l1 l2 =
 
 (* changed spans
 (35,47)-(35,72)
-EMPTY
-EmptyG
-
-(35,48)-(35,62)
 mulByDigit (o * x) l1
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
-(35,60)-(35,61)
-o * x
-BopG VarG VarG
+*)
 
-(35,65)-(35,71)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (35,47)-(35,70)) (Var (Just (35,48)-(35,58)) "mulByDigit") [Bop (Just (35,59)-(35,66)) Times (Var (Just (35,60)-(35,61)) "o") (Var (Just (35,64)-(35,65)) "x"),Var (Just (35,67)-(35,69)) "l1"]
+*)
 
+(* typed spans
+(35,47)-(35,70)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

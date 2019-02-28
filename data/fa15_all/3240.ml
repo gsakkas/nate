@@ -14,16 +14,17 @@ let pipe fs = let f a x = a in let base g x = x in List.fold_left f base fs;;
 EMPTY
 EmptyG
 
-(3,14)-(3,21)
-EMPTY
-EmptyG
-
-(3,18)-(3,21)
-EMPTY
-EmptyG
-
 (3,20)-(3,21)
 EMPTY
 EmptyG
 
+*)
+
+(* typed spans
+*)
+
+(* typed spans
+*)
+
+(* typed spans
 *)

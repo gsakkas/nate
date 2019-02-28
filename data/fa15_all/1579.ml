@@ -55,19 +55,63 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (22,15)-(22,22)
-EMPTY
-EmptyG
-
-(22,16)-(22,17)
-EMPTY
-EmptyG
+[]
+ListG EmptyG
 
 (24,4)-(24,51)
-EMPTY
-EmptyG
+List.fold_left f base args
+AppG (fromList [VarG])
 
-(24,48)-(24,51)
-EMPTY
-EmptyG
+(24,4)-(24,51)
+List.fold_left
+VarG
 
+(24,4)-(24,51)
+f
+VarG
+
+(24,4)-(24,51)
+base
+VarG
+
+(24,4)-(24,51)
+args
+VarG
+
+*)
+
+(* changed exprs
+List (Just (22,15)-(22,17)) [] Nothing
+App (Just (23,48)-(23,74)) (Var (Just (23,48)-(23,62)) "List.fold_left") [Var (Just (23,63)-(23,64)) "f",Var (Just (23,65)-(23,69)) "base",Var (Just (23,70)-(23,74)) "args"]
+Var (Just (23,48)-(23,62)) "List.fold_left"
+Var (Just (23,63)-(23,64)) "f"
+Var (Just (23,65)-(23,69)) "base"
+Var (Just (23,70)-(23,74)) "args"
+*)
+
+(* typed spans
+(22,15)-(22,17)
+(23,48)-(23,74)
+(23,48)-(23,62)
+(23,63)-(23,64)
+(23,65)-(23,69)
+(23,70)-(23,74)
+*)
+
+(* correct types
+int list
+int list
+(int list -> (int * int) -> int list) -> int list -> (int * int) list -> int list
+int list -> (int * int) -> int list
+int list
+(int * int) list
+*)
+
+(* bad types
+(int * 'a list)
+int list
+int list
+int list
+int list
+int list
 *)

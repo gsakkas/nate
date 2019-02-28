@@ -28,11 +28,43 @@ seen
 VarG
 
 (7,41)-(7,42)
+seen
+VarG
+
+(7,41)-(7,42)
 h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG])))
 
 (7,48)-(7,49)
 seen
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (7,34)-(7,38)) "seen"
+Var (Just (7,44)-(7,48)) "seen"
+ConApp (Just (7,54)-(7,63)) "::" (Just (Tuple (Just (7,54)-(7,63)) [Var (Just (7,54)-(7,55)) "h",Var (Just (7,59)-(7,63)) "seen"])) Nothing
+Var (Just (7,59)-(7,63)) "seen"
+*)
+
+(* typed spans
+(7,34)-(7,38)
+(7,44)-(7,48)
+(7,54)-(7,63)
+(7,59)-(7,63)
+*)
+
+(* correct types
+'a list
+'a list
+'a list
+'a list
+*)
+
+(* bad types
+'a list
+'a
+'a
+'a list
 *)

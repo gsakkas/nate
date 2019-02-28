@@ -27,3 +27,8 @@ additivePersistence (sumList (digitsOfInt n))
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
+
+(* typed spans
+int -> int
+int
+*)

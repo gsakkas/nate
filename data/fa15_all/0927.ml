@@ -254,3 +254,26 @@ List.combine x y
 AppG (fromList [VarG])
 
 *)
+
+(* typed spans
+bool
+(int list * int list)
+(int list * int list)
+int list -> int list
+int list
+(int * int list)
+(int * int list)
+int list
+int list -> int list -> (int * int) list
+int list
+int list
+(int * int list)
+int list
+int list -> int list
+int list
+int list -> int list -> (int list * int list list)
+int list list
+int list
+int list -> int list -> int list
+(int * int list) list
+*)

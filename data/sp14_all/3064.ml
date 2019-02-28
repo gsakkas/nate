@@ -14,3 +14,19 @@ l
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (2,59)-(2,60)) "l"
+*)
+
+(* typed spans
+(2,59)-(2,60)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+unit
+*)

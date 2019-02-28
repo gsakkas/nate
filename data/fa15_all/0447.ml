@@ -25,3 +25,19 @@ isFPoint
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,51)-(7,59)) "isFPoint"
+*)
+
+(* typed spans
+(7,51)-(7,59)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+bool
+*)

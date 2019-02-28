@@ -16,14 +16,6 @@ let stringOfList f l =
 EMPTY
 EmptyG
 
-(3,21)-(3,22)
-EMPTY
-EmptyG
-
-(3,36)-(3,38)
-EMPTY
-EmptyG
-
 (3,49)-(3,60)
 (^)
 VarG
@@ -32,8 +24,16 @@ VarG
 EMPTY
 EmptyG
 
-(3,64)-(3,65)
-EMPTY
-EmptyG
+*)
 
+(* typed spans
+(3,17)-(3,18)
+*)
+
+(* typed spans
+string -> string -> string
+*)
+
+(* typed spans
+'a list -> 'a list -> 'a list
 *)

@@ -46,44 +46,24 @@ then digitalRoot s
 else s
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(11,15)-(11,26)
-digits
-VarG
+*)
 
-(12,18)-(12,24)
-d
-VarG
+(* changed exprs
+Lam (Just (8,11)-(8,34)) (VarPat (Just (8,11)-(8,12)) "n") (App (Just (8,15)-(8,34)) (Var (Just (8,15)-(8,26)) "digitsOfInt") [App (Just (8,27)-(8,34)) (Var (Just (8,28)-(8,31)) "abs") [Var (Just (8,32)-(8,33)) "n"]]) Nothing
+Let (Just (13,2)-(14,65)) NonRec [(VarPat (Just (13,6)-(13,7)) "d",App (Just (13,10)-(13,18)) (Var (Just (13,10)-(13,16)) "digits") [Var (Just (13,17)-(13,18)) "n"])] (Let (Just (14,2)-(14,65)) NonRec [(VarPat (Just (14,6)-(14,7)) "s",App (Just (14,10)-(14,19)) (Var (Just (14,10)-(14,17)) "sumList") [Var (Just (14,18)-(14,19)) "d"])] (Ite (Just (14,23)-(14,65)) (Bop (Just (14,26)-(14,39)) Neq (Bop (Just (14,26)-(14,34)) Div (Var (Just (14,27)-(14,28)) "n") (Lit (Just (14,31)-(14,33)) (LI 10))) (Lit (Just (14,38)-(14,39)) (LI 0))) (App (Just (14,45)-(14,58)) (Var (Just (14,45)-(14,56)) "digitalRoot") [Var (Just (14,57)-(14,58)) "s"]) (Var (Just (14,64)-(14,65)) "s")))
+*)
 
-(14,7)-(14,52)
-EMPTY
-EmptyG
+(* typed spans
+(8,11)-(8,34)
+(13,2)-(14,65)
+*)
 
-(14,8)-(14,17)
-EMPTY
-EmptyG
+(* correct types
+int -> int list
+int
+*)
 
-(14,18)-(14,19)
-EMPTY
-EmptyG
-
-(14,21)-(14,34)
-EMPTY
-EmptyG
-
-(14,21)-(14,38)
-EMPTY
-EmptyG
-
-(14,21)-(14,51)
-EMPTY
-EmptyG
-
-(14,35)-(14,38)
-EMPTY
-EmptyG
-
-(15,7)-(15,13)
-s
-VarG
-
+(* bad types
+int list -> int
+int list
 *)

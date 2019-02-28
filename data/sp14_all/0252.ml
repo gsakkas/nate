@@ -35,24 +35,20 @@ let rec additivePersistence n =
 0
 LitG
 
-(13,40)-(13,47)
-EMPTY
-EmptyG
+*)
 
-(13,40)-(13,63)
-EMPTY
-EmptyG
+(* changed exprs
+Lit (Just (13,40)-(13,41)) (LI 0)
+*)
 
-(13,48)-(13,63)
-EMPTY
-EmptyG
+(* typed spans
+(13,40)-(13,41)
+*)
 
-(13,49)-(13,60)
-EMPTY
-EmptyG
+(* correct types
+int
+*)
 
-(13,61)-(13,62)
-EMPTY
-EmptyG
-
+(* bad types
+unit
 *)

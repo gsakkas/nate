@@ -20,3 +20,19 @@ let sqsum xs =
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (4,35)-(4,36)) (LI 0)
+*)
+
+(* typed spans
+(4,35)-(4,36)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+'a list
+*)

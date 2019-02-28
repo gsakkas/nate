@@ -57,35 +57,11 @@ let (y , z) = x in
 ((y + z) + carry) > 9
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(15,27)-(15,28)
-y + z
-BopG VarG VarG
-
-(15,36)-(15,37)
-carry
-VarG
-
-(16,11)-(16,49)
-a
-VarG
-
 (16,11)-(16,53)
 let (carry , ans) = a in
 (1 , let (y , z) = x in
      [((y + z) + carry) mod 10] @ ans)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(16,33)-(16,47)
-[((y + z) + carry) mod 10] @ ans
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(16,34)-(16,35)
-y + z
-BopG VarG VarG
-
-(16,45)-(16,47)
-carry
-VarG
 
 (16,52)-(16,53)
 let (carry , ans) = a in
@@ -94,27 +70,77 @@ let (carry , ans) = a in
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (17,11)-(17,44)
-EMPTY
-EmptyG
+(0 , let (y , z) = x in
+     [(y + z) + carry] @ ans)
+TupleG (fromList [LitG,LetG NonRec (fromList [EmptyG]) EmptyG])
 
-(17,33)-(17,34)
-y + z
-BopG VarG VarG
+(17,11)-(17,44)
+0
+LitG
 
-(17,33)-(17,38)
+(17,11)-(17,44)
+let (y , z) = x in
 [(y + z) + carry] @ ans
-AppG (fromList [VarG,ListG EmptyG Nothing])
+LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
 
-(17,43)-(17,44)
-carry
+(17,11)-(17,44)
+x
 VarG
 
-(18,4)-(20,51)
-ans
-VarG
+(17,11)-(17,44)
+[(y + z) + carry] @ ans
+AppG (fromList [VarG,ListG EmptyG])
 
 (18,19)-(18,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+Let (Just (15,9)-(15,70)) NonRec [(TuplePat (Just (15,14)-(15,23)) [VarPat (Just (15,14)-(15,19)) "carry",VarPat (Just (15,20)-(15,23)) "ans"],Var (Just (15,27)-(15,28)) "a")] (Let (Just (15,32)-(15,70)) NonRec [(TuplePat (Just (15,37)-(15,40)) [VarPat (Just (15,37)-(15,38)) "y",VarPat (Just (15,39)-(15,40)) "z"],Var (Just (15,44)-(15,45)) "x")] (Bop (Just (15,49)-(15,70)) Gt (Bop (Just (15,49)-(15,66)) Plus (Bop (Just (15,50)-(15,57)) Plus (Var (Just (15,51)-(15,52)) "y") (Var (Just (15,55)-(15,56)) "z")) (Var (Just (15,60)-(15,65)) "carry")) (Lit (Just (15,69)-(15,70)) (LI 9))))
+Let (Just (17,8)-(18,64)) NonRec [(TuplePat (Just (17,13)-(17,22)) [VarPat (Just (17,13)-(17,18)) "carry",VarPat (Just (17,19)-(17,22)) "ans"],Var (Just (17,26)-(17,27)) "a")] (Tuple (Just (18,8)-(18,64)) [Lit (Just (18,9)-(18,10)) (LI 1),Let (Just (18,12)-(18,63)) NonRec [(TuplePat (Just (18,18)-(18,21)) [VarPat (Just (18,18)-(18,19)) "y",VarPat (Just (18,20)-(18,21)) "z"],Var (Just (18,25)-(18,26)) "x")] (App (Just (18,30)-(18,62)) (Var (Just (18,57)-(18,58)) "@") [List (Just (18,30)-(18,56)) [Bop (Just (18,31)-(18,55)) Mod (Bop (Just (18,31)-(18,48)) Plus (Bop (Just (18,32)-(18,39)) Plus (Var (Just (18,33)-(18,34)) "y") (Var (Just (18,37)-(18,38)) "z")) (Var (Just (18,42)-(18,47)) "carry")) (Lit (Just (18,53)-(18,55)) (LI 10))] Nothing,Var (Just (18,59)-(18,62)) "ans"])])
+Let (Just (20,8)-(21,57)) NonRec [(TuplePat (Just (20,14)-(20,23)) [VarPat (Just (20,14)-(20,19)) "carry",VarPat (Just (20,20)-(20,23)) "ans"],Var (Just (20,27)-(20,28)) "a")] (Tuple (Just (21,9)-(21,56)) [Lit (Just (21,10)-(21,11)) (LI 0),Let (Just (21,13)-(21,55)) NonRec [(TuplePat (Just (21,19)-(21,22)) [VarPat (Just (21,19)-(21,20)) "y",VarPat (Just (21,21)-(21,22)) "z"],Var (Just (21,26)-(21,27)) "x")] (App (Just (21,31)-(21,54)) (Var (Just (21,49)-(21,50)) "@") [List (Just (21,31)-(21,48)) [Bop (Just (21,32)-(21,47)) Plus (Bop (Just (21,32)-(21,39)) Plus (Var (Just (21,33)-(21,34)) "y") (Var (Just (21,37)-(21,38)) "z")) (Var (Just (21,42)-(21,47)) "carry")] Nothing,Var (Just (21,51)-(21,54)) "ans"])])
+Tuple (Just (21,9)-(21,56)) [Lit (Just (21,10)-(21,11)) (LI 0),Let (Just (21,13)-(21,55)) NonRec [(TuplePat (Just (21,19)-(21,22)) [VarPat (Just (21,19)-(21,20)) "y",VarPat (Just (21,21)-(21,22)) "z"],Var (Just (21,26)-(21,27)) "x")] (App (Just (21,31)-(21,54)) (Var (Just (21,49)-(21,50)) "@") [List (Just (21,31)-(21,48)) [Bop (Just (21,32)-(21,47)) Plus (Bop (Just (21,32)-(21,39)) Plus (Var (Just (21,33)-(21,34)) "y") (Var (Just (21,37)-(21,38)) "z")) (Var (Just (21,42)-(21,47)) "carry")] Nothing,Var (Just (21,51)-(21,54)) "ans"])]
+Lit (Just (21,10)-(21,11)) (LI 0)
+Let (Just (21,13)-(21,55)) NonRec [(TuplePat (Just (21,19)-(21,22)) [VarPat (Just (21,19)-(21,20)) "y",VarPat (Just (21,21)-(21,22)) "z"],Var (Just (21,26)-(21,27)) "x")] (App (Just (21,31)-(21,54)) (Var (Just (21,49)-(21,50)) "@") [List (Just (21,31)-(21,48)) [Bop (Just (21,32)-(21,47)) Plus (Bop (Just (21,32)-(21,39)) Plus (Var (Just (21,33)-(21,34)) "y") (Var (Just (21,37)-(21,38)) "z")) (Var (Just (21,42)-(21,47)) "carry")] Nothing,Var (Just (21,51)-(21,54)) "ans"])
+Var (Just (21,26)-(21,27)) "x"
+App (Just (21,31)-(21,54)) (Var (Just (21,49)-(21,50)) "@") [List (Just (21,31)-(21,48)) [Bop (Just (21,32)-(21,47)) Plus (Bop (Just (21,32)-(21,39)) Plus (Var (Just (21,33)-(21,34)) "y") (Var (Just (21,37)-(21,38)) "z")) (Var (Just (21,42)-(21,47)) "carry")] Nothing,Var (Just (21,51)-(21,54)) "ans"]
+List (Just (22,19)-(22,21)) [] Nothing
+*)
+
+(* typed spans
+(15,9)-(15,70)
+(17,8)-(18,64)
+(20,8)-(21,57)
+(21,9)-(21,56)
+(21,10)-(21,11)
+(21,13)-(21,55)
+(21,26)-(21,27)
+(21,31)-(21,54)
+(22,19)-(22,21)
+*)
+
+(* correct types
+bool
+(int * int list)
+(int * int list)
+(int * int list)
+int
+int list
+(int * int)
+int list
+int list
+*)
+
+(* bad types
+bool
+int
+int
+int
+int
+int
+int
+int
+int
 *)

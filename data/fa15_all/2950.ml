@@ -105,7 +105,7 @@ BopG VarG VarG
 
 (18,42)-(18,44)
 (num / 10 , (num mod 10) :: res)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
+TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
 
 (19,4)-(21,51)
 num mod 10
@@ -113,6 +113,16 @@ BopG VarG LitG
 
 (19,15)-(19,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* typed spans
+(int * int list)
+(int * int list)
+(int * int list)
+int
+(int * int list)
+int
+(int * int list)
 *)

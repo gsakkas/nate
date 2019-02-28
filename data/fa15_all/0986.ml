@@ -20,10 +20,6 @@ let fixpoint (f,b) = wwhile ((helper (f, b)), b);;
 
 (* changed spans
 (2,12)-(2,64)
-EMPTY
-EmptyG
-
-(2,19)-(2,64)
 fun (f , b) ->
   (let f =
      fun b ->
@@ -32,44 +28,20 @@ fun (f , b) ->
    f)
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(2,27)-(2,28)
-EMPTY
-EmptyG
+*)
 
-(2,27)-(2,30)
-let f =
-  fun b ->
-    (let x = f b in
-     (x , x <> b)) in
-f
-LetG NonRec (fromList [LamG EmptyG]) VarG
+(* changed exprs
+Lam (Just (2,12)-(2,62)) (TuplePat (Just (2,12)-(2,15)) [VarPat (Just (2,12)-(2,13)) "f",VarPat (Just (2,14)-(2,15)) "b"]) (Let (Just (2,19)-(2,62)) NonRec [(VarPat (Just (2,23)-(2,24)) "f",Lam (Just (2,25)-(2,57)) (VarPat (Just (2,25)-(2,26)) "b") (Let (Just (2,29)-(2,57)) NonRec [(VarPat (Just (2,33)-(2,34)) "x",App (Just (2,37)-(2,40)) (Var (Just (2,37)-(2,38)) "f") [Var (Just (2,39)-(2,40)) "b"])] (Tuple (Just (2,44)-(2,57)) [Var (Just (2,45)-(2,46)) "x",Bop (Just (2,48)-(2,56)) Neq (Var (Just (2,49)-(2,50)) "x") (Var (Just (2,54)-(2,55)) "b")])) Nothing)] (Var (Just (2,61)-(2,62)) "f")) Nothing
+*)
 
-(2,29)-(2,30)
-EMPTY
-EmptyG
+(* typed spans
+(2,12)-(2,62)
+*)
 
-(2,34)-(2,64)
-EMPTY
-EmptyG
+(* correct types
+('a -> 'a * 'a) -> 'a -> ('a * bool)
+*)
 
-(2,40)-(2,41)
-f
-VarG
-
-(2,54)-(2,64)
-b
-VarG
-
-(2,55)-(2,56)
-EMPTY
-EmptyG
-
-(2,58)-(2,63)
-x
-VarG
-
-(4,16)-(5,72)
-x <> b
-BopG VarG VarG
-
+(* bad types
+('a -> 'b * 'a) -> ('b * bool)
 *)

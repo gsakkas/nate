@@ -1,15 +1,5 @@
-LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
-let l = t in
-List.fold_left f base l
-let l = t in
-List.fold_left f base l
-let l = t in
-List.fold_left f base l
-let l = sl in
-List.fold_left f base l
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
-let rest' = t in
-helper (seen' , rest')
+AppG (fromList [VarG,AppG (fromList [EmptyG]),LitG])
+List.fold_left (^) ""
+               (List.map f l)
+buildhelper (rand (1 , 4))
+            depth ""

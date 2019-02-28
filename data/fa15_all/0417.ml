@@ -52,3 +52,11 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+'t54
+'t54
+'t54 -> bool
+bool
+'t54
+*)

@@ -68,3 +68,19 @@ b1
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (24,16)-(24,18)) "b1"
+*)
+
+(* typed spans
+(24,16)-(24,18)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+'a list
+*)

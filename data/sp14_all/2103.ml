@@ -102,11 +102,23 @@ let rec build (rand,depth) =
 
 (* changed spans
 (27,21)-(27,33)
-EMPTY
-EmptyG
+VarX
+ConAppG Nothing
 
-(27,28)-(27,32)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+ConApp (Just (27,21)-(27,25)) "VarX" Nothing Nothing
+*)
+
+(* typed spans
+(27,21)-(27,25)
+*)
+
+(* correct types
+expr
+*)
+
+(* bad types
+(expr * expr)
 *)

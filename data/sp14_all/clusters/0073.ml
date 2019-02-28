@@ -1,16 +1,13 @@
-BopG LitG (AppG (fromList [EmptyG]))
-1.0 -. exp ((- 1.0) *. eval (a , x , y))
-1.0 -. exp ((- 1.0) *. eval (a , x , y))
-4.0 *. atan 1.0
-4.0 *. atan 1.0
-4.0 *. atan 1.0
-2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-2.0 *. exp (-. (((eval (e1 , x , y) -. eval (e2 , x , y)) ** 2.0) /. eval (e3 , x , y)))
-4.0 *. atan 1.0
-4.0 *. atan 1.0
-4.0 *. atan 1.0
-4.0 *. atan 1.0
-4.0 *. atan 1.0
+CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG),(Nothing,LitG)])
+match xs with
+| [] -> 0
+| x :: xs' -> x + sumList xs'
+match xs with
+| [] -> 0
+| xs -> List.hd xs + sumList (List.tl xs)
+match xs with
+| [] -> 0
+| x :: y -> x + sumList y
+match xs with
+| [] -> 0
+| h :: t -> h + sumList t

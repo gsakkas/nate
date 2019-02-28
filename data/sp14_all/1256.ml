@@ -74,69 +74,28 @@ fun i ->
                     (bigAdd acc l)
 LamG (LamG EmptyG)
 
-(27,21)-(28,70)
-EMPTY
-EmptyG
+(29,15)-(29,16)
+[0]
+ListG LitG
 
-(27,23)-(28,70)
-EMPTY
-EmptyG
+*)
 
-(28,4)-(28,70)
-EMPTY
-EmptyG
+(* changed exprs
+Lam (Just (27,17)-(28,75)) (VarPat (Just (27,17)-(27,18)) "i") (Lam (Just (27,19)-(28,75)) (VarPat (Just (27,19)-(27,20)) "l") (Lam (Just (27,21)-(28,75)) (VarPat (Just (27,21)-(27,24)) "acc") (Case (Just (28,4)-(28,75)) (Var (Just (28,10)-(28,11)) "i") [(LitPat (Just (28,19)-(28,20)) (LI 0),Nothing,List (Just (28,24)-(28,27)) [Lit (Just (28,25)-(28,26)) (LI 0)] Nothing),(LitPat (Just (28,30)-(28,31)) (LI 1),Nothing,Var (Just (28,35)-(28,36)) "l"),(WildPat (Just (28,39)-(28,40)),Nothing,App (Just (28,44)-(28,75)) (Var (Just (28,44)-(28,50)) "helper") [Bop (Just (28,51)-(28,58)) Minus (Var (Just (28,52)-(28,53)) "i") (Lit (Just (28,56)-(28,57)) (LI 1)),Var (Just (28,59)-(28,60)) "l",App (Just (28,61)-(28,75)) (Var (Just (28,62)-(28,68)) "bigAdd") [Var (Just (28,69)-(28,72)) "acc",Var (Just (28,73)-(28,74)) "l"]])]) Nothing) Nothing) Nothing
+List (Just (29,13)-(29,16)) [Lit (Just (29,14)-(29,15)) (LI 0)] Nothing
+*)
 
-(28,10)-(28,11)
-EMPTY
-EmptyG
+(* typed spans
+(27,17)-(28,75)
+(29,13)-(29,16)
+*)
 
-(28,24)-(28,27)
-EMPTY
-EmptyG
+(* correct types
+int -> int list -> int list -> int list
+int list
+*)
 
-(28,24)-(28,33)
-EMPTY
-EmptyG
-
-(28,30)-(28,33)
-EMPTY
-EmptyG
-
-(28,41)-(28,47)
-helper (i - 1) l (bigAdd acc
-                         l)
-AppG (fromList [VarG,AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-
-(28,41)-(28,70)
-match i with
-| 0 -> [0]
-| 1 -> l
-| _ -> helper (i - 1) l
-              (bigAdd acc l)
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG Nothing)])
-
-(28,49)-(28,50)
-i
-VarG
-
-(28,56)-(28,70)
-l
-VarG
-
-(28,64)-(28,65)
-acc
-VarG
-
-(28,66)-(28,69)
-EMPTY
-EmptyG
-
-(29,9)-(29,12)
-EMPTY
-EmptyG
-
-(29,10)-(29,11)
-EMPTY
-EmptyG
-
+(* bad types
+int -> int -> int -> int
+int list
 *)

@@ -72,10 +72,6 @@ LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 EMPTY
 EmptyG
 
-(17,20)-(17,21)
-EMPTY
-EmptyG
-
 (19,6)-(19,72)
 let (x1 , x2) = x in
 let sum = (x1 + x2) + carry in
@@ -98,20 +94,29 @@ EmptyG
 List.combine
 VarG
 
-(21,48)-(21,60)
-EMPTY
-EmptyG
-
 (21,48)-(21,68)
 EMPTY
 EmptyG
 
-(21,61)-(21,64)
-EMPTY
-EmptyG
+*)
 
-(21,65)-(21,68)
-EMPTY
-EmptyG
+(* typed spans
+(15,11)-(22,51)
+(18,6)-(19,72)
+(19,67)-(19,70)
+(21,15)-(21,27)
+*)
 
+(* typed spans
+(int list * int list) -> int list
+(int * int list)
+int list
+int list -> int list -> (int * int) list
+*)
+
+(* typed spans
+(int list * int list) -> int list
+(int * 'a list)
+int list
+int list -> int list -> (int list * int list)
 *)

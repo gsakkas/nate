@@ -12,27 +12,23 @@ let pipe fs =
 
 (* changed spans
 (3,12)-(3,21)
-EMPTY
-EmptyG
-
-(3,14)-(3,21)
-EMPTY
-EmptyG
-
-(3,18)-(3,19)
-EMPTY
-EmptyG
-
-(3,18)-(3,21)
-EMPTY
-EmptyG
-
-(3,20)-(3,21)
 let an = a in x
 LetG NonRec (fromList [VarG]) VarG
 
-(3,25)-(3,67)
-x
-VarG
+*)
 
+(* changed exprs
+Let (Just (3,14)-(3,29)) NonRec [(VarPat (Just (3,18)-(3,20)) "an",Var (Just (3,23)-(3,24)) "a")] (Var (Just (3,28)-(3,29)) "x")
+*)
+
+(* typed spans
+(3,14)-(3,29)
+*)
+
+(* correct types
+'a -> 'a
+*)
+
+(* bad types
+'a -> ('a -> 'b) -> 'b
 *)

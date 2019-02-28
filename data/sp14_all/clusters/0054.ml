@@ -1,42 +1,24 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-let xx = f x in (xx , xx <> x)
-let xx = f x in (xx , xx <> x)
-let xx = f x in (xx , xx <> x)
-let xi = f x in
-(xi , (f xi <> xi) || f (f xi))
-let ll2 = List.length l2 in
-(clone 0
-       (ll2 - ll1) @ l1 , clone 0
-                                (ll1 - ll2) @ l2)
-let y = f x in (y , y <> x)
-let y = f x in (y , y <> x)
-let (_ , asd4) =
-  padZero asd3 (asd2 :: b) in
-(asd3 , asd4)
-let (_ , asd4) =
-  padZero asd3 (asd2 :: b) in
-(asd3 , asd4)
-let (_ , asd4) =
-  padZero asd3 (asd2 :: b) in
-(asd3 , asd4)
-let (_ , asd4) =
-  padZero asd3 (asd2 :: b) in
-(asd3 , asd4)
-let (_ , asd4) =
-  padZero asd3 (asd2 :: b) in
-(asd3 , asd4)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
-let xx = f x in (xx , xx <> b)
+CaseG VarG (fromList [(Nothing,ConAppG (Just EmptyG)),(Nothing,ListG EmptyG)])
+match n with
+| 0 -> []
+| _ -> x :: (clone x (n - 1))
+match l with
+| h :: t -> h :: (listReverse t)
+| [] -> []
+match a with
+| h :: t -> ((sum + h) / 10) :: (((sum + h) mod 10) :: t)
+| _ -> [sum / 10 ; sum mod 10]
+match l with
+| [] -> []
+| h :: t -> h :: (listReverse t)
+match l with
+| [] -> []
+| _ :: h :: [] -> h :: (listReverse [])
+match l with
+| [] -> []
+| x :: [] -> [x]
+| head :: tail :: t :: s -> head :: (tail :: (t :: s))
+match l with
+| [] -> []
+| h1 :: [] -> [h1]
+| h :: t -> h :: (listReverse t)

@@ -1,25 +1,5 @@
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (IteG EmptyG EmptyG EmptyG)
-if i = 0
-then []
-else if i = 1
-     then l
-     else bigAdd (bigAdd l l)
-                 (mulByDigit (i - 2) l)
-if i = 0
-then []
-else if i = 1
-     then l
-     else bigAdd (bigAdd l l)
-                 (mulByDigit (i - 2) l)
-if i = 0
-then []
-else if i = 1
-     then l
-     else bigAdd (bigAdd l l)
-                 (mulByDigit (i - 2) l)
-if i = 0
-then []
-else if i = 1
-     then l
-     else bigAdd (bigAdd l l)
-                 (mulByDigit (i - 2) l)
+LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
+let (_ , asd4) =
+  padZero asd3 (asd2 :: b) in
+(asd3 , asd4)
+let xx = f x in (xx , xx <> b)

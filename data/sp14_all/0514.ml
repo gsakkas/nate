@@ -16,12 +16,20 @@ let sqsum xs =
 a + int_of_float (float_of_int x ** 2.0)
 BopG VarG (AppG (fromList [EmptyG]))
 
-(3,19)-(3,29)
-int_of_float (float_of_int x ** 2.0)
-AppG (fromList [AppG (fromList [EmptyG])])
+*)
 
-(3,20)-(3,21)
-float_of_int x
-AppG (fromList [VarG])
+(* changed exprs
+Bop (Just (3,14)-(3,58)) Plus (Var (Just (3,14)-(3,15)) "a") (App (Just (3,18)-(3,58)) (Var (Just (3,19)-(3,31)) "int_of_float") [App (Just (3,32)-(3,57)) (Var (Just (3,50)-(3,52)) "**") [App (Just (3,33)-(3,49)) (Var (Just (3,34)-(3,46)) "float_of_int") [Var (Just (3,47)-(3,48)) "x"],Lit (Just (3,53)-(3,56)) (LD 2.0)]])
+*)
 
+(* typed spans
+(3,14)-(3,58)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+float
 *)

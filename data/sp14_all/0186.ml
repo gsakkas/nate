@@ -15,8 +15,20 @@ let rec listReverse l =
 hd
 VarG
 
-(3,58)-(3,60)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (3,38)-(3,40)) "hd"
+*)
+
+(* typed spans
+(3,38)-(3,40)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a
 *)

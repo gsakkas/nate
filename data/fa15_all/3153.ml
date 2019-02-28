@@ -62,7 +62,7 @@ let bigAdd l1 l2 =
 (* changed spans
 (3,45)-(3,48)
 x :: (clone x (n - 1))
-ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])])))
 
 (3,45)-(3,68)
 EMPTY
@@ -115,7 +115,7 @@ EmptyG
 
 (25,65)-(25,66)
 ([x1 + x2] , [x2])
-TupleG (fromList [ListG EmptyG Nothing])
+TupleG (fromList [ListG EmptyG])
 
 (25,67)-(25,68)
 x1
@@ -123,15 +123,15 @@ VarG
 
 (26,4)-(28,51)
 [x2]
-ListG VarG Nothing
+ListG VarG
 
 (26,15)-(26,17)
 ([] , [])
-TupleG (fromList [ListG EmptyG Nothing])
+TupleG (fromList [ListG EmptyG])
 
 (27,4)-(28,51)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (27,15)-(27,30)
 EMPTY
@@ -141,4 +141,15 @@ EmptyG
 List.combine
 VarG
 
+*)
+
+(* typed spans
+int list
+(int list * int list)
+(int list * int list)
+int
+int list
+(int list * int list)
+int list
+int list -> int list -> (int * int) list
 *)

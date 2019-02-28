@@ -18,3 +18,23 @@ xs
 VarG
 
 *)
+
+(* changed exprs
+Lit (Just (2,43)-(2,44)) (LI 0)
+Var (Just (2,68)-(2,70)) "xs"
+*)
+
+(* typed spans
+(2,43)-(2,44)
+(2,68)-(2,70)
+*)
+
+(* correct types
+int
+int list
+*)
+
+(* bad types
+'a list
+int list
+*)

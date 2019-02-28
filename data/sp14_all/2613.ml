@@ -15,11 +15,27 @@ let rec clone x n = let acc = [0] in if n > 0 then clone x (n - 1) else [];;
 LitG
 
 (3,39)-(3,49)
-EMPTY
-EmptyG
+x
+VarG
 
-(3,45)-(3,48)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lit (Just (2,31)-(2,32)) (LI 0)
+Var (Just (2,57)-(2,58)) "x"
+*)
+
+(* typed spans
+(2,31)-(2,32)
+(2,57)-(2,58)
+*)
+
+(* correct types
+int
+'a
+*)
+
+(* bad types
+'a
+'a list
 *)

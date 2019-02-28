@@ -79,18 +79,22 @@ let bigAdd l1 l2 =
 (* changed spans
 (31,36)-(32,52)
 [((h + b) + c) / 10] @ ([((h + b) + c) mod 10] @ t)
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
-(31,37)-(31,57)
-(@)
-VarG
+*)
 
-(32,24)-(32,46)
-(@)
-VarG
+(* changed exprs
+App (Just (32,24)-(32,77)) (Var (Just (32,46)-(32,47)) "@") [List (Just (32,25)-(32,45)) [Bop (Just (32,26)-(32,44)) Div (Bop (Just (32,26)-(32,39)) Plus (Bop (Just (32,27)-(32,34)) Plus (Var (Just (32,28)-(32,29)) "h") (Var (Just (32,32)-(32,33)) "b")) (Var (Just (32,37)-(32,38)) "c")) (Lit (Just (32,42)-(32,44)) (LI 10))] Nothing,App (Just (32,48)-(32,76)) (Var (Just (32,72)-(32,73)) "@") [List (Just (32,49)-(32,71)) [Bop (Just (32,50)-(32,70)) Mod (Bop (Just (32,50)-(32,63)) Plus (Bop (Just (32,51)-(32,58)) Plus (Var (Just (32,52)-(32,53)) "h") (Var (Just (32,56)-(32,57)) "b")) (Var (Just (32,61)-(32,62)) "c")) (Lit (Just (32,68)-(32,70)) (LI 10))] Nothing,Var (Just (32,74)-(32,75)) "t"]]
+*)
 
-(32,24)-(32,51)
-[((h + b) + c) mod 10] @ t
-AppG (fromList [VarG,ListG EmptyG Nothing])
+(* typed spans
+(32,24)-(32,77)
+*)
 
+(* correct types
+int list
+*)
+
+(* bad types
+int list list
 *)

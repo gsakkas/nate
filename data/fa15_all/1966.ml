@@ -12,11 +12,23 @@ let rec mulByDigit i l =
 
 (* changed spans
 (3,46)-(3,68)
-EMPTY
-EmptyG
+mulByDigit i t
+AppG (fromList [VarG])
 
-(3,47)-(3,48)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (3,46)-(3,62)) (Var (Just (3,47)-(3,57)) "mulByDigit") [Var (Just (3,58)-(3,59)) "i",Var (Just (3,60)-(3,61)) "t"]
+*)
+
+(* typed spans
+(3,46)-(3,62)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

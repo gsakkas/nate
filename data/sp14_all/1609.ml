@@ -25,46 +25,20 @@ let a =
 a
 LetG NonRec (fromList [LamG EmptyG]) VarG
 
-(6,23)-(6,26)
-fun x ->
-  (let xx = f x in
-   (xx , x <> b))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
+*)
 
-(6,25)-(6,26)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (6,10)-(6,57)) NonRec [(VarPat (Just (6,15)-(6,16)) "a",Lam (Just (6,17)-(6,51)) (VarPat (Just (6,17)-(6,18)) "x") (Let (Just (6,21)-(6,51)) NonRec [(VarPat (Just (6,25)-(6,27)) "xx",App (Just (6,30)-(6,33)) (Var (Just (6,30)-(6,31)) "f") [Var (Just (6,32)-(6,33)) "x"])] (Tuple (Just (6,37)-(6,51)) [Var (Just (6,38)-(6,40)) "xx",Bop (Just (6,42)-(6,50)) Neq (Var (Just (6,43)-(6,44)) "x") (Var (Just (6,48)-(6,49)) "b")])) Nothing)] (Var (Just (6,55)-(6,56)) "a")
+*)
 
-(6,30)-(6,55)
-EMPTY
-EmptyG
+(* typed spans
+(6,10)-(6,57)
+*)
 
-(6,34)-(6,54)
-EMPTY
-EmptyG
+(* correct types
+'a -> ('a * bool)
+*)
 
-(6,35)-(6,42)
-EMPTY
-EmptyG
-
-(6,36)-(6,37)
-EMPTY
-EmptyG
-
-(6,40)-(6,41)
-EMPTY
-EmptyG
-
-(6,46)-(6,53)
-(xx , x <> b)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
-
-(6,47)-(6,48)
-x <> b
-BopG VarG VarG
-
-(6,58)-(6,59)
-a
-VarG
-
+(* bad types
+('a * bool)
 *)

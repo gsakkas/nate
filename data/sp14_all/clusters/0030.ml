@@ -1,63 +1,18 @@
-LamG (TupleG (fromList [EmptyG]))
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun b'' -> (f b , true)
-fun b'' -> (f b , true)
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun b'' -> (f b , false)
-fun b'' -> (f b , true)
-fun x -> (x * x , x < 100)
-fun x -> (x * x , x < 100)
-fun x -> (x * x , x < 100)
-fun x -> (x * x , x < 100)
-fun x -> (x * x , x < 100)
-fun x -> (x * x , x < 100)
-fun x -> (x * x , x < 100)
-fun x -> (f x , false)
-fun x -> (f x , false)
-fun xx -> (xx , f xx = xx)
-fun b' -> (f b' , f b' = b')
-fun b' -> (f b' , f b' = b')
-fun b' -> (f b' , f b' = b')
-fun b -> (f b , f b = b)
-fun x -> (f x , not (f x = x))
-fun b -> (f b , f b = b)
-fun b -> (b , f b)
-fun b -> (b , f b)
-fun b -> (b , f b)
-fun x -> (f b , b = f b)
-fun x -> (f b , b = f b)
-fun b -> (f b , b = f b)
-fun b -> (f b , b = f b)
-fun b -> (f b , b = f b)
-fun b -> (f b , b = f x)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun b -> (f b , f b = b)
-fun x -> (0 , true)
-fun x -> (0 , true)
-fun x -> (0 , true)
-fun x -> (f b , not (f b = b))
+BopG VarG VarG
+s2 - s1
+s1 - s2
+lenl2 - lenl1
+depth - num
+a + x
+c + x'
+leng2 - leng1
+x * x
+length1 = length2
+length2 - length1
+length2 > length1
+pi *. x
+a * a
+a < b
+b - a
+a * x
+h * i

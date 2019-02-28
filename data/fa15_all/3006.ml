@@ -14,15 +14,26 @@ n <= 0
 BopG VarG LitG
 
 (2,34)-(2,35)
-EMPTY
-EmptyG
-
-(2,41)-(2,76)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (2,55)-(2,56)
 EMPTY
 EmptyG
 
+*)
+
+(* typed spans
+(2,23)-(2,29)
+(2,35)-(2,37)
+*)
+
+(* typed spans
+bool
+'a list
+*)
+
+(* typed spans
+bool
+'a
 *)

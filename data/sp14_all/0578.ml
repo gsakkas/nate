@@ -29,52 +29,20 @@ let y =
 (y , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
-(8,24)-(8,31)
-EMPTY
-EmptyG
+*)
 
-(8,24)-(8,35)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (7,9)-(7,62)) NonRec [(VarPat (Just (7,14)-(7,15)) "y",Lam (Just (7,16)-(7,51)) (VarPat (Just (7,16)-(7,17)) "x") (Let (Just (7,20)-(7,51)) NonRec [(VarPat (Just (7,24)-(7,26)) "xx",App (Just (7,29)-(7,32)) (Var (Just (7,29)-(7,30)) "f") [Var (Just (7,31)-(7,32)) "x"])] (Tuple (Just (7,36)-(7,51)) [Var (Just (7,37)-(7,39)) "xx",Bop (Just (7,41)-(7,50)) Neq (Var (Just (7,42)-(7,44)) "xx") (Var (Just (7,48)-(7,49)) "x")])) Nothing)] (Tuple (Just (7,55)-(7,61)) [Var (Just (7,56)-(7,57)) "y",Var (Just (7,59)-(7,60)) "b"])
+*)
 
-(8,25)-(8,26)
-EMPTY
-EmptyG
+(* typed spans
+(7,9)-(7,62)
+*)
 
-(8,29)-(8,30)
-f x
-AppG (fromList [VarG])
+(* correct types
+('a -> ('a * bool) * 'a)
+*)
 
-(8,34)-(8,35)
-f
-VarG
-
-(8,44)-(8,54)
-xx <> x
-BopG VarG VarG
-
-(8,50)-(8,53)
-EMPTY
-EmptyG
-
-(9,5)-(9,25)
-EMPTY
-EmptyG
-
-(9,6)-(9,21)
-EMPTY
-EmptyG
-
-(9,7)-(9,13)
-x
-VarG
-
-(9,15)-(9,16)
-EMPTY
-EmptyG
-
-(9,18)-(9,19)
-y
-VarG
-
+(* bad types
+(int * 'a)
 *)

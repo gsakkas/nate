@@ -24,3 +24,19 @@ let rec sepConcat sep sl =
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (6,20)-(6,21)) "^"
+*)
+
+(* typed spans
+(6,20)-(6,21)
+*)
+
+(* correct types
+string -> string -> string
+*)
+
+(* bad types
+'a list -> 'a list -> 'a list
+*)

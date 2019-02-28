@@ -64,21 +64,9 @@ fun (t , u) ->
                             else addHelper (t , t') @ [h' + h]
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(16,16)-(16,19)
-EMPTY
-EmptyG
-
 (16,16)-(16,23)
-EMPTY
-EmptyG
-
-(16,17)-(16,18)
 addHelper (a , x)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(16,20)-(16,21)
-EMPTY
-EmptyG
 
 (16,22)-(16,23)
 (a , x)
@@ -89,23 +77,35 @@ x
 VarG
 
 (18,15)-(18,23)
-EMPTY
-EmptyG
-
-(18,16)-(18,18)
-EMPTY
-EmptyG
-
-(18,20)-(18,22)
-EMPTY
-EmptyG
-
-(18,27)-(18,74)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (18,71)-(18,74)
 EMPTY
 EmptyG
 
+*)
+
+(* typed spans
+(4,19)-(13,47)
+(27,16)-(27,32)
+(27,26)-(27,32)
+(27,30)-(27,31)
+(28,32)-(28,34)
+*)
+
+(* typed spans
+(int list * int list) -> int list
+int list
+(int list * int list)
+int list
+int list list
+*)
+
+(* typed spans
+int list -> int list -> (int list * int list)
+'a list
+'a list
+int list
+(int list * int list)
 *)

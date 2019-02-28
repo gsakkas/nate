@@ -55,20 +55,28 @@ match a with
                     | (add1 , add2) -> (((add1 + add2) + carry) / 10 , (((add1 + add2) + carry) mod 10) :: rest)
 CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
 
-(15,46)-(15,72)
-(((add1 + add2) + carry) / 10 , (((add1 + add2) + carry) mod 10) :: rest)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-
-(15,63)-(15,64)
-carry
-VarG
-
-(16,4)-(18,51)
-rest
-VarG
-
 (16,15)-(16,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* changed exprs
+Case (Just (16,6)-(21,61)) (Var (Just (16,12)-(16,13)) "a") [(TuplePat (Just (17,9)-(17,19)) [VarPat (Just (17,9)-(17,14)) "carry",VarPat (Just (17,15)-(17,19)) "rest"],Nothing,Case (Just (18,10)-(21,61)) (Var (Just (18,17)-(18,18)) "x") [(TuplePat (Just (19,14)-(19,23)) [VarPat (Just (19,14)-(19,18)) "add1",VarPat (Just (19,19)-(19,23)) "add2"],Nothing,Tuple (Just (20,15)-(21,60)) [Bop (Just (20,16)-(20,46)) Div (Bop (Just (20,17)-(20,40)) Plus (Bop (Just (20,18)-(20,31)) Plus (Var (Just (20,19)-(20,23)) "add1") (Var (Just (20,26)-(20,30)) "add2")) (Var (Just (20,34)-(20,39)) "carry")) (Lit (Just (20,43)-(20,45)) (LI 10)),ConApp (Just (21,17)-(21,59)) "::" (Just (Tuple (Just (21,18)-(21,58)) [Bop (Just (21,18)-(21,50)) Mod (Bop (Just (21,19)-(21,42)) Plus (Bop (Just (21,20)-(21,33)) Plus (Var (Just (21,21)-(21,25)) "add1") (Var (Just (21,28)-(21,32)) "add2")) (Var (Just (21,36)-(21,41)) "carry")) (Lit (Just (21,47)-(21,49)) (LI 10)),Var (Just (21,54)-(21,58)) "rest"])) Nothing])])]
+Tuple (Just (22,15)-(22,22)) [Lit (Just (22,16)-(22,17)) (LI 0),List (Just (22,19)-(22,21)) [] Nothing]
+*)
+
+(* typed spans
+(16,6)-(21,61)
+(22,15)-(22,22)
+*)
+
+(* correct types
+(int * int list)
+(int * int list)
+*)
+
+(* bad types
+int
+'a list
 *)

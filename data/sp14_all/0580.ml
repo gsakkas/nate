@@ -19,10 +19,6 @@ let fixpoint (f,b) =
 
 (* changed spans
 (6,28)-(6,76)
-EMPTY
-EmptyG
-
-(6,29)-(6,72)
 let y =
   fun x ->
     (let xx = f x in
@@ -30,28 +26,20 @@ let y =
 (y , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
-(6,50)-(6,71)
-let xx = f x in (xx , xx <> x)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
+*)
 
-(6,58)-(6,70)
-(xx , xx <> x)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
+(* changed exprs
+Let (Just (7,9)-(7,62)) NonRec [(VarPat (Just (7,14)-(7,15)) "y",Lam (Just (7,16)-(7,51)) (VarPat (Just (7,16)-(7,17)) "x") (Let (Just (7,20)-(7,51)) NonRec [(VarPat (Just (7,24)-(7,26)) "xx",App (Just (7,29)-(7,32)) (Var (Just (7,29)-(7,30)) "f") [Var (Just (7,31)-(7,32)) "x"])] (Tuple (Just (7,36)-(7,51)) [Var (Just (7,37)-(7,39)) "xx",Bop (Just (7,41)-(7,50)) Neq (Var (Just (7,42)-(7,44)) "xx") (Var (Just (7,48)-(7,49)) "x")])) Nothing)] (Tuple (Just (7,55)-(7,61)) [Var (Just (7,56)-(7,57)) "y",Var (Just (7,59)-(7,60)) "b"])
+*)
 
-(6,59)-(6,64)
-EMPTY
-EmptyG
+(* typed spans
+(7,9)-(7,62)
+*)
 
-(6,60)-(6,61)
-xx
-VarG
+(* correct types
+('a -> ('a * bool) * 'a)
+*)
 
-(6,68)-(6,69)
-(y , b)
-TupleG (fromList [VarG])
-
-(6,74)-(6,75)
-y
-VarG
-
+(* bad types
+('a -> 'b -> ('c * bool) * 'c)
 *)

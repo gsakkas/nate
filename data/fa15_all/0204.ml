@@ -56,39 +56,15 @@ let rec eval (e,x,y) =
 EMPTY
 EmptyG
 
-(11,38)-(11,67)
-EMPTY
-EmptyG
-
-(11,46)-(11,47)
-EMPTY
-EmptyG
-
-(11,49)-(11,50)
-EMPTY
-EmptyG
-
-(11,52)-(11,58)
-EMPTY
-EmptyG
-
-(11,60)-(11,66)
-EMPTY
-EmptyG
-
 (23,28)-(23,39)
-EMPTY
-EmptyG
+eval
+VarG
 
 (23,28)-(23,56)
 if eval (e1 , x , y) < eval (e2 , x , y)
 then eval (e3 , x , y)
 else eval (e4 , x , y)
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(23,40)-(23,56)
-eval
-VarG
 
 (23,41)-(23,43)
 (e1 , x , y)
@@ -106,4 +82,31 @@ AppG (fromList [TupleG (fromList [EmptyG])])
 eval (e4 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
+*)
+
+(* typed spans
+(22,10)-(22,14)
+(22,6)-(24,26)
+(22,15)-(22,25)
+(22,29)-(22,46)
+(23,11)-(23,26)
+(24,11)-(24,26)
+*)
+
+(* typed spans
+(expr * float * float) -> float
+float
+(expr * float * float)
+float
+float
+float
+*)
+
+(* typed spans
+(expr * expr * expr * expr) -> expr
+expr
+expr
+expr
+expr
+expr
 *)

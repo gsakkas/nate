@@ -38,3 +38,19 @@ l = lr
 BopG VarG VarG
 
 *)
+
+(* changed exprs
+Bop (Just (14,31)-(14,37)) Eq (Var (Just (14,31)-(14,32)) "l") (Var (Just (14,35)-(14,37)) "lr")
+*)
+
+(* typed spans
+(14,31)-(14,37)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+char list list
+*)

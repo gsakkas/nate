@@ -36,15 +36,31 @@ let rec additivePersistence n =
 
 (* changed spans
 (10,8)-(10,11)
-EMPTY
-EmptyG
-
-(10,9)-(10,10)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (15,24)-(15,27)
-EMPTY
-EmptyG
+x
+VarG
 
+*)
+
+(* changed exprs
+List (Just (10,8)-(10,10)) [] Nothing
+Var (Just (15,24)-(15,25)) "x"
+*)
+
+(* typed spans
+(10,8)-(10,10)
+(15,24)-(15,25)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+int list
+int list list
 *)

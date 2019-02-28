@@ -105,6 +105,22 @@ let rec mulByDigit i l = helper [0] i l;;
 (* changed spans
 (49,32)-(49,33)
 [0]
-ListG LitG Nothing
+ListG LitG
 
+*)
+
+(* changed exprs
+List (Just (49,32)-(49,35)) [Lit (Just (49,33)-(49,34)) (LI 0)] Nothing
+*)
+
+(* typed spans
+(49,32)-(49,35)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

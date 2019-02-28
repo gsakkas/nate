@@ -182,7 +182,7 @@ EmptyG
 
 (22,11)-(22,12)
 (val2 , val1 :: a2)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG])))])
 
 (22,11)-(22,34)
 EMPTY
@@ -226,4 +226,15 @@ EmptyG
 EMPTY
 EmptyG
 
+*)
+
+(* typed spans
+(int * int list)
+(int * int list)
+(int * int list)
+int
+(int * int list)
+(int * int list)
+int
+int list
 *)

@@ -60,40 +60,28 @@ match a with
 | (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(21,23)-(21,30)
-EMPTY
-EmptyG
-
-(21,33)-(21,34)
-EMPTY
-EmptyG
-
-(21,43)-(21,65)
-((w + z) mod 10) :: y
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing
-
-(21,45)-(21,52)
-EMPTY
-EmptyG
-
-(21,50)-(21,51)
-EMPTY
-EmptyG
-
-(22,14)-(22,20)
-EMPTY
-EmptyG
-
-(22,15)-(22,16)
-EMPTY
-EmptyG
-
-(22,18)-(22,19)
-y
-VarG
-
 (23,19)-(23,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+Case (Just (20,6)-(20,71)) (Var (Just (20,12)-(20,13)) "a") [(TuplePat (Just (20,22)-(20,25)) [VarPat (Just (20,22)-(20,23)) "w",VarPat (Just (20,24)-(20,25)) "y"],Nothing,Tuple (Just (20,30)-(20,71)) [Bop (Just (20,31)-(20,45)) Div (Bop (Just (20,32)-(20,39)) Plus (Var (Just (20,33)-(20,34)) "w") (Var (Just (20,37)-(20,38)) "z")) (Lit (Just (20,42)-(20,44)) (LI 10)),ConApp (Just (20,47)-(20,70)) "::" (Just (Tuple (Just (20,48)-(20,69)) [Bop (Just (20,48)-(20,64)) Mod (Bop (Just (20,49)-(20,56)) Plus (Var (Just (20,50)-(20,51)) "w") (Var (Just (20,54)-(20,55)) "z")) (Lit (Just (20,61)-(20,63)) (LI 10)),Var (Just (20,68)-(20,69)) "y"])) Nothing])]
+List (Just (21,19)-(21,21)) [] Nothing
+*)
+
+(* typed spans
+(20,6)-(20,71)
+(21,19)-(21,21)
+*)
+
+(* correct types
+(int * int list)
+int list
+*)
+
+(* bad types
+(int * int)
+int
 *)

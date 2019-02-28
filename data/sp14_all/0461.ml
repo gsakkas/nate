@@ -42,3 +42,19 @@ converted
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (16,30)-(16,39)) "converted"
+*)
+
+(* typed spans
+(16,30)-(16,39)
+*)
+
+(* correct types
+char list
+*)
+
+(* bad types
+string
+*)

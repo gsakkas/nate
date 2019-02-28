@@ -55,15 +55,11 @@ let bigAdd l1 l2 =
 (* changed spans
 (19,15)-(19,38)
 (((x1 + x2) + a1) - 10) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
-(20,11)-(20,32)
-a2
-VarG
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG])))
 
 (20,15)-(20,31)
 ((x1 + x2) + a1) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG])))
 
 (21,4)-(23,51)
 a2
@@ -71,6 +67,34 @@ VarG
 
 (21,19)-(21,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+ConApp (Just (19,15)-(19,46)) "::" (Just (Tuple (Just (19,16)-(19,45)) [Bop (Just (19,16)-(19,39)) Minus (Bop (Just (19,17)-(19,33)) Plus (Bop (Just (19,18)-(19,27)) Plus (Var (Just (19,19)-(19,21)) "x1") (Var (Just (19,24)-(19,26)) "x2")) (Var (Just (19,30)-(19,32)) "a1")) (Lit (Just (19,36)-(19,38)) (LI 10)),Var (Just (19,43)-(19,45)) "a2"])) Nothing
+ConApp (Just (20,15)-(20,39)) "::" (Just (Tuple (Just (20,16)-(20,38)) [Bop (Just (20,16)-(20,32)) Plus (Bop (Just (20,17)-(20,26)) Plus (Var (Just (20,18)-(20,20)) "x1") (Var (Just (20,23)-(20,25)) "x2")) (Var (Just (20,29)-(20,31)) "a1"),Var (Just (20,36)-(20,38)) "a2"])) Nothing
+Var (Just (20,36)-(20,38)) "a2"
+List (Just (21,19)-(21,21)) [] Nothing
+*)
+
+(* typed spans
+(19,15)-(19,46)
+(20,15)-(20,39)
+(20,36)-(20,38)
+(21,19)-(21,21)
+*)
+
+(* correct types
+int list
+int list
+int list
+int list
+*)
+
+(* bad types
+int
+int
+int
+int
 *)

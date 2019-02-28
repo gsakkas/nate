@@ -105,10 +105,30 @@ let rec build (rand,depth) =
 (* changed spans
 (14,18)-(14,43)
 fun e -> Abs e
-LamG (ConAppG (Just VarG) Nothing)
+LamG (ConAppG (Just VarG))
 
 (48,14)-(48,17)
 buildAbs
 VarG
 
+*)
+
+(* changed exprs
+Lam (Just (14,13)-(14,22)) (VarPat (Just (14,13)-(14,14)) "e") (ConApp (Just (14,17)-(14,22)) "Abs" (Just (Var (Just (14,21)-(14,22)) "e")) Nothing) Nothing
+Var (Just (50,14)-(50,22)) "buildAbs"
+*)
+
+(* typed spans
+(14,13)-(14,22)
+(50,14)-(50,22)
+*)
+
+(* correct types
+expr -> expr
+expr -> expr
+*)
+
+(* bad types
+(expr * expr) -> expr
+int -> int
 *)

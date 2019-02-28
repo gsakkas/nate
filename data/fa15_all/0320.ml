@@ -90,80 +90,44 @@ let accumulate =
              multed)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(34,4)-(34,62)
-let multed =
-  mulByDigit x l1 in
-let accumulate =
-  List.append accumulate [0] in
-(l1 , bigAdd accumulate
-             multed)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(34,20)-(34,21)
-mulByDigit
-VarG
-
-(34,22)-(34,23)
-EMPTY
-EmptyG
-
-(34,24)-(34,25)
-let accumulate =
-  List.append accumulate [0] in
-(l1 , bigAdd accumulate
-             multed)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-
-(34,30)-(34,39)
-EMPTY
-EmptyG
-
-(34,31)-(34,34)
-EMPTY
-EmptyG
-
-(34,37)-(34,38)
+(35,14)-(35,15)
 l1
-VarG
-
-(34,49)-(34,58)
-EMPTY
-EmptyG
-
-(34,59)-(34,60)
-accumulate
-VarG
-
-(35,2)-(37,49)
-multed
 VarG
 
 (35,14)-(35,15)
 [0]
-ListG LitG Nothing
-
-(35,17)-(35,19)
-EMPTY
-EmptyG
-
-(36,13)-(36,21)
-EMPTY
-EmptyG
+ListG LitG
 
 (36,13)-(36,37)
-EMPTY
-EmptyG
-
-(36,22)-(36,37)
-EMPTY
-EmptyG
-
-(36,23)-(36,33)
-EMPTY
-EmptyG
-
-(36,34)-(36,36)
 l2
 VarG
 
+*)
+
+(* changed exprs
+Let (Just (33,4)-(36,36)) NonRec [(TuplePat (Just (33,9)-(33,22)) [VarPat (Just (33,9)-(33,11)) "ll",VarPat (Just (33,12)-(33,22)) "accumulate"],Var (Just (33,26)-(33,27)) "a")] (Let (Just (34,4)-(36,36)) NonRec [(VarPat (Just (34,8)-(34,14)) "multed",App (Just (34,17)-(34,32)) (Var (Just (34,17)-(34,27)) "mulByDigit") [Var (Just (34,28)-(34,29)) "x",Var (Just (34,30)-(34,32)) "l1"])] (Let (Just (35,4)-(36,36)) NonRec [(VarPat (Just (35,8)-(35,18)) "accumulate",App (Just (35,21)-(35,47)) (Var (Just (35,21)-(35,32)) "List.append") [Var (Just (35,33)-(35,43)) "accumulate",List (Just (35,44)-(35,47)) [Lit (Just (35,45)-(35,46)) (LI 0)] Nothing])] (Tuple (Just (36,4)-(36,36)) [Var (Just (36,5)-(36,7)) "l1",App (Just (36,9)-(36,35)) (Var (Just (36,10)-(36,16)) "bigAdd") [Var (Just (36,17)-(36,27)) "accumulate",Var (Just (36,28)-(36,34)) "multed"]])))
+Var (Just (37,14)-(37,16)) "l1"
+List (Just (37,18)-(37,21)) [Lit (Just (37,19)-(37,20)) (LI 0)] Nothing
+Var (Just (38,13)-(38,15)) "l2"
+*)
+
+(* typed spans
+(33,4)-(36,36)
+(37,14)-(37,16)
+(37,18)-(37,21)
+(38,13)-(38,15)
+*)
+
+(* correct types
+(int list * int list)
+int list
+int list
+int list
+*)
+
+(* bad types
+(int * int list)
+int
+int
+int list list -> int list list
 *)

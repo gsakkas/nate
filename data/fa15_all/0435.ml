@@ -23,8 +23,13 @@ let fixpoint (f,b) =
 EMPTY
 EmptyG
 
-(7,26)-(7,31)
-EMPTY
-EmptyG
+*)
 
+(* typed spans
+*)
+
+(* typed spans
+*)
+
+(* typed spans
 *)

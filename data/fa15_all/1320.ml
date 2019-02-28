@@ -15,10 +15,6 @@ let pipe fs =
 EMPTY
 EmptyG
 
-(3,20)-(3,25)
-EMPTY
-EmptyG
-
 (3,23)-(3,24)
 a f'
 AppG (fromList [VarG])
@@ -27,4 +23,19 @@ AppG (fromList [VarG])
 f'
 VarG
 
+*)
+
+(* typed spans
+(3,19)-(3,25)
+(3,22)-(3,24)
+*)
+
+(* typed spans
+'a
+'a
+*)
+
+(* typed spans
+('a -> 'b) -> 'b
+'a
 *)

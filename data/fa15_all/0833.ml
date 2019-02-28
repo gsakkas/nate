@@ -22,3 +22,19 @@ let rec additivePersistence n = if lt10 n then count else 8;;
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (6,58)-(6,59)) (LI 8)
+*)
+
+(* typed spans
+(6,58)-(6,59)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+unit
+*)

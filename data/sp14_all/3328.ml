@@ -18,7 +18,23 @@ let rec mulByDigit i l =
 
 (* changed spans
 (6,51)-(6,59)
-EMPTY
-EmptyG
+x * 10
+BopG VarG LitG
 
+*)
+
+(* changed exprs
+Bop (Just (6,51)-(6,57)) Times (Var (Just (6,51)-(6,52)) "x") (Lit (Just (6,55)-(6,57)) (LI 10))
+*)
+
+(* typed spans
+(6,51)-(6,57)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int list
 *)

@@ -59,3 +59,19 @@ float_of_int 2
 AppG (fromList [LitG])
 
 *)
+
+(* changed exprs
+App (Just (20,50)-(20,66)) (Var (Just (20,51)-(20,63)) "float_of_int") [Lit (Just (20,64)-(20,65)) (LI 2)]
+*)
+
+(* typed spans
+(20,50)-(20,66)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

@@ -27,3 +27,21 @@ digitsOfInt (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
 
 *)
+
+(* typed spans
+(3,2)-(3,73)
+(3,33)-(3,51)
+(3,53)-(3,73)
+*)
+
+(* typed spans
+'a
+unit
+'a
+*)
+
+(* typed spans
+unit
+unit
+int
+*)

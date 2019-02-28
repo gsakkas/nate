@@ -19,23 +19,23 @@ let fixpoint (f,b) = wwhile (let n x = ((f x), (x = (f x))) in (n, b));;
 
 (* changed spans
 (7,20)-(7,52)
-EMPTY
-EmptyG
+(f x , x = f x)
+TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(7,29)-(7,30)
-EMPTY
-EmptyG
+*)
 
-(7,35)-(7,37)
-f x
-AppG (fromList [VarG])
+(* changed exprs
+Tuple (Just (6,39)-(6,59)) [App (Just (6,40)-(6,45)) (Var (Just (6,41)-(6,42)) "f") [Var (Just (6,43)-(6,44)) "x"],Bop (Just (6,47)-(6,58)) Eq (Var (Just (6,48)-(6,49)) "x") (App (Just (6,52)-(6,57)) (Var (Just (6,53)-(6,54)) "f") [Var (Just (6,55)-(6,56)) "x"])]
+*)
 
-(7,39)-(7,51)
-x
-VarG
+(* typed spans
+(6,39)-(6,59)
+*)
 
-(7,45)-(7,47)
-f
-VarG
+(* correct types
+('a * bool)
+*)
 
+(* bad types
+('a -> 'a * bool)
 *)

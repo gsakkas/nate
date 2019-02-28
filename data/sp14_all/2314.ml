@@ -50,16 +50,24 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,16)-(19,48)
-EMPTY
-EmptyG
-
-(19,31)-(19,32)
-EMPTY
-EmptyG
-
-(19,36)-(19,48)
 let (h :: t , _) = a in
 ([] , [])
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
+*)
+
+(* changed exprs
+Let (Just (19,16)-(19,44)) NonRec [(TuplePat (Just (19,21)-(19,27)) [ConsPat (Just (19,21)-(19,25)) (VarPat (Just (19,21)-(19,22)) "h") (VarPat (Just (19,24)-(19,25)) "t"),WildPat (Just (19,26)-(19,27))],Var (Just (19,31)-(19,32)) "a")] (Tuple (Just (19,36)-(19,44)) [List (Just (19,37)-(19,39)) [] Nothing,List (Just (19,41)-(19,43)) [] Nothing])
+*)
+
+(* typed spans
+(19,16)-(19,44)
+*)
+
+(* correct types
+(int list * int list)
+*)
+
+(* bad types
+bool
 *)

@@ -12,11 +12,23 @@ let rec sumList xs =
 
 (* changed spans
 (3,5)-(3,17)
-EMPTY
-EmptyG
+xs
+VarG
 
-(3,6)-(3,13)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (3,5)-(3,7)) "xs"
+*)
+
+(* typed spans
+(3,5)-(3,7)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
 *)

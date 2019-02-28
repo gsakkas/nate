@@ -35,14 +35,6 @@ let rec additivePersistence n =
 
 (* changed spans
 (11,2)-(14,20)
-EMPTY
-EmptyG
-
-(11,14)-(11,17)
-EMPTY
-EmptyG
-
-(11,15)-(11,16)
 let x = 1 in
 (x + 1;
 if sumList (digitsOfInt n) > 9
@@ -50,39 +42,20 @@ then additivePersistence (sumList (digitsOfInt n))
 else x)
 LetG NonRec (fromList [LitG]) (SeqG EmptyG EmptyG)
 
-(12,2)-(14,20)
-x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x
-SeqG (BopG EmptyG EmptyG) (IteG EmptyG EmptyG EmptyG)
+*)
 
-(13,7)-(13,8)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (11,2)-(15,8)) NonRec [(VarPat (Just (11,6)-(11,7)) "x",Lit (Just (11,10)-(11,11)) (LI 1))] (Seq (Just (12,2)-(15,8)) (Bop (Just (12,2)-(12,7)) Plus (Var (Just (12,2)-(12,3)) "x") (Lit (Just (12,6)-(12,7)) (LI 1))) (Ite (Just (13,2)-(15,8)) (Bop (Just (13,5)-(13,34)) Gt (App (Just (13,5)-(13,30)) (Var (Just (13,6)-(13,13)) "sumList") [App (Just (13,14)-(13,29)) (Var (Just (13,15)-(13,26)) "digitsOfInt") [Var (Just (13,27)-(13,28)) "n"]]) (Lit (Just (13,33)-(13,34)) (LI 9))) (App (Just (14,7)-(14,52)) (Var (Just (14,7)-(14,26)) "additivePersistence") [App (Just (14,27)-(14,52)) (Var (Just (14,28)-(14,35)) "sumList") [App (Just (14,36)-(14,51)) (Var (Just (14,37)-(14,48)) "digitsOfInt") [Var (Just (14,49)-(14,50)) "n"]]]) (Var (Just (15,7)-(15,8)) "x")))
+*)
 
-(13,7)-(13,65)
-EMPTY
-EmptyG
+(* typed spans
+(11,2)-(15,8)
+*)
 
-(13,12)-(13,65)
-EMPTY
-EmptyG
+(* correct types
+int
+*)
 
-(13,13)-(13,18)
-additivePersistence (sumList (digitsOfInt n))
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(14,7)-(14,14)
-EMPTY
-EmptyG
-
-(14,7)-(14,20)
-EMPTY
-EmptyG
-
-(14,15)-(14,20)
-x
-VarG
-
+(* bad types
+int
 *)

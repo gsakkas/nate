@@ -25,20 +25,20 @@ let fixpoint (f,b) =
 (xx , xx = x)
 TupleG (fromList [VarG,BopG EmptyG EmptyG])
 
-(8,44)-(8,56)
-xx
-VarG
+*)
 
-(8,60)-(8,61)
-EMPTY
-EmptyG
+(* changed exprs
+Tuple (Just (7,29)-(7,43)) [Var (Just (7,30)-(7,32)) "xx",Bop (Just (7,34)-(7,42)) Eq (Var (Just (7,35)-(7,37)) "xx") (Var (Just (7,40)-(7,41)) "x")]
+*)
 
-(8,69)-(8,70)
-xx = x
-BopG VarG VarG
+(* typed spans
+(7,29)-(7,43)
+*)
 
-(8,69)-(8,72)
-EMPTY
-EmptyG
+(* correct types
+('a * bool)
+*)
 
+(* bad types
+int
 *)

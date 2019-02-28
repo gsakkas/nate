@@ -20,3 +20,15 @@ x
 VarG
 
 *)
+
+(* typed spans
+(3,28)-(3,29)
+*)
+
+(* typed spans
+'a -> 'a
+*)
+
+(* typed spans
+'a
+*)

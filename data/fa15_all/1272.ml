@@ -32,10 +32,16 @@ VarG
 
 (7,18)-(7,44)
 listReverse tail @ [head]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
 (7,40)-(7,44)
 [head]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* typed spans
+'t11 list -> 't11 list -> 't11 list
+'t11 list
+'t11 list
 *)

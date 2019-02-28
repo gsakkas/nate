@@ -74,19 +74,47 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (26,23)-(26,42)
-EMPTY
-EmptyG
-
-(26,33)-(26,35)
-h1 :: t1
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+List.rev (h1 :: t1)
+AppG (fromList [ConAppG (Just (TupleG (fromList [VarG])))])
 
 (29,23)-(29,42)
-EMPTY
-EmptyG
+List.rev (h1 :: t1)
+AppG (fromList [ConAppG (Just (TupleG (fromList [VarG])))])
 
-(29,33)-(29,35)
+(29,23)-(29,42)
+List.rev
+VarG
+
+(29,23)-(29,42)
 h1 :: t1
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG])))
 
+*)
+
+(* changed exprs
+App (Just (26,23)-(26,42)) (Var (Just (26,23)-(26,31)) "List.rev") [ConApp (Just (26,32)-(26,42)) "::" (Just (Tuple (Just (26,33)-(26,41)) [Var (Just (26,33)-(26,35)) "h1",Var (Just (26,39)-(26,41)) "t1"])) Nothing]
+App (Just (29,23)-(29,42)) (Var (Just (29,23)-(29,31)) "List.rev") [ConApp (Just (29,32)-(29,42)) "::" (Just (Tuple (Just (29,33)-(29,41)) [Var (Just (29,33)-(29,35)) "h1",Var (Just (29,39)-(29,41)) "t1"])) Nothing]
+Var (Just (29,23)-(29,31)) "List.rev"
+ConApp (Just (29,32)-(29,42)) "::" (Just (Tuple (Just (29,33)-(29,41)) [Var (Just (29,33)-(29,35)) "h1",Var (Just (29,39)-(29,41)) "t1"])) Nothing
+*)
+
+(* typed spans
+(26,23)-(26,42)
+(29,23)-(29,42)
+(29,23)-(29,31)
+(29,32)-(29,42)
+*)
+
+(* correct types
+int list
+int list
+int list -> int list
+int list
+*)
+
+(* bad types
+'a list list
+'a list list
+'a list list
+'a list list
 *)

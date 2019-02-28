@@ -1,5 +1,6 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
-let explosion = explode w in
-if explosion = listReverse explosion
-then true
-else false
+IteG (BopG EmptyG EmptyG) (ListG EmptyG) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+if n < 0
+then []
+else (match n with
+      | 0 -> [0]
+      | _ -> digitsOfInt (n / 10) @ [n mod 10])

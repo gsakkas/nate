@@ -72,3 +72,23 @@ VarG
 LitG
 
 *)
+
+(* changed exprs
+Var (Just (24,16)-(24,18)) "b1"
+Lit (Just (26,16)-(26,17)) (LI 0)
+*)
+
+(* typed spans
+(24,16)-(24,18)
+(26,16)-(26,17)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+'a list
+string
+*)

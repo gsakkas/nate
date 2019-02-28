@@ -16,18 +16,6 @@ let rec assoc (d,k,l) =
 
 (* changed spans
 (3,2)-(5,11)
-EMPTY
-EmptyG
-
-(3,8)-(3,17)
-EMPTY
-EmptyG
-
-(3,9)-(3,10)
-EMPTY
-EmptyG
-
-(3,12)-(3,13)
 match l with
 | (ki , vi) :: t -> if k = ki
                     then vi
@@ -35,16 +23,20 @@ match l with
 | [] -> d
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
-(4,23)-(4,26)
-EMPTY
-EmptyG
+*)
 
-(4,36)-(4,39)
-ki
-VarG
+(* changed exprs
+Case (Just (3,2)-(5,11)) (Var (Just (3,8)-(3,9)) "l") [(ConsPat (Just (4,5)-(4,14)) (TuplePat (Just (4,5)-(4,10)) [VarPat (Just (4,5)-(4,7)) "ki",VarPat (Just (4,8)-(4,10)) "vi"]) (VarPat (Just (4,13)-(4,14)) "t"),Nothing,Ite (Just (4,18)-(4,56)) (Bop (Just (4,21)-(4,27)) Eq (Var (Just (4,21)-(4,22)) "k") (Var (Just (4,25)-(4,27)) "ki")) (Var (Just (4,33)-(4,35)) "vi") (App (Just (4,41)-(4,56)) (Var (Just (4,41)-(4,46)) "assoc") [Tuple (Just (4,47)-(4,56)) [Var (Just (4,48)-(4,49)) "d",Var (Just (4,51)-(4,52)) "k",Var (Just (4,54)-(4,55)) "t"]])),(ConPat (Just (5,4)-(5,6)) "[]" Nothing,Nothing,Var (Just (5,10)-(5,11)) "d")]
+*)
 
-(4,45)-(4,60)
-vi
-VarG
+(* typed spans
+(3,2)-(5,11)
+*)
 
+(* correct types
+'a
+*)
+
+(* bad types
+'a
 *)

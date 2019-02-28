@@ -55,3 +55,9 @@ else true
 IteG (BopG EmptyG EmptyG) LitG LitG
 
 *)
+
+(* typed spans
+'t27
+('t27 -> ('t27 * bool) * 't27)
+bool
+*)

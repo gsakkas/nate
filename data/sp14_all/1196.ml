@@ -82,26 +82,18 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (33,15)-(33,31)
-EMPTY
-EmptyG
-
-(33,16)-(33,24)
-EMPTY
-EmptyG
+list1
+VarG
 
 (33,33)-(33,49)
-EMPTY
-EmptyG
+list2
+VarG
 
-(33,34)-(33,42)
-EMPTY
-EmptyG
-
-(36,11)-(36,13)
+(36,6)-(36,10)
 List.rev l1
 AppG (fromList [VarG])
 
-(36,14)-(36,16)
+(36,11)-(36,13)
 List.rev l2
 AppG (fromList [VarG])
 
@@ -109,4 +101,36 @@ AppG (fromList [VarG])
 res
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (33,15)-(33,20)) "list1"
+Var (Just (33,22)-(33,27)) "list2"
+App (Just (36,11)-(36,24)) (Var (Just (36,12)-(36,20)) "List.rev") [Var (Just (36,21)-(36,23)) "l1"]
+App (Just (36,25)-(36,38)) (Var (Just (36,26)-(36,34)) "List.rev") [Var (Just (36,35)-(36,37)) "l2"]
+Var (Just (37,48)-(37,51)) "res"
+*)
+
+(* typed spans
+(33,15)-(33,20)
+(33,22)-(33,27)
+(36,11)-(36,24)
+(36,25)-(36,38)
+(37,48)-(37,51)
+*)
+
+(* correct types
+int list
+int list
+int list
+int list
+int list
+*)
+
+(* bad types
+int list
+int list
+int list -> int list -> (int * int) list
+int list
+(int * int) list
 *)

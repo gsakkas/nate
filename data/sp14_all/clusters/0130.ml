@@ -1,21 +1,3 @@
-LetG NonRec (fromList [LitG]) (SeqG EmptyG EmptyG)
-let x = 1 in
-(x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x)
-let x = 1 in
-(x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x)
-let x = 1 in
-(x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x)
-let x = 1 in
-(x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x)
+LetG NonRec (fromList [VarG]) (BopG EmptyG EmptyG)
+let x :: t = xs in
+x + sumList t

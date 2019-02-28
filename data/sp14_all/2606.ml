@@ -76,3 +76,27 @@ b1
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (24,16)-(24,18)) "b1"
+Bop (Just (25,16)-(25,41)) Plus (Bop (Just (25,17)-(25,35)) Div (Bop (Just (25,18)-(25,29)) Plus (Var (Just (25,19)-(25,22)) "fir") (Var (Just (25,25)-(25,28)) "sec")) (Lit (Just (25,32)-(25,34)) (LI 10))) (Var (Just (25,38)-(25,40)) "b1")
+Var (Just (25,38)-(25,40)) "b1"
+*)
+
+(* typed spans
+(24,16)-(24,18)
+(25,16)-(25,41)
+(25,38)-(25,40)
+*)
+
+(* correct types
+int
+int
+int
+*)
+
+(* bad types
+'a list
+int
+int list
+*)

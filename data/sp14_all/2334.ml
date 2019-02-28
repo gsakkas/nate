@@ -75,30 +75,34 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(34,19)-(34,29)
+(34,19)-(34,54)
 helper (x - 1) l (bigAdd l
                          accum)
 AppG (fromList [VarG,AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-
-(34,19)-(34,54)
-EMPTY
-EmptyG
-
-(34,27)-(34,28)
-x - 1
-BopG VarG LitG
-
-(34,32)-(34,54)
-EMPTY
-EmptyG
 
 (35,2)-(35,31)
 mulByDigit i (helper i l
                      accum)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(35,13)-(35,31)
-i
-VarG
+*)
 
+(* changed exprs
+App (Just (34,19)-(34,52)) (Var (Just (34,19)-(34,25)) "helper") [Bop (Just (34,26)-(34,33)) Minus (Var (Just (34,27)-(34,28)) "x") (Lit (Just (34,31)-(34,32)) (LI 1)),Var (Just (34,34)-(34,35)) "l",App (Just (34,36)-(34,52)) (Var (Just (34,37)-(34,43)) "bigAdd") [Var (Just (34,44)-(34,45)) "l",Var (Just (34,46)-(34,51)) "accum"]]
+App (Just (35,2)-(35,33)) (Var (Just (35,2)-(35,12)) "mulByDigit") [Var (Just (35,13)-(35,14)) "i",App (Just (35,15)-(35,33)) (Var (Just (35,16)-(35,22)) "helper") [Var (Just (35,23)-(35,24)) "i",Var (Just (35,25)-(35,26)) "l",Var (Just (35,27)-(35,32)) "accum"]]
+*)
+
+(* typed spans
+(34,19)-(34,52)
+(35,2)-(35,33)
+*)
+
+(* correct types
+int list
+'a
+*)
+
+(* bad types
+int
+'a
 *)

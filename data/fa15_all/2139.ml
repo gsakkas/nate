@@ -56,10 +56,6 @@ let rec exprToString e =
 EMPTY
 EmptyG
 
-(12,10)-(12,22)
-EMPTY
-EmptyG
-
 (16,28)-(16,29)
 exprToString
 VarG
@@ -100,4 +96,43 @@ VarG
 exprToString
 VarG
 
+*)
+
+(* typed spans
+(15,28)-(15,40)
+(16,30)-(16,42)
+(18,15)-(18,27)
+(18,42)-(18,54)
+(19,20)-(19,32)
+(19,46)-(19,58)
+(22,10)-(22,22)
+(24,16)-(24,28)
+(25,26)-(25,38)
+(25,53)-(25,65)
+*)
+
+(* typed spans
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+*)
+
+(* typed spans
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
 *)

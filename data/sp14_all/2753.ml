@@ -24,3 +24,19 @@ sl
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (6,34)-(6,36)) "sl"
+*)
+
+(* typed spans
+(6,34)-(6,36)
+*)
+
+(* correct types
+string list
+*)
+
+(* bad types
+unit
+*)

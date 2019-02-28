@@ -15,16 +15,20 @@ x + (if t = []
      else sumList t)
 BopG VarG (IteG EmptyG EmptyG EmptyG)
 
-(2,41)-(2,48)
-t = []
-BopG VarG (ListG EmptyG Nothing)
+*)
 
-(2,54)-(2,55)
-0
-LitG
+(* changed exprs
+Bop (Just (2,38)-(2,75)) Plus (Var (Just (2,38)-(2,39)) "x") (Ite (Just (2,42)-(2,75)) (Bop (Just (2,46)-(2,52)) Eq (Var (Just (2,46)-(2,47)) "t") (List (Just (2,50)-(2,52)) [] Nothing)) (Lit (Just (2,58)-(2,59)) (LI 0)) (App (Just (2,65)-(2,74)) (Var (Just (2,65)-(2,72)) "sumList") [Var (Just (2,73)-(2,74)) "t"]))
+*)
 
-(2,54)-(2,69)
-EMPTY
-EmptyG
+(* typed spans
+(2,38)-(2,75)
+*)
 
+(* correct types
+int
+*)
+
+(* bad types
+unit
 *)

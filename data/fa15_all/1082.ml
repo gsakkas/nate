@@ -28,3 +28,23 @@ VarG
 LitG
 
 *)
+
+(* changed exprs
+Var (Just (6,29)-(6,30)) "x"
+Lit (Just (7,17)-(7,19)) (LS "")
+*)
+
+(* typed spans
+(6,29)-(6,30)
+(7,17)-(7,19)
+*)
+
+(* correct types
+string
+string
+*)
+
+(* bad types
+string list
+string
+*)

@@ -13,8 +13,20 @@ let pipe fs = let f a x a = a in let base x = x in List.fold_left f base fs;;
 fun x -> x
 LamG VarG
 
-(2,49)-(2,73)
-x
-VarG
+*)
 
+(* changed exprs
+Lam (Just (2,42)-(2,47)) (VarPat (Just (2,42)-(2,43)) "x") (Var (Just (2,46)-(2,47)) "x") Nothing
+*)
+
+(* typed spans
+(2,42)-(2,47)
+*)
+
+(* correct types
+'a -> 'a
+*)
+
+(* bad types
+int
 *)

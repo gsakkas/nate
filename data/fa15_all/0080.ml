@@ -28,20 +28,20 @@ let foo =
 wwhile (foo , b)
 LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 
-(5,41)-(5,42)
-(result , false)
-TupleG (fromList [VarG,LitG])
+*)
 
-(5,48)-(5,66)
-(result , true)
-TupleG (fromList [VarG,LitG])
+(* changed exprs
+Let (Just (5,2)-(8,17)) NonRec [(VarPat (Just (5,6)-(5,9)) "foo",Lam (Just (5,10)-(7,58)) (VarPat (Just (5,10)-(5,11)) "b") (Let (Just (6,4)-(7,58)) NonRec [(VarPat (Just (6,8)-(6,14)) "result",App (Just (6,17)-(6,20)) (Var (Just (6,17)-(6,18)) "f") [Var (Just (6,19)-(6,20)) "b"])] (Ite (Just (7,4)-(7,58)) (Bop (Just (7,7)-(7,17)) Eq (Var (Just (7,7)-(7,13)) "result") (Var (Just (7,16)-(7,17)) "b")) (Tuple (Just (7,23)-(7,38)) [Var (Just (7,24)-(7,30)) "result",Lit (Just (7,32)-(7,37)) (LB False)]) (Tuple (Just (7,44)-(7,58)) [Var (Just (7,45)-(7,51)) "result",Lit (Just (7,53)-(7,57)) (LB True)]))) Nothing)] (App (Just (8,2)-(8,17)) (Var (Just (8,2)-(8,8)) "wwhile") [Tuple (Just (8,9)-(8,17)) [Var (Just (8,10)-(8,13)) "foo",Var (Just (8,15)-(8,16)) "b"]])
+*)
 
-(5,56)-(5,57)
-EMPTY
-EmptyG
+(* typed spans
+(5,2)-(8,17)
+*)
 
-(5,59)-(5,65)
-foo
-VarG
+(* correct types
+'a
+*)
 
+(* bad types
+'a
 *)

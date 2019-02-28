@@ -80,54 +80,36 @@ else (let tens =
       ([tens] , tens :: (ones :: res)))
 IteG (BopG EmptyG EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(22,17)-(22,41)
-((x1 + x2) + ch) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(22,29)-(22,41)
-EMPTY
-EmptyG
-
-(22,30)-(22,35)
-ch
-VarG
-
-(23,17)-(23,43)
-((x1 + x2) + ch) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(23,29)-(23,43)
-let tens = (x1 + x2) / 10 in
-let ones = (x1 + x2) mod 10 in
-([tens] , tens :: (ones :: res))
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(23,30)-(23,35)
-x1 + x2
-BopG VarG VarG
-
-(23,40)-(23,42)
-x2
-VarG
-
-(25,16)-(25,19)
-EMPTY
-EmptyG
-
-(25,17)-(25,18)
-EMPTY
-EmptyG
-
 (25,21)-(25,24)
-EMPTY
-EmptyG
-
-(25,22)-(25,23)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (26,4)-(27,51)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+Ite (Just (22,6)-(29,72)) (Bop (Just (22,9)-(22,20)) Neq (Var (Just (22,9)-(22,14)) "carry") (List (Just (22,18)-(22,20)) [] Nothing)) (Let (Just (24,8)-(26,77)) NonRec [(ConsPat (Just (24,12)-(24,17)) (VarPat (Just (24,12)-(24,14)) "ch") (WildPat (Just (24,16)-(24,17))),Var (Just (24,20)-(24,25)) "carry")] (Let (Just (25,8)-(26,77)) NonRec [(VarPat (Just (25,12)-(25,16)) "tens",Bop (Just (25,19)-(25,40)) Div (Bop (Just (25,19)-(25,35)) Plus (Bop (Just (25,20)-(25,29)) Plus (Var (Just (25,21)-(25,23)) "x1") (Var (Just (25,26)-(25,28)) "x2")) (Var (Just (25,32)-(25,34)) "ch")) (Lit (Just (25,38)-(25,40)) (LI 10)))] (Let (Just (26,8)-(26,77)) NonRec [(VarPat (Just (26,12)-(26,16)) "ones",Bop (Just (26,19)-(26,42)) Mod (Bop (Just (26,19)-(26,35)) Plus (Bop (Just (26,20)-(26,29)) Plus (Var (Just (26,21)-(26,23)) "x1") (Var (Just (26,26)-(26,28)) "x2")) (Var (Just (26,32)-(26,34)) "ch")) (Lit (Just (26,40)-(26,42)) (LI 10)))] (Tuple (Just (26,46)-(26,77)) [List (Just (26,47)-(26,53)) [Var (Just (26,48)-(26,52)) "tens"] Nothing,ConApp (Just (26,55)-(26,76)) "::" (Just (Tuple (Just (26,56)-(26,75)) [Var (Just (26,56)-(26,60)) "tens",ConApp (Just (26,64)-(26,75)) "::" (Just (Tuple (Just (26,64)-(26,75)) [Var (Just (26,64)-(26,68)) "ones",Var (Just (26,72)-(26,75)) "res"])) Nothing])) Nothing])))) (Let (Just (28,8)-(29,72)) NonRec [(VarPat (Just (28,13)-(28,17)) "tens",Bop (Just (28,20)-(28,34)) Div (Bop (Just (28,20)-(28,29)) Plus (Var (Just (28,21)-(28,23)) "x1") (Var (Just (28,26)-(28,28)) "x2")) (Lit (Just (28,32)-(28,34)) (LI 10)))] (Let (Just (29,9)-(29,71)) NonRec [(VarPat (Just (29,13)-(29,17)) "ones",Bop (Just (29,20)-(29,36)) Mod (Bop (Just (29,20)-(29,29)) Plus (Var (Just (29,21)-(29,23)) "x1") (Var (Just (29,26)-(29,28)) "x2")) (Lit (Just (29,34)-(29,36)) (LI 10)))] (Tuple (Just (29,40)-(29,71)) [List (Just (29,41)-(29,47)) [Var (Just (29,42)-(29,46)) "tens"] Nothing,ConApp (Just (29,49)-(29,70)) "::" (Just (Tuple (Just (29,50)-(29,69)) [Var (Just (29,50)-(29,54)) "tens",ConApp (Just (29,58)-(29,69)) "::" (Just (Tuple (Just (29,58)-(29,69)) [Var (Just (29,58)-(29,62)) "ones",Var (Just (29,66)-(29,69)) "res"])) Nothing])) Nothing])))
+List (Just (30,16)-(30,18)) [] Nothing
+List (Just (30,20)-(30,22)) [] Nothing
+*)
+
+(* typed spans
+(22,6)-(29,72)
+(30,16)-(30,18)
+(30,20)-(30,22)
+*)
+
+(* correct types
+(int list * int list)
+int list
+int list
+*)
+
+(* bad types
+(int list * int list)
+int list
+int list
 *)

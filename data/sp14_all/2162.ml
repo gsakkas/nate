@@ -25,10 +25,22 @@ let removeDuplicates l =
 (* changed spans
 (7,20)-(7,53)
 h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG])))
 
-(8,8)-(8,46)
-seen
-VarG
+*)
 
+(* changed exprs
+ConApp (Just (7,59)-(7,68)) "::" (Just (Tuple (Just (7,59)-(7,68)) [Var (Just (7,59)-(7,60)) "h",Var (Just (7,64)-(7,68)) "seen"])) Nothing
+*)
+
+(* typed spans
+(7,59)-(7,68)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+unit
 *)

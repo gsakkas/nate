@@ -27,20 +27,36 @@ fun x ->
   else (f x , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(7,24)-(7,26)
-x
-VarG
-
-(7,56)-(7,58)
-x
+(7,71)-(7,75)
+f'
 VarG
 
 (7,71)-(7,75)
-EMPTY
-EmptyG
+b
+VarG
 
-(8,6)-(8,7)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lam (Just (7,13)-(7,64)) (VarPat (Just (7,13)-(7,14)) "x") (Ite (Just (7,17)-(7,64)) (Bop (Just (7,20)-(7,29)) Eq (App (Just (7,20)-(7,25)) (Var (Just (7,21)-(7,22)) "f") [Var (Just (7,23)-(7,24)) "x"]) (Var (Just (7,28)-(7,29)) "b")) (Tuple (Just (7,35)-(7,44)) [Var (Just (7,36)-(7,37)) "b",Lit (Just (7,39)-(7,43)) (LB True)]) (Tuple (Just (7,50)-(7,64)) [App (Just (7,51)-(7,56)) (Var (Just (7,52)-(7,53)) "f") [Var (Just (7,54)-(7,55)) "x"],Lit (Just (7,58)-(7,63)) (LB False)])) Nothing
+Var (Just (7,68)-(7,70)) "f'"
+Var (Just (7,73)-(7,74)) "b"
+*)
+
+(* typed spans
+(7,13)-(7,64)
+(7,68)-(7,70)
+(7,73)-(7,74)
+*)
+
+(* correct types
+'a -> ('a * bool)
+'a -> ('a * bool)
+'a
+*)
+
+(* bad types
+'a -> ('a * bool)
+('a * bool)
+('a * bool)
 *)

@@ -84,3 +84,23 @@ BopG LitG LitG
 BopG (UopG EmptyG) LitG
 
 *)
+
+(* changed exprs
+Bop (Just (28,66)-(28,76)) FDiv (Lit (Just (28,66)-(28,69)) (LD 1.0)) (Lit (Just (28,73)-(28,76)) (LD 3.0))
+Bop (Just (35,11)-(35,24)) FDiv (Uop (Just (35,11)-(35,17)) Neg (Lit (Just (35,13)-(35,16)) (LD 1.0))) (Lit (Just (35,21)-(35,24)) (LD 3.0))
+*)
+
+(* typed spans
+(28,66)-(28,76)
+(35,11)-(35,24)
+*)
+
+(* correct types
+float
+float
+*)
+
+(* bad types
+int
+int
+*)

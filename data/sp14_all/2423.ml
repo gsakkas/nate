@@ -24,7 +24,23 @@ let rec mulByDigit i l =
 
 (* changed spans
 (8,28)-(8,39)
-EMPTY
-EmptyG
+prod / 10
+BopG VarG LitG
 
+*)
+
+(* changed exprs
+Bop (Just (8,28)-(8,39)) Div (Var (Just (8,29)-(8,33)) "prod") (Lit (Just (8,36)-(8,38)) (LI 10))
+*)
+
+(* typed spans
+(8,28)-(8,39)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int list
 *)

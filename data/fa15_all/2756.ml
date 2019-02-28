@@ -27,43 +27,31 @@ let rec mulByDigit i l =
 (* changed spans
 (9,14)-(9,19)
 [i * h]
-ListG (BopG EmptyG EmptyG) Nothing
-
-(10,14)-(10,29)
-(remainder h
-           i) :: (mulByDigit i t)
-ConAppG (Just (TupleG (fromList [AppG (fromList [VarG])]))) Nothing
+ListG (BopG EmptyG EmptyG)
 
 (10,14)-(10,67)
-EMPTY
-EmptyG
+(remainder h
+           i) :: (mulByDigit i t)
+ConAppG (Just (TupleG (fromList [AppG (fromList [VarG])])))
 
-(10,30)-(10,31)
-EMPTY
-EmptyG
+*)
 
-(10,32)-(10,67)
-EMPTY
-EmptyG
+(* changed exprs
+List (Just (9,14)-(9,21)) [Bop (Just (9,15)-(9,20)) Times (Var (Just (9,15)-(9,16)) "i") (Var (Just (9,19)-(9,20)) "h")] Nothing
+ConApp (Just (10,14)-(10,49)) "::" (Just (Tuple (Just (10,14)-(10,49)) [App (Just (10,14)-(10,29)) (Var (Just (10,15)-(10,24)) "remainder") [Var (Just (10,25)-(10,26)) "h",Var (Just (10,27)-(10,28)) "i"],App (Just (10,33)-(10,49)) (Var (Just (10,34)-(10,44)) "mulByDigit") [Var (Just (10,45)-(10,46)) "i",Var (Just (10,47)-(10,48)) "t"]])) Nothing
+*)
 
-(10,33)-(10,47)
-EMPTY
-EmptyG
+(* typed spans
+(9,14)-(9,21)
+(10,14)-(10,49)
+*)
 
-(10,34)-(10,41)
-EMPTY
-EmptyG
+(* correct types
+int list
+int list
+*)
 
-(10,35)-(10,36)
-EMPTY
-EmptyG
-
-(10,39)-(10,40)
-EMPTY
-EmptyG
-
-(10,44)-(10,46)
-EMPTY
-EmptyG
-
+(* bad types
+int
+int
 *)

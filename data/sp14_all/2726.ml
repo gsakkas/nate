@@ -61,12 +61,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(24,46)-(24,59)
-(@)
-VarG
-
 (24,46)-(24,64)
 intlist sum @ t
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
+*)
+
+(* changed exprs
+App (Just (24,46)-(24,63)) (Var (Just (24,60)-(24,61)) "@") [App (Just (24,46)-(24,59)) (Var (Just (24,47)-(24,54)) "intlist") [Var (Just (24,55)-(24,58)) "sum"],Var (Just (24,62)-(24,63)) "t"]
+*)
+
+(* typed spans
+(24,46)-(24,63)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list list
 *)

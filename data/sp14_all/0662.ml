@@ -81,48 +81,47 @@ match a with
                                           l1') a')
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(32,4)-(34,51)
-EMPTY
-EmptyG
-
-(32,10)-(32,11)
-EMPTY
-EmptyG
-
-(33,18)-(33,20)
-EMPTY
-EmptyG
-
-(34,14)-(34,51)
-EMPTY
-EmptyG
-
-(34,15)-(34,18)
-EMPTY
-EmptyG
-
-(34,40)-(34,41)
-x
-VarG
-
 (35,18)-(35,21)
-EMPTY
-EmptyG
-
-(35,19)-(35,20)
 []
-ListG EmptyG Nothing
-
-(36,13)-(36,20)
-EMPTY
-EmptyG
+ListG EmptyG
 
 (36,21)-(36,42)
-EMPTY
-EmptyG
+[]
+ListG EmptyG
 
-(36,31)-(36,38)
-EMPTY
-EmptyG
+(36,21)-(36,42)
+let args = List.rev l2 in
+let (_ , res) =
+  List.fold_left f base args in
+res
+LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
+*)
+
+(* changed exprs
+Case (Just (31,4)-(31,68)) (Var (Just (31,10)-(31,11)) "a") [(TuplePat (Just (31,20)-(31,26)) [VarPat (Just (31,20)-(31,23)) "l1'",VarPat (Just (31,24)-(31,26)) "a'"],Nothing,Tuple (Just (31,31)-(31,68)) [Var (Just (31,32)-(31,35)) "l1'",App (Just (31,37)-(31,67)) (Var (Just (31,38)-(31,44)) "bigAdd") [App (Just (31,45)-(31,63)) (Var (Just (31,46)-(31,56)) "mulByDigit") [Var (Just (31,57)-(31,58)) "x",Var (Just (31,59)-(31,62)) "l1'"],Var (Just (31,64)-(31,66)) "a'"]])]
+List (Just (32,18)-(32,20)) [] Nothing
+List (Just (32,18)-(32,20)) [] Nothing
+Let (Just (33,2)-(33,75)) NonRec [(VarPat (Just (33,6)-(33,10)) "args",App (Just (33,13)-(33,24)) (Var (Just (33,13)-(33,21)) "List.rev") [Var (Just (33,22)-(33,24)) "l2"])] (Let (Just (33,28)-(33,75)) NonRec [(TuplePat (Just (33,33)-(33,38)) [WildPat (Just (33,33)-(33,34)),VarPat (Just (33,35)-(33,38)) "res"],App (Just (33,42)-(33,68)) (Var (Just (33,42)-(33,56)) "List.fold_left") [Var (Just (33,57)-(33,58)) "f",Var (Just (33,59)-(33,63)) "base",Var (Just (33,64)-(33,68)) "args"])] (Var (Just (33,72)-(33,75)) "res"))
+*)
+
+(* typed spans
+(31,4)-(31,68)
+(32,18)-(32,20)
+(32,18)-(32,20)
+(33,2)-(33,75)
+*)
+
+(* correct types
+(int list * int list)
+int list
+int list
+int list
+*)
+
+(* bad types
+(int list * int list)
+int list
+int list list list
+int list list list
 *)

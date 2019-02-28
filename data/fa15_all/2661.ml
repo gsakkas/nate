@@ -73,8 +73,20 @@ let rec eval (e,x,y) =
 atan (eval (e1 , x , y))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(27,22)-(27,26)
-eval (e1 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
+*)
 
+(* changed exprs
+App (Just (27,17)-(27,39)) (Var (Just (27,17)-(27,21)) "atan") [App (Just (27,22)-(27,39)) (Var (Just (27,23)-(27,27)) "eval") [Tuple (Just (27,28)-(27,38)) [Var (Just (27,29)-(27,31)) "e1",Var (Just (27,33)-(27,34)) "x",Var (Just (27,36)-(27,37)) "y"]]]
+*)
+
+(* typed spans
+(27,17)-(27,39)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+float
 *)

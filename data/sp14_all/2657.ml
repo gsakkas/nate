@@ -22,31 +22,51 @@ fun x ->
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (4,21)-(4,51)
-EMPTY
-EmptyG
+wwhile (h , b)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
-(4,31)-(4,32)
-EMPTY
-EmptyG
+(4,21)-(4,51)
+wwhile
+VarG
 
-(4,34)-(4,45)
-EMPTY
-EmptyG
+(4,21)-(4,51)
+(h , b)
+TupleG (fromList [VarG])
 
-(4,35)-(4,40)
-EMPTY
-EmptyG
-
-(4,36)-(4,37)
-EMPTY
-EmptyG
-
-(4,38)-(4,39)
-EMPTY
-EmptyG
-
-(4,43)-(4,44)
+(4,21)-(4,51)
 h
 VarG
 
+*)
+
+(* changed exprs
+Lam (Just (2,6)-(2,50)) (VarPat (Just (2,6)-(2,7)) "x") (Let (Just (2,10)-(2,50)) NonRec [(VarPat (Just (2,14)-(2,16)) "xx",Bop (Just (2,19)-(2,30)) Times (Bop (Just (2,19)-(2,26)) Times (Var (Just (2,20)-(2,21)) "x") (Var (Just (2,24)-(2,25)) "x")) (Var (Just (2,29)-(2,30)) "x"))] (Tuple (Just (2,34)-(2,50)) [Var (Just (2,35)-(2,37)) "xx",Bop (Just (2,39)-(2,49)) Lt (Var (Just (2,40)-(2,42)) "xx") (Lit (Just (2,45)-(2,48)) (LI 512))])) Nothing
+App (Just (6,21)-(6,34)) (Var (Just (6,21)-(6,27)) "wwhile") [Tuple (Just (6,28)-(6,34)) [Var (Just (6,29)-(6,30)) "h",Var (Just (6,32)-(6,33)) "b"]]
+Var (Just (6,21)-(6,27)) "wwhile"
+Tuple (Just (6,28)-(6,34)) [Var (Just (6,29)-(6,30)) "h",Var (Just (6,32)-(6,33)) "b"]
+Var (Just (6,29)-(6,30)) "h"
+*)
+
+(* typed spans
+(2,6)-(2,50)
+(6,21)-(6,34)
+(6,21)-(6,27)
+(6,28)-(6,34)
+(6,29)-(6,30)
+*)
+
+(* correct types
+int -> (int * bool)
+int
+(int -> (int * bool) * int) -> int
+(int -> (int * bool) * int)
+int -> (int * bool)
+*)
+
+(* bad types
+('a -> ('a * bool) * 'a) -> 'a
+('a * 'b)
+('a * 'b)
+('a * 'b)
+('a * 'b)
 *)

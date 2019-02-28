@@ -87,6 +87,36 @@ TupleG (fromList [LitG,LetG NonRec (fromList [EmptyG]) EmptyG])
 
 (15,15)-(15,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* typed spans
+(15,6)-(21,57)
+(17,8)-(18,64)
+(18,31)-(18,48)
+(18,31)-(18,55)
+(20,8)-(21,57)
+(21,9)-(21,56)
+(22,15)-(22,22)
+*)
+
+(* typed spans
+(int * int list)
+(int * int list)
+int
+int
+(int * int list)
+(int * int list)
+(int * int list)
+*)
+
+(* typed spans
+float list
+float list
+float
+float
+float list
+'a
+float list
 *)

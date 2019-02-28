@@ -28,3 +28,23 @@ b
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,31)-(7,32)) "b"
+Var (Just (7,43)-(7,44)) "b"
+*)
+
+(* typed spans
+(7,31)-(7,32)
+(7,43)-(7,44)
+*)
+
+(* correct types
+bool
+bool
+*)
+
+(* bad types
+int
+int
+*)

@@ -115,6 +115,11 @@ EmptyG
 
 (27,18)-(27,35)
 valueToAddToArray :: currentSum
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG])))
 
+*)
+
+(* typed spans
+(int * int list)
+int list
 *)

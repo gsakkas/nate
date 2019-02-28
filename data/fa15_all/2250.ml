@@ -88,23 +88,29 @@ let prod = o * x in
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
 
 (35,47)-(35,72)
-EMPTY
-EmptyG
-
-(35,48)-(35,62)
 mulByDigit prod l1
 AppG (fromList [VarG])
 
 (35,60)-(35,61)
-EMPTY
-EmptyG
-
-(35,65)-(35,71)
-EMPTY
-EmptyG
-
-(35,66)-(35,67)
 prod
 VarG
 
+*)
+
+(* typed spans
+(37,8)-(37,71)
+(37,47)-(37,67)
+(37,59)-(37,63)
+*)
+
+(* typed spans
+(int * int list)
+int list
+int
+*)
+
+(* typed spans
+(int * 'a list)
+int
+int
 *)

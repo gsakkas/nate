@@ -28,3 +28,19 @@ seen
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,60)-(7,64)) "seen"
+*)
+
+(* typed spans
+(7,60)-(7,64)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+unit
+*)

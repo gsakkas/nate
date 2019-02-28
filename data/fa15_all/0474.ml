@@ -14,11 +14,23 @@ let rec wwhile (f,b) =
 
 (* changed spans
 (4,50)-(4,55)
-EMPTY
-EmptyG
+wwhile (f , x)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
-(4,53)-(4,54)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (4,42)-(4,55)) (Var (Just (4,42)-(4,48)) "wwhile") [Tuple (Just (4,49)-(4,55)) [Var (Just (4,50)-(4,51)) "f",Var (Just (4,53)-(4,54)) "x"]]
+*)
+
+(* typed spans
+(4,42)-(4,55)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+('a * bool)
 *)

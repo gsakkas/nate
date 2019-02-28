@@ -80,3 +80,19 @@ let rec eval (e,x,y) =
 BopG (UopG EmptyG) LitG
 
 *)
+
+(* changed exprs
+Bop (Just (35,11)-(35,24)) FDiv (Uop (Just (35,11)-(35,17)) Neg (Lit (Just (35,13)-(35,16)) (LD 1.0))) (Lit (Just (35,21)-(35,24)) (LD 3.0))
+*)
+
+(* typed spans
+(35,11)-(35,24)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

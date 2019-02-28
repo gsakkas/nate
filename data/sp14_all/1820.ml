@@ -37,44 +37,64 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(5,14)-(5,15)
-EMPTY
-EmptyG
-
 (13,7)-(13,14)
 0
 LitG
 
 (17,5)-(18,64)
-EMPTY
-EmptyG
+num + additivePersistence num
+BopG VarG (AppG (fromList [EmptyG]))
 
-(17,19)-(17,20)
-EMPTY
-EmptyG
+(17,5)-(18,64)
+num
+VarG
 
-(18,5)-(18,12)
-EMPTY
-EmptyG
+(17,5)-(18,64)
+additivePersistence num
+AppG (fromList [VarG])
 
-(18,5)-(18,64)
-EMPTY
-EmptyG
+(17,5)-(18,64)
+additivePersistence
+VarG
 
-(18,16)-(18,35)
-EMPTY
-EmptyG
+(17,5)-(18,64)
+num
+VarG
 
-(18,17)-(18,24)
-EMPTY
-EmptyG
+*)
 
-(18,27)-(18,34)
-EMPTY
-EmptyG
+(* changed exprs
+Lit (Just (11,7)-(11,8)) (LI 0)
+Bop (Just (14,33)-(14,64)) Plus (Var (Just (14,33)-(14,36)) "num") (App (Just (14,39)-(14,64)) (Var (Just (14,40)-(14,59)) "additivePersistence") [Var (Just (14,60)-(14,63)) "num"])
+Var (Just (14,33)-(14,36)) "num"
+App (Just (14,39)-(14,64)) (Var (Just (14,40)-(14,59)) "additivePersistence") [Var (Just (14,60)-(14,63)) "num"]
+Var (Just (14,40)-(14,59)) "additivePersistence"
+Var (Just (14,60)-(14,63)) "num"
+*)
 
-(18,28)-(18,29)
-EMPTY
-EmptyG
+(* typed spans
+(11,7)-(11,8)
+(14,33)-(14,64)
+(14,33)-(14,36)
+(14,39)-(14,64)
+(14,40)-(14,59)
+(14,60)-(14,63)
+*)
 
+(* correct types
+int
+int
+int
+int
+int -> int
+int
+*)
+
+(* bad types
+int
+bool
+bool
+bool
+bool
+bool
 *)

@@ -16,3 +16,19 @@ f b
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (3,8)-(3,11)) (Var (Just (3,8)-(3,9)) "f") [Var (Just (3,10)-(3,11)) "b"]
+*)
+
+(* typed spans
+(3,8)-(3,11)
+*)
+
+(* correct types
+('a * bool)
+*)
+
+(* bad types
+('a * bool)
+*)

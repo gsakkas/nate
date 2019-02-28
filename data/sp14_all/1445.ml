@@ -45,12 +45,28 @@ let rec eval (e,x,y) =
 pi *. x
 BopG VarG VarG
 
-(17,30)-(17,31)
-x
-VarG
-
 (18,27)-(18,28)
 y
 VarG
 
+*)
+
+(* changed exprs
+Bop (Just (17,18)-(17,27)) FTimes (Var (Just (17,19)-(17,21)) "pi") (Var (Just (17,25)-(17,26)) "x")
+Var (Just (18,27)-(18,28)) "y"
+*)
+
+(* typed spans
+(17,18)-(17,27)
+(18,27)-(18,28)
+*)
+
+(* correct types
+float
+float
+*)
+
+(* bad types
+expr
+expr
 *)

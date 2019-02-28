@@ -19,42 +19,26 @@ let fixpoint (f,b) = wwhile (let func x x = (0, true) in ((func b), b));;
 
 (* changed spans
 (7,9)-(7,66)
-EMPTY
-EmptyG
-
-(7,23)-(7,65)
-EMPTY
-EmptyG
-
-(7,33)-(7,65)
 let func =
   fun x ->
     fun x -> (0 , true) in
 (func b , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
-(7,43)-(7,65)
-fun x -> fun x -> (0 , true)
-LamG (LamG EmptyG)
+*)
 
-(7,44)-(7,61)
-true
-LitG
+(* changed exprs
+Let (Just (6,28)-(6,71)) NonRec [(VarPat (Just (6,33)-(6,37)) "func",Lam (Just (6,38)-(6,53)) (VarPat (Just (6,38)-(6,39)) "x") (Lam (Just (6,40)-(6,53)) (VarPat (Just (6,40)-(6,41)) "x") (Tuple (Just (6,44)-(6,53)) [Lit (Just (6,45)-(6,46)) (LI 0),Lit (Just (6,48)-(6,52)) (LB True)]) Nothing) Nothing)] (Tuple (Just (6,57)-(6,70)) [App (Just (6,58)-(6,66)) (Var (Just (6,59)-(6,63)) "func") [Var (Just (6,64)-(6,65)) "b"],Var (Just (6,68)-(6,69)) "b"])
+*)
 
-(7,45)-(7,46)
-EMPTY
-EmptyG
+(* typed spans
+(6,28)-(6,71)
+*)
 
-(7,48)-(7,60)
-EMPTY
-EmptyG
+(* correct types
+(int -> (int * bool) * int)
+*)
 
-(7,50)-(7,51)
-EMPTY
-EmptyG
-
-(7,52)-(7,53)
-func
-VarG
-
+(* bad types
+'a -> ('b -> 'b) -> 'b -> (('b -> 'b * bool) * 'b)
 *)

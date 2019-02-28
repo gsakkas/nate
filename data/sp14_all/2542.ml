@@ -31,16 +31,28 @@ let rec digitsOfInt n =
 reverseInt n 0
 AppG (fromList [VarG,LitG])
 
-(9,30)-(9,32)
-0
-LitG
-
 (10,13)-(10,27)
 reverseInt n 0
 AppG (fromList [VarG,LitG])
 
-(10,32)-(10,34)
-0
-LitG
+*)
 
+(* changed exprs
+App (Just (9,13)-(9,29)) (Var (Just (9,14)-(9,24)) "reverseInt") [Var (Just (9,25)-(9,26)) "n",Lit (Just (9,27)-(9,28)) (LI 0)]
+App (Just (10,13)-(10,29)) (Var (Just (10,14)-(10,24)) "reverseInt") [Var (Just (10,25)-(10,26)) "n",Lit (Just (10,27)-(10,28)) (LI 0)]
+*)
+
+(* typed spans
+(9,13)-(9,29)
+(10,13)-(10,29)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+int -> int
+int -> int
 *)

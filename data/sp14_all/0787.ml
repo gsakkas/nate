@@ -62,19 +62,23 @@ let rec eval (e,x,y) = float_of_string (exprToString e);;
 
 (* changed spans
 (28,39)-(28,67)
-EMPTY
-EmptyG
+exprToString e
+AppG (fromList [VarG])
 
-(28,40)-(28,62)
-EMPTY
-EmptyG
+*)
 
-(28,60)-(28,61)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (28,39)-(28,55)) (Var (Just (28,40)-(28,52)) "exprToString") [Var (Just (28,53)-(28,54)) "e"]
+*)
 
-(28,65)-(28,66)
-EMPTY
-EmptyG
+(* typed spans
+(28,39)-(28,55)
+*)
 
+(* correct types
+string
+*)
+
+(* bad types
+int
 *)

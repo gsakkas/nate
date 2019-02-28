@@ -15,3 +15,19 @@ let padZero l1 l2 =
 TupleG (fromList [VarG])
 
 *)
+
+(* changed exprs
+Tuple (Just (3,60)-(3,68)) [Var (Just (3,61)-(3,63)) "l1",Var (Just (3,65)-(3,67)) "l2"]
+*)
+
+(* typed spans
+(3,60)-(3,68)
+*)
+
+(* correct types
+('a list * 'b list)
+*)
+
+(* bad types
+unit
+*)

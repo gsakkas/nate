@@ -35,56 +35,41 @@ LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
 EMPTY
 EmptyG
 
-(8,15)-(8,74)
-EMPTY
-EmptyG
-
-(8,19)-(8,74)
-EMPTY
-EmptyG
-
-(8,22)-(8,30)
-EMPTY
-EmptyG
-
-(8,22)-(8,32)
-EMPTY
-EmptyG
-
-(8,31)-(8,32)
-EMPTY
-EmptyG
-
 (8,42)-(8,46)
 EMPTY
 EmptyG
 
-(8,53)-(8,74)
-EMPTY
-EmptyG
-
 (8,55)-(8,59)
-EMPTY
-EmptyG
-
-(8,60)-(8,65)
-EMPTY
-EmptyG
+isFPoint
+VarG
 
 (8,61)-(8,62)
 x
-VarG
-
-(8,63)-(8,64)
-EMPTY
-EmptyG
-
-(8,68)-(8,73)
-isFPoint
 VarG
 
 (9,10)-(9,18)
 gs
 VarG
 
+*)
+
+(* typed spans
+(7,2)-(8,16)
+(7,54)-(7,62)
+(7,63)-(7,64)
+(8,10)-(8,12)
+*)
+
+(* typed spans
+int
+int -> bool
+int
+int -> (int * bool)
+*)
+
+(* typed spans
+int
+int -> int
+int -> int
+int -> bool
 *)

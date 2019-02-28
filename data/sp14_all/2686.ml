@@ -27,8 +27,20 @@ let rec assoc (d,k,l) =
 acc
 VarG
 
-(9,19)-(9,22)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (9,9)-(9,12)) "acc"
+*)
+
+(* typed spans
+(9,9)-(9,12)
+*)
+
+(* correct types
+('a * 'b) list
+*)
+
+(* bad types
+('a * 'b * 'c)
 *)

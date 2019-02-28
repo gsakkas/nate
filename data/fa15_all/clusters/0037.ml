@@ -1,0 +1,10 @@
+BopG VarG VarG
+x * x
+xx = x
+l = lr
+a * a
+a + x
+sum + r
+y + z
+d *. d
+x1 + x2

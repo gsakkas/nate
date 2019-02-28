@@ -53,22 +53,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (14,6)-(21,38)
-EMPTY
-EmptyG
-
-(14,14)-(14,15)
-EMPTY
-EmptyG
-
-(15,6)-(21,38)
-EMPTY
-EmptyG
-
-(15,14)-(15,15)
-EMPTY
-EmptyG
-
-(16,6)-(21,38)
 let (j , k) = x in
 let (l , m) = a in
 if ((j + k) + l) > 9
@@ -97,7 +81,7 @@ VarG
 
 (20,15)-(20,45)
 (1 , (((j + k) + l) - 10) :: m)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing])
+TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG])))])
 
 (20,23)-(20,24)
 EMPTY
@@ -108,16 +92,12 @@ l
 VarG
 
 (20,44)-(20,45)
-EMPTY
-EmptyG
+m
+VarG
 
 (21,15)-(21,16)
 (0 , ((j + k) + l) :: m)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing])
-
-(21,15)-(21,38)
-m
-VarG
+TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG])))])
 
 (21,22)-(21,23)
 EMPTY
@@ -133,10 +113,55 @@ VarG
 
 (22,15)-(22,18)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (23,4)-(24,51)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* typed spans
+(14,6)-(18,36)
+(15,6)-(18,36)
+(16,10)-(16,17)
+(16,20)-(16,21)
+(17,11)-(17,43)
+(17,28)-(17,29)
+(17,40)-(17,41)
+(18,11)-(18,36)
+(18,27)-(18,28)
+(18,33)-(18,34)
+(19,15)-(19,22)
+(19,19)-(19,21)
+*)
+
+(* typed spans
+(int * int list)
+(int * int list)
+int
+int
+(int * int list)
+int
+int list
+(int * int list)
+int
+int list
+(int * int list)
+int list
+*)
+
+(* typed spans
+int list
+int list
+int
+int
+int list
+int
+int list
+int
+int list
+int list
+int list
+int list
 *)

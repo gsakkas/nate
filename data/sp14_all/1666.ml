@@ -15,8 +15,20 @@ let rec sumList xs =
 sumList (List.tl xs)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(3,49)-(3,56)
-List.tl xs
-AppG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (3,40)-(3,62)) (Var (Just (3,41)-(3,48)) "sumList") [App (Just (3,49)-(3,61)) (Var (Just (3,50)-(3,57)) "List.tl") [Var (Just (3,58)-(3,60)) "xs"]]
+*)
+
+(* typed spans
+(3,40)-(3,62)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

@@ -70,3 +70,23 @@ LitG
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (21,17)-(21,19)) (LD 1.0)
+Lit (Just (22,19)-(22,21)) (LD 1.0)
+*)
+
+(* typed spans
+(21,17)-(21,19)
+(22,19)-(22,21)
+*)
+
+(* correct types
+float
+float
+*)
+
+(* bad types
+int
+int
+*)

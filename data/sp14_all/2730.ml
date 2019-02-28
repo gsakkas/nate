@@ -105,7 +105,7 @@ let bigMul l1 l2 =
 (* changed spans
 (48,18)-(48,19)
 [0]
-ListG LitG Nothing
+ListG LitG
 
 (49,19)-(49,62)
 let (_ , res) =
@@ -113,4 +113,24 @@ let (_ , res) =
 res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
+*)
+
+(* changed exprs
+List (Just (48,18)-(48,21)) [Lit (Just (48,19)-(48,20)) (LI 0)] Nothing
+Let (Just (49,19)-(49,66)) NonRec [(TuplePat (Just (49,24)-(49,29)) [WildPat (Just (49,24)-(49,25)),VarPat (Just (49,26)-(49,29)) "res"],App (Just (49,33)-(49,59)) (Var (Just (49,33)-(49,47)) "List.fold_left") [Var (Just (49,48)-(49,49)) "f",Var (Just (49,50)-(49,54)) "base",Var (Just (49,55)-(49,59)) "args"])] (Var (Just (49,63)-(49,66)) "res")
+*)
+
+(* typed spans
+(48,18)-(48,21)
+(49,19)-(49,66)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+int
+'a
 *)

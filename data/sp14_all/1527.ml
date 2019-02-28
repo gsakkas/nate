@@ -17,8 +17,24 @@ VarG
 f 2 xs
 AppG (fromList [VarG,LitG])
 
-(2,50)-(2,74)
-xs
-VarG
+*)
 
+(* changed exprs
+Var (Just (2,27)-(2,28)) "a"
+App (Just (2,43)-(2,49)) (Var (Just (2,43)-(2,44)) "f") [Lit (Just (2,45)-(2,46)) (LI 2),Var (Just (2,47)-(2,49)) "xs"]
+*)
+
+(* typed spans
+(2,27)-(2,28)
+(2,43)-(2,49)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+int -> int -> int
+int
 *)

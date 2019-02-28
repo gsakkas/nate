@@ -80,8 +80,20 @@ let bigMul l1 l2 =
 int_of_float (10.0 ** float_of_int pos)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(33,60)-(33,63)
-float_of_int pos
-AppG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (34,28)-(34,71)) (Var (Just (34,29)-(34,41)) "int_of_float") [App (Just (34,42)-(34,70)) (Var (Just (34,48)-(34,50)) "**") [Lit (Just (34,43)-(34,47)) (LD 10.0),App (Just (34,51)-(34,69)) (Var (Just (34,52)-(34,64)) "float_of_int") [Var (Just (34,65)-(34,68)) "pos"]]]
+*)
+
+(* typed spans
+(34,28)-(34,71)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

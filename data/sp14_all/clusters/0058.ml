@@ -1,27 +1,27 @@
-AppG (fromList [VarG,BopG EmptyG EmptyG])
-mulByDigit (i - 2) l
-clone x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-clone x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
-clone x (n - 1)
-helper x (n - 1)
-helper x (n - 1)
-buildhelper (depth - 1)
-            (depth - 1) expr
-buildhelper (depth - 1)
-            (depth - 1) expr
-buildhelper (depth - 1)
-            (depth - 1) expr
-clone x (n - 1)
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
-clone x (n - 1)
-clone x (n - 1)
-mulByDigit (i - 1) l
-mulByDigit (i - 1) l
+CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
+match x with
+| (y , z) -> (let sum =
+                y + z in
+              match a with
+              | h :: t -> ((sum + h) / 10) :: (((sum + h) mod 10) :: t)
+              | _ -> [sum / 10 ; sum mod 10])
+match x with
+| (l2digit , templ1) -> (let (l2digit2 , templ12) =
+                           a in
+                         let multres =
+                           mulByDigit l2digit templ1 in
+                         (0 , bigAdd (templ12 @ [0])
+                                     multres))
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+match a with
+| [] -> (let sum = z + y in
+         intlist sum)
+| h :: t -> (let sum =
+               (h + z) + y in
+             intlist sum @ t)

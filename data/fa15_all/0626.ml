@@ -52,31 +52,47 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (21,25)-(21,43)
-EMPTY
-EmptyG
+List.combine
+VarG
 
-(21,39)-(21,42)
+(21,25)-(21,43)
 0 :: l1
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
-
-(21,44)-(21,45)
-EMPTY
-EmptyG
+ConAppG (Just (TupleG (fromList [VarG,LitG])))
 
 (21,46)-(21,61)
-EMPTY
-EmptyG
+l1
+VarG
 
-(21,47)-(21,55)
-EMPTY
-EmptyG
-
-(21,51)-(21,54)
+(21,46)-(21,61)
 0 :: l2
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,LitG])))
 
-(21,56)-(21,57)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (21,25)-(21,37)) "List.combine"
+ConApp (Just (21,38)-(21,47)) "::" (Just (Tuple (Just (21,39)-(21,46)) [Lit (Just (21,39)-(21,40)) (LI 0),Var (Just (21,44)-(21,46)) "l1"])) Nothing
+Var (Just (21,44)-(21,46)) "l1"
+ConApp (Just (21,48)-(21,57)) "::" (Just (Tuple (Just (21,49)-(21,56)) [Lit (Just (21,49)-(21,50)) (LI 0),Var (Just (21,54)-(21,56)) "l2"])) Nothing
+*)
+
+(* typed spans
+(21,25)-(21,37)
+(21,38)-(21,47)
+(21,44)-(21,46)
+(21,48)-(21,57)
+*)
+
+(* correct types
+int list -> int list -> (int * int) list
+int list
+int list
+int list
+*)
+
+(* bad types
+'a list -> (int * 'a) list
+'a list -> (int * 'a) list
+'a list
+'a list
 *)

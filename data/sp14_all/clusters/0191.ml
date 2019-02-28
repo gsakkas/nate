@@ -1,2 +1,5 @@
-AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,TupleG (fromList [VarG])]))) Nothing])
-pair ((h1 , h2) :: acc) t1 t2
+LetG NonRec (fromList [LitG]) (IteG EmptyG EmptyG EmptyG)
+let x = 0 in
+if n < 10
+then x
+else additivePersistence (n - 50)

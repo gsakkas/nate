@@ -58,59 +58,20 @@ then (1 , (((x1 + x2) + a1) - 10) :: a2)
 else (0 , ((x1 + x2) + a1) :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(17,17)-(17,75)
-let (a1 , a2) = a in
-if (x1 + x2) > 10
-then (1 , (((x1 + x2) + a1) - 10) :: a2)
-else (0 , ((x1 + x2) + a1) :: a2)
-LetG NonRec (fromList [VarG]) (IteG EmptyG EmptyG EmptyG)
+*)
 
-(17,21)-(17,22)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (16,6)-(20,40)) NonRec [(TuplePat (Just (16,11)-(16,16)) [VarPat (Just (16,11)-(16,13)) "x1",VarPat (Just (16,14)-(16,16)) "x2"],Var (Just (16,20)-(16,21)) "x")] (Let (Just (17,6)-(20,40)) NonRec [(TuplePat (Just (17,11)-(17,16)) [VarPat (Just (17,11)-(17,13)) "a1",VarPat (Just (17,14)-(17,16)) "a2"],Var (Just (17,20)-(17,21)) "a")] (Ite (Just (18,6)-(20,40)) (Bop (Just (18,9)-(18,23)) Gt (Bop (Just (18,9)-(18,18)) Plus (Var (Just (18,10)-(18,12)) "x1") (Var (Just (18,15)-(18,17)) "x2")) (Lit (Just (18,21)-(18,23)) (LI 10))) (Tuple (Just (19,11)-(19,47)) [Lit (Just (19,12)-(19,13)) (LI 1),ConApp (Just (19,15)-(19,46)) "::" (Just (Tuple (Just (19,16)-(19,45)) [Bop (Just (19,16)-(19,39)) Minus (Bop (Just (19,17)-(19,33)) Plus (Bop (Just (19,18)-(19,27)) Plus (Var (Just (19,19)-(19,21)) "x1") (Var (Just (19,24)-(19,26)) "x2")) (Var (Just (19,30)-(19,32)) "a1")) (Lit (Just (19,36)-(19,38)) (LI 10)),Var (Just (19,43)-(19,45)) "a2"])) Nothing]) (Tuple (Just (20,11)-(20,40)) [Lit (Just (20,12)-(20,13)) (LI 0),ConApp (Just (20,15)-(20,39)) "::" (Just (Tuple (Just (20,16)-(20,38)) [Bop (Just (20,16)-(20,32)) Plus (Bop (Just (20,17)-(20,26)) Plus (Var (Just (20,18)-(20,20)) "x1") (Var (Just (20,23)-(20,25)) "x2")) (Var (Just (20,29)-(20,31)) "a1"),Var (Just (20,36)-(20,38)) "a2"])) Nothing])))
+*)
 
-(17,25)-(17,26)
-x1
-VarG
+(* typed spans
+(16,6)-(20,40)
+*)
 
-(17,30)-(17,32)
-x2
-VarG
+(* correct types
+(int * int list)
+*)
 
-(17,42)-(17,56)
-(((x1 + x2) + a1) - 10) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
-(17,44)-(17,45)
-EMPTY
-EmptyG
-
-(17,48)-(17,49)
-x1 + x2
-BopG VarG VarG
-
-(17,53)-(17,55)
-a1
-VarG
-
-(17,63)-(17,75)
-a2
-VarG
-
-(17,67)-(17,74)
-((x1 + x2) + a1) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing
-
-(17,68)-(17,69)
-EMPTY
-EmptyG
-
-(17,72)-(17,73)
-x1 + x2
-BopG VarG VarG
-
-(18,4)-(20,51)
-a2
-VarG
-
+(* bad types
+(int * int)
 *)

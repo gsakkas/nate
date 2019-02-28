@@ -95,3 +95,23 @@ AppG (fromList [VarG])
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
+
+(* changed exprs
+App (Just (40,15)-(40,32)) (Var (Just (40,16)-(40,28)) "exprToString") [Var (Just (40,29)-(40,31)) "e2"]
+App (Just (41,17)-(41,63)) (Var (Just (41,23)-(41,24)) "^") [Lit (Just (41,18)-(41,22)) (LS ")/"),App (Just (41,25)-(41,62)) (Var (Just (41,33)-(41,34)) "^") [Lit (Just (41,26)-(41,32)) (LS "log("),App (Just (41,35)-(41,61)) (Var (Just (41,54)-(41,55)) "^") [App (Just (41,36)-(41,53)) (Var (Just (41,37)-(41,49)) "exprToString") [Var (Just (41,50)-(41,52)) "e3"],Lit (Just (41,56)-(41,60)) (LS "))")]]]
+*)
+
+(* typed spans
+(40,15)-(40,32)
+(41,17)-(41,63)
+*)
+
+(* correct types
+string
+string
+*)
+
+(* bad types
+string
+string
+*)

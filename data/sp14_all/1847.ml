@@ -46,14 +46,30 @@ let bigAdd l1 l2 =
 (* changed spans
 (15,52)-(15,76)
 (((c + x1) + x2) mod 10) :: ds
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
-(16,4)-(18,51)
-ds
-VarG
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG])))
 
 (16,19)-(16,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+ConApp (Just (16,31)-(16,63)) "::" (Just (Tuple (Just (16,32)-(16,62)) [Bop (Just (16,32)-(16,56)) Mod (Bop (Just (16,33)-(16,48)) Plus (Bop (Just (16,34)-(16,42)) Plus (Var (Just (16,35)-(16,36)) "c") (Var (Just (16,39)-(16,41)) "x1")) (Var (Just (16,45)-(16,47)) "x2")) (Lit (Just (16,53)-(16,55)) (LI 10)),Var (Just (16,60)-(16,62)) "ds"])) Nothing
+List (Just (17,19)-(17,21)) [] Nothing
+*)
+
+(* typed spans
+(16,31)-(16,63)
+(17,19)-(17,21)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+int
+int
 *)

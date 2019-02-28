@@ -32,3 +32,23 @@ matchHeads
 VarG
 
 *)
+
+(* changed exprs
+Lam (Just (7,19)-(7,59)) (VarPat (Just (7,19)-(7,20)) "x") (Case (Just (7,23)-(7,59)) (App (Just (7,29)-(7,38)) (Var (Just (7,29)-(7,36)) "explode") [Var (Just (7,37)-(7,38)) "x"]) [(ConsPat (Just (7,46)-(7,50)) (VarPat (Just (7,46)-(7,47)) "h") (VarPat (Just (7,49)-(7,50)) "t"),Nothing,Lit (Just (7,54)-(7,59)) (LB False))]) Nothing
+Var (Just (9,63)-(9,73)) "matchHeads"
+*)
+
+(* typed spans
+(7,19)-(7,59)
+(9,63)-(9,73)
+*)
+
+(* correct types
+string -> bool
+string -> bool
+*)
+
+(* bad types
+string -> bool
+string -> char list
+*)

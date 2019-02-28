@@ -72,3 +72,19 @@ abs_float
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (28,43)-(28,52)) "abs_float"
+*)
+
+(* typed spans
+(28,43)-(28,52)
+*)
+
+(* correct types
+float -> float
+*)
+
+(* bad types
+int -> int
+*)

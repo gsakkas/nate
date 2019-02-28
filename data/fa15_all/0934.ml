@@ -80,19 +80,23 @@ let rec mulByDigit i l =
 
 (* changed spans
 (37,33)-(37,57)
-EMPTY
-EmptyG
-
-(37,34)-(37,48)
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
-(37,46)-(37,47)
-i - 1
-BopG VarG LitG
+*)
 
-(37,51)-(37,56)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (37,33)-(37,55)) (Var (Just (37,34)-(37,44)) "mulByDigit") [Bop (Just (37,45)-(37,52)) Minus (Var (Just (37,46)-(37,47)) "i") (Lit (Just (37,50)-(37,51)) (LI 1)),Var (Just (37,53)-(37,54)) "l"]
+*)
 
+(* typed spans
+(37,33)-(37,55)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

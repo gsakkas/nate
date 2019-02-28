@@ -26,47 +26,24 @@ let removeDuplicates l =
 
 (* changed spans
 (9,8)-(10,76)
-EMPTY
-EmptyG
+let rest' = t in
+helper (seen' , rest')
+LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
 
-(9,11)-(9,25)
-EMPTY
-EmptyG
+*)
 
-(9,11)-(9,33)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (8,33)-(8,71)) NonRec [(VarPat (Just (8,37)-(8,42)) "rest'",Var (Just (8,45)-(8,46)) "t")] (App (Just (8,50)-(8,71)) (Var (Just (8,50)-(8,56)) "helper") [Tuple (Just (8,57)-(8,71)) [Var (Just (8,58)-(8,63)) "seen'",Var (Just (8,65)-(8,70)) "rest'"]])
+*)
 
-(9,12)-(9,20)
-EMPTY
-EmptyG
+(* typed spans
+(8,33)-(8,71)
+*)
 
-(9,21)-(9,22)
-EMPTY
-EmptyG
+(* correct types
+'a list
+*)
 
-(9,23)-(9,24)
-EMPTY
-EmptyG
-
-(9,28)-(9,33)
-EMPTY
-EmptyG
-
-(10,13)-(10,76)
-EMPTY
-EmptyG
-
-(10,25)-(10,26)
-EMPTY
-EmptyG
-
-(10,25)-(10,34)
-EMPTY
-EmptyG
-
-(10,30)-(10,34)
-EMPTY
-EmptyG
-
+(* bad types
+unit
 *)

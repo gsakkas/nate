@@ -82,60 +82,44 @@ let bigMul l1 l2 =
 EMPTY
 EmptyG
 
-(33,16)-(33,17)
-EMPTY
-EmptyG
-
 (34,4)-(34,75)
 mulByDigit x (List.rev l2)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 (34,12)-(34,38)
-bigAdd (mulByDigit x
-                   (List.rev l2)) [b]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+List.rev l2
+AppG (fromList [VarG])
 
 (34,12)-(34,42)
-EMPTY
-EmptyG
+bigAdd (mulByDigit x
+                   (List.rev l2)) [b]
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
 (34,24)-(34,25)
 [b]
-ListG VarG Nothing
+ListG VarG
 
 (34,46)-(34,75)
-EMPTY
-EmptyG
-
-(34,47)-(34,55)
 match r with
 | [] -> (0 , 0 :: c)
 | h :: t -> (h , (List.hd t) :: c)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
+(34,47)-(34,55)
+0
+LitG
+
 (34,52)-(34,54)
 (0 , 0 :: c)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
+TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])
 
 (34,58)-(34,68)
-EMPTY
-EmptyG
+0
+LitG
 
 (34,59)-(34,60)
 List.hd t
 AppG (fromList [VarG])
-
-(34,65)-(34,67)
-EMPTY
-EmptyG
-
-(34,72)-(34,73)
-0
-LitG
-
-(36,13)-(36,25)
-EMPTY
-EmptyG
 
 (36,13)-(36,53)
 EMPTY
@@ -145,12 +129,40 @@ EmptyG
 EMPTY
 EmptyG
 
-(36,41)-(36,49)
-EMPTY
-EmptyG
+*)
 
-(36,50)-(36,52)
-EMPTY
-EmptyG
+(* typed spans
+(33,19)-(33,47)
+(33,33)-(33,46)
+(33,12)-(33,51)
+(33,48)-(33,51)
+(34,4)-(34,72)
+(34,26)-(34,27)
+(34,25)-(34,38)
+(34,30)-(34,31)
+(34,54)-(34,65)
+*)
 
+(* typed spans
+int list
+int list
+int list
+int list
+(int * int list)
+int
+(int * int list)
+int
+int
+*)
+
+(* typed spans
+(int * int list)
+int
+int
+int
+(int * int list)
+int
+int
+int
+int
 *)

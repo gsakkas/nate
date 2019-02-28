@@ -32,3 +32,19 @@ false
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (11,71)-(11,76)) (LB False)
+*)
+
+(* typed spans
+(11,71)-(11,76)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+unit
+*)

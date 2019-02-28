@@ -45,8 +45,20 @@ let rec mulByDigit i l =
 mul (i , l)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(18,18)-(18,19)
-(i , l)
-TupleG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (18,13)-(18,25)) (Var (Just (18,14)-(18,17)) "mul") [Tuple (Just (18,18)-(18,24)) [Var (Just (18,19)-(18,20)) "i",Var (Just (18,22)-(18,23)) "l"]]
+*)
+
+(* typed spans
+(18,13)-(18,25)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

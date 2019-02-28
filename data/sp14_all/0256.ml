@@ -39,3 +39,19 @@ let rec digitalRoot n =
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (15,7)-(15,8)) (LI 0)
+*)
+
+(* typed spans
+(15,7)-(15,8)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+unit
+*)

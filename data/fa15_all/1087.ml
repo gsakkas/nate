@@ -17,16 +17,20 @@ let sqsum xs =
 (a * a) + (x * x)
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
 
-(3,20)-(3,21)
-x * x
-BopG VarG VarG
+*)
 
-(3,35)-(3,36)
-EMPTY
-EmptyG
+(* changed exprs
+Bop (Just (3,14)-(3,31)) Plus (Bop (Just (3,14)-(3,21)) Times (Var (Just (3,15)-(3,16)) "a") (Var (Just (3,19)-(3,20)) "a")) (Bop (Just (3,24)-(3,31)) Times (Var (Just (3,25)-(3,26)) "x") (Var (Just (3,29)-(3,30)) "x"))
+*)
 
-(3,47)-(3,48)
-x
-VarG
+(* typed spans
+(3,14)-(3,31)
+*)
 
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

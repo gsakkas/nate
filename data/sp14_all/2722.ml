@@ -66,3 +66,19 @@ res
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 
 *)
+
+(* changed exprs
+Let (Just (26,4)-(26,47)) NonRec [(VarPat (Just (26,8)-(26,11)) "res",App (Just (26,14)-(26,40)) (Var (Just (26,14)-(26,28)) "List.fold_left") [Var (Just (26,29)-(26,30)) "f",Var (Just (26,31)-(26,35)) "base",Var (Just (26,36)-(26,40)) "args"])] (Var (Just (26,44)-(26,47)) "res")
+*)
+
+(* typed spans
+(26,4)-(26,47)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
+*)

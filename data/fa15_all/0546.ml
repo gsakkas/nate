@@ -17,8 +17,24 @@ VarG
 fun fs -> fs
 LamG VarG
 
-(2,48)-(2,72)
-fs
-VarG
+*)
 
+(* changed exprs
+Var (Just (2,26)-(2,27)) "a"
+Lam (Just (2,40)-(2,47)) (VarPat (Just (2,40)-(2,42)) "fs") (Var (Just (2,45)-(2,47)) "fs") Nothing
+*)
+
+(* typed spans
+(2,26)-(2,27)
+(2,40)-(2,47)
+*)
+
+(* correct types
+'a -> 'a
+'a -> 'a
+*)
+
+(* bad types
+int
+int
 *)

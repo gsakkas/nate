@@ -16,3 +16,19 @@ let rec sumList xs =
 LitG
 
 *)
+
+(* changed exprs
+Lit (Just (3,24)-(3,25)) (LI 0)
+*)
+
+(* typed spans
+(3,24)-(3,25)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+'a list
+*)

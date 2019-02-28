@@ -76,3 +76,19 @@ tan (pi *. eval (e , x , y)) /. 2.0
 BopG (AppG (fromList [EmptyG])) LitG
 
 *)
+
+(* changed exprs
+Bop (Just (29,8)-(29,47)) FDiv (App (Just (29,9)-(29,39)) (Var (Just (29,10)-(29,13)) "tan") [Bop (Just (29,14)-(29,38)) FTimes (Var (Just (29,15)-(29,17)) "pi") (App (Just (29,21)-(29,37)) (Var (Just (29,22)-(29,26)) "eval") [Tuple (Just (29,27)-(29,36)) [Var (Just (29,28)-(29,29)) "e",Var (Just (29,31)-(29,32)) "x",Var (Just (29,34)-(29,35)) "y"]])]) (Lit (Just (29,43)-(29,46)) (LD 2.0))
+*)
+
+(* typed spans
+(29,8)-(29,47)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

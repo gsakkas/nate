@@ -22,8 +22,20 @@ fun fixb ->
    (b , fixb <> b))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(5,50)-(5,51)
-fixb
-VarG
+*)
 
+(* changed exprs
+Lam (Just (6,10)-(6,56)) (VarPat (Just (6,15)-(6,19)) "fixb") (Let (Just (6,24)-(6,55)) NonRec [(VarPat (Just (6,28)-(6,29)) "b",App (Just (6,32)-(6,35)) (Var (Just (6,32)-(6,33)) "f") [Var (Just (6,34)-(6,35)) "b"])] (Tuple (Just (6,39)-(6,55)) [Var (Just (6,40)-(6,41)) "b",Bop (Just (6,43)-(6,54)) Neq (Var (Just (6,44)-(6,48)) "fixb") (Var (Just (6,52)-(6,53)) "b")])) Nothing
+*)
+
+(* typed spans
+(6,10)-(6,56)
+*)
+
+(* correct types
+'a -> ('a * bool)
+*)
+
+(* bad types
+('a * bool)
 *)

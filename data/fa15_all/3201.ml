@@ -81,18 +81,6 @@ LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 EMPTY
 EmptyG
 
-(20,18)-(20,20)
-EMPTY
-EmptyG
-
-(21,6)-(23,54)
-EMPTY
-EmptyG
-
-(21,18)-(21,20)
-EMPTY
-EmptyG
-
 (22,26)-(22,28)
 c
 VarG
@@ -135,12 +123,41 @@ LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
 EMPTY
 EmptyG
 
-(26,51)-(26,54)
-EMPTY
-EmptyG
-
 (27,2)-(27,5)
 add (padZero l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
+*)
+
+(* typed spans
+(15,19)-(18,66)
+(24,6)-(25,73)
+(25,26)-(25,27)
+(25,68)-(25,70)
+(26,20)-(26,21)
+(27,15)-(27,44)
+(28,4)-(28,51)
+(29,13)-(29,34)
+*)
+
+(* typed spans
+int list -> int list
+(int * int list)
+int
+int list
+int
+(int * int) list
+int list
+int list
+*)
+
+(* typed spans
+int list -> int list -> (int list * int list)
+(int list * int list)
+int list
+int
+int
+(int * int) list
+(int list * int list)
+(int list * int list) -> (int list * int list)
 *)

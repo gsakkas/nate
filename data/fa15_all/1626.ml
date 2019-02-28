@@ -36,3 +36,7 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+bool
+*)

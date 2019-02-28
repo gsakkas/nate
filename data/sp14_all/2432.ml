@@ -15,16 +15,24 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(5,7)-(5,58)
-l2
-VarG
-
-(5,51)-(5,52)
+(5,51)-(5,58)
 (l1 , l2)
 TupleG (fromList [VarG])
 
-(5,51)-(5,58)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Tuple (Just (5,51)-(5,59)) [Var (Just (5,52)-(5,54)) "l1",Var (Just (5,56)-(5,58)) "l2"]
+*)
+
+(* typed spans
+(5,51)-(5,59)
+*)
+
+(* correct types
+('a list * 'b list)
+*)
+
+(* bad types
+int list
 *)

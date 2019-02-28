@@ -54,23 +54,23 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (24,18)-(24,47)
-EMPTY
-EmptyG
-
-(24,19)-(24,30)
 padZero (0 :: l1) (0 :: l2)
-AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing])
+AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG])))])
 
-(24,28)-(24,29)
-EMPTY
-EmptyG
+*)
 
-(24,34)-(24,40)
-0
-LitG
+(* changed exprs
+App (Just (24,18)-(24,47)) (Var (Just (24,19)-(24,26)) "padZero") [ConApp (Just (24,27)-(24,36)) "::" (Just (Tuple (Just (24,28)-(24,35)) [Lit (Just (24,28)-(24,29)) (LI 0),Var (Just (24,33)-(24,35)) "l1"])) Nothing,ConApp (Just (24,37)-(24,46)) "::" (Just (Tuple (Just (24,38)-(24,45)) [Lit (Just (24,38)-(24,39)) (LI 0),Var (Just (24,43)-(24,45)) "l2"])) Nothing]
+*)
 
-(24,38)-(24,39)
-0 :: l2
-ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing
+(* typed spans
+(24,18)-(24,47)
+*)
 
+(* correct types
+(int list * int list)
+*)
+
+(* bad types
+'a list
 *)

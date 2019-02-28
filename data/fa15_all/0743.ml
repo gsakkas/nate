@@ -83,16 +83,20 @@ let rec exprToString e =
 exprToString expr ^ ("^2-" ^ (exprToString expr ^ "-1)"))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(31,29)-(31,41)
-exprToString expr
-AppG (fromList [VarG])
+*)
 
-(31,47)-(31,52)
-"^2-" ^ (exprToString expr ^ "-1)")
-AppG (fromList [AppG (fromList [EmptyG]),LitG])
+(* changed exprs
+App (Just (33,8)-(33,71)) (Var (Just (33,29)-(33,30)) "^") [App (Just (33,9)-(33,28)) (Var (Just (33,10)-(33,22)) "exprToString") [Var (Just (33,23)-(33,27)) "expr"],App (Just (33,31)-(33,70)) (Var (Just (33,38)-(33,39)) "^") [Lit (Just (33,32)-(33,37)) (LS "^2-"),App (Just (33,40)-(33,69)) (Var (Just (33,61)-(33,62)) "^") [App (Just (33,41)-(33,60)) (Var (Just (33,42)-(33,54)) "exprToString") [Var (Just (33,55)-(33,59)) "expr"],Lit (Just (33,63)-(33,68)) (LS "-1)")]]]
+*)
 
-(31,53)-(31,65)
-exprToString expr ^ "-1)"
-AppG (fromList [AppG (fromList [EmptyG]),LitG])
+(* typed spans
+(33,8)-(33,71)
+*)
 
+(* correct types
+string
+*)
+
+(* bad types
+string
 *)

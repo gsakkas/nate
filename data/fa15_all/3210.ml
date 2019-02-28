@@ -99,8 +99,20 @@ let bigMul l1 l2 =
 bigAdd m a'
 AppG (fromList [VarG])
 
-(43,46)-(43,52)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (43,39)-(43,50)) (Var (Just (43,39)-(43,45)) "bigAdd") [Var (Just (43,46)-(43,47)) "m",Var (Just (43,48)-(43,50)) "a'"]
+*)
+
+(* typed spans
+(43,39)-(43,50)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list -> int list
 *)

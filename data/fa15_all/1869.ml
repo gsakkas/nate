@@ -12,11 +12,23 @@ let rec digitsOfInt n =
 
 (* changed spans
 (3,48)-(3,68)
-EMPTY
-EmptyG
+digitsOfInt (n / 10)
+AppG (fromList [BopG EmptyG EmptyG])
 
-(3,61)-(3,62)
-n / 10
-BopG VarG LitG
+*)
 
+(* changed exprs
+App (Just (3,48)-(3,68)) (Var (Just (3,48)-(3,59)) "digitsOfInt") [Bop (Just (3,60)-(3,68)) Div (Var (Just (3,61)-(3,62)) "n") (Lit (Just (3,65)-(3,67)) (LI 10))]
+*)
+
+(* typed spans
+(3,48)-(3,68)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

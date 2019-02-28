@@ -71,10 +71,6 @@ let bigAdd l1 l2 =
 EMPTY
 EmptyG
 
-(5,10)-(5,11)
-EMPTY
-EmptyG
-
 (26,6)-(28,76)
 let (c , a2) = a in
 let s :: s' = a2 in
@@ -85,4 +81,19 @@ LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 c
 VarG
 
+*)
+
+(* typed spans
+(24,6)-(26,75)
+(26,21)-(26,22)
+*)
+
+(* typed spans
+(int * int list)
+int
+*)
+
+(* typed spans
+(int * int list)
+int
 *)

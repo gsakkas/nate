@@ -16,3 +16,19 @@ x
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (3,24)-(3,25)) "x"
+*)
+
+(* typed spans
+(3,24)-(3,25)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
+*)

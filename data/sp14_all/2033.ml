@@ -45,16 +45,28 @@ let rec build (rand,depth) =
 rand (0 , 2)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(13,31)-(13,69)
-(0 , 2)
-TupleG (fromList [LitG])
-
 (15,14)-(15,25)
 rand (0 , 5)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(16,5)-(18,46)
-(0 , 5)
-TupleG (fromList [LitG])
+*)
 
+(* changed exprs
+App (Just (13,17)-(13,28)) (Var (Just (13,17)-(13,21)) "rand") [Tuple (Just (13,22)-(13,28)) [Lit (Just (13,23)-(13,24)) (LI 0),Lit (Just (13,26)-(13,27)) (LI 2)]]
+App (Just (15,15)-(15,26)) (Var (Just (15,15)-(15,19)) "rand") [Tuple (Just (15,20)-(15,26)) [Lit (Just (15,21)-(15,22)) (LI 0),Lit (Just (15,24)-(15,25)) (LI 5)]]
+*)
+
+(* typed spans
+(13,17)-(13,28)
+(15,15)-(15,26)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+('a * 'b) -> 'c
+('a * 'b) -> 'c
 *)

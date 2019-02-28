@@ -37,140 +37,35 @@ let palindrome w = (explode w) = (listReverse (explode w));;
 *)
 
 (* changed spans
-(9,22)-(15,14)
-EMPTY
-EmptyG
-
-(10,2)-(15,14)
-EMPTY
-EmptyG
-
-(10,5)-(10,23)
-EMPTY
-EmptyG
-
-(10,5)-(10,45)
-EMPTY
-EmptyG
-
-(10,6)-(10,17)
-EMPTY
-EmptyG
-
-(10,7)-(10,14)
-EMPTY
-EmptyG
-
-(10,15)-(10,16)
-EMPTY
-EmptyG
-
-(10,20)-(10,22)
-EMPTY
-EmptyG
-
-(10,27)-(10,45)
-EMPTY
-EmptyG
-
-(10,28)-(10,39)
-EMPTY
-EmptyG
-
-(10,29)-(10,36)
-EMPTY
-EmptyG
-
-(10,37)-(10,38)
-EMPTY
-EmptyG
-
-(10,42)-(10,44)
-EMPTY
-EmptyG
-
-(11,7)-(11,11)
-EMPTY
-EmptyG
-
-(13,4)-(15,14)
-EMPTY
-EmptyG
-
-(13,7)-(13,18)
-EMPTY
-EmptyG
-
-(13,7)-(13,32)
-EMPTY
-EmptyG
-
-(13,8)-(13,15)
-EMPTY
-EmptyG
-
-(13,16)-(13,17)
-EMPTY
-EmptyG
-
-(13,21)-(13,32)
-EMPTY
-EmptyG
-
-(13,22)-(13,29)
-EMPTY
-EmptyG
-
-(13,30)-(13,31)
-EMPTY
-EmptyG
-
-(14,9)-(14,20)
-EMPTY
-EmptyG
-
-(14,9)-(14,44)
-EMPTY
-EmptyG
-
-(14,21)-(14,32)
-EMPTY
-EmptyG
-
-(14,22)-(14,29)
-EMPTY
-EmptyG
-
-(14,30)-(14,31)
-EMPTY
-EmptyG
-
-(14,33)-(14,44)
-EMPTY
-EmptyG
-
-(14,34)-(14,41)
-EMPTY
-EmptyG
-
-(14,42)-(14,43)
-EMPTY
-EmptyG
-
-(15,9)-(15,14)
-EMPTY
-EmptyG
-
 (17,20)-(18,62)
-EMPTY
-EmptyG
+match l with
+| [] -> []
+| h :: t -> myAppend (listReverse t)
+                     h
+CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG)])
 
-(20,19)-(20,30)
+(20,19)-(20,68)
 explode w = listReverse (explode w)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(20,19)-(20,68)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Case (Just (10,2)-(10,62)) (Var (Just (10,8)-(10,9)) "l") [(ConPat (Just (10,17)-(10,19)) "[]" Nothing,Nothing,List (Just (10,23)-(10,25)) [] Nothing),(ConsPat (Just (10,28)-(10,32)) (VarPat (Just (10,28)-(10,29)) "h") (VarPat (Just (10,31)-(10,32)) "t"),Nothing,App (Just (10,36)-(10,62)) (Var (Just (10,36)-(10,44)) "myAppend") [App (Just (10,45)-(10,60)) (Var (Just (10,46)-(10,57)) "listReverse") [Var (Just (10,58)-(10,59)) "t"],Var (Just (10,61)-(10,62)) "h"])]
+Bop (Just (12,19)-(12,58)) Eq (App (Just (12,19)-(12,30)) (Var (Just (12,20)-(12,27)) "explode") [Var (Just (12,28)-(12,29)) "w"]) (App (Just (12,33)-(12,58)) (Var (Just (12,34)-(12,45)) "listReverse") [App (Just (12,46)-(12,57)) (Var (Just (12,47)-(12,54)) "explode") [Var (Just (12,55)-(12,56)) "w"]])
+*)
+
+(* typed spans
+(10,2)-(10,62)
+(12,19)-(12,58)
+*)
+
+(* correct types
+char list
+bool
+*)
+
+(* bad types
+char list -> char list
+'a
 *)

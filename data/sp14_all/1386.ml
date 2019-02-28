@@ -37,3 +37,23 @@ List.rev l
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+Var (Just (12,16)-(12,30)) "List.fold_left"
+App (Just (12,38)-(12,50)) (Var (Just (12,39)-(12,47)) "List.rev") [Var (Just (12,48)-(12,49)) "l"]
+*)
+
+(* typed spans
+(12,16)-(12,30)
+(12,38)-(12,50)
+*)
+
+(* correct types
+((int * int list) -> int -> (int * int list)) -> (int * int list) -> int list -> (int * int list)
+int list
+*)
+
+(* bad types
+((int * int list) -> int -> int) -> (int * int list) list -> int -> int
+'a list
+*)

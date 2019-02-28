@@ -62,3 +62,23 @@ s
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (18,22)-(18,23)) "s"
+Var (Just (18,40)-(18,41)) "s"
+*)
+
+(* typed spans
+(18,22)-(18,23)
+(18,40)-(18,41)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+(int * int)
+(int * int)
+*)

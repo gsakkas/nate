@@ -17,16 +17,23 @@ fun z ->
    List.fold_left f base fs)
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(2,44)-(2,46)
-EMPTY
-EmptyG
-
 (2,44)-(2,48)
-EMPTY
-EmptyG
-
-(2,47)-(2,48)
 z
 VarG
 
+*)
+
+(* typed spans
+(2,12)-(2,75)
+(2,46)-(2,47)
+*)
+
+(* typed spans
+'a -> 'a
+'a
+*)
+
+(* typed spans
+'a
+'a
 *)

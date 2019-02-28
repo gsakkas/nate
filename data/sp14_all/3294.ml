@@ -50,35 +50,39 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,16)-(19,38)
-EMPTY
-EmptyG
-
-(19,17)-(19,28)
-EMPTY
-EmptyG
-
-(19,29)-(19,34)
 v1 :: list1
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
-(19,40)-(19,62)
-EMPTY
-EmptyG
-
-(19,41)-(19,52)
-EMPTY
-EmptyG
-
-(19,53)-(19,58)
-list1
-VarG
+ConAppG (Just (TupleG (fromList [VarG])))
 
 (19,59)-(19,61)
 v2 :: list2
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG])))
 
 (20,4)-(22,51)
 list2
 VarG
 
+*)
+
+(* changed exprs
+ConApp (Just (17,44)-(17,57)) "::" (Just (Tuple (Just (17,45)-(17,56)) [Var (Just (17,45)-(17,47)) "v1",Var (Just (17,51)-(17,56)) "list1"])) Nothing
+ConApp (Just (17,59)-(17,72)) "::" (Just (Tuple (Just (17,60)-(17,71)) [Var (Just (17,60)-(17,62)) "v2",Var (Just (17,66)-(17,71)) "list2"])) Nothing
+Var (Just (17,66)-(17,71)) "list2"
+*)
+
+(* typed spans
+(17,44)-(17,57)
+(17,59)-(17,72)
+(17,66)-(17,71)
+*)
+
+(* correct types
+int list
+int list
+int list
+*)
+
+(* bad types
+'a list
+'a list
+'a list
 *)

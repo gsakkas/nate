@@ -13,19 +13,23 @@ let stringOfList f l =
 
 (* changed spans
 (3,15)-(3,64)
-EMPTY
-EmptyG
+a ^ b
+AppG (fromList [VarG])
 
-(3,21)-(3,22)
-EMPTY
-EmptyG
+*)
 
-(3,36)-(3,38)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (3,15)-(3,20)) (Var (Just (3,17)-(3,18)) "^") [Var (Just (3,15)-(3,16)) "a",Var (Just (3,19)-(3,20)) "b"]
+*)
 
-(3,49)-(3,60)
-(^)
-VarG
+(* typed spans
+(3,15)-(3,20)
+*)
 
+(* correct types
+string
+*)
+
+(* bad types
+string
 *)

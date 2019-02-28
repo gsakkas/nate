@@ -81,7 +81,39 @@ AppG (fromList [VarG])
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (32,48)-(32,60)
+(^)
+VarG
+
+(32,48)-(32,60)
 exprToString e3
 AppG (fromList [VarG])
 
+*)
+
+(* changed exprs
+App (Just (33,15)-(33,32)) (Var (Just (33,16)-(33,28)) "exprToString") [Var (Just (33,29)-(33,31)) "e2"]
+App (Just (33,35)-(33,72)) (Var (Just (33,42)-(33,43)) "^") [Lit (Just (33,36)-(33,41)) (LS "/3*"),App (Just (33,44)-(33,71)) (Var (Just (33,63)-(33,64)) "^") [App (Just (33,45)-(33,62)) (Var (Just (33,46)-(33,58)) "exprToString") [Var (Just (33,59)-(33,61)) "e3"],Lit (Just (33,65)-(33,70)) (LS "/4)")]]
+Var (Just (33,63)-(33,64)) "^"
+App (Just (33,45)-(33,62)) (Var (Just (33,46)-(33,58)) "exprToString") [Var (Just (33,59)-(33,61)) "e3"]
+*)
+
+(* typed spans
+(33,15)-(33,32)
+(33,35)-(33,72)
+(33,63)-(33,64)
+(33,45)-(33,62)
+*)
+
+(* correct types
+string
+string
+string -> string -> string
+string
+*)
+
+(* bad types
+string
+string
+expr -> string
+expr -> string
 *)

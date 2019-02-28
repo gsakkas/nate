@@ -62,23 +62,55 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (23,7)-(23,43)
-EMPTY
-EmptyG
-
-(23,39)-(23,40)
-EMPTY
-EmptyG
-
-(23,41)-(23,42)
-EMPTY
-EmptyG
-
-(26,15)-(26,23)
-EMPTY
-EmptyG
+(addition (m , n) + y) / 10
+BopG (BopG EmptyG EmptyG) LitG
 
 (26,15)-(26,44)
-EMPTY
-EmptyG
+List.combine l1 l2
+AppG (fromList [VarG])
 
+(26,15)-(26,44)
+List.combine
+VarG
+
+(26,15)-(26,44)
+l1
+VarG
+
+(26,15)-(26,44)
+l2
+VarG
+
+*)
+
+(* changed exprs
+Bop (Just (23,7)-(23,37)) Div (Bop (Just (23,8)-(23,31)) Plus (App (Just (23,9)-(23,26)) (Var (Just (23,10)-(23,18)) "addition") [Tuple (Just (23,19)-(23,25)) [Var (Just (23,20)-(23,21)) "m",Var (Just (23,23)-(23,24)) "n"]]) (Var (Just (23,29)-(23,30)) "y")) (Lit (Just (23,34)-(23,36)) (LI 10))
+App (Just (26,15)-(26,33)) (Var (Just (26,15)-(26,27)) "List.combine") [Var (Just (26,28)-(26,30)) "l1",Var (Just (26,31)-(26,33)) "l2"]
+Var (Just (26,15)-(26,27)) "List.combine"
+Var (Just (26,28)-(26,30)) "l1"
+Var (Just (26,31)-(26,33)) "l2"
+*)
+
+(* typed spans
+(23,7)-(23,37)
+(26,15)-(26,33)
+(26,15)-(26,27)
+(26,28)-(26,30)
+(26,31)-(26,33)
+*)
+
+(* correct types
+int
+(int * int) list
+int list -> int list -> (int * int) list
+int list
+int list
+*)
+
+(* bad types
+int
+(int * int) list
+(int * int) list
+(int * int) list
+(int * int) list
 *)

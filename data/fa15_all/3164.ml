@@ -61,25 +61,13 @@ let (x1 , x2) = x in
 ([x1 + x2] , [x2])
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
-(22,43)-(22,57)
-([x1 + x2] , [x2])
-TupleG (fromList [ListG EmptyG Nothing])
-
-(22,56)-(22,57)
-[x2]
-ListG VarG Nothing
-
-(23,4)-(24,68)
-x2
-VarG
-
 (23,15)-(23,17)
 ([] , [])
-TupleG (fromList [ListG EmptyG Nothing])
+TupleG (fromList [ListG EmptyG])
 
 (24,4)-(24,68)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (24,15)-(24,17)
 List.combine l1 l2
@@ -89,4 +77,36 @@ AppG (fromList [VarG])
 l2
 VarG
 
+*)
+
+(* changed exprs
+Let (Just (22,16)-(22,52)) NonRec [(TuplePat (Just (22,21)-(22,26)) [VarPat (Just (22,21)-(22,23)) "x1",VarPat (Just (22,24)-(22,26)) "x2"],Var (Just (22,30)-(22,31)) "x")] (Tuple (Just (22,35)-(22,52)) [List (Just (22,36)-(22,45)) [Bop (Just (22,37)-(22,44)) Plus (Var (Just (22,37)-(22,39)) "x1") (Var (Just (22,42)-(22,44)) "x2")] Nothing,List (Just (22,47)-(22,51)) [Var (Just (22,48)-(22,50)) "x2"] Nothing])
+Tuple (Just (23,15)-(23,23)) [List (Just (23,16)-(23,18)) [] Nothing,List (Just (23,20)-(23,22)) [] Nothing]
+List (Just (23,20)-(23,22)) [] Nothing
+App (Just (24,15)-(24,33)) (Var (Just (24,15)-(24,27)) "List.combine") [Var (Just (24,28)-(24,30)) "l1",Var (Just (24,31)-(24,33)) "l2"]
+Var (Just (24,31)-(24,33)) "l2"
+*)
+
+(* typed spans
+(22,16)-(22,52)
+(23,15)-(23,23)
+(23,20)-(23,22)
+(24,15)-(24,33)
+(24,31)-(24,33)
+*)
+
+(* correct types
+(int list * int list)
+(int list * int list)
+int list
+(int * int) list
+int list
+*)
+
+(* bad types
+int list list
+int list list
+'a
+(int list * int list) list
+'a
 *)

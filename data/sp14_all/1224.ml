@@ -60,57 +60,52 @@ match a with
 | (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(19,12)-(19,13)
-fst x + snd x
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(20,20)-(20,34)
-match a with
-| (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(20,20)-(20,59)
-snd x
-AppG (fromList [VarG])
-
-(20,26)-(20,27)
-z
-VarG
-
-(20,44)-(20,45)
-z
-VarG
-
-(20,58)-(20,59)
-EMPTY
-EmptyG
-
-(21,13)-(21,14)
-y
-VarG
-
 (22,15)-(22,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (23,25)-(23,45)
-EMPTY
-EmptyG
+List.combine
+VarG
 
-(23,46)-(23,47)
-EMPTY
-EmptyG
+(23,25)-(23,45)
+l1
+VarG
 
-(23,48)-(23,54)
-EMPTY
-EmptyG
+(23,25)-(23,45)
+l2
+VarG
 
-(23,49)-(23,50)
-EMPTY
-EmptyG
+*)
 
-(23,52)-(23,53)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (19,6)-(20,71)) NonRec [(VarPat (Just (19,10)-(19,11)) "z",Bop (Just (19,14)-(19,31)) Plus (App (Just (19,14)-(19,21)) (Var (Just (19,15)-(19,18)) "fst") [Var (Just (19,19)-(19,20)) "x"]) (App (Just (19,24)-(19,31)) (Var (Just (19,25)-(19,28)) "snd") [Var (Just (19,29)-(19,30)) "x"]))] (Case (Just (20,6)-(20,71)) (Var (Just (20,12)-(20,13)) "a") [(TuplePat (Just (20,22)-(20,25)) [VarPat (Just (20,22)-(20,23)) "w",VarPat (Just (20,24)-(20,25)) "y"],Nothing,Tuple (Just (20,30)-(20,71)) [Bop (Just (20,31)-(20,45)) Div (Bop (Just (20,32)-(20,39)) Plus (Var (Just (20,33)-(20,34)) "w") (Var (Just (20,37)-(20,38)) "z")) (Lit (Just (20,42)-(20,44)) (LI 10)),ConApp (Just (20,47)-(20,70)) "::" (Just (Tuple (Just (20,48)-(20,69)) [Bop (Just (20,48)-(20,64)) Mod (Bop (Just (20,49)-(20,56)) Plus (Var (Just (20,50)-(20,51)) "w") (Var (Just (20,54)-(20,55)) "z")) (Lit (Just (20,61)-(20,63)) (LI 10)),Var (Just (20,68)-(20,69)) "y"])) Nothing])])
+Tuple (Just (21,15)-(21,22)) [Lit (Just (21,16)-(21,17)) (LI 0),List (Just (21,19)-(21,21)) [] Nothing]
+Var (Just (22,25)-(22,37)) "List.combine"
+Var (Just (22,38)-(22,40)) "l1"
+Var (Just (22,41)-(22,43)) "l2"
+*)
 
+(* typed spans
+(19,6)-(20,71)
+(21,15)-(21,22)
+(22,25)-(22,37)
+(22,38)-(22,40)
+(22,41)-(22,43)
+*)
+
+(* correct types
+(int * int list)
+(int * int list)
+int list -> int list -> (int * int) list
+int list
+int list
+*)
+
+(* bad types
+int list
+int list
+(int * int) list
+(int * int) list
+(int * int) list
 *)

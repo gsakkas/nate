@@ -67,40 +67,56 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(18,6)-(27,42)
-EMPTY
-EmptyG
-
-(18,9)-(18,10)
-EMPTY
-EmptyG
-
 (18,9)-(18,15)
 (List.length acc = List.length l1) || (List.length acc = List.length l2)
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
-
-(18,13)-(18,15)
-List.length acc
-AppG (fromList [VarG])
-
-(20,8)-(27,42)
-List.length acc = List.length l2
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 (23,11)-(27,41)
 (0 , acc)
 TupleG (fromList [VarG,LitG])
 
-(29,25)-(29,27)
-EMPTY
-EmptyG
-
-(29,28)-(29,29)
-EMPTY
-EmptyG
+(29,30)-(29,50)
+List.combine
+VarG
 
 (29,30)-(29,50)
-EMPTY
-EmptyG
+l1
+VarG
 
+(29,30)-(29,50)
+l2
+VarG
+
+*)
+
+(* changed exprs
+Bop (Just (19,8)-(20,48)) Or (Bop (Just (19,8)-(19,46)) Eq (App (Just (19,9)-(19,26)) (Var (Just (19,10)-(19,21)) "List.length") [Var (Just (19,22)-(19,25)) "acc"]) (App (Just (19,29)-(19,45)) (Var (Just (19,30)-(19,41)) "List.length") [Var (Just (19,42)-(19,44)) "l1"])) (Bop (Just (20,10)-(20,48)) Eq (App (Just (20,11)-(20,28)) (Var (Just (20,12)-(20,23)) "List.length") [Var (Just (20,24)-(20,27)) "acc"]) (App (Just (20,31)-(20,47)) (Var (Just (20,32)-(20,43)) "List.length") [Var (Just (20,44)-(20,46)) "l2"]))
+Tuple (Just (21,49)-(21,57)) [Lit (Just (21,50)-(21,51)) (LI 0),Var (Just (21,53)-(21,56)) "acc"]
+Var (Just (29,25)-(29,37)) "List.combine"
+Var (Just (29,38)-(29,40)) "l1"
+Var (Just (29,41)-(29,43)) "l2"
+*)
+
+(* typed spans
+(19,8)-(20,48)
+(21,49)-(21,57)
+(29,25)-(29,37)
+(29,38)-(29,40)
+(29,41)-(29,43)
+*)
+
+(* correct types
+bool
+(int * int list)
+int list -> int list -> (int * int) list
+int list
+int list
+*)
+
+(* bad types
+bool
+(int * int list)
+(int * int) list
+(int * int) list
+(int * int) list
 *)

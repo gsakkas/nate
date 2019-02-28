@@ -21,3 +21,18 @@ h
 VarG
 
 *)
+
+(* typed spans
+(2,23)-(2,67)
+(2,66)-(2,67)
+*)
+
+(* typed spans
+unit
+unit
+*)
+
+(* typed spans
+unit
+int
+*)

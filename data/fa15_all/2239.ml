@@ -66,3 +66,19 @@ l
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (22,65)-(22,66)) "l"
+*)
+
+(* typed spans
+(22,65)-(22,66)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
+*)

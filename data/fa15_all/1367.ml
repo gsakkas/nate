@@ -60,126 +60,86 @@ let rec eval (e,x,y) =
 (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
-(19,44)-(19,67)
-EMPTY
-EmptyG
-
-(19,65)-(19,66)
-EMPTY
-EmptyG
-
 (20,21)-(20,38)
 eval (t1 , x , y) *. eval (t2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(20,21)-(20,66)
-EMPTY
-EmptyG
-
-(20,39)-(20,40)
-2.0
-LitG
+(20,41)-(20,66)
+eval (t2 , x , y)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 (20,41)-(20,66)
-EMPTY
-EmptyG
+eval
+VarG
 
-(20,42)-(20,45)
-EMPTY
-EmptyG
+(20,41)-(20,66)
+(t2 , x , y)
+TupleG (fromList [VarG])
 
-(20,46)-(20,47)
-EMPTY
-EmptyG
+(20,41)-(20,66)
+t2
+VarG
 
-(22,6)-(22,9)
-EMPTY
-EmptyG
+(20,41)-(20,66)
+x
+VarG
+
+(20,41)-(20,66)
+y
+VarG
 
 (22,6)-(27,81)
-EMPTY
-EmptyG
-
-(22,10)-(22,11)
-EMPTY
-EmptyG
-
-(23,8)-(27,81)
-EMPTY
-EmptyG
-
-(23,9)-(23,27)
-eval (th1 , x , y) < eval (th2 , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(23,28)-(23,29)
 if eval (th1 , x , y) < eval (th2 , x , y)
 then eval (th3 , x , y)
 else eval (th4 , x , y)
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(24,11)-(27,80)
-EMPTY
-EmptyG
+*)
 
-(24,12)-(24,16)
-EMPTY
-EmptyG
+(* changed exprs
+Bop (Just (19,23)-(19,70)) FDiv (Bop (Just (19,23)-(19,63)) FPlus (App (Just (19,24)-(19,41)) (Var (Just (19,25)-(19,29)) "eval") [Tuple (Just (19,30)-(19,40)) [Var (Just (19,31)-(19,33)) "e1",Var (Just (19,35)-(19,36)) "x",Var (Just (19,38)-(19,39)) "y"]]) (App (Just (19,45)-(19,62)) (Var (Just (19,46)-(19,50)) "eval") [Tuple (Just (19,51)-(19,61)) [Var (Just (19,52)-(19,54)) "e2",Var (Just (19,56)-(19,57)) "x",Var (Just (19,59)-(19,60)) "y"]])) (Lit (Just (19,67)-(19,70)) (LD 2.0))
+Bop (Just (20,21)-(20,59)) FTimes (App (Just (20,21)-(20,38)) (Var (Just (20,22)-(20,26)) "eval") [Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "t1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]]) (App (Just (20,42)-(20,59)) (Var (Just (20,43)-(20,47)) "eval") [Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "t2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]])
+App (Just (20,42)-(20,59)) (Var (Just (20,43)-(20,47)) "eval") [Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "t2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]]
+Var (Just (20,43)-(20,47)) "eval"
+Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "t2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]
+Var (Just (20,49)-(20,51)) "t2"
+Var (Just (20,53)-(20,54)) "x"
+Var (Just (20,56)-(20,57)) "y"
+Ite (Just (22,6)-(24,27)) (Bop (Just (22,9)-(22,48)) Lt (App (Just (22,9)-(22,27)) (Var (Just (22,10)-(22,14)) "eval") [Tuple (Just (22,15)-(22,26)) [Var (Just (22,16)-(22,19)) "th1",Var (Just (22,21)-(22,22)) "x",Var (Just (22,24)-(22,25)) "y"]]) (App (Just (22,30)-(22,48)) (Var (Just (22,31)-(22,35)) "eval") [Tuple (Just (22,36)-(22,47)) [Var (Just (22,37)-(22,40)) "th2",Var (Just (22,42)-(22,43)) "x",Var (Just (22,45)-(22,46)) "y"]])) (App (Just (23,11)-(23,27)) (Var (Just (23,11)-(23,15)) "eval") [Tuple (Just (23,16)-(23,27)) [Var (Just (23,17)-(23,20)) "th3",Var (Just (23,22)-(23,23)) "x",Var (Just (23,25)-(23,26)) "y"]]) (App (Just (24,11)-(24,27)) (Var (Just (24,11)-(24,15)) "eval") [Tuple (Just (24,16)-(24,27)) [Var (Just (24,17)-(24,20)) "th4",Var (Just (24,22)-(24,23)) "x",Var (Just (24,25)-(24,26)) "y"]])
+*)
 
-(24,17)-(24,18)
-EMPTY
-EmptyG
+(* typed spans
+(19,23)-(19,70)
+(20,21)-(20,59)
+(20,42)-(20,59)
+(20,43)-(20,47)
+(20,48)-(20,58)
+(20,49)-(20,51)
+(20,53)-(20,54)
+(20,56)-(20,57)
+(22,6)-(24,27)
+*)
 
-(25,14)-(27,79)
-EMPTY
-EmptyG
+(* correct types
+float
+float
+float
+(expr * float * float) -> float
+(expr * float * float)
+expr
+float
+float
+float
+*)
 
-(25,34)-(25,35)
-EMPTY
-EmptyG
-
-(26,17)-(27,78)
-EMPTY
-EmptyG
-
-(26,18)-(26,21)
-EMPTY
-EmptyG
-
-(26,22)-(26,23)
-EMPTY
-EmptyG
-
-(27,20)-(27,77)
-EMPTY
-EmptyG
-
-(27,40)-(27,41)
-EMPTY
-EmptyG
-
-(27,42)-(27,76)
-EMPTY
-EmptyG
-
-(27,43)-(27,46)
-EMPTY
-EmptyG
-
-(27,47)-(27,48)
-EMPTY
-EmptyG
-
-(27,49)-(27,75)
-EMPTY
-EmptyG
-
-(27,69)-(27,70)
-EMPTY
-EmptyG
-
-(27,71)-(27,74)
-EMPTY
-EmptyG
-
+(* bad types
+float
+float
+'a
+'a
+'a
+'a
+'a
+'a
+string
 *)

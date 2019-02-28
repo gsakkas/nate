@@ -68,14 +68,6 @@ let rec exprToString e =
 EMPTY
 EmptyG
 
-(30,12)-(30,61)
-EMPTY
-EmptyG
-
-(30,30)-(30,31)
-EMPTY
-EmptyG
-
 (30,39)-(30,59)
 exprToString e
 AppG (fromList [VarG])
@@ -84,4 +76,16 @@ AppG (fromList [VarG])
 EMPTY
 EmptyG
 
+*)
+
+(* typed spans
+(29,49)-(29,65)
+*)
+
+(* typed spans
+string
+*)
+
+(* typed spans
+string
 *)

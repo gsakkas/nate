@@ -46,3 +46,6 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+*)

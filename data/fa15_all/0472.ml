@@ -28,11 +28,28 @@ let fixpoint (f,b) =
 
 (* changed spans
 (11,10)-(11,16)
-EMPTY
-EmptyG
+wwhile (gs , b)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 (11,18)-(11,19)
 EMPTY
 EmptyG
 
+*)
+
+(* changed exprs
+App (Just (11,2)-(11,16)) (Var (Just (11,2)-(11,8)) "wwhile") [Tuple (Just (11,9)-(11,16)) [Var (Just (11,10)-(11,12)) "gs",Var (Just (11,14)-(11,15)) "b"]]
+Var (Just (11,18)-(11,19)) "EMPTY"
+*)
+
+(* typed spans
+(11,2)-(11,16)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+('a * bool)
 *)

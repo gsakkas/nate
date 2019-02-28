@@ -19,12 +19,20 @@ let sqsum xs =
 f 0 hd
 AppG (fromList [VarG,LitG])
 
-(4,53)-(4,59)
-EMPTY
-EmptyG
+*)
 
-(4,54)-(4,55)
-0
-LitG
+(* changed exprs
+App (Just (4,49)-(4,55)) (Var (Just (4,49)-(4,50)) "f") [Lit (Just (4,51)-(4,52)) (LI 0),Var (Just (4,53)-(4,55)) "hd"]
+*)
 
+(* typed spans
+(4,49)-(4,55)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

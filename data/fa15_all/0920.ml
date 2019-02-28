@@ -61,44 +61,20 @@ let bigAdd l1 l2 =
 add (padZero l1 l2 , l2)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(26,9)-(26,24)
-(padZero l1 l2 , l2)
-TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+*)
 
-(27,7)-(27,63)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (25,13)-(25,40)) (Var (Just (25,14)-(25,17)) "add") [Tuple (Just (25,18)-(25,39)) [App (Just (25,19)-(25,34)) (Var (Just (25,20)-(25,27)) "padZero") [Var (Just (25,28)-(25,30)) "l1",Var (Just (25,31)-(25,33)) "l2"],Var (Just (25,36)-(25,38)) "l2"]]
+*)
 
-(27,11)-(27,27)
-EMPTY
-EmptyG
+(* typed spans
+(25,13)-(25,40)
+*)
 
-(27,11)-(27,46)
-EMPTY
-EmptyG
+(* correct types
+int list
+*)
 
-(27,12)-(27,23)
-EMPTY
-EmptyG
-
-(27,24)-(27,26)
-EMPTY
-EmptyG
-
-(27,30)-(27,46)
-EMPTY
-EmptyG
-
-(27,31)-(27,42)
-EMPTY
-EmptyG
-
-(27,52)-(27,54)
-EMPTY
-EmptyG
-
-(27,60)-(27,62)
-EMPTY
-EmptyG
-
+(* bad types
+int list
 *)

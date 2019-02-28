@@ -28,3 +28,9 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+'t13
+('t3 * 't4 * 't10 list)
+'t13
+*)

@@ -9,16 +9,24 @@ let rec wwhile (f,b) = match f b with | (h,t) -> if t = false then h;;
 *)
 
 (* changed spans
-(2,56)-(2,60)
-EMPTY
-EmptyG
-
-(2,66)-(2,67)
+(2,66)-(2,69)
 false
 LitG
 
-(2,66)-(2,69)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lit (Just (2,56)-(2,61)) (LB False)
+*)
+
+(* typed spans
+(2,56)-(2,61)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+unit
 *)

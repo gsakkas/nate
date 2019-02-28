@@ -36,3 +36,23 @@ l
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,20)-(7,21)) "l"
+Var (Just (8,22)-(8,23)) "l"
+*)
+
+(* typed spans
+(7,20)-(7,21)
+(8,22)-(8,23)
+*)
+
+(* correct types
+'a list
+'a list
+*)
+
+(* bad types
+'a list
+'a list list
+*)

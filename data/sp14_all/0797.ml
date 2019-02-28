@@ -89,24 +89,36 @@ let rec build (rand,depth) =
 buildTimes (next , next)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(37,25)-(37,29)
-(next , next)
-TupleG (fromList [VarG])
-
 (38,14)-(38,45)
 buildThresh (next , next , next , next)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(38,26)-(38,30)
-(next , next , next , next)
-TupleG (fromList [VarG])
 
 (40,14)-(40,39)
 buildGauss (next , next , next)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(40,25)-(40,29)
-(next , next , next)
-TupleG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (37,14)-(37,37)) (Var (Just (37,14)-(37,24)) "buildTimes") [Tuple (Just (37,25)-(37,37)) [Var (Just (37,26)-(37,30)) "next",Var (Just (37,32)-(37,36)) "next"]]
+App (Just (38,14)-(38,50)) (Var (Just (38,14)-(38,25)) "buildThresh") [Tuple (Just (38,26)-(38,50)) [Var (Just (38,27)-(38,31)) "next",Var (Just (38,33)-(38,37)) "next",Var (Just (38,39)-(38,43)) "next",Var (Just (38,45)-(38,49)) "next"]]
+App (Just (40,14)-(40,43)) (Var (Just (40,14)-(40,24)) "buildGauss") [Tuple (Just (40,25)-(40,43)) [Var (Just (40,26)-(40,30)) "next",Var (Just (40,32)-(40,36)) "next",Var (Just (40,38)-(40,42)) "next"]]
+*)
+
+(* typed spans
+(37,14)-(37,37)
+(38,14)-(38,50)
+(40,14)-(40,43)
+*)
+
+(* correct types
+expr
+expr
+expr
+*)
+
+(* bad types
+expr
+expr
+expr
 *)

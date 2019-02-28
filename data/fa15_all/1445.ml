@@ -58,63 +58,19 @@ let rec eval (e,x,y) =
 EMPTY
 EmptyG
 
-(11,38)-(11,67)
-EMPTY
-EmptyG
-
-(11,46)-(11,47)
-EMPTY
-EmptyG
-
-(11,49)-(11,50)
-EMPTY
-EmptyG
-
-(11,52)-(11,58)
-EMPTY
-EmptyG
-
-(11,60)-(11,66)
-EMPTY
-EmptyG
-
-(13,16)-(13,39)
-EMPTY
-EmptyG
-
-(13,25)-(13,39)
-EMPTY
-EmptyG
-
-(13,32)-(13,34)
-EMPTY
-EmptyG
-
-(13,36)-(13,38)
-EMPTY
-EmptyG
-
 (24,21)-(24,31)
-EMPTY
-EmptyG
+eval
+VarG
 
 (24,21)-(24,38)
 eval (e1 , x , y) *. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(24,32)-(24,38)
-eval
-VarG
 
 (24,33)-(24,34)
 (e1 , x , y)
 TupleG (fromList [VarG])
 
 (25,28)-(25,39)
-EMPTY
-EmptyG
-
-(25,40)-(25,52)
 eval
 VarG
 
@@ -128,4 +84,31 @@ then eval (e3 , x , y)
 else eval (e4 , x , y)
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
+*)
+
+(* typed spans
+(20,22)-(20,26)
+(20,21)-(20,59)
+(20,27)-(20,37)
+(20,43)-(20,47)
+(20,48)-(20,58)
+(22,6)-(24,26)
+*)
+
+(* typed spans
+(expr * float * float) -> float
+float
+(expr * float * float)
+(expr * float * float) -> float
+(expr * float * float)
+float
+*)
+
+(* typed spans
+(expr * expr) -> expr
+expr
+expr
+(expr * expr * expr * expr) -> expr
+expr
+expr
 *)

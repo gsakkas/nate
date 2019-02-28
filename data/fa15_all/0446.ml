@@ -23,39 +23,39 @@ let fixpoint (f,b) =
 
 (* changed spans
 (9,4)-(9,68)
-EMPTY
-EmptyG
+f x
+AppG (fromList [VarG])
 
-(9,10)-(9,12)
-EMPTY
-EmptyG
+(9,4)-(9,68)
+xx
+VarG
 
 (9,34)-(9,35)
 xx = x
 BopG VarG VarG
 
-(9,45)-(9,46)
-EMPTY
-EmptyG
+*)
 
-(9,48)-(9,49)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (7,22)-(7,25)) (Var (Just (7,22)-(7,23)) "f") [Var (Just (7,24)-(7,25)) "x"]
+Var (Just (7,30)-(7,32)) "xx"
+Bop (Just (7,34)-(7,42)) Eq (Var (Just (7,35)-(7,37)) "xx") (Var (Just (7,40)-(7,41)) "x")
+*)
 
-(9,58)-(9,68)
-EMPTY
-EmptyG
+(* typed spans
+(7,22)-(7,25)
+(7,30)-(7,32)
+(7,34)-(7,42)
+*)
 
-(9,59)-(9,64)
-EMPTY
-EmptyG
+(* correct types
+'a
+'a
+bool
+*)
 
-(9,60)-(9,61)
-xx
-VarG
-
-(9,66)-(9,67)
-EMPTY
-EmptyG
-
+(* bad types
+(int * bool)
+(int * bool)
+int
 *)

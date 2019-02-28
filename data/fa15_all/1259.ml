@@ -50,3 +50,19 @@ List.length l'
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (10,31)-(10,47)) (Var (Just (10,32)-(10,43)) "List.length") [Var (Just (10,44)-(10,46)) "l'"]
+*)
+
+(* typed spans
+(10,31)-(10,47)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int list
+*)

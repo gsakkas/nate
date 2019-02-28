@@ -153,15 +153,23 @@ let rec exprToString e =
 
 (* changed spans
 (74,51)-(74,60)
-EMPTY
-EmptyG
-
-(74,52)-(74,55)
-EMPTY
-EmptyG
-
-(74,56)-(74,59)
 "))"
 LitG
 
+*)
+
+(* changed exprs
+Lit (Just (73,70)-(73,74)) (LS "))")
+*)
+
+(* typed spans
+(73,70)-(73,74)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+string
 *)

@@ -19,6 +19,22 @@ let rec digitsOfInt n =
 (* changed spans
 (6,46)-(6,47)
 [y]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (6,46)-(6,49)) [Var (Just (6,47)-(6,48)) "y"] Nothing
+*)
+
+(* typed spans
+(6,46)-(6,49)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

@@ -152,23 +152,39 @@ let rec exprToString e =
 
 (* changed spans
 (73,37)-(73,64)
-EMPTY
-EmptyG
+")*cos("
+LitG
 
-(73,47)-(73,59)
+(73,37)-(73,64)
 exprToString ex3 ^ "))"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 (73,67)-(73,76)
-EMPTY
-EmptyG
-
-(73,68)-(73,71)
-EMPTY
-EmptyG
-
-(73,72)-(73,75)
 "))"
 LitG
 
+*)
+
+(* changed exprs
+Lit (Just (73,37)-(73,45)) (LS ")*cos(")
+App (Just (73,48)-(73,75)) (Var (Just (73,68)-(73,69)) "^") [App (Just (73,49)-(73,67)) (Var (Just (73,50)-(73,62)) "exprToString") [Var (Just (73,63)-(73,66)) "ex3"],Lit (Just (73,70)-(73,74)) (LS "))")]
+Lit (Just (73,70)-(73,74)) (LS "))")
+*)
+
+(* typed spans
+(73,37)-(73,45)
+(73,48)-(73,75)
+(73,70)-(73,74)
+*)
+
+(* correct types
+string
+string
+string
+*)
+
+(* bad types
+string
+string
+string
 *)

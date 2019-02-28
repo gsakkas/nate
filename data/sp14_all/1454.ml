@@ -58,11 +58,31 @@ let rec exprToString e =
 
 (* changed spans
 (18,34)-(18,54)
-EMPTY
-EmptyG
+"+"
+LitG
 
-(18,39)-(18,51)
+(18,34)-(18,54)
 exprToString y ^ ")/2)"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
+*)
+
+(* changed exprs
+Lit (Just (18,34)-(18,37)) (LS "+")
+App (Just (18,40)-(18,67)) (Var (Just (18,58)-(18,59)) "^") [App (Just (18,41)-(18,57)) (Var (Just (18,42)-(18,54)) "exprToString") [Var (Just (18,55)-(18,56)) "y"],Lit (Just (18,60)-(18,66)) (LS ")/2)")]
+*)
+
+(* typed spans
+(18,34)-(18,37)
+(18,40)-(18,67)
+*)
+
+(* correct types
+string
+string
+*)
+
+(* bad types
+string
+string
 *)

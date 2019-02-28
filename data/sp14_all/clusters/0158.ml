@@ -1,5 +1,3 @@
-AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
-helper ((v mod 10) :: acc)
-       (v / 10)
-helper ((v mod 10) :: acc)
-       (v / 10)
+IteG (BopG EmptyG EmptyG) (ListG EmptyG) (ListG EmptyG)
+if n < 0 then [] else []
+if v = 0 then [1] else [0]

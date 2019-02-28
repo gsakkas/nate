@@ -88,3 +88,19 @@ y
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (31,50)-(31,51)) "y"
+*)
+
+(* typed spans
+(31,50)-(31,51)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
+*)

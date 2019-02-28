@@ -88,12 +88,28 @@ match a with
 | (_ , y) -> (0 , bigAdd y x)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(31,21)-(31,22)
-y
-VarG
-
 (32,13)-(32,15)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* changed exprs
+Case (Just (31,14)-(31,55)) (Var (Just (31,20)-(31,21)) "a") [(TuplePat (Just (31,30)-(31,33)) [WildPat (Just (31,30)-(31,31)),VarPat (Just (31,32)-(31,33)) "y"],Nothing,Tuple (Just (31,38)-(31,55)) [Lit (Just (31,39)-(31,40)) (LI 0),App (Just (31,42)-(31,54)) (Var (Just (31,43)-(31,49)) "bigAdd") [Var (Just (31,50)-(31,51)) "y",Var (Just (31,52)-(31,53)) "x"]])]
+Tuple (Just (32,13)-(32,20)) [Lit (Just (32,14)-(32,15)) (LI 0),List (Just (32,17)-(32,19)) [] Nothing]
+*)
+
+(* typed spans
+(31,14)-(31,55)
+(32,13)-(32,20)
+*)
+
+(* correct types
+(int * int list)
+(int * int list)
+*)
+
+(* bad types
+int list
+int list
 *)

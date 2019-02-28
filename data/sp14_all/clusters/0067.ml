@@ -1,53 +1,13 @@
-CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (c , s) with
-| (c , []) -> (c , c :: s)
-| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-match (a , x) with
-| ((b , c) , (d , e)) -> (b , (d + e) :: c)
-match (a , x) with
-| ((b , c) , (d , e)) -> (b , (d + e) :: c)
+TupleG (fromList [VarG,LamG EmptyG])
+(fun xx ->
+   (xx , f xx = xx) , b)
+(fun x ->
+   (f x , not (f x = x)) , b)
+(fun x ->
+   (let b = f x in
+    (b , b <> x)) , b)
+(fun b -> (f b , f b = b) , b)
+(fun b ->
+   (f b , b <> f b) , b)
+(fun a ->
+   (f a , f a <> a) , b)

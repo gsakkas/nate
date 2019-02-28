@@ -15,8 +15,20 @@ let rec clone x n =
 x @ acc
 AppG (fromList [VarG])
 
-(3,39)-(3,40)
-(@)
-VarG
+*)
 
+(* changed exprs
+App (Just (3,38)-(3,47)) (Var (Just (3,41)-(3,42)) "@") [Var (Just (3,39)-(3,40)) "x",Var (Just (3,43)-(3,46)) "acc"]
+*)
+
+(* typed spans
+(3,38)-(3,47)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list
 *)

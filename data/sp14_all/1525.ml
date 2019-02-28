@@ -18,12 +18,32 @@ VarG
 f
 VarG
 
-(3,34)-(3,36)
-EMPTY
-EmptyG
-
 (3,42)-(3,66)
 xs
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (2,27)-(2,28)) "a"
+Var (Just (2,43)-(2,44)) "f"
+Var (Just (2,47)-(2,49)) "xs"
+*)
+
+(* typed spans
+(2,27)-(2,28)
+(2,43)-(2,44)
+(2,47)-(2,49)
+*)
+
+(* correct types
+int
+int -> 'a -> int
+'a
+*)
+
+(* bad types
+int -> int -> int
+int
+int -> int -> int
 *)

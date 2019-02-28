@@ -33,14 +33,22 @@ let rec mulByDigit i l =
 (* changed spans
 (12,51)-(12,73)
 helper t1 @ [h1 mod 10]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
-(12,52)-(12,61)
-(@)
-VarG
+*)
 
-(12,63)-(12,72)
-[h1 mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
+(* changed exprs
+App (Just (12,51)-(12,76)) (Var (Just (12,63)-(12,64)) "@") [App (Just (12,51)-(12,62)) (Var (Just (12,52)-(12,58)) "helper") [Var (Just (12,59)-(12,61)) "t1"],List (Just (12,65)-(12,76)) [Bop (Just (12,66)-(12,75)) Mod (Var (Just (12,66)-(12,68)) "h1") (Lit (Just (12,73)-(12,75)) (LI 10))] Nothing]
+*)
 
+(* typed spans
+(12,51)-(12,76)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

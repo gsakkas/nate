@@ -40,10 +40,6 @@ clone 0 absNumZeros
 AppG (fromList [VarG,LitG])
 
 (6,26)-(6,29)
-EMPTY
-EmptyG
-
-(6,30)-(6,38)
 absNumZeros
 VarG
 
@@ -55,4 +51,22 @@ EmptyG
 EMPTY
 EmptyG
 
+*)
+
+(* typed spans
+(6,2)-(11,77)
+(10,21)-(10,40)
+(10,29)-(10,40)
+*)
+
+(* typed spans
+(int list * int list)
+int list
+int
+*)
+
+(* typed spans
+('a list * 'a list) list
+'a list
+int -> int
 *)

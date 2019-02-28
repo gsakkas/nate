@@ -11,27 +11,23 @@ let pipe fs = let f a x q = x q in let base z = z in List.fold_left f base fs;;
 
 (* changed spans
 (3,12)-(3,21)
-EMPTY
-EmptyG
-
-(3,16)-(3,17)
-EMPTY
-EmptyG
-
-(3,16)-(3,21)
-EMPTY
-EmptyG
-
-(3,18)-(3,19)
 fun q -> x q
 LamG (AppG (fromList [EmptyG]))
 
-(3,20)-(3,21)
-x q
-AppG (fromList [VarG])
+*)
 
-(3,25)-(3,67)
-q
-VarG
+(* changed exprs
+Lam (Just (2,24)-(2,31)) (VarPat (Just (2,24)-(2,25)) "q") (App (Just (2,28)-(2,31)) (Var (Just (2,28)-(2,29)) "x") [Var (Just (2,30)-(2,31)) "q"]) Nothing
+*)
 
+(* typed spans
+(2,24)-(2,31)
+*)
+
+(* correct types
+'a -> 'a
+*)
+
+(* bad types
+('a -> 'b -> 'c) -> 'c
 *)

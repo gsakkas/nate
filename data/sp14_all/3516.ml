@@ -22,55 +22,31 @@ let fixpoint (f,b) = wwhile (let func x x = (0, true) in ((func b), b));;
 
 (* changed spans
 (8,16)-(9,71)
-EMPTY
-EmptyG
-
-(9,7)-(9,71)
-EMPTY
-EmptyG
-
-(9,13)-(9,18)
-EMPTY
-EmptyG
-
-(9,13)-(9,22)
-EMPTY
-EmptyG
-
-(9,14)-(9,15)
-EMPTY
-EmptyG
-
-(9,16)-(9,17)
-EMPTY
-EmptyG
-
-(9,21)-(9,22)
 fun x -> (0 , true)
 LamG (TupleG (fromList [EmptyG]))
 
-(9,40)-(9,41)
-0
-LitG
-
-(9,62)-(9,63)
-EMPTY
-EmptyG
-
-(9,65)-(9,70)
-EMPTY
-EmptyG
-
 (10,5)-(10,20)
-EMPTY
-EmptyG
-
-(10,6)-(10,16)
 func b
 AppG (fromList [VarG])
 
-(10,12)-(10,13)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lam (Just (6,40)-(6,53)) (VarPat (Just (6,40)-(6,41)) "x") (Tuple (Just (6,44)-(6,53)) [Lit (Just (6,45)-(6,46)) (LI 0),Lit (Just (6,48)-(6,52)) (LB True)]) Nothing
+App (Just (6,58)-(6,66)) (Var (Just (6,59)-(6,63)) "func") [Var (Just (6,64)-(6,65)) "b"]
+*)
+
+(* typed spans
+(6,40)-(6,53)
+(6,58)-(6,66)
+*)
+
+(* correct types
+int -> (int * bool)
+int -> (int * bool)
+*)
+
+(* bad types
+'a -> ('a -> 'a * bool)
+(('a -> 'a * bool) * 'a)
 *)

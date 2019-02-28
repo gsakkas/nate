@@ -224,3 +224,13 @@ l1
 VarG
 
 *)
+
+(* typed spans
+int list -> int list
+int list -> int list -> int list
+(int * int list)
+(int * int list)
+(int * int list)
+int
+int list
+*)

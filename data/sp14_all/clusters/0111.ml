@@ -1,19 +1,2 @@
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (AppG (fromList [EmptyG]))
-if n < 10
-then [n]
-else digitsOfInt (n / 10) @ [n mod 10]
-if n < 10
-then [n]
-else digitsOfInt (n / 10) @ [n mod 10]
-if n < 10
-then [n]
-else digitsOfInt (n / 10) @ [n mod 10]
-if n < 10
-then [n]
-else digitsOfInt (n / 10) @ [n mod 10]
-if n < 10
-then [n]
-else digitsOfInt (n / 10) @ [n mod 10]
-if n < 10
-then [n]
-else digitsOfInt (n / 10) @ [n mod 10]
+AppG (fromList [VarG,LamG EmptyG])
+List.map (fun x -> x * 10) t

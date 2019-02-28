@@ -1,58 +1,9 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (_ , res) =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
+AppG (fromList [VarG,ListG EmptyG])
+[0] @ l1
+[0] @ l2
+[1 ; 0] @ acc
+digits n []
+[a + hd] @ tl
+append t [h]
+helper [] l
+helper [] h

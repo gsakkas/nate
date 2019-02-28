@@ -18,22 +18,22 @@ let rec listReverse l = match l with | [] -> [] | h::t -> append t [h];;
 (* changed spans
 (6,36)-(6,61)
 append t [h]
-AppG (fromList [VarG,ListG EmptyG Nothing])
+AppG (fromList [VarG,ListG EmptyG])
 
-(6,43)-(6,61)
-EMPTY
-EmptyG
+*)
 
-(6,44)-(6,55)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (5,58)-(5,70)) (Var (Just (5,58)-(5,64)) "append") [Var (Just (5,65)-(5,66)) "t",List (Just (5,67)-(5,70)) [Var (Just (5,68)-(5,69)) "h"] Nothing]
+*)
 
-(6,44)-(6,57)
-EMPTY
-EmptyG
+(* typed spans
+(5,58)-(5,70)
+*)
 
-(6,59)-(6,60)
-[h]
-ListG VarG Nothing
+(* correct types
+'a list
+*)
 
+(* bad types
+'a list list -> 'a list list
 *)

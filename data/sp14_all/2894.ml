@@ -36,11 +36,23 @@ let rec exprToString e =
 
 (* changed spans
 (15,14)-(15,36)
-EMPTY
-EmptyG
+"pi* "
+LitG
 
-(15,15)-(15,28)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lit (Just (15,14)-(15,20)) (LS "pi* ")
+*)
+
+(* typed spans
+(15,14)-(15,20)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+string list -> string
 *)

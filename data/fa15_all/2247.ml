@@ -83,8 +83,20 @@ let bigMul l1 l2 =
                              l1) l)
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(34,63)-(34,64)
-l
-VarG
+*)
 
+(* changed exprs
+Tuple (Just (35,28)-(35,68)) [Bop (Just (35,29)-(35,37)) Times (Lit (Just (35,30)-(35,32)) (LI 10)) (Var (Just (35,35)-(35,36)) "o"),App (Just (35,39)-(35,67)) (Var (Just (35,40)-(35,46)) "bigAdd") [App (Just (35,47)-(35,64)) (Var (Just (35,48)-(35,58)) "mulByDigit") [Var (Just (35,59)-(35,60)) "o",Var (Just (35,61)-(35,63)) "l1"],Var (Just (35,65)-(35,66)) "l"]]
+*)
+
+(* typed spans
+(35,28)-(35,68)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+int list
 *)

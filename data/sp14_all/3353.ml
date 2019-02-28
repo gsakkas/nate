@@ -87,31 +87,26 @@ let rec mulByDigit i l =
 
 (* changed spans
 (38,6)-(42,19)
-EMPTY
-EmptyG
+mulByDigit i
+           (List.rev (List.map (fun x ->
+                                  x * 10) t)) @ (helper []
+                                                        (h * i) @ [])
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(38,13)-(40,40)
-EMPTY
-EmptyG
+*)
 
-(38,14)-(38,19)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (38,6)-(39,34)) (Var (Just (38,64)-(38,65)) "@") [App (Just (38,6)-(38,63)) (Var (Just (38,7)-(38,17)) "mulByDigit") [Var (Just (38,18)-(38,19)) "i",App (Just (38,20)-(38,62)) (Var (Just (38,21)-(38,29)) "List.rev") [App (Just (38,30)-(38,61)) (Var (Just (38,31)-(38,39)) "List.map") [Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing,Var (Just (38,59)-(38,60)) "t"]]],App (Just (39,8)-(39,34)) (Var (Just (39,29)-(39,30)) "@") [App (Just (39,9)-(39,28)) (Var (Just (39,10)-(39,16)) "helper") [List (Just (39,17)-(39,19)) [] Nothing,Bop (Just (39,20)-(39,27)) Times (Var (Just (39,21)-(39,22)) "h") (Var (Just (39,25)-(39,26)) "i")],List (Just (39,31)-(39,33)) [] Nothing]]
+*)
 
-(38,14)-(40,39)
-EMPTY
-EmptyG
+(* typed spans
+(38,6)-(39,34)
+*)
 
-(40,19)-(40,38)
-EMPTY
-EmptyG
+(* correct types
+int list
+*)
 
-(40,20)-(40,26)
-helper [] (h * i)
-AppG (fromList [BopG EmptyG EmptyG,ListG EmptyG Nothing])
-
-(42,17)-(42,18)
-[]
-ListG EmptyG Nothing
-
+(* bad types
+int list
 *)

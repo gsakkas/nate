@@ -1,11 +1,2 @@
-TupleG (fromList [VarG,IteG EmptyG EmptyG EmptyG])
-(if f b = b
- then (fun b'' ->
-         (f b , false))
- else (fun b'' ->
-         (f b , true)) , b)
-(if f b = b
- then (fun b'' ->
-         (f b , false))
- else (fun b'' ->
-         (f b , true)) , b)
+AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])
+List.combine l1 (0 :: l2)

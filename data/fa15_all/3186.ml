@@ -69,10 +69,30 @@ let bigAdd l1 l2 =
 (* changed spans
 (27,20)-(27,21)
 [3]
-ListG LitG Nothing
+ListG LitG
 
 (27,30)-(27,31)
 [5]
-ListG LitG Nothing
+ListG LitG
 
+*)
+
+(* changed exprs
+List (Just (27,20)-(27,23)) [Lit (Just (27,21)-(27,22)) (LI 3)] Nothing
+List (Just (27,32)-(27,35)) [Lit (Just (27,33)-(27,34)) (LI 5)] Nothing
+*)
+
+(* typed spans
+(27,20)-(27,23)
+(27,32)-(27,35)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+int
+int
 *)

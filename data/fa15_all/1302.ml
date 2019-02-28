@@ -74,3 +74,19 @@ carry
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (22,26)-(22,31)) "carry"
+*)
+
+(* typed spans
+(22,26)-(22,31)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+(int * int list)
+*)

@@ -24,11 +24,31 @@ let fixpoint (f,b) =
 
 (* changed spans
 (9,16)-(9,22)
-EMPTY
-EmptyG
+f
+VarG
 
-(9,25)-(9,26)
-EMPTY
-EmptyG
+(9,16)-(9,22)
+b
+VarG
 
+*)
+
+(* changed exprs
+Var (Just (9,16)-(9,17)) "f"
+Var (Just (9,20)-(9,21)) "b"
+*)
+
+(* typed spans
+(9,16)-(9,17)
+(9,20)-(9,21)
+*)
+
+(* correct types
+'a -> 'a
+'a
+*)
+
+(* bad types
+('a * 'b)
+('a * 'b)
 *)

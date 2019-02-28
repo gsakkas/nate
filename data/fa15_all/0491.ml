@@ -94,3 +94,42 @@ List.combine l1' l2'
 AppG (fromList [VarG])
 
 *)
+
+(* typed spans
+(17,6)-(19,63)
+(19,26)-(19,54)
+(18,6)-(19,63)
+(19,28)-(19,37)
+(19,40)-(19,45)
+(19,58)-(19,61)
+(20,16)-(20,17)
+(21,31)-(21,38)
+(21,15)-(21,68)
+(21,48)-(21,68)
+*)
+
+(* typed spans
+(int * int list)
+int
+(int * int list)
+int
+int
+int list
+int
+int list -> int list -> (int list * int list)
+(int * int) list
+(int * int) list
+*)
+
+(* typed spans
+int list
+int
+int list
+int
+int list
+int list
+'a list
+int list -> int list -> (int * int) list
+(int * int) list
+int list
+*)

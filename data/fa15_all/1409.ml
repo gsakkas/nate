@@ -88,3 +88,8 @@ x
 VarG
 
 *)
+
+(* typed spans
+int
+int
+*)

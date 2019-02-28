@@ -28,3 +28,19 @@ List.mem
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,23)-(7,31)) "List.mem"
+*)
+
+(* typed spans
+(7,23)-(7,31)
+*)
+
+(* correct types
+'a -> 'a list -> bool
+*)
+
+(* bad types
+'a list -> 'a list
+*)

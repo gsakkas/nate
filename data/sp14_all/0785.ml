@@ -70,3 +70,23 @@ e
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (28,23)-(28,38)) "float_of_string"
+Var (Just (28,53)-(28,54)) "e"
+*)
+
+(* typed spans
+(28,23)-(28,38)
+(28,53)-(28,54)
+*)
+
+(* correct types
+string -> float
+expr
+*)
+
+(* bad types
+float -> string
+expr
+*)

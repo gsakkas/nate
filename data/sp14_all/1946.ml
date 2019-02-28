@@ -23,76 +23,32 @@ let fixpoint (f,b) = let f x = ((f x), ((f b) = b)) in wwhile (f, b);;
 *)
 
 (* changed spans
-(2,6)-(2,50)
-EMPTY
-EmptyG
-
-(2,10)-(2,50)
-EMPTY
-EmptyG
-
-(2,19)-(2,26)
-EMPTY
-EmptyG
-
-(2,19)-(2,30)
-EMPTY
-EmptyG
-
-(2,20)-(2,21)
-EMPTY
-EmptyG
-
-(2,24)-(2,25)
-EMPTY
-EmptyG
-
-(2,29)-(2,30)
-EMPTY
-EmptyG
-
-(2,34)-(2,50)
-EMPTY
-EmptyG
-
-(2,35)-(2,37)
-EMPTY
-EmptyG
-
-(2,39)-(2,49)
-EMPTY
-EmptyG
-
-(2,40)-(2,42)
-EMPTY
-EmptyG
-
-(2,45)-(2,48)
-EMPTY
-EmptyG
-
-(9,12)-(9,13)
-EMPTY
-EmptyG
-
-(9,12)-(9,15)
-EMPTY
-EmptyG
-
-(9,14)-(9,15)
-EMPTY
-EmptyG
-
-(11,32)-(11,33)
+(11,27)-(11,47)
 f x
 AppG (fromList [VarG])
-
-(11,35)-(11,46)
-x
-VarG
 
 (11,62)-(11,63)
 b
 VarG
 
+*)
+
+(* changed exprs
+App (Just (7,32)-(7,37)) (Var (Just (7,33)-(7,34)) "f") [Var (Just (7,35)-(7,36)) "x"]
+Var (Just (7,66)-(7,67)) "b"
+*)
+
+(* typed spans
+(7,32)-(7,37)
+(7,66)-(7,67)
+*)
+
+(* correct types
+'a
+'a
+*)
+
+(* bad types
+('a -> 'a) -> ('a -> 'a * bool)
+int
 *)

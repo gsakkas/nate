@@ -58,3 +58,19 @@ List.fold_left
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (23,18)-(23,32)) "List.fold_left"
+*)
+
+(* typed spans
+(23,18)-(23,32)
+*)
+
+(* correct types
+((int * int list) -> (int * int) -> (int * int list)) -> (int * int list) -> (int * int) list -> (int * int list)
+*)
+
+(* bad types
+((int * int list) -> (int * int) -> (int * int)) -> (int * int list) list -> (int * int) -> (int * int)
+*)

@@ -19,3 +19,19 @@ clone_RT
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (4,28)-(4,36)) "clone_RT"
+*)
+
+(* typed spans
+(4,28)-(4,36)
+*)
+
+(* correct types
+'a list -> int -> 'a list
+*)
+
+(* bad types
+'a list -> int -> 'a list
+*)

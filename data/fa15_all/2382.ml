@@ -60,68 +60,28 @@ fun l ->
   | h :: t -> listReverse t @ [h]
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(11,20)-(12,57)
-EMPTY
-EmptyG
-
-(12,2)-(12,57)
-EMPTY
-EmptyG
-
-(12,8)-(12,9)
-EMPTY
-EmptyG
-
-(12,23)-(12,25)
-EMPTY
-EmptyG
-
-(12,36)-(12,51)
-EMPTY
-EmptyG
-
-(12,36)-(12,57)
-EMPTY
-EmptyG
-
-(12,37)-(12,48)
-EMPTY
-EmptyG
-
-(12,49)-(12,50)
-EMPTY
-EmptyG
-
-(12,52)-(12,53)
-EMPTY
-EmptyG
-
-(12,54)-(12,57)
-EMPTY
-EmptyG
-
-(12,55)-(12,56)
-EMPTY
-EmptyG
-
 (25,23)-(25,48)
-EMPTY
-EmptyG
-
-(25,24)-(25,35)
-EMPTY
-EmptyG
-
-(25,36)-(25,47)
-EMPTY
-EmptyG
-
-(25,37)-(25,44)
-EMPTY
-EmptyG
-
-(25,45)-(25,46)
 [["b"]]
-ListG (ListG EmptyG Nothing) Nothing
+ListG (ListG EmptyG)
 
+*)
+
+(* changed exprs
+Lam (Just (6,20)-(7,57)) (VarPat (Just (6,20)-(6,21)) "l") (Case (Just (7,2)-(7,57)) (Var (Just (7,8)-(7,9)) "l") [(ConPat (Just (7,17)-(7,19)) "[]" Nothing,Nothing,List (Just (7,23)-(7,25)) [] Nothing),(ConsPat (Just (7,28)-(7,32)) (VarPat (Just (7,28)-(7,29)) "h") (VarPat (Just (7,31)-(7,32)) "t"),Nothing,App (Just (7,36)-(7,57)) (Var (Just (7,52)-(7,53)) "@") [App (Just (7,36)-(7,51)) (Var (Just (7,37)-(7,48)) "listReverse") [Var (Just (7,49)-(7,50)) "t"],List (Just (7,54)-(7,57)) [Var (Just (7,55)-(7,56)) "h"] Nothing])]) Nothing
+List (Just (23,57)-(23,64)) [List (Just (23,58)-(23,63)) [Lit (Just (23,59)-(23,62)) (LS "b")] Nothing] Nothing
+*)
+
+(* typed spans
+(6,20)-(7,57)
+(23,57)-(23,64)
+*)
+
+(* correct types
+string list list -> string list list
+string list list
+*)
+
+(* bad types
+string -> char list
+'a list list
 *)

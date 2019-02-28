@@ -54,35 +54,47 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (20,17)-(20,20)
-EMPTY
-EmptyG
+0
+LitG
 
 (20,22)-(20,25)
-EMPTY
-EmptyG
-
-(20,23)-(20,24)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (21,19)-(21,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (22,15)-(22,44)
-EMPTY
-EmptyG
-
-(22,16)-(22,17)
-EMPTY
-EmptyG
-
-(22,19)-(22,43)
 clone 0 (List.length l1)
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(22,28)-(22,39)
-List.length l1
-AppG (fromList [VarG])
+*)
 
+(* changed exprs
+Lit (Just (20,17)-(20,18)) (LI 0)
+List (Just (20,20)-(20,22)) [] Nothing
+List (Just (21,19)-(21,21)) [] Nothing
+App (Just (22,15)-(22,39)) (Var (Just (22,15)-(22,20)) "clone") [Lit (Just (22,21)-(22,22)) (LI 0),App (Just (22,23)-(22,39)) (Var (Just (22,24)-(22,35)) "List.length") [Var (Just (22,36)-(22,38)) "l1"]]
+*)
+
+(* typed spans
+(20,17)-(20,18)
+(20,20)-(20,22)
+(21,19)-(21,21)
+(22,15)-(22,39)
+*)
+
+(* correct types
+int
+int list
+int list
+int list
+*)
+
+(* bad types
+int list
+int list
+int
+(int * 'a)
 *)

@@ -79,14 +79,78 @@ let rec mulByDigit i l =
 (* changed spans
 (36,16)-(36,17)
 [0]
-ListG LitG Nothing
+ListG LitG
 
 (36,51)-(36,54)
-EMPTY
-EmptyG
+l
+VarG
 
 (36,55)-(36,77)
-EMPTY
-EmptyG
+mulByDigit (i - 1) l
+AppG (fromList [VarG,BopG EmptyG EmptyG])
 
+(36,55)-(36,77)
+mulByDigit
+VarG
+
+(36,55)-(36,77)
+i - 1
+BopG VarG LitG
+
+(36,55)-(36,77)
+i
+VarG
+
+(36,55)-(36,77)
+1
+LitG
+
+(36,55)-(36,77)
+l
+VarG
+
+*)
+
+(* changed exprs
+List (Just (36,16)-(36,19)) [Lit (Just (36,17)-(36,18)) (LI 0)] Nothing
+Var (Just (36,53)-(36,54)) "l"
+App (Just (36,55)-(36,77)) (Var (Just (36,56)-(36,66)) "mulByDigit") [Bop (Just (36,67)-(36,74)) Minus (Var (Just (36,68)-(36,69)) "i") (Lit (Just (36,72)-(36,73)) (LI 1)),Var (Just (36,75)-(36,76)) "l"]
+Var (Just (36,56)-(36,66)) "mulByDigit"
+Bop (Just (36,67)-(36,74)) Minus (Var (Just (36,68)-(36,69)) "i") (Lit (Just (36,72)-(36,73)) (LI 1))
+Var (Just (36,68)-(36,69)) "i"
+Lit (Just (36,72)-(36,73)) (LI 1)
+Var (Just (36,75)-(36,76)) "l"
+*)
+
+(* typed spans
+(36,16)-(36,19)
+(36,53)-(36,54)
+(36,55)-(36,77)
+(36,56)-(36,66)
+(36,67)-(36,74)
+(36,68)-(36,69)
+(36,72)-(36,73)
+(36,75)-(36,76)
+*)
+
+(* correct types
+int list
+int list
+int list
+int -> int list -> int list
+int
+int
+int
+int list
+*)
+
+(* bad types
+int
+int list
+int list
+int list
+int list
+int list
+int list
+int list
 *)

@@ -29,6 +29,26 @@ VarG
 
 (7,59)-(7,60)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+Var (Just (7,44)-(7,48)) "seen"
+List (Just (7,61)-(7,64)) [Var (Just (7,62)-(7,63)) "h"] Nothing
+*)
+
+(* typed spans
+(7,44)-(7,48)
+(7,61)-(7,64)
+*)
+
+(* correct types
+'a list
+'a list
+*)
+
+(* bad types
+'a list
+'a
 *)

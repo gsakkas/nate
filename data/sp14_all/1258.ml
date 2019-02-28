@@ -68,3 +68,19 @@ adder
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (29,2)-(29,7)) "adder"
+*)
+
+(* typed spans
+(29,2)-(29,7)
+*)
+
+(* correct types
+int -> int list -> int list -> int list
+*)
+
+(* bad types
+'a -> 'b -> int list -> 'c
+*)

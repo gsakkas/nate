@@ -34,3 +34,19 @@ List.fold_left
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (12,16)-(12,30)) "List.fold_left"
+*)
+
+(* typed spans
+(12,16)-(12,30)
+*)
+
+(* correct types
+((int * int list) -> int -> (int * int list)) -> (int * int list) -> int list -> (int * int list)
+*)
+
+(* bad types
+((int * int list) -> int -> int) -> (int * int list) list -> int -> int
+*)

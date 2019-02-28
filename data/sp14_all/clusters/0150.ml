@@ -1,4 +1,4 @@
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing]))) Nothing])
-(len , sum :: (x' :: xs'))
-(len , sum :: (x' :: xs'))
-(len , sum :: (x' :: xs'))
+BopG VarG (IteG EmptyG EmptyG EmptyG)
+x + (if t = []
+     then 0
+     else sumList t)

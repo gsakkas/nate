@@ -75,20 +75,23 @@ BopG VarG LitG
 EMPTY
 EmptyG
 
-(31,17)-(31,18)
-EMPTY
-EmptyG
-
 (31,25)-(31,31)
-EMPTY
-EmptyG
-
-(31,32)-(31,58)
-EMPTY
-EmptyG
-
-(31,33)-(31,34)
 List.rev
 VarG
 
+*)
+
+(* typed spans
+(31,5)-(31,11)
+(31,17)-(31,25)
+*)
+
+(* typed spans
+bool
+int list -> int list
+*)
+
+(* typed spans
+bool
+int list -> int list -> int list
 *)

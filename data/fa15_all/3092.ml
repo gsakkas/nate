@@ -27,3 +27,8 @@ f x = x
 BopG (AppG (fromList [EmptyG])) VarG
 
 *)
+
+(* typed spans
+bool
+bool
+*)

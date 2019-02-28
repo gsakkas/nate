@@ -87,10 +87,22 @@ let bigMul l1 l2 =
 (* changed spans
 (38,31)-(38,45)
 (mulByDigit x q , [])
-TupleG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+TupleG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
-(39,2)-(40,75)
-[]
-ListG EmptyG Nothing
+*)
 
+(* changed exprs
+Tuple (Just (38,31)-(38,53)) [App (Just (38,32)-(38,48)) (Var (Just (38,33)-(38,43)) "mulByDigit") [Var (Just (38,44)-(38,45)) "x",Var (Just (38,46)-(38,47)) "q"],List (Just (38,50)-(38,52)) [] Nothing]
+*)
+
+(* typed spans
+(38,31)-(38,53)
+*)
+
+(* correct types
+(int list * 'a list)
+*)
+
+(* bad types
+int list
 *)

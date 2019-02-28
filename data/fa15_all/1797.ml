@@ -55,19 +55,11 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(16,28)-(16,40)
-EMPTY
-EmptyG
-
-(16,47)-(16,50)
+(16,41)-(16,43)
 t
 VarG
 
 (17,30)-(17,42)
-EMPTY
-EmptyG
-
-(17,49)-(17,52)
 t
 VarG
 
@@ -103,4 +95,56 @@ VarG
 ex
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (16,31)-(16,32)) "t"
+Var (Just (17,33)-(17,34)) "t"
+Var (Just (18,33)-(18,35)) "ex"
+Var (Just (18,52)-(18,54)) "ex"
+Var (Just (19,24)-(19,26)) "ex"
+Var (Just (19,42)-(19,44)) "ex"
+Var (Just (22,10)-(22,12)) "ex"
+Var (Just (23,20)-(23,22)) "ex"
+Var (Just (23,39)-(23,41)) "ex"
+Var (Just (23,58)-(23,60)) "ex"
+*)
+
+(* typed spans
+(16,31)-(16,32)
+(17,33)-(17,34)
+(18,33)-(18,35)
+(18,52)-(18,54)
+(19,24)-(19,26)
+(19,42)-(19,44)
+(22,10)-(22,12)
+(23,20)-(23,22)
+(23,39)-(23,41)
+(23,58)-(23,60)
+*)
+
+(* correct types
+expr
+expr
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+*)
+
+(* bad types
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
+expr -> string
 *)

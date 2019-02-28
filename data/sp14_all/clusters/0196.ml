@@ -1,2 +1,4 @@
-UopG (AppG (fromList [EmptyG]))
-(-. eval (e3 , x , y))
+IteG (BopG EmptyG EmptyG) (ConAppG (Just EmptyG)) (ListG EmptyG)
+if n > 0
+then x :: (clone x (n - 1))
+else []

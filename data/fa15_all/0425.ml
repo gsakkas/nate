@@ -36,3 +36,18 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+(7,31)-(7,32)
+(7,43)-(7,44)
+*)
+
+(* typed spans
+bool
+bool
+*)
+
+(* typed spans
+(int * int)
+(int * int)
+*)

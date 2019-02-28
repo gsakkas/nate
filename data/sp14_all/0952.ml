@@ -21,6 +21,22 @@ let rec sepConcat sep sl =
 (* changed spans
 (7,31)-(7,33)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+List (Just (7,31)-(7,33)) [] Nothing
+*)
+
+(* typed spans
+(7,31)-(7,33)
+*)
+
+(* correct types
+string list
+*)
+
+(* bad types
+string
 *)

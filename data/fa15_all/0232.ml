@@ -23,16 +23,28 @@ let fixpoint (f,b) =
 f b
 AppG (fromList [VarG])
 
-(7,34)-(7,52)
-b
+(7,44)-(7,50)
+ff
 VarG
 
-(7,44)-(7,50)
-EMPTY
-EmptyG
+*)
 
-(7,48)-(7,49)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (7,29)-(7,32)) (Var (Just (7,29)-(7,30)) "f") [Var (Just (7,31)-(7,32)) "b"]
+Var (Just (7,46)-(7,48)) "ff"
+*)
 
+(* typed spans
+(7,29)-(7,32)
+(7,46)-(7,48)
+*)
+
+(* correct types
+'a
+'a
+*)
+
+(* bad types
+'a -> 'a
+'a
 *)

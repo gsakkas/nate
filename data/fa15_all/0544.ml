@@ -30,3 +30,8 @@ fs
 VarG
 
 *)
+
+(* typed spans
+'t17 -> 't17
+'t17
+*)

@@ -14,7 +14,27 @@ n
 VarG
 
 (2,49)-(2,52)
-EMPTY
-EmptyG
+x
+VarG
 
+*)
+
+(* changed exprs
+Var (Just (2,23)-(2,24)) "n"
+Var (Just (2,49)-(2,50)) "x"
+*)
+
+(* typed spans
+(2,23)-(2,24)
+(2,49)-(2,50)
+*)
+
+(* correct types
+int
+'a
+*)
+
+(* bad types
+int
+int list
 *)

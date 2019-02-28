@@ -24,3 +24,19 @@ x
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (6,30)-(6,31)) "x"
+*)
+
+(* typed spans
+(6,30)-(6,31)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+string list
+*)

@@ -52,16 +52,20 @@ let bigAdd l1 l2 =
 (y + z , b @ ([w mod 10] @ [w / 10]))
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(17,45)-(17,46)
-[w mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
+*)
 
-(17,47)-(17,71)
-[w mod 10] @ [w / 10]
-AppG (fromList [ListG EmptyG Nothing])
+(* changed exprs
+Tuple (Just (18,25)-(18,65)) [Bop (Just (18,26)-(18,33)) Plus (Var (Just (18,27)-(18,28)) "y") (Var (Just (18,31)-(18,32)) "z"),App (Just (18,35)-(18,64)) (Var (Just (18,38)-(18,39)) "@") [Var (Just (18,36)-(18,37)) "b",App (Just (18,40)-(18,63)) (Var (Just (18,52)-(18,53)) "@") [List (Just (18,41)-(18,51)) [Bop (Just (18,42)-(18,50)) Mod (Var (Just (18,42)-(18,43)) "w") (Lit (Just (18,48)-(18,50)) (LI 10))] Nothing,List (Just (18,54)-(18,62)) [Bop (Just (18,55)-(18,61)) Div (Var (Just (18,55)-(18,56)) "w") (Lit (Just (18,59)-(18,61)) (LI 10))] Nothing]]]
+*)
 
-(17,48)-(17,58)
-[w / 10]
-ListG (BopG EmptyG EmptyG) Nothing
+(* typed spans
+(18,25)-(18,65)
+*)
 
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+((int * int list) * ('a * 'b))
 *)

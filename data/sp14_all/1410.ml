@@ -26,15 +26,27 @@ let rec digitalRoot n =
 LitG
 
 (8,62)-(8,72)
-EMPTY
-EmptyG
-
-(8,63)-(8,64)
-EMPTY
-EmptyG
-
-(8,69)-(8,71)
 0
 LitG
 
+*)
+
+(* changed exprs
+Lit (Just (8,25)-(8,26)) (LI 0)
+Lit (Just (8,50)-(8,51)) (LI 0)
+*)
+
+(* typed spans
+(8,25)-(8,26)
+(8,50)-(8,51)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+int -> int -> int
+int
 *)

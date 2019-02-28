@@ -1,5 +1,9 @@
-LetG NonRec (fromList [ConAppG (Just EmptyG) Nothing]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let asd3 = asd :: t in
-let (_ , asd4) =
-  padZero asd3 (asd2 :: b) in
-(asd3 , asd4)
+CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ConAppG (Just EmptyG))])
+match rdm with
+| 0 -> buildY ()
+| 1 -> buildX ()
+| 2 -> Cosine (build (rand , depth - 1))
+| 3 -> Sine (build (rand , depth - 1))
+| 4 -> Average (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> Times (build (rand , depth - 1) , build (rand , depth - 1))
+| 6 -> Thresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))

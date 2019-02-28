@@ -53,26 +53,6 @@ fun h ->
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
 (5,22)-(5,23)
-EMPTY
-EmptyG
-
-(5,29)-(5,35)
-EMPTY
-EmptyG
-
-(5,29)-(5,43)
-EMPTY
-EmptyG
-
-(5,36)-(5,43)
-EMPTY
-EmptyG
-
-(5,37)-(5,39)
-EMPTY
-EmptyG
-
-(5,41)-(5,42)
 h
 VarG
 
@@ -92,4 +72,31 @@ VarG
 filter tl h
 AppG (fromList [VarG])
 
+*)
+
+(* typed spans
+(2,15)-(5,65)
+(2,17)-(5,65)
+(5,22)-(5,23)
+(5,35)-(5,48)
+(5,46)-(5,47)
+(5,54)-(5,65)
+*)
+
+(* typed spans
+'a list -> 'a -> 'a list
+'a -> 'a list
+'a
+'a list
+'a
+'a list
+*)
+
+(* typed spans
+('a list * 'a) -> 'a list
+'a list
+'a
+'a list
+'a
+'a list -> 'a list
 *)

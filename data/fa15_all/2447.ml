@@ -66,49 +66,25 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (24,6)-(26,41)
-EMPTY
-EmptyG
-
-(25,8)-(25,73)
-EMPTY
-EmptyG
-
-(25,14)-(25,15)
 match a2 with
 | [] -> (0 :: a1 , (sum / 10) :: ((sum mod 10) :: a2))
 | h :: t -> ((sum / 10) :: a1 , (sum mod 10) :: a2)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(25,29)-(25,39)
-(sum / 10) :: ((sum mod 10) :: a2)
-ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing
+*)
 
-(25,29)-(25,55)
-(0 :: a1 , (sum / 10) :: ((sum mod 10) :: a2))
-TupleG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG]))) Nothing,ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing])
+(* changed exprs
+Case (Just (24,6)-(26,58)) (Var (Just (24,12)-(24,14)) "a2") [(ConPat (Just (25,8)-(25,10)) "[]" Nothing,Nothing,Tuple (Just (25,14)-(25,61)) [ConApp (Just (25,15)-(25,24)) "::" (Just (Tuple (Just (25,16)-(25,23)) [Lit (Just (25,16)-(25,17)) (LI 0),Var (Just (25,21)-(25,23)) "a1"])) Nothing,ConApp (Just (25,26)-(25,60)) "::" (Just (Tuple (Just (25,27)-(25,59)) [Bop (Just (25,27)-(25,37)) Div (Var (Just (25,28)-(25,31)) "sum") (Lit (Just (25,34)-(25,36)) (LI 10)),ConApp (Just (25,41)-(25,59)) "::" (Just (Tuple (Just (25,41)-(25,59)) [Bop (Just (25,41)-(25,53)) Mod (Var (Just (25,42)-(25,45)) "sum") (Lit (Just (25,50)-(25,52)) (LI 10)),Var (Just (25,57)-(25,59)) "a2"])) Nothing])) Nothing]),(ConsPat (Just (26,8)-(26,12)) (VarPat (Just (26,8)-(26,9)) "h") (VarPat (Just (26,11)-(26,12)) "t"),Nothing,Tuple (Just (26,16)-(26,58)) [ConApp (Just (26,17)-(26,35)) "::" (Just (Tuple (Just (26,18)-(26,34)) [Bop (Just (26,18)-(26,28)) Div (Var (Just (26,19)-(26,22)) "sum") (Lit (Just (26,25)-(26,27)) (LI 10)),Var (Just (26,32)-(26,34)) "a1"])) Nothing,ConApp (Just (26,37)-(26,57)) "::" (Just (Tuple (Just (26,38)-(26,56)) [Bop (Just (26,38)-(26,50)) Mod (Var (Just (26,39)-(26,42)) "sum") (Lit (Just (26,47)-(26,49)) (LI 10)),Var (Just (26,54)-(26,56)) "a2"])) Nothing])]
+*)
 
-(25,43)-(25,55)
-EMPTY
-EmptyG
+(* typed spans
+(24,6)-(26,58)
+*)
 
-(25,44)-(25,47)
-EMPTY
-EmptyG
+(* correct types
+(int list * int list)
+*)
 
-(25,52)-(25,54)
-(sum mod 10) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
-
-(26,6)-(26,41)
-a2
-VarG
-
-(26,28)-(26,33)
-sum mod 10
-BopG VarG LitG
-
-(26,37)-(26,39)
-10
-LitG
-
+(* bad types
+(int list * int list list)
 *)

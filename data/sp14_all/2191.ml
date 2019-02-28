@@ -14,15 +14,23 @@ let rec wwhile (f,b) =
 
 (* changed spans
 (4,8)-(4,14)
-EMPTY
-EmptyG
-
-(4,9)-(4,10)
-EMPTY
-EmptyG
-
-(4,12)-(4,13)
 check
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (4,8)-(4,13)) "check"
+*)
+
+(* typed spans
+(4,8)-(4,13)
+*)
+
+(* correct types
+('a * bool)
+*)
+
+(* bad types
+(bool -> 'a * bool)
 *)

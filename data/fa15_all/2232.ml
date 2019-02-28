@@ -54,37 +54,25 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (18,16)-(18,42)
-(o , x :: l)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-
-(18,19)-(18,20)
-EMPTY
-EmptyG
-
-(18,19)-(18,25)
-EMPTY
-EmptyG
-
-(18,23)-(18,25)
-EMPTY
-EmptyG
-
-(18,31)-(18,42)
 match a with
 | (o , []) -> (o , [x])
 | (o , l) -> (o , x :: l)
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(18,37)-(18,38)
-o
-VarG
+*)
 
-(18,40)-(18,41)
-[x]
-ListG VarG Nothing
+(* changed exprs
+Case (Just (18,16)-(18,74)) (Var (Just (18,22)-(18,23)) "a") [(TuplePat (Just (18,32)-(18,36)) [VarPat (Just (18,32)-(18,33)) "o",ConPat (Just (18,34)-(18,36)) "[]" Nothing],Nothing,Tuple (Just (18,41)-(18,49)) [Var (Just (18,42)-(18,43)) "o",List (Just (18,45)-(18,48)) [Var (Just (18,46)-(18,47)) "x"] Nothing]),(TuplePat (Just (18,53)-(18,56)) [VarPat (Just (18,53)-(18,54)) "o",VarPat (Just (18,55)-(18,56)) "l"],Nothing,Tuple (Just (18,61)-(18,74)) [Var (Just (18,62)-(18,63)) "o",ConApp (Just (18,65)-(18,73)) "::" (Just (Tuple (Just (18,66)-(18,72)) [Var (Just (18,66)-(18,67)) "x",Var (Just (18,71)-(18,72)) "l"])) Nothing])]
+*)
 
-(19,4)-(23,51)
-l
-VarG
+(* typed spans
+(18,16)-(18,74)
+*)
 
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+unit
 *)

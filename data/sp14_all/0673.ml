@@ -14,8 +14,20 @@ let pipe fs =
 x a
 AppG (fromList [VarG])
 
-(2,35)-(2,77)
-a
-VarG
+*)
 
+(* changed exprs
+App (Just (3,18)-(3,21)) (Var (Just (3,18)-(3,19)) "x") [Var (Just (3,20)-(3,21)) "a"]
+*)
+
+(* typed spans
+(3,18)-(3,21)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a
 *)

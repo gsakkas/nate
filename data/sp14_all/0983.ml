@@ -121,32 +121,20 @@ let updateTotal =
 (upper_mult @ [0] , updateTotal)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(48,4)-(52,67)
-EMPTY
-EmptyG
+*)
 
-(48,10)-(48,21)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (47,4)-(50,37)) NonRec [(TuplePat (Just (47,9)-(47,25)) [VarPat (Just (47,9)-(47,19)) "upper_mult",VarPat (Just (47,20)-(47,25)) "total"],Var (Just (47,29)-(47,30)) "a")] (Let (Just (48,4)-(50,37)) NonRec [(VarPat (Just (48,8)-(48,16)) "newTotal",App (Just (48,19)-(48,42)) (Var (Just (48,19)-(48,29)) "mulByDigit") [Var (Just (48,30)-(48,31)) "x",Var (Just (48,32)-(48,42)) "upper_mult"])] (Let (Just (49,4)-(50,37)) NonRec [(VarPat (Just (49,8)-(49,19)) "updateTotal",App (Just (49,22)-(49,43)) (Var (Just (49,22)-(49,28)) "bigAdd") [Var (Just (49,29)-(49,37)) "newTotal",Var (Just (49,38)-(49,43)) "total"])] (Tuple (Just (50,4)-(50,37)) [App (Just (50,5)-(50,23)) (Var (Just (50,17)-(50,18)) "@") [Var (Just (50,6)-(50,16)) "upper_mult",List (Just (50,19)-(50,22)) [Lit (Just (50,20)-(50,21)) (LI 0)] Nothing],Var (Just (50,25)-(50,36)) "updateTotal"])))
+*)
 
-(49,12)-(49,17)
-EMPTY
-EmptyG
+(* typed spans
+(47,4)-(50,37)
+*)
 
-(51,34)-(51,35)
-EMPTY
-EmptyG
+(* correct types
+(int list * int list)
+*)
 
-(52,8)-(52,67)
-upper_mult
-VarG
-
-(52,52)-(52,53)
-upper_mult @ [0]
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(52,55)-(52,66)
-[0]
-ListG LitG Nothing
-
+(* bad types
+int list
 *)

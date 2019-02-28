@@ -1,2 +1,5 @@
-IteG (BopG EmptyG EmptyG) (ListG EmptyG Nothing) (ListG EmptyG Nothing)
-if v = 0 then [1] else [0]
+CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG)])
+match List.rev l with
+| _ :: [] -> []
+| h :: m :: t -> mulByDigit i
+                            (m :: t) @ [((h * i) / 10) + ((m * i) mod 10) ; (h * i) mod 10]

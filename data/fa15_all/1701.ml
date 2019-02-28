@@ -70,3 +70,8 @@ BopG (BopG EmptyG EmptyG) LitG
 LitG
 
 *)
+
+(* typed spans
+float
+float
+*)

@@ -67,3 +67,7 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+'t38 list
+*)

@@ -28,10 +28,6 @@ let removeDuplicates l =
 EMPTY
 EmptyG
 
-(8,8)-(9,29)
-EMPTY
-EmptyG
-
 (8,32)-(8,37)
 h
 VarG
@@ -40,21 +36,24 @@ VarG
 EMPTY
 EmptyG
 
-(8,55)-(8,60)
-EMPTY
-EmptyG
-
-(8,55)-(8,67)
-EMPTY
-EmptyG
-
-(8,61)-(8,62)
-EMPTY
-EmptyG
-
 (9,8)-(9,29)
 let rest' = t in
 helper (seen' , rest')
 LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
 
+*)
+
+(* typed spans
+(7,32)-(7,33)
+(8,8)-(8,46)
+*)
+
+(* typed spans
+'a
+'a list
+*)
+
+(* typed spans
+'a list
+'a list list
 *)

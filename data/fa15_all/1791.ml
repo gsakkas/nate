@@ -98,3 +98,23 @@ build
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (42,14)-(42,19)) "build"
+Var (Just (42,43)-(42,48)) "build"
+*)
+
+(* typed spans
+(42,14)-(42,19)
+(42,43)-(42,48)
+*)
+
+(* correct types
+((int * int) -> int * int) -> expr
+((int * int) -> int * int) -> expr
+*)
+
+(* bad types
+unit -> expr
+unit -> expr
+*)

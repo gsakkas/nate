@@ -45,36 +45,48 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(16,15)-(16,20)
-EMPTY
-EmptyG
-
 (16,15)-(16,22)
-EMPTY
-EmptyG
-
-(17,15)-(17,20)
-EMPTY
-EmptyG
+x
+VarG
 
 (17,15)-(17,22)
-EMPTY
-EmptyG
+y
+VarG
 
 (18,28)-(18,43)
 evalhelper p1 x y
 AppG (fromList [VarG])
 
-(19,19)-(19,46)
-y
-VarG
-
 (19,30)-(19,45)
 evalhelper p1 x y
 AppG (fromList [VarG])
 
-(20,2)-(20,18)
-y
-VarG
+*)
 
+(* changed exprs
+Var (Just (16,15)-(16,16)) "x"
+Var (Just (17,15)-(17,16)) "y"
+App (Just (18,28)-(18,47)) (Var (Just (18,29)-(18,39)) "evalhelper") [Var (Just (18,40)-(18,42)) "p1",Var (Just (18,43)-(18,44)) "x",Var (Just (18,45)-(18,46)) "y"]
+App (Just (19,30)-(19,49)) (Var (Just (19,31)-(19,41)) "evalhelper") [Var (Just (19,42)-(19,44)) "p1",Var (Just (19,45)-(19,46)) "x",Var (Just (19,47)-(19,48)) "y"]
+*)
+
+(* typed spans
+(16,15)-(16,16)
+(17,15)-(17,16)
+(18,28)-(18,47)
+(19,30)-(19,49)
+*)
+
+(* correct types
+float
+float
+float
+float
+*)
+
+(* bad types
+float
+float
+float
+float
 *)

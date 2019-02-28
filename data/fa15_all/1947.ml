@@ -106,10 +106,19 @@ LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (4,13)-(4,15)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (5,22)-(5,24)
 List.combine l1 l2
 AppG (fromList [VarG])
 
+*)
+
+(* typed spans
+int -> int -> int list
+int list -> int list -> int list
+(int * int list)
+(int * int list)
+(int * int list)
+(int * int) list
 *)

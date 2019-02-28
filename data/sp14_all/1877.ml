@@ -96,28 +96,52 @@ let rec eval (e,x,y) =
 (((atan res1 +. atan res2) -. atan res3) *. 2.0) /. (3.0 *. pi)
 BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
 
-(42,13)-(42,56)
-EMPTY
-EmptyG
-
-(42,14)-(42,41)
-(atan res1 +. atan res2) -. atan res3
-BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
-
-(42,15)-(42,26)
-atan res1 +. atan res2
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-
-(42,60)-(42,61)
-2.0
-LitG
-
-(43,15)-(43,19)
-EMPTY
-EmptyG
+(43,15)-(43,36)
+(- 1.0) *. res3
+BopG (UopG EmptyG) VarG
 
 (43,15)-(43,36)
-EMPTY
-EmptyG
+(- 1.0)
+UopG LitG
 
+(43,15)-(43,36)
+1.0
+LitG
+
+(43,15)-(43,36)
+res3
+VarG
+
+*)
+
+(* changed exprs
+Bop (Just (42,12)-(43,25)) FDiv (Bop (Just (42,12)-(42,66)) FTimes (Bop (Just (42,13)-(42,58)) FMinus (Bop (Just (42,14)-(42,42)) FPlus (App (Just (42,15)-(42,26)) (Var (Just (42,16)-(42,20)) "atan") [Var (Just (42,21)-(42,25)) "res1"]) (App (Just (42,30)-(42,41)) (Var (Just (42,31)-(42,35)) "atan") [Var (Just (42,36)-(42,40)) "res2"])) (App (Just (42,46)-(42,57)) (Var (Just (42,47)-(42,51)) "atan") [Var (Just (42,52)-(42,56)) "res3"])) (Lit (Just (42,62)-(42,65)) (LD 2.0))) (Bop (Just (43,14)-(43,25)) FTimes (Lit (Just (43,15)-(43,18)) (LD 3.0)) (Var (Just (43,22)-(43,24)) "pi"))
+Bop (Just (44,15)-(44,29)) FTimes (Uop (Just (44,15)-(44,21)) Neg (Lit (Just (44,17)-(44,20)) (LD 1.0))) (Var (Just (44,25)-(44,29)) "res3")
+Uop (Just (44,15)-(44,21)) Neg (Lit (Just (44,17)-(44,20)) (LD 1.0))
+Lit (Just (44,17)-(44,20)) (LD 1.0)
+Var (Just (44,25)-(44,29)) "res3"
+*)
+
+(* typed spans
+(42,12)-(43,25)
+(44,15)-(44,29)
+(44,15)-(44,21)
+(44,17)-(44,20)
+(44,25)-(44,29)
+*)
+
+(* correct types
+float
+float
+int
+float
+float
+*)
+
+(* bad types
+int
+int
+int
+int
+int
 *)

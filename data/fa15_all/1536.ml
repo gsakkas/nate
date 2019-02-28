@@ -30,8 +30,28 @@ TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 false
 LitG
 
-(6,61)-(6,62)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Tuple (Just (7,35)-(7,44)) [Var (Just (7,36)-(7,37)) "b",Lit (Just (7,39)-(7,43)) (LB True)]
+Tuple (Just (7,50)-(7,64)) [App (Just (7,51)-(7,56)) (Var (Just (7,52)-(7,53)) "f") [Var (Just (7,54)-(7,55)) "b"],Lit (Just (7,58)-(7,63)) (LB False)]
+Lit (Just (7,58)-(7,63)) (LB False)
+*)
+
+(* typed spans
+(7,35)-(7,44)
+(7,50)-(7,64)
+(7,58)-(7,63)
+*)
+
+(* correct types
+('a * bool)
+('a * bool)
+bool
+*)
+
+(* bad types
+'a -> ('a * bool)
+'a -> ('a * bool)
+'a -> ('a * bool)
 *)

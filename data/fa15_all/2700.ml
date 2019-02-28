@@ -23,13 +23,9 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,23)-(7,26)
+(7,23)-(7,44)
 List.mem h seen = false
 BopG (AppG (fromList [EmptyG])) LitG
-
-(7,23)-(7,44)
-EMPTY
-EmptyG
 
 (7,37)-(7,41)
 EMPTY
@@ -39,4 +35,19 @@ EmptyG
 false
 LitG
 
+*)
+
+(* typed spans
+(7,23)-(7,48)
+(7,43)-(7,48)
+*)
+
+(* typed spans
+bool
+bool
+*)
+
+(* typed spans
+bool
+'a list
 *)

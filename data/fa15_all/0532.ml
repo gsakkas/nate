@@ -31,8 +31,20 @@ let removeDuplicates l =
 List.mem h seen
 AppG (fromList [VarG])
 
-(8,25)-(8,34)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (8,16)-(8,31)) (Var (Just (8,16)-(8,24)) "List.mem") [Var (Just (8,25)-(8,26)) "h",Var (Just (8,27)-(8,31)) "seen"]
+*)
+
+(* typed spans
+(8,16)-(8,31)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+('a * 'a list) list -> bool
 *)

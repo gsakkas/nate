@@ -58,72 +58,20 @@ let addit =
  else 0 , (addit / 10) :: num)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(16,19)-(16,65)
-EMPTY
-EmptyG
+*)
 
-(16,20)-(16,21)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (15,6)-(17,71)) NonRec [(TuplePat (Just (15,11)-(15,18)) [VarPat (Just (15,11)-(15,14)) "l1'",VarPat (Just (15,15)-(15,18)) "l2'"],Var (Just (15,22)-(15,23)) "x")] (Let (Just (16,6)-(17,71)) NonRec [(VarPat (Just (16,10)-(16,15)) "addit",Bop (Just (16,18)-(16,37)) Plus (Bop (Just (16,18)-(16,29)) Plus (Var (Just (16,19)-(16,22)) "l1'") (Var (Just (16,25)-(16,28)) "l2'")) (Var (Just (16,32)-(16,37)) "carry"))] (Tuple (Just (17,6)-(17,71)) [Ite (Just (17,7)-(17,47)) (Bop (Just (17,11)-(17,21)) Gt (Var (Just (17,11)-(17,16)) "addit") (Lit (Just (17,19)-(17,21)) (LI 10))) (Bop (Just (17,27)-(17,39)) Mod (Var (Just (17,27)-(17,32)) "addit") (Lit (Just (17,37)-(17,39)) (LI 10))) (Lit (Just (17,45)-(17,46)) (LI 0)),ConApp (Just (17,49)-(17,70)) "::" (Just (Tuple (Just (17,50)-(17,69)) [Bop (Just (17,50)-(17,62)) Div (Var (Just (17,51)-(17,56)) "addit") (Lit (Just (17,59)-(17,61)) (LI 10)),Var (Just (17,66)-(17,69)) "num"])) Nothing]))
+*)
 
-(16,23)-(16,64)
-EMPTY
-EmptyG
+(* typed spans
+(15,6)-(17,71)
+*)
 
-(16,27)-(16,32)
-EMPTY
-EmptyG
+(* correct types
+(int * int list)
+*)
 
-(16,27)-(16,36)
-EMPTY
-EmptyG
-
-(16,35)-(16,36)
-EMPTY
-EmptyG
-
-(16,42)-(16,47)
-EMPTY
-EmptyG
-
-(16,42)-(16,54)
-EMPTY
-EmptyG
-
-(16,51)-(16,54)
-EMPTY
-EmptyG
-
-(16,60)-(16,63)
-EMPTY
-EmptyG
-
-(18,23)-(18,35)
-EMPTY
-EmptyG
-
-(18,24)-(18,31)
-EMPTY
-EmptyG
-
-(18,32)-(18,34)
-EMPTY
-EmptyG
-
-(18,38)-(18,50)
-EMPTY
-EmptyG
-
-(18,39)-(18,46)
-EMPTY
-EmptyG
-
-(18,47)-(18,49)
-l1'
-VarG
-
-(18,54)-(18,59)
-l2'
-VarG
-
+(* bad types
+(int * int list)
 *)

@@ -56,3 +56,7 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+string list
+*)

@@ -83,3 +83,15 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+(34,2)-(34,65)
+*)
+
+(* typed spans
+int list
+*)
+
+(* typed spans
+int list -> int list
+*)

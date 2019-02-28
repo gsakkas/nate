@@ -49,42 +49,6 @@ List.rev (helper ([] , l))
 LetG NonRec (fromList [LamG EmptyG]) (LetG Rec (fromList [EmptyG]) EmptyG)
 
 (8,20)-(8,24)
-EMPTY
-EmptyG
-
-(9,8)-(10,50)
-EMPTY
-EmptyG
-
-(9,9)-(9,44)
-r
-VarG
-
-(9,12)-(9,13)
-EMPTY
-EmptyG
-
-(9,12)-(9,17)
-EMPTY
-EmptyG
-
-(9,16)-(9,17)
-EMPTY
-EmptyG
-
-(9,23)-(9,28)
-EMPTY
-EmptyG
-
-(9,23)-(9,44)
-EMPTY
-EmptyG
-
-(9,29)-(9,31)
-EMPTY
-EmptyG
-
-(9,32)-(9,44)
 assignSeen h r seen
 AppG (fromList [VarG])
 
@@ -93,11 +57,35 @@ assignSeen
 VarG
 
 (9,38)-(9,43)
-EMPTY
-EmptyG
+r
+VarG
 
 (10,9)-(10,49)
 seen
 VarG
 
+*)
+
+(* typed spans
+(3,2)-(11,27)
+(9,20)-(9,39)
+(9,20)-(9,30)
+(9,33)-(9,34)
+(9,35)-(9,39)
+*)
+
+(* typed spans
+'a list
+'a list
+'a -> 'a list -> 'a list -> 'a list
+'a list
+'a list
+*)
+
+(* typed spans
+'a list
+'a list
+'a
+'a list
+'a list
 *)

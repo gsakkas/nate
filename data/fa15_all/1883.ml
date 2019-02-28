@@ -47,23 +47,7 @@ let rec build (rand,depth) =
 EMPTY
 EmptyG
 
-(15,16)-(15,20)
-EMPTY
-EmptyG
-
 (19,9)-(19,52)
-EMPTY
-EmptyG
-
-(19,12)-(19,16)
-EMPTY
-EmptyG
-
-(19,12)-(19,22)
-EMPTY
-EmptyG
-
-(19,21)-(19,22)
 EMPTY
 EmptyG
 
@@ -71,12 +55,13 @@ EmptyG
 EMPTY
 EmptyG
 
-(19,50)-(19,52)
-EMPTY
-EmptyG
+*)
 
-(20,9)-(20,46)
-EMPTY
-EmptyG
+(* typed spans
+*)
 
+(* typed spans
+*)
+
+(* typed spans
 *)

@@ -92,19 +92,25 @@ mulByDigit prod l1
 AppG (fromList [VarG])
 
 (35,59)-(35,71)
-EMPTY
-EmptyG
-
-(35,60)-(35,61)
-EMPTY
-EmptyG
-
-(35,64)-(35,70)
-EMPTY
-EmptyG
-
-(35,65)-(35,66)
 prod
 VarG
 
+*)
+
+(* typed spans
+(37,8)-(37,71)
+(37,47)-(37,67)
+(37,59)-(37,63)
+*)
+
+(* typed spans
+(int * int list)
+int list
+int
+*)
+
+(* typed spans
+(int * 'a list)
+int list -> int list
+int
 *)

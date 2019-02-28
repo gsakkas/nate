@@ -1,4 +1,2 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),AppG (fromList [AppG (fromList [VarG])])]))) Nothing)])
-match l with
-| [] -> l'
-| h :: t -> (List.hd l) :: (listReverse (List.tl l))
+TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))])))])
+(p1 , (re / 10) :: ((re mod 10) :: b))

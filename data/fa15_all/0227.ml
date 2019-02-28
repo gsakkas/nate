@@ -26,32 +26,20 @@ let n =
 (n , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
-(6,39)-(6,55)
-EMPTY
-EmptyG
+*)
 
-(6,40)-(6,41)
-EMPTY
-EmptyG
+(* changed exprs
+Let (Just (7,9)-(7,61)) NonRec [(VarPat (Just (7,14)-(7,15)) "n",Lam (Just (7,16)-(7,50)) (VarPat (Just (7,16)-(7,17)) "x") (Let (Just (7,20)-(7,50)) NonRec [(VarPat (Just (7,24)-(7,26)) "ff",App (Just (7,29)-(7,32)) (Var (Just (7,29)-(7,30)) "f") [Var (Just (7,31)-(7,32)) "b"])] (Tuple (Just (7,36)-(7,50)) [Var (Just (7,37)-(7,39)) "ff",Bop (Just (7,41)-(7,49)) Eq (Var (Just (7,42)-(7,43)) "b") (Var (Just (7,46)-(7,48)) "ff")])) Nothing)] (Tuple (Just (7,54)-(7,60)) [Var (Just (7,55)-(7,56)) "n",Var (Just (7,58)-(7,59)) "b"])
+*)
 
-(6,43)-(6,54)
-EMPTY
-EmptyG
+(* typed spans
+(7,9)-(7,61)
+*)
 
-(6,44)-(6,45)
-let ff = f b in (ff , b = ff)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
+(* correct types
+('a -> ('a * bool) * 'a)
+*)
 
-(6,51)-(6,52)
-b
-VarG
-
-(6,60)-(6,61)
-ff
-VarG
-
-(6,63)-(6,64)
-b = ff
-BopG VarG VarG
-
+(* bad types
+('a -> ('a -> 'a * bool) * 'b)
 *)

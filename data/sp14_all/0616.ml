@@ -50,15 +50,88 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (17,23)-(18,12)
-EMPTY
-EmptyG
-
-(17,31)-(17,33)
-(((c + x') + x'') mod 10) :: s
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
-(18,11)-(18,12)
-s
+x
 VarG
 
+(17,23)-(18,12)
+let (c , s) = a in
+(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
+LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+
+(17,23)-(18,12)
+a
+VarG
+
+(17,23)-(18,12)
+(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
+TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
+
+(17,23)-(18,12)
+((c + x') + x'') / 10
+BopG (BopG EmptyG EmptyG) LitG
+
+(17,23)-(18,12)
+(c + x') + x''
+BopG (BopG EmptyG EmptyG) VarG
+
+(17,23)-(18,12)
+c + x'
+BopG VarG VarG
+
+(17,23)-(18,12)
+c
+VarG
+
+(17,23)-(18,12)
+(((c + x') + x'') mod 10) :: s
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG])))
+
+*)
+
+(* changed exprs
+Var (Just (16,21)-(16,22)) "x"
+Let (Just (17,6)-(18,65)) NonRec [(TuplePat (Just (17,11)-(17,14)) [VarPat (Just (17,11)-(17,12)) "c",VarPat (Just (17,13)-(17,14)) "s"],Var (Just (17,18)-(17,19)) "a")] (Tuple (Just (18,6)-(18,65)) [Bop (Just (18,7)-(18,30)) Div (Bop (Just (18,8)-(18,24)) Plus (Bop (Just (18,9)-(18,17)) Plus (Var (Just (18,10)-(18,11)) "c") (Var (Just (18,14)-(18,16)) "x'")) (Var (Just (18,20)-(18,23)) "x''")) (Lit (Just (18,27)-(18,29)) (LI 10)),ConApp (Just (18,32)-(18,64)) "::" (Just (Tuple (Just (18,33)-(18,63)) [Bop (Just (18,33)-(18,58)) Mod (Bop (Just (18,34)-(18,50)) Plus (Bop (Just (18,35)-(18,43)) Plus (Var (Just (18,36)-(18,37)) "c") (Var (Just (18,40)-(18,42)) "x'")) (Var (Just (18,46)-(18,49)) "x''")) (Lit (Just (18,55)-(18,57)) (LI 10)),Var (Just (18,62)-(18,63)) "s"])) Nothing])
+Var (Just (17,18)-(17,19)) "a"
+Tuple (Just (18,6)-(18,65)) [Bop (Just (18,7)-(18,30)) Div (Bop (Just (18,8)-(18,24)) Plus (Bop (Just (18,9)-(18,17)) Plus (Var (Just (18,10)-(18,11)) "c") (Var (Just (18,14)-(18,16)) "x'")) (Var (Just (18,20)-(18,23)) "x''")) (Lit (Just (18,27)-(18,29)) (LI 10)),ConApp (Just (18,32)-(18,64)) "::" (Just (Tuple (Just (18,33)-(18,63)) [Bop (Just (18,33)-(18,58)) Mod (Bop (Just (18,34)-(18,50)) Plus (Bop (Just (18,35)-(18,43)) Plus (Var (Just (18,36)-(18,37)) "c") (Var (Just (18,40)-(18,42)) "x'")) (Var (Just (18,46)-(18,49)) "x''")) (Lit (Just (18,55)-(18,57)) (LI 10)),Var (Just (18,62)-(18,63)) "s"])) Nothing]
+Bop (Just (18,7)-(18,30)) Div (Bop (Just (18,8)-(18,24)) Plus (Bop (Just (18,9)-(18,17)) Plus (Var (Just (18,10)-(18,11)) "c") (Var (Just (18,14)-(18,16)) "x'")) (Var (Just (18,20)-(18,23)) "x''")) (Lit (Just (18,27)-(18,29)) (LI 10))
+Bop (Just (18,8)-(18,24)) Plus (Bop (Just (18,9)-(18,17)) Plus (Var (Just (18,10)-(18,11)) "c") (Var (Just (18,14)-(18,16)) "x'")) (Var (Just (18,20)-(18,23)) "x''")
+Bop (Just (18,9)-(18,17)) Plus (Var (Just (18,10)-(18,11)) "c") (Var (Just (18,14)-(18,16)) "x'")
+Var (Just (18,10)-(18,11)) "c"
+ConApp (Just (18,32)-(18,64)) "::" (Just (Tuple (Just (18,33)-(18,63)) [Bop (Just (18,33)-(18,58)) Mod (Bop (Just (18,34)-(18,50)) Plus (Bop (Just (18,35)-(18,43)) Plus (Var (Just (18,36)-(18,37)) "c") (Var (Just (18,40)-(18,42)) "x'")) (Var (Just (18,46)-(18,49)) "x''")) (Lit (Just (18,55)-(18,57)) (LI 10)),Var (Just (18,62)-(18,63)) "s"])) Nothing
+*)
+
+(* typed spans
+(16,21)-(16,22)
+(17,6)-(18,65)
+(17,18)-(17,19)
+(18,6)-(18,65)
+(18,7)-(18,30)
+(18,8)-(18,24)
+(18,9)-(18,17)
+(18,10)-(18,11)
+(18,32)-(18,64)
+*)
+
+(* correct types
+(int * int)
+(int * int list)
+(int * int list)
+(int * int list)
+int
+int
+int
+int
+int list
+*)
+
+(* bad types
+(int * int) list
+(int * int) list
+(int * int) list
+(int * int) list
+(int * int) list
+(int * int) list
+(int * int) list
+(int * int) list
+(int * int) list
 *)

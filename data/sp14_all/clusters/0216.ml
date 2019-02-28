@@ -1,3 +1,4 @@
-CaseG VarG (fromList [(Nothing,BopG EmptyG EmptyG)])
-match x with
-| (f , g) -> ((f + g) + carry) mod 10
+TupleG (fromList [AppG (fromList [EmptyG]),IteG EmptyG EmptyG EmptyG])
+(if addit >= 10
+ then 1
+ else 0 , num @ [addit mod 10])

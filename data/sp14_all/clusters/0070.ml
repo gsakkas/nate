@@ -1,52 +1,16 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
+IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+if rand (0 , 1) = 0
+then buildX ()
+else buildY ()
+if depth = 0
+then buildSine (buildX ())
+else buildX ()
+if eval (x1 , x , y) < eval (x2 , x , y)
+then eval (x3 , x , y)
+else eval (x4 , x , y)
+if sumList (digits n) > 9
+then digitalRoot (sumList (digits n))
+else sumList (digits n)
+if eval (ex1 , x , y) < eval (ex2 , x , y)
+then eval (ex3 , x , y)
+else eval (ex4 , x , y)

@@ -29,12 +29,20 @@ fun b' ->
    (fOfB , fOfB = b'))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(8,39)-(8,40)
-b'
-VarG
+*)
 
-(8,59)-(8,60)
-b'
-VarG
+(* changed exprs
+Lam (Just (8,23)-(8,67)) (VarPat (Just (8,23)-(8,25)) "b'") (Let (Just (8,28)-(8,67)) NonRec [(VarPat (Just (8,32)-(8,36)) "fOfB",App (Just (8,39)-(8,44)) (Var (Just (8,39)-(8,41)) "f'") [Var (Just (8,42)-(8,44)) "b'"])] (Tuple (Just (8,48)-(8,67)) [Var (Just (8,49)-(8,53)) "fOfB",Bop (Just (8,55)-(8,66)) Eq (Var (Just (8,56)-(8,60)) "fOfB") (Var (Just (8,63)-(8,65)) "b'")])) Nothing
+*)
 
+(* typed spans
+(8,23)-(8,67)
+*)
+
+(* correct types
+'a -> ('a * bool)
+*)
+
+(* bad types
+('a * bool)
 *)

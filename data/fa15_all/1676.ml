@@ -55,3 +55,27 @@ let x = myHelper n in
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (BopG EmptyG EmptyG)
 
 *)
+
+(* typed spans
+(8,16)-(8,70)
+(12,28)-(13,75)
+(13,5)-(13,11)
+(13,33)-(13,41)
+(13,24)-(13,75)
+*)
+
+(* typed spans
+int list -> int
+int -> int
+bool
+int -> int
+int
+*)
+
+(* typed spans
+int -> unit
+unit
+bool
+int -> int list
+int list
+*)

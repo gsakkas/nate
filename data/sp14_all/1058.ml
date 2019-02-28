@@ -71,8 +71,20 @@ let rec eval (e,x,y) =
 abs_float (eval (e2 , x , y))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(28,53)-(28,57)
-eval (e2 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
+*)
 
+(* changed exprs
+App (Just (28,42)-(28,71)) (Var (Just (28,43)-(28,52)) "abs_float") [App (Just (28,53)-(28,70)) (Var (Just (28,54)-(28,58)) "eval") [Tuple (Just (28,59)-(28,69)) [Var (Just (28,60)-(28,62)) "e2",Var (Just (28,64)-(28,65)) "x",Var (Just (28,67)-(28,68)) "y"]]]
+*)
+
+(* typed spans
+(28,42)-(28,71)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+float
 *)

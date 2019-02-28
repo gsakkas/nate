@@ -16,3 +16,19 @@ h
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (3,53)-(3,54)) "h"
+*)
+
+(* typed spans
+(3,53)-(3,54)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a list
+*)

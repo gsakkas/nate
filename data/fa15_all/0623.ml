@@ -69,84 +69,12 @@ let val2 = (x1 + x2) / 10 in
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (18,14)-(18,48)
-EMPTY
-EmptyG
-
-(18,17)-(18,19)
-EMPTY
-EmptyG
-
-(18,17)-(18,23)
-EMPTY
-EmptyG
-
-(18,22)-(18,23)
-EMPTY
-EmptyG
-
-(18,29)-(18,30)
-EMPTY
-EmptyG
-
-(18,36)-(18,43)
-EMPTY
-EmptyG
-
-(18,36)-(18,48)
-EMPTY
-EmptyG
-
-(18,37)-(18,38)
-EMPTY
-EmptyG
-
-(18,40)-(18,42)
-EMPTY
-EmptyG
-
-(18,47)-(18,48)
-EMPTY
-EmptyG
-
-(20,10)-(21,71)
 let val1 = (a1 + x1) + x2 in
 let val2 = (x1 + x2) / 10 in
 (val2 , val1 :: a2)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (21,10)-(21,71)
-EMPTY
-EmptyG
-
-(21,13)-(21,18)
-EMPTY
-EmptyG
-
-(21,13)-(21,22)
-EMPTY
-EmptyG
-
-(21,21)-(21,22)
-EMPTY
-EmptyG
-
-(21,28)-(21,45)
-EMPTY
-EmptyG
-
-(21,28)-(21,50)
-EMPTY
-EmptyG
-
-(21,29)-(21,30)
-EMPTY
-EmptyG
-
-(21,32)-(21,44)
-EMPTY
-EmptyG
-
-(21,33)-(21,38)
 let val2 = (x1 + x2) / 10 in
 (val2 , val1 :: a2)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (TupleG (fromList [EmptyG]))
@@ -157,7 +85,7 @@ BopG (BopG EmptyG EmptyG) LitG
 
 (21,49)-(21,50)
 (val2 , val1 :: a2)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG])))])
 
 (21,56)-(21,66)
 let base = (0 , []) in
@@ -177,12 +105,37 @@ VarG
 EMPTY
 EmptyG
 
-(21,70)-(21,71)
-EMPTY
-EmptyG
+*)
 
-(22,4)-(24,51)
-EMPTY
-EmptyG
+(* typed spans
+(16,6)-(19,55)
+(17,6)-(19,55)
+(18,6)-(19,55)
+(19,6)-(19,55)
+(19,17)-(19,31)
+(19,35)-(19,55)
+(20,4)-(22,51)
+(19,36)-(19,40)
+*)
 
+(* typed spans
+(int * int list)
+(int * int list)
+(int * int list)
+(int * int list)
+int
+(int * int list)
+int list
+int
+*)
+
+(* typed spans
+(int * int) list
+(int * int) list
+(int * int) list
+(int * int) list
+int
+(int * int) list
+(int * int)
+(int * int) list
 *)

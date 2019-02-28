@@ -70,3 +70,19 @@ d *. d
 BopG VarG VarG
 
 *)
+
+(* changed exprs
+Bop (Just (30,18)-(30,26)) FTimes (Var (Just (30,19)-(30,20)) "d") (Var (Just (30,24)-(30,25)) "d")
+*)
+
+(* typed spans
+(30,18)-(30,26)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

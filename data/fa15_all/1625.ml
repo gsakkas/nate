@@ -19,16 +19,16 @@ BopG VarG LitG
 EMPTY
 EmptyG
 
-(3,25)-(3,26)
-EMPTY
-EmptyG
+*)
 
-(3,31)-(3,33)
-EMPTY
-EmptyG
+(* typed spans
+(3,5)-(3,11)
+*)
 
-(3,37)-(3,59)
-EMPTY
-EmptyG
+(* typed spans
+bool
+*)
 
+(* typed spans
+bool
 *)

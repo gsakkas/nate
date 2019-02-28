@@ -34,3 +34,15 @@ seen
 VarG
 
 *)
+
+(* typed spans
+(8,48)-(8,52)
+*)
+
+(* typed spans
+'a list
+*)
+
+(* typed spans
+'a list list list
+*)

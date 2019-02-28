@@ -54,83 +54,23 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (23,4)-(25,69)
-EMPTY
-EmptyG
-
-(23,10)-(23,28)
-EMPTY
-EmptyG
-
-(23,12)-(23,28)
-EMPTY
-EmptyG
-
-(23,16)-(23,28)
-EMPTY
-EmptyG
-
-(23,17)-(23,18)
-EMPTY
-EmptyG
-
-(23,20)-(23,27)
-EMPTY
-EmptyG
-
-(23,21)-(23,22)
-EMPTY
-EmptyG
-
-(23,25)-(23,26)
-EMPTY
-EmptyG
-
-(24,4)-(25,69)
 [0 ; 0 ; 0 ; 0 ; 0]
-ListG LitG Nothing
+ListG LitG
 
-(25,4)-(25,69)
-EMPTY
-EmptyG
+*)
 
-(25,15)-(25,18)
-EMPTY
-EmptyG
+(* changed exprs
+List (Just (22,20)-(22,35)) [Lit (Just (22,21)-(22,22)) (LI 0),Lit (Just (22,24)-(22,25)) (LI 0),Lit (Just (22,27)-(22,28)) (LI 0),Lit (Just (22,30)-(22,31)) (LI 0),Lit (Just (22,33)-(22,34)) (LI 0)] Nothing
+*)
 
-(25,16)-(25,17)
-EMPTY
-EmptyG
+(* typed spans
+(22,20)-(22,35)
+*)
 
-(25,22)-(25,69)
-EMPTY
-EmptyG
+(* correct types
+int list
+*)
 
-(25,36)-(25,50)
-EMPTY
-EmptyG
-
-(25,36)-(25,62)
-EMPTY
-EmptyG
-
-(25,51)-(25,52)
-EMPTY
-EmptyG
-
-(25,53)-(25,57)
-EMPTY
-EmptyG
-
-(25,58)-(25,62)
-EMPTY
-EmptyG
-
-(25,66)-(25,69)
-0
-LitG
-
-(26,2)-(26,34)
-0
-LitG
-
+(* bad types
+int list
 *)

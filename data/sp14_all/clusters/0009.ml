@@ -1,164 +1,50 @@
-BopG VarG VarG
-h1 + x
-s2 - s1
-s1 - s2
-s1 - s2
-x * x
-x * x
-x * x
-xx = b
-xx = b
-xx = b
-lenl1 - lenl2
-lenl2 - lenl1
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-depth - num
-x1 + x2
-x1 + x2
-x1 + x2
-x1 + x2
-x1 + x2
-x1 + x2
-a + x
-a + x
-xx <> x
-xx <> x
-xx <> x
-xx <> x
-xx <> x
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-c + x'
-x * x
-x * x
-x * x
-x * x
-x * x
-x * x
-a * a
-a * a
-a * a
-x * x
-leng1 - leng2
-leng2 - leng1
-a * a
-x * x
-a + x
-a + x
-a + x
-x * x
-x * x
-wList = wReverse
-length2 - length1
-length2 > length1
-x = b
-carry + add1
-carry + add1
-carry + add1
-carry + add1
-carry + add1
-carry + add1
-pi *. x
-pi *. x
-x <> b
-x <> b
-x <> b
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-i + j
-x + h
-b - a
-b - a
-a < b
-b - a
-a < b
-b - a
-a < b
-b - a
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-xx <> b
-x * x
-x * x
-pi *. x
-pi *. y
-pi *. x
-pi *. y
-pi *. x
-pi *. y
-pi *. x
-pi *. y
-pi *. x
-pi *. y
-pi *. x
-pi *. y
-carry + addend_a
-carry + addend_a
-carry + addend_a
-carry + addend_a
-carry + addend_a
-carry + addend_a
-a * a
-a * a
-d1 + d2
-d1 + d2
-d1 + d2
-d1 + d2
-d1 + d2
-d1 + d2
-a * a
-h1 + h2
-h1 + h2
-h1 + h2
-a * a
-a * a
-a * a
+AppG (fromList [AppG (fromList [EmptyG]),LitG])
+sepConcat "" (List.map f l)
+List.fold_left (fun x ->
+                  fun acc -> x ^ ("; " ^ acc))
+               "" (List.map f l) ^ "]"
+"sin (pi*" ^ exprToString e
+exprToString e3 ^ ")"
+"sin" ^ exprToString ex
+exprToString e4 ^ ")/2)"
+sepConcat "; " (List.map f l)
+sepConcat "; " (List.map f
+                         l) ^ "]"
+exprToString expr3 ^ ")"
+exprToString ds4 ^ "))"
+exprToString tm3 ^ ")"
+exprToString t2 ^ ")"
+sepConcat ";" (List.map f l)
+sepConcat "[" (List.map f l)
+lengthOfList (digitsOfInt n) 0
+exprToString c ^ ")^0"
+exprToString y ^ ")/2)"
+"sin(pi*" ^ (exprToString x ^ ")")
+"cos(pi*" ^ (exprToString x ^ ")")
+"((" ^ (exprToString x ^ ("*" ^ (exprToString y ^ ")/2)")))
+"(" ^ (exprToString a ^ ("<" ^ (exprToString b ^ ("?" ^ (exprToString c ^ (":" ^ exprToString d))))))
+"*" ^ exprToString y
+exprToString e1 ^ ")"
+exprToString w ^ ")"
+additivePersAndRoot (abs n) 0
+eval (e , x , y) ** 2.0
+exprToString b ^ ")/20"
+expr a ^ ")"
+exprToString e3 ^ "))"
+sepConcat "," (List.map f l)
+"[" ^ (sepConcat ";"
+                 (List.map f l) ^ "]")
+sepConcat ";" (List.map f
+                        l) ^ "]"
+factorial (eval (e' , x , y))
+          1.0
+exprToString a ^ ")"
+exprToString b ^ ")"
+"pi* " ^ exprToString s
+"?" ^ (exprToString e3 ^ ("?" ^ exprToString e4))
+clone 0 (abs diff)
+clone 0 (List.length l1)
+"+" ^ (exprToString ex3 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ ("+" ^ (exprToString ex5 ^ "))")))))))))))))))))))
+"+" ^ (exprToString ex4 ^ (")*(" ^ (exprToString ex1 ^ ("+" ^ (exprToString ex2 ^ ("+" ^ (exprToString ex3 ^ ("+" ^ (exprToString ex4 ^ ("+" ^ (exprToString ex5 ^ "))")))))))))))
+"+" ^ (exprToString ex5 ^ "))")
+exprToString ex3 ^ "))"

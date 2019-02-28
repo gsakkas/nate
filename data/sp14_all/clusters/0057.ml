@@ -1,25 +1,15 @@
-BopG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG)
-(List.length acc = List.length l1) || (List.length acc = List.length l2)
-(List.length acc = List.length l1) || (List.length acc = List.length l2)
-(eval (e1 , x , y) /. 2.0) +. (eval (e2 , x , y) /. 2.0)
-(eval (e1 , x , y) /. 2.0) +. (eval (e2 , x , y) /. 2.0)
-((eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))) +. (eval (e3 , x , y) *. eval (e3 , x , y))
-((eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))) +. (eval (e3 , x , y) *. eval (e3 , x , y))
-(eval (e1 , x , y) *. eval (e1 , x , y)) +. (eval (e2 , x , y) *. eval (e2 , x , y))
-(a * a) + (x * x)
-((1.0 /. eval (e1 , x , y)) +. (1.0 /. eval (e2 , x , y))) +. (1.0 /. eval (e3 , x , y))
-(1.0 /. eval (e1 , x , y)) +. (1.0 /. eval (e2 , x , y))
-((1.0 /. eval (e1 , x , y)) +. (1.0 /. eval (e2 , x , y))) +. (1.0 /. eval (e3 , x , y))
-(1.0 /. eval (e1 , x , y)) +. (1.0 /. eval (e2 , x , y))
-((eval (a , x , y) +. eval (b , x , y)) +. eval (c , x , y)) -. ((eval (a , x , y) +. eval (b , x , y)) +. eval (c , x , y))
-(((atan res1 +. atan res2) -. atan res3) *. 2.0) /. (3.0 *. pi)
-(((atan res1 +. atan res2) -. atan res3) *. 2.0) /. (3.0 *. pi)
-(((atan res1 +. atan res2) -. atan res3) *. 2.0) /. (3.0 *. pi)
-(eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (c , x , y))
-(eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (c , x , y))
-(eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (c , x , y))
-(x + h) - (asd * 10)
-(((eval (ex1 , x , y) *. (eval (ex1 , x , y) +. eval (ex2 , x , y))) *. ((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y))) *. (((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y))) *. ((((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y)) +. eval (ex5 , x , y))
-((eval (ex1 , x , y) *. (eval (ex1 , x , y) +. eval (ex2 , x , y))) *. ((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y))) *. (((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y))
-((eval (ex1 , x , y) *. (eval (ex1 , x , y) +. eval (ex2 , x , y))) *. ((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y))) *. (((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y))
-((eval (ex1 , x , y) *. (eval (ex1 , x , y) +. eval (ex2 , x , y))) *. ((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y))) *. (((eval (ex1 , x , y) +. eval (ex2 , x , y)) +. eval (ex3 , x , y)) +. eval (ex4 , x , y))
+LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+let z = fst x + snd x in
+match a with
+| (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
+let depth = depth - 1 in
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth))
+| 1 -> buildCosine (build (rand , depth))
+| 2 -> buildAverage (build (rand , depth) , build (rand , depth))
+| 3 -> buildTimes (build (rand , depth) , build (rand , depth))
+| 4 -> buildThresh (build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
+let digit =
+  ((carry + addend_a) + addend_b) mod 10 in
+match a with
+| (x , y) -> (new_carry , digit :: y)

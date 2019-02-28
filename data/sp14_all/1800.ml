@@ -42,8 +42,20 @@ let rec additivePersistence n =
 additivePersAndRoot (abs n) 0
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(16,75)-(16,76)
-0
-LitG
+*)
 
+(* changed exprs
+App (Just (17,14)-(17,43)) (Var (Just (17,14)-(17,33)) "additivePersAndRoot") [App (Just (17,34)-(17,41)) (Var (Just (17,35)-(17,38)) "abs") [Var (Just (17,39)-(17,40)) "n"],Lit (Just (17,42)-(17,43)) (LI 0)]
+*)
+
+(* typed spans
+(17,14)-(17,43)
+*)
+
+(* correct types
+(int * int)
+*)
+
+(* bad types
+int -> (int * int)
 *)

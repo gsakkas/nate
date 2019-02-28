@@ -83,12 +83,40 @@ LitG
 (- 1.0)
 UopG LitG
 
-(31,27)-(31,36)
-1.0
-LitG
-
 (31,33)-(31,35)
 (e1 , x , y)
 TupleG (fromList [VarG])
 
+*)
+
+(* changed exprs
+Lit (Just (28,31)-(28,34)) (LD 2.0)
+Lit (Just (28,61)-(28,64)) (LD 3.0)
+Lit (Just (30,11)-(30,14)) (LD 4.0)
+Uop (Just (31,19)-(31,25)) Neg (Lit (Just (31,21)-(31,24)) (LD 1.0))
+Tuple (Just (31,35)-(31,45)) [Var (Just (31,36)-(31,38)) "e1",Var (Just (31,40)-(31,41)) "x",Var (Just (31,43)-(31,44)) "y"]
+*)
+
+(* typed spans
+(28,31)-(28,34)
+(28,61)-(28,64)
+(30,11)-(30,14)
+(31,19)-(31,25)
+(31,35)-(31,45)
+*)
+
+(* correct types
+float
+float
+float
+int
+(expr * float * float)
+*)
+
+(* bad types
+int
+int
+int
+int
+expr
 *)

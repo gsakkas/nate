@@ -1,3 +1,2 @@
-ListG (LamG EmptyG) Nothing
-[fun x -> x ^ sep]
-[fun x -> x ^ sep]
+BopG (AppG (fromList [EmptyG])) (UopG EmptyG)
+eval (e1 , x , y) *. (- 1.0)

@@ -1,5 +1,7 @@
-ConAppG (Just (TupleG (fromList [BopG (BopG VarG LitG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing
-((num / 10) mod 10) :: ((num mod 10) :: xs')
-((num / 10) mod 10) :: ((num mod 10) :: accum)
-((num / 10) mod 10) :: ((num mod 10) :: xs')
-((num / 10) mod 10) :: ((num mod 10) :: accum)
+IteG (BopG EmptyG EmptyG) (ListG EmptyG) (IteG EmptyG EmptyG EmptyG)
+if i = 0
+then []
+else if i = 1
+     then l
+     else bigAdd (bigAdd l l)
+                 (mulByDigit (i - 2) l)

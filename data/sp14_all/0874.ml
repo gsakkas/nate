@@ -107,16 +107,36 @@ let bigMul l1 l2 =
 mul
 VarG
 
-(46,55)-(46,58)
-EMPTY
-EmptyG
-
-(47,2)-(49,49)
+(46,59)-(46,64)
 la
 VarG
 
-(48,37)-(48,39)
+(48,34)-(48,35)
 List.rev l2
 AppG (fromList [VarG])
 
+*)
+
+(* changed exprs
+Var (Just (46,30)-(46,33)) "mul"
+Var (Just (46,63)-(46,65)) "la"
+App (Just (48,37)-(48,50)) (Var (Just (48,38)-(48,46)) "List.rev") [Var (Just (48,47)-(48,49)) "l2"]
+*)
+
+(* typed spans
+(46,30)-(46,33)
+(46,63)-(46,65)
+(48,37)-(48,50)
+*)
+
+(* correct types
+int list
+int list
+int list
+*)
+
+(* bad types
+(int * int list)
+int list
+int
 *)

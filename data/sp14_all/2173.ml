@@ -27,6 +27,22 @@ let stringOfList f l =
 (* changed spans
 (10,54)-(10,57)
 ["]"]
-ListG LitG Nothing
+ListG LitG
 
+*)
+
+(* changed exprs
+List (Just (10,54)-(10,59)) [Lit (Just (10,55)-(10,58)) (LS "]")] Nothing
+*)
+
+(* typed spans
+(10,54)-(10,59)
+*)
+
+(* correct types
+string list
+*)
+
+(* bad types
+string
 *)

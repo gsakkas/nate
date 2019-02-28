@@ -13,11 +13,23 @@ let sqsum xs =
 
 (* changed spans
 (4,13)-(4,34)
-EMPTY
-EmptyG
+0
+LitG
 
-(4,15)-(4,34)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lit (Just (3,40)-(3,41)) (LI 0)
+*)
+
+(* typed spans
+(3,40)-(3,41)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

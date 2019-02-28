@@ -80,8 +80,20 @@ mulByDigit i (helper i l
                      accum)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(35,13)-(35,31)
-i
-VarG
+*)
 
+(* changed exprs
+App (Just (35,2)-(35,33)) (Var (Just (35,2)-(35,12)) "mulByDigit") [Var (Just (35,13)-(35,14)) "i",App (Just (35,15)-(35,33)) (Var (Just (35,16)-(35,22)) "helper") [Var (Just (35,23)-(35,24)) "i",Var (Just (35,25)-(35,26)) "l",Var (Just (35,27)-(35,32)) "accum"]]
+*)
+
+(* typed spans
+(35,2)-(35,33)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a
 *)

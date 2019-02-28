@@ -12,15 +12,23 @@ let sqsum xs =
 
 (* changed spans
 (3,18)-(3,27)
-EMPTY
-EmptyG
-
-(3,21)-(3,23)
 x * x
 BopG VarG VarG
 
-(3,24)-(3,26)
-x
-VarG
+*)
 
+(* changed exprs
+Bop (Just (3,18)-(3,25)) Times (Var (Just (3,19)-(3,20)) "x") (Var (Just (3,23)-(3,24)) "x")
+*)
+
+(* typed spans
+(3,18)-(3,25)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+float
 *)

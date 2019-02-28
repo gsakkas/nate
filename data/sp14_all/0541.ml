@@ -100,3 +100,19 @@ log l /. log 10.0
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)
+
+(* changed exprs
+Bop (Just (40,45)-(40,66)) FDiv (App (Just (40,45)-(40,52)) (Var (Just (40,46)-(40,49)) "log") [Var (Just (40,50)-(40,51)) "l"]) (App (Just (40,56)-(40,66)) (Var (Just (40,57)-(40,60)) "log") [Lit (Just (40,61)-(40,65)) (LD 10.0)])
+*)
+
+(* typed spans
+(40,45)-(40,66)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

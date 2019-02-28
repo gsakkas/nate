@@ -75,8 +75,20 @@ let rec eval (e,x,y) =
 (- 1.0) *. eval (e3 , x , y)
 BopG (UopG EmptyG) (AppG (fromList [EmptyG]))
 
-(33,13)-(33,30)
-1.0
-LitG
+*)
 
+(* changed exprs
+Bop (Just (33,11)-(33,38)) FTimes (Uop (Just (33,11)-(33,17)) Neg (Lit (Just (33,13)-(33,16)) (LD 1.0))) (App (Just (33,21)-(33,38)) (Var (Just (33,22)-(33,26)) "eval") [Tuple (Just (33,27)-(33,37)) [Var (Just (33,28)-(33,30)) "e3",Var (Just (33,32)-(33,33)) "x",Var (Just (33,35)-(33,36)) "y"]])
+*)
+
+(* typed spans
+(33,11)-(33,38)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
 *)

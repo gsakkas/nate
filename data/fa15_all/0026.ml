@@ -40,19 +40,28 @@ sepConcat "; " newList
 AppG (fromList [VarG,LitG])
 
 (9,46)-(9,54)
-EMPTY
-EmptyG
-
-(9,55)-(9,61)
-EMPTY
-EmptyG
-
-(9,56)-(9,57)
-EMPTY
-EmptyG
-
-(9,59)-(9,60)
 newList
 VarG
 
+*)
+
+(* typed spans
+(10,2)-(10,70)
+(10,32)-(10,70)
+(10,39)-(10,63)
+(10,55)-(10,62)
+*)
+
+(* typed spans
+string
+string
+string
+string list
+*)
+
+(* typed spans
+string
+string -> string -> string
+string
+('a -> 'b) -> 'a list -> 'b list
 *)

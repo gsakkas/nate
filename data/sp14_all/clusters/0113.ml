@@ -1,31 +1,7 @@
-CaseG (BopG EmptyG EmptyG) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-match List.length l1 > List.length l2 with
-| true -> (l1 , clone 0
-                      (List.length l1 - List.length l2) @ l2)
-| false -> (clone 0
-                  (List.length l2 - List.length l1) @ l1 , l2)
-match List.length l1 > List.length l2 with
-| true -> (l1 , clone 0
-                      (List.length l1 - List.length l2) @ l2)
-| false -> (clone 0
-                  (List.length l2 - List.length l1) @ l1 , l2)
-match List.length l1 > List.length l2 with
-| true -> (l1 , clone 0
-                      (List.length l1 - List.length l2) @ l2)
-| false -> (clone 0
-                  (List.length l2 - List.length l1) @ l1 , l2)
-match List.length l1 > List.length l2 with
-| true -> (l1 , clone 0
-                      (List.length l1 - List.length l2) @ l2)
-| false -> (clone 0
-                  (List.length l2 - List.length l1) @ l1 , l2)
-match List.length l1 > List.length l2 with
-| true -> (l1 , clone 0
-                      (List.length l1 - List.length l2) @ l2)
-| false -> (clone 0
-                  (List.length l2 - List.length l1) @ l1 , l2)
-match List.length l1 > List.length l2 with
-| true -> (l1 , clone 0
-                      (List.length l1 - List.length l2) @ l2)
-| false -> (clone 0
-                  (List.length l2 - List.length l1) @ l1 , l2)
+AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
+digits (n / 10)
+       ((n mod 10) :: digitList)
+digitsOfIntHelper (n / 10)
+                  ((n mod 10) :: result)
+helper ((v mod 10) :: acc)
+       (v / 10)

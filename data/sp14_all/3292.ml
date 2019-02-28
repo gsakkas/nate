@@ -50,20 +50,20 @@ match a with
 | (h1 :: t1 , h2 :: t2) -> (v1 :: (h1 :: t1) , v2 :: (h2 :: t2))
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
-(14,50)-(14,51)
-EMPTY
-EmptyG
+*)
 
-(14,55)-(14,57)
-v2 :: (h2 :: t2)
-ConAppG (Just (TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing]))) Nothing
+(* changed exprs
+Case (Just (17,10)-(18,69)) (Var (Just (17,17)-(17,18)) "a") [(TuplePat (Just (18,14)-(18,27)) [ConsPat (Just (18,14)-(18,20)) (VarPat (Just (18,14)-(18,16)) "h1") (VarPat (Just (18,18)-(18,20)) "t1"),ConsPat (Just (18,21)-(18,27)) (VarPat (Just (18,21)-(18,23)) "h2") (VarPat (Just (18,25)-(18,27)) "t2")],Nothing,Tuple (Just (18,32)-(18,68)) [ConApp (Just (18,33)-(18,49)) "::" (Just (Tuple (Just (18,34)-(18,48)) [Var (Just (18,34)-(18,36)) "v1",ConApp (Just (18,40)-(18,48)) "::" (Just (Tuple (Just (18,40)-(18,48)) [Var (Just (18,40)-(18,42)) "h1",Var (Just (18,46)-(18,48)) "t1"])) Nothing])) Nothing,ConApp (Just (18,51)-(18,67)) "::" (Just (Tuple (Just (18,52)-(18,66)) [Var (Just (18,52)-(18,54)) "v2",ConApp (Just (18,58)-(18,66)) "::" (Just (Tuple (Just (18,58)-(18,66)) [Var (Just (18,58)-(18,60)) "h2",Var (Just (18,64)-(18,66)) "t2"])) Nothing])) Nothing])]
+*)
 
-(14,61)-(14,62)
-h2 :: t2
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+(* typed spans
+(17,10)-(18,69)
+*)
 
-(15,4)-(17,51)
-t2
-VarG
+(* correct types
+(int list * int list)
+*)
 
+(* bad types
+('a list * 'a list)
 *)

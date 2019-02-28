@@ -28,3 +28,19 @@ not
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,23)-(7,26)) "not"
+*)
+
+(* typed spans
+(7,23)-(7,26)
+*)
+
+(* correct types
+bool -> bool
+*)
+
+(* bad types
+'a ref -> 'a
+*)

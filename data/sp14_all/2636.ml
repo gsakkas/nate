@@ -57,17 +57,9 @@ let rec eval (e,x,y) =
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(20,27)-(20,29)
-(e1 , x , y)
-TupleG (fromList [VarG])
-
 (20,38)-(20,51)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
-
-(20,44)-(20,46)
-(e2 , x , y)
-TupleG (fromList [VarG])
 
 (22,15)-(22,22)
 (a , x , y)
@@ -85,4 +77,40 @@ TupleG (fromList [VarG])
 (b_less , x , y)
 TupleG (fromList [VarG])
 
+*)
+
+(* changed exprs
+App (Just (20,21)-(20,38)) (Var (Just (20,22)-(20,26)) "eval") [Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]]
+App (Just (20,42)-(20,59)) (Var (Just (20,43)-(20,47)) "eval") [Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "e2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]]
+Tuple (Just (22,15)-(22,24)) [Var (Just (22,16)-(22,17)) "a",Var (Just (22,19)-(22,20)) "x",Var (Just (22,22)-(22,23)) "y"]
+Tuple (Just (22,34)-(22,43)) [Var (Just (22,35)-(22,36)) "b",Var (Just (22,38)-(22,39)) "x",Var (Just (22,41)-(22,42)) "y"]
+Tuple (Just (23,16)-(23,30)) [Var (Just (23,17)-(23,23)) "a_less",Var (Just (23,25)-(23,26)) "x",Var (Just (23,28)-(23,29)) "y"]
+Tuple (Just (24,16)-(24,30)) [Var (Just (24,17)-(24,23)) "b_less",Var (Just (24,25)-(24,26)) "x",Var (Just (24,28)-(24,29)) "y"]
+*)
+
+(* typed spans
+(20,21)-(20,38)
+(20,42)-(20,59)
+(22,15)-(22,24)
+(22,34)-(22,43)
+(23,16)-(23,30)
+(24,16)-(24,30)
+*)
+
+(* correct types
+float
+float
+(expr * float * float)
+(expr * float * float)
+(expr * float * float)
+(expr * float * float)
+*)
+
+(* bad types
+float
+float
+(expr * float * float)
+(expr * float * float)
+(expr * float * float)
+(expr * float * float)
 *)

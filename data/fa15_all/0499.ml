@@ -52,7 +52,23 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (21,15)-(21,23)
-EMPTY
-EmptyG
+(0 , 0)
+TupleG (fromList [LitG])
 
+*)
+
+(* changed exprs
+Tuple (Just (21,15)-(21,21)) [Lit (Just (21,16)-(21,17)) (LI 0),Lit (Just (21,19)-(21,20)) (LI 0)]
+*)
+
+(* typed spans
+(21,15)-(21,21)
+*)
+
+(* correct types
+(int * int)
+*)
+
+(* bad types
+(int * int) list
 *)

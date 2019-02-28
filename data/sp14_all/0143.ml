@@ -49,18 +49,30 @@ let bigAdd l1 l2 =
 (* changed spans
 (19,28)-(19,35)
 [0] @ l1
-AppG (fromList [VarG,ListG EmptyG Nothing])
-
-(19,29)-(19,30)
-[0]
-ListG LitG Nothing
+AppG (fromList [VarG,ListG EmptyG])
 
 (19,36)-(19,43)
 [0] @ l2
-AppG (fromList [VarG,ListG EmptyG Nothing])
+AppG (fromList [VarG,ListG EmptyG])
 
-(19,37)-(19,38)
-[0]
-ListG LitG Nothing
+*)
 
+(* changed exprs
+App (Just (19,28)-(19,38)) (Var (Just (19,33)-(19,34)) "@") [List (Just (19,29)-(19,32)) [Lit (Just (19,30)-(19,31)) (LI 0)] Nothing,Var (Just (19,35)-(19,37)) "l1"]
+App (Just (19,39)-(19,49)) (Var (Just (19,44)-(19,45)) "@") [List (Just (19,40)-(19,43)) [Lit (Just (19,41)-(19,42)) (LI 0)] Nothing,Var (Just (19,46)-(19,48)) "l2"]
+*)
+
+(* typed spans
+(19,28)-(19,38)
+(19,39)-(19,49)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+int list
+int list
 *)

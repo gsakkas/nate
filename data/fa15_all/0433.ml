@@ -24,3 +24,19 @@ f
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,21)-(7,22)) "f"
+*)
+
+(* typed spans
+(7,21)-(7,22)
+*)
+
+(* correct types
+'a -> 'a
+*)
+
+(* bad types
+'a -> ('a * bool)
+*)

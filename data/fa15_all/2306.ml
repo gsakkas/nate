@@ -104,3 +104,15 @@ y
 VarG
 
 *)
+
+(* typed spans
+string
+expr
+string
+expr
+string
+expr
+string
+string
+expr
+*)

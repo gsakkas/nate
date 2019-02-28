@@ -29,22 +29,25 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(11,9)-(11,19)
-recCounter (sumList (digitsOfInt n))
-           count
-AppG (fromList [VarG,AppG (fromList [EmptyG])])
-
 (11,9)-(11,59)
 recCounter (sumList (digitsOfInt n))
            count + 1
 BopG (AppG (fromList [EmptyG])) LitG
 
-(11,21)-(11,46)
-EMPTY
-EmptyG
+*)
 
-(11,47)-(11,58)
-EMPTY
-EmptyG
+(* changed exprs
+Bop (Just (11,9)-(11,57)) Plus (App (Just (11,9)-(11,53)) (Var (Just (11,10)-(11,20)) "recCounter") [App (Just (11,21)-(11,46)) (Var (Just (11,22)-(11,29)) "sumList") [App (Just (11,30)-(11,45)) (Var (Just (11,31)-(11,42)) "digitsOfInt") [Var (Just (11,43)-(11,44)) "n"]],Var (Just (11,47)-(11,52)) "count"]) (Lit (Just (11,56)-(11,57)) (LI 1))
+*)
 
+(* typed spans
+(11,9)-(11,57)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

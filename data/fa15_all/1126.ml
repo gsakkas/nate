@@ -81,11 +81,7 @@ EmptyG
 
 (21,26)-(21,60)
 (((fst x + snd x) + a) mod 10) :: t
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG (AppG (fromList [VarG])) (AppG (fromList [VarG]))) VarG) LitG]))) Nothing
-
-(21,62)-(21,63)
-EMPTY
-EmptyG
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG (AppG (fromList [VarG])) (AppG (fromList [VarG]))) VarG) LitG])))
 
 (22,19)-(22,66)
 EMPTY
@@ -93,10 +89,24 @@ EmptyG
 
 (22,26)-(22,60)
 (((fst x + snd x) + a) mod 10) :: t
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG (AppG (fromList [VarG])) (AppG (fromList [VarG]))) VarG) LitG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG (AppG (fromList [VarG])) (AppG (fromList [VarG]))) VarG) LitG])))
 
-(22,62)-(22,63)
-EMPTY
-EmptyG
+*)
 
+(* typed spans
+(18,6)-(26,48)
+(21,25)-(21,64)
+(22,25)-(22,64)
+*)
+
+(* typed spans
+(int * int list)
+int list
+int list
+*)
+
+(* typed spans
+(int * int list)
+int
+int
 *)

@@ -76,3 +76,14 @@ x
 VarG
 
 *)
+
+(* typed spans
+(expr * float * float)
+float
+(expr * float * float)
+float
+(expr * float * float)
+float
+(expr * float * float)
+float
+*)

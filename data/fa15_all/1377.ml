@@ -67,8 +67,20 @@ let rec eval (e,x,y) =
 log (eval (nlog , x , y))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(29,23)-(29,27)
-eval (nlog , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
+*)
 
+(* changed exprs
+App (Just (29,19)-(29,42)) (Var (Just (29,19)-(29,22)) "log") [App (Just (29,23)-(29,42)) (Var (Just (29,24)-(29,28)) "eval") [Tuple (Just (29,29)-(29,41)) [Var (Just (29,30)-(29,34)) "nlog",Var (Just (29,36)-(29,37)) "x",Var (Just (29,39)-(29,40)) "y"]]]
+*)
+
+(* typed spans
+(29,19)-(29,42)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+float
 *)

@@ -26,36 +26,20 @@ let fixpoint (f,b) =
  d , b)
 TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
 
-(6,38)-(6,45)
-EMPTY
-EmptyG
+*)
 
-(6,38)-(6,49)
-EMPTY
-EmptyG
+(* changed exprs
+Tuple (Just (7,9)-(7,61)) [Let (Just (7,10)-(7,57)) NonRec [(VarPat (Just (7,15)-(7,16)) "d",Lam (Just (7,17)-(7,51)) (VarPat (Just (7,17)-(7,18)) "x") (Let (Just (7,21)-(7,51)) NonRec [(VarPat (Just (7,25)-(7,27)) "xx",App (Just (7,30)-(7,33)) (Var (Just (7,30)-(7,31)) "f") [Var (Just (7,32)-(7,33)) "b"])] (Tuple (Just (7,37)-(7,51)) [Var (Just (7,38)-(7,40)) "xx",Bop (Just (7,42)-(7,50)) Eq (Var (Just (7,43)-(7,45)) "xx") (Var (Just (7,48)-(7,49)) "b")])) Nothing)] (Var (Just (7,55)-(7,56)) "d"),Var (Just (7,59)-(7,60)) "b"]
+*)
 
-(6,39)-(6,40)
-EMPTY
-EmptyG
+(* typed spans
+(7,9)-(7,61)
+*)
 
-(6,43)-(6,44)
-f b
-AppG (fromList [VarG])
+(* correct types
+('a -> ('a * bool) * 'a)
+*)
 
-(6,48)-(6,49)
-f
-VarG
-
-(6,54)-(6,70)
-EMPTY
-EmptyG
-
-(6,59)-(6,69)
-xx = b
-BopG VarG VarG
-
-(6,65)-(6,68)
-EMPTY
-EmptyG
-
+(* bad types
+((int * bool) * int)
 *)

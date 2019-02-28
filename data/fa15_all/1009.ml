@@ -29,16 +29,24 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(11,23)-(11,27)
-(@)
-VarG
-
 (11,23)-(11,32)
 seen @ [h]
-AppG (fromList [VarG,ListG EmptyG Nothing])
+AppG (fromList [VarG,ListG EmptyG])
 
-(11,31)-(11,32)
-[h]
-ListG VarG Nothing
+*)
 
+(* changed exprs
+App (Just (11,23)-(11,33)) (Var (Just (11,28)-(11,29)) "@") [Var (Just (11,23)-(11,27)) "seen",List (Just (11,30)-(11,33)) [Var (Just (11,31)-(11,32)) "h"] Nothing]
+*)
+
+(* typed spans
+(11,23)-(11,33)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list list
 *)

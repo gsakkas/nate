@@ -17,16 +17,20 @@ let rec digitsOfInt n =
 n mod 10
 BopG VarG LitG
 
-(4,63)-(4,73)
-EMPTY
-EmptyG
+*)
 
-(4,64)-(4,65)
-EMPTY
-EmptyG
+(* changed exprs
+Bop (Just (4,37)-(4,47)) Mod (Var (Just (4,38)-(4,39)) "n") (Lit (Just (4,44)-(4,46)) (LI 10))
+*)
 
-(4,70)-(4,72)
-EMPTY
-EmptyG
+(* typed spans
+(4,37)-(4,47)
+*)
 
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

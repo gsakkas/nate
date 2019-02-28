@@ -21,16 +21,20 @@ let rec digitsOfInt n =
 print_int n
 AppG (fromList [VarG])
 
-(5,63)-(5,72)
-EMPTY
-EmptyG
+*)
 
-(5,63)-(5,74)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (5,30)-(5,41)) (Var (Just (5,30)-(5,39)) "print_int") [Var (Just (5,40)-(5,41)) "n"]
+*)
 
-(5,73)-(5,74)
-EMPTY
-EmptyG
+(* typed spans
+(5,30)-(5,41)
+*)
 
+(* correct types
+unit
+*)
+
+(* bad types
+int list
 *)

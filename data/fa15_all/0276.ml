@@ -28,3 +28,19 @@ a
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,10)-(7,11)) "a"
+*)
+
+(* typed spans
+(7,10)-(7,11)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
+*)

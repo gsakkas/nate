@@ -86,11 +86,31 @@ let rec build (rand,depth) =
 
 (* changed spans
 (32,11)-(33,41)
-EMPTY
-EmptyG
+r < 5
+BopG VarG LitG
 
-(34,16)-(34,35)
+(32,11)-(33,41)
 (build (rand , depth - 1) , build (rand , depth - 1))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
+*)
+
+(* changed exprs
+Bop (Just (31,16)-(31,21)) Lt (Var (Just (31,16)-(31,17)) "r") (Lit (Just (31,20)-(31,21)) (LI 5))
+Tuple (Just (33,13)-(33,71)) [App (Just (33,14)-(33,41)) (Var (Just (33,15)-(33,20)) "build") [Tuple (Just (33,21)-(33,40)) [Var (Just (33,22)-(33,26)) "rand",Bop (Just (33,28)-(33,39)) Minus (Var (Just (33,29)-(33,34)) "depth") (Lit (Just (33,37)-(33,38)) (LI 1))]],App (Just (33,43)-(33,70)) (Var (Just (33,44)-(33,49)) "build") [Tuple (Just (33,50)-(33,69)) [Var (Just (33,51)-(33,55)) "rand",Bop (Just (33,57)-(33,68)) Minus (Var (Just (33,58)-(33,63)) "depth") (Lit (Just (33,66)-(33,67)) (LI 1))]]]
+*)
+
+(* typed spans
+(31,16)-(31,21)
+(33,13)-(33,71)
+*)
+
+(* correct types
+bool
+(expr * expr)
+*)
+
+(* bad types
+(expr * (expr * expr))
+(expr * (expr * expr))
 *)

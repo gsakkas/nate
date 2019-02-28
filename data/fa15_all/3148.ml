@@ -59,76 +59,28 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(3,45)-(3,48)
-x :: (clone x (n - 1))
-ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])]))) Nothing
-
 (3,45)-(3,68)
-EMPTY
-EmptyG
-
-(3,49)-(3,50)
-EMPTY
-EmptyG
-
-(5,6)-(5,11)
-EMPTY
-EmptyG
-
-(5,10)-(5,11)
-EMPTY
-EmptyG
+x :: (clone x (n - 1))
+ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])])))
 
 (24,16)-(24,65)
 let (x1 , x2) = x in
 ([x1 + x2] , [x2])
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
-(24,41)-(24,61)
-EMPTY
-EmptyG
-
-(24,41)-(24,65)
-EMPTY
-EmptyG
-
-(24,43)-(24,50)
-EMPTY
-EmptyG
-
-(24,44)-(24,45)
-EMPTY
-EmptyG
-
-(24,48)-(24,49)
-[x1 + x2]
-ListG (BopG EmptyG EmptyG) Nothing
-
-(24,53)-(24,54)
-EMPTY
-EmptyG
-
-(24,57)-(24,58)
-EMPTY
-EmptyG
-
-(24,62)-(24,63)
-EMPTY
-EmptyG
-
-(24,64)-(24,65)
-EMPTY
-EmptyG
-
 (25,4)-(27,51)
 x1
+VarG
+
+(25,4)-(27,51)
+x2
 VarG
 
 (25,15)-(25,23)
 x2
 VarG
 
-(25,16)-(25,22)
+(25,15)-(25,23)
 let base = ([] , []) in
 let args =
   List.combine l1 l2 in
@@ -137,20 +89,64 @@ let (_ , res) =
 res
 LetG NonRec (fromList [TupleG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(25,17)-(25,18)
-EMPTY
-EmptyG
+(25,20)-(25,21)
+[]
+ListG EmptyG
 
 (25,20)-(25,21)
 []
-ListG EmptyG Nothing
-
-(26,4)-(27,51)
-[]
-ListG EmptyG Nothing
+ListG EmptyG
 
 (26,15)-(26,22)
 List.combine
 VarG
 
+*)
+
+(* changed exprs
+ConApp (Just (3,45)-(3,67)) "::" (Just (Tuple (Just (3,45)-(3,67)) [Var (Just (3,45)-(3,46)) "x",App (Just (3,50)-(3,67)) (Var (Just (3,51)-(3,56)) "clone") [Var (Just (3,57)-(3,58)) "x",Bop (Just (3,59)-(3,66)) Minus (Var (Just (3,60)-(3,61)) "n") (Lit (Just (3,64)-(3,65)) (LI 1))]])) Nothing
+Let (Just (22,16)-(22,52)) NonRec [(TuplePat (Just (22,21)-(22,26)) [VarPat (Just (22,21)-(22,23)) "x1",VarPat (Just (22,24)-(22,26)) "x2"],Var (Just (22,30)-(22,31)) "x")] (Tuple (Just (22,35)-(22,52)) [List (Just (22,36)-(22,45)) [Bop (Just (22,37)-(22,44)) Plus (Var (Just (22,37)-(22,39)) "x1") (Var (Just (22,42)-(22,44)) "x2")] Nothing,List (Just (22,47)-(22,51)) [Var (Just (22,48)-(22,50)) "x2"] Nothing])
+Var (Just (22,37)-(22,39)) "x1"
+Var (Just (22,42)-(22,44)) "x2"
+Var (Just (22,48)-(22,50)) "x2"
+Let (Just (23,4)-(25,51)) NonRec [(VarPat (Just (23,8)-(23,12)) "base",Tuple (Just (23,15)-(23,23)) [List (Just (23,16)-(23,18)) [] Nothing,List (Just (23,20)-(23,22)) [] Nothing])] (Let (Just (24,4)-(25,51)) NonRec [(VarPat (Just (24,8)-(24,12)) "args",App (Just (24,15)-(24,33)) (Var (Just (24,15)-(24,27)) "List.combine") [Var (Just (24,28)-(24,30)) "l1",Var (Just (24,31)-(24,33)) "l2"])] (Let (Just (25,4)-(25,51)) NonRec [(TuplePat (Just (25,9)-(25,14)) [WildPat (Just (25,9)-(25,10)),VarPat (Just (25,11)-(25,14)) "res"],App (Just (25,18)-(25,44)) (Var (Just (25,18)-(25,32)) "List.fold_left") [Var (Just (25,33)-(25,34)) "f",Var (Just (25,35)-(25,39)) "base",Var (Just (25,40)-(25,44)) "args"])] (Var (Just (25,48)-(25,51)) "res")))
+List (Just (23,16)-(23,18)) [] Nothing
+List (Just (23,20)-(23,22)) [] Nothing
+Var (Just (24,15)-(24,27)) "List.combine"
+*)
+
+(* typed spans
+(3,45)-(3,67)
+(22,16)-(22,52)
+(22,37)-(22,39)
+(22,42)-(22,44)
+(22,48)-(22,50)
+(23,4)-(25,51)
+(23,16)-(23,18)
+(23,20)-(23,22)
+(24,15)-(24,27)
+*)
+
+(* correct types
+int list
+(int list * int list)
+int
+int
+int
+int list
+int list
+int list
+int list -> int list -> (int * int) list
+*)
+
+(* bad types
+int list
+(int * int) list
+int list
+int list
+(int * int) list
+(int * int) list
+int
+int
+int list -> int list -> (int list * int list)
 *)

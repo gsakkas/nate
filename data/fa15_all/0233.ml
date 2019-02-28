@@ -27,8 +27,24 @@ VarG
 f b
 AppG (fromList [VarG])
 
-(7,53)-(7,59)
-b
-VarG
+*)
 
+(* changed exprs
+Var (Just (7,37)-(7,39)) "ff"
+App (Just (7,46)-(7,51)) (Var (Just (7,47)-(7,48)) "f") [Var (Just (7,49)-(7,50)) "b"]
+*)
+
+(* typed spans
+(7,37)-(7,39)
+(7,46)-(7,51)
+*)
+
+(* correct types
+'a
+'a
+*)
+
+(* bad types
+'a -> 'a
+'a
 *)

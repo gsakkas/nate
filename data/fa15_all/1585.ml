@@ -37,3 +37,18 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+(9,29)-(9,67)
+(9,45)-(9,59)
+*)
+
+(* typed spans
+string
+string list
+*)
+
+(* typed spans
+string -> string list -> string
+('a -> 'b) -> 'a list -> 'b list
+*)

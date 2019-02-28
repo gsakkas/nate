@@ -22,16 +22,20 @@ let fixpoint (f,b) = wwhile ((fun x  -> ((f x), (x != (f x)))), b);;
    (f x , x <> f x) , b)
 TupleG (fromList [VarG,LamG EmptyG])
 
-(6,29)-(6,30)
-fun x -> (f x , x <> f x)
-LamG (TupleG (fromList [EmptyG]))
+*)
 
-(6,32)-(6,36)
-x
-VarG
+(* changed exprs
+Tuple (Just (6,28)-(6,66)) [Lam (Just (6,29)-(6,62)) (VarPat (Just (6,34)-(6,35)) "x") (Tuple (Just (6,40)-(6,61)) [App (Just (6,41)-(6,46)) (Var (Just (6,42)-(6,43)) "f") [Var (Just (6,44)-(6,45)) "x"],Bop (Just (6,48)-(6,60)) Neq (Var (Just (6,49)-(6,50)) "x") (App (Just (6,54)-(6,59)) (Var (Just (6,55)-(6,56)) "f") [Var (Just (6,57)-(6,58)) "x"])]) Nothing,Var (Just (6,64)-(6,65)) "b"]
+*)
 
-(6,38)-(6,39)
-x <> f x
-BopG VarG (AppG (fromList [EmptyG]))
+(* typed spans
+(6,28)-(6,66)
+*)
 
+(* correct types
+('a -> ('a * bool) * 'a)
+*)
+
+(* bad types
+('a * bool * 'b)
 *)

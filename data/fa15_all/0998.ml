@@ -32,27 +32,7 @@ LetG NonRec (fromList [LamG EmptyG]) VarG
 EMPTY
 EmptyG
 
-(3,23)-(3,24)
-EMPTY
-EmptyG
-
 (3,41)-(3,46)
-EMPTY
-EmptyG
-
-(3,55)-(3,61)
-EMPTY
-EmptyG
-
-(3,55)-(3,68)
-EMPTY
-EmptyG
-
-(3,62)-(3,68)
-EMPTY
-EmptyG
-
-(3,63)-(3,64)
 x <> b
 BopG VarG VarG
 
@@ -60,4 +40,22 @@ BopG VarG VarG
 f
 VarG
 
+*)
+
+(* typed spans
+(2,19)-(2,62)
+(2,48)-(2,56)
+(2,61)-(2,62)
+*)
+
+(* typed spans
+'a -> ('a * bool)
+bool
+'a -> ('a * bool)
+*)
+
+(* typed spans
+('a * bool)
+bool
+('a -> ('a * bool) * 'a) -> 'a
 *)

@@ -73,3 +73,12 @@ EmptyG
 TupleG (fromList [VarG,LitG])
 
 *)
+
+(* typed spans
+'t31 -> ('t31 * bool)
+('t31 -> ('t31 * bool) * 't31)
+('t31 * bool)
+bool
+'t31
+('t31 * bool)
+*)

@@ -73,3 +73,31 @@ exprToString expr3
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (23,9)-(23,29)) (Var (Just (23,10)-(23,22)) "exprToString") [Var (Just (23,23)-(23,28)) "expr0"]
+App (Just (25,15)-(25,35)) (Var (Just (25,16)-(25,28)) "exprToString") [Var (Just (25,29)-(25,34)) "expr1"]
+App (Just (27,21)-(27,41)) (Var (Just (27,22)-(27,34)) "exprToString") [Var (Just (27,35)-(27,40)) "expr2"]
+App (Just (28,31)-(28,51)) (Var (Just (28,32)-(28,44)) "exprToString") [Var (Just (28,45)-(28,50)) "expr3"]
+*)
+
+(* typed spans
+(23,9)-(23,29)
+(25,15)-(25,35)
+(27,21)-(27,41)
+(28,31)-(28,51)
+*)
+
+(* correct types
+string
+string
+string
+string
+*)
+
+(* bad types
+expr
+expr
+expr
+expr
+*)

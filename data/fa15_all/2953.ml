@@ -74,3 +74,19 @@ let bigMul l1 l2 =
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
+
+(* changed exprs
+Tuple (Just (32,16)-(32,49)) [Lit (Just (32,17)-(32,18)) (LI 0),App (Just (32,20)-(32,48)) (Var (Just (32,21)-(32,35)) "List.fold_left") [Var (Just (32,36)-(32,37)) "f",Var (Just (32,38)-(32,42)) "base",Var (Just (32,43)-(32,47)) "args"]]
+*)
+
+(* typed spans
+(32,16)-(32,49)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+int list
+*)

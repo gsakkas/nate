@@ -31,8 +31,20 @@ let rec additivePersistence n =
 digitsOfInt x
 AppG (fromList [VarG])
 
-(10,65)-(10,69)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (10,52)-(10,67)) (Var (Just (10,53)-(10,64)) "digitsOfInt") [Var (Just (10,65)-(10,66)) "x"]
+*)
+
+(* typed spans
+(10,52)-(10,67)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

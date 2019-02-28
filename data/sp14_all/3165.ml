@@ -69,21 +69,25 @@ let rec mulByDigit i l = mulByDigit (i - 1) (bigAdd l l);;
 *)
 
 (* changed spans
-(32,25)-(32,39)
+(32,25)-(32,58)
 mulByDigit (i - 1) (bigAdd l
                            l)
 AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(32,25)-(32,58)
-EMPTY
-EmptyG
+*)
 
-(32,37)-(32,38)
-i - 1
-BopG VarG LitG
+(* changed exprs
+App (Just (32,25)-(32,56)) (Var (Just (32,25)-(32,35)) "mulByDigit") [Bop (Just (32,36)-(32,43)) Minus (Var (Just (32,37)-(32,38)) "i") (Lit (Just (32,41)-(32,42)) (LI 1)),App (Just (32,44)-(32,56)) (Var (Just (32,45)-(32,51)) "bigAdd") [Var (Just (32,52)-(32,53)) "l",Var (Just (32,54)-(32,55)) "l"]]
+*)
 
-(32,42)-(32,58)
-EMPTY
-EmptyG
+(* typed spans
+(32,25)-(32,56)
+*)
 
+(* correct types
+'a
+*)
+
+(* bad types
+int
 *)

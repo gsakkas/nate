@@ -1,3 +1,4 @@
-LamG (ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG]))) Nothing)
-fun (x , y) ->
-  ((x + y) / 10) :: a
+LetG NonRec (fromList [BopG EmptyG EmptyG]) (BopG EmptyG EmptyG)
+let sum =
+  num + additivePersistence num in
+1 + additivePersistence num

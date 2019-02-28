@@ -54,3 +54,19 @@ eval (e1 , x , y) *. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)
+
+(* changed exprs
+Bop (Just (18,21)-(18,59)) FTimes (App (Just (18,21)-(18,38)) (Var (Just (18,22)-(18,26)) "eval") [Tuple (Just (18,27)-(18,37)) [Var (Just (18,28)-(18,30)) "e1",Var (Just (18,32)-(18,33)) "x",Var (Just (18,35)-(18,36)) "y"]]) (App (Just (18,42)-(18,59)) (Var (Just (18,43)-(18,47)) "eval") [Tuple (Just (18,48)-(18,58)) [Var (Just (18,49)-(18,51)) "e2",Var (Just (18,53)-(18,54)) "x",Var (Just (18,56)-(18,57)) "y"]])
+*)
+
+(* typed spans
+(18,21)-(18,59)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

@@ -20,3 +20,19 @@ f x
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (5,48)-(5,51)) (Var (Just (5,48)-(5,49)) "f") [Var (Just (5,50)-(5,51)) "x"]
+*)
+
+(* typed spans
+(5,48)-(5,51)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+('a * 'b)
+*)

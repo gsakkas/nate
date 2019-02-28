@@ -27,10 +27,30 @@ let rec mulByDigit i l =
 (* changed spans
 (9,15)-(9,16)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (10,17)-(10,18)
 [h]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (9,15)-(9,17)) [] Nothing
+List (Just (10,17)-(10,20)) [Var (Just (10,18)-(10,19)) "h"] Nothing
+*)
+
+(* typed spans
+(9,15)-(9,17)
+(10,17)-(10,20)
+*)
+
+(* correct types
+int list
+int list
+*)
+
+(* bad types
+int
+int
 *)

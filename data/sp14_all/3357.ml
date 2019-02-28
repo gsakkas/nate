@@ -84,11 +84,25 @@ let rec mulByDigit i l =
 
 (* changed spans
 (38,6)-(38,71)
-EMPTY
-EmptyG
+mulByDigit i
+           (List.rev (List.map (fun x ->
+                                  x * 10) t))
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(38,7)-(38,12)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (38,6)-(38,63)) (Var (Just (38,7)-(38,17)) "mulByDigit") [Var (Just (38,18)-(38,19)) "i",App (Just (38,20)-(38,62)) (Var (Just (38,21)-(38,29)) "List.rev") [App (Just (38,30)-(38,61)) (Var (Just (38,31)-(38,39)) "List.map") [Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing,Var (Just (38,59)-(38,60)) "t"]]]
+*)
+
+(* typed spans
+(38,6)-(38,63)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list
 *)

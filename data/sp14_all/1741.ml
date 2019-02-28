@@ -15,12 +15,28 @@ let rec listReverse l =
 h
 VarG
 
-(3,49)-(3,50)
-EMPTY
-EmptyG
-
 (3,55)-(3,56)
 l
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (3,36)-(3,37)) "h"
+Var (Just (3,54)-(3,55)) "l"
+*)
+
+(* typed spans
+(3,36)-(3,37)
+(3,54)-(3,55)
+*)
+
+(* correct types
+'a
+'a list
+*)
+
+(* bad types
+'a
+'a list
 *)

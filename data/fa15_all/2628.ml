@@ -55,30 +55,6 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (18,6)-(21,31)
-EMPTY
-EmptyG
-
-(18,14)-(18,21)
-EMPTY
-EmptyG
-
-(18,14)-(18,31)
-EMPTY
-EmptyG
-
-(18,15)-(18,18)
-EMPTY
-EmptyG
-
-(18,19)-(18,20)
-EMPTY
-EmptyG
-
-(18,24)-(18,31)
-EMPTY
-EmptyG
-
-(18,25)-(18,28)
 let (x1 , x2) = x in
 let (a1 , a2) = a in
 ((x1 + x2) / 10 , (((a1 + x1) + x2) mod 10) :: a2)
@@ -95,31 +71,15 @@ VarG
 
 (20,16)-(20,55)
 ((x1 + x2) / 10 , (((a1 + x1) + x2) mod 10) :: a2)
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG) Nothing])
+TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
 
 (20,18)-(20,19)
-EMPTY
-EmptyG
-
-(20,22)-(20,23)
 x1
 VarG
 
 (20,36)-(20,37)
-EMPTY
-EmptyG
-
-(20,40)-(20,41)
-EMPTY
-EmptyG
-
-(20,47)-(20,49)
-EMPTY
-EmptyG
-
-(20,54)-(20,55)
-EMPTY
-EmptyG
+a1 + x1
+BopG VarG VarG
 
 (21,13)-(21,31)
 x2
@@ -127,22 +87,46 @@ VarG
 
 (21,14)-(21,15)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (21,14)-(21,20)
 a2
 VarG
 
-(21,18)-(21,20)
-EMPTY
-EmptyG
+*)
 
-(21,22)-(21,23)
-a1 + x1
-BopG VarG VarG
+(* typed spans
+(18,6)-(20,59)
+(19,6)-(20,59)
+(20,14)-(20,16)
+(20,6)-(20,59)
+(20,9)-(20,11)
+(20,28)-(20,37)
+(20,40)-(20,42)
+(21,15)-(21,22)
+(20,55)-(20,57)
+*)
 
-(21,22)-(21,30)
-EMPTY
-EmptyG
+(* typed spans
+(int * int list)
+(int * int list)
+int
+(int * int list)
+int
+int
+int
+(int * int list)
+int list
+*)
 
+(* typed spans
+int list
+int list
+int list
+int list
+int
+int
+int list
+int
+int
 *)

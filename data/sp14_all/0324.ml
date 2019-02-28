@@ -68,3 +68,19 @@ let rec eval (e,x,y) =
 UopG (AppG (fromList [EmptyG]))
 
 *)
+
+(* changed exprs
+Uop (Just (28,6)-(28,26)) FNeg (App (Just (28,9)-(28,26)) (Var (Just (28,10)-(28,14)) "eval") [Tuple (Just (28,15)-(28,25)) [Var (Just (28,16)-(28,18)) "e3",Var (Just (28,20)-(28,21)) "x",Var (Just (28,23)-(28,24)) "y"]])
+*)
+
+(* typed spans
+(28,6)-(28,26)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

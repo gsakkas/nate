@@ -20,3 +20,15 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+(3,5)-(3,11)
+*)
+
+(* typed spans
+bool
+*)
+
+(* typed spans
+bool
+*)

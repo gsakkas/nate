@@ -16,11 +16,23 @@ let pipe fs =
 
 (* changed spans
 (5,14)-(5,17)
-EMPTY
-EmptyG
+a
+VarG
 
-(5,16)-(5,17)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (5,14)-(5,15)) "a"
+*)
+
+(* typed spans
+(5,14)-(5,15)
+*)
+
+(* correct types
+'a -> 'a
+*)
+
+(* bad types
+'a
 *)

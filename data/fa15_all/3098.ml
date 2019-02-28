@@ -71,13 +71,13 @@ let rec eval (e,x,y) =
 (eval (expr , x , y) *. (eval (expr , x , y) +. 1.0)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
-(28,76)-(28,77)
-2.0
-LitG
-
 (30,12)-(30,17)
 (expr1 , x , y)
 TupleG (fromList [VarG])
+
+(30,22)-(30,74)
+x
+VarG
 
 (30,22)-(30,74)
 y
@@ -95,4 +95,44 @@ VarG
 expr3
 VarG
 
+*)
+
+(* changed exprs
+Bop (Just (29,6)-(29,66)) FDiv (Bop (Just (29,6)-(29,59)) FTimes (App (Just (29,7)-(29,26)) (Var (Just (29,8)-(29,12)) "eval") [Tuple (Just (29,13)-(29,25)) [Var (Just (29,14)-(29,18)) "expr",Var (Just (29,20)-(29,21)) "x",Var (Just (29,23)-(29,24)) "y"]]) (Bop (Just (29,30)-(29,58)) FPlus (App (Just (29,31)-(29,50)) (Var (Just (29,32)-(29,36)) "eval") [Tuple (Just (29,37)-(29,49)) [Var (Just (29,38)-(29,42)) "expr",Var (Just (29,44)-(29,45)) "x",Var (Just (29,47)-(29,48)) "y"]]) (Lit (Just (29,54)-(29,57)) (LD 1.0)))) (Lit (Just (29,63)-(29,66)) (LD 2.0))
+Tuple (Just (31,12)-(31,25)) [Var (Just (31,13)-(31,18)) "expr1",Var (Just (31,20)-(31,21)) "x",Var (Just (31,23)-(31,24)) "y"]
+Var (Just (31,20)-(31,21)) "x"
+Var (Just (31,23)-(31,24)) "y"
+Var (Just (32,9)-(32,18)) "abs_float"
+Var (Just (32,27)-(32,32)) "expr2"
+Var (Just (32,51)-(32,56)) "expr3"
+*)
+
+(* typed spans
+(29,6)-(29,66)
+(31,12)-(31,25)
+(31,20)-(31,21)
+(31,23)-(31,24)
+(32,9)-(32,18)
+(32,27)-(32,32)
+(32,51)-(32,56)
+*)
+
+(* correct types
+float
+(expr * float * float)
+float
+float
+float -> float
+expr
+expr
+*)
+
+(* bad types
+int
+expr
+float
+float
+int -> int
+expr
+expr
 *)

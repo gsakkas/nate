@@ -20,3 +20,19 @@ let padZero l1 l2 =
 TupleG (fromList [VarG])
 
 *)
+
+(* changed exprs
+Tuple (Just (5,65)-(5,73)) [Var (Just (5,66)-(5,68)) "l1",Var (Just (5,70)-(5,72)) "l2"]
+*)
+
+(* typed spans
+(5,65)-(5,73)
+*)
+
+(* correct types
+('a list * 'b list)
+*)
+
+(* bad types
+unit
+*)

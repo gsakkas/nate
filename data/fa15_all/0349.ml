@@ -44,3 +44,9 @@ x
 VarG
 
 *)
+
+(* typed spans
+string
+string -> string -> string
+string
+*)

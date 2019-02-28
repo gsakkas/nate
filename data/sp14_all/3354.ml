@@ -85,35 +85,173 @@ let rec mulByDigit i l =
 
 (* changed spans
 (33,10)-(33,13)
-EMPTY
-EmptyG
-
-(33,11)-(33,12)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (37,45)-(37,48)
-EMPTY
-EmptyG
-
-(37,46)-(37,47)
 []
-ListG EmptyG Nothing
-
-(38,6)-(38,11)
-EMPTY
-EmptyG
+ListG EmptyG
 
 (38,6)-(40,31)
-EMPTY
-EmptyG
+mulByDigit i
+           (List.rev (List.map (fun x ->
+                                  x * 10) t)) @ (helper []
+                                                        (h * i) @ [])
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(40,11)-(40,30)
-EMPTY
-EmptyG
+(38,6)-(40,31)
+(@)
+VarG
+
+(38,6)-(40,31)
+mulByDigit i
+           (List.rev (List.map (fun x ->
+                                  x * 10) t))
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
+
+(38,6)-(40,31)
+mulByDigit
+VarG
+
+(38,6)-(40,31)
+i
+VarG
+
+(38,6)-(40,31)
+List.rev (List.map (fun x ->
+                      x * 10) t)
+AppG (fromList [AppG (fromList [EmptyG])])
+
+(38,6)-(40,31)
+List.rev
+VarG
+
+(38,6)-(40,31)
+List.map (fun x -> x * 10) t
+AppG (fromList [VarG,LamG EmptyG])
+
+(38,6)-(40,31)
+List.map
+VarG
+
+(38,6)-(40,31)
+fun x -> x * 10
+LamG (BopG EmptyG EmptyG)
+
+(38,6)-(40,31)
+x * 10
+BopG VarG LitG
+
+(38,6)-(40,31)
+x
+VarG
+
+(38,6)-(40,31)
+10
+LitG
+
+(38,6)-(40,31)
+t
+VarG
+
+(38,6)-(40,31)
+helper [] (h * i) @ []
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
+
+(38,6)-(40,31)
+(@)
+VarG
 
 (40,12)-(40,18)
 helper [] (h * i)
-AppG (fromList [BopG EmptyG EmptyG,ListG EmptyG Nothing])
+AppG (fromList [BopG EmptyG EmptyG,ListG EmptyG])
 
+*)
+
+(* changed exprs
+List (Just (33,10)-(33,12)) [] Nothing
+List (Just (37,45)-(37,47)) [] Nothing
+App (Just (38,6)-(39,34)) (Var (Just (38,64)-(38,65)) "@") [App (Just (38,6)-(38,63)) (Var (Just (38,7)-(38,17)) "mulByDigit") [Var (Just (38,18)-(38,19)) "i",App (Just (38,20)-(38,62)) (Var (Just (38,21)-(38,29)) "List.rev") [App (Just (38,30)-(38,61)) (Var (Just (38,31)-(38,39)) "List.map") [Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing,Var (Just (38,59)-(38,60)) "t"]]],App (Just (39,8)-(39,34)) (Var (Just (39,29)-(39,30)) "@") [App (Just (39,9)-(39,28)) (Var (Just (39,10)-(39,16)) "helper") [List (Just (39,17)-(39,19)) [] Nothing,Bop (Just (39,20)-(39,27)) Times (Var (Just (39,21)-(39,22)) "h") (Var (Just (39,25)-(39,26)) "i")],List (Just (39,31)-(39,33)) [] Nothing]]
+Var (Just (38,64)-(38,65)) "@"
+App (Just (38,6)-(38,63)) (Var (Just (38,7)-(38,17)) "mulByDigit") [Var (Just (38,18)-(38,19)) "i",App (Just (38,20)-(38,62)) (Var (Just (38,21)-(38,29)) "List.rev") [App (Just (38,30)-(38,61)) (Var (Just (38,31)-(38,39)) "List.map") [Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing,Var (Just (38,59)-(38,60)) "t"]]]
+Var (Just (38,7)-(38,17)) "mulByDigit"
+Var (Just (38,18)-(38,19)) "i"
+App (Just (38,20)-(38,62)) (Var (Just (38,21)-(38,29)) "List.rev") [App (Just (38,30)-(38,61)) (Var (Just (38,31)-(38,39)) "List.map") [Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing,Var (Just (38,59)-(38,60)) "t"]]
+Var (Just (38,21)-(38,29)) "List.rev"
+App (Just (38,30)-(38,61)) (Var (Just (38,31)-(38,39)) "List.map") [Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing,Var (Just (38,59)-(38,60)) "t"]
+Var (Just (38,31)-(38,39)) "List.map"
+Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing
+Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))
+Var (Just (38,51)-(38,52)) "x"
+Lit (Just (38,55)-(38,57)) (LI 10)
+Var (Just (38,59)-(38,60)) "t"
+App (Just (39,8)-(39,34)) (Var (Just (39,29)-(39,30)) "@") [App (Just (39,9)-(39,28)) (Var (Just (39,10)-(39,16)) "helper") [List (Just (39,17)-(39,19)) [] Nothing,Bop (Just (39,20)-(39,27)) Times (Var (Just (39,21)-(39,22)) "h") (Var (Just (39,25)-(39,26)) "i")],List (Just (39,31)-(39,33)) [] Nothing]
+Var (Just (39,29)-(39,30)) "@"
+App (Just (39,9)-(39,28)) (Var (Just (39,10)-(39,16)) "helper") [List (Just (39,17)-(39,19)) [] Nothing,Bop (Just (39,20)-(39,27)) Times (Var (Just (39,21)-(39,22)) "h") (Var (Just (39,25)-(39,26)) "i")]
+*)
+
+(* typed spans
+(33,10)-(33,12)
+(37,45)-(37,47)
+(38,6)-(39,34)
+(38,64)-(38,65)
+(38,6)-(38,63)
+(38,7)-(38,17)
+(38,18)-(38,19)
+(38,20)-(38,62)
+(38,21)-(38,29)
+(38,30)-(38,61)
+(38,31)-(38,39)
+(38,40)-(38,58)
+(38,51)-(38,57)
+(38,51)-(38,52)
+(38,55)-(38,57)
+(38,59)-(38,60)
+(39,8)-(39,34)
+(39,29)-(39,30)
+(39,9)-(39,28)
+*)
+
+(* correct types
+int list
+int list
+int list
+int list -> int list -> int list
+int list
+int -> int list -> int list
+int
+int list
+int list -> int list
+int list
+(int -> int) -> int list -> int list
+int -> int
+int
+int
+int
+int list
+int list
+int list -> int list -> int list
+int list
+*)
+
+(* bad types
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list
+int list -> int -> int list
 *)

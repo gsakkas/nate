@@ -13,20 +13,27 @@ let rec sumList xs = if xs = [] then 0 else (List.hd xs) + (sumList xs);;
 EMPTY
 EmptyG
 
-(2,24)-(2,40)
-EMPTY
-EmptyG
-
 (2,24)-(2,44)
-EMPTY
-EmptyG
-
-(2,25)-(2,36)
 xs = []
-BopG VarG (ListG EmptyG Nothing)
+BopG VarG (ListG EmptyG)
 
 (2,43)-(2,44)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* typed spans
+(2,24)-(2,31)
+(2,29)-(2,31)
+*)
+
+(* typed spans
+bool
+int list
+*)
+
+(* typed spans
+bool
+int
 *)

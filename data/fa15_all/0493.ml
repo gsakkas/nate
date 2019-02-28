@@ -60,3 +60,15 @@ sum
 VarG
 
 *)
+
+(* typed spans
+(19,58)-(19,61)
+*)
+
+(* typed spans
+int list
+*)
+
+(* typed spans
+int list
+*)

@@ -57,10 +57,6 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(13,13)-(13,17)
-EMPTY
-EmptyG
-
 (14,13)-(14,17)
 "x"
 LitG
@@ -69,4 +65,24 @@ LitG
 "y"
 LitG
 
+*)
+
+(* changed exprs
+Lit (Just (13,13)-(13,16)) (LS "x")
+Lit (Just (14,13)-(14,16)) (LS "y")
+*)
+
+(* typed spans
+(13,13)-(13,16)
+(14,13)-(14,16)
+*)
+
+(* correct types
+string
+string
+*)
+
+(* bad types
+expr
+string
 *)

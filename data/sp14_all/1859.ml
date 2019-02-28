@@ -92,3 +92,19 @@ let rec build (rand,depth) =
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
+
+(* changed exprs
+Tuple (Just (40,11)-(41,70)) [Var (Just (40,12)-(40,24)) "first_forced",App (Just (40,26)-(40,53)) (Var (Just (40,27)-(40,32)) "build") [Tuple (Just (40,33)-(40,52)) [Var (Just (40,34)-(40,38)) "rand",Bop (Just (40,40)-(40,51)) Minus (Var (Just (40,41)-(40,46)) "depth") (Lit (Just (40,49)-(40,50)) (LI 1))]],App (Just (41,13)-(41,40)) (Var (Just (41,14)-(41,19)) "build") [Tuple (Just (41,20)-(41,39)) [Var (Just (41,21)-(41,25)) "rand",Bop (Just (41,27)-(41,38)) Minus (Var (Just (41,28)-(41,33)) "depth") (Lit (Just (41,36)-(41,37)) (LI 1))]],App (Just (41,42)-(41,69)) (Var (Just (41,43)-(41,48)) "build") [Tuple (Just (41,49)-(41,68)) [Var (Just (41,50)-(41,54)) "rand",Bop (Just (41,56)-(41,67)) Minus (Var (Just (41,57)-(41,62)) "depth") (Lit (Just (41,65)-(41,66)) (LI 1))]]]
+*)
+
+(* typed spans
+(40,11)-(41,70)
+*)
+
+(* correct types
+(expr * expr * expr * expr)
+*)
+
+(* bad types
+(expr * expr * expr)
+*)

@@ -62,85 +62,28 @@ let (s , t) = a in
 (((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(21,20)-(21,77)
-EMPTY
-EmptyG
-
-(21,23)-(21,30)
-EMPTY
-EmptyG
-
-(21,23)-(21,34)
-EMPTY
-EmptyG
-
-(21,24)-(21,25)
-EMPTY
-EmptyG
-
-(21,28)-(21,29)
-EMPTY
-EmptyG
-
-(21,33)-(21,34)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(21,40)-(21,59)
-a
-VarG
-
-(21,41)-(21,42)
-EMPTY
-EmptyG
-
-(21,44)-(21,58)
-((i + j) + s) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(21,46)-(21,47)
-i + j
-BopG VarG VarG
-
-(21,55)-(21,57)
-s
-VarG
-
-(21,65)-(21,77)
-EMPTY
-EmptyG
-
-(21,66)-(21,67)
-(((i + j) + s) mod 10) :: t
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
-
-(21,69)-(21,76)
-((i + j) + s) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(21,70)-(21,71)
-i + j
-BopG VarG VarG
-
-(22,14)-(22,20)
-EMPTY
-EmptyG
-
-(22,15)-(22,16)
-EMPTY
-EmptyG
-
-(22,18)-(22,19)
-s
-VarG
-
-(23,4)-(25,51)
-t
-VarG
-
 (23,19)-(23,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+Let (Just (20,6)-(21,76)) NonRec [(TuplePat (Just (20,11)-(20,14)) [VarPat (Just (20,11)-(20,12)) "i",VarPat (Just (20,13)-(20,14)) "j"],Var (Just (20,18)-(20,19)) "x")] (Let (Just (21,6)-(21,76)) NonRec [(TuplePat (Just (21,11)-(21,14)) [VarPat (Just (21,11)-(21,12)) "s",VarPat (Just (21,13)-(21,14)) "t"],Var (Just (21,18)-(21,19)) "a")] (Tuple (Just (21,23)-(21,76)) [Bop (Just (21,24)-(21,44)) Div (Bop (Just (21,25)-(21,38)) Plus (Bop (Just (21,26)-(21,33)) Plus (Var (Just (21,27)-(21,28)) "i") (Var (Just (21,31)-(21,32)) "j")) (Var (Just (21,36)-(21,37)) "s")) (Lit (Just (21,41)-(21,43)) (LI 10)),ConApp (Just (21,46)-(21,75)) "::" (Just (Tuple (Just (21,47)-(21,74)) [Bop (Just (21,47)-(21,69)) Mod (Bop (Just (21,48)-(21,61)) Plus (Bop (Just (21,49)-(21,56)) Plus (Var (Just (21,50)-(21,51)) "i") (Var (Just (21,54)-(21,55)) "j")) (Var (Just (21,59)-(21,60)) "s")) (Lit (Just (21,66)-(21,68)) (LI 10)),Var (Just (21,73)-(21,74)) "t"])) Nothing]))
+List (Just (22,19)-(22,21)) [] Nothing
+*)
+
+(* typed spans
+(20,6)-(21,76)
+(22,19)-(22,21)
+*)
+
+(* correct types
+(int * int list)
+int list
+*)
+
+(* bad types
+(int * int)
+int
 *)

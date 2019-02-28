@@ -42,3 +42,19 @@ let bigMul l1 l2 =
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
+
+(* changed exprs
+Tuple (Just (14,14)-(14,36)) [Lit (Just (14,15)-(14,16)) (LI 0),App (Just (14,18)-(14,35)) (Var (Just (14,19)-(14,29)) "mulByDigit") [Var (Just (14,30)-(14,31)) "x",Var (Just (14,32)-(14,34)) "l1"]]
+*)
+
+(* typed spans
+(14,14)-(14,36)
+*)
+
+(* correct types
+(int * int list)
+*)
+
+(* bad types
+int list
+*)

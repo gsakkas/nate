@@ -34,3 +34,23 @@ seen
 VarG
 
 *)
+
+(* changed exprs
+App (Just (8,16)-(8,31)) (Var (Just (8,16)-(8,24)) "List.mem") [Var (Just (8,25)-(8,26)) "h",Var (Just (8,27)-(8,31)) "seen"]
+Var (Just (8,48)-(8,52)) "seen"
+*)
+
+(* typed spans
+(8,16)-(8,31)
+(8,48)-(8,52)
+*)
+
+(* correct types
+bool
+'a list
+*)
+
+(* bad types
+'a list -> bool
+'a list
+*)

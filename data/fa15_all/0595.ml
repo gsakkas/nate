@@ -139,7 +139,7 @@ EmptyG
 
 (18,35)-(18,42)
 (1 , [(t1 + t2) - 10])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (18,36)-(18,37)
 EMPTY
@@ -187,10 +187,25 @@ VarG
 
 (20,4)-(22,51)
 (0 , [t1 + t2])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (20,15)-(20,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* typed spans
+int
+(int * int list)
+int list -> int
+(int * int list)
+int list -> int
+(int * int list)
+int
+(int * int list)
+int
+int
+(int * int list)
+(int * int list)
 *)

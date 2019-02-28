@@ -18,12 +18,20 @@ let fixpoint (f,b) =
 not (f x = x)
 AppG (fromList [BopG EmptyG EmptyG])
 
-(4,50)-(4,59)
-f x
-AppG (fromList [VarG])
+*)
 
-(4,55)-(4,58)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (5,30)-(5,47)) (Var (Just (5,31)-(5,34)) "not") [Bop (Just (5,35)-(5,46)) Eq (App (Just (5,36)-(5,41)) (Var (Just (5,37)-(5,38)) "f") [Var (Just (5,39)-(5,40)) "x"]) (Var (Just (5,44)-(5,45)) "x")]
+*)
 
+(* typed spans
+(5,30)-(5,47)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+bool
 *)

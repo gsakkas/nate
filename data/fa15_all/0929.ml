@@ -108,3 +108,19 @@ aNum
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (46,42)-(46,46)) "aNum"
+*)
+
+(* typed spans
+(46,42)-(46,46)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
+*)

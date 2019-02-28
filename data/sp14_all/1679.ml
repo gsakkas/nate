@@ -25,24 +25,20 @@ fun b' ->
   else (b' , false)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(6,17)-(6,18)
-EMPTY
-EmptyG
+*)
 
-(6,22)-(6,23)
-b'
-VarG
+(* changed exprs
+Lam (Just (6,9)-(6,61)) (VarPat (Just (6,9)-(6,11)) "b'") (Ite (Just (6,14)-(6,61)) (Bop (Just (6,17)-(6,28)) Eq (App (Just (6,17)-(6,23)) (Var (Just (6,18)-(6,19)) "f") [Var (Just (6,20)-(6,22)) "b'"]) (Var (Just (6,26)-(6,28)) "b'")) (Tuple (Just (6,34)-(6,44)) [Var (Just (6,35)-(6,37)) "b'",Lit (Just (6,39)-(6,43)) (LB True)]) (Tuple (Just (6,50)-(6,61)) [Var (Just (6,51)-(6,53)) "b'",Lit (Just (6,55)-(6,60)) (LB False)])) Nothing
+*)
 
-(6,29)-(6,38)
-b'
-VarG
+(* typed spans
+(6,9)-(6,61)
+*)
 
-(6,30)-(6,31)
-b'
-VarG
+(* correct types
+'a -> ('a * bool)
+*)
 
-(6,45)-(6,46)
-b'
-VarG
-
+(* bad types
+('a * bool)
 *)

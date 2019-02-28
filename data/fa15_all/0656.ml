@@ -19,7 +19,7 @@ let rec digitsOfInt n =
 (* changed spans
 (3,53)-(3,74)
 front :: (add back next)
-ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])])))
 
 (6,25)-(6,62)
 add (digitsOfInt (n / 10))
@@ -34,8 +34,19 @@ EmptyG
 EMPTY
 EmptyG
 
-(6,51)-(6,61)
-EMPTY
-EmptyG
+*)
 
+(* typed spans
+(3,53)-(3,77)
+(6,25)-(6,62)
+*)
+
+(* typed spans
+int list
+int list
+*)
+
+(* typed spans
+'a list
+'a list
 *)

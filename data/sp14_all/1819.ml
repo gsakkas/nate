@@ -38,3 +38,19 @@ myList
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (14,23)-(14,29)) "myList"
+*)
+
+(* typed spans
+(14,23)-(14,29)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
+*)

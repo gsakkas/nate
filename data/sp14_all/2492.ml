@@ -69,10 +69,6 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(29,58)-(29,59)
-EMPTY
-EmptyG
-
 (29,65)-(29,66)
 1.0
 LitG
@@ -80,10 +76,6 @@ LitG
 (31,8)-(31,69)
 0.0
 LitG
-
-(31,58)-(31,59)
-EMPTY
-EmptyG
 
 (31,65)-(31,69)
 0.0
@@ -93,4 +85,32 @@ LitG
 (- 1.0)
 UopG LitG
 
+*)
+
+(* changed exprs
+Lit (Just (29,58)-(29,61)) (LD 1.0)
+Lit (Just (29,67)-(29,70)) (LD 0.0)
+Lit (Just (31,58)-(31,61)) (LD 0.0)
+Uop (Just (31,67)-(31,73)) Neg (Lit (Just (31,69)-(31,72)) (LD 1.0))
+*)
+
+(* typed spans
+(29,58)-(29,61)
+(29,67)-(29,70)
+(31,58)-(31,61)
+(31,67)-(31,73)
+*)
+
+(* correct types
+float
+float
+float
+int
+*)
+
+(* bad types
+int
+int
+int
+float
 *)

@@ -50,25 +50,33 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(17,35)-(17,37)
-x1 + x2
-BopG VarG VarG
-
 (17,35)-(17,42)
 let (carry , res) = a in
 (((x1 + x2) + carry) / 10 , (((x1 + x2) + carry) mod 10) :: res)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
-(18,4)-(20,51)
-((x1 + x2) + carry) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
 (18,15)-(18,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
-(19,4)-(20,51)
-[]
-ListG EmptyG Nothing
+*)
 
+(* changed exprs
+Let (Just (19,6)-(20,73)) NonRec [(TuplePat (Just (19,11)-(19,20)) [VarPat (Just (19,11)-(19,16)) "carry",VarPat (Just (19,17)-(19,20)) "res"],Var (Just (19,24)-(19,25)) "a")] (Tuple (Just (20,6)-(20,73)) [Bop (Just (20,7)-(20,33)) Div (Bop (Just (20,8)-(20,27)) Plus (Bop (Just (20,9)-(20,18)) Plus (Var (Just (20,10)-(20,12)) "x1") (Var (Just (20,15)-(20,17)) "x2")) (Var (Just (20,21)-(20,26)) "carry")) (Lit (Just (20,30)-(20,32)) (LI 10)),ConApp (Just (20,35)-(20,72)) "::" (Just (Tuple (Just (20,36)-(20,71)) [Bop (Just (20,36)-(20,64)) Mod (Bop (Just (20,37)-(20,56)) Plus (Bop (Just (20,38)-(20,47)) Plus (Var (Just (20,39)-(20,41)) "x1") (Var (Just (20,44)-(20,46)) "x2")) (Var (Just (20,50)-(20,55)) "carry")) (Lit (Just (20,61)-(20,63)) (LI 10)),Var (Just (20,68)-(20,71)) "res"])) Nothing])
+Tuple (Just (21,15)-(21,22)) [Lit (Just (21,16)-(21,17)) (LI 0),List (Just (21,19)-(21,21)) [] Nothing]
+*)
+
+(* typed spans
+(19,6)-(20,73)
+(21,15)-(21,22)
+*)
+
+(* correct types
+(int * int list)
+(int * int list)
+*)
+
+(* bad types
+int
+unit
 *)

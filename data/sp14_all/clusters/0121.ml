@@ -1,21 +1,4 @@
-IteG (BopG EmptyG EmptyG) (LamG EmptyG) (LamG EmptyG)
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
-if f b = b
-then (fun b'' ->
-        (f b , false))
-else (fun b'' -> (f b , true))
+CaseG VarG (fromList [(Nothing,VarG),(Nothing,ConAppG (Just (TupleG (fromList [BopG (BopG VarG VarG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) LitG])))]))))])
+match x with
+| (h1 , h2) -> ((h1 + h2) / 10) :: (((h1 + h2) mod 10) :: a)
+| _ -> a

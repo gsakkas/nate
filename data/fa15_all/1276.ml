@@ -18,7 +18,23 @@ let rec listReverse l =
 
 (* changed spans
 (6,31)-(6,37)
-EMPTY
-EmptyG
+tail
+VarG
 
+*)
+
+(* changed exprs
+Var (Just (6,31)-(6,35)) "tail"
+*)
+
+(* typed spans
+(6,31)-(6,35)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list list
 *)

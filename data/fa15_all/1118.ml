@@ -55,15 +55,7 @@ let bigAdd l1 l2 =
 EMPTY
 EmptyG
 
-(18,18)-(18,19)
-EMPTY
-EmptyG
-
 (20,21)-(20,22)
-EMPTY
-EmptyG
-
-(20,25)-(20,26)
 fst x
 AppG (fromList [VarG])
 
@@ -72,10 +64,6 @@ snd x
 AppG (fromList [VarG])
 
 (20,46)-(20,47)
-EMPTY
-EmptyG
-
-(20,50)-(20,51)
 fst x
 AppG (fromList [VarG])
 
@@ -83,4 +71,25 @@ AppG (fromList [VarG])
 snd x
 AppG (fromList [VarG])
 
+*)
+
+(* typed spans
+(19,21)-(19,28)
+(19,31)-(19,38)
+(20,13)-(20,20)
+(20,23)-(20,30)
+*)
+
+(* typed spans
+int
+int
+int
+int
+*)
+
+(* typed spans
+int
+int
+int
+int
 *)

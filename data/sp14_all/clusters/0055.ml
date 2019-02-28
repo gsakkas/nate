@@ -1,26 +1,6 @@
-BopG (BopG EmptyG EmptyG) VarG
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(c + x') + x''
-(a * a) + x
-(a * a) + x
-(a * a) + x
-(a * a) + x
-(carry + addend_a) + addend_b
-(carry + addend_a) + addend_b
-(carry + addend_a) + addend_b
-((fir + sec) / 10) + b1
-(a * a) + x
+CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+match (c , s) with
+| (c , []) -> (c , c :: s)
+| _ -> (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
+match (a , x) with
+| ((b , c) , (d , e)) -> (b , (d + e) :: c)

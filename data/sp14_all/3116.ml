@@ -62,11 +62,27 @@ a
 VarG
 
 (24,19)-(24,23)
-EMPTY
-EmptyG
-
-(24,20)-(24,22)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+Var (Just (23,16)-(23,17)) "a"
+List (Just (24,19)-(24,21)) [] Nothing
+*)
+
+(* typed spans
+(23,16)-(23,17)
+(24,19)-(24,21)
+*)
+
+(* correct types
+(int * int list)
+int list
+*)
+
+(* bad types
+(int * int list list)
+int list list
 *)

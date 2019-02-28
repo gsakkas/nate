@@ -61,6 +61,18 @@ EmptyG
 
 (17,15)-(17,23)
 (0 , l :: m)
-TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
+TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG])))])
 
+*)
+
+(* typed spans
+(17,11)-(17,24)
+*)
+
+(* typed spans
+(int * int list)
+*)
+
+(* typed spans
+int list
 *)

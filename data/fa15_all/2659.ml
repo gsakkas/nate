@@ -94,3 +94,8 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+float
+float
+*)

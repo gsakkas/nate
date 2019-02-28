@@ -11,16 +11,24 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(3,45)-(3,60)
-(@)
-VarG
-
 (3,45)-(3,65)
 digitsOfInt n @ [x]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
-(3,64)-(3,65)
-[x]
-ListG VarG Nothing
+*)
 
+(* changed exprs
+App (Just (3,45)-(3,66)) (Var (Just (3,61)-(3,62)) "@") [App (Just (3,45)-(3,60)) (Var (Just (3,46)-(3,57)) "digitsOfInt") [Var (Just (3,58)-(3,59)) "n"],List (Just (3,63)-(3,66)) [Var (Just (3,64)-(3,65)) "x"] Nothing]
+*)
+
+(* typed spans
+(3,45)-(3,66)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
 *)

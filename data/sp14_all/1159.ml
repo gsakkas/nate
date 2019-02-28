@@ -22,20 +22,20 @@ else integers (a / 10)
               ((a mod 10) :: b)
 IteG (BopG EmptyG EmptyG) VarG (AppG (fromList [EmptyG]))
 
-(4,10)-(4,11)
-a = 0
-BopG VarG LitG
+*)
 
-(4,25)-(4,26)
-0
-LitG
+(* changed exprs
+Ite (Just (4,4)-(4,60)) (Bop (Just (4,7)-(4,12)) Eq (Var (Just (4,7)-(4,8)) "a") (Lit (Just (4,11)-(4,12)) (LI 0))) (Var (Just (4,18)-(4,19)) "b") (App (Just (4,25)-(4,60)) (Var (Just (4,25)-(4,33)) "integers") [Bop (Just (4,34)-(4,42)) Div (Var (Just (4,35)-(4,36)) "a") (Lit (Just (4,39)-(4,41)) (LI 10)),ConApp (Just (4,43)-(4,60)) "::" (Just (Tuple (Just (4,44)-(4,59)) [Bop (Just (4,44)-(4,54)) Mod (Var (Just (4,45)-(4,46)) "a") (Lit (Just (4,51)-(4,53)) (LI 10)),Var (Just (4,58)-(4,59)) "b"])) Nothing])
+*)
 
-(4,47)-(4,49)
-a / 10
-BopG VarG LitG
+(* typed spans
+(4,4)-(4,60)
+*)
 
-(4,50)-(4,67)
-10
-LitG
+(* correct types
+int list
+*)
 
+(* bad types
+int list
 *)

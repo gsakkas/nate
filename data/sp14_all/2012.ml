@@ -28,3 +28,19 @@ List.map f l
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (9,38)-(9,52)) (Var (Just (9,39)-(9,47)) "List.map") [Var (Just (9,48)-(9,49)) "f",Var (Just (9,50)-(9,51)) "l"]
+*)
+
+(* typed spans
+(9,38)-(9,52)
+*)
+
+(* correct types
+string list
+*)
+
+(* bad types
+'a list -> 'b list
+*)

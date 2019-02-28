@@ -61,6 +61,22 @@ let bigAdd l1 l2 =
 (* changed spans
 (25,40)-(25,47)
 [(h , l2)]
-ListG (TupleG (fromList [EmptyG])) Nothing
+ListG (TupleG (fromList [EmptyG]))
 
+*)
+
+(* changed exprs
+List (Just (25,40)-(25,49)) [Tuple (Just (25,41)-(25,48)) [Var (Just (25,42)-(25,43)) "h",Var (Just (25,45)-(25,47)) "l2"]] Nothing
+*)
+
+(* typed spans
+(25,40)-(25,49)
+*)
+
+(* correct types
+(int * int list) list
+*)
+
+(* bad types
+(int * int list)
 *)

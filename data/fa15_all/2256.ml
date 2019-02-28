@@ -87,16 +87,20 @@ let bigMul l1 l2 =
 bigAdd (mulByDigit prod l1) l
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(37,47)-(37,74)
-EMPTY
-EmptyG
+*)
 
-(37,48)-(37,65)
-mulByDigit prod l1
-AppG (fromList [VarG])
+(* changed exprs
+App (Just (37,39)-(37,70)) (Var (Just (37,40)-(37,46)) "bigAdd") [App (Just (37,47)-(37,67)) (Var (Just (37,48)-(37,58)) "mulByDigit") [Var (Just (37,59)-(37,63)) "prod",Var (Just (37,64)-(37,66)) "l1"],Var (Just (37,68)-(37,69)) "l"]
+*)
 
-(37,67)-(37,73)
-EMPTY
-EmptyG
+(* typed spans
+(37,39)-(37,70)
+*)
 
+(* correct types
+int list
+*)
+
+(* bad types
+'a list
 *)

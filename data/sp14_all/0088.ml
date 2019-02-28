@@ -54,21 +54,13 @@ let bigAdd l1 l2 =
 snd a
 AppG (fromList [VarG])
 
-(16,37)-(16,45)
-a
-VarG
-
-(16,38)-(16,40)
-EMPTY
-EmptyG
-
 (16,42)-(16,44)
 fst x + snd x
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 (16,56)-(16,64)
 [(fst x + snd x) / 10 ; (fst x + snd x) mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
+ListG (BopG EmptyG EmptyG)
 
 (16,57)-(16,59)
 0
@@ -78,4 +70,36 @@ LitG
 0
 LitG
 
+*)
+
+(* changed exprs
+App (Just (17,12)-(17,17)) (Var (Just (17,12)-(17,15)) "snd") [Var (Just (17,16)-(17,17)) "a"]
+Bop (Just (19,11)-(19,30)) Plus (App (Just (19,12)-(19,19)) (Var (Just (19,13)-(19,16)) "fst") [Var (Just (19,17)-(19,18)) "x"]) (App (Just (19,22)-(19,29)) (Var (Just (19,23)-(19,26)) "snd") [Var (Just (19,27)-(19,28)) "x"])
+List (Just (20,12)-(20,66)) [Bop (Just (20,13)-(20,37)) Div (Bop (Just (20,13)-(20,32)) Plus (App (Just (20,14)-(20,21)) (Var (Just (20,15)-(20,18)) "fst") [Var (Just (20,19)-(20,20)) "x"]) (App (Just (20,24)-(20,31)) (Var (Just (20,25)-(20,28)) "snd") [Var (Just (20,29)-(20,30)) "x"])) (Lit (Just (20,35)-(20,37)) (LI 10)),Bop (Just (20,39)-(20,65)) Mod (Bop (Just (20,39)-(20,58)) Plus (App (Just (20,40)-(20,47)) (Var (Just (20,41)-(20,44)) "fst") [Var (Just (20,45)-(20,46)) "x"]) (App (Just (20,50)-(20,57)) (Var (Just (20,51)-(20,54)) "snd") [Var (Just (20,55)-(20,56)) "x"])) (Lit (Just (20,63)-(20,65)) (LI 10))] Nothing
+Lit (Just (21,17)-(21,18)) (LI 0)
+Lit (Just (22,16)-(22,17)) (LI 0)
+*)
+
+(* typed spans
+(17,12)-(17,17)
+(19,11)-(19,30)
+(20,12)-(20,66)
+(21,17)-(21,18)
+(22,16)-(22,17)
+*)
+
+(* correct types
+int list
+int
+int list
+int
+int
+*)
+
+(* bad types
+'a list
+'a list
+('a list * 'b list)
+'a list
+'a list
 *)

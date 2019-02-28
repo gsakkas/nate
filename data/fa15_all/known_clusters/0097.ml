@@ -1,9 +1,0 @@
-BopG (BopG EmptyG EmptyG) VarG
-(y + z) + carry
-(x + y) + w
-(b + c) + h
-(b + c) + h
-(x1 + x2) + a1
-(x1 + x2) + a1
-(x1 + x2) + a1
-(j + k) + l

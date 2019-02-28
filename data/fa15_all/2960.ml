@@ -76,11 +76,23 @@ let bigMul l1 l2 =
 
 (* changed spans
 (32,23)-(32,49)
-EMPTY
-EmptyG
+mulByDigit x res
+AppG (fromList [VarG])
 
-(32,24)-(32,27)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+App (Just (32,23)-(32,41)) (Var (Just (32,24)-(32,34)) "mulByDigit") [Var (Just (32,35)-(32,36)) "x",Var (Just (32,37)-(32,40)) "res"]
+*)
+
+(* typed spans
+(32,23)-(32,41)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

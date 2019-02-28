@@ -54,39 +54,72 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (2,6)-(2,11)
-EMPTY
-EmptyG
-
-(2,10)-(2,11)
 [0 ; 0 ; 9 ; 9]
-ListG LitG Nothing
+ListG LitG
 
 (4,10)-(7,15)
-List.rev (List.combine l1 l2)
-AppG (fromList [AppG (fromList [EmptyG])])
+[1 ; 0 ; 0 ; 2]
+ListG LitG
 
-(19,16)-(19,17)
-EMPTY
-EmptyG
+(4,10)-(7,15)
+(3 , 3) :: (List.rev (List.combine l1
+                                   l2))
+ConAppG (Just (TupleG (fromList [AppG (fromList [AppG (fromList [VarG])]),TupleG (fromList [LitG])])))
 
 (19,16)-(19,21)
-EMPTY
-EmptyG
+x
+VarG
+
+(20,4)-(21,70)
+(0 , [])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (20,15)-(20,16)
-(0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
-
-(21,4)-(21,70)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (21,16)-(21,18)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
-(21,23)-(21,70)
-[]
-ListG EmptyG Nothing
+*)
 
+(* changed exprs
+List (Just (2,9)-(2,21)) [Lit (Just (2,10)-(2,11)) (LI 0),Lit (Just (2,13)-(2,14)) (LI 0),Lit (Just (2,16)-(2,17)) (LI 9),Lit (Just (2,19)-(2,20)) (LI 9)] Nothing
+List (Just (4,9)-(4,21)) [Lit (Just (4,10)-(4,11)) (LI 1),Lit (Just (4,13)-(4,14)) (LI 0),Lit (Just (4,16)-(4,17)) (LI 0),Lit (Just (4,19)-(4,20)) (LI 2)] Nothing
+ConApp (Just (6,8)-(6,49)) "::" (Just (Tuple (Just (6,8)-(6,49)) [Tuple (Just (6,8)-(6,14)) [Lit (Just (6,9)-(6,10)) (LI 3),Lit (Just (6,12)-(6,13)) (LI 3)],App (Just (6,18)-(6,49)) (Var (Just (6,19)-(6,27)) "List.rev") [App (Just (6,28)-(6,48)) (Var (Just (6,29)-(6,41)) "List.combine") [Var (Just (6,42)-(6,44)) "l1",Var (Just (6,45)-(6,47)) "l2"]]])) Nothing
+Var (Just (23,16)-(23,17)) "x"
+Tuple (Just (24,15)-(24,22)) [Lit (Just (24,16)-(24,17)) (LI 0),List (Just (24,19)-(24,21)) [] Nothing]
+List (Just (24,19)-(24,21)) [] Nothing
+Tuple (Just (25,16)-(25,23)) [Lit (Just (25,17)-(25,18)) (LI 0),List (Just (25,20)-(25,22)) [] Nothing]
+*)
+
+(* typed spans
+(2,9)-(2,21)
+(4,9)-(4,21)
+(6,8)-(6,49)
+(23,16)-(23,17)
+(24,15)-(24,22)
+(24,19)-(24,21)
+(25,16)-(25,23)
+*)
+
+(* correct types
+int list
+int list
+(int * int) list
+(int * int list)
+(int * int list)
+int list
+(int * int list)
+*)
+
+(* bad types
+'a -> 'a
+int -> int -> int list
+int -> int -> int list
+int
+'a
+int
+int
 *)

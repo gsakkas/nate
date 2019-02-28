@@ -54,11 +54,23 @@ let rec eval (e,x,y) =
 
 (* changed spans
 (24,47)-(24,68)
-EMPTY
-EmptyG
+eval (b_less , x , y)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
-(24,54)-(24,60)
-(b_less , x , y)
-TupleG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (24,47)-(24,66)) (Var (Just (24,47)-(24,51)) "eval") [Tuple (Just (24,52)-(24,66)) [Var (Just (24,53)-(24,59)) "b_less",Var (Just (24,61)-(24,62)) "x",Var (Just (24,64)-(24,65)) "y"]]
+*)
+
+(* typed spans
+(24,47)-(24,66)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+('a * float * float)
 *)

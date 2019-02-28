@@ -52,20 +52,8 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (19,50)-(19,70)
-EMPTY
-EmptyG
-
-(19,51)-(19,54)
 (sum mod 10) :: acc
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing
-
-(19,55)-(19,56)
-EMPTY
-EmptyG
-
-(20,4)-(22,51)
-acc
-VarG
+ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))
 
 (21,28)-(21,30)
 List.rev l1
@@ -75,4 +63,28 @@ AppG (fromList [VarG])
 List.rev l2
 AppG (fromList [VarG])
 
+*)
+
+(* changed exprs
+ConApp (Just (19,50)-(19,71)) "::" (Just (Tuple (Just (19,51)-(19,70)) [Bop (Just (19,51)-(19,63)) Mod (Var (Just (19,52)-(19,55)) "sum") (Lit (Just (19,60)-(19,62)) (LI 10)),Var (Just (19,67)-(19,70)) "acc"])) Nothing
+App (Just (21,28)-(21,41)) (Var (Just (21,29)-(21,37)) "List.rev") [Var (Just (21,38)-(21,40)) "l1"]
+App (Just (21,42)-(21,55)) (Var (Just (21,43)-(21,51)) "List.rev") [Var (Just (21,52)-(21,54)) "l2"]
+*)
+
+(* typed spans
+(19,50)-(19,71)
+(21,28)-(21,41)
+(21,42)-(21,55)
+*)
+
+(* correct types
+int list
+int list
+int list
+*)
+
+(* bad types
+int list
+int list
+int list
 *)

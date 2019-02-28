@@ -27,12 +27,20 @@ let stringOfList f l = sepConcat "" (List.map f l);;
 ""
 LitG
 
-(9,48)-(9,52)
-EMPTY
-EmptyG
+*)
 
-(9,49)-(9,51)
-EMPTY
-EmptyG
+(* changed exprs
+Lit (Just (9,33)-(9,35)) (LS "")
+*)
 
+(* typed spans
+(9,33)-(9,35)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+'a list
 *)

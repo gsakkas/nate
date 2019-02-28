@@ -78,16 +78,20 @@ match e with
 | _ -> 0.0
 CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,LitG),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
-(27,14)-(27,17)
-EMPTY
-EmptyG
-
 (27,14)-(27,19)
 EMPTY
 EmptyG
 
-(27,18)-(27,19)
-EMPTY
-EmptyG
+*)
 
+(* typed spans
+(15,2)-(28,12)
+*)
+
+(* typed spans
+float
+*)
+
+(* typed spans
+float
 *)

@@ -84,11 +84,23 @@ let rec build (rand,depth) =
 
 (* changed spans
 (39,26)-(39,44)
-EMPTY
-EmptyG
+build (rand , nd)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
-(39,34)-(39,38)
-(rand , nd)
-TupleG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (39,26)-(39,44)) (Var (Just (39,27)-(39,32)) "build") [Tuple (Just (39,33)-(39,43)) [Var (Just (39,34)-(39,38)) "rand",Var (Just (39,40)-(39,42)) "nd"]]
+*)
+
+(* typed spans
+(39,26)-(39,44)
+*)
+
+(* correct types
+expr
+*)
+
+(* bad types
+('a * int)
 *)

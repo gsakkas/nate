@@ -59,16 +59,24 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(27,14)-(27,51)
+(27,14)-(27,70)
 (eval (a , x , y) *. eval (a , x , y)) *. eval (a , x , y)
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
-(27,14)-(27,70)
-EMPTY
-EmptyG
+*)
 
-(27,15)-(27,31)
-eval (a , x , y) *. eval (a , x , y)
-BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+(* changed exprs
+Bop (Just (27,14)-(27,72)) FTimes (Bop (Just (27,14)-(27,52)) FTimes (App (Just (27,15)-(27,31)) (Var (Just (27,16)-(27,20)) "eval") [Tuple (Just (27,21)-(27,30)) [Var (Just (27,22)-(27,23)) "a",Var (Just (27,25)-(27,26)) "x",Var (Just (27,28)-(27,29)) "y"]]) (App (Just (27,35)-(27,51)) (Var (Just (27,36)-(27,40)) "eval") [Tuple (Just (27,41)-(27,50)) [Var (Just (27,42)-(27,43)) "a",Var (Just (27,45)-(27,46)) "x",Var (Just (27,48)-(27,49)) "y"]])) (App (Just (27,56)-(27,72)) (Var (Just (27,57)-(27,61)) "eval") [Tuple (Just (27,62)-(27,71)) [Var (Just (27,63)-(27,64)) "a",Var (Just (27,66)-(27,67)) "x",Var (Just (27,69)-(27,70)) "y"]])
+*)
 
+(* typed spans
+(27,14)-(27,72)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
 *)

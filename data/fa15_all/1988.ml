@@ -25,18 +25,6 @@ a
 VarG
 
 (6,29)-(6,46)
-EMPTY
-EmptyG
-
-(6,30)-(6,39)
-EMPTY
-EmptyG
-
-(6,40)-(6,43)
-EMPTY
-EmptyG
-
-(6,44)-(6,45)
 x
 VarG
 
@@ -44,16 +32,36 @@ VarG
 sep
 VarG
 
-(8,14)-(8,22)
-EMPTY
-EmptyG
-
 (8,14)-(8,42)
-EMPTY
-EmptyG
-
-(8,23)-(8,42)
 t
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (6,18)-(6,19)) "a"
+Var (Just (6,29)-(6,30)) "x"
+Var (Just (7,17)-(7,20)) "sep"
+Var (Just (7,32)-(7,33)) "t"
+*)
+
+(* typed spans
+(6,18)-(6,19)
+(6,29)-(6,30)
+(7,17)-(7,20)
+(7,32)-(7,33)
+*)
+
+(* correct types
+string
+string
+string
+string list
+*)
+
+(* bad types
+string
+string
+string list
+'a
 *)

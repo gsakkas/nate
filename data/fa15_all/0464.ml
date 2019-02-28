@@ -25,67 +25,23 @@ let fixpoint (f,b) =
 
 (* changed spans
 (9,4)-(10,69)
-EMPTY
-EmptyG
-
-(9,17)-(9,27)
 (f x , isFPoint x)
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(9,24)-(9,25)
-EMPTY
-EmptyG
+*)
 
-(9,26)-(9,27)
-EMPTY
-EmptyG
+(* changed exprs
+Tuple (Just (7,49)-(7,70)) [App (Just (7,50)-(7,55)) (Var (Just (7,51)-(7,52)) "f") [Var (Just (7,53)-(7,54)) "x"],App (Just (7,57)-(7,69)) (Var (Just (7,58)-(7,66)) "isFPoint") [Var (Just (7,67)-(7,68)) "x"]]
+*)
 
-(10,4)-(10,69)
-x
-VarG
+(* typed spans
+(7,49)-(7,70)
+*)
 
-(10,15)-(10,64)
-EMPTY
-EmptyG
+(* correct types
+(int * bool)
+*)
 
-(10,19)-(10,64)
-f
-VarG
-
-(10,31)-(10,32)
-EMPTY
-EmptyG
-
-(10,38)-(10,39)
-EMPTY
-EmptyG
-
-(10,45)-(10,47)
-EMPTY
-EmptyG
-
-(10,45)-(10,64)
-EMPTY
-EmptyG
-
-(10,48)-(10,64)
-EMPTY
-EmptyG
-
-(10,49)-(10,56)
-EMPTY
-EmptyG
-
-(10,57)-(10,63)
-EMPTY
-EmptyG
-
-(10,61)-(10,62)
-EMPTY
-EmptyG
-
-(10,68)-(10,69)
-EMPTY
-EmptyG
-
+(* bad types
+(int -> int * bool)
 *)

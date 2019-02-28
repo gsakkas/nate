@@ -20,3 +20,19 @@ l
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (3,8)-(3,9)) "l"
+*)
+
+(* typed spans
+(3,8)-(3,9)
+*)
+
+(* correct types
+('a * 'b) list
+*)
+
+(* bad types
+'a list
+*)

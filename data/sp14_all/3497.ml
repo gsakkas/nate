@@ -29,24 +29,24 @@ let func =
 (func b , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
-(5,39)-(5,56)
-fun x -> fun x -> (0 , true)
-LamG (LamG EmptyG)
+*)
 
-(5,40)-(5,52)
-0
-LitG
+(* changed exprs
+Case (Just (4,15)-(4,71)) (Var (Just (4,22)-(4,24)) "c'") [(LitPat (Just (4,32)-(4,36)) (LB True),Nothing,App (Just (4,41)-(4,55)) (Var (Just (4,41)-(4,47)) "wwhile") [Tuple (Just (4,48)-(4,55)) [Var (Just (4,49)-(4,50)) "f",Var (Just (4,52)-(4,54)) "b'"]]),(LitPat (Just (4,58)-(4,63)) (LB False),Nothing,Var (Just (4,68)-(4,70)) "b'")]
+Let (Just (6,28)-(6,71)) NonRec [(VarPat (Just (6,33)-(6,37)) "func",Lam (Just (6,38)-(6,53)) (VarPat (Just (6,38)-(6,39)) "x") (Lam (Just (6,40)-(6,53)) (VarPat (Just (6,40)-(6,41)) "x") (Tuple (Just (6,44)-(6,53)) [Lit (Just (6,45)-(6,46)) (LI 0),Lit (Just (6,48)-(6,52)) (LB True)]) Nothing) Nothing)] (Tuple (Just (6,57)-(6,70)) [App (Just (6,58)-(6,66)) (Var (Just (6,59)-(6,63)) "func") [Var (Just (6,64)-(6,65)) "b"],Var (Just (6,68)-(6,69)) "b"])
+*)
 
-(5,41)-(5,46)
-(func b , b)
-TupleG (fromList [VarG,AppG (fromList [EmptyG])])
+(* typed spans
+(4,15)-(4,71)
+(6,28)-(6,71)
+*)
 
-(5,42)-(5,43)
-EMPTY
-EmptyG
+(* correct types
+int
+(int -> (int * bool) * int)
+*)
 
-(5,44)-(5,45)
-func
-VarG
-
+(* bad types
+'a
+'a -> (bool * 'a)
 *)

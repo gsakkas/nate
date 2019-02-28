@@ -185,6 +185,10 @@ let rec build (rand,depth) =
 
 (* changed spans
 (31,22)-(31,33)
+buildTimes
+VarG
+
+(31,22)-(31,33)
 (build (rand , depth - 1) , buildCosine (build (rand , depth - 1)))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
@@ -196,4 +200,32 @@ AppG (fromList [TupleG (fromList [EmptyG])])
 build (rand , depth - 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
+*)
+
+(* changed exprs
+Var (Just (33,11)-(33,21)) "buildTimes"
+Tuple (Just (34,13)-(35,57)) [App (Just (34,14)-(34,41)) (Var (Just (34,15)-(34,20)) "build") [Tuple (Just (34,21)-(34,40)) [Var (Just (34,22)-(34,26)) "rand",Bop (Just (34,28)-(34,39)) Minus (Var (Just (34,29)-(34,34)) "depth") (Lit (Just (34,37)-(34,38)) (LI 1))]],App (Just (35,15)-(35,56)) (Var (Just (35,16)-(35,27)) "buildCosine") [App (Just (35,28)-(35,55)) (Var (Just (35,29)-(35,34)) "build") [Tuple (Just (35,35)-(35,54)) [Var (Just (35,36)-(35,40)) "rand",Bop (Just (35,42)-(35,53)) Minus (Var (Just (35,43)-(35,48)) "depth") (Lit (Just (35,51)-(35,52)) (LI 1))]]]]
+App (Just (35,28)-(35,55)) (Var (Just (35,29)-(35,34)) "build") [Tuple (Just (35,35)-(35,54)) [Var (Just (35,36)-(35,40)) "rand",Bop (Just (35,42)-(35,53)) Minus (Var (Just (35,43)-(35,48)) "depth") (Lit (Just (35,51)-(35,52)) (LI 1))]]
+App (Just (40,26)-(40,53)) (Var (Just (40,27)-(40,32)) "build") [Tuple (Just (40,33)-(40,52)) [Var (Just (40,34)-(40,38)) "rand",Bop (Just (40,40)-(40,51)) Minus (Var (Just (40,41)-(40,46)) "depth") (Lit (Just (40,49)-(40,50)) (LI 1))]]
+*)
+
+(* typed spans
+(33,11)-(33,21)
+(34,13)-(35,57)
+(35,28)-(35,55)
+(40,26)-(40,53)
+*)
+
+(* correct types
+(expr * expr) -> expr
+(expr * expr)
+expr
+expr
+*)
+
+(* bad types
+expr -> expr
+expr -> expr
+((int * int) -> int * int)
+((int * int) -> int * int)
 *)

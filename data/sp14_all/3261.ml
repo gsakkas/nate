@@ -24,23 +24,23 @@ let rec sepConcat sep sl =
 
 (* changed spans
 (8,18)-(8,39)
-a
-VarG
+x ^ a
+AppG (fromList [VarG])
 
-(8,21)-(8,22)
-EMPTY
-EmptyG
+*)
 
-(8,21)-(8,28)
-EMPTY
-EmptyG
+(* changed exprs
+App (Just (8,18)-(8,23)) (Var (Just (8,20)-(8,21)) "^") [Var (Just (8,18)-(8,19)) "x",Var (Just (8,22)-(8,23)) "a"]
+*)
 
-(8,25)-(8,28)
-EMPTY
-EmptyG
+(* typed spans
+(8,18)-(8,23)
+*)
 
-(8,34)-(8,35)
-EMPTY
-EmptyG
+(* correct types
+string
+*)
 
+(* bad types
+unit
 *)

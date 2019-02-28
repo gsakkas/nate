@@ -28,11 +28,31 @@ wwhile (g , b)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 (7,44)-(7,53)
-EMPTY
-EmptyG
+g
+VarG
 
-(7,48)-(7,52)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Tuple (Just (7,31)-(7,41)) [Var (Just (7,32)-(7,33)) "b",App (Just (7,35)-(7,40)) (Var (Just (7,36)-(7,37)) "f") [Var (Just (7,38)-(7,39)) "b"]]
+App (Just (7,45)-(7,58)) (Var (Just (7,45)-(7,51)) "wwhile") [Tuple (Just (7,52)-(7,58)) [Var (Just (7,53)-(7,54)) "g",Var (Just (7,56)-(7,57)) "b"]]
+Var (Just (7,53)-(7,54)) "g"
+*)
+
+(* typed spans
+(7,31)-(7,41)
+(7,45)-(7,58)
+(7,53)-(7,54)
+*)
+
+(* correct types
+('a * bool)
+'a
+'a -> ('a * bool)
+*)
+
+(* bad types
+'a
+('a -> ('a * bool) * 'a) -> 'a
+('a -> 'a * bool)
 *)

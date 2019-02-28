@@ -36,3 +36,21 @@ funt
 VarG
 
 *)
+
+(* typed spans
+(7,2)-(7,72)
+(7,56)-(7,72)
+(7,64)-(7,68)
+*)
+
+(* typed spans
+'a
+'a
+'a -> ('a * bool)
+*)
+
+(* typed spans
+'a
+'a
+unit
+*)

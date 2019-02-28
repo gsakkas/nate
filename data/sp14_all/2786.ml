@@ -70,3 +70,19 @@ eval (f , x , y) +. (eval (g , x , y) *. eval (h , x , y))
 BopG (AppG (fromList [EmptyG])) (BopG EmptyG EmptyG)
 
 *)
+
+(* changed exprs
+Bop (Just (30,19)-(30,77)) FPlus (App (Just (30,19)-(30,35)) (Var (Just (30,20)-(30,24)) "eval") [Tuple (Just (30,25)-(30,34)) [Var (Just (30,26)-(30,27)) "f",Var (Just (30,29)-(30,30)) "x",Var (Just (30,32)-(30,33)) "y"]]) (Bop (Just (30,39)-(30,77)) FTimes (App (Just (30,40)-(30,56)) (Var (Just (30,41)-(30,45)) "eval") [Tuple (Just (30,46)-(30,55)) [Var (Just (30,47)-(30,48)) "g",Var (Just (30,50)-(30,51)) "x",Var (Just (30,53)-(30,54)) "y"]]) (App (Just (30,60)-(30,76)) (Var (Just (30,61)-(30,65)) "eval") [Tuple (Just (30,66)-(30,75)) [Var (Just (30,67)-(30,68)) "h",Var (Just (30,70)-(30,71)) "x",Var (Just (30,73)-(30,74)) "y"]]))
+*)
+
+(* typed spans
+(30,19)-(30,77)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
+*)

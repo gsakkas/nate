@@ -87,18 +87,6 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(13,10)-(13,13)
-EMPTY
-EmptyG
-
-(13,10)-(13,15)
-EMPTY
-EmptyG
-
-(13,14)-(13,15)
-EMPTY
-EmptyG
-
 (37,30)-(37,33)
 min
 VarG
@@ -107,4 +95,24 @@ VarG
 log l /. log 10.0
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
+*)
+
+(* changed exprs
+Var (Just (35,30)-(35,33)) "min"
+Bop (Just (35,44)-(35,65)) FDiv (App (Just (35,44)-(35,51)) (Var (Just (35,45)-(35,48)) "log") [Var (Just (35,49)-(35,50)) "l"]) (App (Just (35,55)-(35,65)) (Var (Just (35,56)-(35,59)) "log") [Lit (Just (35,60)-(35,64)) (LD 10.0)])
+*)
+
+(* typed spans
+(35,30)-(35,33)
+(35,44)-(35,65)
+*)
+
+(* correct types
+float -> float -> float
+float
+*)
+
+(* bad types
+int ref
+int
 *)

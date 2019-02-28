@@ -30,3 +30,23 @@ TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
+
+(* changed exprs
+Tuple (Just (7,35)-(7,51)) [Var (Just (7,36)-(7,38)) "l1",App (Just (7,40)-(7,50)) (Var (Just (7,45)-(7,46)) "@") [Var (Just (7,41)-(7,44)) "pad",Var (Just (7,47)-(7,49)) "l2"]]
+Tuple (Just (8,40)-(8,56)) [App (Just (8,41)-(8,51)) (Var (Just (8,46)-(8,47)) "@") [Var (Just (8,42)-(8,45)) "pad",Var (Just (8,48)-(8,50)) "l1"],Var (Just (8,53)-(8,55)) "l2"]
+*)
+
+(* typed spans
+(7,35)-(7,51)
+(8,40)-(8,56)
+*)
+
+(* correct types
+(int list * int list)
+(int list * int list)
+*)
+
+(* bad types
+'a
+'a
+*)

@@ -54,28 +54,44 @@ fun z ->
   | h :: t -> t
 LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
-(13,8)-(13,15)
-EMPTY
-EmptyG
-
 (13,8)-(13,17)
-EMPTY
-EmptyG
+x
+VarG
 
 (15,19)-(15,30)
-EMPTY
-EmptyG
-
-(15,20)-(15,27)
-EMPTY
-EmptyG
+x
+VarG
 
 (17,38)-(17,42)
 matchHeads (loseTail t)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(17,48)-(17,53)
-loseTail t
-AppG (fromList [VarG])
+*)
 
+(* changed exprs
+Lam (Just (7,13)-(7,64)) (VarPat (Just (7,13)-(7,14)) "z") (Case (Just (7,17)-(7,64)) (App (Just (7,23)-(7,36)) (Var (Just (7,23)-(7,34)) "listReverse") [Var (Just (7,35)-(7,36)) "z"]) [(ConPat (Just (7,44)-(7,46)) "[]" Nothing,Nothing,List (Just (7,50)-(7,52)) [] Nothing),(ConsPat (Just (7,55)-(7,59)) (VarPat (Just (7,55)-(7,56)) "h") (VarPat (Just (7,58)-(7,59)) "t"),Nothing,Var (Just (7,63)-(7,64)) "t")]) Nothing
+Var (Just (15,8)-(15,9)) "x"
+Var (Just (17,19)-(17,20)) "x"
+App (Just (19,38)-(19,61)) (Var (Just (19,38)-(19,48)) "matchHeads") [App (Just (19,49)-(19,61)) (Var (Just (19,50)-(19,58)) "loseTail") [Var (Just (19,59)-(19,60)) "t"]]
+*)
+
+(* typed spans
+(7,13)-(7,64)
+(15,8)-(15,9)
+(17,19)-(17,20)
+(19,38)-(19,61)
+*)
+
+(* correct types
+char list -> char list
+char list
+char list
+bool
+*)
+
+(* bad types
+string -> char list
+char list
+char list
+bool
 *)

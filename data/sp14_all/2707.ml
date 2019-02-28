@@ -10,20 +10,24 @@ let rec digitsOfInt n = if n > 0 then [n; n mod 10] else [];;
 *)
 
 (* changed spans
-(3,17)-(3,32)
-EMPTY
-EmptyG
-
 (3,17)-(3,37)
-EMPTY
-EmptyG
+n
+VarG
 
-(3,18)-(3,29)
-EMPTY
-EmptyG
+*)
 
-(3,35)-(3,37)
-EMPTY
-EmptyG
+(* changed exprs
+Var (Just (2,39)-(2,40)) "n"
+*)
 
+(* typed spans
+(2,39)-(2,40)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

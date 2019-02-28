@@ -83,17 +83,9 @@ let rec mulByDigit i l =
 i <= 1
 BopG VarG LitG
 
-(37,16)-(37,18)
-EMPTY
-EmptyG
-
-(37,24)-(37,34)
+(37,24)-(37,61)
 l
 VarG
-
-(37,24)-(37,61)
-EMPTY
-EmptyG
 
 (37,25)-(37,31)
 bigAdd l (mulByDigit (i - 1)
@@ -104,8 +96,32 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 mulByDigit (i - 1) l
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
-(37,54)-(37,59)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Bop (Just (37,5)-(37,11)) Le (Var (Just (37,5)-(37,6)) "i") (Lit (Just (37,10)-(37,11)) (LI 1))
+Var (Just (37,17)-(37,18)) "l"
+App (Just (37,24)-(37,55)) (Var (Just (37,24)-(37,30)) "bigAdd") [Var (Just (37,31)-(37,32)) "l",App (Just (37,33)-(37,55)) (Var (Just (37,34)-(37,44)) "mulByDigit") [Bop (Just (37,45)-(37,52)) Minus (Var (Just (37,46)-(37,47)) "i") (Lit (Just (37,50)-(37,51)) (LI 1)),Var (Just (37,53)-(37,54)) "l"]]
+App (Just (37,33)-(37,55)) (Var (Just (37,34)-(37,44)) "mulByDigit") [Bop (Just (37,45)-(37,52)) Minus (Var (Just (37,46)-(37,47)) "i") (Lit (Just (37,50)-(37,51)) (LI 1)),Var (Just (37,53)-(37,54)) "l"]
+*)
+
+(* typed spans
+(37,5)-(37,11)
+(37,17)-(37,18)
+(37,24)-(37,55)
+(37,33)-(37,55)
+*)
+
+(* correct types
+bool
+int list
+int list
+int list
+*)
+
+(* bad types
+bool
+int
+int list -> int list -> int list
+int
 *)

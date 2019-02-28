@@ -104,27 +104,127 @@ let rec build (rand,depth) =
 
 (* changed spans
 (45,23)-(45,61)
-EMPTY
-EmptyG
+build (rand , d)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
-(45,44)-(45,49)
-EMPTY
-EmptyG
-
-(45,50)-(45,59)
-EMPTY
-EmptyG
-
-(45,51)-(45,55)
-EMPTY
-EmptyG
-
-(45,57)-(45,58)
-EMPTY
-EmptyG
+(45,23)-(45,61)
+buildExponential (build (rand , d) , build (rand , d))
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 (46,11)-(46,66)
-EMPTY
-EmptyG
+buildExponential
+VarG
 
+(46,11)-(46,66)
+(build (rand , d) , build (rand , d))
+TupleG (fromList [AppG (fromList [EmptyG])])
+
+(46,11)-(46,66)
+build (rand , d)
+AppG (fromList [TupleG (fromList [EmptyG])])
+
+(46,11)-(46,66)
+build
+VarG
+
+(46,11)-(46,66)
+(rand , d)
+TupleG (fromList [VarG])
+
+(46,11)-(46,66)
+rand
+VarG
+
+(46,11)-(46,66)
+d
+VarG
+
+(46,11)-(46,66)
+build (rand , d)
+AppG (fromList [TupleG (fromList [EmptyG])])
+
+(46,11)-(46,66)
+build
+VarG
+
+(46,11)-(46,66)
+(rand , d)
+TupleG (fromList [VarG])
+
+(46,11)-(46,66)
+rand
+VarG
+
+(46,11)-(46,66)
+d
+VarG
+
+*)
+
+(* changed exprs
+App (Just (45,23)-(45,40)) (Var (Just (45,24)-(45,29)) "build") [Tuple (Just (45,30)-(45,39)) [Var (Just (45,31)-(45,35)) "rand",Var (Just (45,37)-(45,38)) "d"]]
+App (Just (46,11)-(46,66)) (Var (Just (46,11)-(46,27)) "buildExponential") [Tuple (Just (46,28)-(46,66)) [App (Just (46,29)-(46,46)) (Var (Just (46,30)-(46,35)) "build") [Tuple (Just (46,36)-(46,45)) [Var (Just (46,37)-(46,41)) "rand",Var (Just (46,43)-(46,44)) "d"]],App (Just (46,48)-(46,65)) (Var (Just (46,49)-(46,54)) "build") [Tuple (Just (46,55)-(46,64)) [Var (Just (46,56)-(46,60)) "rand",Var (Just (46,62)-(46,63)) "d"]]]]
+Var (Just (46,11)-(46,27)) "buildExponential"
+Tuple (Just (46,28)-(46,66)) [App (Just (46,29)-(46,46)) (Var (Just (46,30)-(46,35)) "build") [Tuple (Just (46,36)-(46,45)) [Var (Just (46,37)-(46,41)) "rand",Var (Just (46,43)-(46,44)) "d"]],App (Just (46,48)-(46,65)) (Var (Just (46,49)-(46,54)) "build") [Tuple (Just (46,55)-(46,64)) [Var (Just (46,56)-(46,60)) "rand",Var (Just (46,62)-(46,63)) "d"]]]
+App (Just (46,29)-(46,46)) (Var (Just (46,30)-(46,35)) "build") [Tuple (Just (46,36)-(46,45)) [Var (Just (46,37)-(46,41)) "rand",Var (Just (46,43)-(46,44)) "d"]]
+Var (Just (46,30)-(46,35)) "build"
+Tuple (Just (46,36)-(46,45)) [Var (Just (46,37)-(46,41)) "rand",Var (Just (46,43)-(46,44)) "d"]
+Var (Just (46,37)-(46,41)) "rand"
+Var (Just (46,43)-(46,44)) "d"
+App (Just (46,48)-(46,65)) (Var (Just (46,49)-(46,54)) "build") [Tuple (Just (46,55)-(46,64)) [Var (Just (46,56)-(46,60)) "rand",Var (Just (46,62)-(46,63)) "d"]]
+Var (Just (46,49)-(46,54)) "build"
+Tuple (Just (46,55)-(46,64)) [Var (Just (46,56)-(46,60)) "rand",Var (Just (46,62)-(46,63)) "d"]
+Var (Just (46,56)-(46,60)) "rand"
+Var (Just (46,62)-(46,63)) "d"
+*)
+
+(* typed spans
+(45,23)-(45,40)
+(46,11)-(46,66)
+(46,11)-(46,27)
+(46,28)-(46,66)
+(46,29)-(46,46)
+(46,30)-(46,35)
+(46,36)-(46,45)
+(46,37)-(46,41)
+(46,43)-(46,44)
+(46,48)-(46,65)
+(46,49)-(46,54)
+(46,55)-(46,64)
+(46,56)-(46,60)
+(46,62)-(46,63)
+*)
+
+(* correct types
+expr
+expr
+(expr * expr) -> expr
+(expr * expr)
+expr
+((int * int) -> int * int) -> expr
+((int * int) -> int * int)
+(int * int) -> int
+int
+expr
+((int * int) -> int * int) -> expr
+((int * int) -> int * int)
+(int * int) -> int
+int
+*)
+
+(* bad types
+(expr * expr)
+(expr * expr)
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
 *)

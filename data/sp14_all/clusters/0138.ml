@@ -1,4 +1,5 @@
-AppG (fromList [VarG,LitG,ConAppG (Just (TupleG (fromList [VarG]))) Nothing])
-helper 0 (num :: xs') xs
-helper 0 (num :: accum) xs
-helper 0 (num :: accum) xs
+CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG)])
+match l with
+| x :: [] -> x
+| hd :: tl -> last tl
+| [] -> []

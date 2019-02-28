@@ -23,12 +23,20 @@ fun x ->
    (bb , bb = x))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(6,29)-(6,30)
-x
-VarG
+*)
 
-(6,45)-(6,46)
-x
-VarG
+(* changed exprs
+Lam (Just (6,16)-(6,50)) (VarPat (Just (6,16)-(6,17)) "x") (Let (Just (6,20)-(6,50)) NonRec [(VarPat (Just (6,24)-(6,26)) "bb",App (Just (6,29)-(6,32)) (Var (Just (6,29)-(6,30)) "f") [Var (Just (6,31)-(6,32)) "x"])] (Tuple (Just (6,36)-(6,50)) [Var (Just (6,37)-(6,39)) "bb",Bop (Just (6,41)-(6,49)) Eq (Var (Just (6,42)-(6,44)) "bb") (Var (Just (6,47)-(6,48)) "x")])) Nothing
+*)
 
+(* typed spans
+(6,16)-(6,50)
+*)
+
+(* correct types
+'a -> ('a * bool)
+*)
+
+(* bad types
+('a * bool)
 *)

@@ -17,6 +17,22 @@ let rec mulByDigit i l =
 (* changed spans
 (5,43)-(5,44)
 [0]
-ListG LitG Nothing
+ListG LitG
 
+*)
+
+(* changed exprs
+List (Just (5,43)-(5,46)) [Lit (Just (5,44)-(5,45)) (LI 0)] Nothing
+*)
+
+(* typed spans
+(5,43)-(5,46)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

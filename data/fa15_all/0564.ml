@@ -52,3 +52,7 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+float
+*)

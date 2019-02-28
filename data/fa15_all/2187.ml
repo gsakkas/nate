@@ -23,8 +23,20 @@ let result = f b in
 (result , result = b)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
 
-(5,56)-(5,62)
-(result , result = b)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
+*)
 
+(* changed exprs
+Let (Just (7,24)-(7,66)) NonRec [(VarPat (Just (7,28)-(7,34)) "result",App (Just (7,37)-(7,40)) (Var (Just (7,37)-(7,38)) "f") [Var (Just (7,39)-(7,40)) "b"])] (Tuple (Just (7,44)-(7,66)) [Var (Just (7,45)-(7,51)) "result",Bop (Just (7,53)-(7,65)) Eq (Var (Just (7,54)-(7,60)) "result") (Var (Just (7,63)-(7,64)) "b")])
+*)
+
+(* typed spans
+(7,24)-(7,66)
+*)
+
+(* correct types
+('a * bool)
+*)
+
+(* bad types
+'a
 *)

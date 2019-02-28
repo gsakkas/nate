@@ -84,11 +84,23 @@ let bigMul l1 l2 =
 
 (* changed spans
 (37,17)-(37,53)
-EMPTY
-EmptyG
-
-(37,18)-(37,32)
 bigAdd total (mulByDigit x l2)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
+*)
+
+(* changed exprs
+App (Just (37,17)-(37,49)) (Var (Just (37,18)-(37,24)) "bigAdd") [Var (Just (37,25)-(37,30)) "total",App (Just (37,31)-(37,48)) (Var (Just (37,32)-(37,42)) "mulByDigit") [Var (Just (37,43)-(37,44)) "x",Var (Just (37,45)-(37,47)) "l2"]]
+*)
+
+(* typed spans
+(37,17)-(37,49)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

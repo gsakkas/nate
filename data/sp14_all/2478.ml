@@ -136,29 +136,9 @@ let rec build (rand,depth) =
 (17,16)-(17,39)
 fun (a , b , a_less , b_less) ->
   Thresh (a , b , a_less , b_less)
-LamG (ConAppG (Just (TupleG (fromList [VarG]))) Nothing)
-
-(29,36)-(29,47)
-EMPTY
-EmptyG
-
-(29,37)-(29,42)
-EMPTY
-EmptyG
-
-(29,45)-(29,46)
-EMPTY
-EmptyG
+LamG (ConAppG (Just (TupleG (fromList [VarG]))))
 
 (29,48)-(29,59)
-EMPTY
-EmptyG
-
-(29,49)-(29,54)
-EMPTY
-EmptyG
-
-(29,57)-(29,58)
 0
 LitG
 
@@ -170,30 +150,6 @@ LitG
 buildhelper 0 0 expr
 AppG (fromList [VarG,LitG])
 
-(30,40)-(30,51)
-EMPTY
-EmptyG
-
-(30,41)-(30,46)
-EMPTY
-EmptyG
-
-(30,49)-(30,50)
-EMPTY
-EmptyG
-
-(30,52)-(30,63)
-EMPTY
-EmptyG
-
-(30,53)-(30,58)
-EMPTY
-EmptyG
-
-(30,61)-(30,62)
-0
-LitG
-
 (52,8)-(52,18)
 buildThresh
 VarG
@@ -202,4 +158,40 @@ VarG
 buildThresh
 VarG
 
+*)
+
+(* changed exprs
+Lam (Just (17,17)-(17,67)) (TuplePat (Just (17,17)-(17,34)) [VarPat (Just (17,17)-(17,18)) "a",VarPat (Just (17,19)-(17,20)) "b",VarPat (Just (17,21)-(17,27)) "a_less",VarPat (Just (17,28)-(17,34)) "b_less"]) (ConApp (Just (17,38)-(17,67)) "Thresh" (Just (Tuple (Just (17,45)-(17,67)) [Var (Just (17,46)-(17,47)) "a",Var (Just (17,49)-(17,50)) "b",Var (Just (17,52)-(17,58)) "a_less",Var (Just (17,60)-(17,66)) "b_less"])) Nothing) Nothing
+Lit (Just (31,36)-(31,37)) (LI 0)
+Lit (Just (31,38)-(31,39)) (LI 0)
+App (Just (32,25)-(32,47)) (Var (Just (32,26)-(32,37)) "buildhelper") [Lit (Just (32,38)-(32,39)) (LI 0),Lit (Just (32,40)-(32,41)) (LI 0),Var (Just (32,42)-(32,46)) "expr"]
+Var (Just (54,8)-(54,19)) "buildThresh"
+Var (Just (60,8)-(60,19)) "buildThresh"
+*)
+
+(* typed spans
+(17,17)-(17,67)
+(31,36)-(31,37)
+(31,38)-(31,39)
+(32,25)-(32,47)
+(54,8)-(54,19)
+(60,8)-(60,19)
+*)
+
+(* correct types
+(expr * expr * expr * expr) -> expr
+int
+int
+expr
+(expr * expr * expr * expr) -> expr
+(expr * expr * expr * expr) -> expr
+*)
+
+(* bad types
+(expr * expr) -> expr
+int
+int
+expr
+(expr * expr) -> expr
+(expr * expr) -> expr
 *)

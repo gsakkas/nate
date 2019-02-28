@@ -14,8 +14,20 @@ let pipe fs =
 fun y -> y
 LamG VarG
 
-(2,53)-(2,77)
-y
-VarG
+*)
 
+(* changed exprs
+Lam (Just (3,34)-(3,39)) (VarPat (Just (3,34)-(3,35)) "y") (Var (Just (3,38)-(3,39)) "y") Nothing
+*)
+
+(* typed spans
+(3,34)-(3,39)
+*)
+
+(* correct types
+('a -> 'b) -> 'a -> 'b
+*)
+
+(* bad types
+int
 *)

@@ -67,23 +67,7 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(28,6)-(29,27)
-EMPTY
-EmptyG
-
 (28,6)-(30,11)
-EMPTY
-EmptyG
-
-(28,7)-(28,58)
-EMPTY
-EmptyG
-
-(28,8)-(28,53)
-EMPTY
-EmptyG
-
-(28,9)-(28,32)
 ((((eval (e1 , x , y) /. 2.0) *. eval (e2 , x , y)) /. 3.0) *. eval (e3 , x , y)) /. 4.0
 BopG (BopG EmptyG EmptyG) LitG
 
@@ -100,16 +84,8 @@ LitG
 LitG
 
 (30,10)-(30,11)
-EMPTY
-EmptyG
-
-(31,19)-(31,23)
 4.0
 LitG
-
-(31,19)-(31,35)
-EMPTY
-EmptyG
 
 (31,26)-(31,35)
 (- 1.0) *. eval (e1 , x , y)
@@ -119,4 +95,34 @@ BopG (UopG EmptyG) (AppG (fromList [EmptyG]))
 (e1 , x , y)
 TupleG (fromList [VarG])
 
+*)
+
+(* typed spans
+(28,6)-(30,14)
+(28,6)-(29,27)
+(28,31)-(28,34)
+(28,61)-(28,64)
+(30,11)-(30,14)
+(31,19)-(31,46)
+(31,35)-(31,45)
+*)
+
+(* typed spans
+float
+float
+float
+float
+float
+float
+(expr * float * float)
+*)
+
+(* typed spans
+int
+float
+int
+int
+int
+int
+expr
 *)

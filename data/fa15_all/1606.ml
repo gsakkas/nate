@@ -32,6 +32,10 @@ EmptyG
 
 (3,43)-(3,45)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* typed spans
+int list
 *)

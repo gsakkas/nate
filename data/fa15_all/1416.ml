@@ -34,3 +34,23 @@ t
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (10,45)-(10,46)) "h"
+Var (Just (10,71)-(10,72)) "t"
+*)
+
+(* typed spans
+(10,45)-(10,46)
+(10,71)-(10,72)
+*)
+
+(* correct types
+int
+int list
+*)
+
+(* bad types
+int list list
+int list
+*)

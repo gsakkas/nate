@@ -27,17 +27,25 @@ let stringOfList f l = let nl = List.map f l in sepConcat "" nl;;
 *)
 
 (* changed spans
-(11,23)-(11,31)
-List.map f l
-AppG (fromList [VarG])
-
 (11,23)-(11,45)
 let nl = List.map f l in
 sepConcat "" nl
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
-(11,32)-(11,41)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Let (Just (11,23)-(11,63)) NonRec [(VarPat (Just (11,27)-(11,29)) "nl",App (Just (11,32)-(11,44)) (Var (Just (11,32)-(11,40)) "List.map") [Var (Just (11,41)-(11,42)) "f",Var (Just (11,43)-(11,44)) "l"])] (App (Just (11,48)-(11,63)) (Var (Just (11,48)-(11,57)) "sepConcat") [Lit (Just (11,58)-(11,60)) (LS ""),Var (Just (11,61)-(11,63)) "nl"])
+*)
+
+(* typed spans
+(11,23)-(11,63)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+'a
 *)

@@ -56,10 +56,6 @@ exprToString y
 AppG (fromList [VarG])
 
 (18,55)-(18,56)
-EMPTY
-EmptyG
-
-(18,57)-(18,60)
 y
 VarG
 
@@ -68,14 +64,6 @@ exprToString x ^ ("*" ^ exprToString y)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (18,65)-(18,66)
-EMPTY
-EmptyG
-
-(18,67)-(18,70)
-EMPTY
-EmptyG
-
-(19,19)-(19,52)
 EMPTY
 EmptyG
 
@@ -95,4 +83,37 @@ AppG (fromList [VarG])
 y
 VarG
 
+*)
+
+(* typed spans
+(18,28)-(18,29)
+(18,41)-(18,57)
+(18,55)-(18,56)
+(19,19)-(19,62)
+(19,33)-(19,34)
+(19,38)-(19,62)
+(19,45)-(19,61)
+(19,59)-(19,60)
+*)
+
+(* typed spans
+expr
+string
+expr
+string
+expr
+string
+string
+expr
+*)
+
+(* typed spans
+expr
+expr -> string
+expr
+int
+expr
+string
+expr -> string
+expr
 *)

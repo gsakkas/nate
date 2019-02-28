@@ -24,3 +24,19 @@ b
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (6,25)-(6,26)) "b"
+*)
+
+(* typed spans
+(6,25)-(6,26)
+*)
+
+(* correct types
+'a
+*)
+
+(* bad types
+'a list
+*)

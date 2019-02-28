@@ -1,91 +1,31 @@
-LamG VarG
-fun a -> a
-fun a -> a
-fun a -> a
-fun a -> a
-fun a -> a
-fun a -> x
-fun x -> x
-fun a -> x
-fun a -> x
-fun y -> y
-fun x -> x
-fun a -> a
-fun x -> x
-fun a -> a
-fun x -> x
-fun a -> a
-fun a -> a
-fun a -> a
-fun a -> a
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun y -> y
-fun y -> y
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun a -> a
-fun p -> p
-fun a -> a
-fun a -> a
-fun p -> p
-fun p -> p
-fun x -> x
-fun b -> b
-fun y -> y
-fun y -> y
-fun y -> y
-fun y -> y
-fun y -> y
-fun x -> x
-fun y -> y
-fun x -> x
-fun x -> x
-fun x -> x
-fun z -> z
-fun x -> x
-fun b -> b
-fun b -> b
-fun x -> x
-fun x -> x
-fun a -> a
-fun x -> x
-fun a -> a
-fun x -> x
-fun x -> x
-fun x -> x
-fun y -> y
-fun x -> x
-fun y -> y
-fun x -> x
-fun y -> y
-fun x -> x
-fun y -> y
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun x -> x
-fun q -> q
-fun q -> q
-fun q -> q
-fun q -> q
-fun a -> a
-fun a -> a
+LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+let carry =
+  match a with
+  | (x , y) -> x in
+match x with
+| (add1 , add2) -> (let new_carry =
+                      ((carry + add1) + add2) / 10 in
+                    let digit =
+                      ((carry + add1) + add2) mod 10 in
+                    match a with
+                    | (x , y) -> (new_carry , digit :: y))
+let carry =
+  match a with
+  | (x , y) -> x in
+match x with
+| (addend_a , addend_b) -> (let new_carry =
+                              ((carry + addend_a) + addend_b) / 10 in
+                            let digit =
+                              ((carry + addend_a) + addend_b) mod 10 in
+                            match a with
+                            | (x , y) -> (new_carry , digit :: y))
+let carry =
+  match a with
+  | (x , y) -> x in
+match x with
+| (d1 , d2) -> (let new_carry =
+                  ((carry + d1) + d2) / 10 in
+                let digit =
+                  ((carry + d1) + d2) mod 10 in
+                match a with
+                | (x , y) -> (new_carry , digit :: y))

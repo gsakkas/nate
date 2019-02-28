@@ -16,3 +16,19 @@ let rec wwhile (f,b) =
 TupleG (fromList [VarG])
 
 *)
+
+(* changed exprs
+Tuple (Just (3,48)-(3,55)) [Var (Just (3,49)-(3,50)) "f",Var (Just (3,52)-(3,54)) "b'"]
+*)
+
+(* typed spans
+(3,48)-(3,55)
+*)
+
+(* correct types
+('a -> ('a * bool) * 'a)
+*)
+
+(* bad types
+('a * bool)
+*)

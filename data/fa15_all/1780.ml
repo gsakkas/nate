@@ -99,20 +99,36 @@ let rec build (rand,depth) =
 rand (0 , 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(27,17)-(27,18)
-(0 , 1)
-TupleG (fromList [LitG])
-
 (29,13)-(29,21)
 rand (0 , 6)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(29,18)-(29,19)
-(0 , 6)
-TupleG (fromList [LitG])
-
 (45,12)-(45,14)
 buildX ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
+AppG (fromList [ConAppG Nothing])
 
+*)
+
+(* changed exprs
+App (Just (27,11)-(27,24)) (Var (Just (27,12)-(27,16)) "rand") [Tuple (Just (27,17)-(27,23)) [Lit (Just (27,18)-(27,19)) (LI 0),Lit (Just (27,21)-(27,22)) (LI 1)]]
+App (Just (29,13)-(29,24)) (Var (Just (29,13)-(29,17)) "rand") [Tuple (Just (29,18)-(29,24)) [Lit (Just (29,19)-(29,20)) (LI 0),Lit (Just (29,22)-(29,23)) (LI 6)]]
+App (Just (45,12)-(45,21)) (Var (Just (45,12)-(45,18)) "buildX") [ConApp (Just (45,19)-(45,21)) "()" Nothing (Just (TApp "unit" []))]
+*)
+
+(* typed spans
+(27,11)-(27,24)
+(29,13)-(29,24)
+(45,12)-(45,21)
+*)
+
+(* correct types
+int
+int
+expr
+*)
+
+(* bad types
+int
+int
+'a list
 *)

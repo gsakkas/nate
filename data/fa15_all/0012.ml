@@ -36,50 +36,6 @@ let padZero l1 l2 =
 EMPTY
 EmptyG
 
-(5,5)-(5,21)
-EMPTY
-EmptyG
-
-(5,5)-(5,40)
-EMPTY
-EmptyG
-
-(5,6)-(5,17)
-EMPTY
-EmptyG
-
-(5,18)-(5,20)
-EMPTY
-EmptyG
-
-(5,24)-(5,40)
-EMPTY
-EmptyG
-
-(5,25)-(5,36)
-EMPTY
-EmptyG
-
-(5,37)-(5,39)
-EMPTY
-EmptyG
-
-(6,7)-(6,17)
-EMPTY
-EmptyG
-
-(6,8)-(6,16)
-EMPTY
-EmptyG
-
-(6,9)-(6,11)
-EMPTY
-EmptyG
-
-(6,13)-(6,15)
-EMPTY
-EmptyG
-
 (9,5)-(16,77)
 let absNumZeros =
   abs numZeros in
@@ -105,14 +61,6 @@ EMPTY
 EmptyG
 
 (12,34)-(12,48)
-EMPTY
-EmptyG
-
-(12,35)-(12,38)
-EMPTY
-EmptyG
-
-(12,39)-(12,47)
 absNumZeros
 VarG
 
@@ -132,14 +80,6 @@ EmptyG
 EMPTY
 EmptyG
 
-(14,70)-(14,75)
-EMPTY
-EmptyG
-
-(16,10)-(16,76)
-EMPTY
-EmptyG
-
 (16,41)-(16,75)
 EMPTY
 EmptyG
@@ -148,16 +88,25 @@ EmptyG
 EMPTY
 EmptyG
 
-(16,60)-(16,74)
-EMPTY
-EmptyG
+*)
 
-(16,61)-(16,66)
-EMPTY
-EmptyG
+(* typed spans
+(6,2)-(11,77)
+(10,21)-(10,40)
+(10,29)-(10,40)
+(11,26)-(11,48)
+*)
 
-(16,68)-(16,73)
-EMPTY
-EmptyG
+(* typed spans
+(int list * int list)
+int list
+int
+(int list * int list)
+*)
 
+(* typed spans
+('a list * 'b list) list
+int -> (int * int) list
+int
+('a list * 'b list) list
 *)

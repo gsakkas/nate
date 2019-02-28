@@ -90,7 +90,7 @@ match l with
             then removeZero t
             else l
 | _ -> []
-CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG Nothing)])
+CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG)])
 
 (9,32)-(9,51)
 removeZero
@@ -98,7 +98,7 @@ VarG
 
 (11,11)-(17,34)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (13,16)-(13,24)
 EMPTY
@@ -137,7 +137,7 @@ let args =
   List.rev (List.combine l1
                          l2) in
 List.fold_left f base args
-LetG NonRec (fromList [ListG EmptyG Nothing]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [ListG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (15,15)-(15,23)
 EMPTY
@@ -159,4 +159,24 @@ AppG (fromList [VarG])
 EMPTY
 EmptyG
 
+*)
+
+(* typed spans
+int list
+(int list * int list)
+int
+int list
+(int list * int list)
+int
+(int list * int list)
+int list
+int list -> int list
+int list
+int list
+(int * int) -> int
+(int * int)
+(int * int) -> int
+int list
+(int * int) list -> (int * int) list
+(int * int) list
 *)

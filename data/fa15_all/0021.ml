@@ -48,47 +48,32 @@ else (listZeros @ l1 , l2)
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
 
 (10,15)-(10,33)
-EMPTY
-EmptyG
-
-(10,16)-(10,21)
-EMPTY
-EmptyG
-
-(10,22)-(10,23)
-EMPTY
-EmptyG
-
-(10,24)-(10,32)
 listZeros
 VarG
 
 (11,11)-(11,38)
-EMPTY
-EmptyG
-
-(11,12)-(11,17)
-EMPTY
-EmptyG
-
-(11,18)-(11,37)
-EMPTY
-EmptyG
-
-(11,19)-(11,20)
-EMPTY
-EmptyG
-
-(11,22)-(11,36)
-EMPTY
-EmptyG
-
-(11,23)-(11,26)
-EMPTY
-EmptyG
-
-(11,27)-(11,35)
 listZeros
 VarG
 
+*)
+
+(* typed spans
+(6,2)-(11,77)
+(10,4)-(11,77)
+(11,32)-(11,41)
+(11,56)-(11,65)
+*)
+
+(* typed spans
+(int list * int list)
+(int list * int list)
+int list
+int list
+*)
+
+(* typed spans
+('a list * int list)
+('a list * int list)
+int list
+'a list
 *)

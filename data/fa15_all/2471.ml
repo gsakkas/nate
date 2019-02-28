@@ -30,3 +30,15 @@ EMPTY
 EmptyG
 
 *)
+
+(* typed spans
+(8,24)-(8,75)
+*)
+
+(* typed spans
+int
+*)
+
+(* typed spans
+int
+*)

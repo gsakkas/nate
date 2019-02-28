@@ -37,3 +37,19 @@ exprToString i
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+App (Just (15,22)-(15,38)) (Var (Just (15,23)-(15,35)) "exprToString") [Var (Just (15,36)-(15,37)) "i"]
+*)
+
+(* typed spans
+(15,22)-(15,38)
+*)
+
+(* correct types
+string
+*)
+
+(* bad types
+expr
+*)

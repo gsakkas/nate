@@ -59,23 +59,11 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(3,45)-(3,48)
-x :: (clone x (n - 1))
-ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])]))) Nothing
-
 (3,45)-(3,68)
-EMPTY
-EmptyG
-
-(3,49)-(3,50)
-EMPTY
-EmptyG
+x :: (clone x (n - 1))
+ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])])))
 
 (5,6)-(5,11)
-EMPTY
-EmptyG
-
-(5,10)-(5,11)
 EMPTY
 EmptyG
 
@@ -85,44 +73,16 @@ let (x1 , x2) = x in
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
 (25,23)-(25,68)
-EMPTY
-EmptyG
-
-(25,35)-(25,36)
-EMPTY
-EmptyG
-
-(25,40)-(25,68)
-EMPTY
-EmptyG
-
-(25,52)-(25,53)
-EMPTY
-EmptyG
-
-(25,57)-(25,68)
-EMPTY
-EmptyG
+([x1 + x2] , [x2])
+TupleG (fromList [ListG EmptyG])
 
 (25,58)-(25,59)
-EMPTY
-EmptyG
-
-(25,62)-(25,63)
-EMPTY
-EmptyG
-
-(25,65)-(25,66)
-([x1 + x2] , [x2])
-TupleG (fromList [ListG EmptyG Nothing])
-
-(25,67)-(25,68)
 x1
 VarG
 
 (26,4)-(27,74)
 [x2]
-ListG VarG Nothing
+ListG VarG
 
 (27,15)-(27,23)
 List.combine l1 l2
@@ -132,4 +92,34 @@ AppG (fromList [VarG])
 List.combine
 VarG
 
+*)
+
+(* typed spans
+(3,45)-(3,67)
+(22,16)-(22,52)
+(22,35)-(22,52)
+(22,37)-(22,39)
+(22,47)-(22,51)
+(24,15)-(24,33)
+(24,15)-(24,27)
+*)
+
+(* typed spans
+int list
+(int list * int list)
+(int list * int list)
+int
+int list
+(int * int) list
+int list -> int list -> (int * int) list
+*)
+
+(* typed spans
+int list
+int list
+int list
+int
+int list
+(int list * int list)
+int list
 *)

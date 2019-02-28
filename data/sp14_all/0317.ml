@@ -62,59 +62,80 @@ BopG VarG (AppG (fromList [EmptyG]))
 LitG
 
 (22,6)-(22,67)
+eval (e1 , x , y) *. eval (e2 , x , y)
+BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+
+(22,6)-(22,67)
+eval (e1 , x , y)
+AppG (fromList [TupleG (fromList [EmptyG])])
+
+(22,6)-(22,67)
+eval
+VarG
+
+(22,6)-(22,67)
+(e1 , x , y)
+TupleG (fromList [VarG])
+
+(22,6)-(22,67)
+e1
+VarG
+
+(22,6)-(22,67)
+x
+VarG
+
+(22,6)-(22,67)
 EMPTY
 EmptyG
 
-(22,9)-(22,46)
-EMPTY
-EmptyG
+*)
 
-(22,16)-(22,18)
-EMPTY
-EmptyG
+(* changed exprs
+Bop (Just (17,19)-(17,44)) FTimes (Var (Just (17,20)-(17,22)) "pi") (App (Just (17,26)-(17,43)) (Var (Just (17,27)-(17,31)) "eval") [Tuple (Just (17,32)-(17,42)) [Var (Just (17,33)-(17,35)) "e1",Var (Just (17,37)-(17,38)) "x",Var (Just (17,40)-(17,41)) "y"]])
+Bop (Just (18,21)-(18,46)) FTimes (Var (Just (18,22)-(18,24)) "pi") (App (Just (18,28)-(18,45)) (Var (Just (18,29)-(18,33)) "eval") [Tuple (Just (18,34)-(18,44)) [Var (Just (18,35)-(18,37)) "e1",Var (Just (18,39)-(18,40)) "x",Var (Just (18,42)-(18,43)) "y"]])
+Lit (Just (19,67)-(19,70)) (LD 2.0)
+Bop (Just (20,21)-(20,59)) FTimes (App (Just (20,21)-(20,38)) (Var (Just (20,22)-(20,26)) "eval") [Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]]) (App (Just (20,42)-(20,59)) (Var (Just (20,43)-(20,47)) "eval") [Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "e2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]])
+App (Just (20,21)-(20,38)) (Var (Just (20,22)-(20,26)) "eval") [Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]]
+Var (Just (20,22)-(20,26)) "eval"
+Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]
+Var (Just (20,28)-(20,30)) "e1"
+Var (Just (20,32)-(20,33)) "x"
+Var (Just (22,6)-(22,67)) "EMPTY"
+*)
 
-(22,20)-(22,21)
-EMPTY
-EmptyG
+(* typed spans
+(17,19)-(17,44)
+(18,21)-(18,46)
+(19,67)-(19,70)
+(20,21)-(20,59)
+(20,21)-(20,38)
+(20,22)-(20,26)
+(20,27)-(20,37)
+(20,28)-(20,30)
+(20,32)-(20,33)
+*)
 
-(22,23)-(22,24)
-EMPTY
-EmptyG
+(* correct types
+float
+float
+float
+float
+float
+(expr * float * float) -> float
+(expr * float * float)
+expr
+float
+*)
 
-(22,29)-(22,46)
-EMPTY
-EmptyG
-
-(22,30)-(22,34)
-EMPTY
-EmptyG
-
-(22,35)-(22,45)
-EMPTY
-EmptyG
-
-(22,36)-(22,38)
-EMPTY
-EmptyG
-
-(22,40)-(22,41)
-EMPTY
-EmptyG
-
-(22,43)-(22,44)
-EMPTY
-EmptyG
-
-(22,52)-(22,56)
-EMPTY
-EmptyG
-
-(22,52)-(22,67)
-EMPTY
-EmptyG
-
-(22,57)-(22,67)
-EMPTY
-EmptyG
-
+(* bad types
+int
+int
+int
+unit
+unit
+unit
+unit
+unit
+unit
 *)

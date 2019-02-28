@@ -49,32 +49,28 @@ let (carry , sum) = a in
 (((num1 + num2) + carry) / 10 , (((num1 + num2) + carry) mod 10) :: sum)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
-(14,47)-(14,48)
-((num1 + num2) + carry) / 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(14,52)-(14,60)
-EMPTY
-EmptyG
-
-(14,53)-(14,54)
-num1
-VarG
-
-(14,57)-(14,59)
-carry
-VarG
-
-(14,63)-(14,67)
-((num1 + num2) + carry) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(15,4)-(17,51)
-sum
-VarG
-
 (15,19)-(15,20)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+Let (Just (15,6)-(17,13)) NonRec [(TuplePat (Just (15,11)-(15,20)) [VarPat (Just (15,11)-(15,16)) "carry",VarPat (Just (15,17)-(15,20)) "sum"],Var (Just (15,24)-(15,25)) "a")] (Tuple (Just (16,6)-(17,13)) [Bop (Just (16,7)-(16,37)) Div (Bop (Just (16,8)-(16,31)) Plus (Bop (Just (16,9)-(16,22)) Plus (Var (Just (16,10)-(16,14)) "num1") (Var (Just (16,17)-(16,21)) "num2")) (Var (Just (16,25)-(16,30)) "carry")) (Lit (Just (16,34)-(16,36)) (LI 10)),ConApp (Just (16,39)-(17,12)) "::" (Just (Tuple (Just (16,40)-(17,11)) [Bop (Just (16,40)-(16,72)) Mod (Bop (Just (16,41)-(16,64)) Plus (Bop (Just (16,42)-(16,55)) Plus (Var (Just (16,43)-(16,47)) "num1") (Var (Just (16,50)-(16,54)) "num2")) (Var (Just (16,58)-(16,63)) "carry")) (Lit (Just (16,69)-(16,71)) (LI 10)),Var (Just (17,8)-(17,11)) "sum"])) Nothing])
+List (Just (18,19)-(18,21)) [] Nothing
+*)
+
+(* typed spans
+(15,6)-(17,13)
+(18,19)-(18,21)
+*)
+
+(* correct types
+(int * int list)
+int list
+*)
+
+(* bad types
+(int * int)
+int
 *)

@@ -27,56 +27,56 @@ let palindrome w = (listReverse (explode w)) == (explode w);;
 *)
 
 (* changed spans
-(2,15)-(2,67)
-EMPTY
-EmptyG
-
-(2,19)-(2,67)
-EMPTY
-EmptyG
-
-(2,25)-(2,26)
-EMPTY
-EmptyG
-
-(2,40)-(2,42)
-EMPTY
-EmptyG
-
-(2,53)-(2,54)
-EMPTY
-EmptyG
-
-(2,53)-(2,67)
-EMPTY
-EmptyG
-
-(2,55)-(2,56)
-EMPTY
-EmptyG
-
-(2,57)-(2,67)
-EMPTY
-EmptyG
-
-(2,58)-(2,64)
-EMPTY
-EmptyG
-
-(2,65)-(2,66)
-EMPTY
-EmptyG
-
-(12,20)-(12,26)
-EMPTY
-EmptyG
+(12,27)-(12,52)
+listReverse
+VarG
 
 (12,27)-(12,52)
-EMPTY
-EmptyG
-
-(12,57)-(12,58)
 explode w
 AppG (fromList [VarG])
 
+(12,27)-(12,52)
+explode
+VarG
+
+(12,27)-(12,52)
+w
+VarG
+
+(12,27)-(12,52)
+explode w
+AppG (fromList [VarG])
+
+*)
+
+(* changed exprs
+Var (Just (10,20)-(10,31)) "listReverse"
+App (Just (10,32)-(10,43)) (Var (Just (10,33)-(10,40)) "explode") [Var (Just (10,41)-(10,42)) "w"]
+Var (Just (10,33)-(10,40)) "explode"
+Var (Just (10,41)-(10,42)) "w"
+App (Just (10,48)-(10,59)) (Var (Just (10,49)-(10,56)) "explode") [Var (Just (10,57)-(10,58)) "w"]
+*)
+
+(* typed spans
+(10,20)-(10,31)
+(10,32)-(10,43)
+(10,33)-(10,40)
+(10,41)-(10,42)
+(10,48)-(10,59)
+*)
+
+(* correct types
+char list -> char list
+char list
+string -> char list
+string
+char list
+*)
+
+(* bad types
+char list
+char list
+char list
+char list
+char list
 *)

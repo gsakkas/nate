@@ -24,15 +24,47 @@ let stringOfList f l = "[" ^ ((sepConcat "; " (List.map f l)) ^ "]");;
 
 (* changed spans
 (9,31)-(9,39)
+sepConcat
+VarG
+
+(9,31)-(9,39)
+"; "
+LitG
+
+(9,31)-(9,39)
 List.map f l
 AppG (fromList [VarG])
 
 (9,42)-(9,55)
-EMPTY
-EmptyG
+l
+VarG
 
-(9,43)-(9,52)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (9,31)-(9,40)) "sepConcat"
+Lit (Just (9,41)-(9,45)) (LS "; ")
+App (Just (9,46)-(9,60)) (Var (Just (9,47)-(9,55)) "List.map") [Var (Just (9,56)-(9,57)) "f",Var (Just (9,58)-(9,59)) "l"]
+Var (Just (9,58)-(9,59)) "l"
+*)
+
+(* typed spans
+(9,31)-(9,40)
+(9,41)-(9,45)
+(9,46)-(9,60)
+(9,58)-(9,59)
+*)
+
+(* correct types
+string -> string list -> string
+string
+string list
+'a list
+*)
+
+(* bad types
+('a -> 'b) -> 'a list -> 'b list
+('a -> 'b) -> 'a list -> 'b list
+('a -> 'b) -> 'a list -> 'b list
+string list -> string
 *)

@@ -25,3 +25,23 @@ TupleG (fromList [VarG,LitG])
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
+
+(* changed exprs
+Tuple (Just (5,35)-(5,45)) [Var (Just (5,36)-(5,37)) "b",Lit (Just (5,39)-(5,44)) (LB False)]
+Tuple (Just (5,51)-(5,64)) [App (Just (5,52)-(5,57)) (Var (Just (5,53)-(5,54)) "f") [Var (Just (5,55)-(5,56)) "b"],Lit (Just (5,59)-(5,63)) (LB True)]
+*)
+
+(* typed spans
+(5,35)-(5,45)
+(5,51)-(5,64)
+*)
+
+(* correct types
+('a * bool)
+('a * bool)
+*)
+
+(* bad types
+bool
+bool
+*)

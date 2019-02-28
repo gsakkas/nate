@@ -93,26 +93,70 @@ let rec build (rand,depth) =
 (* changed spans
 (27,37)-(27,43)
 buildX ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
+AppG (fromList [ConAppG Nothing])
 
 (27,51)-(27,57)
 buildY ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
+AppG (fromList [ConAppG Nothing])
 
 (29,4)-(43,71)
 ()
-ConAppG Nothing (Just (TApp "unit" []))
+ConAppG Nothing
 
 (30,12)-(30,18)
 buildX ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
+AppG (fromList [ConAppG Nothing])
+
+(31,12)-(31,18)
+()
+ConAppG Nothing
 
 (31,12)-(31,18)
 buildY ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
+AppG (fromList [ConAppG Nothing])
 
 (32,12)-(32,49)
 ()
-ConAppG Nothing (Just (TApp "unit" []))
+ConAppG Nothing
 
+*)
+
+(* changed exprs
+App (Just (27,37)-(27,46)) (Var (Just (27,37)-(27,43)) "buildX") [ConApp (Just (27,44)-(27,46)) "()" Nothing (Just (TApp "unit" []))]
+App (Just (27,54)-(27,63)) (Var (Just (27,54)-(27,60)) "buildY") [ConApp (Just (27,61)-(27,63)) "()" Nothing (Just (TApp "unit" []))]
+ConApp (Just (27,61)-(27,63)) "()" Nothing (Just (TApp "unit" []))
+App (Just (30,12)-(30,21)) (Var (Just (30,12)-(30,18)) "buildX") [ConApp (Just (30,19)-(30,21)) "()" Nothing (Just (TApp "unit" []))]
+ConApp (Just (30,19)-(30,21)) "()" Nothing (Just (TApp "unit" []))
+App (Just (31,12)-(31,21)) (Var (Just (31,12)-(31,18)) "buildY") [ConApp (Just (31,19)-(31,21)) "()" Nothing (Just (TApp "unit" []))]
+ConApp (Just (31,19)-(31,21)) "()" Nothing (Just (TApp "unit" []))
+*)
+
+(* typed spans
+(27,37)-(27,46)
+(27,54)-(27,63)
+(27,61)-(27,63)
+(30,12)-(30,21)
+(30,19)-(30,21)
+(31,12)-(31,21)
+(31,19)-(31,21)
+*)
+
+(* correct types
+expr
+expr
+unit
+expr
+unit
+expr
+unit
+*)
+
+(* bad types
+unit -> expr
+unit -> expr
+unit -> expr
+unit -> expr
+unit -> expr
+unit -> expr
+expr
 *)

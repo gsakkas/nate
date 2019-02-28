@@ -37,3 +37,18 @@ t
 VarG
 
 *)
+
+(* typed spans
+(3,2)-(9,66)
+(7,8)-(7,9)
+*)
+
+(* typed spans
+'a
+('a * 'b) list
+*)
+
+(* typed spans
+'a
+'a list
+*)

@@ -40,8 +40,19 @@ LitG
 EMPTY
 EmptyG
 
-(11,31)-(11,56)
-EMPTY
-EmptyG
+*)
 
+(* typed spans
+(10,24)-(10,30)
+(10,28)-(10,30)
+*)
+
+(* typed spans
+bool
+int
+*)
+
+(* typed spans
+bool
+int
 *)

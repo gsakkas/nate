@@ -48,11 +48,23 @@ let palindrome w =
 
 (* changed spans
 (16,26)-(16,39)
-EMPTY
-EmptyG
+lst
+VarG
 
-(16,27)-(16,34)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (16,25)-(16,28)) "lst"
+*)
+
+(* typed spans
+(16,25)-(16,28)
+*)
+
+(* correct types
+char list
+*)
+
+(* bad types
+char
 *)

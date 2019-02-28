@@ -20,6 +20,22 @@ let rec mulByDigit i l =
 (* changed spans
 (6,65)-(6,67)
 [x']
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* changed exprs
+List (Just (7,50)-(7,54)) [Var (Just (7,51)-(7,53)) "x'"] Nothing
+*)
+
+(* typed spans
+(7,50)-(7,54)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int
 *)

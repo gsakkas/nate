@@ -23,6 +23,22 @@ let rec digitsOfInt n =
 (* changed spans
 (8,12)-(8,69)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
+*)
+
+(* changed exprs
+List (Just (8,75)-(8,77)) [] Nothing
+*)
+
+(* typed spans
+(8,75)-(8,77)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+unit
 *)

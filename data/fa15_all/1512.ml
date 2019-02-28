@@ -76,6 +76,22 @@ let rec mulByDigit i l =
 (* changed spans
 (34,65)-(34,76)
 helper i [] l
-AppG (fromList [VarG,ListG EmptyG Nothing])
+AppG (fromList [VarG,ListG EmptyG])
 
+*)
+
+(* changed exprs
+App (Just (35,5)-(35,18)) (Var (Just (35,5)-(35,11)) "helper") [Var (Just (35,12)-(35,13)) "i",List (Just (35,14)-(35,16)) [] Nothing,Var (Just (35,17)-(35,18)) "l"]
+*)
+
+(* typed spans
+(35,5)-(35,18)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+int list -> 'a
 *)

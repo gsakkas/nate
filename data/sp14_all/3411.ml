@@ -43,8 +43,20 @@ let padZero l1 l2 =
 x <> 0
 BopG VarG LitG
 
-(14,4)-(16,41)
-0
-LitG
+*)
 
+(* changed exprs
+Bop (Just (12,5)-(12,11)) Neq (Var (Just (12,5)-(12,6)) "x") (Lit (Just (12,10)-(12,11)) (LI 0))
+*)
+
+(* typed spans
+(12,5)-(12,11)
+*)
+
+(* correct types
+bool
+*)
+
+(* bad types
+int
 *)

@@ -66,3 +66,23 @@ pi *. eval (e' , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
 *)
+
+(* changed exprs
+Var (Just (26,27)-(26,30)) "cos"
+Bop (Just (26,31)-(26,56)) FTimes (Var (Just (26,32)-(26,34)) "pi") (App (Just (26,38)-(26,55)) (Var (Just (26,39)-(26,43)) "eval") [Tuple (Just (26,44)-(26,54)) [Var (Just (26,45)-(26,47)) "e'",Var (Just (26,49)-(26,50)) "x",Var (Just (26,52)-(26,53)) "y"]])
+*)
+
+(* typed spans
+(26,27)-(26,30)
+(26,31)-(26,56)
+*)
+
+(* correct types
+float -> float
+float
+*)
+
+(* bad types
+int -> int
+float
+*)

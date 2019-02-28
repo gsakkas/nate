@@ -59,20 +59,20 @@ let (s , t) = a in
 (((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
 LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
 
-(20,36)-(20,37)
-s
-VarG
+*)
 
-(20,46)-(20,68)
-(((i + j) + s) mod 10) :: t
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG]))) Nothing
+(* changed exprs
+Let (Just (21,6)-(21,76)) NonRec [(TuplePat (Just (21,11)-(21,14)) [VarPat (Just (21,11)-(21,12)) "s",VarPat (Just (21,13)-(21,14)) "t"],Var (Just (21,18)-(21,19)) "a")] (Tuple (Just (21,23)-(21,76)) [Bop (Just (21,24)-(21,44)) Div (Bop (Just (21,25)-(21,38)) Plus (Bop (Just (21,26)-(21,33)) Plus (Var (Just (21,27)-(21,28)) "i") (Var (Just (21,31)-(21,32)) "j")) (Var (Just (21,36)-(21,37)) "s")) (Lit (Just (21,41)-(21,43)) (LI 10)),ConApp (Just (21,46)-(21,75)) "::" (Just (Tuple (Just (21,47)-(21,74)) [Bop (Just (21,47)-(21,69)) Mod (Bop (Just (21,48)-(21,61)) Plus (Bop (Just (21,49)-(21,56)) Plus (Var (Just (21,50)-(21,51)) "i") (Var (Just (21,54)-(21,55)) "j")) (Var (Just (21,59)-(21,60)) "s")) (Lit (Just (21,66)-(21,68)) (LI 10)),Var (Just (21,73)-(21,74)) "t"])) Nothing])
+*)
 
-(20,58)-(20,59)
-s
-VarG
+(* typed spans
+(21,6)-(21,76)
+*)
 
-(21,4)-(23,51)
-t
-VarG
+(* correct types
+(int * int list)
+*)
 
+(* bad types
+(int * int)
 *)

@@ -27,28 +27,20 @@ fun b' ->
    (result , result = b'))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(7,37)-(7,41)
-EMPTY
-EmptyG
+*)
 
-(7,42)-(7,43)
-f
-VarG
+(* changed exprs
+Lam (Just (7,17)-(7,66)) (VarPat (Just (7,17)-(7,19)) "b'") (Let (Just (7,22)-(7,66)) NonRec [(VarPat (Just (7,26)-(7,32)) "result",App (Just (7,35)-(7,39)) (Var (Just (7,35)-(7,36)) "f") [Var (Just (7,37)-(7,39)) "b'"])] (Tuple (Just (7,43)-(7,66)) [Var (Just (7,44)-(7,50)) "result",Bop (Just (7,52)-(7,65)) Eq (Var (Just (7,53)-(7,59)) "result") (Var (Just (7,62)-(7,64)) "b'")])) Nothing
+*)
 
-(7,47)-(7,69)
-b'
-VarG
+(* typed spans
+(7,17)-(7,66)
+*)
 
-(7,66)-(7,67)
-EMPTY
-EmptyG
+(* correct types
+'a -> ('a * bool)
+*)
 
-(8,6)-(8,14)
-b'
-VarG
-
-(8,13)-(8,14)
-EMPTY
-EmptyG
-
+(* bad types
+('a -> 'a) -> ('a * bool)
 *)

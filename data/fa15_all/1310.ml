@@ -16,19 +16,23 @@ let padZero l1 l2 =
 
 (* changed spans
 (5,29)-(5,61)
-EMPTY
-EmptyG
+retTuple
+VarG
 
-(5,32)-(5,43)
-EMPTY
-EmptyG
+*)
 
-(5,32)-(5,47)
-EMPTY
-EmptyG
+(* changed exprs
+Var (Just (5,29)-(5,37)) "retTuple"
+*)
 
-(5,46)-(5,47)
-EMPTY
-EmptyG
+(* typed spans
+(5,29)-(5,37)
+*)
 
+(* correct types
+('a list * 'b list)
+*)
+
+(* bad types
+unit
 *)

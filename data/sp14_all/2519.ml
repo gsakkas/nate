@@ -26,11 +26,35 @@ b
 VarG
 
 (8,56)-(8,59)
-EMPTY
-EmptyG
+g
+VarG
 
-(8,62)-(8,63)
-EMPTY
-EmptyG
+(8,56)-(8,59)
+b
+VarG
 
+*)
+
+(* changed exprs
+Var (Just (8,38)-(8,39)) "b"
+Var (Just (8,55)-(8,56)) "g"
+Var (Just (8,59)-(8,60)) "b"
+*)
+
+(* typed spans
+(8,38)-(8,39)
+(8,55)-(8,56)
+(8,59)-(8,60)
+*)
+
+(* correct types
+'a
+'a -> ('a * bool)
+'a
+*)
+
+(* bad types
+'a
+('a * bool)
+('a * bool)
 *)

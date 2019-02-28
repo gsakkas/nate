@@ -1,5 +1,9 @@
-AppG (fromList [VarG,AppG (fromList [EmptyG]),LitG])
-List.fold_left (^) ""
-               (List.map f l)
-buildhelper (rand (1 , 4))
-            depth ""
+LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
+let (x , y) = f b in
+if y = true
+then wwhile (f , x)
+else x
+let (b' , c') = f b in
+if c'
+then wwhile (f , b')
+else b'

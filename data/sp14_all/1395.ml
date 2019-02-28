@@ -18,25 +18,41 @@ let rec sepConcat sep sl =
 *)
 
 (* changed spans
-(6,18)-(6,19)
-EMPTY
-EmptyG
-
 (6,18)-(6,21)
-EMPTY
-EmptyG
-
-(7,17)-(7,19)
-EMPTY
-EmptyG
+x
+VarG
 
 (7,23)-(7,59)
-EMPTY
-EmptyG
+h
+VarG
 
-(7,36)-(7,59)
+(7,23)-(7,59)
 let l = t in
 List.fold_left f base l
 LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
 
+*)
+
+(* changed exprs
+Var (Just (6,18)-(6,19)) "x"
+Var (Just (6,34)-(6,35)) "h"
+Let (Just (6,39)-(6,75)) NonRec [(VarPat (Just (6,43)-(6,44)) "l",Var (Just (6,47)-(6,48)) "t")] (App (Just (6,52)-(6,75)) (Var (Just (6,52)-(6,66)) "List.fold_left") [Var (Just (6,67)-(6,68)) "f",Var (Just (6,69)-(6,73)) "base",Var (Just (6,74)-(6,75)) "l"])
+*)
+
+(* typed spans
+(6,18)-(6,19)
+(6,34)-(6,35)
+(6,39)-(6,75)
+*)
+
+(* correct types
+string
+string
+string
+*)
+
+(* bad types
+'a
+string
+string
 *)

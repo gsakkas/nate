@@ -76,3 +76,27 @@ VarG
 UopG VarG
 
 *)
+
+(* changed exprs
+Lit (Just (12,12)-(12,23)) (LD 2.718281828)
+Var (Just (30,9)-(30,14)) "e_num"
+Uop (Just (30,19)-(30,26)) FNeg (Var (Just (30,23)-(30,25)) "pi")
+*)
+
+(* typed spans
+(12,12)-(12,23)
+(30,9)-(30,14)
+(30,19)-(30,26)
+*)
+
+(* correct types
+float
+float
+float
+*)
+
+(* bad types
+float
+float
+int
+*)

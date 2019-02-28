@@ -28,36 +28,28 @@ fun f ->
              else false)
 LamG (LamG EmptyG)
 
-(2,27)-(2,70)
-fun b ->
-  fun b ->
-    (f b , if f b = b
-           then true
-           else false)
-LamG (LamG EmptyG)
-
-(2,45)-(2,54)
-EMPTY
-EmptyG
-
-(2,46)-(2,47)
-EMPTY
-EmptyG
-
-(2,60)-(2,70)
-EMPTY
-EmptyG
-
-(2,61)-(2,62)
-EMPTY
-EmptyG
-
 (7,29)-(7,52)
 fixpointHelper f b
 AppG (fromList [VarG])
 
-(7,45)-(7,51)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Lam (Just (2,19)-(2,71)) (VarPat (Just (2,19)-(2,20)) "f") (Lam (Just (2,21)-(2,71)) (VarPat (Just (2,21)-(2,22)) "b") (Lam (Just (2,23)-(2,71)) (VarPat (Just (2,23)-(2,24)) "b") (Tuple (Just (2,27)-(2,71)) [App (Just (2,28)-(2,33)) (Var (Just (2,29)-(2,30)) "f") [Var (Just (2,31)-(2,32)) "b"],Ite (Just (2,35)-(2,70)) (Bop (Just (2,39)-(2,48)) Eq (App (Just (2,39)-(2,44)) (Var (Just (2,40)-(2,41)) "f") [Var (Just (2,42)-(2,43)) "b"]) (Var (Just (2,47)-(2,48)) "b")) (Lit (Just (2,54)-(2,58)) (LB True)) (Lit (Just (2,64)-(2,69)) (LB False))]) Nothing) Nothing) Nothing
+App (Just (7,29)-(7,49)) (Var (Just (7,30)-(7,44)) "fixpointHelper") [Var (Just (7,45)-(7,46)) "f",Var (Just (7,47)-(7,48)) "b"]
+*)
+
+(* typed spans
+(2,19)-(2,71)
+(7,29)-(7,49)
+*)
+
+(* correct types
+('a -> 'a) -> 'a -> 'a -> ('a * bool)
+'a -> ('a * bool)
+*)
+
+(* bad types
+('a -> 'a * 'a) -> ('a * bool)
+('a * bool)
 *)

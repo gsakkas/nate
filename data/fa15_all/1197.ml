@@ -9,16 +9,24 @@ let rec wwhile (f,b) = match f b with | (h,t) -> if t = false then h;;
 *)
 
 (* changed spans
-(2,74)-(2,75)
-EMPTY
-EmptyG
-
 (2,74)-(2,77)
-EMPTY
-EmptyG
-
-(2,76)-(2,77)
 ()
-ConAppG Nothing (Just (TApp "unit" []))
+ConAppG Nothing
 
+*)
+
+(* changed exprs
+ConApp (Just (2,49)-(2,68)) "()" Nothing (Just (TApp "unit" []))
+*)
+
+(* typed spans
+(2,49)-(2,68)
+*)
+
+(* correct types
+unit
+*)
+
+(* bad types
+'a
 *)

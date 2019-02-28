@@ -19,8 +19,20 @@ let rec additivePersistence n =
 additivePersistence (help n)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(5,41)-(5,45)
-help n
-AppG (fromList [VarG])
+*)
 
+(* changed exprs
+App (Just (5,20)-(5,50)) (Var (Just (5,21)-(5,40)) "additivePersistence") [App (Just (5,41)-(5,49)) (Var (Just (5,42)-(5,46)) "help") [Var (Just (5,47)-(5,48)) "n"]]
+*)
+
+(* typed spans
+(5,20)-(5,50)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

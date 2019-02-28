@@ -24,3 +24,19 @@ sl
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (7,31)-(7,33)) "sl"
+*)
+
+(* typed spans
+(7,31)-(7,33)
+*)
+
+(* correct types
+string list
+*)
+
+(* bad types
+string
+*)

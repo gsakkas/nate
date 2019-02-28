@@ -54,28 +54,20 @@ match depth with
 | n -> buildSine (build (rand , depth - 1))
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,IteG EmptyG EmptyG EmptyG)])
 
-(19,9)-(19,11)
-EMPTY
-EmptyG
+*)
 
-(20,12)-(20,24)
-EMPTY
-EmptyG
+(* changed exprs
+Case (Just (18,2)-(20,46)) (Var (Just (18,8)-(18,13)) "depth") [(LitPat (Just (19,4)-(19,5)) (LI 0),Nothing,Ite (Just (19,9)-(19,46)) (Lit (Just (19,12)-(19,16)) (LB True)) (App (Just (19,22)-(19,31)) (Var (Just (19,22)-(19,28)) "buildX") [ConApp (Just (19,29)-(19,31)) "()" Nothing (Just (TApp "unit" []))]) (App (Just (19,37)-(19,46)) (Var (Just (19,37)-(19,43)) "buildY") [ConApp (Just (19,44)-(19,46)) "()" Nothing (Just (TApp "unit" []))])),(VarPat (Just (20,4)-(20,5)) "n",Nothing,App (Just (20,9)-(20,46)) (Var (Just (20,9)-(20,18)) "buildSine") [App (Just (20,19)-(20,46)) (Var (Just (20,20)-(20,25)) "build") [Tuple (Just (20,26)-(20,45)) [Var (Just (20,27)-(20,31)) "rand",Bop (Just (20,33)-(20,44)) Minus (Var (Just (20,34)-(20,39)) "depth") (Lit (Just (20,42)-(20,43)) (LI 1))]]])]
+*)
 
-(20,12)-(20,28)
-EMPTY
-EmptyG
+(* typed spans
+(18,2)-(20,46)
+*)
 
-(20,13)-(20,17)
-buildX ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
+(* correct types
+expr
+*)
 
-(20,22)-(20,23)
-buildY ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
-
-(20,27)-(20,28)
-()
-ConAppG Nothing (Just (TApp "unit" []))
-
+(* bad types
+unit
 *)

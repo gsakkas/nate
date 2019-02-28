@@ -22,3 +22,15 @@ n - 1
 BopG VarG LitG
 
 *)
+
+(* typed spans
+(2,57)-(2,64)
+*)
+
+(* typed spans
+int
+*)
+
+(* typed spans
+int
+*)

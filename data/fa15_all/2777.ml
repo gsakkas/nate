@@ -38,3 +38,21 @@ VarG
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
+
+(* typed spans
+(8,7)-(8,43)
+(8,30)-(8,34)
+(9,7)-(9,43)
+*)
+
+(* typed spans
+(int list * int list)
+int
+(int list * int list)
+*)
+
+(* typed spans
+int list
+int list
+int list
+*)

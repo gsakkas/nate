@@ -26,3 +26,8 @@ n - 1
 BopG VarG LitG
 
 *)
+
+(* typed spans
+bool
+int
+*)

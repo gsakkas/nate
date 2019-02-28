@@ -1,13 +1,15 @@
-ConAppG Nothing Nothing
-VarX
-VarY
-VarX
-VarY
-VarX
-VarX
-VarX
-VarX
-VarX
-VarX
-VarY
-VarX
+AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
+mulByDigit (i - 1) (bigAdd l
+                           l)
+max' (0.0 -. 1.0) (min 1.0
+                       ((2.71 ** ((sin (pi *. eval (a , x , y)) +. cos (pi *. eval (b , x , y))) -. 1.0)) -. 1.0))
+append (digitsOfInt (n / 10))
+       (n - ((n / 10) * 10))
+aPHelper (sumList (digits n))
+         (i + 1)
+clone (List.hd l1)
+      (List.length l1 - List.length l2)
+clone (List.hd l2)
+      (List.length l2 - List.length l1)
+mod_float (eval (w , x , y) *. eval (t , x , y))
+          (eval (u , x , y))

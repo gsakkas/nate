@@ -24,24 +24,20 @@ fun x ->
    (ff , b = ff))
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(6,39)-(6,55)
-let ff = f b in (ff , b = ff)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
+*)
 
-(6,40)-(6,41)
-ff
-VarG
+(* changed exprs
+Lam (Just (7,16)-(7,50)) (VarPat (Just (7,16)-(7,17)) "x") (Let (Just (7,20)-(7,50)) NonRec [(VarPat (Just (7,24)-(7,26)) "ff",App (Just (7,29)-(7,32)) (Var (Just (7,29)-(7,30)) "f") [Var (Just (7,31)-(7,32)) "b"])] (Tuple (Just (7,36)-(7,50)) [Var (Just (7,37)-(7,39)) "ff",Bop (Just (7,41)-(7,49)) Eq (Var (Just (7,42)-(7,43)) "b") (Var (Just (7,46)-(7,48)) "ff")])) Nothing
+*)
 
-(6,48)-(6,53)
-EMPTY
-EmptyG
+(* typed spans
+(7,16)-(7,50)
+*)
 
-(6,49)-(6,50)
-EMPTY
-EmptyG
+(* correct types
+'a -> ('a * bool)
+*)
 
-(6,51)-(6,52)
-ff
-VarG
-
+(* bad types
+('a -> 'a) -> ('a -> 'a * bool)
 *)

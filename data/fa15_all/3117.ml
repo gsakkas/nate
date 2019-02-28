@@ -16,6 +16,11 @@ AppG (fromList [VarG])
 
 (2,73)-(2,74)
 [a]
-ListG VarG Nothing
+ListG VarG
 
+*)
+
+(* typed spans
+'t11 list
+'t11 list
 *)

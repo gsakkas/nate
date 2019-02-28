@@ -62,3 +62,23 @@ exprToString e4
 AppG (fromList [VarG])
 
 *)
+
+(* changed exprs
+Var (Just (24,47)-(24,48)) "^"
+App (Just (24,49)-(24,66)) (Var (Just (24,50)-(24,62)) "exprToString") [Var (Just (24,63)-(24,65)) "e4"]
+*)
+
+(* typed spans
+(24,47)-(24,48)
+(24,49)-(24,66)
+*)
+
+(* correct types
+string -> string -> string
+string
+*)
+
+(* bad types
+string
+expr -> string
+*)

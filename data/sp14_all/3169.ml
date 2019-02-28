@@ -26,7 +26,23 @@ let padZero l1 l2 =
 
 (* changed spans
 (10,8)-(10,12)
-EMPTY
-EmptyG
+l1
+VarG
 
+*)
+
+(* changed exprs
+Var (Just (10,8)-(10,10)) "l1"
+*)
+
+(* typed spans
+(10,8)-(10,10)
+*)
+
+(* correct types
+int list
+*)
+
+(* bad types
+int list list
 *)

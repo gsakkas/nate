@@ -80,23 +80,95 @@ match c with
 CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 
 (26,15)-(26,24)
+x1
+VarG
+
+(26,15)-(26,24)
+x2
+VarG
+
+(26,15)-(26,24)
+10
+LitG
+
+(26,15)-(26,24)
 a2 @ [(x1 + x2) mod 10]
-AppG (fromList [VarG,ListG EmptyG Nothing])
+AppG (fromList [VarG,ListG EmptyG])
 
-(26,27)-(26,29)
-EMPTY
-EmptyG
-
-(26,39)-(26,71)
+(26,33)-(26,35)
 (a1 @ [((x1 + x2) + c) / 10] , a2 @ [((x1 + x2) + c) mod 10])
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(26,40)-(26,42)
+(26,43)-(26,44)
+a1
+VarG
+
+(26,43)-(26,44)
+[((x1 + x2) + c) / 10]
+ListG (BopG EmptyG EmptyG)
+
+(26,43)-(26,44)
 a2 @ [((x1 + x2) + c) mod 10]
-AppG (fromList [VarG,ListG EmptyG Nothing])
+AppG (fromList [VarG,ListG EmptyG])
 
 (26,59)-(26,61)
 c
 VarG
 
+*)
+
+(* changed exprs
+Lam (Just (5,6)-(5,11)) (VarPat (Just (5,6)-(5,7)) "y") (Var (Just (5,10)-(5,11)) "y") Nothing
+Case (Just (28,6)-(30,77)) (Var (Just (28,12)-(28,13)) "c") [(LitPat (Just (29,8)-(29,9)) (LI 0),Nothing,Tuple (Just (29,13)-(29,65)) [App (Just (29,14)-(29,37)) (Var (Just (29,18)-(29,19)) "@") [Var (Just (29,15)-(29,17)) "a1",List (Just (29,20)-(29,36)) [Bop (Just (29,21)-(29,35)) Div (Bop (Just (29,21)-(29,30)) Plus (Var (Just (29,22)-(29,24)) "x1") (Var (Just (29,27)-(29,29)) "x2")) (Lit (Just (29,33)-(29,35)) (LI 10))] Nothing],App (Just (29,39)-(29,64)) (Var (Just (29,43)-(29,44)) "@") [Var (Just (29,40)-(29,42)) "a2",List (Just (29,45)-(29,63)) [Bop (Just (29,46)-(29,62)) Mod (Bop (Just (29,46)-(29,55)) Plus (Var (Just (29,47)-(29,49)) "x1") (Var (Just (29,52)-(29,54)) "x2")) (Lit (Just (29,60)-(29,62)) (LI 10))] Nothing]]),(WildPat (Just (30,8)-(30,9)),Nothing,Tuple (Just (30,13)-(30,77)) [App (Just (30,14)-(30,43)) (Var (Just (30,18)-(30,19)) "@") [Var (Just (30,15)-(30,17)) "a1",List (Just (30,20)-(30,42)) [Bop (Just (30,21)-(30,41)) Div (Bop (Just (30,21)-(30,36)) Plus (Bop (Just (30,22)-(30,31)) Plus (Var (Just (30,23)-(30,25)) "x1") (Var (Just (30,28)-(30,30)) "x2")) (Var (Just (30,34)-(30,35)) "c")) (Lit (Just (30,39)-(30,41)) (LI 10))] Nothing],App (Just (30,45)-(30,76)) (Var (Just (30,49)-(30,50)) "@") [Var (Just (30,46)-(30,48)) "a2",List (Just (30,51)-(30,75)) [Bop (Just (30,52)-(30,74)) Mod (Bop (Just (30,52)-(30,67)) Plus (Bop (Just (30,53)-(30,62)) Plus (Var (Just (30,54)-(30,56)) "x1") (Var (Just (30,59)-(30,61)) "x2")) (Var (Just (30,65)-(30,66)) "c")) (Lit (Just (30,72)-(30,74)) (LI 10))] Nothing]])]
+Var (Just (29,22)-(29,24)) "x1"
+Var (Just (29,27)-(29,29)) "x2"
+Lit (Just (29,33)-(29,35)) (LI 10)
+App (Just (29,39)-(29,64)) (Var (Just (29,43)-(29,44)) "@") [Var (Just (29,40)-(29,42)) "a2",List (Just (29,45)-(29,63)) [Bop (Just (29,46)-(29,62)) Mod (Bop (Just (29,46)-(29,55)) Plus (Var (Just (29,47)-(29,49)) "x1") (Var (Just (29,52)-(29,54)) "x2")) (Lit (Just (29,60)-(29,62)) (LI 10))] Nothing]
+Tuple (Just (30,13)-(30,77)) [App (Just (30,14)-(30,43)) (Var (Just (30,18)-(30,19)) "@") [Var (Just (30,15)-(30,17)) "a1",List (Just (30,20)-(30,42)) [Bop (Just (30,21)-(30,41)) Div (Bop (Just (30,21)-(30,36)) Plus (Bop (Just (30,22)-(30,31)) Plus (Var (Just (30,23)-(30,25)) "x1") (Var (Just (30,28)-(30,30)) "x2")) (Var (Just (30,34)-(30,35)) "c")) (Lit (Just (30,39)-(30,41)) (LI 10))] Nothing],App (Just (30,45)-(30,76)) (Var (Just (30,49)-(30,50)) "@") [Var (Just (30,46)-(30,48)) "a2",List (Just (30,51)-(30,75)) [Bop (Just (30,52)-(30,74)) Mod (Bop (Just (30,52)-(30,67)) Plus (Bop (Just (30,53)-(30,62)) Plus (Var (Just (30,54)-(30,56)) "x1") (Var (Just (30,59)-(30,61)) "x2")) (Var (Just (30,65)-(30,66)) "c")) (Lit (Just (30,72)-(30,74)) (LI 10))] Nothing]]
+Var (Just (30,15)-(30,17)) "a1"
+List (Just (30,20)-(30,42)) [Bop (Just (30,21)-(30,41)) Div (Bop (Just (30,21)-(30,36)) Plus (Bop (Just (30,22)-(30,31)) Plus (Var (Just (30,23)-(30,25)) "x1") (Var (Just (30,28)-(30,30)) "x2")) (Var (Just (30,34)-(30,35)) "c")) (Lit (Just (30,39)-(30,41)) (LI 10))] Nothing
+App (Just (30,45)-(30,76)) (Var (Just (30,49)-(30,50)) "@") [Var (Just (30,46)-(30,48)) "a2",List (Just (30,51)-(30,75)) [Bop (Just (30,52)-(30,74)) Mod (Bop (Just (30,52)-(30,67)) Plus (Bop (Just (30,53)-(30,62)) Plus (Var (Just (30,54)-(30,56)) "x1") (Var (Just (30,59)-(30,61)) "x2")) (Var (Just (30,65)-(30,66)) "c")) (Lit (Just (30,72)-(30,74)) (LI 10))] Nothing]
+Var (Just (30,65)-(30,66)) "c"
+*)
+
+(* typed spans
+(5,6)-(5,11)
+(28,6)-(30,77)
+(29,22)-(29,24)
+(29,27)-(29,29)
+(29,33)-(29,35)
+(29,39)-(29,64)
+(30,13)-(30,77)
+(30,15)-(30,17)
+(30,20)-(30,42)
+(30,45)-(30,76)
+(30,65)-(30,66)
+*)
+
+(* correct types
+'a -> 'a
+(int list * int list)
+int
+int
+int
+int list
+(int list * int list)
+int list
+int list
+int list
+int
+*)
+
+(* bad types
+int list -> int list -> (int list * int list)
+(int list * int list)
+int
+int
+int
+int
+int
+int list -> int list -> int list
+int list -> int list -> int list
+int list -> int list -> int list
+int list
 *)

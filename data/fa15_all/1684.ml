@@ -12,10 +12,15 @@ let rec listReverse l =
 (* changed spans
 (2,45)-(2,46)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (2,57)-(2,60)
 listReverse t @ [h]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
+AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
 
+*)
+
+(* typed spans
+'t11 list
+'t11 list
 *)

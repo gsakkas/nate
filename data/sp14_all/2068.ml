@@ -67,12 +67,28 @@ let rec eval (e,x,y) =
 eval (a , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(27,25)-(27,26)
-EMPTY
-EmptyG
-
 (27,30)-(27,31)
 0.0
 LitG
 
+*)
+
+(* changed exprs
+App (Just (27,9)-(27,25)) (Var (Just (27,10)-(27,14)) "eval") [Tuple (Just (27,15)-(27,24)) [Var (Just (27,16)-(27,17)) "a",Var (Just (27,19)-(27,20)) "x",Var (Just (27,22)-(27,23)) "y"]]
+Lit (Just (27,28)-(27,31)) (LD 0.0)
+*)
+
+(* typed spans
+(27,9)-(27,25)
+(27,28)-(27,31)
+*)
+
+(* correct types
+float
+float
+*)
+
+(* bad types
+int
+int
 *)

@@ -54,7 +54,7 @@ let rec build (rand,depth) =
 (* changed spans
 (2,15)-(2,76)
 fun () -> VarY
-LamG (ConAppG Nothing Nothing)
+LamG (ConAppG Nothing)
 
 (2,53)-(2,64)
 let x = rand (0 , 1) in
@@ -75,4 +75,10 @@ match x with
 | 6 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
 
+*)
+
+(* typed spans
+unit -> expr
+expr
+expr
 *)

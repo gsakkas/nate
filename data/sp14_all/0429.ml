@@ -193,3 +193,19 @@ build (rand , depth - 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
+
+(* changed exprs
+App (Just (40,26)-(40,53)) (Var (Just (40,27)-(40,32)) "build") [Tuple (Just (40,33)-(40,52)) [Var (Just (40,34)-(40,38)) "rand",Bop (Just (40,40)-(40,51)) Minus (Var (Just (40,41)-(40,46)) "depth") (Lit (Just (40,49)-(40,50)) (LI 1))]]
+*)
+
+(* typed spans
+(40,26)-(40,53)
+*)
+
+(* correct types
+expr
+*)
+
+(* bad types
+((int * int) -> int * int)
+*)

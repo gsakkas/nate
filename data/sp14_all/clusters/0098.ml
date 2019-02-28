@@ -1,33 +1,17 @@
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-if depth < 1
-then rand (0 , 2)
-else rand (2 , 7)
-if depth < 1
-then rand (0 , 2)
-else rand (2 , 7)
-if depth < 1
-then rand (0 , 2)
-else rand (2 , 7)
-if r (0 , 1) = 0
-then buildX ()
-else buildY ()
-if eval (e1 , x , y) < eval (e2 , x , y)
-then eval (e3 , x , y)
-else eval (e4 , x , y)
-if eval (e1 , x , y) < eval (e2 , x , y)
-then eval (e3 , x , y)
-else eval (e4 , x , y)
-if rand (0 , 1) = 0
-then buildAverage (buildhelper (depth - 1)
-                               (depth - 1)
-                               expr , buildhelper (depth - 1)
-                                                  (depth - 1)
-                                                  expr)
-else buildTimes (buildhelper (depth - 1)
-                             (depth - 1)
-                             expr , buildhelper (depth - 1)
-                                                (depth - 1)
-                                                expr)
-if sumList (digits n) > 9
-then digitalRoot (sumList (digits n))
-else sumList (digits n)
+LetG NonRec (fromList [ListG EmptyG]) (IteG EmptyG EmptyG EmptyG)
+let myList = [] in
+if n <= 0
+then []
+else if n < 10
+     then [n]
+     else digitsOfInt (n / 10) @ [n mod 10]
+let accum = [] in
+if n < 1
+then []
+else clone x n
+let l = [] in
+if n < 0 then l else l
+let myList = [] in
+if n <= 0
+then []
+else (n mod 10) :: myList

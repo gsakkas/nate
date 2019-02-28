@@ -60,59 +60,23 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (23,6)-(24,39)
-EMPTY
-EmptyG
+((sum mod 10) :: a2 , (sum / 10) :: a1)
+TupleG (fromList [ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))])
 
-(23,14)-(23,44)
-EMPTY
-EmptyG
+*)
 
-(23,23)-(23,31)
-EMPTY
-EmptyG
+(* changed exprs
+Tuple (Just (22,29)-(22,71)) [ConApp (Just (22,30)-(22,50)) "::" (Just (Tuple (Just (22,31)-(22,49)) [Bop (Just (22,31)-(22,43)) Mod (Var (Just (22,32)-(22,35)) "sum") (Lit (Just (22,40)-(22,42)) (LI 10)),Var (Just (22,47)-(22,49)) "a2"])) Nothing,ConApp (Just (22,52)-(22,70)) "::" (Just (Tuple (Just (22,53)-(22,69)) [Bop (Just (22,53)-(22,63)) Div (Var (Just (22,54)-(22,57)) "sum") (Lit (Just (22,60)-(22,62)) (LI 10)),Var (Just (22,67)-(22,69)) "a1"])) Nothing]
+*)
 
-(23,23)-(23,44)
-EMPTY
-EmptyG
+(* typed spans
+(22,29)-(22,71)
+*)
 
-(23,24)-(23,26)
-EMPTY
-EmptyG
+(* correct types
+(int list * int list)
+*)
 
-(23,27)-(23,30)
-EMPTY
-EmptyG
-
-(23,28)-(23,29)
-EMPTY
-EmptyG
-
-(23,34)-(23,44)
-EMPTY
-EmptyG
-
-(23,35)-(23,38)
-EMPTY
-EmptyG
-
-(23,41)-(23,43)
-EMPTY
-EmptyG
-
-(24,8)-(24,9)
-EMPTY
-EmptyG
-
-(24,13)-(24,15)
-EMPTY
-EmptyG
-
-(24,18)-(24,38)
-EMPTY
-EmptyG
-
-(25,4)-(27,51)
-sum / 10
-BopG VarG LitG
-
+(* bad types
+(int list * int list)
 *)

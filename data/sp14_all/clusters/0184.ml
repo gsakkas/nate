@@ -1,5 +1,2 @@
-ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),BopG VarG LitG]))) Nothing]))) Nothing
-(prod mod 10) :: ((prod / 10) :: (mulByDigit i
-                                             t))
-(prod mod 10) :: ((prod / 10) :: (mulByDigit i
-                                             t))
+BopG (AppG (fromList [EmptyG])) (BopG EmptyG EmptyG)
+eval (f , x , y) +. (eval (g , x , y) *. eval (h , x , y))

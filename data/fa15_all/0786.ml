@@ -17,18 +17,22 @@ let rec digitsOfInt n =
 (* changed spans
 (5,17)-(5,18)
 [n]
-ListG VarG Nothing
+ListG VarG
 
 (5,31)-(5,41)
 EMPTY
 EmptyG
 
-(5,32)-(5,33)
-EMPTY
-EmptyG
+*)
 
-(5,38)-(5,40)
-EMPTY
-EmptyG
+(* typed spans
+(5,17)-(5,20)
+*)
 
+(* typed spans
+int list
+*)
+
+(* typed spans
+int
 *)

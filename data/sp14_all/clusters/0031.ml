@@ -1,75 +1,72 @@
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG Nothing])
-listReverse tl @ [hd]
-listReverse tl @ [hd]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-listReverse t @ []
-listReverse t @ [h]
-listReverse t @ [h]
-listReverse t @ [h]
-digitsOfInt (n / 10) @ [n mod 10]
-List.append [result / 10]
-            (List.append [result mod 10]
-                         l)
-List.append [result / 10]
-            (List.append [result mod 10]
-                         l)
-listReverse t @ [h]
-listReverse b @ [a]
-digitsOfInt (n / 10) @ [n mod 10]
-append_new (listReverse tail)
-           [head]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-listReverse t @ [h]
-append (listReverse t) [h]
-[n mod 10] @ digitsOfInt (n / 10)
-[n mod 10] @ digitsOfInt (n / 10)
-[n mod 10] @ digitsOfInt n10
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-append [n mod 10]
-       (digitsOfInt (n / 10))
-append [n mod 10]
-       (digitsOfInt (n / 10))
-append (helper (n / 10))
-       [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-bigAdd (mulByDigit (i - 1) l)
-       [0]
-[(0 , 0)] @ List.combine (List.rev l1)
-                         (List.rev l2)
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-digitsOfInt (n / 10) @ [n mod 10]
-listReverse l' @ [x]
-intlist (x / 10) @ [x mod 10]
-intlist (x / 10) @ [x mod 10]
-append (digitsOfInt (n / 10))
-       [n mod 10]
-[5] @ digitsOfInt (n / 10)
-app (digitsOfInt (n / 10))
-    [n mod 10]
-app (digitsOfInt (n / 10))
-    [n mod 10]
-List.append (List.rev (List.combine l1
-                                    l2)) [(0 , 0)]
-mulByDigit i
-           (m :: t) @ [((h * i) / 10) + ((m * i) mod 10) ; (h * i) mod 10]
-helper t1 @ [h1 mod 10]
-mulByDigit i
-           (List.rev (List.map (fun x ->
-                                  x * 10) t)) @ [h * i]
+LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+let base = fun b -> b in
+List.fold_left f base fs
+let helper =
+  fun x ->
+    if b = f b
+    then (b , false)
+    else (b , true) in
+wwhile (helper , b)
+let helper =
+  fun x ->
+    if x = f x
+    then (x , false)
+    else (f x , true) in
+wwhile (helper , b)
+let f =
+  fun x ->
+    (let xx = f b in
+     (xx , xx <> b)) in
+wwhile (f , b)
+let w =
+  fun b' ->
+    (let fb = f b' in
+     (fb , fb = b')) in
+wwhile (w , b)
+let max' =
+  fun a ->
+    fun b ->
+      if a < b then b else a in
+max' 1.0 (min 1.0
+              ((2.71 ** ((sin (pi *. eval (a , x , y)) +. cos (pi *. eval (b , x , y))) -. 1.0)) -. 1.0))
+let xxx =
+  fun n ->
+    match n with
+    | 0 -> []
+    | n -> if n < 0
+           then []
+           else (n mod 10) :: (digitsOfInt (n / 10)) in
+listReverse (xxx n)
+let fx =
+  fun b' ->
+    (f b' , f b' = b') in
+wwhile (fx , b)
+let whilesFun =
+  fun f' ->
+    fun b' ->
+      (let fOfB = f' b' in
+       (fOfB , fOfB = b')) in
+whilesFun f
+let g = fun b -> (b , f b) in
+wwhile (g , b)
+let g =
+  fun b -> (f b , true) in
+wwhile (g , f b)
+let f =
+  fun b -> (f b , b = f b) in
+wwhile (f , b)
+let f =
+  fun b -> (f b , f b = b) in
+wwhile (f , b)
+let f =
+  fun b ->
+    (let b' = f b in
+     (b' , f b <> b)) in
+wwhile (f , b)
+let helper =
+  fun x ->
+    fun n ->
+      if n < 1
+      then accum
+      else x :: accum in
+helper x (n - 1)

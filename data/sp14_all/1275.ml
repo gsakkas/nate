@@ -35,36 +35,46 @@ fun accu ->
                  ((n mod 10) :: accu)
 LamG (IteG EmptyG EmptyG EmptyG)
 
-(4,19)-(4,22)
-accu
-VarG
+(9,30)-(12,68)
+match n with
+| 0 -> 0
+| _ -> additivePersistence (sumList (digitsOfInt n))
+CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 
-(4,62)-(4,65)
-accu
+(9,30)-(12,68)
+n
 VarG
 
 (9,30)-(12,68)
-EMPTY
-EmptyG
-
-(11,9)-(11,14)
 0
 LitG
 
-(12,30)-(12,55)
-EMPTY
-EmptyG
+*)
 
-(12,56)-(12,67)
-EMPTY
-EmptyG
+(* changed exprs
+Lam (Just (3,22)-(4,68)) (VarPat (Just (3,22)-(3,26)) "accu") (Ite (Just (4,4)-(4,68)) (Bop (Just (4,7)-(4,13)) Le (Var (Just (4,7)-(4,8)) "n") (Lit (Just (4,12)-(4,13)) (LI 0))) (Var (Just (4,19)-(4,23)) "accu") (App (Just (4,29)-(4,68)) (Var (Just (4,29)-(4,38)) "lastDigit") [Bop (Just (4,39)-(4,47)) Div (Var (Just (4,40)-(4,41)) "n") (Lit (Just (4,44)-(4,46)) (LI 10)),ConApp (Just (4,48)-(4,68)) "::" (Just (Tuple (Just (4,49)-(4,67)) [Bop (Just (4,49)-(4,59)) Mod (Var (Just (4,50)-(4,51)) "n") (Lit (Just (4,56)-(4,58)) (LI 10)),Var (Just (4,63)-(4,67)) "accu"])) Nothing])) Nothing
+Case (Just (10,2)-(10,76)) (Var (Just (10,8)-(10,9)) "n") [(LitPat (Just (10,17)-(10,18)) (LI 0),Nothing,Lit (Just (10,22)-(10,23)) (LI 0)),(WildPat (Just (10,26)-(10,27)),Nothing,App (Just (10,31)-(10,76)) (Var (Just (10,31)-(10,50)) "additivePersistence") [App (Just (10,51)-(10,76)) (Var (Just (10,52)-(10,59)) "sumList") [App (Just (10,60)-(10,75)) (Var (Just (10,61)-(10,72)) "digitsOfInt") [Var (Just (10,73)-(10,74)) "n"]]])]
+Var (Just (10,8)-(10,9)) "n"
+Lit (Just (10,22)-(10,23)) (LI 0)
+*)
 
-(12,57)-(12,62)
-EMPTY
-EmptyG
+(* typed spans
+(3,22)-(4,68)
+(10,2)-(10,76)
+(10,8)-(10,9)
+(10,22)-(10,23)
+*)
 
-(12,65)-(12,66)
-EMPTY
-EmptyG
+(* correct types
+int list -> int list
+int
+int
+int
+*)
 
+(* bad types
+int list -> int list
+int -> int
+int -> int
+int -> int
 *)

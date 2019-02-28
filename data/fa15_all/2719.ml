@@ -15,10 +15,6 @@ let fixpoint (f,b) =
 
 (* changed spans
 (4,28)-(4,75)
-EMPTY
-EmptyG
-
-(4,29)-(4,71)
 let g =
   fun x ->
     (let calcx = f x in
@@ -26,29 +22,20 @@ let g =
 (g , b)
 LetG NonRec (fromList [LamG EmptyG]) (TupleG (fromList [EmptyG]))
 
-(4,50)-(4,70)
-let calcx = f x in
-(calcx , calcx = x)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
+*)
 
-(4,58)-(4,69)
-(calcx , calcx = x)
-TupleG (fromList [VarG,BopG EmptyG EmptyG])
+(* changed exprs
+Let (Just (5,9)-(5,70)) NonRec [(VarPat (Just (5,14)-(5,15)) "g",Lam (Just (5,16)-(5,59)) (VarPat (Just (5,16)-(5,17)) "x") (Let (Just (5,20)-(5,59)) NonRec [(VarPat (Just (5,24)-(5,29)) "calcx",App (Just (5,32)-(5,35)) (Var (Just (5,32)-(5,33)) "f") [Var (Just (5,34)-(5,35)) "x"])] (Tuple (Just (5,39)-(5,59)) [Var (Just (5,40)-(5,45)) "calcx",Bop (Just (5,47)-(5,58)) Eq (Var (Just (5,48)-(5,53)) "calcx") (Var (Just (5,56)-(5,57)) "x")])) Nothing)] (Tuple (Just (5,63)-(5,69)) [Var (Just (5,64)-(5,65)) "g",Var (Just (5,67)-(5,68)) "b"])
+*)
 
-(4,59)-(4,60)
-EMPTY
-EmptyG
+(* typed spans
+(5,9)-(5,70)
+*)
 
-(4,63)-(4,68)
-EMPTY
-EmptyG
+(* correct types
+('a -> ('a * bool) * 'a)
+*)
 
-(4,64)-(4,65)
-calcx
-VarG
-
-(4,73)-(4,74)
-(g , b)
-TupleG (fromList [VarG])
-
+(* bad types
+('a -> 'b -> ('b * bool) * 'c)
 *)

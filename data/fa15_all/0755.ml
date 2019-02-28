@@ -71,7 +71,7 @@ IteG (BopG EmptyG EmptyG) LitG LitG
 
 (14,46)-(14,55)
 ((a1 + x1) + x2) :: a2
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG]))) Nothing
+ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG])))
 
 (14,47)-(14,49)
 a1 + x1
@@ -83,10 +83,46 @@ VarG
 
 (15,15)-(15,17)
 (0 , [0])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
 (16,4)-(17,51)
 [0]
-ListG LitG Nothing
+ListG LitG
 
+*)
+
+(* typed spans
+(15,6)-(17,75)
+(16,20)-(16,21)
+(16,6)-(17,75)
+(17,7)-(17,48)
+(17,50)-(17,74)
+(17,52)-(17,61)
+(17,71)-(17,73)
+(18,15)-(18,23)
+(18,19)-(18,22)
+*)
+
+(* typed spans
+(int * int list)
+(int * int list)
+(int * int list)
+int
+int list
+int
+int list
+(int * int list)
+int list
+*)
+
+(* typed spans
+(int * int) list
+(int * int)
+(int * int) list
+int
+int
+int
+(int * int) list
+(int * int) list
+int list
 *)

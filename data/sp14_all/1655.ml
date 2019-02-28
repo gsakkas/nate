@@ -44,3 +44,23 @@ exprToString e1 ^ ")"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
+
+(* changed exprs
+Lit (Just (15,15)-(15,21)) (LS "Sin(")
+App (Just (15,24)-(15,49)) (Var (Just (15,43)-(15,44)) "^") [App (Just (15,25)-(15,42)) (Var (Just (15,26)-(15,38)) "exprToString") [Var (Just (15,39)-(15,41)) "e1"],Lit (Just (15,45)-(15,48)) (LS ")")]
+*)
+
+(* typed spans
+(15,15)-(15,21)
+(15,24)-(15,49)
+*)
+
+(* correct types
+string
+string
+*)
+
+(* bad types
+expr
+string
+*)

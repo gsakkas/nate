@@ -126,3 +126,13 @@ BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 LitG
 
 *)
+
+(* typed spans
+float
+float
+float
+float
+float
+float
+float
+*)

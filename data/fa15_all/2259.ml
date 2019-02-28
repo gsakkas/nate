@@ -84,14 +84,6 @@ let bigMul l1 l2 =
 place * 10
 BopG VarG LitG
 
-(35,42)-(35,43)
-EMPTY
-EmptyG
-
-(35,46)-(35,72)
-10
-LitG
-
 (35,47)-(35,53)
 bigAdd (mulByDigit (place * 10)
                    l1) l
@@ -101,12 +93,36 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 place * 10
 BopG VarG LitG
 
-(35,68)-(35,70)
-10
-LitG
-
 (36,2)-(37,75)
 l
 VarG
 
+*)
+
+(* changed exprs
+Bop (Just (36,20)-(36,32)) Times (Var (Just (36,21)-(36,26)) "place") (Lit (Just (36,29)-(36,31)) (LI 10))
+App (Just (36,34)-(36,73)) (Var (Just (36,35)-(36,41)) "bigAdd") [App (Just (36,42)-(36,70)) (Var (Just (36,43)-(36,53)) "mulByDigit") [Bop (Just (36,54)-(36,66)) Times (Var (Just (36,55)-(36,60)) "place") (Lit (Just (36,63)-(36,65)) (LI 10)),Var (Just (36,67)-(36,69)) "l1"],Var (Just (36,71)-(36,72)) "l"]
+Bop (Just (36,54)-(36,66)) Times (Var (Just (36,55)-(36,60)) "place") (Lit (Just (36,63)-(36,65)) (LI 10))
+Var (Just (36,71)-(36,72)) "l"
+*)
+
+(* typed spans
+(36,20)-(36,32)
+(36,34)-(36,73)
+(36,54)-(36,66)
+(36,71)-(36,72)
+*)
+
+(* correct types
+int
+int list
+int
+int list
+*)
+
+(* bad types
+int
+int list -> int list -> int list
+int
+'a
 *)

@@ -33,28 +33,32 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(12,20)-(12,24)
-h :: seen
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
-
 (12,20)-(12,28)
-EMPTY
-EmptyG
-
-(12,25)-(12,26)
-EMPTY
-EmptyG
-
-(13,8)-(13,58)
-seen
-VarG
+h :: seen
+ConAppG (Just (TupleG (fromList [VarG])))
 
 (13,20)-(13,33)
 filter t h
 AppG (fromList [VarG])
 
-(13,27)-(13,33)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+ConApp (Just (12,20)-(12,29)) "::" (Just (Tuple (Just (12,20)-(12,29)) [Var (Just (12,20)-(12,21)) "h",Var (Just (12,25)-(12,29)) "seen"])) Nothing
+App (Just (13,20)-(13,30)) (Var (Just (13,20)-(13,26)) "filter") [Var (Just (13,27)-(13,28)) "t",Var (Just (13,29)-(13,30)) "h"]
+*)
+
+(* typed spans
+(12,20)-(12,29)
+(13,20)-(13,30)
+*)
+
+(* correct types
+'a list
+'a list
+*)
+
+(* bad types
+'a list
+'a list list
 *)

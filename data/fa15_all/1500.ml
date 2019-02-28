@@ -66,157 +66,11 @@ let bigAdd l1 l2 =
 
 (* changed spans
 (20,6)-(29,20)
-EMPTY
-EmptyG
-
-(20,12)-(20,13)
-EMPTY
-EmptyG
-
-(22,10)-(24,69)
-EMPTY
-EmptyG
-
-(22,17)-(22,18)
-EMPTY
-EmptyG
-
-(23,32)-(23,34)
-match a with
-| [] -> (sum / 10) :: ((sum mod 10) :: a)
-| h :: t -> (sum / 10) :: ((h + (sum mod 10)) :: t)
-CaseG VarG (fromList [(Nothing,ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG (BopG VarG LitG)]))) Nothing]))) Nothing),(Nothing,ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG]))) Nothing]))) Nothing)])
-
-(23,44)-(23,45)
-EMPTY
-EmptyG
-
-(23,44)-(23,63)
-EMPTY
-EmptyG
-
-(23,49)-(23,63)
 let sum = fst x + snd x in
 match a with
 | [] -> (sum / 10) :: ((sum mod 10) :: a)
 | h :: t -> (sum / 10) :: ((h + (sum mod 10)) :: t)
 LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(23,50)-(23,52)
-EMPTY
-EmptyG
-
-(23,55)-(23,57)
-fst x
-AppG (fromList [VarG])
-
-(24,26)-(24,35)
-10
-LitG
-
-(24,43)-(24,44)
-sum / 10
-BopG VarG LitG
-
-(24,48)-(24,63)
-EMPTY
-EmptyG
-
-(24,49)-(24,58)
-EMPTY
-EmptyG
-
-(24,50)-(24,52)
-EMPTY
-EmptyG
-
-(24,55)-(24,57)
-EMPTY
-EmptyG
-
-(24,61)-(24,62)
-sum mod 10
-BopG VarG LitG
-
-(26,10)-(29,20)
-10
-LitG
-
-(26,17)-(26,18)
-EMPTY
-EmptyG
-
-(27,45)-(27,46)
-10
-LitG
-
-(27,50)-(27,51)
-EMPTY
-EmptyG
-
-(27,50)-(27,75)
-List.rev l2
-AppG (fromList [VarG])
-
-(27,55)-(27,70)
-EMPTY
-EmptyG
-
-(27,55)-(27,75)
-EMPTY
-EmptyG
-
-(27,56)-(27,65)
-EMPTY
-EmptyG
-
-(27,57)-(27,59)
-EMPTY
-EmptyG
-
-(27,62)-(27,64)
-EMPTY
-EmptyG
-
-(27,68)-(27,69)
-EMPTY
-EmptyG
-
-(27,74)-(27,75)
-EMPTY
-EmptyG
-
-(28,39)-(28,40)
-List.rev l1
-AppG (fromList [VarG])
-
-(28,49)-(28,50)
-sum / 10
-BopG VarG LitG
-
-(28,49)-(29,19)
-EMPTY
-EmptyG
-
-(28,54)-(28,75)
-EMPTY
-EmptyG
-
-(28,56)-(28,65)
-EMPTY
-EmptyG
-
-(28,57)-(28,59)
-EMPTY
-EmptyG
-
-(28,62)-(28,64)
-EMPTY
-EmptyG
-
-(28,73)-(28,74)
-sum mod 10
-BopG VarG LitG
 
 (31,15)-(31,51)
 List.combine (List.rev l1)
@@ -224,11 +78,63 @@ List.combine (List.rev l1)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 (32,4)-(32,51)
-EMPTY
-EmptyG
+List.rev l2
+AppG (fromList [VarG])
 
-(32,48)-(32,51)
-EMPTY
-EmptyG
+(32,4)-(32,51)
+List.rev
+VarG
 
+(32,4)-(32,51)
+l2
+VarG
+
+(32,4)-(32,51)
+List.fold_left f base args
+AppG (fromList [VarG])
+
+(32,4)-(32,51)
+List.fold_left
+VarG
+
+*)
+
+(* changed exprs
+Let (Just (20,6)-(23,53)) NonRec [(VarPat (Just (20,10)-(20,13)) "sum",Bop (Just (20,16)-(20,33)) Plus (App (Just (20,16)-(20,23)) (Var (Just (20,17)-(20,20)) "fst") [Var (Just (20,21)-(20,22)) "x"]) (App (Just (20,26)-(20,33)) (Var (Just (20,27)-(20,30)) "snd") [Var (Just (20,31)-(20,32)) "x"]))] (Case (Just (21,6)-(23,53)) (Var (Just (21,12)-(21,13)) "a") [(ConPat (Just (22,8)-(22,10)) "[]" Nothing,Nothing,ConApp (Just (22,14)-(22,45)) "::" (Just (Tuple (Just (22,14)-(22,45)) [Bop (Just (22,14)-(22,24)) Div (Var (Just (22,15)-(22,18)) "sum") (Lit (Just (22,21)-(22,23)) (LI 10)),ConApp (Just (22,28)-(22,45)) "::" (Just (Tuple (Just (22,28)-(22,45)) [Bop (Just (22,28)-(22,40)) Mod (Var (Just (22,29)-(22,32)) "sum") (Lit (Just (22,37)-(22,39)) (LI 10)),Var (Just (22,44)-(22,45)) "a"])) Nothing])) Nothing),(ConsPat (Just (23,8)-(23,12)) (VarPat (Just (23,8)-(23,9)) "h") (VarPat (Just (23,11)-(23,12)) "t"),Nothing,ConApp (Just (23,16)-(23,53)) "::" (Just (Tuple (Just (23,16)-(23,53)) [Bop (Just (23,16)-(23,26)) Div (Var (Just (23,17)-(23,20)) "sum") (Lit (Just (23,23)-(23,25)) (LI 10)),ConApp (Just (23,30)-(23,53)) "::" (Just (Tuple (Just (23,30)-(23,53)) [Bop (Just (23,30)-(23,48)) Plus (Var (Just (23,31)-(23,32)) "h") (Bop (Just (23,35)-(23,47)) Mod (Var (Just (23,36)-(23,39)) "sum") (Lit (Just (23,44)-(23,46)) (LI 10))),Var (Just (23,52)-(23,53)) "t"])) Nothing])) Nothing)])
+App (Just (25,15)-(25,55)) (Var (Just (25,15)-(25,27)) "List.combine") [App (Just (25,28)-(25,41)) (Var (Just (25,29)-(25,37)) "List.rev") [Var (Just (25,38)-(25,40)) "l1"],App (Just (25,42)-(25,55)) (Var (Just (25,43)-(25,51)) "List.rev") [Var (Just (25,52)-(25,54)) "l2"]]
+App (Just (25,42)-(25,55)) (Var (Just (25,43)-(25,51)) "List.rev") [Var (Just (25,52)-(25,54)) "l2"]
+Var (Just (25,43)-(25,51)) "List.rev"
+Var (Just (25,52)-(25,54)) "l2"
+App (Just (26,4)-(26,30)) (Var (Just (26,4)-(26,18)) "List.fold_left") [Var (Just (26,19)-(26,20)) "f",Var (Just (26,21)-(26,25)) "base",Var (Just (26,26)-(26,30)) "args"]
+Var (Just (26,4)-(26,18)) "List.fold_left"
+*)
+
+(* typed spans
+(20,6)-(23,53)
+(25,15)-(25,55)
+(25,42)-(25,55)
+(25,43)-(25,51)
+(25,52)-(25,54)
+(26,4)-(26,30)
+(26,4)-(26,18)
+*)
+
+(* correct types
+int list
+(int * int) list
+int list
+int list -> int list
+int list
+int list
+(int list -> (int * int) -> int list) -> int list -> (int * int) list -> int list
+*)
+
+(* bad types
+int list
+(int * int) list
+int list
+int list
+int list
+int list
+int list
 *)

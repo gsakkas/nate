@@ -77,6 +77,10 @@ LitG
 TupleG (fromList [VarG])
 
 (31,22)-(31,74)
+x
+VarG
+
+(31,22)-(31,74)
 y
 VarG
 
@@ -92,4 +96,44 @@ VarG
 expr3
 VarG
 
+*)
+
+(* changed exprs
+Lit (Just (29,63)-(29,66)) (LD 2.0)
+Tuple (Just (31,12)-(31,25)) [Var (Just (31,13)-(31,18)) "expr1",Var (Just (31,20)-(31,21)) "x",Var (Just (31,23)-(31,24)) "y"]
+Var (Just (31,20)-(31,21)) "x"
+Var (Just (31,23)-(31,24)) "y"
+Var (Just (32,9)-(32,18)) "abs_float"
+Var (Just (32,27)-(32,32)) "expr2"
+Var (Just (32,51)-(32,56)) "expr3"
+*)
+
+(* typed spans
+(29,63)-(29,66)
+(31,12)-(31,25)
+(31,20)-(31,21)
+(31,23)-(31,24)
+(32,9)-(32,18)
+(32,27)-(32,32)
+(32,51)-(32,56)
+*)
+
+(* correct types
+float
+(expr * float * float)
+float
+float
+float -> float
+expr
+expr
+*)
+
+(* bad types
+int
+expr
+float
+float
+int -> int
+expr
+expr
 *)

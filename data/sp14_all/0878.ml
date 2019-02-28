@@ -29,17 +29,25 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(11,7)-(11,12)
-clone 0 (len1 - len2)
-AppG (fromList [BopG EmptyG EmptyG,LitG])
-
 (11,7)-(11,28)
 (clone 0
        (len1 - len2) @ l2 , l1)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(12,7)-(12,43)
-l1
-VarG
+*)
 
+(* changed exprs
+Tuple (Just (11,7)-(11,43)) [App (Just (11,8)-(11,38)) (Var (Just (11,33)-(11,34)) "@") [App (Just (11,9)-(11,32)) (Var (Just (11,10)-(11,15)) "clone") [Lit (Just (11,16)-(11,17)) (LI 0),Bop (Just (11,18)-(11,31)) Minus (Var (Just (11,19)-(11,23)) "len1") (Var (Just (11,26)-(11,30)) "len2")],Var (Just (11,35)-(11,37)) "l2"],Var (Just (11,40)-(11,42)) "l1"]
+*)
+
+(* typed spans
+(11,7)-(11,43)
+*)
+
+(* correct types
+(int list * int list)
+*)
+
+(* bad types
+int list
 *)

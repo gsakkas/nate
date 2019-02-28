@@ -46,3 +46,19 @@ y
 VarG
 
 *)
+
+(* changed exprs
+Var (Just (18,27)-(18,28)) "y"
+*)
+
+(* typed spans
+(18,27)-(18,28)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+expr
+*)

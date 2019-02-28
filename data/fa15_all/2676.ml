@@ -110,10 +110,6 @@ let rec build (rand,depth) =
 
 (* changed spans
 (35,11)-(35,62)
-EMPTY
-EmptyG
-
-(35,12)-(35,42)
 buildAverage (build (rand , d) , build (rand , d))
 AppG (fromList [TupleG (fromList [EmptyG])])
 
@@ -122,10 +118,6 @@ AppG (fromList [TupleG (fromList [EmptyG])])
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 (37,11)-(37,60)
-EMPTY
-EmptyG
-
-(37,12)-(37,40)
 buildTimes (build (rand , d) , build (rand , d))
 AppG (fromList [TupleG (fromList [EmptyG])])
 
@@ -133,4 +125,25 @@ AppG (fromList [TupleG (fromList [EmptyG])])
 (build (rand , d) , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
+*)
+
+(* typed spans
+(35,11)-(35,62)
+(35,24)-(35,62)
+(37,11)-(37,60)
+(37,22)-(37,60)
+*)
+
+(* typed spans
+expr
+(expr * expr)
+expr
+(expr * expr)
+*)
+
+(* typed spans
+('a * expr)
+((int * int) -> int * int) -> expr
+('a * expr)
+((int * int) -> int * int) -> expr
 *)

@@ -54,47 +54,38 @@ let (carry , sum) = a in
 ((x1 + x2) / 10 , (((x1 + x2) + carry) mod 10) :: sum)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(16,42)-(16,51)
-((x1 + x2) + carry) mod 10
-BopG (BopG EmptyG EmptyG) LitG
-
-(16,42)-(16,56)
-let (carry , sum) = a in
-((x1 + x2) / 10 , (((x1 + x2) + carry) mod 10) :: sum)
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(16,43)-(16,45)
-x1 + x2
-BopG VarG VarG
-
-(16,55)-(16,56)
-carry
-VarG
-
-(17,4)-(19,51)
-sum
-VarG
-
 (17,16)-(17,18)
 0
 LitG
 
-(18,15)-(18,27)
+(18,15)-(18,41)
 let (l1' , l2') =
   padZero l1 l2 in
 List.combine l1' l2'
 LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
 
-(18,15)-(18,41)
-EMPTY
-EmptyG
+*)
 
-(18,28)-(18,35)
-padZero l1 l2
-AppG (fromList [VarG])
+(* changed exprs
+Let (Just (17,6)-(19,63)) NonRec [(TuplePat (Just (17,11)-(17,16)) [VarPat (Just (17,11)-(17,13)) "x1",VarPat (Just (17,14)-(17,16)) "x2"],Var (Just (17,20)-(17,21)) "x")] (Let (Just (18,6)-(19,63)) NonRec [(TuplePat (Just (18,11)-(18,20)) [VarPat (Just (18,11)-(18,16)) "carry",VarPat (Just (18,17)-(18,20)) "sum"],Var (Just (18,24)-(18,25)) "a")] (Tuple (Just (19,6)-(19,63)) [Bop (Just (19,7)-(19,23)) Div (Bop (Just (19,8)-(19,17)) Plus (Var (Just (19,9)-(19,11)) "x1") (Var (Just (19,14)-(19,16)) "x2")) (Lit (Just (19,20)-(19,22)) (LI 10)),ConApp (Just (19,25)-(19,62)) "::" (Just (Tuple (Just (19,26)-(19,61)) [Bop (Just (19,26)-(19,54)) Mod (Bop (Just (19,27)-(19,46)) Plus (Bop (Just (19,28)-(19,37)) Plus (Var (Just (19,29)-(19,31)) "x1") (Var (Just (19,34)-(19,36)) "x2")) (Var (Just (19,40)-(19,45)) "carry")) (Lit (Just (19,51)-(19,53)) (LI 10)),Var (Just (19,58)-(19,61)) "sum"])) Nothing]))
+Lit (Just (20,16)-(20,17)) (LI 0)
+Let (Just (21,15)-(21,68)) NonRec [(TuplePat (Just (21,20)-(21,27)) [VarPat (Just (21,20)-(21,23)) "l1'",VarPat (Just (21,24)-(21,27)) "l2'"],App (Just (21,31)-(21,44)) (Var (Just (21,31)-(21,38)) "padZero") [Var (Just (21,39)-(21,41)) "l1",Var (Just (21,42)-(21,44)) "l2"])] (App (Just (21,48)-(21,68)) (Var (Just (21,48)-(21,60)) "List.combine") [Var (Just (21,61)-(21,64)) "l1'",Var (Just (21,65)-(21,68)) "l2'"])
+*)
 
-(19,4)-(19,51)
-List.combine l1' l2'
-AppG (fromList [VarG])
+(* typed spans
+(17,6)-(19,63)
+(20,16)-(20,17)
+(21,15)-(21,68)
+*)
 
+(* correct types
+(int * int list)
+int
+(int * int) list
+*)
+
+(* bad types
+int list
+'a list
+'a
 *)

@@ -52,59 +52,50 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(19,16)-(19,35)
-EMPTY
-EmptyG
-
 (19,16)-(19,40)
-EMPTY
-EmptyG
-
-(19,17)-(19,24)
-EMPTY
-EmptyG
-
-(19,18)-(19,19)
-EMPTY
-EmptyG
-
-(19,20)-(19,23)
-EMPTY
-EmptyG
-
-(19,21)-(19,22)
-EMPTY
-EmptyG
-
-(19,27)-(19,34)
 let (l1x , l2x) = x in
 let (a1 , a2) = a in
 (a1 , (l1x + l2x) :: a2)
 LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
 
-(19,30)-(19,33)
-EMPTY
-EmptyG
-
-(19,31)-(19,32)
-let (a1 , a2) = a in
-(a1 , (l1x + l2x) :: a2)
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-
-(20,4)-(22,51)
-l1x + l2x
-BopG VarG VarG
-
 (20,15)-(20,17)
 ([] , [])
-TupleG (fromList [ListG EmptyG Nothing])
+TupleG (fromList [ListG EmptyG])
 
 (21,4)-(22,51)
 []
-ListG EmptyG Nothing
+ListG EmptyG
 
 (21,15)-(21,33)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
+*)
+
+(* changed exprs
+Let (Just (20,6)-(20,71)) NonRec [(TuplePat (Just (20,11)-(20,18)) [VarPat (Just (20,11)-(20,14)) "l1x",VarPat (Just (20,15)-(20,18)) "l2x"],Var (Just (20,22)-(20,23)) "x")] (Let (Just (20,27)-(20,71)) NonRec [(TuplePat (Just (20,32)-(20,37)) [VarPat (Just (20,32)-(20,34)) "a1",VarPat (Just (20,35)-(20,37)) "a2"],Var (Just (20,41)-(20,42)) "a")] (Tuple (Just (20,46)-(20,71)) [Var (Just (20,47)-(20,49)) "a1",ConApp (Just (20,51)-(20,70)) "::" (Just (Tuple (Just (20,52)-(20,69)) [Bop (Just (20,52)-(20,63)) Plus (Var (Just (20,53)-(20,56)) "l1x") (Var (Just (20,59)-(20,62)) "l2x"),Var (Just (20,67)-(20,69)) "a2"])) Nothing]))
+Tuple (Just (21,15)-(21,23)) [List (Just (21,16)-(21,18)) [] Nothing,List (Just (21,20)-(21,22)) [] Nothing]
+List (Just (21,20)-(21,22)) [] Nothing
+App (Just (22,15)-(22,44)) (Var (Just (22,15)-(22,23)) "List.rev") [App (Just (22,24)-(22,44)) (Var (Just (22,25)-(22,37)) "List.combine") [Var (Just (22,38)-(22,40)) "l1",Var (Just (22,41)-(22,43)) "l2"]]
+*)
+
+(* typed spans
+(20,6)-(20,71)
+(21,15)-(21,23)
+(21,20)-(21,22)
+(22,15)-(22,44)
+*)
+
+(* correct types
+('a list * int list)
+('a list * int list)
+int list
+(int * int) list
+*)
+
+(* bad types
+int list
+int list
+int list
+(int * int) list
 *)

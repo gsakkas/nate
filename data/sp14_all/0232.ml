@@ -62,3 +62,23 @@ BopG VarG (AppG (fromList [EmptyG]))
 LitG
 
 *)
+
+(* changed exprs
+Bop (Just (18,20)-(18,44)) FTimes (Var (Just (18,21)-(18,23)) "pi") (App (Just (18,27)-(18,43)) (Var (Just (18,28)-(18,32)) "eval") [Tuple (Just (18,33)-(18,42)) [Var (Just (18,34)-(18,35)) "a",Var (Just (18,37)-(18,38)) "x",Var (Just (18,40)-(18,41)) "y"]])
+Lit (Just (19,63)-(19,65)) (LD 2.0)
+*)
+
+(* typed spans
+(18,20)-(18,44)
+(19,63)-(19,65)
+*)
+
+(* correct types
+float
+float
+*)
+
+(* bad types
+int
+int
+*)

@@ -65,8 +65,20 @@ let rec eval (e,x,y) =
 (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
-(21,66)-(21,67)
-2.0
-LitG
+*)
 
+(* changed exprs
+Bop (Just (21,23)-(21,69)) FDiv (Bop (Just (21,23)-(21,63)) FPlus (App (Just (21,24)-(21,41)) (Var (Just (21,25)-(21,29)) "eval") [Tuple (Just (21,30)-(21,40)) [Var (Just (21,31)-(21,33)) "e1",Var (Just (21,35)-(21,36)) "x",Var (Just (21,38)-(21,39)) "y"]]) (App (Just (21,45)-(21,62)) (Var (Just (21,46)-(21,50)) "eval") [Tuple (Just (21,51)-(21,61)) [Var (Just (21,52)-(21,54)) "e2",Var (Just (21,56)-(21,57)) "x",Var (Just (21,59)-(21,60)) "y"]])) (Lit (Just (21,67)-(21,69)) (LD 2.0))
+*)
+
+(* typed spans
+(21,23)-(21,69)
+*)
+
+(* correct types
+float
+*)
+
+(* bad types
+int
 *)

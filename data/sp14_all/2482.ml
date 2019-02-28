@@ -46,43 +46,39 @@ let rec eval (e,x,y) =
 
 (* changed spans
 (11,16)-(11,28)
-EMPTY
-EmptyG
-
-(11,20)-(11,28)
-EMPTY
-EmptyG
-
-(11,27)-(11,28)
 4.0 *. atan 1.0
 BopG LitG (AppG (fromList [EmptyG]))
-
-(13,14)-(20,18)
-atan 1.0
-AppG (fromList [LitG])
-
-(18,17)-(18,27)
-pi *. evalhelper p1 x y
-BopG VarG (AppG (fromList [EmptyG]))
 
 (18,17)-(18,39)
 sin (pi *. evalhelper p1 x y)
 AppG (fromList [BopG EmptyG EmptyG])
 
-(18,28)-(18,32)
-EMPTY
-EmptyG
-
-(19,19)-(19,29)
-pi *. evalhelper p1 x y
-BopG VarG (AppG (fromList [EmptyG]))
-
 (19,19)-(19,48)
 cos (pi *. evalhelper p1 x y)
 AppG (fromList [BopG EmptyG EmptyG])
 
-(19,30)-(19,41)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Bop (Just (11,9)-(11,26)) FTimes (Lit (Just (11,9)-(11,12)) (LD 4.0)) (App (Just (11,16)-(11,26)) (Var (Just (11,17)-(11,21)) "atan") [Lit (Just (11,22)-(11,25)) (LD 1.0)])
+App (Just (18,17)-(18,48)) (Var (Just (18,17)-(18,20)) "sin") [Bop (Just (18,21)-(18,48)) FTimes (Var (Just (18,22)-(18,24)) "pi") (App (Just (18,28)-(18,47)) (Var (Just (18,29)-(18,39)) "evalhelper") [Var (Just (18,40)-(18,42)) "p1",Var (Just (18,43)-(18,44)) "x",Var (Just (18,45)-(18,46)) "y"])]
+App (Just (19,19)-(19,50)) (Var (Just (19,19)-(19,22)) "cos") [Bop (Just (19,23)-(19,50)) FTimes (Var (Just (19,24)-(19,26)) "pi") (App (Just (19,30)-(19,49)) (Var (Just (19,31)-(19,41)) "evalhelper") [Var (Just (19,42)-(19,44)) "p1",Var (Just (19,45)-(19,46)) "x",Var (Just (19,47)-(19,48)) "y"])]
+*)
+
+(* typed spans
+(11,9)-(11,26)
+(18,17)-(18,48)
+(19,19)-(19,50)
+*)
+
+(* correct types
+float
+float
+float
+*)
+
+(* bad types
+expr -> expr
+expr
+expr
 *)

@@ -76,17 +76,13 @@ CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
 EMPTY
 EmptyG
 
-(22,18)-(22,51)
-EMPTY
-EmptyG
-
 (22,20)-(22,23)
 b
 VarG
 
 (22,33)-(22,50)
 [b mod 10]
-ListG (BopG EmptyG EmptyG) Nothing
+ListG (BopG EmptyG EmptyG)
 
 (22,34)-(22,37)
 b
@@ -100,19 +96,11 @@ EmptyG
 EMPTY
 EmptyG
 
-(23,25)-(23,64)
-EMPTY
-EmptyG
-
 (23,27)-(23,30)
 b
 VarG
 
 (23,40)-(23,58)
-EMPTY
-EmptyG
-
-(23,41)-(23,42)
 EMPTY
 EmptyG
 
@@ -126,6 +114,42 @@ VarG
 
 (23,54)-(23,56)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG Nothing])
+TupleG (fromList [LitG,ListG EmptyG])
 
+*)
+
+(* typed spans
+(20,6)-(23,60)
+(21,6)-(23,60)
+(22,20)-(22,21)
+(22,29)-(22,39)
+(22,30)-(22,31)
+(23,22)-(23,23)
+(23,46)-(23,53)
+(23,33)-(23,34)
+(24,15)-(24,22)
+*)
+
+(* typed spans
+(int * int list)
+(int * int list)
+int
+int list
+int
+int
+int
+int
+(int * int list)
+*)
+
+(* typed spans
+(int * int list)
+(int * int list)
+int
+int list
+int
+int
+int
+int
+int
 *)

@@ -70,10 +70,6 @@ match e with
 CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
 
 (25,41)-(25,53)
-EMPTY
-EmptyG
-
-(25,56)-(25,69)
 ")*cos(pi*"
 LitG
 
@@ -85,4 +81,25 @@ AppG (fromList [AppG (fromList [EmptyG])])
 ")/(" ^ (exp c ^ ")")
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
+*)
+
+(* typed spans
+(14,2)-(27,73)
+(27,20)-(27,31)
+(27,34)-(27,71)
+(27,45)-(27,70)
+*)
+
+(* typed spans
+string
+string
+string
+string
+*)
+
+(* typed spans
+string
+string
+string
+string
 *)

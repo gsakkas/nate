@@ -22,31 +22,27 @@ fun x ->
 LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
 
 (4,29)-(4,45)
-EMPTY
-EmptyG
-
-(4,30)-(4,31)
-EMPTY
-EmptyG
-
-(4,33)-(4,44)
-EMPTY
-EmptyG
-
-(4,34)-(4,39)
-EMPTY
-EmptyG
-
-(4,35)-(4,36)
-EMPTY
-EmptyG
-
-(4,37)-(4,38)
-EMPTY
-EmptyG
-
-(4,42)-(4,43)
 h
 VarG
 
+*)
+
+(* changed exprs
+Lam (Just (2,6)-(2,50)) (VarPat (Just (2,6)-(2,7)) "x") (Let (Just (2,10)-(2,50)) NonRec [(VarPat (Just (2,14)-(2,16)) "xx",Bop (Just (2,19)-(2,30)) Times (Bop (Just (2,19)-(2,26)) Times (Var (Just (2,20)-(2,21)) "x") (Var (Just (2,24)-(2,25)) "x")) (Var (Just (2,29)-(2,30)) "x"))] (Tuple (Just (2,34)-(2,50)) [Var (Just (2,35)-(2,37)) "xx",Bop (Just (2,39)-(2,49)) Lt (Var (Just (2,40)-(2,42)) "xx") (Lit (Just (2,45)-(2,48)) (LI 512))])) Nothing
+Var (Just (6,29)-(6,30)) "h"
+*)
+
+(* typed spans
+(2,6)-(2,50)
+(6,29)-(6,30)
+*)
+
+(* correct types
+int -> (int * bool)
+int -> (int * bool)
+*)
+
+(* bad types
+('a -> ('a * bool) * 'a) -> 'a
+('a -> 'a * bool)
 *)

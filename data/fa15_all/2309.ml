@@ -51,28 +51,32 @@ VarG
 y
 VarG
 
-(19,19)-(19,31)
-exprToString x
-AppG (fromList [VarG])
-
 (19,19)-(19,52)
 exprToString x ^ ("*" ^ exprToString y)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(19,32)-(19,33)
-x
-VarG
+*)
 
-(19,34)-(19,37)
-"*" ^ exprToString y
-AppG (fromList [AppG (fromList [EmptyG]),LitG])
+(* changed exprs
+Var (Just (18,28)-(18,29)) "y"
+Var (Just (18,55)-(18,56)) "y"
+App (Just (19,19)-(19,62)) (Var (Just (19,36)-(19,37)) "^") [App (Just (19,19)-(19,35)) (Var (Just (19,20)-(19,32)) "exprToString") [Var (Just (19,33)-(19,34)) "x"],App (Just (19,38)-(19,62)) (Var (Just (19,43)-(19,44)) "^") [Lit (Just (19,39)-(19,42)) (LS "*"),App (Just (19,45)-(19,61)) (Var (Just (19,46)-(19,58)) "exprToString") [Var (Just (19,59)-(19,60)) "y"]]]
+*)
 
-(19,38)-(19,50)
-exprToString y
-AppG (fromList [VarG])
+(* typed spans
+(18,28)-(18,29)
+(18,55)-(18,56)
+(19,19)-(19,62)
+*)
 
-(19,51)-(19,52)
-y
-VarG
+(* correct types
+expr
+expr
+string
+*)
 
+(* bad types
+expr
+expr
+string
 *)

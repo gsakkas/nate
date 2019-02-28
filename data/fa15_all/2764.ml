@@ -35,44 +35,32 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(4,6)-(4,32)
-EMPTY
-EmptyG
-
-(4,10)-(4,18)
-EMPTY
-EmptyG
-
-(4,10)-(4,32)
-EMPTY
-EmptyG
-
-(4,19)-(4,32)
-EMPTY
-EmptyG
-
-(6,8)-(6,17)
-EMPTY
-EmptyG
-
-(6,9)-(6,10)
-EMPTY
-EmptyG
-
-(6,12)-(6,13)
-EMPTY
-EmptyG
-
-(6,15)-(6,16)
-EMPTY
-EmptyG
-
-(17,15)-(17,16)
-EMPTY
-EmptyG
-
 (17,19)-(17,20)
 i
 VarG
 
+(17,19)-(17,20)
+h
+VarG
+
+*)
+
+(* changed exprs
+Var (Just (13,15)-(13,16)) "i"
+Var (Just (13,19)-(13,20)) "h"
+*)
+
+(* typed spans
+(13,15)-(13,16)
+(13,19)-(13,20)
+*)
+
+(* correct types
+int
+int
+*)
+
+(* bad types
+int list
+int list
 *)

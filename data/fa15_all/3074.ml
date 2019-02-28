@@ -12,11 +12,23 @@ let rec digitsOfInt n =
 
 (* changed spans
 (3,34)-(3,49)
-EMPTY
-EmptyG
+n
+VarG
 
-(3,35)-(3,46)
-EMPTY
-EmptyG
+*)
 
+(* changed exprs
+Var (Just (3,34)-(3,35)) "n"
+*)
+
+(* typed spans
+(3,34)-(3,35)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

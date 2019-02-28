@@ -118,87 +118,215 @@ let rec build (rand,depth) =
 
 (* changed spans
 (50,10)-(52,40)
-EMPTY
-EmptyG
+(build (rand , depth - 1) , build (rand , depth - 1))
+TupleG (fromList [AppG (fromList [EmptyG])])
 
-(50,11)-(50,38)
-EMPTY
-EmptyG
-
-(50,12)-(50,17)
-EMPTY
-EmptyG
-
-(50,19)-(50,23)
-EMPTY
-EmptyG
-
-(50,25)-(50,36)
-EMPTY
-EmptyG
-
-(50,26)-(50,31)
-EMPTY
-EmptyG
-
-(50,34)-(50,35)
-EMPTY
-EmptyG
-
-(51,42)-(51,47)
-EMPTY
-EmptyG
-
-(51,48)-(51,67)
-EMPTY
-EmptyG
-
-(51,49)-(51,53)
-EMPTY
-EmptyG
-
-(51,55)-(51,66)
-EMPTY
-EmptyG
-
-(51,56)-(51,61)
-EMPTY
-EmptyG
-
-(51,64)-(51,65)
-EMPTY
-EmptyG
-
-(52,12)-(52,39)
-EMPTY
-EmptyG
-
-(52,13)-(52,18)
-EMPTY
-EmptyG
-
-(52,19)-(52,38)
-EMPTY
-EmptyG
-
-(52,20)-(52,24)
-EMPTY
-EmptyG
-
-(52,26)-(52,37)
-EMPTY
-EmptyG
-
-(52,27)-(52,32)
-EMPTY
-EmptyG
-
-(52,35)-(52,36)
-EMPTY
-EmptyG
+(50,10)-(52,40)
+buildTheThing (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 (54,8)-(56,40)
-EMPTY
-EmptyG
+buildTheThing
+VarG
 
+(54,8)-(56,40)
+(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+TupleG (fromList [AppG (fromList [EmptyG])])
+
+(54,8)-(56,40)
+build (rand , depth - 1)
+AppG (fromList [TupleG (fromList [EmptyG])])
+
+(54,8)-(56,40)
+build
+VarG
+
+(54,8)-(56,40)
+(rand , depth - 1)
+TupleG (fromList [VarG,BopG EmptyG EmptyG])
+
+(54,8)-(56,40)
+rand
+VarG
+
+(54,8)-(56,40)
+depth - 1
+BopG VarG LitG
+
+(54,8)-(56,40)
+depth
+VarG
+
+(54,8)-(56,40)
+1
+LitG
+
+(54,8)-(56,40)
+build (rand , depth - 1)
+AppG (fromList [TupleG (fromList [EmptyG])])
+
+(54,8)-(56,40)
+build
+VarG
+
+(54,8)-(56,40)
+(rand , depth - 1)
+TupleG (fromList [VarG,BopG EmptyG EmptyG])
+
+(54,8)-(56,40)
+rand
+VarG
+
+(54,8)-(56,40)
+depth - 1
+BopG VarG LitG
+
+(54,8)-(56,40)
+depth
+VarG
+
+(54,8)-(56,40)
+1
+LitG
+
+(54,8)-(56,40)
+build (rand , depth - 1)
+AppG (fromList [TupleG (fromList [EmptyG])])
+
+(54,8)-(56,40)
+build
+VarG
+
+(54,8)-(56,40)
+(rand , depth - 1)
+TupleG (fromList [VarG,BopG EmptyG EmptyG])
+
+(54,8)-(56,40)
+rand
+VarG
+
+(54,8)-(56,40)
+depth - 1
+BopG VarG LitG
+
+(54,8)-(56,40)
+depth
+VarG
+
+(54,8)-(56,40)
+1
+LitG
+
+*)
+
+(* changed exprs
+Tuple (Just (50,10)-(50,68)) [App (Just (50,11)-(50,38)) (Var (Just (50,12)-(50,17)) "build") [Tuple (Just (50,18)-(50,37)) [Var (Just (50,19)-(50,23)) "rand",Bop (Just (50,25)-(50,36)) Minus (Var (Just (50,26)-(50,31)) "depth") (Lit (Just (50,34)-(50,35)) (LI 1))]],App (Just (50,40)-(50,67)) (Var (Just (50,41)-(50,46)) "build") [Tuple (Just (50,47)-(50,66)) [Var (Just (50,48)-(50,52)) "rand",Bop (Just (50,54)-(50,65)) Minus (Var (Just (50,55)-(50,60)) "depth") (Lit (Just (50,63)-(50,64)) (LI 1))]]]
+App (Just (52,8)-(54,40)) (Var (Just (52,8)-(52,21)) "buildTheThing") [Tuple (Just (53,10)-(54,40)) [App (Just (53,11)-(53,38)) (Var (Just (53,12)-(53,17)) "build") [Tuple (Just (53,18)-(53,37)) [Var (Just (53,19)-(53,23)) "rand",Bop (Just (53,25)-(53,36)) Minus (Var (Just (53,26)-(53,31)) "depth") (Lit (Just (53,34)-(53,35)) (LI 1))]],App (Just (53,40)-(53,67)) (Var (Just (53,41)-(53,46)) "build") [Tuple (Just (53,47)-(53,66)) [Var (Just (53,48)-(53,52)) "rand",Bop (Just (53,54)-(53,65)) Minus (Var (Just (53,55)-(53,60)) "depth") (Lit (Just (53,63)-(53,64)) (LI 1))]],App (Just (54,12)-(54,39)) (Var (Just (54,13)-(54,18)) "build") [Tuple (Just (54,19)-(54,38)) [Var (Just (54,20)-(54,24)) "rand",Bop (Just (54,26)-(54,37)) Minus (Var (Just (54,27)-(54,32)) "depth") (Lit (Just (54,35)-(54,36)) (LI 1))]]]]
+Var (Just (52,8)-(52,21)) "buildTheThing"
+Tuple (Just (53,10)-(54,40)) [App (Just (53,11)-(53,38)) (Var (Just (53,12)-(53,17)) "build") [Tuple (Just (53,18)-(53,37)) [Var (Just (53,19)-(53,23)) "rand",Bop (Just (53,25)-(53,36)) Minus (Var (Just (53,26)-(53,31)) "depth") (Lit (Just (53,34)-(53,35)) (LI 1))]],App (Just (53,40)-(53,67)) (Var (Just (53,41)-(53,46)) "build") [Tuple (Just (53,47)-(53,66)) [Var (Just (53,48)-(53,52)) "rand",Bop (Just (53,54)-(53,65)) Minus (Var (Just (53,55)-(53,60)) "depth") (Lit (Just (53,63)-(53,64)) (LI 1))]],App (Just (54,12)-(54,39)) (Var (Just (54,13)-(54,18)) "build") [Tuple (Just (54,19)-(54,38)) [Var (Just (54,20)-(54,24)) "rand",Bop (Just (54,26)-(54,37)) Minus (Var (Just (54,27)-(54,32)) "depth") (Lit (Just (54,35)-(54,36)) (LI 1))]]]
+App (Just (53,11)-(53,38)) (Var (Just (53,12)-(53,17)) "build") [Tuple (Just (53,18)-(53,37)) [Var (Just (53,19)-(53,23)) "rand",Bop (Just (53,25)-(53,36)) Minus (Var (Just (53,26)-(53,31)) "depth") (Lit (Just (53,34)-(53,35)) (LI 1))]]
+Var (Just (53,12)-(53,17)) "build"
+Tuple (Just (53,18)-(53,37)) [Var (Just (53,19)-(53,23)) "rand",Bop (Just (53,25)-(53,36)) Minus (Var (Just (53,26)-(53,31)) "depth") (Lit (Just (53,34)-(53,35)) (LI 1))]
+Var (Just (53,19)-(53,23)) "rand"
+Bop (Just (53,25)-(53,36)) Minus (Var (Just (53,26)-(53,31)) "depth") (Lit (Just (53,34)-(53,35)) (LI 1))
+Var (Just (53,26)-(53,31)) "depth"
+Lit (Just (53,34)-(53,35)) (LI 1)
+App (Just (53,40)-(53,67)) (Var (Just (53,41)-(53,46)) "build") [Tuple (Just (53,47)-(53,66)) [Var (Just (53,48)-(53,52)) "rand",Bop (Just (53,54)-(53,65)) Minus (Var (Just (53,55)-(53,60)) "depth") (Lit (Just (53,63)-(53,64)) (LI 1))]]
+Var (Just (53,41)-(53,46)) "build"
+Tuple (Just (53,47)-(53,66)) [Var (Just (53,48)-(53,52)) "rand",Bop (Just (53,54)-(53,65)) Minus (Var (Just (53,55)-(53,60)) "depth") (Lit (Just (53,63)-(53,64)) (LI 1))]
+Var (Just (53,48)-(53,52)) "rand"
+Bop (Just (53,54)-(53,65)) Minus (Var (Just (53,55)-(53,60)) "depth") (Lit (Just (53,63)-(53,64)) (LI 1))
+Var (Just (53,55)-(53,60)) "depth"
+Lit (Just (53,63)-(53,64)) (LI 1)
+App (Just (54,12)-(54,39)) (Var (Just (54,13)-(54,18)) "build") [Tuple (Just (54,19)-(54,38)) [Var (Just (54,20)-(54,24)) "rand",Bop (Just (54,26)-(54,37)) Minus (Var (Just (54,27)-(54,32)) "depth") (Lit (Just (54,35)-(54,36)) (LI 1))]]
+Var (Just (54,13)-(54,18)) "build"
+Tuple (Just (54,19)-(54,38)) [Var (Just (54,20)-(54,24)) "rand",Bop (Just (54,26)-(54,37)) Minus (Var (Just (54,27)-(54,32)) "depth") (Lit (Just (54,35)-(54,36)) (LI 1))]
+Var (Just (54,20)-(54,24)) "rand"
+Bop (Just (54,26)-(54,37)) Minus (Var (Just (54,27)-(54,32)) "depth") (Lit (Just (54,35)-(54,36)) (LI 1))
+Var (Just (54,27)-(54,32)) "depth"
+Lit (Just (54,35)-(54,36)) (LI 1)
+*)
+
+(* typed spans
+(50,10)-(50,68)
+(52,8)-(54,40)
+(52,8)-(52,21)
+(53,10)-(54,40)
+(53,11)-(53,38)
+(53,12)-(53,17)
+(53,18)-(53,37)
+(53,19)-(53,23)
+(53,25)-(53,36)
+(53,26)-(53,31)
+(53,34)-(53,35)
+(53,40)-(53,67)
+(53,41)-(53,46)
+(53,47)-(53,66)
+(53,48)-(53,52)
+(53,54)-(53,65)
+(53,55)-(53,60)
+(53,63)-(53,64)
+(54,12)-(54,39)
+(54,13)-(54,18)
+(54,19)-(54,38)
+(54,20)-(54,24)
+(54,26)-(54,37)
+(54,27)-(54,32)
+(54,35)-(54,36)
+*)
+
+(* correct types
+(expr * expr)
+expr
+(expr * expr * expr) -> expr
+(expr * expr * expr)
+expr
+((int * int) -> int * int) -> expr
+((int * int) -> int * int)
+(int * int) -> int
+int
+int
+int
+expr
+((int * int) -> int * int) -> expr
+((int * int) -> int * int)
+(int * int) -> int
+int
+int
+int
+expr
+((int * int) -> int * int) -> expr
+((int * int) -> int * int)
+(int * int) -> int
+int
+int
+int
+*)
+
+(* bad types
+(expr * expr * expr * expr * expr)
+(expr * expr * expr * expr * expr)
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
+expr
 *)

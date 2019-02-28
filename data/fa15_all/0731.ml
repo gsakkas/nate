@@ -83,10 +83,22 @@ let rec build (rand,depth) =
 (* changed spans
 (33,54)-(33,60)
 buildY ()
-AppG (fromList [ConAppG Nothing (Just (TApp "unit" []))])
+AppG (fromList [ConAppG Nothing])
 
-(35,8)-(37,40)
-()
-ConAppG Nothing (Just (TApp "unit" []))
+*)
 
+(* changed exprs
+App (Just (33,54)-(33,65)) (Var (Just (33,55)-(33,61)) "buildY") [ConApp (Just (33,62)-(33,64)) "()" Nothing (Just (TApp "unit" []))]
+*)
+
+(* typed spans
+(33,54)-(33,65)
+*)
+
+(* correct types
+expr
+*)
+
+(* bad types
+unit -> expr
 *)

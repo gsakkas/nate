@@ -16,11 +16,23 @@ let rec listReverse l =
 
 (* changed spans
 (4,38)-(4,60)
-EMPTY
-EmptyG
+listHelper t (h :: l2)
+AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG])))])
 
-(4,52)-(4,53)
-h :: l2
-ConAppG (Just (TupleG (fromList [VarG]))) Nothing
+*)
 
+(* changed exprs
+App (Just (4,38)-(4,60)) (Var (Just (4,38)-(4,48)) "listHelper") [Var (Just (4,49)-(4,50)) "t",ConApp (Just (4,51)-(4,60)) "::" (Just (Tuple (Just (4,52)-(4,59)) [Var (Just (4,52)-(4,53)) "h",Var (Just (4,57)-(4,59)) "l2"])) Nothing]
+*)
+
+(* typed spans
+(4,38)-(4,60)
+*)
+
+(* correct types
+'a list
+*)
+
+(* bad types
+'a list
 *)

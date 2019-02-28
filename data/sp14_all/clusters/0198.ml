@@ -1,4 +1,3 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (ListG EmptyG Nothing)
-let y :: [] =
-  loop (input / 10) in
-[y ; input mod 10]
+SeqG (ConAppG (Just EmptyG)) (AppG (fromList [EmptyG]))
+1 :: x;
+additivePersistence (sumList (digitsOfInt n))

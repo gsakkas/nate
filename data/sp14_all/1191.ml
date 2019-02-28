@@ -38,8 +38,20 @@ aPHelper (sumList (digits n))
          (i + 1)
 AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(13,35)-(13,42)
-sumList (digits n)
-AppG (fromList [AppG (fromList [EmptyG])])
+*)
 
+(* changed exprs
+App (Just (13,26)-(13,63)) (Var (Just (13,26)-(13,34)) "aPHelper") [App (Just (13,35)-(13,55)) (Var (Just (13,36)-(13,43)) "sumList") [App (Just (13,44)-(13,54)) (Var (Just (13,45)-(13,51)) "digits") [Var (Just (13,52)-(13,53)) "n"]],Bop (Just (13,56)-(13,63)) Plus (Var (Just (13,57)-(13,58)) "i") (Lit (Just (13,61)-(13,62)) (LI 1))]
+*)
+
+(* typed spans
+(13,26)-(13,63)
+*)
+
+(* correct types
+int
+*)
+
+(* bad types
+int
 *)

@@ -24,16 +24,28 @@ let rec sepConcat sep sl =
 h
 VarG
 
-(8,14)-(8,22)
-EMPTY
-EmptyG
-
 (8,14)-(8,42)
-EMPTY
-EmptyG
-
-(8,23)-(8,42)
 t
 VarG
 
+*)
+
+(* changed exprs
+Var (Just (7,17)-(7,18)) "h"
+Var (Just (7,30)-(7,31)) "t"
+*)
+
+(* typed spans
+(7,17)-(7,18)
+(7,30)-(7,31)
+*)
+
+(* correct types
+string
+string list
+*)
+
+(* bad types
+string
+string list
 *)
