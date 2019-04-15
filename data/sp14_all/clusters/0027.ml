@@ -1,53 +1,28 @@
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-fun n ->
-  (let f =
-     fun a -> fun x -> x a in
-   let base = fun n -> 0 in
-   List.fold_left f base fs)
-fun n ->
-  (let f =
-     fun a -> fun x -> x a in
-   let base = n in
-   List.fold_left f base fs)
-fun b ->
-  (let self = f b in
-   match b with
-   | self -> (self , false)
-   | _ -> (self , true))
-fun x ->
-  (let bb = f x in
-   (bb , bb = x))
-fun (f , b) ->
-  (let ans = f b in
-   match ans with
-   | (num , tf) -> if tf = true
-                   then wwhile (f , num)
-                   else num)
-fun x ->
-  (let xi = f x in
-   (xi , (f xi <> xi) || f (f xi)))
-fun y ->
-  (let f =
-     fun a -> fun x -> x a in
-   let base = y in
-   List.fold_left f base fs)
-fun b' ->
-  (let fOfB = f' b' in
-   (fOfB , fOfB = b'))
-fun num ->
-  (let f =
-     fun a -> fun x -> x a in
-   let base = num in
-   List.fold_left f base fs)
-fun p ->
-  (let f =
-     fun a -> fun x -> x a in
-   let base = p in
-   List.fold_left f base fs)
-fun z ->
-  (let b = f z in (b , b <> z))
-fun x ->
-  (let y = f x in (y , y <> x))
-fun x ->
-  (let xx = (x * x) * x in
-   (xx , xx < 512))
+LetG NonRec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (TupleG (fromList [EmptyG]))
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+(g , b)
+let g =
+  fun x ->
+    (let bb = f b in
+     (bb , bb = b)) in
+(g , b)
+let y =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> x)) in
+(y , b)
+let h =
+  fun x -> (f x , false) in
+(h , b)
+let func =
+  fun x ->
+    fun x -> (0 , true) in
+(func b , b)
+let func =
+  fun x ->
+    fun x ->
+      (f b , not (f b = b)) in
+(func b , b)

@@ -41,32 +41,25 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(17,18)-(17,41)
+(17,19)-(17,42)
 pi *. eval (e , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
-(18,20)-(18,43)
+(18,21)-(18,44)
 pi *. eval (e , x , y)
 BopG VarG (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Bop (Just (17,18)-(17,42)) FTimes (Var (Just (17,19)-(17,21)) "pi") (App (Just (17,25)-(17,41)) (Var (Just (17,26)-(17,30)) "eval") [Tuple (Just (17,31)-(17,40)) [Var (Just (17,32)-(17,33)) "e",Var (Just (17,35)-(17,36)) "x",Var (Just (17,38)-(17,39)) "y"]])
-Bop (Just (18,20)-(18,44)) FTimes (Var (Just (18,21)-(18,23)) "pi") (App (Just (18,27)-(18,43)) (Var (Just (18,28)-(18,32)) "eval") [Tuple (Just (18,33)-(18,42)) [Var (Just (18,34)-(18,35)) "e",Var (Just (18,37)-(18,38)) "x",Var (Just (18,40)-(18,41)) "y"]])
-*)
-
-(* typed spans
-(17,18)-(17,42)
-(18,20)-(18,44)
-*)
-
-(* correct types
-float
-float
-*)
-
-(* bad types
-int
-int
+(* type error slice
+(11,4)-(11,29)
+(11,10)-(11,27)
+(17,15)-(17,18)
+(17,15)-(17,42)
+(17,19)-(17,42)
+(17,20)-(17,22)
+(18,17)-(18,20)
+(18,17)-(18,44)
+(18,21)-(18,44)
+(18,22)-(18,24)
 *)

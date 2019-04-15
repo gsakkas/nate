@@ -64,27 +64,25 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(29,6)-(29,67)
+(29,7)-(29,68)
 let comb =
   eval (e1 , x , y) +. eval (e2 , x , y) in
 mod_float comb
           (eval (e3 , x , y))
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (AppG (fromList [EmptyG]))
+LetG NonRec (fromList [(VarPatG,BopG EmptyG EmptyG)]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (29,6)-(30,38)) NonRec [(VarPat (Just (29,10)-(29,14)) "comb",Bop (Just (29,17)-(29,55)) FPlus (App (Just (29,17)-(29,34)) (Var (Just (29,18)-(29,22)) "eval") [Tuple (Just (29,23)-(29,33)) [Var (Just (29,24)-(29,26)) "e1",Var (Just (29,28)-(29,29)) "x",Var (Just (29,31)-(29,32)) "y"]]) (App (Just (29,38)-(29,55)) (Var (Just (29,39)-(29,43)) "eval") [Tuple (Just (29,44)-(29,54)) [Var (Just (29,45)-(29,47)) "e2",Var (Just (29,49)-(29,50)) "x",Var (Just (29,52)-(29,53)) "y"]]))] (App (Just (30,6)-(30,38)) (Var (Just (30,6)-(30,15)) "mod_float") [Var (Just (30,16)-(30,20)) "comb",App (Just (30,21)-(30,38)) (Var (Just (30,22)-(30,26)) "eval") [Tuple (Just (30,27)-(30,37)) [Var (Just (30,28)-(30,30)) "e3",Var (Just (30,32)-(30,33)) "x",Var (Just (30,35)-(30,36)) "y"]]])
-*)
-
-(* typed spans
-(29,6)-(30,38)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(19,19)-(19,43)
+(19,26)-(19,42)
+(19,27)-(19,31)
+(29,7)-(29,46)
+(29,7)-(29,68)
+(29,8)-(29,25)
+(29,9)-(29,13)
+(29,28)-(29,45)
+(29,29)-(29,33)
+(29,51)-(29,68)
+(29,52)-(29,56)
 *)

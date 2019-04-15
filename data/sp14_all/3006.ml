@@ -52,56 +52,32 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(20,17)-(20,20)
+(20,18)-(20,21)
 0
 LitG
 
-(20,22)-(20,25)
+(20,23)-(20,26)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(21,16)-(21,19)
+(21,17)-(21,20)
 0
 LitG
 
-(21,21)-(21,24)
+(21,22)-(21,25)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(22,15)-(22,23)
+(22,16)-(22,24)
 clone 0 (List.length l1)
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-Lit (Just (20,17)-(20,18)) (LI 0)
-List (Just (20,20)-(20,22)) [] Nothing
-Lit (Just (21,16)-(21,17)) (LI 0)
-List (Just (21,19)-(21,21)) [] Nothing
-App (Just (22,15)-(22,39)) (Var (Just (22,15)-(22,20)) "clone") [Lit (Just (22,21)-(22,22)) (LI 0),App (Just (22,23)-(22,39)) (Var (Just (22,24)-(22,35)) "List.length") [Var (Just (22,36)-(22,38)) "l1"]]
-*)
-
-(* typed spans
-(20,17)-(20,18)
-(20,20)-(20,22)
-(21,16)-(21,17)
-(21,19)-(21,21)
-(22,15)-(22,39)
-*)
-
-(* correct types
-int
-int list
-int
-int list
-int list
-*)
-
-(* bad types
-int list
-int list
-int list
-int list
-(int list * int list)
+(* type error slice
+(22,5)-(22,75)
+(22,16)-(22,24)
+(22,42)-(22,56)
+(22,42)-(22,68)
+(22,64)-(22,68)
 *)

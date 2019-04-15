@@ -67,48 +67,40 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(27,35)-(27,36)
+(27,36)-(27,37)
 2.0
 LitG
 
-(30,11)-(30,14)
-abs_float
-VarG
+(30,11)-(30,33)
+abs_float (eval (u , x , y))
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(30,37)-(30,40)
-abs_float
-VarG
+(30,37)-(30,59)
+abs_float (eval (v , x , y))
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(31,12)-(31,15)
-abs_float
-VarG
+(31,12)-(31,34)
+abs_float (eval (w , x , y))
+AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lit (Just (27,35)-(27,38)) (LD 2.0)
-Var (Just (30,11)-(30,20)) "abs_float"
-Var (Just (30,43)-(30,52)) "abs_float"
-Var (Just (31,12)-(31,21)) "abs_float"
-*)
-
-(* typed spans
-(27,35)-(27,38)
-(30,11)-(30,20)
-(30,43)-(30,52)
-(31,12)-(31,21)
-*)
-
-(* correct types
-float
-float -> float
-float -> float
-float -> float
-*)
-
-(* bad types
-int
-int -> int
-int -> int
-int -> int
+(* type error slice
+(19,19)-(19,43)
+(19,26)-(19,42)
+(19,27)-(19,31)
+(27,16)-(27,37)
+(27,36)-(27,37)
+(30,11)-(30,33)
+(30,12)-(30,15)
+(30,16)-(30,32)
+(30,17)-(30,21)
+(30,37)-(30,59)
+(30,38)-(30,41)
+(30,42)-(30,58)
+(30,43)-(30,47)
+(31,12)-(31,34)
+(31,13)-(31,16)
+(31,17)-(31,33)
+(31,18)-(31,22)
 *)

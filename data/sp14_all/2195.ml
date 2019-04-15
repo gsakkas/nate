@@ -56,35 +56,53 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(17,11)-(31,34)
-let f =
-  fun a ->
-    fun x ->
-      (let (b , c) = a in
-       match b with
-       | d :: t -> ((d * 10) :: t , t)
-       | _ -> a) in
-let base = (1 :: l2 , [0]) in
-let args = List.rev l1 in
-let (_ , res) =
-  List.fold_left f base args in
-res
-LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+(42,33)-(42,68)
+t
+VarG
 
 *)
 
-(* changed exprs
-Let (Just (3,2)-(6,75)) NonRec [(VarPat (Just (3,6)-(3,7)) "f",Lam (Just (3,8)-(4,73)) (VarPat (Just (3,8)-(3,9)) "a") (Lam (Just (3,10)-(4,73)) (VarPat (Just (3,10)-(3,11)) "x") (Let (Just (4,4)-(4,73)) NonRec [(TuplePat (Just (4,9)-(4,12)) [VarPat (Just (4,9)-(4,10)) "b",VarPat (Just (4,11)-(4,12)) "c"],Var (Just (4,16)-(4,17)) "a")] (Case (Just (4,21)-(4,73)) (Var (Just (4,27)-(4,28)) "b") [(ConsPat (Just (4,36)-(4,40)) (VarPat (Just (4,36)-(4,37)) "d") (VarPat (Just (4,39)-(4,40)) "t"),Nothing,Tuple (Just (4,44)-(4,64)) [ConApp (Just (4,45)-(4,60)) "::" (Just (Tuple (Just (4,46)-(4,59)) [Bop (Just (4,46)-(4,54)) Times (Var (Just (4,47)-(4,48)) "d") (Lit (Just (4,51)-(4,53)) (LI 10)),Var (Just (4,58)-(4,59)) "t"])) Nothing,Var (Just (4,62)-(4,63)) "t"]),(WildPat (Just (4,67)-(4,68)),Nothing,Var (Just (4,72)-(4,73)) "a")])) Nothing) Nothing)] (Let (Just (5,2)-(6,75)) NonRec [(VarPat (Just (5,6)-(5,10)) "base",Tuple (Just (5,13)-(5,29)) [ConApp (Just (5,14)-(5,23)) "::" (Just (Tuple (Just (5,15)-(5,22)) [Lit (Just (5,15)-(5,16)) (LI 1),Var (Just (5,20)-(5,22)) "l2"])) Nothing,List (Just (5,25)-(5,28)) [Lit (Just (5,26)-(5,27)) (LI 0)] Nothing])] (Let (Just (6,2)-(6,75)) NonRec [(VarPat (Just (6,6)-(6,10)) "args",App (Just (6,13)-(6,24)) (Var (Just (6,13)-(6,21)) "List.rev") [Var (Just (6,22)-(6,24)) "l1"])] (Let (Just (6,28)-(6,75)) NonRec [(TuplePat (Just (6,33)-(6,38)) [WildPat (Just (6,33)-(6,34)),VarPat (Just (6,35)-(6,38)) "res"],App (Just (6,42)-(6,68)) (Var (Just (6,42)-(6,56)) "List.fold_left") [Var (Just (6,57)-(6,58)) "f",Var (Just (6,59)-(6,63)) "base",Var (Just (6,64)-(6,68)) "args"])] (Var (Just (6,72)-(6,75)) "res"))))
-*)
-
-(* typed spans
-(3,2)-(6,75)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list -> int list -> int list
+(* type error slice
+(9,4)-(12,71)
+(9,17)-(12,69)
+(9,20)-(12,69)
+(12,54)-(12,68)
+(12,63)-(12,64)
+(12,65)-(12,67)
+(17,4)-(31,37)
+(17,12)-(31,35)
+(17,15)-(31,35)
+(31,19)-(31,34)
+(31,20)-(31,27)
+(31,31)-(31,33)
+(33,4)-(36,19)
+(33,20)-(36,17)
+(33,22)-(36,17)
+(34,3)-(36,17)
+(35,5)-(35,67)
+(35,25)-(35,28)
+(35,36)-(35,42)
+(35,36)-(35,67)
+(35,53)-(35,67)
+(35,54)-(35,60)
+(35,63)-(35,66)
+(36,3)-(36,9)
+(36,3)-(36,17)
+(39,3)-(45,76)
+(39,9)-(43,13)
+(41,5)-(43,13)
+(42,15)-(42,69)
+(42,33)-(42,68)
+(42,34)-(42,40)
+(42,41)-(42,67)
+(42,42)-(42,64)
+(42,43)-(42,53)
+(43,12)-(43,13)
+(44,3)-(45,76)
+(44,14)-(44,30)
+(44,26)-(44,29)
+(45,43)-(45,57)
+(45,43)-(45,69)
+(45,58)-(45,59)
+(45,60)-(45,64)
 *)

@@ -37,24 +37,17 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(16,32)-(16,38)
+(16,33)-(16,39)
 itt y' 0
 AppG (fromList [VarG,LitG])
 
 *)
 
-(* changed exprs
-App (Just (16,32)-(16,40)) (Var (Just (16,32)-(16,35)) "itt") [Var (Just (16,36)-(16,38)) "y'",Lit (Just (16,39)-(16,40)) (LI 0)]
-*)
-
-(* typed spans
-(16,32)-(16,40)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int -> int
+(* type error slice
+(15,27)-(15,37)
+(15,28)-(15,31)
+(16,3)-(16,39)
+(16,23)-(16,24)
+(16,33)-(16,36)
+(16,33)-(16,39)
 *)

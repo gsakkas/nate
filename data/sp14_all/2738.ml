@@ -13,32 +13,23 @@ let pipe fs =
 *)
 
 (* changed spans
-(3,14)-(3,17)
+(3,15)-(3,18)
 function | g -> g
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+LamG VarPatG (CaseG EmptyG (fromList [(VarPatG,Nothing,EmptyG)]))
 
-(4,13)-(4,41)
+(4,14)-(4,42)
 function | x -> x
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+LamG VarPatG (CaseG EmptyG (fromList [(VarPatG,Nothing,EmptyG)]))
 
 *)
 
-(* changed exprs
-Lam (Just (3,14)-(3,31)) (VarPat (Just (3,14)-(3,31)) "$x") (Case (Just (3,14)-(3,31)) (Var (Just (3,14)-(3,31)) "$x") [(VarPat (Just (3,25)-(3,26)) "g",Nothing,Var (Just (3,30)-(3,31)) "g")]) Nothing
-Lam (Just (4,13)-(4,30)) (VarPat (Just (4,13)-(4,30)) "$x") (Case (Just (4,13)-(4,30)) (Var (Just (4,13)-(4,30)) "$x") [(VarPat (Just (4,24)-(4,25)) "x",Nothing,Var (Just (4,29)-(4,30)) "x")]) Nothing
-*)
-
-(* typed spans
-(3,14)-(3,31)
-(4,13)-(4,30)
-*)
-
-(* correct types
-'a -> 'a
-'a -> 'a
-*)
-
-(* bad types
-'a
-'a
+(* type error slice
+(3,3)-(4,70)
+(3,9)-(3,18)
+(3,11)-(3,18)
+(3,15)-(3,16)
+(3,15)-(3,18)
+(4,46)-(4,60)
+(4,46)-(4,70)
+(4,61)-(4,62)
 *)

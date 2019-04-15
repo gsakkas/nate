@@ -1,3 +1,3 @@
-TupleG (fromList [ConAppG Nothing])
-(VarX , VarY)
-(VarX , VarX , VarX , VarX)
+CaseG VarG (fromList [(ConPatG Nothing,Nothing,ListG (fromList []))])
+match l with
+| [] -> []

@@ -1,8 +1,11 @@
-LamG (ConAppG (Just (TupleG (fromList [VarG]))))
-fun (a , b , a_less , b_less) ->
-  Thresh (a , b , a_less , b_less)
-fun (e1 , e2) ->
-  Times (e1 , e2)
-fun (x , m) -> x :: m
-fun (e1 , e2) ->
-  Average (e1 , e2)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),AppG (fromList [EmptyG]))]) (AppG (fromList [EmptyG]))
+let (l1' , l2') =
+  padZero l1 l2 in
+List.combine l1' l2'
+let (x , y) =
+  makeTuple l1 l2 in
+List.combine x y
+let (x , res) =
+  List.fold_left f base args in
+res @ helper (List.length l2 * 2)
+             x

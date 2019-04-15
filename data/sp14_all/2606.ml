@@ -63,40 +63,20 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(24,16)-(24,18)
+(24,17)-(24,19)
 b1
 VarG
 
-(25,16)-(25,34)
+(25,17)-(25,35)
 ((fir + sec) / 10) + b1
 BopG (BopG EmptyG EmptyG) VarG
 
-(25,36)-(25,64)
-b1
-VarG
-
 *)
 
-(* changed exprs
-Var (Just (24,16)-(24,18)) "b1"
-Bop (Just (25,16)-(25,41)) Plus (Bop (Just (25,17)-(25,35)) Div (Bop (Just (25,18)-(25,29)) Plus (Var (Just (25,19)-(25,22)) "fir") (Var (Just (25,25)-(25,28)) "sec")) (Lit (Just (25,32)-(25,34)) (LI 10))) (Var (Just (25,38)-(25,40)) "b1")
-Var (Just (25,38)-(25,40)) "b1"
-*)
-
-(* typed spans
-(24,16)-(24,18)
-(25,16)-(25,41)
-(25,38)-(25,40)
-*)
-
-(* correct types
-int
-int
-int
-*)
-
-(* bad types
-'a list
-int
-int list
+(* type error slice
+(23,11)-(25,66)
+(24,16)-(24,41)
+(24,17)-(24,19)
+(25,16)-(25,66)
+(25,17)-(25,35)
 *)

@@ -55,24 +55,13 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(19,62)-(19,63)
+(19,63)-(19,64)
 2.0
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (19,62)-(19,65)) (LD 2.0)
-*)
-
-(* typed spans
-(19,62)-(19,65)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(19,42)-(19,65)
+(19,63)-(19,64)
 *)

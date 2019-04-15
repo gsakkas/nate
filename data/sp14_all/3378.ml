@@ -45,32 +45,15 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(19,44)-(19,63)
+(19,45)-(19,64)
 v mod 10
 BopG VarG LitG
 
-(19,44)-(19,63)
-acc
-VarG
-
 *)
 
-(* changed exprs
-Bop (Just (19,44)-(19,54)) Mod (Var (Just (19,45)-(19,46)) "v") (Lit (Just (19,51)-(19,53)) (LI 10))
-Var (Just (19,58)-(19,61)) "acc"
-*)
-
-(* typed spans
-(19,44)-(19,54)
-(19,58)-(19,61)
-*)
-
-(* correct types
-int
-int list
-*)
-
-(* bad types
-int list
-int list
+(* type error slice
+(19,45)-(19,64)
+(19,45)-(19,71)
+(19,60)-(19,63)
+(19,68)-(19,71)
 *)

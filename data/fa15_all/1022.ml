@@ -55,43 +55,28 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(21,16)-(21,35)
+(21,17)-(21,36)
 let (y , z) = a in
 let (r , s) = x in
 let m = (r + s) + y in
 (m / 10 , (m mod 10) :: z)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
 
-(21,17)-(21,27)
+(22,16)-(22,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
-
-(21,28)-(21,29)
-[]
-ListG EmptyG
+TupleG (fromList [LitG,ListG (fromList [])])
 
 *)
 
-(* changed exprs
-Let (Just (20,6)-(21,75)) NonRec [(TuplePat (Just (20,11)-(20,14)) [VarPat (Just (20,11)-(20,12)) "y",VarPat (Just (20,13)-(20,14)) "z"],Var (Just (20,18)-(20,19)) "a")] (Let (Just (21,6)-(21,75)) NonRec [(TuplePat (Just (21,11)-(21,14)) [VarPat (Just (21,11)-(21,12)) "r",VarPat (Just (21,13)-(21,14)) "s"],Var (Just (21,18)-(21,19)) "x")] (Let (Just (21,23)-(21,75)) NonRec [(VarPat (Just (21,27)-(21,28)) "m",Bop (Just (21,31)-(21,42)) Plus (Bop (Just (21,31)-(21,38)) Plus (Var (Just (21,32)-(21,33)) "r") (Var (Just (21,36)-(21,37)) "s")) (Var (Just (21,41)-(21,42)) "y"))] (Tuple (Just (21,46)-(21,75)) [Bop (Just (21,47)-(21,55)) Div (Var (Just (21,48)-(21,49)) "m") (Lit (Just (21,52)-(21,54)) (LI 10)),ConApp (Just (21,57)-(21,74)) "::" (Just (Tuple (Just (21,58)-(21,73)) [Bop (Just (21,58)-(21,68)) Mod (Var (Just (21,59)-(21,60)) "m") (Lit (Just (21,65)-(21,67)) (LI 10)),Var (Just (21,72)-(21,73)) "z"])) Nothing])))
-Tuple (Just (22,15)-(22,22)) [Lit (Just (22,16)-(22,17)) (LI 0),List (Just (22,19)-(22,21)) [] Nothing]
-List (Just (22,19)-(22,21)) [] Nothing
-*)
-
-(* typed spans
-(20,6)-(21,75)
-(22,15)-(22,22)
-(22,19)-(22,21)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-int list
-*)
-
-(* bad types
-int list
-(int * int) -> int
-(int * int)
+(* type error slice
+(21,5)-(24,52)
+(21,11)-(21,36)
+(21,17)-(21,36)
+(21,35)-(21,36)
+(22,5)-(24,52)
+(22,16)-(22,17)
+(24,19)-(24,33)
+(24,19)-(24,45)
+(24,34)-(24,35)
+(24,36)-(24,40)
 *)

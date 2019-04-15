@@ -1,3 +1,2 @@
-int
-bool
-float
+(int list * int list)
+('a list * int list)

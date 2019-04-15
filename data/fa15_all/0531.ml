@@ -15,26 +15,27 @@ let fixpoint (f,b) = wwhile ((fun b'  -> let x = f b' in (x, (b' != x))), b);;
 *)
 
 (* changed spans
-(5,29)-(5,65)
+(5,30)-(5,66)
 fun b' ->
   (let x = f b' in
    (x , b' <> x))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
+LamG VarPatG (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Lam (Just (5,29)-(5,72)) (VarPat (Just (5,34)-(5,36)) "b'") (Let (Just (5,41)-(5,71)) NonRec [(VarPat (Just (5,45)-(5,46)) "x",App (Just (5,49)-(5,53)) (Var (Just (5,49)-(5,50)) "f") [Var (Just (5,51)-(5,53)) "b'"])] (Tuple (Just (5,57)-(5,71)) [Var (Just (5,58)-(5,59)) "x",Bop (Just (5,61)-(5,70)) Neq (Var (Just (5,62)-(5,64)) "b'") (Var (Just (5,68)-(5,69)) "x")])) Nothing
-*)
-
-(* typed spans
-(5,29)-(5,72)
-*)
-
-(* correct types
-'a -> ('a * bool)
-*)
-
-(* bad types
-('a * 'b) -> bool
+(* type error slice
+(3,3)-(3,78)
+(3,17)-(3,18)
+(3,17)-(3,20)
+(3,49)-(3,55)
+(3,49)-(3,63)
+(3,56)-(3,63)
+(3,57)-(3,58)
+(5,22)-(5,28)
+(5,22)-(5,70)
+(5,29)-(5,70)
+(5,30)-(5,66)
+(5,41)-(5,57)
+(5,48)-(5,57)
+(5,61)-(5,65)
 *)

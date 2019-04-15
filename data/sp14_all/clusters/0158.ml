@@ -1,3 +1,4 @@
-IteG (BopG EmptyG EmptyG) (ListG EmptyG) (ListG EmptyG)
-if n < 0 then [] else []
-if v = 0 then [1] else [0]
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG,WildPatG]),AppG (fromList [EmptyG]))]) VarG
+let (_ , res) =
+  List.fold_left f base args in
+res

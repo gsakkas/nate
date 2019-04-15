@@ -101,56 +101,16 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(27,9)-(27,19)
-buildThresh
-VarG
-
-(27,20)-(27,24)
-(VarX , VarX , VarX , VarX)
-TupleG (fromList [ConAppG Nothing])
-
-(28,9)-(28,18)
-VarX
-ConAppG Nothing
-
-(28,9)-(28,18)
-VarX
-ConAppG Nothing
-
-(28,9)-(28,18)
-VarX
-ConAppG Nothing
+(27,10)-(27,25)
+buildThresh (VarX , VarX , VarX , VarX)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Var (Just (27,9)-(27,20)) "buildThresh"
-Tuple (Just (27,21)-(27,45)) [ConApp (Just (27,22)-(27,26)) "VarX" Nothing Nothing,ConApp (Just (27,28)-(27,32)) "VarX" Nothing Nothing,ConApp (Just (27,34)-(27,38)) "VarX" Nothing Nothing,ConApp (Just (27,40)-(27,44)) "VarX" Nothing Nothing]
-ConApp (Just (27,28)-(27,32)) "VarX" Nothing Nothing
-ConApp (Just (27,34)-(27,38)) "VarX" Nothing Nothing
-ConApp (Just (27,40)-(27,44)) "VarX" Nothing Nothing
-*)
-
-(* typed spans
-(27,9)-(27,20)
-(27,21)-(27,45)
-(27,28)-(27,32)
-(27,34)-(27,38)
-(27,40)-(27,44)
-*)
-
-(* correct types
-(expr * expr * expr * expr) -> expr
-(expr * expr * expr * expr)
-expr
-expr
-expr
-*)
-
-(* bad types
-(expr * expr) -> expr
-expr
-expr
-expr
-expr
+(* type error slice
+(19,4)-(19,42)
+(19,17)-(19,40)
+(27,10)-(27,20)
+(27,10)-(27,25)
+(27,21)-(27,25)
 *)

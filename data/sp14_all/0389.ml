@@ -27,56 +27,46 @@ let palindrome w = (listReverse (explode w)) == (explode w);;
 *)
 
 (* changed spans
-(12,27)-(12,52)
-listReverse
-VarG
+(12,20)-(12,54)
+listReverse (explode w)
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(12,27)-(12,52)
-explode w
-AppG (fromList [VarG])
-
-(12,27)-(12,52)
-explode
-VarG
-
-(12,27)-(12,52)
-w
-VarG
-
-(12,27)-(12,52)
+(12,58)-(12,59)
 explode w
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (10,20)-(10,31)) "listReverse"
-App (Just (10,32)-(10,43)) (Var (Just (10,33)-(10,40)) "explode") [Var (Just (10,41)-(10,42)) "w"]
-Var (Just (10,33)-(10,40)) "explode"
-Var (Just (10,41)-(10,42)) "w"
-App (Just (10,48)-(10,59)) (Var (Just (10,49)-(10,56)) "explode") [Var (Just (10,57)-(10,58)) "w"]
-*)
-
-(* typed spans
-(10,20)-(10,31)
-(10,32)-(10,43)
-(10,33)-(10,40)
-(10,41)-(10,42)
-(10,48)-(10,59)
-*)
-
-(* correct types
-char list -> char list
-char list
-string -> char list
-string
-char list
-*)
-
-(* bad types
-char list
-char list
-char list
-char list
-char list
+(* type error slice
+(2,20)-(2,68)
+(2,54)-(2,55)
+(2,54)-(2,68)
+(2,56)-(2,57)
+(2,58)-(2,68)
+(2,59)-(2,65)
+(2,66)-(2,67)
+(4,4)-(7,9)
+(4,13)-(7,7)
+(5,3)-(7,7)
+(6,44)-(6,51)
+(6,44)-(6,67)
+(6,45)-(6,50)
+(6,55)-(6,67)
+(6,56)-(6,58)
+(7,3)-(7,5)
+(7,3)-(7,7)
+(10,3)-(10,58)
+(10,37)-(10,52)
+(10,37)-(10,58)
+(10,38)-(10,49)
+(10,50)-(10,51)
+(10,53)-(10,54)
+(10,55)-(10,58)
+(10,56)-(10,57)
+(12,20)-(12,54)
+(12,21)-(12,27)
+(12,28)-(12,53)
+(12,29)-(12,40)
+(12,41)-(12,52)
+(12,42)-(12,49)
 *)

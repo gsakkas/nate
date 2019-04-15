@@ -37,24 +37,19 @@ let rec digitalRoot n = let (l,r) = additivePersAndRoot (abs n) 0 in r;;
 *)
 
 (* changed spans
-(16,36)-(16,63)
+(16,37)-(16,64)
 additivePersAndRoot (abs n) 0
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-App (Just (16,36)-(16,65)) (Var (Just (16,36)-(16,55)) "additivePersAndRoot") [App (Just (16,56)-(16,63)) (Var (Just (16,57)-(16,60)) "abs") [Var (Just (16,61)-(16,62)) "n"],Lit (Just (16,64)-(16,65)) (LI 0)]
-*)
-
-(* typed spans
-(16,36)-(16,65)
-*)
-
-(* correct types
-(int * int)
-*)
-
-(* bad types
-('a * 'b)
+(* type error slice
+(10,3)-(14,76)
+(11,8)-(11,27)
+(13,5)-(14,76)
+(14,6)-(14,75)
+(14,33)-(14,52)
+(14,33)-(14,75)
+(16,37)-(16,56)
+(16,37)-(16,64)
 *)

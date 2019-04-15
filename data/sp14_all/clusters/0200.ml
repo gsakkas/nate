@@ -1,4 +1,2 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),AppG (fromList [AppG (fromList [VarG])])]))))])
-match l with
-| [] -> l'
-| h :: t -> (List.hd l) :: (listReverse (List.tl l))
+LetG NonRec (fromList [(VarPatG,ListG (fromList [EmptyG]))]) VarG
+let c = [a ; b] in c

@@ -20,29 +20,24 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(7,2)-(8,23)
+(7,3)-(8,24)
 let funt =
   fun b ->
     if f b
     then (b , true)
     else (b , false) in
 wwhile (funt , b)
-LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+LetG NonRec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (7,2)-(7,72)) NonRec [(VarPat (Just (7,6)-(7,10)) "funt",Lam (Just (7,11)-(7,52)) (VarPat (Just (7,11)-(7,12)) "b") (Ite (Just (7,15)-(7,52)) (App (Just (7,18)-(7,21)) (Var (Just (7,18)-(7,19)) "f") [Var (Just (7,20)-(7,21)) "b"]) (Tuple (Just (7,27)-(7,36)) [Var (Just (7,28)-(7,29)) "b",Lit (Just (7,31)-(7,35)) (LB True)]) (Tuple (Just (7,42)-(7,52)) [Var (Just (7,43)-(7,44)) "b",Lit (Just (7,46)-(7,51)) (LB False)])) Nothing)] (App (Just (7,56)-(7,72)) (Var (Just (7,56)-(7,62)) "wwhile") [Tuple (Just (7,63)-(7,72)) [Var (Just (7,64)-(7,68)) "funt",Var (Just (7,70)-(7,71)) "b"]])
-*)
-
-(* typed spans
-(7,2)-(7,72)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-'a
+(* type error slice
+(7,3)-(8,24)
+(7,10)-(7,70)
+(7,18)-(7,20)
+(7,18)-(7,24)
+(7,23)-(7,24)
+(8,11)-(8,20)
+(8,12)-(8,14)
+(8,15)-(8,19)
 *)

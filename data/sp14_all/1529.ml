@@ -10,24 +10,21 @@ let sqsum xs =
 *)
 
 (* changed spans
-(2,47)-(2,49)
+(2,48)-(2,50)
 f 2 xs
 AppG (fromList [VarG,LitG])
 
 *)
 
-(* changed exprs
-App (Just (3,34)-(3,40)) (Var (Just (3,34)-(3,35)) "f") [Lit (Just (3,36)-(3,37)) (LI 2),Var (Just (3,38)-(3,40)) "xs"]
-*)
-
-(* typed spans
-(3,34)-(3,40)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-'a list
+(* type error slice
+(2,16)-(2,78)
+(2,22)-(2,33)
+(2,28)-(2,29)
+(2,28)-(2,33)
+(2,37)-(2,78)
+(2,48)-(2,50)
+(2,54)-(2,68)
+(2,54)-(2,78)
+(2,69)-(2,70)
+(2,71)-(2,75)
 *)

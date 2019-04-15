@@ -1,7 +1,9 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG)])
-match e with
-| VarX -> x
-| VarY -> y
-| Sine x1 -> sin (pi *. eval (x1 , x , y))
-| Cosine x1 -> cos (pi *. eval (x1 , x , y))
-| Average (x1 , x2) -> (eval (x1 , x , y) +. eval (x2 , x , y)) /. 2.0
+IteG (BopG EmptyG EmptyG) VarG (AppG (fromList [EmptyG]))
+if a = 0
+then b
+else integers (a / 10)
+              ((a mod 10) :: b)
+if x < 10
+then count
+else helper (count + 1)
+            (sumList (digits n))

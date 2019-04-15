@@ -16,35 +16,15 @@ let stringOfList f l = "[" ^ ((sepConcat "; " (List.map f l)) ^ "]");;
 *)
 
 (* changed spans
-(2,17)-(2,51)
-fun sep ->
-  fun sl ->
-    match sl with
-    | [] -> ""
-    | h :: t -> (let f =
-                   fun a -> fun x -> a ^ x in
-                 let base = h in
-                 let l = t in
-                 List.fold_left f base l)
-LamG (LamG EmptyG)
-
-(2,31)-(2,39)
-List.map f l
-AppG (fromList [VarG])
+(2,31)-(2,45)
+sepConcat "; " (List.map f l)
+AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* typed spans
-(2,14)-(7,58)
-(9,46)-(9,60)
-*)
-
-(* typed spans
-string -> string list -> string
-string list
-*)
-
-(* typed spans
-('a -> 'b) -> 'a list -> string
-('a -> 'b) -> 'a list -> 'b list
+(* type error slice
+(2,30)-(2,52)
+(2,31)-(2,45)
+(2,32)-(2,40)
+(2,46)-(2,47)
 *)

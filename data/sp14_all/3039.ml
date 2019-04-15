@@ -19,24 +19,18 @@ let stringOfList f l =
 *)
 
 (* changed spans
-(7,39)-(7,40)
+(7,40)-(7,41)
 g
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (7,39)-(7,40)) "g"
-*)
-
-(* typed spans
-(7,39)-(7,40)
-*)
-
-(* correct types
-string -> 'a -> string
-*)
-
-(* bad types
-'a -> string
+(* type error slice
+(6,23)-(6,37)
+(6,29)-(6,30)
+(6,31)-(6,36)
+(6,32)-(6,33)
+(7,25)-(7,39)
+(7,25)-(7,49)
+(7,40)-(7,41)
 *)

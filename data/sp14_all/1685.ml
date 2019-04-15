@@ -78,96 +78,45 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(32,24)-(32,45)
+(32,25)-(32,46)
 (build (rand , depth) , build (rand , depth))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(33,11)-(33,21)
-buildTimes (build (rand , depth) , build (rand , depth))
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(33,22)-(33,43)
+(33,23)-(33,44)
 (build (rand , depth) , build (rand , depth))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(34,11)-(34,22)
-build
-VarG
-
-(34,11)-(34,22)
-(rand , depth)
-TupleG (fromList [VarG])
-
-(34,11)-(34,22)
-buildThresh (build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(34,23)-(34,44)
+(34,24)-(34,45)
 (build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(35,7)-(35,65)
-build (rand , depth)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(35,7)-(35,65)
-build (rand , depth)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(35,7)-(35,65)
-build (rand , depth)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
 *)
 
-(* changed exprs
-Tuple (Just (32,24)-(32,70)) [App (Just (32,25)-(32,46)) (Var (Just (32,26)-(32,31)) "build") [Tuple (Just (32,32)-(32,45)) [Var (Just (32,33)-(32,37)) "rand",Var (Just (32,39)-(32,44)) "depth"]],App (Just (32,48)-(32,69)) (Var (Just (32,49)-(32,54)) "build") [Tuple (Just (32,55)-(32,68)) [Var (Just (32,56)-(32,60)) "rand",Var (Just (32,62)-(32,67)) "depth"]]]
-App (Just (33,11)-(33,68)) (Var (Just (33,11)-(33,21)) "buildTimes") [Tuple (Just (33,22)-(33,68)) [App (Just (33,23)-(33,44)) (Var (Just (33,24)-(33,29)) "build") [Tuple (Just (33,30)-(33,43)) [Var (Just (33,31)-(33,35)) "rand",Var (Just (33,37)-(33,42)) "depth"]],App (Just (33,46)-(33,67)) (Var (Just (33,47)-(33,52)) "build") [Tuple (Just (33,53)-(33,66)) [Var (Just (33,54)-(33,58)) "rand",Var (Just (33,60)-(33,65)) "depth"]]]]
-Tuple (Just (33,22)-(33,68)) [App (Just (33,23)-(33,44)) (Var (Just (33,24)-(33,29)) "build") [Tuple (Just (33,30)-(33,43)) [Var (Just (33,31)-(33,35)) "rand",Var (Just (33,37)-(33,42)) "depth"]],App (Just (33,46)-(33,67)) (Var (Just (33,47)-(33,52)) "build") [Tuple (Just (33,53)-(33,66)) [Var (Just (33,54)-(33,58)) "rand",Var (Just (33,60)-(33,65)) "depth"]]]
-Var (Just (33,47)-(33,52)) "build"
-Tuple (Just (33,53)-(33,66)) [Var (Just (33,54)-(33,58)) "rand",Var (Just (33,60)-(33,65)) "depth"]
-App (Just (35,8)-(37,57)) (Var (Just (35,8)-(35,19)) "buildThresh") [Tuple (Just (36,10)-(37,57)) [App (Just (36,11)-(36,32)) (Var (Just (36,12)-(36,17)) "build") [Tuple (Just (36,18)-(36,31)) [Var (Just (36,19)-(36,23)) "rand",Var (Just (36,25)-(36,30)) "depth"]],App (Just (36,34)-(36,55)) (Var (Just (36,35)-(36,40)) "build") [Tuple (Just (36,41)-(36,54)) [Var (Just (36,42)-(36,46)) "rand",Var (Just (36,48)-(36,53)) "depth"]],App (Just (37,12)-(37,33)) (Var (Just (37,13)-(37,18)) "build") [Tuple (Just (37,19)-(37,32)) [Var (Just (37,20)-(37,24)) "rand",Var (Just (37,26)-(37,31)) "depth"]],App (Just (37,35)-(37,56)) (Var (Just (37,36)-(37,41)) "build") [Tuple (Just (37,42)-(37,55)) [Var (Just (37,43)-(37,47)) "rand",Var (Just (37,49)-(37,54)) "depth"]]]]
-Tuple (Just (36,10)-(37,57)) [App (Just (36,11)-(36,32)) (Var (Just (36,12)-(36,17)) "build") [Tuple (Just (36,18)-(36,31)) [Var (Just (36,19)-(36,23)) "rand",Var (Just (36,25)-(36,30)) "depth"]],App (Just (36,34)-(36,55)) (Var (Just (36,35)-(36,40)) "build") [Tuple (Just (36,41)-(36,54)) [Var (Just (36,42)-(36,46)) "rand",Var (Just (36,48)-(36,53)) "depth"]],App (Just (37,12)-(37,33)) (Var (Just (37,13)-(37,18)) "build") [Tuple (Just (37,19)-(37,32)) [Var (Just (37,20)-(37,24)) "rand",Var (Just (37,26)-(37,31)) "depth"]],App (Just (37,35)-(37,56)) (Var (Just (37,36)-(37,41)) "build") [Tuple (Just (37,42)-(37,55)) [Var (Just (37,43)-(37,47)) "rand",Var (Just (37,49)-(37,54)) "depth"]]]
-App (Just (36,34)-(36,55)) (Var (Just (36,35)-(36,40)) "build") [Tuple (Just (36,41)-(36,54)) [Var (Just (36,42)-(36,46)) "rand",Var (Just (36,48)-(36,53)) "depth"]]
-App (Just (37,12)-(37,33)) (Var (Just (37,13)-(37,18)) "build") [Tuple (Just (37,19)-(37,32)) [Var (Just (37,20)-(37,24)) "rand",Var (Just (37,26)-(37,31)) "depth"]]
-App (Just (37,35)-(37,56)) (Var (Just (37,36)-(37,41)) "build") [Tuple (Just (37,42)-(37,55)) [Var (Just (37,43)-(37,47)) "rand",Var (Just (37,49)-(37,54)) "depth"]]
-*)
-
-(* typed spans
-(32,24)-(32,70)
-(33,11)-(33,68)
-(33,22)-(33,68)
-(33,47)-(33,52)
-(33,53)-(33,66)
-(35,8)-(37,57)
-(36,10)-(37,57)
-(36,34)-(36,55)
-(37,12)-(37,33)
-(37,35)-(37,56)
-*)
-
-(* correct types
-(expr * expr)
-expr
-(expr * expr)
-((int * int) -> int * int) -> expr
-((int * int) -> int * int)
-expr
-(expr * expr * expr * expr)
-expr
-expr
-expr
-*)
-
-(* bad types
-expr
-(expr * expr) -> expr
-expr
-(expr * expr * expr * expr) -> expr
-(expr * expr * expr * expr) -> expr
-(expr * expr * expr * expr) -> expr
-expr
-expr
-expr
-expr
+(* type error slice
+(11,4)-(11,46)
+(11,19)-(11,44)
+(15,4)-(15,27)
+(15,15)-(15,25)
+(15,19)-(15,25)
+(15,24)-(15,25)
+(17,4)-(17,70)
+(17,18)-(17,68)
+(19,4)-(19,42)
+(19,17)-(19,40)
+(30,12)-(30,21)
+(30,12)-(30,43)
+(30,22)-(30,43)
+(30,23)-(30,28)
+(32,12)-(32,24)
+(32,12)-(32,46)
+(32,25)-(32,46)
+(32,26)-(32,31)
+(33,12)-(33,22)
+(33,12)-(33,44)
+(33,23)-(33,44)
+(33,24)-(33,29)
+(34,12)-(34,23)
+(34,12)-(34,45)
+(34,24)-(34,45)
+(34,25)-(34,30)
 *)

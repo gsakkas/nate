@@ -1,12 +1,34 @@
-TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-(f x , x = f x)
-((mult (m , n) + y) / 10 , [(mult (m , n) + y) mod 10] @ z)
-(f b , f b = b)
-(num / 10 , [num mod 10] @ list)
-(y + z , b @ ([w mod 10] @ [w / 10]))
-(10 * o , bigAdd (mulByDigit o
-                             l1) l)
-(a1 + 1 , bigAdd a2
-                 (appZero a1 (mulByDigit x
-                                         l2)))
-(f b , b = f b)
+LetG Rec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (AppG (fromList [EmptyG]))
+let rec helper =
+  fun acc ->
+    fun cin ->
+      match l with
+      | [] -> cin :: acc
+      | h :: t -> (let sum =
+                     (i * h) + cin in
+                   helper ((sum mod 10) :: acc)
+                          (sum / 10)) in
+helper [] 0
+let rec recurse =
+  fun original ->
+    fun reverse ->
+      match original with
+      | [] -> reverse
+      | front :: back -> recurse back
+                                 (front :: reverse) in
+recurse l []
+let rec g =
+  fun x ->
+    if f x = b
+    then x
+    else g (x + 1) in
+g 0
+let rec helper =
+  fun curList ->
+    fun lt1 ->
+      fun lt2 ->
+        match lt1 with
+        | [] -> curList
+        | h :: t -> helper ((h , List.hd lt2) :: curList)
+                           t (List.tl lt2) in
+helper [] l1 l2

@@ -1,18 +1,9 @@
-IteG (LetG NonRec (fromList [EmptyG]) EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG)
-if (let (carry , ans) = a in
-    let (y , z) = x in
-    ((y + z) + carry) > 9)
-then (let (carry , ans) = a in
-      (1 , let (y , z) = x in
-           [((y + z) + carry) mod 10] @ ans))
-else (let (carry , ans) = a in
-      (0 , let (y , z) = x in
-           [(y + z) + carry] @ ans))
-if (let (carry , ans) = a in
-    let (y , z) = x in
-    ((y + z) + carry) = 10)
-then (let (carry , ans) = a in
-      (1 , [9] @ ans))
-else (let (carry , ans) = a in
-      (0 , let (y , z) = x in
-           [(y + z) + carry] @ ans))
+CaseG VarG (fromList [(VarPatG,Nothing,VarG),(ConsPatG VarPatG VarPatG,Nothing,AppG (fromList [EmptyG])),(ConPatG Nothing,Nothing,ListG (fromList []))])
+match l with
+| [] -> []
+| h -> h
+| h :: t -> t @ listReverse [h]
+match l with
+| [] -> []
+| t -> t
+| h :: t -> t @ listReverse [h]

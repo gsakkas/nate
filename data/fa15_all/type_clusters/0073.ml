@@ -1,3 +1,3 @@
-(expr * expr * expr * expr) -> expr
-(expr * expr) -> expr
-('a * 'a list) -> 'a list
+(int * int) list
+(int * int list) list
+int list

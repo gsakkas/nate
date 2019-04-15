@@ -11,28 +11,30 @@ let pipe fs n = let f a x = x a in let base = n in List.fold_left f base fs;;
 *)
 
 (* changed spans
-(3,2)-(4,47)
+(3,3)-(4,48)
 fun n ->
   (let f =
      fun a -> fun x -> x a in
    let base = n in
    List.fold_left f base fs)
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
+LamG VarPatG (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Lam (Just (2,12)-(2,75)) (VarPat (Just (2,12)-(2,13)) "n") (Let (Just (2,16)-(2,75)) NonRec [(VarPat (Just (2,20)-(2,21)) "f",Lam (Just (2,22)-(2,31)) (VarPat (Just (2,22)-(2,23)) "a") (Lam (Just (2,24)-(2,31)) (VarPat (Just (2,24)-(2,25)) "x") (App (Just (2,28)-(2,31)) (Var (Just (2,28)-(2,29)) "x") [Var (Just (2,30)-(2,31)) "a"]) Nothing) Nothing)] (Let (Just (2,35)-(2,75)) NonRec [(VarPat (Just (2,39)-(2,43)) "base",Var (Just (2,46)-(2,47)) "n")] (App (Just (2,51)-(2,75)) (Var (Just (2,51)-(2,65)) "List.fold_left") [Var (Just (2,66)-(2,67)) "f",Var (Just (2,68)-(2,72)) "base",Var (Just (2,73)-(2,75)) "fs"]))) Nothing
-*)
-
-(* typed spans
-(2,12)-(2,75)
-*)
-
-(* correct types
-'a -> 'a
-*)
-
-(* bad types
-'a
+(* type error slice
+(3,3)-(4,48)
+(3,9)-(3,49)
+(3,11)-(3,49)
+(3,15)-(3,49)
+(3,21)-(3,22)
+(3,36)-(3,38)
+(3,46)-(3,47)
+(3,46)-(3,49)
+(4,14)-(4,15)
+(4,14)-(4,20)
+(4,16)-(4,17)
+(4,18)-(4,20)
+(4,24)-(4,38)
+(4,24)-(4,48)
+(4,39)-(4,40)
 *)

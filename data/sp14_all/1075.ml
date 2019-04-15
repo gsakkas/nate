@@ -53,24 +53,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(23,18)-(23,33)
-List.fold_left
-VarG
+(23,19)-(23,46)
+List.fold_left f base args
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (23,18)-(23,32)) "List.fold_left"
-*)
-
-(* typed spans
-(23,18)-(23,32)
-*)
-
-(* correct types
-((int * int list) -> (int * int) -> (int * int list)) -> (int * int list) -> (int * int) list -> (int * int list)
-*)
-
-(* bad types
-((int * int list) -> (int * int) -> (int * int)) -> (int * int list) list -> (int * int) -> (int * int)
+(* type error slice
+(18,5)-(23,53)
+(18,11)-(20,46)
+(18,13)-(20,46)
+(19,7)-(20,46)
+(19,27)-(19,46)
+(19,38)-(19,45)
+(19,39)-(19,42)
+(19,43)-(19,44)
+(20,7)-(20,46)
+(20,20)-(20,45)
+(23,19)-(23,34)
+(23,19)-(23,46)
+(23,35)-(23,36)
 *)

@@ -10,24 +10,21 @@ let sqsum xs = let f a x = x * x in let base = 0 in List.fold_left f base xs;;
 *)
 
 (* changed spans
-(3,12)-(3,21)
+(3,13)-(3,22)
 x * x
 BopG VarG VarG
 
 *)
 
-(* changed exprs
-Bop (Just (2,27)-(2,32)) Times (Var (Just (2,27)-(2,28)) "x") (Var (Just (2,31)-(2,32)) "x")
-*)
-
-(* typed spans
-(2,27)-(2,32)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int -> int
+(* type error slice
+(3,3)-(3,66)
+(3,9)-(3,22)
+(3,11)-(3,22)
+(3,13)-(3,22)
+(3,26)-(3,66)
+(3,37)-(3,38)
+(3,42)-(3,56)
+(3,42)-(3,66)
+(3,57)-(3,58)
+(3,59)-(3,63)
 *)

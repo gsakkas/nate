@@ -21,24 +21,22 @@ let rec listReverse l =
 *)
 
 (* changed spans
-(8,26)-(8,52)
+(8,27)-(8,53)
 listReverse tail
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (8,26)-(8,44)) (Var (Just (8,27)-(8,38)) "listReverse") [Var (Just (8,39)-(8,43)) "tail"]
-*)
-
-(* typed spans
-(8,26)-(8,44)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(4,4)-(8,55)
+(4,21)-(8,53)
+(5,3)-(8,53)
+(5,9)-(5,10)
+(7,14)-(7,17)
+(7,15)-(7,16)
+(8,27)-(8,45)
+(8,27)-(8,53)
+(8,28)-(8,39)
+(8,40)-(8,44)
+(8,49)-(8,53)
 *)

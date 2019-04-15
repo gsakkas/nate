@@ -23,50 +23,34 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(8,7)-(8,39)
+(8,8)-(8,40)
 (List.append (clone 0
                     (padLength l1 l2)) l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(9,7)-(9,34)
+(9,8)-(9,40)
 (l1 , List.append (clone 0
                          (padLength l1 l2)) l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(9,8)-(9,13)
-List.append
-VarG
-
-(9,8)-(9,13)
-clone 0 (padLength l1 l2)
-AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
 *)
 
-(* changed exprs
-Tuple (Just (8,7)-(8,57)) [App (Just (8,8)-(8,52)) (Var (Just (8,9)-(8,20)) "List.append") [App (Just (8,21)-(8,48)) (Var (Just (8,22)-(8,27)) "clone") [Lit (Just (8,28)-(8,29)) (LI 0),App (Just (8,30)-(8,47)) (Var (Just (8,31)-(8,40)) "padLength") [Var (Just (8,41)-(8,43)) "l1",Var (Just (8,44)-(8,46)) "l2"]],Var (Just (8,49)-(8,51)) "l1"],Var (Just (8,54)-(8,56)) "l2"]
-Tuple (Just (9,7)-(9,57)) [Var (Just (9,8)-(9,10)) "l1",App (Just (9,12)-(9,56)) (Var (Just (9,13)-(9,24)) "List.append") [App (Just (9,25)-(9,52)) (Var (Just (9,26)-(9,31)) "clone") [Lit (Just (9,32)-(9,33)) (LI 0),App (Just (9,34)-(9,51)) (Var (Just (9,35)-(9,44)) "padLength") [Var (Just (9,45)-(9,47)) "l1",Var (Just (9,48)-(9,50)) "l2"]],Var (Just (9,53)-(9,55)) "l2"]]
-Var (Just (9,13)-(9,24)) "List.append"
-App (Just (9,25)-(9,52)) (Var (Just (9,26)-(9,31)) "clone") [Lit (Just (9,32)-(9,33)) (LI 0),App (Just (9,34)-(9,51)) (Var (Just (9,35)-(9,44)) "padLength") [Var (Just (9,45)-(9,47)) "l1",Var (Just (9,48)-(9,50)) "l2"]]
-*)
-
-(* typed spans
-(8,7)-(8,57)
-(9,7)-(9,57)
-(9,13)-(9,24)
-(9,25)-(9,52)
-*)
-
-(* correct types
-(int list * int list)
-(int list * int list)
-int list -> int list -> int list
-int list
-*)
-
-(* bad types
-int
-int list
-int -> int -> int list
-int -> int -> int list
+(* type error slice
+(2,35)-(2,57)
+(2,40)-(2,57)
+(2,41)-(2,46)
+(7,6)-(7,22)
+(7,7)-(7,18)
+(7,19)-(7,21)
+(7,25)-(7,41)
+(7,26)-(7,37)
+(7,38)-(7,40)
+(8,8)-(8,35)
+(8,8)-(8,40)
+(8,9)-(8,14)
+(8,38)-(8,40)
+(9,8)-(9,35)
+(9,8)-(9,40)
+(9,9)-(9,14)
+(9,38)-(9,40)
 *)

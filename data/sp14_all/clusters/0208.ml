@@ -1,4 +1,4 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
-match digitsOfInt n with
-| [] -> 0
-| _ -> sumList (digitsOfInt n)
+IteG (BopG EmptyG EmptyG) (ListG (fromList [])) (AppG (fromList [EmptyG]))
+if n <= 0
+then []
+else [n mod 10] @ digitsOfInt (n / 10)

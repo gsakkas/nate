@@ -10,32 +10,18 @@ let rec clone x n = let acc = [x] in if n > 0 then clone x (n - 1) else [];;
 *)
 
 (* changed spans
-(3,12)-(3,14)
+(3,13)-(3,15)
 [x]
-ListG VarG
+ListG (fromList [VarG])
 
-(3,38)-(3,46)
+(3,39)-(3,47)
 x
 VarG
 
 *)
 
-(* changed exprs
-List (Just (2,30)-(2,33)) [Var (Just (2,31)-(2,32)) "x"] Nothing
-Var (Just (2,57)-(2,58)) "x"
-*)
-
-(* typed spans
-(2,30)-(2,33)
-(2,57)-(2,58)
-*)
-
-(* correct types
-'a list
-'a
-*)
-
-(* bad types
-'a list
-'a list
+(* type error slice
+(3,39)-(3,47)
+(3,40)-(3,41)
+(3,45)-(3,46)
 *)

@@ -17,24 +17,24 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(3,53)-(3,74)
+(3,54)-(3,75)
 front :: (add back next)
-ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
 *)
 
-(* changed exprs
-ConApp (Just (3,53)-(3,77)) "::" (Just (Tuple (Just (3,53)-(3,77)) [Var (Just (3,53)-(3,58)) "front",App (Just (3,62)-(3,77)) (Var (Just (3,63)-(3,66)) "add") [Var (Just (3,67)-(3,71)) "back",Var (Just (3,72)-(3,76)) "next"]])) Nothing
-*)
-
-(* typed spans
-(3,53)-(3,77)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(3,3)-(3,75)
+(3,54)-(3,59)
+(3,54)-(3,75)
+(3,60)-(3,75)
+(3,61)-(3,64)
+(3,65)-(3,69)
+(5,4)-(6,65)
+(5,21)-(6,63)
+(6,3)-(6,63)
+(6,26)-(6,29)
+(6,26)-(6,63)
+(6,30)-(6,52)
+(6,31)-(6,42)
 *)

@@ -1,3 +1,4 @@
-TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
-(((x1 + x2) + carry) / 10 , (((x1 + x2) + carry) mod 10) :: accList)
-(((num1 + num2) + carry) / 10 , (((num1 + num2) + carry) mod 10) :: sum)
+LetG NonRec (fromList [(ConsPatG VarPatG (ConPatG Nothing),AppG (fromList [EmptyG]))]) (ListG (fromList [EmptyG]))
+let d :: [] =
+  digitsOfInt (n / 10) in
+[d ; n mod 10]

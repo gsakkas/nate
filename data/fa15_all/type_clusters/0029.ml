@@ -1,6 +1,3 @@
-int list
 'a list
+int list
 int
-(int * int) list
-string
-bool

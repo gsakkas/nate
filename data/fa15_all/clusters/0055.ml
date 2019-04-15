@@ -1,6 +1,4 @@
-AppG (fromList [ListG EmptyG])
-[n] @ [(n + c) + d]
-[n + 1] @ [((n + c) + d) mod 10]
-[] @ [n mod 10]
-matchHeads [["b"]]
-[car] @ [(car + x1) + x2]
+TupleG (fromList [ListG (fromList [EmptyG])])
+([x1 + x2] , [x2])
+([(x1 + x2) mod 10] , [(x1 + x2) / 10])
+([(x1 + x2) / 10] , [(x1 + x2) mod 10])

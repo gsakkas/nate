@@ -1,3 +1,2 @@
-int
-bool
-float
+'a -> ('a * bool)
+int -> (int * bool)

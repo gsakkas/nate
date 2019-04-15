@@ -1,3 +1,1 @@
-int list
-int
-string
+'a -> int

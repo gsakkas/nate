@@ -27,24 +27,18 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(3,54)-(3,68)
+(3,55)-(3,69)
 [a + hd] @ tl
-AppG (fromList [VarG,ListG EmptyG])
+AppG (fromList [VarG,ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (3,54)-(3,67)) (Var (Just (3,63)-(3,64)) "@") [List (Just (3,54)-(3,62)) [Bop (Just (3,55)-(3,61)) Plus (Var (Just (3,55)-(3,56)) "a") (Var (Just (3,59)-(3,61)) "hd")] Nothing,Var (Just (3,65)-(3,67)) "tl"]
-*)
-
-(* typed spans
-(3,54)-(3,67)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list list
+(* type error slice
+(3,18)-(3,69)
+(3,39)-(3,42)
+(3,40)-(3,41)
+(3,55)-(3,69)
+(3,56)-(3,64)
+(3,57)-(3,58)
+(3,57)-(3,63)
 *)

@@ -23,32 +23,31 @@ let fixpoint (f,b) = wwhile (let func x x = (0, true) in ((func b), b));;
 *)
 
 (* changed spans
-(8,16)-(11,34)
+(8,17)-(11,35)
 fun x -> (0 , true)
-LamG (TupleG (fromList [EmptyG]))
+LamG VarPatG (TupleG (fromList [EmptyG]))
 
-(12,5)-(12,13)
-func b
-AppG (fromList [VarG])
+(12,6)-(12,14)
+(func b , b)
+TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (6,40)-(6,53)) (VarPat (Just (6,40)-(6,41)) "x") (Tuple (Just (6,44)-(6,53)) [Lit (Just (6,45)-(6,46)) (LI 0),Lit (Just (6,48)-(6,52)) (LB True)]) Nothing
-App (Just (6,58)-(6,66)) (Var (Just (6,59)-(6,63)) "func") [Var (Just (6,64)-(6,65)) "b"]
-*)
-
-(* typed spans
-(6,40)-(6,53)
-(6,58)-(6,66)
-*)
-
-(* correct types
-int -> (int * bool)
-int -> (int * bool)
-*)
-
-(* bad types
-'a -> (('a -> 'a * bool) * 'a)
-(('a -> 'a * bool) * 'a)
+(* type error slice
+(3,9)-(3,10)
+(3,9)-(3,12)
+(4,42)-(4,48)
+(4,42)-(4,56)
+(4,49)-(4,56)
+(4,50)-(4,51)
+(7,3)-(7,9)
+(7,3)-(12,15)
+(8,5)-(12,15)
+(8,15)-(11,35)
+(8,17)-(11,35)
+(9,8)-(11,35)
+(11,20)-(11,35)
+(11,21)-(11,31)
+(12,6)-(12,10)
+(12,6)-(12,14)
 *)

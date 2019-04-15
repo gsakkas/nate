@@ -97,24 +97,16 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(43,18)-(43,76)
+(43,19)-(43,77)
 (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (44,8)-(45,38)) [App (Just (44,9)-(44,36)) (Var (Just (44,10)-(44,15)) "build") [Tuple (Just (44,16)-(44,35)) [Var (Just (44,17)-(44,21)) "rand",Bop (Just (44,23)-(44,34)) Minus (Var (Just (44,24)-(44,29)) "depth") (Lit (Just (44,32)-(44,33)) (LI 1))]],App (Just (44,38)-(44,65)) (Var (Just (44,39)-(44,44)) "build") [Tuple (Just (44,45)-(44,64)) [Var (Just (44,46)-(44,50)) "rand",Bop (Just (44,52)-(44,63)) Minus (Var (Just (44,53)-(44,58)) "depth") (Lit (Just (44,61)-(44,62)) (LI 1))]],App (Just (45,10)-(45,37)) (Var (Just (45,11)-(45,16)) "build") [Tuple (Just (45,17)-(45,36)) [Var (Just (45,18)-(45,22)) "rand",Bop (Just (45,24)-(45,35)) Minus (Var (Just (45,25)-(45,30)) "depth") (Lit (Just (45,33)-(45,34)) (LI 1))]]]
-*)
-
-(* typed spans
-(44,8)-(45,38)
-*)
-
-(* correct types
-(expr * expr * expr)
-*)
-
-(* bad types
-(expr * expr)
+(* type error slice
+(19,4)-(19,45)
+(19,18)-(19,43)
+(43,7)-(43,18)
+(43,7)-(43,77)
+(43,19)-(43,77)
 *)

@@ -1,11 +1,6 @@
-int list
-(int * int) list
-string
-int
-char list
 expr
 'a
-'a list
+int
+'tNewPart
 float
-bool
-(int * int list)
+'a list

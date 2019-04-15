@@ -21,28 +21,29 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(5,10)-(7,58)
+(5,11)-(7,59)
 fun b ->
   (let result = f b in
    if result = b
    then (result , false)
    else (result , true))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
+LamG VarPatG (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Lam (Just (5,10)-(7,58)) (VarPat (Just (5,10)-(5,11)) "b") (Let (Just (6,4)-(7,58)) NonRec [(VarPat (Just (6,8)-(6,14)) "result",App (Just (6,17)-(6,20)) (Var (Just (6,17)-(6,18)) "f") [Var (Just (6,19)-(6,20)) "b"])] (Ite (Just (7,4)-(7,58)) (Bop (Just (7,7)-(7,17)) Eq (Var (Just (7,7)-(7,13)) "result") (Var (Just (7,16)-(7,17)) "b")) (Tuple (Just (7,23)-(7,38)) [Var (Just (7,24)-(7,30)) "result",Lit (Just (7,32)-(7,37)) (LB False)]) (Tuple (Just (7,44)-(7,58)) [Var (Just (7,45)-(7,51)) "result",Lit (Just (7,53)-(7,57)) (LB True)]))) Nothing
-*)
-
-(* typed spans
-(5,10)-(7,58)
-*)
-
-(* correct types
-'a -> ('a * bool)
-*)
-
-(* bad types
-('a -> 'a) -> 'a -> ('a * bool)
+(* type error slice
+(2,24)-(2,78)
+(2,38)-(2,39)
+(2,38)-(2,41)
+(2,56)-(2,62)
+(2,56)-(2,70)
+(2,63)-(2,70)
+(2,64)-(2,65)
+(5,3)-(8,18)
+(5,11)-(7,59)
+(5,13)-(7,59)
+(8,3)-(8,9)
+(8,3)-(8,18)
+(8,10)-(8,18)
+(8,11)-(8,14)
 *)

@@ -21,24 +21,16 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(8,24)-(8,65)
+(8,25)-(8,66)
 additivePersistence (sumList (digitsOfInt n)) + 1
 BopG (AppG (fromList [EmptyG])) LitG
 
 *)
 
-(* changed exprs
-Bop (Just (8,24)-(8,75)) Plus (App (Just (8,24)-(8,71)) (Var (Just (8,25)-(8,44)) "additivePersistence") [App (Just (8,45)-(8,70)) (Var (Just (8,46)-(8,53)) "sumList") [App (Just (8,54)-(8,69)) (Var (Just (8,55)-(8,66)) "digitsOfInt") [Var (Just (8,67)-(8,68)) "n"]]]) (Lit (Just (8,74)-(8,75)) (LI 1))
-*)
-
-(* typed spans
-(8,24)-(8,75)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int
+(* type error slice
+(7,4)-(8,68)
+(7,29)-(8,66)
+(8,3)-(8,66)
+(8,25)-(8,44)
+(8,25)-(8,66)
 *)

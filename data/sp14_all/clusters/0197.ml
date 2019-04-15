@@ -1,6 +1,7 @@
-IteG (BopG EmptyG EmptyG) (ListG EmptyG) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-if n < 0
+LetG NonRec (fromList [(VarPatG,BopG EmptyG EmptyG)]) (IteG EmptyG EmptyG EmptyG)
+let x = reverseInt n 0 / 10
+and y =
+  reverseInt n 0 mod 10 in
+if (x = 0) && (y = 0)
 then []
-else (match n with
-      | 0 -> [0]
-      | _ -> digitsOfInt (n / 10) @ [n mod 10])
+else y :: (digitsOfInt x)

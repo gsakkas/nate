@@ -27,27 +27,44 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(10,7)-(10,71)
+(10,8)-(10,72)
 match helper with
 | f -> if f = b
        then (f , false)
        else (f , true)
-CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
+CaseG VarG (fromList [(VarPatG,Nothing,IteG EmptyG EmptyG EmptyG)])
 
 *)
 
-(* changed exprs
-Case (Just (10,7)-(10,71)) (Var (Just (10,13)-(10,19)) "helper") [(VarPat (Just (10,27)-(10,28)) "f",Nothing,Ite (Just (10,32)-(10,71)) (Bop (Just (10,35)-(10,40)) Eq (Var (Just (10,35)-(10,36)) "f") (Var (Just (10,39)-(10,40)) "b")) (Tuple (Just (10,46)-(10,56)) [Var (Just (10,47)-(10,48)) "f",Lit (Just (10,50)-(10,55)) (LB False)]) (Tuple (Just (10,62)-(10,71)) [Var (Just (10,63)-(10,64)) "f",Lit (Just (10,66)-(10,70)) (LB True)]))]
-*)
-
-(* typed spans
-(10,7)-(10,71)
-*)
-
-(* correct types
-('a * bool)
-*)
-
-(* bad types
-('a -> 'b * bool)
+(* type error slice
+(2,4)-(4,72)
+(2,17)-(4,70)
+(3,3)-(4,70)
+(3,16)-(3,17)
+(3,16)-(3,19)
+(3,18)-(3,19)
+(4,3)-(4,70)
+(4,9)-(4,15)
+(4,57)-(4,63)
+(4,57)-(4,70)
+(4,64)-(4,70)
+(4,68)-(4,69)
+(7,3)-(7,9)
+(7,3)-(11,13)
+(8,5)-(11,13)
+(8,12)-(10,72)
+(9,8)-(10,72)
+(9,21)-(9,22)
+(9,21)-(9,24)
+(9,23)-(9,24)
+(10,8)-(10,72)
+(10,14)-(10,20)
+(10,33)-(10,72)
+(10,36)-(10,37)
+(10,36)-(10,41)
+(10,40)-(10,41)
+(10,63)-(10,72)
+(10,64)-(10,65)
+(11,6)-(11,12)
+(11,7)-(11,8)
 *)

@@ -45,26 +45,20 @@ let rec eval (e,x,y) = match e with | VarX  -> x | VarY  -> y;;
 *)
 
 (* changed spans
-(22,2)-(29,56)
+(22,3)-(29,57)
 match e with
 | VarX -> x
 | VarY -> y
-CaseG VarG (fromList [(Nothing,VarG)])
+CaseG VarG (fromList [(ConPatG Nothing,Nothing,VarG)])
 
 *)
 
-(* changed exprs
-Case (Just (11,23)-(11,61)) (Var (Just (11,29)-(11,30)) "e") [(ConPat (Just (11,38)-(11,42)) "VarX" Nothing,Nothing,Var (Just (11,47)-(11,48)) "x"),(ConPat (Just (11,51)-(11,55)) "VarY" Nothing,Nothing,Var (Just (11,60)-(11,61)) "y")]
-*)
-
-(* typed spans
-(11,23)-(11,61)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-expr
+(* type error slice
+(21,4)-(29,59)
+(21,15)-(29,57)
+(22,3)-(29,57)
+(22,9)-(22,18)
+(25,26)-(25,35)
+(25,27)-(25,31)
+(25,32)-(25,34)
 *)

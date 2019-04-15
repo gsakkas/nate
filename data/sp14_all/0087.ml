@@ -50,64 +50,35 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(16,22)-(16,23)
+(16,23)-(16,24)
 snd a
 AppG (fromList [VarG])
 
-(16,22)-(16,23)
+(16,38)-(16,40)
 (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-TupleG (fromList [BopG EmptyG EmptyG,ListG EmptyG])
+TupleG (fromList [BopG EmptyG EmptyG,ListG (fromList [EmptyG])])
 
-(16,37)-(16,39)
-snd x
-AppG (fromList [VarG])
-
-(16,50)-(16,52)
-[(fst x + snd x) / 10 ; (fst x + snd x) mod 10]
-ListG (BopG EmptyG EmptyG)
-
-(16,50)-(16,52)
+(16,51)-(16,53)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
-(17,15)-(17,17)
+(17,16)-(17,18)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
 *)
 
-(* changed exprs
-App (Just (17,12)-(17,17)) (Var (Just (17,12)-(17,15)) "snd") [Var (Just (17,16)-(17,17)) "a"]
-Tuple (Just (19,10)-(20,67)) [Bop (Just (19,11)-(19,30)) Plus (App (Just (19,12)-(19,19)) (Var (Just (19,13)-(19,16)) "fst") [Var (Just (19,17)-(19,18)) "x"]) (App (Just (19,22)-(19,29)) (Var (Just (19,23)-(19,26)) "snd") [Var (Just (19,27)-(19,28)) "x"]),List (Just (20,12)-(20,66)) [Bop (Just (20,13)-(20,37)) Div (Bop (Just (20,13)-(20,32)) Plus (App (Just (20,14)-(20,21)) (Var (Just (20,15)-(20,18)) "fst") [Var (Just (20,19)-(20,20)) "x"]) (App (Just (20,24)-(20,31)) (Var (Just (20,25)-(20,28)) "snd") [Var (Just (20,29)-(20,30)) "x"])) (Lit (Just (20,35)-(20,37)) (LI 10)),Bop (Just (20,39)-(20,65)) Mod (Bop (Just (20,39)-(20,58)) Plus (App (Just (20,40)-(20,47)) (Var (Just (20,41)-(20,44)) "fst") [Var (Just (20,45)-(20,46)) "x"]) (App (Just (20,50)-(20,57)) (Var (Just (20,51)-(20,54)) "snd") [Var (Just (20,55)-(20,56)) "x"])) (Lit (Just (20,63)-(20,65)) (LI 10))] Nothing]
-App (Just (19,22)-(19,29)) (Var (Just (19,23)-(19,26)) "snd") [Var (Just (19,27)-(19,28)) "x"]
-List (Just (20,12)-(20,66)) [Bop (Just (20,13)-(20,37)) Div (Bop (Just (20,13)-(20,32)) Plus (App (Just (20,14)-(20,21)) (Var (Just (20,15)-(20,18)) "fst") [Var (Just (20,19)-(20,20)) "x"]) (App (Just (20,24)-(20,31)) (Var (Just (20,25)-(20,28)) "snd") [Var (Just (20,29)-(20,30)) "x"])) (Lit (Just (20,35)-(20,37)) (LI 10)),Bop (Just (20,39)-(20,65)) Mod (Bop (Just (20,39)-(20,58)) Plus (App (Just (20,40)-(20,47)) (Var (Just (20,41)-(20,44)) "fst") [Var (Just (20,45)-(20,46)) "x"]) (App (Just (20,50)-(20,57)) (Var (Just (20,51)-(20,54)) "snd") [Var (Just (20,55)-(20,56)) "x"])) (Lit (Just (20,63)-(20,65)) (LI 10))] Nothing
-Tuple (Just (21,16)-(21,23)) [Lit (Just (21,17)-(21,18)) (LI 0),List (Just (21,20)-(21,22)) [] Nothing]
-Tuple (Just (22,15)-(22,22)) [Lit (Just (22,16)-(22,17)) (LI 0),List (Just (22,19)-(22,21)) [] Nothing]
-*)
-
-(* typed spans
-(17,12)-(17,17)
-(19,10)-(20,67)
-(19,22)-(19,29)
-(20,12)-(20,66)
-(21,16)-(21,23)
-(22,15)-(22,22)
-*)
-
-(* correct types
-int list
-(int * int list)
-int
-int list
-(int * int list)
-(int * int list)
-*)
-
-(* bad types
-'a list
-'a list
-'a list
-'a list
-'a list
-'a list
+(* type error slice
+(16,5)-(19,52)
+(16,11)-(16,53)
+(16,13)-(16,53)
+(16,17)-(16,53)
+(16,23)-(16,24)
+(18,5)-(19,52)
+(18,16)-(18,28)
+(18,16)-(18,56)
+(19,19)-(19,33)
+(19,19)-(19,45)
+(19,34)-(19,35)
+(19,41)-(19,45)
 *)

@@ -64,29 +64,36 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(27,2)-(30,53)
+(27,3)-(30,54)
 if i = 0
 then []
 else if i = 1
      then l
      else bigAdd (bigAdd l l)
                  (mulByDigit (i - 2) l)
-IteG (BopG EmptyG EmptyG) (ListG EmptyG) (IteG EmptyG EmptyG EmptyG)
+IteG (BopG EmptyG EmptyG) (ListG (fromList [])) (IteG EmptyG EmptyG EmptyG)
 
 *)
 
-(* changed exprs
-Ite (Just (27,2)-(29,70)) (Bop (Just (27,5)-(27,10)) Eq (Var (Just (27,5)-(27,6)) "i") (Lit (Just (27,9)-(27,10)) (LI 0))) (List (Just (28,7)-(28,9)) [] Nothing) (Ite (Just (29,7)-(29,70)) (Bop (Just (29,10)-(29,15)) Eq (Var (Just (29,10)-(29,11)) "i") (Lit (Just (29,14)-(29,15)) (LI 1))) (Var (Just (29,21)-(29,22)) "l") (App (Just (29,28)-(29,70)) (Var (Just (29,28)-(29,34)) "bigAdd") [App (Just (29,35)-(29,47)) (Var (Just (29,36)-(29,42)) "bigAdd") [Var (Just (29,43)-(29,44)) "l",Var (Just (29,45)-(29,46)) "l"],App (Just (29,48)-(29,70)) (Var (Just (29,49)-(29,59)) "mulByDigit") [Bop (Just (29,60)-(29,67)) Minus (Var (Just (29,61)-(29,62)) "i") (Lit (Just (29,65)-(29,66)) (LI 2)),Var (Just (29,68)-(29,69)) "l"]]))
-*)
-
-(* typed spans
-(27,2)-(29,70)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(11,3)-(11,70)
+(11,9)-(11,10)
+(11,37)-(11,70)
+(11,51)-(11,61)
+(11,51)-(11,63)
+(11,69)-(11,70)
+(13,4)-(24,37)
+(13,12)-(24,35)
+(13,15)-(24,35)
+(14,3)-(24,35)
+(24,3)-(24,13)
+(24,3)-(24,35)
+(27,3)-(30,54)
+(29,10)-(29,11)
+(30,10)-(30,16)
+(30,10)-(30,54)
+(30,17)-(30,54)
+(30,18)-(30,30)
+(30,19)-(30,25)
+(30,26)-(30,27)
 *)

@@ -15,24 +15,20 @@ let rec assoc (d,k,l) =
 *)
 
 (* changed spans
-(5,49)-(5,56)
+(5,50)-(5,57)
 (d , k , t)
 TupleG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Tuple (Just (5,49)-(5,58)) [Var (Just (5,50)-(5,51)) "d",Var (Just (5,53)-(5,54)) "k",Var (Just (5,56)-(5,57)) "t"]
-*)
-
-(* typed spans
-(5,49)-(5,58)
-*)
-
-(* correct types
-('a * 'b * ('b * 'a) list)
-*)
-
-(* bad types
-'a
+(* type error slice
+(3,3)-(5,57)
+(4,11)-(4,12)
+(5,13)-(5,57)
+(5,33)-(5,36)
+(5,33)-(5,38)
+(5,37)-(5,38)
+(5,50)-(5,57)
+(5,51)-(5,52)
+(5,55)-(5,56)
 *)

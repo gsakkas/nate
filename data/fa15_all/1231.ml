@@ -9,28 +9,23 @@ let rec clone x n = if n <= 0 then [] else x :: (clone x (n - 1));;
 *)
 
 (* changed spans
-(2,43)-(2,46)
-EMPTY
-EmptyG
+(2,44)-(2,47)
+x
+VarG
 
-(2,50)-(2,67)
-EMPTY
-EmptyG
-
-(2,60)-(2,61)
-n - 1
-BopG VarG LitG
+(2,51)-(2,68)
+clone x (n - 1)
+AppG (fromList [VarG,BopG EmptyG EmptyG])
 
 *)
 
-(* typed spans
-(2,57)-(2,64)
-*)
-
-(* typed spans
-int
-*)
-
-(* typed spans
-int
+(* type error slice
+(2,4)-(2,70)
+(2,15)-(2,68)
+(2,17)-(2,68)
+(2,21)-(2,68)
+(2,44)-(2,68)
+(2,51)-(2,68)
+(2,52)-(2,63)
+(2,53)-(2,58)
 *)

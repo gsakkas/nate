@@ -37,43 +37,21 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(2,14)-(2,65)
-EMPTY
-EmptyG
-
-(5,2)-(6,59)
-EMPTY
-EmptyG
-
-(14,6)-(17,13)
-EMPTY
-EmptyG
-
-(19,25)-(19,37)
-(@)
-VarG
-
-(27,27)-(27,28)
-[0]
-ListG LitG
-
-(27,32)-(27,49)
-EMPTY
-EmptyG
+(27,15)-(27,51)
+a @ [0]
+AppG (fromList [VarG,ListG (fromList [EmptyG])])
 
 *)
 
-(* typed spans
-(3,16)-(3,17)
-(3,18)-(3,21)
-*)
-
-(* typed spans
-int list -> int list -> int list
-int list
-*)
-
-(* typed spans
-int list -> int list -> (int * int) list
-int
+(* type error slice
+(27,3)-(28,63)
+(27,9)-(27,51)
+(27,11)-(27,51)
+(27,15)-(27,51)
+(27,24)-(27,30)
+(27,25)-(27,26)
+(27,28)-(27,29)
+(28,37)-(28,51)
+(28,37)-(28,63)
+(28,52)-(28,53)
 *)

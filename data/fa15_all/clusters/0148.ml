@@ -1,4 +1,3 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (ConAppG (Just EmptyG))
-let d =
-  digitsOfInt (n / 10) in
-(n mod 10) :: d
+TupleG (fromList [LitG,LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG])
+(1 , let (y , z) = x in
+     [((y + z) + carry) mod 10] @ ans)

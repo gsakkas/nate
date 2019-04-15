@@ -71,56 +71,31 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(31,9)-(31,30)
+(31,10)-(31,31)
 exprToString e1
 AppG (fromList [VarG])
 
-(32,12)-(32,33)
+(32,13)-(32,34)
 "*"
 LitG
 
-(32,13)-(32,25)
-(^)
+(32,52)-(32,54)
+e2
 VarG
 
-(32,13)-(32,25)
-exprToString e2
-AppG (fromList [VarG])
-
-(32,29)-(32,32)
+(32,58)-(32,61)
 "*" ^ (exprToString e3 ^ ")")
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-App (Just (31,9)-(31,26)) (Var (Just (31,10)-(31,22)) "exprToString") [Var (Just (31,23)-(31,25)) "e1"]
-Lit (Just (32,12)-(32,15)) (LS "*")
-Var (Just (32,37)-(32,38)) "^"
-App (Just (32,19)-(32,36)) (Var (Just (32,20)-(32,32)) "exprToString") [Var (Just (32,33)-(32,35)) "e2"]
-App (Just (32,39)-(32,72)) (Var (Just (32,44)-(32,45)) "^") [Lit (Just (32,40)-(32,43)) (LS "*"),App (Just (32,46)-(32,71)) (Var (Just (32,65)-(32,66)) "^") [App (Just (32,47)-(32,64)) (Var (Just (32,48)-(32,60)) "exprToString") [Var (Just (32,61)-(32,63)) "e3"],Lit (Just (32,67)-(32,70)) (LS ")")]]
-*)
-
-(* typed spans
-(31,9)-(31,26)
-(32,12)-(32,15)
-(32,37)-(32,38)
-(32,19)-(32,36)
-(32,39)-(32,72)
-*)
-
-(* correct types
-string
-string
-string -> string -> string
-string
-string
-*)
-
-(* bad types
-string
-string
-expr -> string
-expr -> string
-string
+(* type error slice
+(17,28)-(17,53)
+(17,29)-(17,46)
+(17,30)-(17,42)
+(17,47)-(17,48)
+(31,10)-(31,31)
+(31,11)-(31,23)
+(32,13)-(32,34)
+(32,14)-(32,26)
 *)

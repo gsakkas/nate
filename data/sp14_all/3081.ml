@@ -53,82 +53,55 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(2,10)-(5,15)
-[0 ; 0 ; 9 ; 9]
-ListG LitG
-
-(2,10)-(5,15)
-[1 ; 0 ; 0 ; 2]
-ListG LitG
-
-(2,10)-(5,15)
+(6,1)-(6,1)
 (3 , 3) :: (List.rev (List.combine l1
                                    l2))
-ConAppG (Just (TupleG (fromList [AppG (fromList [AppG (fromList [VarG])]),TupleG (fromList [LitG])])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
-(19,16)-(19,21)
+(15,7)-(15,12)
+EMPTY
+EmptyG
+
+(19,17)-(19,22)
 x
 VarG
 
-(20,15)-(20,18)
+(20,16)-(20,19)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
-(21,21)-(21,23)
+(21,18)-(21,20)
 0
 LitG
 
-(21,17)-(21,19)
+(21,22)-(21,24)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(22,2)-(22,56)
+(22,3)-(22,57)
 removeZero (add (padZero l1
                          l2))
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-List (Just (2,9)-(2,21)) [Lit (Just (2,10)-(2,11)) (LI 0),Lit (Just (2,13)-(2,14)) (LI 0),Lit (Just (2,16)-(2,17)) (LI 9),Lit (Just (2,19)-(2,20)) (LI 9)] Nothing
-List (Just (4,9)-(4,21)) [Lit (Just (4,10)-(4,11)) (LI 1),Lit (Just (4,13)-(4,14)) (LI 0),Lit (Just (4,16)-(4,17)) (LI 0),Lit (Just (4,19)-(4,20)) (LI 2)] Nothing
-ConApp (Just (6,8)-(6,49)) "::" (Just (Tuple (Just (6,8)-(6,49)) [Tuple (Just (6,8)-(6,14)) [Lit (Just (6,9)-(6,10)) (LI 3),Lit (Just (6,12)-(6,13)) (LI 3)],App (Just (6,18)-(6,49)) (Var (Just (6,19)-(6,27)) "List.rev") [App (Just (6,28)-(6,48)) (Var (Just (6,29)-(6,41)) "List.combine") [Var (Just (6,42)-(6,44)) "l1",Var (Just (6,45)-(6,47)) "l2"]]])) Nothing
-Var (Just (23,16)-(23,17)) "x"
-Tuple (Just (24,15)-(24,22)) [Lit (Just (24,16)-(24,17)) (LI 0),List (Just (24,19)-(24,21)) [] Nothing]
-Lit (Just (25,17)-(25,18)) (LI 0)
-List (Just (25,20)-(25,22)) [] Nothing
-App (Just (26,2)-(26,34)) (Var (Just (26,2)-(26,12)) "removeZero") [App (Just (26,13)-(26,34)) (Var (Just (26,14)-(26,17)) "add") [App (Just (26,18)-(26,33)) (Var (Just (26,19)-(26,26)) "padZero") [Var (Just (26,27)-(26,29)) "l1",Var (Just (26,30)-(26,32)) "l2"]]]
-*)
-
-(* typed spans
-(2,9)-(2,21)
-(4,9)-(4,21)
-(6,8)-(6,49)
-(23,16)-(23,17)
-(24,15)-(24,22)
-(25,17)-(25,18)
-(25,20)-(25,22)
-(26,2)-(26,34)
-*)
-
-(* correct types
-int list
-int list
-(int * int) list
-(int * int list)
-(int * int list)
-int
-int list
-int list
-*)
-
-(* bad types
-int -> int -> int list
-int -> int -> int list
-int -> int -> int list
-int
-'a -> 'a list
-int list
-int list
-int
+(* type error slice
+(13,38)-(13,78)
+(13,52)-(13,62)
+(13,52)-(13,65)
+(13,71)-(13,78)
+(19,5)-(21,77)
+(19,11)-(19,22)
+(19,17)-(19,18)
+(19,17)-(19,22)
+(20,5)-(21,77)
+(20,16)-(20,19)
+(21,44)-(21,58)
+(21,44)-(21,70)
+(21,59)-(21,60)
+(21,61)-(21,65)
+(22,3)-(22,45)
+(22,4)-(22,14)
+(22,48)-(22,57)
+(22,49)-(22,50)
 *)

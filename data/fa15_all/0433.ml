@@ -19,24 +19,16 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(7,21)-(7,25)
-f
-VarG
+(7,21)-(7,29)
+f b
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (7,21)-(7,22)) "f"
-*)
-
-(* typed spans
-(7,21)-(7,22)
-*)
-
-(* correct types
-'a -> 'a
-*)
-
-(* bad types
-'a -> ('a * bool)
+(* type error slice
+(7,3)-(7,63)
+(7,16)-(7,43)
+(7,20)-(7,43)
+(7,21)-(7,29)
+(7,22)-(7,26)
 *)

@@ -55,33 +55,26 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(20,6)-(22,35)
+(20,7)-(22,36)
 match a with
 | (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,TupleG (fromList [EmptyG]))])
 
-(23,15)-(23,17)
+(23,16)-(23,18)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
 *)
 
-(* changed exprs
-Case (Just (20,6)-(20,71)) (Var (Just (20,12)-(20,13)) "a") [(TuplePat (Just (20,22)-(20,25)) [VarPat (Just (20,22)-(20,23)) "w",VarPat (Just (20,24)-(20,25)) "y"],Nothing,Tuple (Just (20,30)-(20,71)) [Bop (Just (20,31)-(20,45)) Div (Bop (Just (20,32)-(20,39)) Plus (Var (Just (20,33)-(20,34)) "w") (Var (Just (20,37)-(20,38)) "z")) (Lit (Just (20,42)-(20,44)) (LI 10)),ConApp (Just (20,47)-(20,70)) "::" (Just (Tuple (Just (20,48)-(20,69)) [Bop (Just (20,48)-(20,64)) Mod (Bop (Just (20,49)-(20,56)) Plus (Var (Just (20,50)-(20,51)) "w") (Var (Just (20,54)-(20,55)) "z")) (Lit (Just (20,61)-(20,63)) (LI 10)),Var (Just (20,68)-(20,69)) "y"])) Nothing])]
-Tuple (Just (21,15)-(21,22)) [Lit (Just (21,16)-(21,17)) (LI 0),List (Just (21,19)-(21,21)) [] Nothing]
-*)
-
-(* typed spans
-(20,6)-(20,71)
-(21,15)-(21,22)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-*)
-
-(* bad types
-int list
-int list
+(* type error slice
+(18,5)-(25,52)
+(18,11)-(22,36)
+(20,7)-(22,36)
+(20,13)-(20,14)
+(21,17)-(21,56)
+(22,14)-(22,36)
+(25,5)-(25,52)
+(25,19)-(25,33)
+(25,19)-(25,45)
+(25,34)-(25,35)
 *)

@@ -38,32 +38,21 @@ let palindrome w =
 *)
 
 (* changed spans
-(18,6)-(20,16)
+(18,7)-(20,17)
 false
 LitG
 
-(23,46)-(23,66)
+(23,47)-(23,67)
 matchHeads (explode w)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lit (Just (7,59)-(7,64)) (LB False)
-App (Just (10,46)-(10,68)) (Var (Just (10,46)-(10,56)) "matchHeads") [App (Just (10,57)-(10,68)) (Var (Just (10,58)-(10,65)) "explode") [Var (Just (10,66)-(10,67)) "w"]]
-*)
-
-(* typed spans
-(7,59)-(7,64)
-(10,46)-(10,68)
-*)
-
-(* correct types
-bool
-bool
-*)
-
-(* bad types
-bool
-bool
+(* type error slice
+(18,7)-(20,17)
+(19,12)-(19,22)
+(19,12)-(19,48)
+(20,12)-(20,17)
+(23,47)-(23,57)
+(23,47)-(23,67)
 *)

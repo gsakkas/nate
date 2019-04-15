@@ -21,40 +21,29 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(8,23)-(8,43)
+(8,24)-(8,44)
 (clone 0 n @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(8,49)-(8,69)
+(8,50)-(8,70)
 (clone 0 n @ l2 , l1)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(8,49)-(8,64)
-clone 0 n
-AppG (fromList [VarG,LitG])
-
 *)
 
-(* changed exprs
-Tuple (Just (8,23)-(8,47)) [App (Just (8,24)-(8,42)) (Var (Just (8,37)-(8,38)) "@") [App (Just (8,25)-(8,36)) (Var (Just (8,26)-(8,31)) "clone") [Lit (Just (8,32)-(8,33)) (LI 0),Var (Just (8,34)-(8,35)) "n"],Var (Just (8,39)-(8,41)) "l1"],Var (Just (8,44)-(8,46)) "l2"]
-Tuple (Just (8,53)-(8,77)) [App (Just (8,54)-(8,72)) (Var (Just (8,67)-(8,68)) "@") [App (Just (8,55)-(8,66)) (Var (Just (8,56)-(8,61)) "clone") [Lit (Just (8,62)-(8,63)) (LI 0),Var (Just (8,64)-(8,65)) "n"],Var (Just (8,69)-(8,71)) "l2"],Var (Just (8,74)-(8,76)) "l1"]
-App (Just (8,55)-(8,66)) (Var (Just (8,56)-(8,61)) "clone") [Lit (Just (8,62)-(8,63)) (LI 0),Var (Just (8,64)-(8,65)) "n"]
-*)
-
-(* typed spans
-(8,23)-(8,47)
-(8,53)-(8,77)
-(8,55)-(8,66)
-*)
-
-(* correct types
-(int list * int list)
-(int list * int list)
-int list
-*)
-
-(* bad types
-'a list
-'a list
-'a list
+(* type error slice
+(3,60)-(3,77)
+(3,61)-(3,66)
+(3,69)-(3,76)
+(6,3)-(8,70)
+(7,10)-(7,18)
+(8,10)-(8,70)
+(8,24)-(8,39)
+(8,25)-(8,30)
+(8,33)-(8,36)
+(8,50)-(8,65)
+(8,50)-(8,70)
+(8,51)-(8,56)
+(8,59)-(8,62)
+(8,66)-(8,67)
 *)

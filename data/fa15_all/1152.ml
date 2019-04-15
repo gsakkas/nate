@@ -125,24 +125,13 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(59,55)-(59,66)
+(59,56)-(59,67)
 x / 1
 BopG VarG LitG
 
 *)
 
-(* changed exprs
-Bop (Just (59,55)-(59,62)) Div (Var (Just (59,56)-(59,57)) "x") (Lit (Just (59,60)-(59,61)) (LI 1))
-*)
-
-(* typed spans
-(59,55)-(59,62)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int
+(* type error slice
+(59,56)-(59,67)
+(59,57)-(59,64)
 *)

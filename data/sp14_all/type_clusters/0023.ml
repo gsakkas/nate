@@ -1,17 +1,2 @@
-'a -> 'b -> ('b -> 'c list) -> 'c list -> 'c list
-string -> string list -> string
-(int * int) -> (int * int list) -> (int * int list)
-int -> int list -> int list
-int list -> int list -> int list
-('a -> 'a) -> 'a -> 'a
-('a -> 'b) -> 'a -> 'b
-int -> int list -> int list -> int list
-('a -> ('b -> 'a -> 'c) -> 'b -> 'c) -> 'a -> ('b -> 'a -> 'c) -> 'b -> 'c
-('a -> 'b -> 'c) -> 'a -> 'c
-int -> int -> (int * int)
-('a -> 'a) -> 'a -> ('a * bool)
-int -> int -> int list
-int list -> int list -> (int list * int list)
-int -> int -> int
-(string -> string) -> string list -> string
-int list -> int -> int list
+(int list * int list)
+('a list * int list)

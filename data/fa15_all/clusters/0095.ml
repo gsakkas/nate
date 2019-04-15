@@ -1,3 +1,3 @@
-BopG LitG LitG
-3 > 0
-1.0 /. 3.0
+TupleG (fromList [VarG,BopG EmptyG EmptyG])
+(b , f b = b)
+(xx , xx = x)

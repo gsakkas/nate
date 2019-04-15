@@ -41,24 +41,20 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(14,48)-(14,53)
+(14,49)-(14,54)
 (list1 , list2)
 TupleG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Tuple (Just (14,48)-(14,62)) [Var (Just (14,49)-(14,54)) "list1",Var (Just (14,56)-(14,61)) "list2"]
-*)
-
-(* typed spans
-(14,48)-(14,62)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-'a
+(* type error slice
+(14,5)-(17,52)
+(14,11)-(14,54)
+(14,13)-(14,54)
+(14,17)-(14,54)
+(14,23)-(14,24)
+(14,49)-(14,54)
+(17,19)-(17,33)
+(17,19)-(17,45)
+(17,34)-(17,35)
 *)

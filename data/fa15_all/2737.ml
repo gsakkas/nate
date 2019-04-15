@@ -64,24 +64,20 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(29,15)-(29,23)
+(29,16)-(29,24)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(29,71)-(29,74)
-EMPTY
-EmptyG
+(29,28)-(29,75)
+List.fold_left f base args
+AppG (fromList [VarG])
 
 *)
 
-(* typed spans
-(28,32)-(28,34)
-*)
-
-(* typed spans
-int list list
-*)
-
-(* typed spans
-(int list * int list)
+(* type error slice
+(29,5)-(29,75)
+(29,16)-(29,24)
+(29,42)-(29,56)
+(29,42)-(29,68)
+(29,64)-(29,68)
 *)

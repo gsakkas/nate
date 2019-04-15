@@ -1,5 +1,6 @@
-AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG])))])
-mulByDigit h1 (rh :: rt)
-mulByDigit x (h1 :: t1)
-listHelper t (h :: l2)
-mulByDigit i (m :: t)
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) (CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))
+let ans = f b in
+match ans with
+| (num , boo) -> if boo = true
+                 then wwhile (f , num)
+                 else num

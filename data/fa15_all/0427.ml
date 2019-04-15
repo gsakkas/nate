@@ -18,45 +18,30 @@ let fixpoint (f,b) = let funt x = (2, ((f b) = b)) in wwhile (funt, b);;
 *)
 
 (* changed spans
-(7,11)-(7,53)
+(7,12)-(7,54)
 fun x -> (2 , f b = b)
-LamG (TupleG (fromList [EmptyG]))
+LamG VarPatG (TupleG (fromList [EmptyG]))
 
-(7,65)-(7,73)
-wwhile (funt , b)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(7,65)-(7,73)
-wwhile
+(7,66)-(7,74)
+funt
 VarG
 
-(7,75)-(7,76)
-EMPTY
-EmptyG
-
 *)
 
-(* changed exprs
-Lam (Just (6,30)-(6,50)) (VarPat (Just (6,30)-(6,31)) "x") (Tuple (Just (6,34)-(6,50)) [Lit (Just (6,35)-(6,36)) (LI 2),Bop (Just (6,38)-(6,49)) Eq (App (Just (6,39)-(6,44)) (Var (Just (6,40)-(6,41)) "f") [Var (Just (6,42)-(6,43)) "b"]) (Var (Just (6,47)-(6,48)) "b")]) Nothing
-App (Just (6,54)-(6,70)) (Var (Just (6,54)-(6,60)) "wwhile") [Tuple (Just (6,61)-(6,70)) [Var (Just (6,62)-(6,66)) "funt",Var (Just (6,68)-(6,69)) "b"]]
-Var (Just (6,54)-(6,60)) "wwhile"
-Var (Just (7,75)-(7,76)) "EMPTY"
-*)
-
-(* typed spans
-(6,30)-(6,50)
-(6,54)-(6,70)
-(6,54)-(6,60)
-*)
-
-(* correct types
-int -> (int * bool)
-int
-(int -> (int * bool) * int) -> int
-*)
-
-(* bad types
-'a -> (int * 'a)
-(int * 'a)
-(int * 'a)
+(* type error slice
+(3,13)-(3,14)
+(3,13)-(3,16)
+(4,43)-(4,49)
+(4,43)-(4,56)
+(4,50)-(4,56)
+(4,51)-(4,52)
+(7,3)-(7,78)
+(7,12)-(7,54)
+(7,17)-(7,54)
+(7,48)-(7,54)
+(7,58)-(7,64)
+(7,58)-(7,78)
+(7,65)-(7,78)
+(7,66)-(7,74)
+(7,67)-(7,71)
 *)

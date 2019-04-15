@@ -17,32 +17,23 @@ let fixpoint (f,b) = let gs x = ((f x), (((f x) - x) >= 0)) in wwhile (gs, b);;
 *)
 
 (* changed spans
-(6,21)-(6,77)
+(6,34)-(6,35)
 f x
 AppG (fromList [VarG])
 
-(6,67)-(6,73)
-wwhile (gs , b)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(6,68)-(6,74)
+gs
+VarG
 
 *)
 
-(* changed exprs
-App (Just (6,33)-(6,38)) (Var (Just (6,34)-(6,35)) "f") [Var (Just (6,36)-(6,37)) "x"]
-App (Just (6,63)-(6,77)) (Var (Just (6,63)-(6,69)) "wwhile") [Tuple (Just (6,70)-(6,77)) [Var (Just (6,71)-(6,73)) "gs",Var (Just (6,75)-(6,76)) "b"]]
-*)
-
-(* typed spans
-(6,33)-(6,38)
-(6,63)-(6,77)
-*)
-
-(* correct types
-int
-int
-*)
-
-(* bad types
-'a
-'a -> ('a * bool)
+(* type error slice
+(6,22)-(6,78)
+(6,29)-(6,56)
+(6,39)-(6,44)
+(6,40)-(6,41)
+(6,42)-(6,43)
+(6,68)-(6,74)
+(6,69)-(6,70)
+(6,71)-(6,73)
 *)

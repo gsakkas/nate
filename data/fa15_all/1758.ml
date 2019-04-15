@@ -15,24 +15,14 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(5,39)-(5,49)
+(5,40)-(5,50)
 [n mod 10]
-ListG (BopG EmptyG EmptyG)
+ListG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-List (Just (5,39)-(5,49)) [Bop (Just (5,40)-(5,48)) Mod (Var (Just (5,40)-(5,41)) "n") (Lit (Just (5,46)-(5,48)) (LI 10))] Nothing
-*)
-
-(* typed spans
-(5,39)-(5,49)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(5,15)-(5,50)
+(5,38)-(5,39)
+(5,40)-(5,50)
 *)

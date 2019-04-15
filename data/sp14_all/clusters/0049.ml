@@ -1,7 +1,4 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
-let (_ , res) =
-  List.fold_left f base args in
-res
-let res =
-  List.fold_left f base args in
-res
+LetG NonRec (fromList [(VarPatG,BopG EmptyG EmptyG)]) (CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))
+let z = fst x + snd x in
+match a with
+| (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)

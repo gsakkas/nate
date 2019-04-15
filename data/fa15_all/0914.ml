@@ -55,24 +55,23 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(25,18)-(25,33)
+(25,19)-(25,34)
 (padZero l1 l2 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (25,18)-(25,39)) [App (Just (25,19)-(25,34)) (Var (Just (25,20)-(25,27)) "padZero") [Var (Just (25,28)-(25,30)) "l1",Var (Just (25,31)-(25,33)) "l2"],Var (Just (25,36)-(25,38)) "l2"]
-*)
-
-(* typed spans
-(25,18)-(25,39)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-int list
+(* type error slice
+(4,4)-(7,62)
+(4,13)-(7,60)
+(4,16)-(7,60)
+(5,3)-(7,60)
+(7,8)-(7,60)
+(7,56)-(7,57)
+(15,3)-(25,35)
+(15,12)-(24,52)
+(25,14)-(25,35)
+(25,15)-(25,18)
+(25,19)-(25,34)
+(25,20)-(25,27)
 *)

@@ -84,24 +84,25 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(37,9)-(37,77)
+(37,10)-(37,78)
 buildECosSin (build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (38,6)-(38,77)) (Var (Just (38,6)-(38,18)) "buildECosSin") [Tuple (Just (38,19)-(38,77)) [App (Just (38,20)-(38,47)) (Var (Just (38,21)-(38,26)) "build") [Tuple (Just (38,27)-(38,46)) [Var (Just (38,28)-(38,32)) "rand",Bop (Just (38,34)-(38,45)) Minus (Var (Just (38,35)-(38,40)) "depth") (Lit (Just (38,43)-(38,44)) (LI 1))]],App (Just (38,49)-(38,76)) (Var (Just (38,50)-(38,55)) "build") [Tuple (Just (38,56)-(38,75)) [Var (Just (38,57)-(38,61)) "rand",Bop (Just (38,63)-(38,74)) Minus (Var (Just (38,64)-(38,69)) "depth") (Lit (Just (38,72)-(38,73)) (LI 1))]]]]
-*)
-
-(* typed spans
-(38,6)-(38,77)
-*)
-
-(* correct types
-expr
-*)
-
-(* bad types
-expr
+(* type error slice
+(16,4)-(16,42)
+(16,19)-(16,40)
+(18,4)-(18,27)
+(18,15)-(18,25)
+(18,19)-(18,25)
+(18,24)-(18,25)
+(27,10)-(27,19)
+(27,10)-(27,47)
+(27,20)-(27,47)
+(27,21)-(27,26)
+(37,10)-(37,22)
+(37,10)-(37,78)
+(37,23)-(37,50)
+(37,24)-(37,29)
 *)

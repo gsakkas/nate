@@ -1,50 +1,24 @@
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,IteG EmptyG EmptyG EmptyG)])
-match num with
-| 0 -> if rand (0 , 1) = 0
-       then buildX ()
-       else buildY ()
-| 1 -> if rand (0 , 1) = 0
-       then buildSine (buildhelper 0
-                                   0 expr)
-       else buildCosine (buildhelper 0
-                                     0 expr)
-| 2 -> if rand (0 , 1) = 0
-       then buildAverage (buildhelper (depth - 1)
-                                      (depth - 1)
-                                      expr , buildhelper (depth - 1)
-                                                         (depth - 1)
-                                                         expr)
-       else buildTimes (buildhelper (depth - 1)
-                                    (depth - 1)
-                                    expr , buildhelper (depth - 1)
-                                                       (depth - 1)
-                                                       expr)
-| 3 -> if rand (0 , 1) = 0
-       then buildAverage (buildhelper (depth - 1)
-                                      (depth - 1)
-                                      expr , buildhelper (depth - 1)
-                                                         (depth - 1)
-                                                         expr)
-       else buildTimes (buildhelper (depth - 1)
-                                    (depth - 1)
-                                    expr , buildhelper (depth - 1)
-                                                       (depth - 1)
-                                                       expr)
-| 4 -> buildThresh (buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr , buildhelper (depth - 1)
-                                                                                         (depth - 1)
-                                                                                         expr)
-| _ -> buildThresh (buildhelper (depth - 1)
-                                (depth - 1)
-                                expr , buildhelper (depth - 1)
-                                                   (depth - 1)
-                                                   expr , buildhelper (depth - 1)
-                                                                      (depth - 1)
-                                                                      expr , buildhelper (depth - 1)
-                                                                                         (depth - 1)
-                                                                                         expr)
+LetG NonRec (fromList [(VarPatG,CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
+let carry =
+  match a with
+  | (f , g) -> f in
+let newc =
+  match x with
+  | (f , g) -> if ((f + g) + carry) > 9
+               then 1
+               else 0 in
+let digit =
+  match x with
+  | (f , g) -> (f + g) + (carry mod 10) in
+match a with
+| (o , p) -> (newc , digit :: p)
+let newc =
+  match x with
+  | (f , g) -> if ((f + g) + carry) > 9
+               then 1
+               else 0 in
+let digit =
+  match x with
+  | (f , g) -> (f + g) + (carry mod 10) in
+match a with
+| (o , p) -> (newc , digit :: p)

@@ -59,41 +59,18 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(25,15)-(25,51)
+(25,16)-(25,52)
 List.combine (List.rev l1)
              (List.rev l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(26,4)-(26,51)
+(26,5)-(26,52)
 List.fold_left f base args
 AppG (fromList [VarG])
 
-(26,4)-(26,51)
-List.fold_left
-VarG
-
 *)
 
-(* changed exprs
-App (Just (25,15)-(25,55)) (Var (Just (25,15)-(25,27)) "List.combine") [App (Just (25,28)-(25,41)) (Var (Just (25,29)-(25,37)) "List.rev") [Var (Just (25,38)-(25,40)) "l1"],App (Just (25,42)-(25,55)) (Var (Just (25,43)-(25,51)) "List.rev") [Var (Just (25,52)-(25,54)) "l2"]]
-App (Just (26,4)-(26,30)) (Var (Just (26,4)-(26,18)) "List.fold_left") [Var (Just (26,19)-(26,20)) "f",Var (Just (26,21)-(26,25)) "base",Var (Just (26,26)-(26,30)) "args"]
-Var (Just (26,4)-(26,18)) "List.fold_left"
-*)
-
-(* typed spans
-(25,15)-(25,55)
-(26,4)-(26,30)
-(26,4)-(26,18)
-*)
-
-(* correct types
-(int * int) list
-int list
-(int list -> (int * int) -> int list) -> int list -> (int * int) list -> int list
-*)
-
-(* bad types
-(int * int) list
-int list
-int list
+(* type error slice
+(25,16)-(25,28)
+(25,16)-(25,52)
 *)

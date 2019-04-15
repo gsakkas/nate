@@ -89,24 +89,16 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(38,30)-(38,33)
-max'
-VarG
+(38,31)-(38,41)
+max' 0.1 l'
+AppG (fromList [VarG,LitG])
 
 *)
 
-(* changed exprs
-Var (Just (36,30)-(36,34)) "max'"
-*)
-
-(* typed spans
-(36,30)-(36,34)
-*)
-
-(* correct types
-float -> float -> float
-*)
-
-(* bad types
-int ref
+(* type error slice
+(13,4)-(13,18)
+(13,11)-(13,14)
+(13,11)-(13,16)
+(38,31)-(38,34)
+(38,31)-(38,41)
 *)

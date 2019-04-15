@@ -87,52 +87,14 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(34,11)-(39,75)
-fun n ->
-  match n with
-  | 0 -> 0
-  | 1 -> 10
-  | _ -> 10 * mulByTen (n - 1)
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(37,46)-(37,69)
+(37,47)-(37,70)
 mulByTen (List.length y)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(37,46)-(37,69)
-mulByTen
-VarG
-
-(37,54)-(37,65)
-List.length y
-AppG (fromList [VarG])
-
 *)
 
-(* changed exprs
-Lam (Just (34,17)-(35,64)) (VarPat (Just (34,17)-(34,18)) "n") (Case (Just (35,2)-(35,64)) (Var (Just (35,8)-(35,9)) "n") [(LitPat (Just (35,17)-(35,18)) (LI 0),Nothing,Lit (Just (35,22)-(35,23)) (LI 0)),(LitPat (Just (35,26)-(35,27)) (LI 1),Nothing,Lit (Just (35,31)-(35,33)) (LI 10)),(WildPat (Just (35,36)-(35,37)),Nothing,Bop (Just (35,41)-(35,64)) Times (Lit (Just (35,41)-(35,43)) (LI 10)) (App (Just (35,46)-(35,64)) (Var (Just (35,47)-(35,55)) "mulByTen") [Bop (Just (35,56)-(35,63)) Minus (Var (Just (35,57)-(35,58)) "n") (Lit (Just (35,61)-(35,62)) (LI 1))]))]) Nothing
-App (Just (41,39)-(41,65)) (Var (Just (41,40)-(41,48)) "mulByTen") [App (Just (41,49)-(41,64)) (Var (Just (41,50)-(41,61)) "List.length") [Var (Just (41,62)-(41,63)) "y"]]
-Var (Just (41,40)-(41,48)) "mulByTen"
-App (Just (41,49)-(41,64)) (Var (Just (41,50)-(41,61)) "List.length") [Var (Just (41,62)-(41,63)) "y"]
-*)
-
-(* typed spans
-(34,17)-(35,64)
-(41,39)-(41,65)
-(41,40)-(41,48)
-(41,49)-(41,64)
-*)
-
-(* correct types
-int -> int
-int
-int -> int
-int
-*)
-
-(* bad types
-int list -> int list -> int list
-int
-int
-int list -> int
+(* type error slice
+(37,47)-(37,70)
+(37,48)-(37,50)
+(37,51)-(37,53)
 *)

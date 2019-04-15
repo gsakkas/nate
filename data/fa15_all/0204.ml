@@ -52,61 +52,21 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(11,17)-(11,67)
-EMPTY
-EmptyG
-
-(23,28)-(23,39)
-eval
-VarG
-
-(23,28)-(23,56)
+(23,29)-(23,57)
 if eval (e1 , x , y) < eval (e2 , x , y)
 then eval (e3 , x , y)
 else eval (e4 , x , y)
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(23,41)-(23,43)
-(e1 , x , y)
-TupleG (fromList [VarG])
-
-(23,45)-(23,47)
-eval (e2 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(23,49)-(23,51)
-eval (e3 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(23,53)-(23,55)
-eval (e4 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
 *)
 
-(* typed spans
-(22,10)-(22,14)
-(22,6)-(24,26)
-(22,15)-(22,25)
-(22,29)-(22,46)
-(23,11)-(23,26)
-(24,11)-(24,26)
-*)
-
-(* typed spans
-(expr * float * float) -> float
-float
-(expr * float * float)
-float
-float
-float
-*)
-
-(* typed spans
-(expr * expr * expr * expr) -> expr
-expr
-expr
-expr
-expr
-expr
+(* type error slice
+(11,4)-(11,70)
+(11,18)-(11,68)
+(11,39)-(11,68)
+(16,3)-(23,57)
+(19,16)-(19,19)
+(19,16)-(19,45)
+(23,29)-(23,40)
+(23,29)-(23,57)
 *)

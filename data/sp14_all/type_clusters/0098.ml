@@ -1,2 +1,1 @@
-int list
-'a list
+('a * int * 'a list) -> 'a list

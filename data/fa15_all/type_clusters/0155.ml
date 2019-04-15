@@ -1,1 +1,1 @@
-('a * bool)
+float

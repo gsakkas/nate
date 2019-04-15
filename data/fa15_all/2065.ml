@@ -23,24 +23,22 @@ let stringOfList f l = sepConcat "; " l;;
 *)
 
 (* changed spans
-(9,23)-(9,58)
+(9,24)-(9,59)
 sepConcat "; " l
 AppG (fromList [VarG,LitG])
 
 *)
 
-(* changed exprs
-App (Just (9,23)-(9,39)) (Var (Just (9,23)-(9,32)) "sepConcat") [Lit (Just (9,33)-(9,37)) (LS "; "),Var (Just (9,38)-(9,39)) "l"]
-*)
-
-(* typed spans
-(9,23)-(9,39)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-'a
+(* type error slice
+(2,4)-(7,61)
+(2,19)-(7,59)
+(6,23)-(6,32)
+(6,24)-(6,27)
+(6,28)-(6,29)
+(9,24)-(9,33)
+(9,24)-(9,59)
+(9,34)-(9,59)
+(9,41)-(9,58)
+(9,42)-(9,50)
+(9,51)-(9,57)
 *)

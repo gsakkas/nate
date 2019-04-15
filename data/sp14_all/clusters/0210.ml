@@ -1,5 +1,2 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,IteG EmptyG EmptyG EmptyG)])
-match f b with
-| (f' , x') -> if x'
-               then wwhile (f , f')
-               else f'
+IteG (BopG EmptyG EmptyG) (ListG (fromList [])) (ListG (fromList []))
+if n < 0 then [] else []

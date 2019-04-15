@@ -65,24 +65,18 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(30,6)-(30,66)
+(30,7)-(30,67)
 (eval (e1 , x , y) *. eval (e1 , x , y)) +. eval (e2 , x , y)
 BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Bop (Just (30,6)-(30,67)) FPlus (Bop (Just (30,6)-(30,46)) FTimes (App (Just (30,7)-(30,24)) (Var (Just (30,8)-(30,12)) "eval") [Tuple (Just (30,13)-(30,23)) [Var (Just (30,14)-(30,16)) "e1",Var (Just (30,18)-(30,19)) "x",Var (Just (30,21)-(30,22)) "y"]]) (App (Just (30,28)-(30,45)) (Var (Just (30,29)-(30,33)) "eval") [Tuple (Just (30,34)-(30,44)) [Var (Just (30,35)-(30,37)) "e1",Var (Just (30,39)-(30,40)) "x",Var (Just (30,42)-(30,43)) "y"]])) (App (Just (30,50)-(30,67)) (Var (Just (30,51)-(30,55)) "eval") [Tuple (Just (30,56)-(30,66)) [Var (Just (30,57)-(30,59)) "e2",Var (Just (30,61)-(30,62)) "x",Var (Just (30,64)-(30,65)) "y"]])
-*)
-
-(* typed spans
-(30,6)-(30,67)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(19,20)-(19,45)
+(19,27)-(19,44)
+(19,28)-(19,32)
+(30,7)-(30,47)
+(30,7)-(30,67)
+(30,50)-(30,67)
+(30,51)-(30,55)
 *)

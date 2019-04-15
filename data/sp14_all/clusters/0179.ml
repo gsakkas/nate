@@ -1,2 +1,6 @@
-AppG (fromList [VarG,BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
-helper (f :: acc) f (x - 1)
+TupleG (fromList [VarG,IteG EmptyG EmptyG EmptyG])
+(if f b = b
+ then (fun b'' ->
+         (f b , false))
+ else (fun b'' ->
+         (f b , true)) , b)

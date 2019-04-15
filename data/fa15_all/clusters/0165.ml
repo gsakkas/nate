@@ -1,4 +1,4 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,BopG EmptyG EmptyG)])
-match x with
-| 0 -> a
-| x -> x * x
+LetG NonRec (fromList [(VarPatG,ConAppG (Just EmptyG))]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
+let seen' = h :: seen in
+let rest' = t in
+helper (seen' , rest')

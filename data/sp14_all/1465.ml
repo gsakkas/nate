@@ -64,7 +64,7 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(23,16)-(23,21)
+(23,17)-(23,22)
 let carry =
   match a with
   | (x , y) -> x in
@@ -75,46 +75,22 @@ match x with
                               ((carry + addend_a) + addend_b) mod 10 in
                             match a with
                             | (x , y) -> (new_carry , digit :: y))
-LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+LetG NonRec (fromList [(VarPatG,CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))]) (CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))
 
-(24,15)-(24,16)
+(24,16)-(24,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
-(25,4)-(25,74)
-[]
-ListG EmptyG
-
-(25,15)-(25,23)
+(25,16)-(25,24)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Let (Just (24,6)-(29,61)) NonRec [(VarPat (Just (24,10)-(24,15)) "carry",Case (Just (24,18)-(24,43)) (Var (Just (24,24)-(24,25)) "a") [(TuplePat (Just (24,34)-(24,37)) [VarPat (Just (24,34)-(24,35)) "x",VarPat (Just (24,36)-(24,37)) "y"],Nothing,Var (Just (24,42)-(24,43)) "x")])] (Case (Just (25,6)-(29,61)) (Var (Just (25,12)-(25,13)) "x") [(TuplePat (Just (26,9)-(26,26)) [VarPat (Just (26,9)-(26,17)) "addend_a",VarPat (Just (26,18)-(26,26)) "addend_b"],Nothing,Let (Just (27,10)-(29,61)) NonRec [(VarPat (Just (27,14)-(27,23)) "new_carry",Bop (Just (27,26)-(27,62)) Div (Bop (Just (27,26)-(27,57)) Plus (Bop (Just (27,27)-(27,45)) Plus (Var (Just (27,28)-(27,33)) "carry") (Var (Just (27,36)-(27,44)) "addend_a")) (Var (Just (27,48)-(27,56)) "addend_b")) (Lit (Just (27,60)-(27,62)) (LI 10)))] (Let (Just (28,10)-(29,61)) NonRec [(VarPat (Just (28,14)-(28,19)) "digit",Bop (Just (28,22)-(28,60)) Mod (Bop (Just (28,22)-(28,53)) Plus (Bop (Just (28,23)-(28,41)) Plus (Var (Just (28,24)-(28,29)) "carry") (Var (Just (28,32)-(28,40)) "addend_a")) (Var (Just (28,44)-(28,52)) "addend_b")) (Lit (Just (28,58)-(28,60)) (LI 10)))] (Case (Just (29,10)-(29,61)) (Var (Just (29,17)-(29,18)) "a") [(TuplePat (Just (29,27)-(29,30)) [VarPat (Just (29,27)-(29,28)) "x",VarPat (Just (29,29)-(29,30)) "y"],Nothing,Tuple (Just (29,35)-(29,60)) [Var (Just (29,36)-(29,45)) "new_carry",ConApp (Just (29,47)-(29,59)) "::" (Just (Tuple (Just (29,48)-(29,58)) [Var (Just (29,48)-(29,53)) "digit",Var (Just (29,57)-(29,58)) "y"])) Nothing])])))])
-Tuple (Just (30,15)-(30,22)) [Lit (Just (30,16)-(30,17)) (LI 0),List (Just (30,19)-(30,21)) [] Nothing]
-List (Just (30,19)-(30,21)) [] Nothing
-App (Just (31,15)-(31,44)) (Var (Just (31,15)-(31,23)) "List.rev") [App (Just (31,24)-(31,44)) (Var (Just (31,25)-(31,37)) "List.combine") [Var (Just (31,38)-(31,40)) "l1",Var (Just (31,41)-(31,43)) "l2"]]
-*)
-
-(* typed spans
-(24,6)-(29,61)
-(30,15)-(30,22)
-(30,19)-(30,21)
-(31,15)-(31,44)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-int list
-(int * int) list
-*)
-
-(* bad types
-int
-int
-int list
-(int list * int list)
+(* type error slice
+(25,5)-(25,75)
+(25,16)-(25,24)
+(25,42)-(25,56)
+(25,42)-(25,68)
+(25,64)-(25,68)
 *)

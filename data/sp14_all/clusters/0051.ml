@@ -1,12 +1,32 @@
-BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
-(eval (e1 , x , y) *. eval (e2 , x , y)) /. eval (e3 , x , y)
-(eval (e1 , x , y) +. eval (e2 , x , y)) +. eval (e3 , x , y)
-(eval (e1 , x , y) +. eval (e2 , x , y)) /. float_of_int 2
-((float_of_int (-1) *. eval (e1 , x , y)) *. eval (e2 , x , y)) *. eval (e3 , x , y)
-(eval (e1 , x , y) -. eval (e2 , x , y)) -. eval (e3 , x , y)
-(eval (e1 , x , y) /. eval (e2 , x , y)) /. eval (e3 , x , y)
-(sin (pi *. eval (e , x , y)) +. cos (pi *. eval (e , x , y))) *. cos (pi *. eval (e , x , y))
-(eval (a , x , y) *. eval (a , x , y)) *. eval (a , x , y)
-(eval (a , sin (pi *. x) , sin (pi *. y)) +. eval (b , sin (pi *. x) , sin (pi *. y))) +. eval (c , sin (pi *. x) , sin (pi *. y))
-((eval (e1 , x , y) ** 2.0) +. (eval (e2 , x , y) ** 2.0)) +. (eval (e3 , x , y) ** 2.0)
-(eval (e1 , x , y) +. eval (e2 , x , y)) -. eval (e3 , x , y)
+LetG Rec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (AppG (fromList [EmptyG]))
+let rec getList =
+  fun a ->
+    fun b ->
+      match a with
+      | [] -> [] in
+getList [] l
+let rec helper =
+  fun x ->
+    fun l ->
+      fun acc ->
+        match x with
+        | [] -> l
+        | h :: t -> helper t l
+                           (h :: acc) in
+helper x l []
+let rec helper =
+  fun acc ->
+    fun v ->
+      if v = 0
+      then acc
+      else helper ((v mod 10) :: acc)
+                  (v / 10) in
+helper [] h
+let rec helper =
+  fun i ->
+    fun acc ->
+      fun l ->
+        if i > 0
+        then helper i (bigAdd acc l) l
+        else acc in
+helper i [] l

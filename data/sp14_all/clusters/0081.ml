@@ -1,4 +1,4 @@
-ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),BopG VarG LitG])))
-(n mod 10) :: (digitsOfInt n)
-(prod / 10) :: (mulByDigit i
-                           t)
+CaseG VarG (fromList [(LitPatG,Nothing,ListG (fromList [])),(WildPatG,Nothing,ConAppG (Just EmptyG))])
+match n with
+| 0 -> []
+| _ -> x :: (clone x (n - 1))

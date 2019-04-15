@@ -65,56 +65,40 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(25,18)-(25,32)
+(25,19)-(25,33)
 digits
 VarG
 
-(25,19)-(25,31)
-fst'
-VarG
+(25,36)-(25,42)
+[fst']
+ListG (fromList [VarG])
 
-(26,33)-(26,34)
+(26,19)-(26,33)
 digits
 VarG
 
-(26,19)-(26,31)
-fst'
-VarG
+(26,36)-(26,42)
+[fst']
+ListG (fromList [VarG])
 
-(31,18)-(31,36)
+(31,19)-(31,37)
 padZero l1 l2
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (24,30)-(24,36)) "digits"
-Var (Just (24,40)-(24,44)) "fst'"
-Var (Just (24,58)-(24,64)) "digits"
-Var (Just (24,68)-(24,72)) "fst'"
-App (Just (29,18)-(29,33)) (Var (Just (29,19)-(29,26)) "padZero") [Var (Just (29,27)-(29,29)) "l1",Var (Just (29,30)-(29,32)) "l2"]
-*)
-
-(* typed spans
-(24,30)-(24,36)
-(24,40)-(24,44)
-(24,58)-(24,64)
-(24,68)-(24,72)
-(29,18)-(29,33)
-*)
-
-(* correct types
-int list
-int
-int list
-int
-(int list * int list)
-*)
-
-(* bad types
-(int * int) list
-(int * int)
-(int * int) list -> (int * int) list -> (int * int) list
-(int * int)
-(int list -> (int list * int list) * 'a)
+(* type error slice
+(5,4)-(11,38)
+(5,13)-(11,36)
+(5,16)-(11,36)
+(17,3)-(31,38)
+(17,12)-(30,52)
+(29,26)-(29,46)
+(29,27)-(29,39)
+(29,40)-(29,42)
+(31,14)-(31,38)
+(31,15)-(31,18)
+(31,19)-(31,37)
+(31,20)-(31,32)
+(31,21)-(31,28)
 *)

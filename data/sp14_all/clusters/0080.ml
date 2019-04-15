@@ -1,5 +1,4 @@
-BopG (BopG EmptyG EmptyG) VarG
-(c + x') + x''
-(a * a) + x
-((fir + sec) / 10) + b1
-(x * x) + a
+CaseG VarG (fromList [(VarPatG,Nothing,BopG EmptyG EmptyG),(ConPatG Nothing,Nothing,LitG)])
+match xs with
+| [] -> 0
+| xs -> List.hd xs + sumList (List.tl xs)

@@ -23,31 +23,23 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,51)-(7,55)
-EMPTY
-EmptyG
+(7,52)-(7,56)
+h
+VarG
 
-(8,8)-(8,46)
+(7,60)-(7,61)
 seen
 VarG
 
-(9,2)-(9,8)
-helper ([] , l)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(9,3)-(9,17)
+List.rev (helper ([] , l))
+AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* typed spans
-(7,56)-(7,60)
-(9,11)-(9,27)
-*)
-
-(* typed spans
-'a list
-'a list
-*)
-
-(* typed spans
-'a
-('a list * 'a list list) -> 'a
+(* type error slice
+(7,21)-(7,61)
+(7,42)-(7,46)
+(7,52)-(7,56)
+(7,52)-(7,61)
 *)

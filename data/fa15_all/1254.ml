@@ -56,74 +56,44 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(19,14)-(19,57)
+(19,15)-(19,58)
 [sum]
-ListG VarG
+ListG (fromList [VarG])
 
-(21,13)-(21,22)
+(21,14)-(21,23)
 c
 VarG
 
-(21,25)-(21,26)
+(22,16)-(22,17)
 sum + 1
 BopG VarG LitG
 
-(22,21)-(22,30)
+(22,22)-(22,31)
 c
 VarG
 
-(23,15)-(23,24)
+(23,16)-(23,25)
 sum
 VarG
 
-(23,28)-(23,30)
+(23,29)-(23,31)
 a
 VarG
 
-(26,4)-(26,51)
+(26,5)-(26,52)
 let res =
   List.fold_left f base args in
 res
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) VarG
 
 *)
 
-(* changed exprs
-List (Just (19,14)-(19,19)) [Var (Just (19,15)-(19,18)) "sum"] Nothing
-Var (Just (20,20)-(20,21)) "c"
-Bop (Just (20,31)-(20,40)) Plus (Var (Just (20,32)-(20,35)) "sum") (Lit (Just (20,38)-(20,39)) (LI 1))
-Var (Just (20,45)-(20,46)) "c"
-Var (Just (20,64)-(20,67)) "sum"
-Var (Just (20,71)-(20,72)) "a"
-Let (Just (23,4)-(23,47)) NonRec [(VarPat (Just (23,8)-(23,11)) "res",App (Just (23,14)-(23,40)) (Var (Just (23,14)-(23,28)) "List.fold_left") [Var (Just (23,29)-(23,30)) "f",Var (Just (23,31)-(23,35)) "base",Var (Just (23,36)-(23,40)) "args"])] (Var (Just (23,44)-(23,47)) "res")
-*)
-
-(* typed spans
-(19,14)-(19,19)
-(20,20)-(20,21)
-(20,31)-(20,40)
-(20,45)-(20,46)
-(20,64)-(20,67)
-(20,71)-(20,72)
-(23,4)-(23,47)
-*)
-
-(* correct types
-int list
-int
-int
-int
-int
-int list
-int list
-*)
-
-(* bad types
-int list
-int
-int
-int
-int
-int list
-int list
+(* type error slice
+(17,7)-(23,31)
+(17,17)-(17,24)
+(19,15)-(19,58)
+(19,31)-(19,47)
+(19,32)-(19,46)
+(19,53)-(19,58)
+(19,54)-(19,57)
 *)

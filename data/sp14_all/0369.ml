@@ -57,24 +57,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(24,24)-(24,47)
+(24,25)-(24,48)
 List.combine l1 l2
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (24,24)-(24,44)) (Var (Just (24,25)-(24,37)) "List.combine") [Var (Just (24,38)-(24,40)) "l1",Var (Just (24,41)-(24,43)) "l2"]
-*)
-
-(* typed spans
-(24,24)-(24,44)
-*)
-
-(* correct types
-(int * int) list
-*)
-
-(* bad types
-(int * int) list
+(* type error slice
+(24,25)-(24,48)
+(24,26)-(24,38)
+(24,39)-(24,47)
 *)

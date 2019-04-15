@@ -1,5 +1,2 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG)])
-match l with
-| x :: [] -> x
-| hd :: tl -> last tl
-| [] -> []
+TupleG (fromList [BopG EmptyG EmptyG])
+(x * x , x < 100)

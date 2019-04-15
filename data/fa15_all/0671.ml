@@ -141,152 +141,57 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(42,23)-(42,40)
+(42,24)-(42,41)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(43,23)-(43,40)
+(43,24)-(43,41)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(43,24)-(43,29)
-buildX
-VarG
-
-(43,24)-(43,29)
-()
-ConAppG Nothing
-
-(43,24)-(43,29)
-build (rand , d)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(44,23)-(44,40)
+(44,24)-(44,41)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(44,24)-(44,29)
-buildX
-VarG
-
-(44,24)-(44,29)
-()
-ConAppG Nothing
-
-(44,24)-(44,29)
-build (rand , d)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(45,23)-(45,40)
+(45,24)-(45,41)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(45,24)-(45,29)
-buildX
-VarG
-
-(45,24)-(45,29)
-()
-ConAppG Nothing
-
-(45,24)-(45,29)
-build (rand , d)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(46,23)-(46,40)
+(46,24)-(46,41)
 (buildX () , build (rand , d))
 TupleG (fromList [AppG (fromList [EmptyG])])
-
-(46,24)-(46,29)
-buildX
-VarG
-
-(46,24)-(46,29)
-()
-ConAppG Nothing
-
-(46,24)-(46,29)
-build (rand , d)
-AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (42,23)-(42,55)) [App (Just (42,24)-(42,35)) (Var (Just (42,25)-(42,31)) "buildX") [ConApp (Just (42,32)-(42,34)) "()" Nothing (Just (TApp "unit" []))],App (Just (42,37)-(42,54)) (Var (Just (42,38)-(42,43)) "build") [Tuple (Just (42,44)-(42,53)) [Var (Just (42,45)-(42,49)) "rand",Var (Just (42,51)-(42,52)) "d"]]]
-Tuple (Just (43,23)-(43,55)) [App (Just (43,24)-(43,35)) (Var (Just (43,25)-(43,31)) "buildX") [ConApp (Just (43,32)-(43,34)) "()" Nothing (Just (TApp "unit" []))],App (Just (43,37)-(43,54)) (Var (Just (43,38)-(43,43)) "build") [Tuple (Just (43,44)-(43,53)) [Var (Just (43,45)-(43,49)) "rand",Var (Just (43,51)-(43,52)) "d"]]]
-Var (Just (43,25)-(43,31)) "buildX"
-ConApp (Just (43,32)-(43,34)) "()" Nothing (Just (TApp "unit" []))
-App (Just (43,37)-(43,54)) (Var (Just (43,38)-(43,43)) "build") [Tuple (Just (43,44)-(43,53)) [Var (Just (43,45)-(43,49)) "rand",Var (Just (43,51)-(43,52)) "d"]]
-Tuple (Just (44,23)-(44,55)) [App (Just (44,24)-(44,35)) (Var (Just (44,25)-(44,31)) "buildX") [ConApp (Just (44,32)-(44,34)) "()" Nothing (Just (TApp "unit" []))],App (Just (44,37)-(44,54)) (Var (Just (44,38)-(44,43)) "build") [Tuple (Just (44,44)-(44,53)) [Var (Just (44,45)-(44,49)) "rand",Var (Just (44,51)-(44,52)) "d"]]]
-Var (Just (44,25)-(44,31)) "buildX"
-ConApp (Just (44,32)-(44,34)) "()" Nothing (Just (TApp "unit" []))
-App (Just (44,37)-(44,54)) (Var (Just (44,38)-(44,43)) "build") [Tuple (Just (44,44)-(44,53)) [Var (Just (44,45)-(44,49)) "rand",Var (Just (44,51)-(44,52)) "d"]]
-Tuple (Just (45,23)-(45,55)) [App (Just (45,24)-(45,35)) (Var (Just (45,25)-(45,31)) "buildX") [ConApp (Just (45,32)-(45,34)) "()" Nothing (Just (TApp "unit" []))],App (Just (45,37)-(45,54)) (Var (Just (45,38)-(45,43)) "build") [Tuple (Just (45,44)-(45,53)) [Var (Just (45,45)-(45,49)) "rand",Var (Just (45,51)-(45,52)) "d"]]]
-Var (Just (45,25)-(45,31)) "buildX"
-ConApp (Just (45,32)-(45,34)) "()" Nothing (Just (TApp "unit" []))
-App (Just (45,37)-(45,54)) (Var (Just (45,38)-(45,43)) "build") [Tuple (Just (45,44)-(45,53)) [Var (Just (45,45)-(45,49)) "rand",Var (Just (45,51)-(45,52)) "d"]]
-Tuple (Just (46,23)-(46,55)) [App (Just (46,24)-(46,35)) (Var (Just (46,25)-(46,31)) "buildX") [ConApp (Just (46,32)-(46,34)) "()" Nothing (Just (TApp "unit" []))],App (Just (46,37)-(46,54)) (Var (Just (46,38)-(46,43)) "build") [Tuple (Just (46,44)-(46,53)) [Var (Just (46,45)-(46,49)) "rand",Var (Just (46,51)-(46,52)) "d"]]]
-Var (Just (46,25)-(46,31)) "buildX"
-ConApp (Just (46,32)-(46,34)) "()" Nothing (Just (TApp "unit" []))
-App (Just (46,37)-(46,54)) (Var (Just (46,38)-(46,43)) "build") [Tuple (Just (46,44)-(46,53)) [Var (Just (46,45)-(46,49)) "rand",Var (Just (46,51)-(46,52)) "d"]]
-*)
-
-(* typed spans
-(42,23)-(42,55)
-(43,23)-(43,55)
-(43,25)-(43,31)
-(43,32)-(43,34)
-(43,37)-(43,54)
-(44,23)-(44,55)
-(44,25)-(44,31)
-(44,32)-(44,34)
-(44,37)-(44,54)
-(45,23)-(45,55)
-(45,25)-(45,31)
-(45,32)-(45,34)
-(45,37)-(45,54)
-(46,23)-(46,55)
-(46,25)-(46,31)
-(46,32)-(46,34)
-(46,37)-(46,54)
-*)
-
-(* correct types
-(expr * expr)
-(expr * expr)
-unit -> expr
-unit
-expr
-(expr * expr)
-unit -> expr
-unit
-expr
-(expr * expr)
-unit -> expr
-unit
-expr
-(expr * expr)
-unit -> expr
-unit
-expr
-*)
-
-(* bad types
-expr
-expr
-((int * int) -> int * int) -> expr
-((int * int) -> int * int) -> expr
-((int * int) -> int * int) -> expr
-expr
-((int * int) -> int * int) -> expr
-((int * int) -> int * int) -> expr
-((int * int) -> int * int) -> expr
-expr
-((int * int) -> int * int) -> expr
-((int * int) -> int * int) -> expr
-((int * int) -> int * int) -> expr
-expr
-((int * int) -> int * int) -> expr
-((int * int) -> int * int) -> expr
-((int * int) -> int * int) -> expr
+(* type error slice
+(15,4)-(15,27)
+(15,15)-(15,25)
+(15,19)-(15,25)
+(15,24)-(15,25)
+(19,4)-(19,42)
+(19,17)-(19,40)
+(31,12)-(31,21)
+(31,12)-(31,39)
+(31,22)-(31,39)
+(31,23)-(31,28)
+(42,13)-(42,23)
+(42,13)-(42,41)
+(42,24)-(42,41)
+(42,25)-(42,30)
+(43,13)-(43,23)
+(43,13)-(43,41)
+(43,24)-(43,41)
+(43,25)-(43,30)
+(44,13)-(44,23)
+(44,13)-(44,41)
+(44,24)-(44,41)
+(44,25)-(44,30)
+(45,13)-(45,23)
+(45,13)-(45,41)
+(45,24)-(45,41)
+(45,25)-(45,30)
+(46,13)-(46,23)
+(46,13)-(46,41)
+(46,24)-(46,41)
+(46,25)-(46,30)
 *)

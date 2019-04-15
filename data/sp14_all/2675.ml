@@ -16,7 +16,7 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(2,23)-(2,77)
+(5,3)-(6,78)
 let rec helper =
   fun (f , b) ->
     (let b' = f b in
@@ -24,22 +24,24 @@ let rec helper =
      then b'
      else helper (f , b')) in
 helper (f , b)
-LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+LetG Rec (fromList [(VarPatG,LamG (TuplePatG (fromList [EmptyPatG])) EmptyG)]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (3,2)-(5,15)) Rec [(VarPat (Just (3,10)-(3,16)) "helper",Lam (Just (3,18)-(4,57)) (TuplePat (Just (3,18)-(3,21)) [VarPat (Just (3,18)-(3,19)) "f",VarPat (Just (3,20)-(3,21)) "b"]) (Let (Just (4,4)-(4,57)) NonRec [(VarPat (Just (4,8)-(4,10)) "b'",App (Just (4,13)-(4,16)) (Var (Just (4,13)-(4,14)) "f") [Var (Just (4,15)-(4,16)) "b"])] (Ite (Just (4,20)-(4,57)) (Bop (Just (4,23)-(4,29)) Eq (Var (Just (4,23)-(4,25)) "b'") (Var (Just (4,28)-(4,29)) "b")) (Var (Just (4,35)-(4,37)) "b'") (App (Just (4,43)-(4,57)) (Var (Just (4,43)-(4,49)) "helper") [Tuple (Just (4,50)-(4,57)) [Var (Just (4,51)-(4,52)) "f",Var (Just (4,54)-(4,56)) "b'"]]))) Nothing)] (App (Just (5,2)-(5,15)) (Var (Just (5,2)-(5,8)) "helper") [Tuple (Just (5,9)-(5,15)) [Var (Just (5,10)-(5,11)) "f",Var (Just (5,13)-(5,14)) "b"]])
-*)
-
-(* typed spans
-(3,2)-(5,15)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-'a
+(* type error slice
+(2,24)-(2,78)
+(2,38)-(2,39)
+(2,38)-(2,41)
+(2,45)-(2,78)
+(2,56)-(2,62)
+(2,56)-(2,70)
+(2,63)-(2,70)
+(2,64)-(2,65)
+(2,76)-(2,78)
+(5,3)-(5,9)
+(5,3)-(6,78)
+(6,5)-(6,78)
+(6,56)-(6,77)
+(6,57)-(6,73)
+(6,58)-(6,64)
 *)

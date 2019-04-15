@@ -12,24 +12,27 @@ let pipe fs =
 *)
 
 (* changed spans
-(3,12)-(3,33)
+(3,13)-(3,34)
 let an = a in x
-LetG NonRec (fromList [VarG]) VarG
+LetG NonRec (fromList [(VarPatG,VarG)]) VarG
 
 *)
 
-(* changed exprs
-Let (Just (3,14)-(3,29)) NonRec [(VarPat (Just (3,18)-(3,20)) "an",Var (Just (3,23)-(3,24)) "a")] (Var (Just (3,28)-(3,29)) "x")
-*)
-
-(* typed spans
-(3,14)-(3,29)
-*)
-
-(* correct types
-'a -> 'a
-*)
-
-(* bad types
-'a -> (('b -> 'a) -> 'c) -> 'c
+(* type error slice
+(3,3)-(4,45)
+(3,9)-(3,34)
+(3,11)-(3,34)
+(3,13)-(3,34)
+(3,15)-(3,34)
+(3,19)-(3,20)
+(3,19)-(3,34)
+(3,21)-(3,34)
+(3,32)-(3,33)
+(4,3)-(4,45)
+(4,12)-(4,17)
+(4,16)-(4,17)
+(4,21)-(4,35)
+(4,21)-(4,45)
+(4,36)-(4,37)
+(4,38)-(4,42)
 *)

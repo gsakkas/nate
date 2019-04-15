@@ -1,6 +1,3 @@
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG),(Just EmptyG,EmptyG)]))
-fun n ->
-  match n with
-  | 1 -> 1
-  | _ when (n mod 2) = 0 -> n / 2
-  | _ -> (3 * n) + 1
+CaseG (TupleG (fromList [EmptyG])) (fromList [(TuplePatG (fromList [TuplePatG (fromList [EmptyPatG])]),Nothing,TupleG (fromList [EmptyG]))])
+match (a , x) with
+| ((b , c) , (d , e)) -> (b , (d + e) :: c)

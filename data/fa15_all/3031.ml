@@ -47,32 +47,28 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(16,40)-(16,72)
+(16,41)-(16,73)
 ((num1 + num2) + carry) mod 10
 BopG (BopG EmptyG EmptyG) LitG
 
-(18,19)-(18,20)
+(18,20)-(18,21)
 []
-ListG EmptyG
+ListG (fromList [])
 
 *)
 
-(* changed exprs
-Bop (Just (16,40)-(16,72)) Mod (Bop (Just (16,41)-(16,64)) Plus (Bop (Just (16,42)-(16,55)) Plus (Var (Just (16,43)-(16,47)) "num1") (Var (Just (16,50)-(16,54)) "num2")) (Var (Just (16,58)-(16,63)) "carry")) (Lit (Just (16,69)-(16,71)) (LI 10))
-List (Just (18,19)-(18,21)) [] Nothing
-*)
-
-(* typed spans
-(16,40)-(16,72)
-(18,19)-(18,21)
-*)
-
-(* correct types
-int
-int list
-*)
-
-(* bad types
-int list
-int
+(* type error slice
+(13,5)-(20,52)
+(13,11)-(17,14)
+(15,7)-(17,14)
+(15,25)-(15,26)
+(16,40)-(17,13)
+(17,9)-(17,12)
+(18,5)-(20,52)
+(18,16)-(18,22)
+(18,20)-(18,21)
+(20,19)-(20,33)
+(20,19)-(20,45)
+(20,34)-(20,35)
+(20,36)-(20,40)
 *)

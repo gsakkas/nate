@@ -24,35 +24,29 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(8,8)-(9,29)
+(7,21)-(7,22)
 if List.mem h seen
 then seen
 else h :: seen
 IteG (AppG (fromList [EmptyG])) VarG (ConAppG (Just EmptyG))
 
-(9,8)-(9,29)
-let rest' = t in
-helper (seen' , rest')
-LetG NonRec (fromList [VarG]) (AppG (fromList [EmptyG]))
+(8,21)-(8,64)
+t
+VarG
 
 *)
 
-(* changed exprs
-Ite (Just (7,20)-(7,63)) (App (Just (7,23)-(7,38)) (Var (Just (7,23)-(7,31)) "List.mem") [Var (Just (7,32)-(7,33)) "h",Var (Just (7,34)-(7,38)) "seen"]) (Var (Just (7,44)-(7,48)) "seen") (ConApp (Just (7,54)-(7,63)) "::" (Just (Tuple (Just (7,54)-(7,63)) [Var (Just (7,54)-(7,55)) "h",Var (Just (7,59)-(7,63)) "seen"])) Nothing)
-Let (Just (8,8)-(8,46)) NonRec [(VarPat (Just (8,12)-(8,17)) "rest'",Var (Just (8,20)-(8,21)) "t")] (App (Just (8,25)-(8,46)) (Var (Just (8,25)-(8,31)) "helper") [Tuple (Just (8,32)-(8,46)) [Var (Just (8,33)-(8,38)) "seen'",Var (Just (8,40)-(8,45)) "rest'"]])
-*)
-
-(* typed spans
-(7,20)-(7,63)
-(8,8)-(8,46)
-*)
-
-(* correct types
-'a list
-'a list
-*)
-
-(* bad types
-'a list list
-'a list list
+(* type error slice
+(3,3)-(10,28)
+(3,19)-(9,30)
+(7,9)-(9,30)
+(7,21)-(7,22)
+(8,24)-(8,32)
+(8,24)-(8,39)
+(8,33)-(8,34)
+(8,35)-(8,39)
+(9,9)-(9,15)
+(9,9)-(9,30)
+(9,16)-(9,30)
+(9,17)-(9,22)
 *)

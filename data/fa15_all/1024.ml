@@ -55,29 +55,29 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(21,6)-(21,75)
-fun a ->
-  fun x ->
-    (let (y , z) = a in
-     let (r , s) = x in
-     let m = (r + s) + y in
-     (m / 10 , (m mod 10) :: z))
-LamG (LamG EmptyG)
+(20,19)-(20,20)
+a
+VarG
+
+(21,19)-(21,20)
+x
+VarG
 
 *)
 
-(* changed exprs
-Lam (Just (19,10)-(21,75)) (VarPat (Just (19,10)-(19,11)) "a") (Lam (Just (19,12)-(21,75)) (VarPat (Just (19,12)-(19,13)) "x") (Let (Just (20,6)-(21,75)) NonRec [(TuplePat (Just (20,11)-(20,14)) [VarPat (Just (20,11)-(20,12)) "y",VarPat (Just (20,13)-(20,14)) "z"],Var (Just (20,18)-(20,19)) "a")] (Let (Just (21,6)-(21,75)) NonRec [(TuplePat (Just (21,11)-(21,14)) [VarPat (Just (21,11)-(21,12)) "r",VarPat (Just (21,13)-(21,14)) "s"],Var (Just (21,18)-(21,19)) "x")] (Let (Just (21,23)-(21,75)) NonRec [(VarPat (Just (21,27)-(21,28)) "m",Bop (Just (21,31)-(21,42)) Plus (Bop (Just (21,31)-(21,38)) Plus (Var (Just (21,32)-(21,33)) "r") (Var (Just (21,36)-(21,37)) "s")) (Var (Just (21,41)-(21,42)) "y"))] (Tuple (Just (21,46)-(21,75)) [Bop (Just (21,47)-(21,55)) Div (Var (Just (21,48)-(21,49)) "m") (Lit (Just (21,52)-(21,54)) (LI 10)),ConApp (Just (21,57)-(21,74)) "::" (Just (Tuple (Just (21,58)-(21,73)) [Bop (Just (21,58)-(21,68)) Mod (Var (Just (21,59)-(21,60)) "m") (Lit (Just (21,65)-(21,67)) (LI 10)),Var (Just (21,72)-(21,73)) "z"])) Nothing])))) Nothing) Nothing
-*)
-
-(* typed spans
-(19,10)-(21,75)
-*)
-
-(* correct types
-(int * int list) -> (int * int) -> (int * int list)
-*)
-
-(* bad types
-(int * int list)
+(* type error slice
+(19,5)-(24,52)
+(19,11)-(21,76)
+(19,13)-(21,76)
+(20,7)-(21,76)
+(21,7)-(21,76)
+(21,19)-(21,20)
+(21,24)-(21,76)
+(21,32)-(21,39)
+(21,37)-(21,38)
+(21,47)-(21,76)
+(21,58)-(21,75)
+(24,19)-(24,33)
+(24,19)-(24,45)
+(24,34)-(24,35)
 *)

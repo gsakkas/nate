@@ -63,24 +63,21 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(29,33)-(29,63)
+(29,34)-(29,64)
 (buildThresh (x7 , x8 , x9 , x0) , x , y)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (29,33)-(29,71)) [App (Just (29,34)-(29,64)) (Var (Just (29,35)-(29,46)) "buildThresh") [Tuple (Just (29,47)-(29,63)) [Var (Just (29,48)-(29,50)) "x7",Var (Just (29,52)-(29,54)) "x8",Var (Just (29,56)-(29,58)) "x9",Var (Just (29,60)-(29,62)) "x0"]],Var (Just (29,66)-(29,67)) "x",Var (Just (29,69)-(29,70)) "y"]
-*)
-
-(* typed spans
-(29,33)-(29,71)
-*)
-
-(* correct types
-(expr * 'a * 'a)
-*)
-
-(* bad types
-expr
+(* type error slice
+(17,4)-(17,70)
+(17,18)-(17,68)
+(17,39)-(17,68)
+(28,22)-(28,26)
+(28,22)-(28,56)
+(28,27)-(28,56)
+(29,29)-(29,33)
+(29,29)-(29,64)
+(29,34)-(29,64)
+(29,35)-(29,46)
 *)

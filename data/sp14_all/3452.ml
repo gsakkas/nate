@@ -37,24 +37,14 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(13,2)-(13,7)
+(13,3)-(13,8)
 [1 ; 2]
-ListG LitG
+ListG (fromList [LitG])
 
 *)
 
-(* changed exprs
-List (Just (13,2)-(13,8)) [Lit (Just (13,3)-(13,4)) (LI 1),Lit (Just (13,6)-(13,7)) (LI 2)] Nothing
-*)
-
-(* typed spans
-(13,2)-(13,8)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-unit
+(* type error slice
+(13,3)-(13,4)
+(13,3)-(13,8)
+(13,5)-(13,6)
 *)

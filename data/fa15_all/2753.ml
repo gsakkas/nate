@@ -19,24 +19,20 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(7,25)-(7,26)
+(7,26)-(7,27)
 h
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (7,25)-(7,26)) "h"
-*)
-
-(* typed spans
-(7,25)-(7,26)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-'a list
+(* type error slice
+(2,4)-(2,65)
+(2,15)-(2,63)
+(2,17)-(2,63)
+(2,24)-(2,31)
+(2,29)-(2,30)
+(5,3)-(7,47)
+(7,14)-(7,23)
+(7,14)-(7,27)
+(7,26)-(7,27)
 *)

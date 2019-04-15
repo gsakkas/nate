@@ -49,174 +49,30 @@ let rec mulByDigit i l = if i = 0 then [0] else bigAdd l l;;
 *)
 
 (* changed spans
-(2,19)-(3,73)
-fun l1 ->
-  fun l2 ->
-    (let difference =
-       List.length l1 - List.length l2 in
-     if difference > 0
-     then (l1 , clone 0
-                      difference @ l2)
-     else if difference < 0
-          then (clone 0
-                      ((-1) * difference) @ l1 , l2)
-          else (l1 , l2))
-LamG (LamG EmptyG)
-
-(5,19)-(14,23)
-fun l1 ->
-  fun l2 ->
-    (let add =
-       fun (l1 , l2) ->
-         (let f =
-            fun a ->
-              fun x ->
-                match a with
-                | (o , l) -> (let sum =
-                                x + o in
-                              if sum < 10
-                              then (0 , sum :: l)
-                              else (1 , (sum - 10) :: l)) in
-          let base = (0 , []) in
-          let args =
-            (let combine =
-               fun (a , b) -> a + b in
-             List.map combine
-                      (List.rev (List.combine l1
-                                              l2)) @ [0]) in
-          let (_ , res) =
-            List.fold_left f base args in
-          res) in
-     removeZero (add (padZero l1
-                              l2)))
-LamG (LamG EmptyG)
-
-(7,4)-(13,67)
-fun l2 ->
-  (let add =
-     fun (l1 , l2) ->
-       (let f =
-          fun a ->
-            fun x ->
-              match a with
-              | (o , l) -> (let sum =
-                              x + o in
-                            if sum < 10
-                            then (0 , sum :: l)
-                            else (1 , (sum - 10) :: l)) in
-        let base = (0 , []) in
-        let args =
-          (let combine =
-             fun (a , b) -> a + b in
-           List.map combine
-                    (List.rev (List.combine l1
-                                            l2)) @ [0]) in
-        let (_ , res) =
-          List.fold_left f base args in
-        res) in
-   removeZero (add (padZero l1
-                            l2)))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(10,10)-(11,73)
-let sum = x + o in
-if sum < 10
-then (0 , sum :: l)
-else (1 , (sum - 10) :: l)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (IteG EmptyG EmptyG EmptyG)
-
-(11,13)-(11,17)
-sum
-VarG
-
-(11,33)-(11,37)
-sum
-VarG
-
-(11,56)-(11,60)
-sum
-VarG
-
-(13,15)-(13,16)
-let combine =
-  fun (a , b) -> a + b in
-List.map combine
-         (List.rev (List.combine l1
-                                 l2)) @ [0]
-LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
-
-(13,20)-(13,67)
-List.map combine
-         (List.rev (List.combine l1
-                                 l2)) @ [0]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
-
-(14,13)-(14,23)
-add (padZero l1 l2)
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(14,14)-(14,18)
-padZero
-VarG
-
-(14,19)-(14,20)
-fun i ->
-  fun l ->
-    if i = 0
-    then [0]
-    else bigAdd l l
-LamG (LamG EmptyG)
-
-(14,21)-(14,22)
-bigAdd l l
-AppG (fromList [VarG])
+(6,3)-(14,24)
+if i = 0
+then [0]
+else bigAdd l l
+IteG (BopG EmptyG EmptyG) (ListG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)
 
-(* typed spans
-(4,12)-(11,17)
-(16,11)-(28,34)
-(16,14)-(28,34)
-(21,10)-(22,70)
-(22,13)-(22,16)
-(22,32)-(22,35)
-(22,54)-(22,57)
-(25,6)-(26,62)
-(26,6)-(26,62)
-(28,13)-(28,34)
-(28,19)-(28,26)
-(30,19)-(30,58)
-(30,48)-(30,58)
-*)
-
-(* typed spans
-int list -> int list -> (int list * int list)
-int list -> int list -> int list
-int list -> int list
-(int * int list)
-int
-int
-int
-int list
-int list
-int list
-int list -> int list -> (int list * int list)
-int -> int list -> int list
-int list
-*)
-
-(* typed spans
-int list -> int list
-('a * int list) -> 'b -> int list
-int list
-(int * int list)
-int
-int
-int
-int list
-int list
-int list
-('a * int list) -> int list
-('a * int list)
-'a
+(* type error slice
+(6,3)-(14,24)
+(6,13)-(13,68)
+(7,5)-(13,68)
+(7,11)-(11,74)
+(8,7)-(11,74)
+(8,13)-(8,14)
+(11,33)-(11,44)
+(11,42)-(11,43)
+(12,5)-(13,68)
+(13,5)-(13,68)
+(13,21)-(13,68)
+(13,35)-(13,49)
+(13,35)-(13,61)
+(13,50)-(13,51)
+(13,65)-(13,68)
+(14,14)-(14,24)
+(14,15)-(14,19)
 *)

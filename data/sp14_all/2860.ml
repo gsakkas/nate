@@ -18,24 +18,18 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(8,9)-(8,75)
+(7,10)-(7,13)
 []
-ListG EmptyG
+ListG (fromList [])
+
+(8,10)-(8,76)
+digitsOfInt (n / 10) @ [n mod 10]
+AppG (fromList [AppG (fromList [EmptyG]),ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-List (Just (5,21)-(5,23)) [] Nothing
-*)
-
-(* typed spans
-(5,21)-(5,23)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-unit
+(* type error slice
+(8,10)-(8,76)
+(8,74)-(8,76)
+(8,76)-(8,76)
 *)

@@ -22,27 +22,32 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(13,28)-(14,67)
-let x = 0 in
-if n < 10
-then x
-else additivePersistence (n - 50)
-LetG NonRec (fromList [LitG]) (IteG EmptyG EmptyG EmptyG)
+(14,58)-(14,68)
+n - 50
+BopG VarG LitG
 
 *)
 
-(* changed exprs
-Let (Just (3,2)-(3,65)) NonRec [(VarPat (Just (3,6)-(3,7)) "x",Lit (Just (3,10)-(3,11)) (LI 0))] (Ite (Just (3,15)-(3,65)) (Bop (Just (3,18)-(3,24)) Lt (Var (Just (3,18)-(3,19)) "n") (Lit (Just (3,22)-(3,24)) (LI 10))) (Var (Just (3,30)-(3,31)) "x") (App (Just (3,37)-(3,65)) (Var (Just (3,37)-(3,56)) "additivePersistence") [Bop (Just (3,57)-(3,65)) Minus (Var (Just (3,58)-(3,59)) "n") (Lit (Just (3,62)-(3,64)) (LI 50))]))
-*)
-
-(* typed spans
-(3,2)-(3,65)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int -> int
+(* type error slice
+(2,22)-(2,74)
+(2,62)-(2,74)
+(2,63)-(2,69)
+(2,72)-(2,73)
+(9,30)-(9,36)
+(9,30)-(9,54)
+(9,39)-(9,54)
+(9,40)-(9,51)
+(11,4)-(11,37)
+(11,12)-(11,35)
+(11,16)-(11,27)
+(11,16)-(11,35)
+(13,4)-(14,70)
+(13,29)-(14,68)
+(14,19)-(14,20)
+(14,19)-(14,25)
+(14,23)-(14,25)
+(14,38)-(14,57)
+(14,38)-(14,68)
+(14,58)-(14,68)
+(14,59)-(14,65)
 *)

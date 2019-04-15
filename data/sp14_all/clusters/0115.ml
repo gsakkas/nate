@@ -1,13 +1,5 @@
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let new_carry =
-  ((carry + addend_a) + addend_b) / 10 in
-let digit =
-  ((carry + addend_a) + addend_b) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
-let secondDigit =
-  num mod 10 in
-let carryOver = num / 10 in
-let result =
-  secondDigit :: rest in
-(carryOver , rest)
+LamG (TuplePatG (fromList [VarPatG])) (ConAppG (Just EmptyG))
+fun (e1 , e2 , e3) ->
+  Weird (e1 , e2 , e3)
+fun (x , y) ->
+  ((x + y) / 10) :: a

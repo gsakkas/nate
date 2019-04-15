@@ -39,32 +39,25 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(14,16)-(14,21)
+(14,17)-(14,22)
 a
 VarG
 
-(16,15)-(16,18)
+(16,16)-(16,19)
 []
-ListG EmptyG
+ListG (fromList [])
 
 *)
 
-(* changed exprs
-Var (Just (14,16)-(14,17)) "a"
-List (Just (16,15)-(16,17)) [] Nothing
-*)
-
-(* typed spans
-(14,16)-(14,17)
-(16,15)-(16,17)
-*)
-
-(* correct types
-('a list * int list)
-'a list
-*)
-
-(* bad types
-int
-int list
+(* type error slice
+(14,5)-(16,70)
+(14,11)-(14,22)
+(14,17)-(14,18)
+(14,17)-(14,22)
+(15,5)-(16,70)
+(15,16)-(15,24)
+(16,37)-(16,51)
+(16,37)-(16,63)
+(16,52)-(16,53)
+(16,54)-(16,58)
 *)

@@ -11,24 +11,17 @@ let rec wwhile (f,b) =
 *)
 
 (* changed spans
-(3,34)-(3,39)
+(3,35)-(3,40)
 b
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (3,34)-(3,35)) "b"
-*)
-
-(* typed spans
-(3,34)-(3,35)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-'a
+(* type error slice
+(3,26)-(3,31)
+(3,26)-(3,47)
+(3,27)-(3,28)
+(3,34)-(3,47)
+(3,35)-(3,40)
+(3,36)-(3,37)
 *)

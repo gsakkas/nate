@@ -23,24 +23,13 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,23)-(7,31)
-List.mem
-VarG
+(7,24)-(7,39)
+List.mem h seen
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (7,23)-(7,31)) "List.mem"
-*)
-
-(* typed spans
-(7,23)-(7,31)
-*)
-
-(* correct types
-'a -> 'a list -> bool
-*)
-
-(* bad types
-'a list -> 'a list
+(* type error slice
+(7,24)-(7,32)
+(7,24)-(7,39)
 *)

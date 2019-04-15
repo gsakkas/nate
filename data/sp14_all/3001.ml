@@ -51,48 +51,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(20,16)-(20,17)
+(20,17)-(20,18)
 ([0] , [0])
-TupleG (fromList [ListG EmptyG])
+TupleG (fromList [ListG (fromList [EmptyG])])
 
-(21,15)-(21,16)
+(21,16)-(21,17)
 ([0] , [0])
-TupleG (fromList [ListG EmptyG])
+TupleG (fromList [ListG (fromList [EmptyG])])
 
-(22,4)-(22,74)
-[0]
-ListG LitG
-
-(22,15)-(22,23)
+(22,16)-(22,24)
 l1
 VarG
 
 *)
 
-(* changed exprs
-Tuple (Just (20,16)-(20,26)) [List (Just (20,17)-(20,20)) [Lit (Just (20,18)-(20,19)) (LI 0)] Nothing,List (Just (20,22)-(20,25)) [Lit (Just (20,23)-(20,24)) (LI 0)] Nothing]
-Tuple (Just (21,15)-(21,25)) [List (Just (21,16)-(21,19)) [Lit (Just (21,17)-(21,18)) (LI 0)] Nothing,List (Just (21,21)-(21,24)) [Lit (Just (21,22)-(21,23)) (LI 0)] Nothing]
-List (Just (21,21)-(21,24)) [Lit (Just (21,22)-(21,23)) (LI 0)] Nothing
-Var (Just (22,15)-(22,17)) "l1"
-*)
-
-(* typed spans
-(20,16)-(20,26)
-(21,15)-(21,25)
-(21,21)-(21,24)
-(22,15)-(22,17)
-*)
-
-(* correct types
-(int list * int list)
-(int list * int list)
-int list
-int list
-*)
-
-(* bad types
-int
-int
-int list
-(int list * int list)
+(* type error slice
+(22,5)-(22,75)
+(22,16)-(22,24)
+(22,42)-(22,56)
+(22,42)-(22,68)
+(22,64)-(22,68)
 *)

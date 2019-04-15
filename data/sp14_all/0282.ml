@@ -10,24 +10,16 @@ let rec listReverse l = match l with | [] -> l | h::t -> listReverse (h :: l);;
 *)
 
 (* changed spans
-(3,35)-(3,57)
+(3,36)-(3,58)
 listReverse (h :: l)
-AppG (fromList [ConAppG (Just (TupleG (fromList [VarG])))])
+AppG (fromList [ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-App (Just (2,57)-(2,77)) (Var (Just (2,57)-(2,68)) "listReverse") [ConApp (Just (2,69)-(2,77)) "::" (Just (Tuple (Just (2,70)-(2,76)) [Var (Just (2,70)-(2,71)) "h",Var (Just (2,75)-(2,76)) "l"])) Nothing]
-*)
-
-(* typed spans
-(2,57)-(2,77)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(2,4)-(3,60)
+(2,21)-(3,58)
+(3,3)-(3,58)
+(3,36)-(3,47)
+(3,36)-(3,58)
 *)

@@ -53,32 +53,13 @@ let rec additivePersistence n = if (n / 10) = 0 then 0 else addHelp (n, 0);;
 *)
 
 (* changed spans
-(24,35)-(24,41)
+(24,36)-(24,42)
 (n / 10) = 0
 BopG (BopG EmptyG EmptyG) LitG
 
-(24,54)-(24,68)
-0
-LitG
-
 *)
 
-(* changed exprs
-Bop (Just (24,35)-(24,47)) Eq (Bop (Just (24,35)-(24,43)) Div (Var (Just (24,36)-(24,37)) "n") (Lit (Just (24,40)-(24,42)) (LI 10))) (Lit (Just (24,46)-(24,47)) (LI 0))
-Lit (Just (24,53)-(24,54)) (LI 0)
-*)
-
-(* typed spans
-(24,35)-(24,47)
-(24,53)-(24,54)
-*)
-
-(* correct types
-bool
-int
-*)
-
-(* bad types
-int
-int
+(* type error slice
+(24,33)-(24,69)
+(24,36)-(24,42)
 *)

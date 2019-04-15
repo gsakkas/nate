@@ -21,32 +21,33 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(7,35)-(7,60)
+(7,36)-(7,61)
 (l1 , pad @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(8,40)-(8,65)
+(8,41)-(8,66)
 (pad @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (7,35)-(7,51)) [Var (Just (7,36)-(7,38)) "l1",App (Just (7,40)-(7,50)) (Var (Just (7,45)-(7,46)) "@") [Var (Just (7,41)-(7,44)) "pad",Var (Just (7,47)-(7,49)) "l2"]]
-Tuple (Just (8,40)-(8,56)) [App (Just (8,41)-(8,51)) (Var (Just (8,46)-(8,47)) "@") [Var (Just (8,42)-(8,45)) "pad",Var (Just (8,48)-(8,50)) "l1"],Var (Just (8,53)-(8,55)) "l2"]
-*)
-
-(* typed spans
-(7,35)-(7,51)
-(8,40)-(8,56)
-*)
-
-(* correct types
-(int list * int list)
-(int list * int list)
-*)
-
-(* bad types
-'a
-'a
+(* type error slice
+(5,16)-(5,32)
+(5,17)-(5,28)
+(5,29)-(5,31)
+(7,36)-(7,38)
+(7,36)-(7,61)
+(7,39)-(7,40)
+(7,41)-(7,61)
+(7,48)-(7,49)
+(7,50)-(7,60)
+(7,55)-(7,56)
+(7,57)-(7,59)
+(8,41)-(8,51)
+(8,41)-(8,66)
+(8,46)-(8,47)
+(8,52)-(8,53)
+(8,54)-(8,66)
+(8,61)-(8,62)
+(8,63)-(8,65)
 *)

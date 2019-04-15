@@ -19,24 +19,20 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(6,6)-(6,27)
+(6,7)-(6,28)
 mulByDigit i (m :: t)
-AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG])))])
+AppG (fromList [VarG,ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-App (Just (6,6)-(6,29)) (Var (Just (6,7)-(6,17)) "mulByDigit") [Var (Just (6,18)-(6,19)) "i",ConApp (Just (6,20)-(6,28)) "::" (Just (Tuple (Just (6,21)-(6,27)) [Var (Just (6,21)-(6,22)) "m",Var (Just (6,26)-(6,27)) "t"])) Nothing]
-*)
-
-(* typed spans
-(6,6)-(6,29)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(2,4)-(7,62)
+(2,20)-(7,60)
+(2,22)-(7,60)
+(3,3)-(7,60)
+(6,7)-(6,28)
+(6,7)-(7,60)
+(6,8)-(6,22)
+(6,9)-(6,19)
+(6,29)-(6,30)
 *)

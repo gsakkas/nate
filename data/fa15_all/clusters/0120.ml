@@ -1,4 +1,18 @@
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) LitG
-if getHead x = getHead (listReverse x)
-then matchHeads (getTail (listReverse t))
-else false
+IteG (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
+if (let (carry , ans) = a in
+    let (y , z) = x in
+    ((y + z) + carry) > 9)
+then (let (carry , ans) = a in
+      (1 , let (y , z) = x in
+           [((y + z) + carry) mod 10] @ ans))
+else (let (carry , ans) = a in
+      (0 , let (y , z) = x in
+           [(y + z) + carry] @ ans))
+if (let (carry , ans) = a in
+    let (y , z) = x in
+    ((y + z) + carry) = 10)
+then (let (carry , ans) = a in
+      (1 , [9] @ ans))
+else (let (carry , ans) = a in
+      (0 , let (y , z) = x in
+           [(y + z) + carry] @ ans))

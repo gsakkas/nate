@@ -9,24 +9,16 @@ let rec listReverse l = match l with | [] -> [] | h::t -> t @ [h];;
 *)
 
 (* changed spans
-(2,62)-(2,63)
+(2,63)-(2,64)
 [h]
-ListG VarG
+ListG (fromList [VarG])
 
 *)
 
-(* changed exprs
-List (Just (2,62)-(2,65)) [Var (Just (2,63)-(2,64)) "h"] Nothing
-*)
-
-(* typed spans
-(2,62)-(2,65)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a
+(* type error slice
+(2,25)-(2,64)
+(2,59)-(2,60)
+(2,59)-(2,64)
+(2,61)-(2,62)
+(2,63)-(2,64)
 *)

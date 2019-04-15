@@ -63,24 +63,17 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(29,16)-(29,58)
+(29,17)-(29,59)
 sqrt (abs_float (eval (n , x , y))) /. 1000.0
 BopG (AppG (fromList [EmptyG])) LitG
 
 *)
 
-(* changed exprs
-Bop (Just (29,16)-(29,61)) FDiv (App (Just (29,16)-(29,51)) (Var (Just (29,17)-(29,21)) "sqrt") [App (Just (29,22)-(29,50)) (Var (Just (29,23)-(29,32)) "abs_float") [App (Just (29,33)-(29,49)) (Var (Just (29,34)-(29,38)) "eval") [Tuple (Just (29,39)-(29,48)) [Var (Just (29,40)-(29,41)) "n",Var (Just (29,43)-(29,44)) "x",Var (Just (29,46)-(29,47)) "y"]]]]) (Lit (Just (29,55)-(29,61)) (LD 1000.0))
-*)
-
-(* typed spans
-(29,16)-(29,61)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(16,3)-(29,59)
+(19,15)-(19,18)
+(19,15)-(19,43)
+(29,17)-(29,52)
+(29,17)-(29,59)
+(29,18)-(29,22)
 *)

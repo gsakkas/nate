@@ -25,25 +25,19 @@ let rec additivePersistence n = let digits = digitsOfInt n in sumList digits;;
 *)
 
 (* changed spans
-(10,32)-(10,53)
+(10,33)-(10,54)
 let digits = digitsOfInt n in
 sumList digits
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (10,32)-(10,76)) NonRec [(VarPat (Just (10,36)-(10,42)) "digits",App (Just (10,45)-(10,58)) (Var (Just (10,45)-(10,56)) "digitsOfInt") [Var (Just (10,57)-(10,58)) "n"])] (App (Just (10,62)-(10,76)) (Var (Just (10,62)-(10,69)) "sumList") [Var (Just (10,70)-(10,76)) "digits"])
-*)
-
-(* typed spans
-(10,32)-(10,76)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-'a
+(* type error slice
+(5,8)-(5,63)
+(5,9)-(5,29)
+(8,56)-(8,71)
+(8,60)-(8,71)
+(8,61)-(8,68)
+(10,33)-(10,40)
+(10,33)-(10,54)
 *)

@@ -18,56 +18,26 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(5,29)-(5,50)
+(5,30)-(5,51)
 fun b'' -> (f b , false)
-LamG (TupleG (fromList [EmptyG]))
+LamG VarPatG (TupleG (fromList [EmptyG]))
 
-(5,43)-(5,48)
+(5,57)-(5,71)
 fun b'' -> (f b , true)
-LamG (TupleG (fromList [EmptyG]))
-
-(5,65)-(5,70)
-f
-VarG
-
-(5,73)-(5,74)
-true
-LitG
-
-(5,73)-(5,74)
-b
-VarG
+LamG VarPatG (TupleG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Lam (Just (7,11)-(7,37)) (VarPat (Just (7,15)-(7,18)) "b''") (Tuple (Just (7,23)-(7,37)) [App (Just (7,24)-(7,29)) (Var (Just (7,25)-(7,26)) "f") [Var (Just (7,27)-(7,28)) "b"],Lit (Just (7,31)-(7,36)) (LB False)]) Nothing
-Lam (Just (8,11)-(8,38)) (VarPat (Just (8,16)-(8,19)) "b''") (Tuple (Just (8,24)-(8,37)) [App (Just (8,25)-(8,30)) (Var (Just (8,26)-(8,27)) "f") [Var (Just (8,28)-(8,29)) "b"],Lit (Just (8,32)-(8,36)) (LB True)]) Nothing
-Var (Just (8,26)-(8,27)) "f"
-Lit (Just (8,32)-(8,36)) (LB True)
-Var (Just (8,41)-(8,42)) "b"
-*)
-
-(* typed spans
-(7,11)-(7,37)
-(8,11)-(8,38)
-(8,26)-(8,27)
-(8,32)-(8,36)
-(8,41)-(8,42)
-*)
-
-(* correct types
-'a -> ('a * bool)
-'a -> ('a * bool)
-'a -> 'a
-bool
-'a
-*)
-
-(* bad types
-('a * 'b)
-string
-string
-'a
-'a
+(* type error slice
+(2,38)-(2,39)
+(2,38)-(2,41)
+(2,56)-(2,62)
+(2,56)-(2,70)
+(2,63)-(2,70)
+(2,64)-(2,65)
+(5,3)-(5,9)
+(5,3)-(5,76)
+(5,10)-(5,76)
+(5,11)-(5,72)
+(5,30)-(5,51)
 *)

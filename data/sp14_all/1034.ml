@@ -19,24 +19,23 @@ let rec sepConcat sep sl =
 *)
 
 (* changed spans
-(6,20)-(6,21)
-(^)
-VarG
+(6,19)-(6,26)
+a ^ sep
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (6,20)-(6,21)) "^"
-*)
-
-(* typed spans
-(6,20)-(6,21)
-*)
-
-(* correct types
-string -> string -> string
-*)
-
-(* bad types
-'a list -> 'a list -> 'a list
+(* type error slice
+(3,3)-(7,59)
+(4,11)-(4,13)
+(6,7)-(7,59)
+(6,13)-(6,26)
+(6,19)-(6,20)
+(6,19)-(6,26)
+(6,21)-(6,22)
+(7,7)-(7,59)
+(7,23)-(7,59)
+(7,36)-(7,50)
+(7,36)-(7,59)
+(7,51)-(7,52)
 *)

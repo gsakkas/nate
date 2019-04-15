@@ -94,150 +94,52 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(4,14)-(4,65)
-fun n ->
-  if n <= 0
-  then []
-  else x :: (clone x (n - 1))
-LamG (IteG EmptyG EmptyG EmptyG)
+(2,16)-(2,62)
+EMPTY
+EmptyG
 
-(26,30)-(26,32)
+(35,1)-(35,1)
 fun l1 ->
   fun l2 ->
     match l1 with
     | [] -> []
     | h :: t -> (h , l2) :: (helper t
                                     l2)
-LamG (LamG EmptyG)
+LamG VarPatG (LamG VarPatG EmptyG)
 
-(40,8)-(42,73)
+(41,5)-(42,74)
 let (x1 , x2) = x in
 let (carry , res) = a in
 (carry @ [0] , bigAdd (mulByDigit x1
                                   x2 @ carry) res)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
 
-(42,4)-(42,73)
-(carry @ [0] , bigAdd (mulByDigit x1
-                                  x2 @ carry) res)
-TupleG (fromList [AppG (fromList [EmptyG])])
-
-(42,4)-(42,73)
-carry @ [0]
-AppG (fromList [VarG,ListG EmptyG])
-
-(42,43)-(42,49)
-(@)
-VarG
-
-(42,43)-(42,49)
-mulByDigit x1 x2
-AppG (fromList [VarG])
-
-(42,64)-(42,66)
-x1
-VarG
-
-(42,62)-(42,63)
-x2
-VarG
-
-(42,62)-(42,63)
-carry
-VarG
-
-(43,13)-(43,20)
+(43,15)-(43,16)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(43,14)-(43,15)
+(44,14)-(44,24)
 List.rev (helper l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(44,19)-(44,20)
-helper
-VarG
-
-(44,13)-(44,23)
-l1
-VarG
-
-(45,2)-(45,63)
+(45,3)-(45,64)
 let (_ , res) =
   List.fold_left f base args in
 res
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG,WildPatG]),AppG (fromList [EmptyG]))]) VarG
 
 *)
 
-(* changed exprs
-Lam (Just (2,16)-(2,65)) (VarPat (Just (2,16)-(2,17)) "n") (Ite (Just (2,20)-(2,65)) (Bop (Just (2,23)-(2,29)) Le (Var (Just (2,23)-(2,24)) "n") (Lit (Just (2,28)-(2,29)) (LI 0))) (List (Just (2,35)-(2,37)) [] Nothing) (ConApp (Just (2,43)-(2,65)) "::" (Just (Tuple (Just (2,43)-(2,65)) [Var (Just (2,43)-(2,44)) "x",App (Just (2,48)-(2,65)) (Var (Just (2,49)-(2,54)) "clone") [Var (Just (2,55)-(2,56)) "x",Bop (Just (2,57)-(2,64)) Minus (Var (Just (2,58)-(2,59)) "n") (Lit (Just (2,62)-(2,63)) (LI 1))]])) Nothing)) Nothing
-Lam (Just (26,15)-(27,61)) (VarPat (Just (26,15)-(26,17)) "l1") (Lam (Just (26,18)-(27,61)) (VarPat (Just (26,18)-(26,20)) "l2") (Case (Just (27,2)-(27,61)) (Var (Just (27,8)-(27,10)) "l1") [(ConPat (Just (27,18)-(27,20)) "[]" Nothing,Nothing,List (Just (27,24)-(27,26)) [] Nothing),(ConsPat (Just (27,29)-(27,33)) (VarPat (Just (27,29)-(27,30)) "h") (VarPat (Just (27,32)-(27,33)) "t"),Nothing,ConApp (Just (27,37)-(27,61)) "::" (Just (Tuple (Just (27,37)-(27,61)) [Tuple (Just (27,37)-(27,44)) [Var (Just (27,38)-(27,39)) "h",Var (Just (27,41)-(27,43)) "l2"],App (Just (27,48)-(27,61)) (Var (Just (27,49)-(27,55)) "helper") [Var (Just (27,56)-(27,57)) "t",Var (Just (27,58)-(27,60)) "l2"]])) Nothing)]) Nothing) Nothing
-Let (Just (39,4)-(41,62)) NonRec [(TuplePat (Just (39,9)-(39,14)) [VarPat (Just (39,9)-(39,11)) "x1",VarPat (Just (39,12)-(39,14)) "x2"],Var (Just (39,18)-(39,19)) "x")] (Let (Just (40,4)-(41,62)) NonRec [(TuplePat (Just (40,9)-(40,18)) [VarPat (Just (40,9)-(40,14)) "carry",VarPat (Just (40,15)-(40,18)) "res"],Var (Just (40,22)-(40,23)) "a")] (Tuple (Just (41,4)-(41,62)) [App (Just (41,5)-(41,18)) (Var (Just (41,12)-(41,13)) "@") [Var (Just (41,6)-(41,11)) "carry",List (Just (41,14)-(41,17)) [Lit (Just (41,15)-(41,16)) (LI 0)] Nothing],App (Just (41,20)-(41,61)) (Var (Just (41,21)-(41,27)) "bigAdd") [App (Just (41,28)-(41,56)) (Var (Just (41,48)-(41,49)) "@") [App (Just (41,29)-(41,47)) (Var (Just (41,30)-(41,40)) "mulByDigit") [Var (Just (41,41)-(41,43)) "x1",Var (Just (41,44)-(41,46)) "x2"],Var (Just (41,50)-(41,55)) "carry"],Var (Just (41,57)-(41,60)) "res"]]))
-Tuple (Just (41,4)-(41,62)) [App (Just (41,5)-(41,18)) (Var (Just (41,12)-(41,13)) "@") [Var (Just (41,6)-(41,11)) "carry",List (Just (41,14)-(41,17)) [Lit (Just (41,15)-(41,16)) (LI 0)] Nothing],App (Just (41,20)-(41,61)) (Var (Just (41,21)-(41,27)) "bigAdd") [App (Just (41,28)-(41,56)) (Var (Just (41,48)-(41,49)) "@") [App (Just (41,29)-(41,47)) (Var (Just (41,30)-(41,40)) "mulByDigit") [Var (Just (41,41)-(41,43)) "x1",Var (Just (41,44)-(41,46)) "x2"],Var (Just (41,50)-(41,55)) "carry"],Var (Just (41,57)-(41,60)) "res"]]
-App (Just (41,5)-(41,18)) (Var (Just (41,12)-(41,13)) "@") [Var (Just (41,6)-(41,11)) "carry",List (Just (41,14)-(41,17)) [Lit (Just (41,15)-(41,16)) (LI 0)] Nothing]
-Var (Just (41,48)-(41,49)) "@"
-App (Just (41,29)-(41,47)) (Var (Just (41,30)-(41,40)) "mulByDigit") [Var (Just (41,41)-(41,43)) "x1",Var (Just (41,44)-(41,46)) "x2"]
-Var (Just (41,41)-(41,43)) "x1"
-Var (Just (41,44)-(41,46)) "x2"
-Var (Just (41,50)-(41,55)) "carry"
-List (Just (42,18)-(42,20)) [] Nothing
-App (Just (43,13)-(43,36)) (Var (Just (43,13)-(43,21)) "List.rev") [App (Just (43,22)-(43,36)) (Var (Just (43,23)-(43,29)) "helper") [Var (Just (43,30)-(43,32)) "l1",Var (Just (43,33)-(43,35)) "l2"]]
-Var (Just (43,23)-(43,29)) "helper"
-Var (Just (43,30)-(43,32)) "l1"
-Let (Just (44,2)-(44,49)) NonRec [(TuplePat (Just (44,7)-(44,12)) [WildPat (Just (44,7)-(44,8)),VarPat (Just (44,9)-(44,12)) "res"],App (Just (44,16)-(44,42)) (Var (Just (44,16)-(44,30)) "List.fold_left") [Var (Just (44,31)-(44,32)) "f",Var (Just (44,33)-(44,37)) "base",Var (Just (44,38)-(44,42)) "args"])] (Var (Just (44,46)-(44,49)) "res")
-*)
-
-(* typed spans
-(2,16)-(2,65)
-(26,15)-(27,61)
-(39,4)-(41,62)
-(41,4)-(41,62)
-(41,5)-(41,18)
-(41,48)-(41,49)
-(41,29)-(41,47)
-(41,41)-(41,43)
-(41,44)-(41,46)
-(41,50)-(41,55)
-(42,18)-(42,20)
-(43,13)-(43,36)
-(43,23)-(43,29)
-(43,30)-(43,32)
-(44,2)-(44,49)
-*)
-
-(* correct types
-int -> int list
-int list -> int list -> (int * int list) list
-(int list * int list)
-(int list * int list)
-int list
-int list -> int list -> int list
-int list
-int
-int list
-int list
-int list
-(int * int list) list
-int list -> int list -> (int * int list) list
-int list
-int list
-*)
-
-(* bad types
-int -> int -> int list
-int list
-('a * int list) -> int list -> 'b list
-'a list
-'a list
-int list -> int list -> int list
-int list -> int list -> int list
-int list
-int
-int
-(int * 'a list)
-int
-int
-int list
-'a list
+(* type error slice
+(40,3)-(45,64)
+(40,9)-(42,74)
+(40,11)-(42,74)
+(41,5)-(42,74)
+(41,23)-(41,24)
+(42,5)-(42,74)
+(42,26)-(42,28)
+(42,39)-(42,74)
+(45,21)-(45,35)
+(45,21)-(45,47)
+(45,36)-(45,37)
 *)

@@ -1,3 +1,6 @@
-int list
-'a list
-(int * int) list
+(expr * float * float)
+(int list * int list)
+('a list * 'b list)
+('a -> ('a * bool) * 'a)
+(expr * float * 'a)
+('a * 'b * ('b * 'a) list)

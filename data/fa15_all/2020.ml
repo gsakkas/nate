@@ -14,26 +14,26 @@ let rec wwhile (f,b) = let (b',c') = f b in match c' with | false  -> b';;
 *)
 
 (* changed spans
-(3,2)-(7,23)
+(3,3)-(7,24)
 let (b' , c') = f b in
 match c' with
 | false -> b'
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),AppG (fromList [EmptyG]))]) (CaseG EmptyG (fromList [(LitPatG,Nothing,EmptyG)]))
 
 *)
 
-(* changed exprs
-Let (Just (2,23)-(2,72)) NonRec [(TuplePat (Just (2,28)-(2,33)) [VarPat (Just (2,28)-(2,30)) "b'",VarPat (Just (2,31)-(2,33)) "c'"],App (Just (2,37)-(2,40)) (Var (Just (2,37)-(2,38)) "f") [Var (Just (2,39)-(2,40)) "b"])] (Case (Just (2,44)-(2,72)) (Var (Just (2,50)-(2,52)) "c'") [(LitPat (Just (2,60)-(2,65)) (LB False),Nothing,Var (Just (2,70)-(2,72)) "b'")])
-*)
-
-(* typed spans
-(2,23)-(2,72)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-'a
+(* type error slice
+(3,3)-(7,24)
+(3,19)-(6,67)
+(4,5)-(6,67)
+(4,11)-(4,13)
+(6,25)-(6,27)
+(6,25)-(6,31)
+(7,3)-(7,9)
+(7,3)-(7,24)
+(7,10)-(7,24)
+(7,11)-(7,16)
+(7,12)-(7,13)
+(7,18)-(7,23)
+(7,19)-(7,20)
 *)

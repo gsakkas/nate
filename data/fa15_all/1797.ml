@@ -55,96 +55,55 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(16,41)-(16,43)
-t
-VarG
+(16,28)-(16,45)
+ex t
+AppG (fromList [VarG])
 
-(17,30)-(17,42)
-t
-VarG
+(17,30)-(17,47)
+ex t
+AppG (fromList [VarG])
 
-(19,14)-(19,26)
-ex
-VarG
+(19,14)-(19,32)
+ex ex1
+AppG (fromList [VarG])
 
-(19,43)-(19,55)
-ex
-VarG
+(19,43)-(19,61)
+ex ex2
+AppG (fromList [VarG])
 
-(20,24)-(20,36)
-ex
-VarG
+(20,24)-(20,42)
+ex ex1
+AppG (fromList [VarG])
 
-(20,52)-(20,64)
-ex
-VarG
+(20,52)-(20,70)
+ex ex2
+AppG (fromList [VarG])
 
-(23,10)-(23,22)
-ex
-VarG
+(23,10)-(23,28)
+ex ex1
+AppG (fromList [VarG])
 
-(25,16)-(25,28)
-ex
-VarG
+(25,16)-(25,34)
+ex ex2
+AppG (fromList [VarG])
 
-(27,22)-(27,34)
-ex
-VarG
+(27,22)-(27,40)
+ex ex3
+AppG (fromList [VarG])
 
-(27,51)-(27,63)
-ex
-VarG
+(27,51)-(27,69)
+ex ex4
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (16,31)-(16,32)) "t"
-Var (Just (17,33)-(17,34)) "t"
-Var (Just (18,33)-(18,35)) "ex"
-Var (Just (18,52)-(18,54)) "ex"
-Var (Just (19,24)-(19,26)) "ex"
-Var (Just (19,42)-(19,44)) "ex"
-Var (Just (22,10)-(22,12)) "ex"
-Var (Just (23,20)-(23,22)) "ex"
-Var (Just (23,39)-(23,41)) "ex"
-Var (Just (23,58)-(23,60)) "ex"
-*)
-
-(* typed spans
-(16,31)-(16,32)
-(17,33)-(17,34)
-(18,33)-(18,35)
-(18,52)-(18,54)
-(19,24)-(19,26)
-(19,42)-(19,44)
-(22,10)-(22,12)
-(23,20)-(23,22)
-(23,39)-(23,41)
-(23,58)-(23,60)
-*)
-
-(* correct types
-expr
-expr
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-*)
-
-(* bad types
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
-expr -> string
+(* type error slice
+(12,3)-(27,82)
+(12,12)-(12,24)
+(16,28)-(16,45)
+(16,29)-(16,41)
+(16,42)-(16,44)
+(17,30)-(17,47)
+(17,31)-(17,43)
+(17,44)-(17,46)
 *)

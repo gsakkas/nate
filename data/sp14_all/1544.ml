@@ -15,24 +15,19 @@ let sqsum xs =
 *)
 
 (* changed spans
-(4,39)-(4,41)
+(4,40)-(4,42)
 0
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (4,39)-(4,40)) (LI 0)
-*)
-
-(* typed spans
-(4,39)-(4,40)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-'a list
+(* type error slice
+(3,3)-(5,27)
+(3,9)-(3,26)
+(3,11)-(3,26)
+(3,19)-(3,26)
+(3,20)-(3,21)
+(4,36)-(4,37)
+(4,36)-(4,42)
+(4,40)-(4,42)
 *)

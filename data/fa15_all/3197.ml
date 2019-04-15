@@ -64,60 +64,52 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(26,6)-(26,76)
+(26,7)-(26,77)
 let (c , a1 :: a2) = a in
 let v = (x1 + x2) + c in
 (v / 10 , [v / 10] @ ([v mod 10] @ a2))
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG,ConsPatG EmptyPatG EmptyPatG]),VarG)]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
-(27,16)-(27,19)
+(27,17)-(27,20)
 0
 LitG
 
-(27,22)-(27,23)
+(27,23)-(27,24)
 0
 LitG
 
-(27,22)-(27,23)
+(28,16)-(28,34)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(29,4)-(29,60)
+(29,5)-(29,61)
 let (_ , res) =
   List.fold_left f base args in
 res
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG,WildPatG]),AppG (fromList [EmptyG]))]) VarG
 
 *)
 
-(* changed exprs
-Let (Just (24,6)-(25,73)) NonRec [(TuplePat (Just (24,11)-(24,19)) [VarPat (Just (24,11)-(24,12)) "c",ConsPat (Just (24,13)-(24,19)) (VarPat (Just (24,13)-(24,15)) "a1") (VarPat (Just (24,17)-(24,19)) "a2")],Var (Just (24,23)-(24,24)) "a")] (Let (Just (25,6)-(25,73)) NonRec [(VarPat (Just (25,10)-(25,11)) "v",Bop (Just (25,14)-(25,27)) Plus (Bop (Just (25,14)-(25,23)) Plus (Var (Just (25,15)-(25,17)) "x1") (Var (Just (25,20)-(25,22)) "x2")) (Var (Just (25,26)-(25,27)) "c"))] (Tuple (Just (25,31)-(25,73)) [Bop (Just (25,32)-(25,40)) Div (Var (Just (25,33)-(25,34)) "v") (Lit (Just (25,37)-(25,39)) (LI 10)),App (Just (25,42)-(25,72)) (Var (Just (25,52)-(25,53)) "@") [List (Just (25,43)-(25,51)) [Bop (Just (25,44)-(25,50)) Div (Var (Just (25,44)-(25,45)) "v") (Lit (Just (25,48)-(25,50)) (LI 10))] Nothing,App (Just (25,54)-(25,71)) (Var (Just (25,66)-(25,67)) "@") [List (Just (25,55)-(25,65)) [Bop (Just (25,56)-(25,64)) Mod (Var (Just (25,56)-(25,57)) "v") (Lit (Just (25,62)-(25,64)) (LI 10))] Nothing,Var (Just (25,68)-(25,70)) "a2"]]]))
-Lit (Just (26,16)-(26,17)) (LI 0)
-Lit (Just (26,20)-(26,21)) (LI 0)
-App (Just (27,15)-(27,44)) (Var (Just (27,15)-(27,23)) "List.rev") [App (Just (27,24)-(27,44)) (Var (Just (27,25)-(27,37)) "List.combine") [Var (Just (27,38)-(27,40)) "l1",Var (Just (27,41)-(27,43)) "l2"]]
-Let (Just (28,4)-(28,51)) NonRec [(TuplePat (Just (28,9)-(28,14)) [WildPat (Just (28,9)-(28,10)),VarPat (Just (28,11)-(28,14)) "res"],App (Just (28,18)-(28,44)) (Var (Just (28,18)-(28,32)) "List.fold_left") [Var (Just (28,33)-(28,34)) "f",Var (Just (28,35)-(28,39)) "base",Var (Just (28,40)-(28,44)) "args"])] (Var (Just (28,48)-(28,51)) "res")
-*)
-
-(* typed spans
-(24,6)-(25,73)
-(26,16)-(26,17)
-(26,20)-(26,21)
-(27,15)-(27,44)
-(28,4)-(28,51)
-*)
-
-(* correct types
-(int * int list)
-int
-int
-(int * int) list
-int list
-*)
-
-(* bad types
-(int list * int list)
-int list
-int
-int
-(int list * int list)
+(* type error slice
+(5,4)-(5,14)
+(5,7)-(5,12)
+(20,8)-(20,67)
+(20,45)-(20,55)
+(20,45)-(20,57)
+(20,56)-(20,57)
+(23,3)-(30,35)
+(23,12)-(29,61)
+(24,5)-(29,61)
+(26,53)-(26,54)
+(26,53)-(26,58)
+(26,69)-(26,70)
+(26,69)-(26,74)
+(27,5)-(29,61)
+(28,5)-(29,61)
+(29,5)-(29,61)
+(29,51)-(29,61)
+(30,3)-(30,13)
+(30,3)-(30,35)
+(30,14)-(30,35)
+(30,15)-(30,18)
 *)

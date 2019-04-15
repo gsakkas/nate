@@ -1,6 +1,7 @@
-AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG])))])
-padZero (0 :: l1) (0 :: l2)
-List.rev (0 :: l1)
-List.rev (0 :: l2)
-List.combine (0 :: l1)
-             (0 :: l2)
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,VarG)])
+match a with
+| (x , y) -> x
+match a with
+| (f , g) -> f
+match a with
+| (a1 , a2) -> a2

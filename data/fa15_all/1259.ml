@@ -45,24 +45,16 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(10,31)-(10,33)
+(10,32)-(10,34)
 List.length l'
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (10,31)-(10,47)) (Var (Just (10,32)-(10,43)) "List.length") [Var (Just (10,44)-(10,46)) "l'"]
-*)
-
-(* typed spans
-(10,31)-(10,47)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int list
+(* type error slice
+(3,3)-(20,43)
+(10,12)-(10,29)
+(10,12)-(10,34)
+(10,13)-(10,24)
+(10,32)-(10,34)
 *)

@@ -59,48 +59,23 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(18,42)-(18,54)
-(^)
-VarG
+(18,42)-(18,66)
+exprToString e2 ^ ")/2)"
+AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(18,42)-(18,54)
-exprToString e2
-AppG (fromList [VarG])
-
-(20,41)-(20,53)
-(^)
-VarG
-
-(20,41)-(20,53)
-exprToString e2
-AppG (fromList [VarG])
+(20,41)-(20,62)
+exprToString e2 ^ ")"
+AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-Var (Just (18,60)-(18,61)) "^"
-App (Just (18,42)-(18,59)) (Var (Just (18,43)-(18,55)) "exprToString") [Var (Just (18,56)-(18,58)) "e2"]
-Var (Just (20,59)-(20,60)) "^"
-App (Just (20,41)-(20,58)) (Var (Just (20,42)-(20,54)) "exprToString") [Var (Just (20,55)-(20,57)) "e2"]
-*)
-
-(* typed spans
-(18,60)-(18,61)
-(18,42)-(18,59)
-(20,59)-(20,60)
-(20,41)-(20,58)
-*)
-
-(* correct types
-string -> string -> string
-string
-string -> string -> string
-string
-*)
-
-(* bad types
-expr -> string
-expr -> string
-expr -> string
-expr -> string
+(* type error slice
+(15,29)-(15,54)
+(15,30)-(15,47)
+(15,31)-(15,43)
+(15,48)-(15,49)
+(18,42)-(18,66)
+(18,43)-(18,55)
+(20,41)-(20,62)
+(20,42)-(20,54)
 *)

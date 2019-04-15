@@ -71,32 +71,19 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(26,11)-(26,51)
+(26,12)-(26,52)
 List.rev (List.tl (List.rev (h1 :: t1)))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(29,11)-(29,51)
+(29,12)-(29,52)
 List.rev (List.tl (List.rev (h1 :: t1)))
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (26,11)-(26,53)) (Var (Just (26,12)-(26,20)) "List.rev") [App (Just (26,21)-(26,52)) (Var (Just (26,22)-(26,29)) "List.tl") [App (Just (26,30)-(26,51)) (Var (Just (26,31)-(26,39)) "List.rev") [ConApp (Just (26,40)-(26,50)) "::" (Just (Tuple (Just (26,41)-(26,49)) [Var (Just (26,41)-(26,43)) "h1",Var (Just (26,47)-(26,49)) "t1"])) Nothing]]]
-App (Just (29,11)-(29,53)) (Var (Just (29,12)-(29,20)) "List.rev") [App (Just (29,21)-(29,52)) (Var (Just (29,22)-(29,29)) "List.tl") [App (Just (29,30)-(29,51)) (Var (Just (29,31)-(29,39)) "List.rev") [ConApp (Just (29,40)-(29,50)) "::" (Just (Tuple (Just (29,41)-(29,49)) [Var (Just (29,41)-(29,43)) "h1",Var (Just (29,47)-(29,49)) "t1"])) Nothing]]]
-*)
-
-(* typed spans
-(26,11)-(26,53)
-(29,11)-(29,53)
-*)
-
-(* correct types
-int list
-int list
-*)
-
-(* bad types
-int list
-int list
+(* type error slice
+(26,12)-(26,52)
+(26,13)-(26,21)
+(29,12)-(29,52)
+(29,13)-(29,21)
 *)

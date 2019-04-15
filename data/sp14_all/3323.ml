@@ -15,25 +15,22 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(5,12)-(5,46)
+(5,13)-(5,47)
 mulByDigit i
            (List.rev t) @ [0]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
+AppG (fromList [AppG (fromList [EmptyG]),ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (5,12)-(5,47)) (Var (Just (5,41)-(5,42)) "@") [App (Just (5,13)-(5,40)) (Var (Just (5,14)-(5,24)) "mulByDigit") [Var (Just (5,25)-(5,26)) "i",App (Just (5,27)-(5,39)) (Var (Just (5,28)-(5,36)) "List.rev") [Var (Just (5,37)-(5,38)) "t"]],List (Just (5,43)-(5,46)) [Lit (Just (5,44)-(5,45)) (LI 0)] Nothing]
-*)
-
-(* typed spans
-(5,12)-(5,47)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(2,4)-(5,59)
+(2,20)-(5,57)
+(2,22)-(5,57)
+(3,3)-(5,57)
+(5,13)-(5,47)
+(5,13)-(5,57)
+(5,14)-(5,41)
+(5,15)-(5,25)
+(5,45)-(5,46)
+(5,48)-(5,49)
 *)

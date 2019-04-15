@@ -65,24 +65,16 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(30,19)-(30,25)
+(30,20)-(30,26)
 (-. pi)
 UopG VarG
 
 *)
 
-(* changed exprs
-Uop (Just (30,19)-(30,26)) FNeg (Var (Just (30,23)-(30,25)) "pi")
-*)
-
-(* typed spans
-(30,19)-(30,26)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(14,4)-(14,29)
+(14,10)-(14,27)
+(30,19)-(30,56)
+(30,20)-(30,26)
+(30,23)-(30,25)
 *)

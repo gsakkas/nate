@@ -73,24 +73,16 @@ let rec exprToString ex =
 *)
 
 (* changed spans
-(34,29)-(34,41)
+(34,30)-(34,42)
 exprToString e
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (34,29)-(34,45)) (Var (Just (34,30)-(34,42)) "exprToString") [Var (Just (34,43)-(34,44)) "e"]
-*)
-
-(* typed spans
-(34,29)-(34,45)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-expr -> string
+(* type error slice
+(17,28)-(17,44)
+(17,29)-(17,41)
+(34,29)-(34,49)
+(34,30)-(34,42)
+(34,43)-(34,44)
 *)

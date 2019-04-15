@@ -54,64 +54,25 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(22,15)-(22,22)
+(22,16)-(22,23)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(24,4)-(24,51)
+(24,5)-(24,52)
 List.fold_left f base args
 AppG (fromList [VarG])
 
-(24,4)-(24,51)
-List.fold_left
-VarG
-
-(24,4)-(24,51)
-f
-VarG
-
-(24,4)-(24,51)
-base
-VarG
-
-(24,4)-(24,51)
-args
-VarG
-
 *)
 
-(* changed exprs
-List (Just (22,15)-(22,17)) [] Nothing
-App (Just (23,48)-(23,74)) (Var (Just (23,48)-(23,62)) "List.fold_left") [Var (Just (23,63)-(23,64)) "f",Var (Just (23,65)-(23,69)) "base",Var (Just (23,70)-(23,74)) "args"]
-Var (Just (23,48)-(23,62)) "List.fold_left"
-Var (Just (23,63)-(23,64)) "f"
-Var (Just (23,65)-(23,69)) "base"
-Var (Just (23,70)-(23,74)) "args"
-*)
-
-(* typed spans
-(22,15)-(22,17)
-(23,48)-(23,74)
-(23,48)-(23,62)
-(23,63)-(23,64)
-(23,65)-(23,69)
-(23,70)-(23,74)
-*)
-
-(* correct types
-int list
-int list
-(int list -> (int * int) -> int list) -> int list -> (int * int) list -> int list
-int list -> (int * int) -> int list
-int list
-(int * int) list
-*)
-
-(* bad types
-(int * 'a list)
-int list
-int list
-int list
-int list
-int list
+(* type error slice
+(17,5)-(24,52)
+(17,11)-(21,36)
+(19,7)-(21,36)
+(19,13)-(19,14)
+(22,5)-(24,52)
+(22,16)-(22,23)
+(24,19)-(24,33)
+(24,19)-(24,45)
+(24,34)-(24,35)
+(24,36)-(24,40)
 *)

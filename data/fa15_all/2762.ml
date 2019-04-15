@@ -25,24 +25,21 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(10,11)-(10,26)
+(10,12)-(10,27)
 remainder i h
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (10,11)-(10,26)) (Var (Just (10,12)-(10,21)) "remainder") [Var (Just (10,22)-(10,23)) "i",Var (Just (10,24)-(10,25)) "h"]
-*)
-
-(* typed spans
-(10,11)-(10,26)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int list
+(* type error slice
+(9,12)-(9,19)
+(9,12)-(9,38)
+(9,13)-(9,18)
+(9,20)-(9,21)
+(9,22)-(9,38)
+(9,23)-(9,33)
+(10,12)-(10,27)
+(10,12)-(10,47)
+(10,31)-(10,47)
+(10,32)-(10,42)
 *)

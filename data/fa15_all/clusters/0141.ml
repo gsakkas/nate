@@ -1,2 +1,4 @@
-AppG (fromList [VarG,LamG EmptyG])
-List.map (fun t -> f t) l
+IteG (BopG EmptyG EmptyG) (ListG (fromList [])) (ConAppG (Just EmptyG))
+if n = 0
+then []
+else x :: (clone x (n - 1))

@@ -1,72 +1,53 @@
-LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
-let base = fun b -> b in
-List.fold_left f base fs
-let helper =
-  fun x ->
-    if b = f b
-    then (b , false)
-    else (b , true) in
-wwhile (helper , b)
-let helper =
-  fun x ->
-    if x = f x
-    then (x , false)
-    else (f x , true) in
-wwhile (helper , b)
-let f =
-  fun x ->
-    (let xx = f b in
-     (xx , xx <> b)) in
-wwhile (f , b)
-let w =
-  fun b' ->
-    (let fb = f b' in
-     (fb , fb = b')) in
-wwhile (w , b)
-let max' =
-  fun a ->
-    fun b ->
-      if a < b then b else a in
-max' 1.0 (min 1.0
-              ((2.71 ** ((sin (pi *. eval (a , x , y)) +. cos (pi *. eval (b , x , y))) -. 1.0)) -. 1.0))
-let xxx =
-  fun n ->
-    match n with
-    | 0 -> []
-    | n -> if n < 0
-           then []
-           else (n mod 10) :: (digitsOfInt (n / 10)) in
-listReverse (xxx n)
-let fx =
-  fun b' ->
-    (f b' , f b' = b') in
-wwhile (fx , b)
-let whilesFun =
-  fun f' ->
-    fun b' ->
-      (let fOfB = f' b' in
-       (fOfB , fOfB = b')) in
-whilesFun f
-let g = fun b -> (b , f b) in
-wwhile (g , b)
-let g =
-  fun b -> (f b , true) in
-wwhile (g , f b)
-let f =
-  fun b -> (f b , b = f b) in
-wwhile (f , b)
-let f =
-  fun b -> (f b , f b = b) in
-wwhile (f , b)
-let f =
+LamG VarPatG (LamG VarPatG EmptyG)
+fun g ->
   fun b ->
-    (let b' = f b in
-     (b' , f b <> b)) in
-wwhile (f , b)
-let helper =
+    fun y ->
+      fun n ->
+        match n with
+        | [] -> n
+        | _ -> y b
+fun x ->
+  fun a ->
+    (let (carry , num) = a in
+     let (l1' , l2') = x in
+     let addit =
+       (l1' + l2') + carry in
+     (if addit > 10
+      then 1
+      else 0 , (addit mod 10) :: num))
+fun x -> fun a -> a
+fun x -> fun a -> x a
+fun a -> fun x -> a x
+fun i ->
+  fun l ->
+    fun acc ->
+      match i with
+      | 0 -> [0]
+      | 1 -> l
+      | _ -> helper (i - 1) l
+                    (bigAdd acc l)
+fun f -> fun a -> f a x
+fun absNum ->
+  fun persCount ->
+    if absNum < 10
+    then (persCount , absNum)
+    else (let xs =
+            digits absNum in
+          let theSum = sumList xs in
+          additivePersAndRoot theSum
+                              (persCount + 1))
+fun h ->
   fun x ->
-    fun n ->
-      if n < 1
-      then accum
-      else x :: accum in
-helper x (n - 1)
+    (let xx = h x in
+     (xx , xx = h x))
+fun f ->
+  fun l ->
+    match l with
+    | [] -> "[]"
+    | x :: xs -> (let g =
+                    fun a ->
+                      fun x -> a ^ ("; " ^ f x) in
+                  let base = "[" ^ f x in
+                  List.fold_left g base
+                                 xs ^ "]")
+fun a -> fun x -> x

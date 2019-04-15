@@ -1,27 +1,6 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let args =
-  List.combine (List.rev l1)
-               (List.rev l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.rev (List.combine l1
-                         l2) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args = List.rev l2 in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let args =
-  List.combine l1 l2 in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let ll1 = List.length l1 in
-let ll2 = List.length l2 in
-(clone 0
-       (ll2 - ll1) @ l1 , clone 0
-                                (ll1 - ll2) @ l2)
+BopG (AppG (fromList [EmptyG])) LitG
+(2.71 ** ((sin (pi *. eval (a , x , y)) +. cos (pi *. eval (b , x , y))) -. 1.0)) -. 1.0
+tan (pi *. eval (e , x , y)) /. 2.0
+List.mem h seen = false
+List.length l + 1
+List.length t < 2

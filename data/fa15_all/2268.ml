@@ -67,72 +67,35 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(31,5)-(31,10)
+(31,6)-(31,11)
 i >= 0
 BopG VarG LitG
 
-(31,25)-(31,31)
-List.rev
-VarG
+(31,17)-(31,20)
+List.rev (mulByDigit (i - 1)
+                     l)
+AppG (fromList [AppG (fromList [EmptyG])])
 
-(31,46)-(31,57)
-i - 1
-BopG VarG LitG
-
-(31,46)-(31,57)
-i
-VarG
-
-(31,46)-(31,57)
-1
-LitG
-
-(31,46)-(31,57)
-l
-VarG
-
-(31,46)-(31,57)
+(31,26)-(31,59)
 bigAdd l l
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Bop (Just (31,5)-(31,11)) Ge (Var (Just (31,5)-(31,6)) "i") (Lit (Just (31,10)-(31,11)) (LI 0))
-Var (Just (31,17)-(31,25)) "List.rev"
-Bop (Just (31,38)-(31,45)) Minus (Var (Just (31,39)-(31,40)) "i") (Lit (Just (31,43)-(31,44)) (LI 1))
-Var (Just (31,39)-(31,40)) "i"
-Lit (Just (31,43)-(31,44)) (LI 1)
-Var (Just (31,46)-(31,47)) "l"
-App (Just (31,54)-(31,64)) (Var (Just (31,54)-(31,60)) "bigAdd") [Var (Just (31,61)-(31,62)) "l",Var (Just (31,63)-(31,64)) "l"]
-*)
-
-(* typed spans
-(31,5)-(31,11)
-(31,17)-(31,25)
-(31,38)-(31,45)
-(31,39)-(31,40)
-(31,43)-(31,44)
-(31,46)-(31,47)
-(31,54)-(31,64)
-*)
-
-(* correct types
-bool
-int list -> int list
-int
-int
-int
-int list
-int list
-*)
-
-(* bad types
-bool
-int list -> int list -> int list
-'a
-'a
-'a
-'a
-'a
+(* type error slice
+(16,4)-(28,37)
+(16,12)-(28,35)
+(16,15)-(28,35)
+(30,4)-(31,61)
+(30,20)-(31,59)
+(30,22)-(31,59)
+(31,3)-(31,59)
+(31,17)-(31,20)
+(31,26)-(31,32)
+(31,26)-(31,59)
+(31,33)-(31,59)
+(31,34)-(31,35)
+(31,36)-(31,46)
+(31,47)-(31,58)
+(31,48)-(31,55)
 *)

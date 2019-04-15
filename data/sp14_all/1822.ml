@@ -39,24 +39,17 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(18,5)-(18,46)
+(18,6)-(18,47)
 1 + additivePersistence num
 BopG LitG (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Bop (Just (16,5)-(16,34)) Plus (Lit (Just (16,5)-(16,6)) (LI 1)) (App (Just (16,9)-(16,34)) (Var (Just (16,10)-(16,29)) "additivePersistence") [Var (Just (16,30)-(16,33)) "num"])
-*)
-
-(* typed spans
-(16,5)-(16,34)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-bool
+(* type error slice
+(12,3)-(18,48)
+(13,8)-(13,9)
+(15,5)-(18,48)
+(16,6)-(18,47)
+(17,6)-(18,47)
+(18,6)-(18,47)
 *)

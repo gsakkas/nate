@@ -89,39 +89,45 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(34,7)-(34,69)
+(34,8)-(34,70)
 match i with
 | 1 -> l
 | 10 -> l @ [0]
 | _ -> bigAdd l
               (mulByDigit (i - 1) l)
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
+CaseG VarG (fromList [(LitPatG,Nothing,VarG),(LitPatG,Nothing,AppG (fromList [EmptyG])),(WildPatG,Nothing,AppG (fromList [EmptyG]))])
 
-(37,14)-(37,40)
+(37,15)-(37,41)
 let (c , a') = a in
 let m = mulByDigit x l2 in
 let s = bigAdd m a' in
 (c + 1 , s)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Case (Just (35,4)-(38,44)) (Var (Just (35,11)-(35,12)) "i") [(LitPat (Just (36,7)-(36,8)) (LI 1),Nothing,Var (Just (36,12)-(36,13)) "l"),(LitPat (Just (37,7)-(37,9)) (LI 10),Nothing,App (Just (37,13)-(37,20)) (Var (Just (37,15)-(37,16)) "@") [Var (Just (37,13)-(37,14)) "l",List (Just (37,17)-(37,20)) [Lit (Just (37,18)-(37,19)) (LI 0)] Nothing]),(WildPat (Just (38,7)-(38,8)),Nothing,App (Just (38,12)-(38,43)) (Var (Just (38,12)-(38,18)) "bigAdd") [Var (Just (38,19)-(38,20)) "l",App (Just (38,21)-(38,43)) (Var (Just (38,22)-(38,32)) "mulByDigit") [Bop (Just (38,33)-(38,40)) Minus (Var (Just (38,34)-(38,35)) "i") (Lit (Just (38,38)-(38,39)) (LI 1)),Var (Just (38,41)-(38,42)) "l"]])]
-Let (Just (42,4)-(43,66)) NonRec [(TuplePat (Just (42,9)-(42,13)) [VarPat (Just (42,9)-(42,10)) "c",VarPat (Just (42,11)-(42,13)) "a'"],Var (Just (42,17)-(42,18)) "a")] (Let (Just (43,4)-(43,66)) NonRec [(VarPat (Just (43,8)-(43,9)) "m",App (Just (43,12)-(43,27)) (Var (Just (43,12)-(43,22)) "mulByDigit") [Var (Just (43,23)-(43,24)) "x",Var (Just (43,25)-(43,27)) "l2"])] (Let (Just (43,31)-(43,66)) NonRec [(VarPat (Just (43,35)-(43,36)) "s",App (Just (43,39)-(43,50)) (Var (Just (43,39)-(43,45)) "bigAdd") [Var (Just (43,46)-(43,47)) "m",Var (Just (43,48)-(43,50)) "a'"])] (Tuple (Just (43,54)-(43,66)) [Bop (Just (43,55)-(43,62)) Plus (Var (Just (43,56)-(43,57)) "c") (Lit (Just (43,60)-(43,61)) (LI 1)),Var (Just (43,64)-(43,65)) "s"])))
-*)
-
-(* typed spans
-(35,4)-(38,44)
-(42,4)-(43,66)
-*)
-
-(* correct types
-int list
-(int * int list)
-*)
-
-(* bad types
-int list
-int list
+(* type error slice
+(18,8)-(18,67)
+(18,20)-(18,21)
+(18,25)-(18,66)
+(18,45)-(18,55)
+(18,45)-(18,57)
+(18,65)-(18,66)
+(20,4)-(29,37)
+(20,12)-(29,35)
+(20,15)-(29,35)
+(21,3)-(29,35)
+(29,3)-(29,13)
+(29,3)-(29,35)
+(37,3)-(39,67)
+(37,9)-(37,41)
+(37,11)-(37,41)
+(37,15)-(37,21)
+(37,15)-(37,41)
+(38,3)-(39,67)
+(38,14)-(38,22)
+(39,34)-(39,48)
+(39,34)-(39,60)
+(39,49)-(39,50)
+(39,51)-(39,55)
 *)

@@ -10,32 +10,18 @@ let rec wwhile (f,b) =
 *)
 
 (* changed spans
-(2,70)-(2,71)
-wwhile
-VarG
-
-(2,70)-(2,71)
-(f , a)
-TupleG (fromList [VarG])
+(2,71)-(2,74)
+wwhile (f , a)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Var (Just (3,49)-(3,55)) "wwhile"
-Tuple (Just (3,56)-(3,62)) [Var (Just (3,57)-(3,58)) "f",Var (Just (3,60)-(3,61)) "a"]
-*)
-
-(* typed spans
-(3,49)-(3,55)
-(3,56)-(3,62)
-*)
-
-(* correct types
-('a -> ('a * bool) * 'a) -> 'a
-('a -> ('a * bool) * 'a)
-*)
-
-(* bad types
-'a -> 'a
-'a -> 'a
+(* type error slice
+(2,24)-(2,74)
+(2,30)-(2,31)
+(2,30)-(2,33)
+(2,50)-(2,74)
+(2,64)-(2,65)
+(2,71)-(2,72)
+(2,71)-(2,74)
 *)

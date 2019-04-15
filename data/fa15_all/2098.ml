@@ -77,33 +77,30 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(36,16)-(36,17)
+(36,17)-(36,18)
 [0]
-ListG LitG
+ListG (fromList [LitG])
 
-(36,44)-(36,76)
+(36,45)-(36,77)
 bigAdd l (mulByDigit (i - 1)
                      l)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-List (Just (36,16)-(36,19)) [Lit (Just (36,17)-(36,18)) (LI 0)] Nothing
-App (Just (36,46)-(36,77)) (Var (Just (36,46)-(36,52)) "bigAdd") [Var (Just (36,53)-(36,54)) "l",App (Just (36,55)-(36,77)) (Var (Just (36,56)-(36,66)) "mulByDigit") [Bop (Just (36,67)-(36,74)) Minus (Var (Just (36,68)-(36,69)) "i") (Lit (Just (36,72)-(36,73)) (LI 1)),Var (Just (36,75)-(36,76)) "l"]]
-*)
-
-(* typed spans
-(36,16)-(36,19)
-(36,46)-(36,77)
-*)
-
-(* correct types
-int list
-int list
-*)
-
-(* bad types
-int
-int list
+(* type error slice
+(16,3)-(16,69)
+(16,9)-(16,10)
+(16,36)-(16,69)
+(16,50)-(16,60)
+(16,50)-(16,62)
+(16,68)-(16,69)
+(22,4)-(33,37)
+(22,12)-(33,35)
+(22,15)-(33,35)
+(23,3)-(33,35)
+(33,3)-(33,13)
+(33,3)-(33,35)
+(36,45)-(36,51)
+(36,45)-(36,77)
 *)

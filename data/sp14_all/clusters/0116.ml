@@ -1,4 +1,2 @@
-LetG NonRec (fromList [ConAppG (Just EmptyG)]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let seen' = h :: seen in
-let rest' = t in
-helper (seen' , rest')
+AppG (fromList [LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG])
+x (let fn = fun d -> d in fn)

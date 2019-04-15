@@ -16,27 +16,23 @@ let stringOfList f l = match l with | x::[] -> "[" ^ (x ^ "]");;
 *)
 
 (* changed spans
-(2,18)-(7,58)
-fun f ->
-  fun l ->
-    match l with
-    | x :: [] -> "[" ^ (x ^ "]")
-LamG (LamG EmptyG)
+(9,24)-(9,56)
+match l with
+| x :: [] -> "[" ^ (x ^ "]")
+CaseG VarG (fromList [(ConsPatG VarPatG (ConPatG Nothing),Nothing,AppG (fromList [EmptyG]))])
 
 *)
 
-(* changed exprs
-Lam (Just (2,17)-(2,62)) (VarPat (Just (2,17)-(2,18)) "f") (Lam (Just (2,19)-(2,62)) (VarPat (Just (2,19)-(2,20)) "l") (Case (Just (2,23)-(2,62)) (Var (Just (2,29)-(2,30)) "l") [(ConsPat (Just (2,38)-(2,43)) (VarPat (Just (2,38)-(2,39)) "x") (ConPat (Just (2,41)-(2,43)) "[]" Nothing),Nothing,App (Just (2,47)-(2,62)) (Var (Just (2,51)-(2,52)) "^") [Lit (Just (2,47)-(2,50)) (LS "["),App (Just (2,53)-(2,62)) (Var (Just (2,56)-(2,57)) "^") [Var (Just (2,54)-(2,55)) "x",Lit (Just (2,58)-(2,61)) (LS "]")]])]) Nothing) Nothing
-*)
-
-(* typed spans
-(2,17)-(2,62)
-*)
-
-(* correct types
-'a -> string list -> string
-*)
-
-(* bad types
-string -> string list -> string
+(* type error slice
+(2,4)-(7,61)
+(2,19)-(7,59)
+(6,23)-(6,32)
+(6,24)-(6,27)
+(6,28)-(6,29)
+(9,24)-(9,32)
+(9,24)-(9,56)
+(9,33)-(9,56)
+(9,34)-(9,52)
+(9,35)-(9,44)
+(9,45)-(9,51)
 *)

@@ -39,24 +39,15 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(12,5)-(12,6)
+(12,6)-(12,7)
 x <> 0
 BopG VarG LitG
 
 *)
 
-(* changed exprs
-Bop (Just (12,5)-(12,11)) Neq (Var (Just (12,5)-(12,6)) "x") (Lit (Just (12,10)-(12,11)) (LI 0))
-*)
-
-(* typed spans
-(12,5)-(12,11)
-*)
-
-(* correct types
-bool
-*)
-
-(* bad types
-int
+(* type error slice
+(11,3)-(17,16)
+(11,11)-(11,46)
+(12,3)-(17,16)
+(12,6)-(12,7)
 *)

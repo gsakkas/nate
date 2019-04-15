@@ -20,42 +20,36 @@ let rec sepConcat sep sl =
 *)
 
 (* changed spans
-(6,18)-(6,31)
+(6,19)-(6,32)
 match a with
 | "" -> x
 | _ -> a ^ (sep ^ x)
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
+CaseG VarG (fromList [(LitPatG,Nothing,VarG),(WildPatG,Nothing,AppG (fromList [EmptyG]))])
 
-(7,17)-(7,42)
+(7,18)-(7,43)
 ""
 LitG
 
-(8,14)-(8,15)
+(8,15)-(8,16)
 sl
 VarG
 
 *)
 
-(* changed exprs
-Case (Just (6,18)-(6,61)) (Var (Just (6,24)-(6,25)) "a") [(LitPat (Just (6,33)-(6,35)) (LS ""),Nothing,Var (Just (6,39)-(6,40)) "x"),(WildPat (Just (6,43)-(6,44)),Nothing,App (Just (6,48)-(6,61)) (Var (Just (6,50)-(6,51)) "^") [Var (Just (6,48)-(6,49)) "a",App (Just (6,52)-(6,61)) (Var (Just (6,57)-(6,58)) "^") [Var (Just (6,53)-(6,56)) "sep",Var (Just (6,59)-(6,60)) "x"]])]
-Lit (Just (7,17)-(7,19)) (LS "")
-Var (Just (7,31)-(7,33)) "sl"
-*)
-
-(* typed spans
-(6,18)-(6,61)
-(7,17)-(7,19)
-(7,31)-(7,33)
-*)
-
-(* correct types
-string
-string
-string list
-*)
-
-(* bad types
-string
-string
-string list list
+(* type error slice
+(3,3)-(8,43)
+(6,7)-(8,43)
+(6,13)-(6,32)
+(6,15)-(6,32)
+(6,23)-(6,32)
+(6,28)-(6,29)
+(6,30)-(6,31)
+(7,18)-(7,43)
+(7,24)-(7,25)
+(8,7)-(8,43)
+(8,15)-(8,16)
+(8,20)-(8,34)
+(8,20)-(8,43)
+(8,35)-(8,36)
+(8,42)-(8,43)
 *)

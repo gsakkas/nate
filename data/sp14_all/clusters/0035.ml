@@ -1,12 +1,21 @@
-ListG (BopG EmptyG EmptyG)
-[(fst x + snd x) / 10 ; (fst x + snd x) mod 10]
-[addit mod 10]
-[n mod 10]
-[z mod 10]
-[a + hd]
-[n / 10 ; n mod 10]
-[(h * i) mod 10]
-[(h * i) mod 10 ; ((h * i) / 10) + h]
-[(h * i) mod 10 ; ((h * i) / 10) + (m * i)]
-[h * i]
-[v mod 10]
+LetG NonRec (fromList [(VarPatG,LamG VarPatG EmptyG)]) VarG
+let d =
+  fun x ->
+    (let xx = f b in
+     (xx , xx = b)) in
+d
+let a =
+  fun x ->
+    (let xx = f x in
+     (xx , x <> b)) in
+a
+let f =
+  fun x ->
+    (let xx = (x * x) * x in
+     (xx , xx < 100)) in
+f
+let g =
+  fun x ->
+    (let xx = f x in
+     (xx , xx <> b)) in
+g

@@ -1,4 +1,8 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-match snd a with
-| [] -> (fst x + snd x , [(fst x + snd x) / 10 ; (fst x + snd x) mod 10])
-| h :: t -> (0 , [])
+AppG (fromList [VarG,ListG (fromList [EmptyG])])
+[0] @ l1
+[0] @ l2
+[1 ; 0] @ acc
+adder i l [0]
+[a + hd] @ tl
+append t [h]
+[h] @ seen

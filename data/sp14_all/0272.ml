@@ -9,24 +9,17 @@ let rec digitsOfInt n = if n <= 0 then [] else [n mod 10];;
 *)
 
 (* changed spans
-(2,48)-(2,68)
+(2,49)-(2,69)
 n mod 10
 BopG VarG LitG
 
 *)
 
-(* changed exprs
-Bop (Just (2,48)-(2,56)) Mod (Var (Just (2,48)-(2,49)) "n") (Lit (Just (2,54)-(2,56)) (LI 10))
-*)
-
-(* typed spans
-(2,48)-(2,56)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-'a
+(* type error slice
+(2,4)-(2,72)
+(2,21)-(2,70)
+(2,25)-(2,70)
+(2,48)-(2,70)
+(2,49)-(2,60)
+(2,49)-(2,69)
 *)

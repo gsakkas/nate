@@ -23,25 +23,23 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(8,28)-(8,60)
+(8,29)-(8,61)
 (prod / 10) :: (mulByDigit i
                            t)
-ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),BopG VarG LitG])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
 *)
 
-(* changed exprs
-ConApp (Just (8,28)-(8,59)) "::" (Just (Tuple (Just (8,28)-(8,59)) [Bop (Just (8,28)-(8,39)) Div (Var (Just (8,29)-(8,33)) "prod") (Lit (Just (8,36)-(8,38)) (LI 10)),App (Just (8,43)-(8,59)) (Var (Just (8,44)-(8,54)) "mulByDigit") [Var (Just (8,55)-(8,56)) "i",Var (Just (8,57)-(8,58)) "t"]])) Nothing
-*)
-
-(* typed spans
-(8,28)-(8,59)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(2,4)-(9,32)
+(2,20)-(9,30)
+(2,22)-(9,30)
+(3,3)-(9,30)
+(6,7)-(9,30)
+(7,7)-(9,30)
+(8,12)-(8,61)
+(8,29)-(8,61)
+(8,44)-(8,60)
+(8,45)-(8,55)
+(9,12)-(9,30)
 *)

@@ -1,12 +1,5 @@
-LamG (LetG Rec (fromList [EmptyG]) EmptyG)
-fun n ->
-  (let rec digitsHelper =
-     fun n ->
-       fun l ->
-         if n = 0
-         then l
-         else digitsHelper (n / 10)
-                           ((n mod 10) :: l) in
-   if n <= 0
-   then []
-   else digitsHelper n [])
+CaseG (TupleG (fromList [EmptyG])) (fromList [(TuplePatG (fromList [ConsPatG EmptyPatG EmptyPatG]),Nothing,ConAppG (Just EmptyG)),(TuplePatG (fromList [WildPatG]),Nothing,ListG (fromList []))])
+match (List.rev list1 , List.rev list2) with
+| (h1 :: t1 , h2 :: t2) -> (h1 , h2) :: (pair t1
+                                              t2)
+| (_ , _) -> []

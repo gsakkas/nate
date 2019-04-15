@@ -13,40 +13,39 @@ let fixpoint (f,b) = let rec g x = if (f x) = b then x else g (x + 1) in g 0;;
 *)
 
 (* changed spans
-(3,2)-(3,77)
+(6,3)-(6,70)
 let rec g =
   fun x ->
     if f x = b
     then x
     else g (x + 1) in
 g 0
-LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
-
-(6,39)-(6,42)
-EMPTY
-EmptyG
-
-(6,48)-(6,49)
-g
-VarG
-
-(6,67)-(6,68)
-EMPTY
-EmptyG
+LetG Rec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* typed spans
-(2,21)-(2,76)
-(2,60)-(2,61)
-*)
-
-(* typed spans
-int
-int -> int
-*)
-
-(* typed spans
-'a
-int -> 'a -> ('a * bool)
+(* type error slice
+(3,3)-(3,78)
+(3,17)-(3,18)
+(3,17)-(3,20)
+(3,64)-(3,70)
+(3,64)-(3,78)
+(3,71)-(3,78)
+(3,72)-(3,73)
+(3,75)-(3,77)
+(6,3)-(6,9)
+(6,3)-(6,70)
+(6,10)-(6,70)
+(6,11)-(6,66)
+(6,18)-(6,58)
+(6,22)-(6,58)
+(6,25)-(6,30)
+(6,25)-(6,34)
+(6,26)-(6,27)
+(6,33)-(6,34)
+(6,49)-(6,50)
+(6,49)-(6,58)
+(6,62)-(6,63)
+(6,62)-(6,65)
+(6,68)-(6,69)
 *)

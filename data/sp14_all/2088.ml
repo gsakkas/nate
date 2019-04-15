@@ -69,24 +69,23 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(30,16)-(30,17)
+(30,17)-(30,18)
 (0 , 0)
 TupleG (fromList [LitG])
 
+(30,22)-(30,64)
+List.combine (List.rev l1)
+             (List.rev l2)
+AppG (fromList [AppG (fromList [EmptyG])])
+
 *)
 
-(* changed exprs
-Tuple (Just (30,16)-(30,22)) [Lit (Just (30,17)-(30,18)) (LI 0),Lit (Just (30,20)-(30,21)) (LI 0)]
-*)
-
-(* typed spans
-(30,16)-(30,22)
-*)
-
-(* correct types
-(int * int)
-*)
-
-(* bad types
-int
+(* type error slice
+(30,16)-(30,19)
+(30,16)-(30,64)
+(30,17)-(30,18)
+(30,20)-(30,21)
+(30,22)-(30,64)
+(30,23)-(30,35)
+(30,23)-(30,63)
 *)

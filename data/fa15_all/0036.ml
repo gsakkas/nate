@@ -19,24 +19,21 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(7,37)-(7,59)
+(7,38)-(7,60)
 digitsOfInt (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-App (Just (7,37)-(7,59)) (Var (Just (7,38)-(7,49)) "digitsOfInt") [Bop (Just (7,50)-(7,58)) Div (Var (Just (7,51)-(7,52)) "n") (Lit (Just (7,55)-(7,57)) (LI 10))]
-*)
-
-(* typed spans
-(7,37)-(7,59)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(2,4)-(7,76)
+(2,21)-(7,74)
+(3,3)-(7,74)
+(6,7)-(7,74)
+(7,7)-(7,74)
+(7,38)-(7,60)
+(7,38)-(7,74)
+(7,39)-(7,54)
+(7,40)-(7,51)
+(7,61)-(7,62)
 *)

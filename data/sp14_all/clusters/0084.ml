@@ -1,16 +1,5 @@
-CaseG VarG (fromList [(Nothing,ListG EmptyG)])
-match n with
-| n -> [n]
-match l with
-| [] -> []
-| b :: [] -> [b]
-match l with
-| [] -> []
-| x :: [] -> [x]
-| head :: tail :: third -> [head ; tail]
-match l with
-| [] -> []
-| x :: [] -> [x]
-| head :: tail :: third :: fourth :: fifth -> [fourth ; third ; tail ; head]
-match l with
-| [] -> []
+TupleG (fromList [LitG])
+(0 , 4)
+(0 , 1)
+(0 , 0)
+(10 , 13 , 57)

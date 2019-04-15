@@ -19,48 +19,35 @@ let fixpoint (f,b) = wwhile ((helper f), b);;
 *)
 
 (* changed spans
-(2,35)-(2,39)
+(2,36)-(2,40)
 (true , b)
 TupleG (fromList [VarG,LitG])
 
-(2,45)-(2,50)
+(2,46)-(2,51)
 (false , f b)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(4,16)-(5,63)
-f b
-AppG (fromList [VarG])
-
-(7,29)-(7,41)
+(7,30)-(7,42)
 helper f
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Tuple (Just (2,35)-(2,44)) [Lit (Just (2,36)-(2,40)) (LB True),Var (Just (2,42)-(2,43)) "b"]
-Tuple (Just (2,50)-(2,64)) [Lit (Just (2,51)-(2,56)) (LB False),App (Just (2,58)-(2,63)) (Var (Just (2,59)-(2,60)) "f") [Var (Just (2,61)-(2,62)) "b"]]
-App (Just (2,58)-(2,63)) (Var (Just (2,59)-(2,60)) "f") [Var (Just (2,61)-(2,62)) "b"]
-App (Just (7,29)-(7,39)) (Var (Just (7,30)-(7,36)) "helper") [Var (Just (7,37)-(7,38)) "f"]
-*)
-
-(* typed spans
-(2,35)-(2,44)
-(2,50)-(2,64)
-(2,58)-(2,63)
-(7,29)-(7,39)
-*)
-
-(* correct types
-(bool * bool)
-(bool * bool)
-bool
-bool -> (bool * bool)
-*)
-
-(* bad types
-bool
-bool
-('a -> ('a * bool) * 'a) -> 'a
-bool
+(* type error slice
+(2,4)-(2,53)
+(2,12)-(2,51)
+(2,14)-(2,51)
+(2,18)-(2,51)
+(2,46)-(2,51)
+(5,17)-(5,18)
+(5,17)-(5,20)
+(5,42)-(5,48)
+(5,42)-(5,56)
+(5,49)-(5,56)
+(5,50)-(5,51)
+(7,22)-(7,28)
+(7,22)-(7,46)
+(7,29)-(7,46)
+(7,30)-(7,42)
+(7,31)-(7,37)
 *)

@@ -1,5 +1,2 @@
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (AppG (fromList [EmptyG]))
-let comb =
-  eval (e1 , x , y) +. eval (e2 , x , y) in
-mod_float comb
-          (eval (e3 , x , y))
+AppG (fromList [ListG (fromList []),ListG (fromList [EmptyG])])
+[] @ [n mod 10]

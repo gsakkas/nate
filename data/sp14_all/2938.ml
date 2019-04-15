@@ -83,33 +83,37 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(31,14)-(31,24)
+(31,15)-(31,25)
 match a with
 | (_ , y) -> (0 , bigAdd y x)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG,WildPatG]),Nothing,TupleG (fromList [EmptyG]))])
 
-(32,13)-(32,15)
+(32,14)-(32,16)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
 *)
 
-(* changed exprs
-Case (Just (31,14)-(31,55)) (Var (Just (31,20)-(31,21)) "a") [(TuplePat (Just (31,30)-(31,33)) [WildPat (Just (31,30)-(31,31)),VarPat (Just (31,32)-(31,33)) "y"],Nothing,Tuple (Just (31,38)-(31,55)) [Lit (Just (31,39)-(31,40)) (LI 0),App (Just (31,42)-(31,54)) (Var (Just (31,43)-(31,49)) "bigAdd") [Var (Just (31,50)-(31,51)) "y",Var (Just (31,52)-(31,53)) "x"]])]
-Tuple (Just (32,13)-(32,20)) [Lit (Just (32,14)-(32,15)) (LI 0),List (Just (32,17)-(32,19)) [] Nothing]
-*)
-
-(* typed spans
-(31,14)-(31,55)
-(32,13)-(32,20)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-*)
-
-(* bad types
-int list
-int list
+(* type error slice
+(11,3)-(11,69)
+(11,9)-(11,10)
+(11,36)-(11,69)
+(11,50)-(11,60)
+(11,50)-(11,62)
+(11,68)-(11,69)
+(13,4)-(26,37)
+(13,12)-(26,35)
+(13,15)-(26,35)
+(14,3)-(26,35)
+(26,3)-(26,13)
+(26,3)-(26,35)
+(31,3)-(39,50)
+(31,9)-(31,25)
+(31,11)-(31,25)
+(31,15)-(31,21)
+(31,15)-(31,25)
+(39,3)-(39,50)
+(39,17)-(39,31)
+(39,17)-(39,43)
+(39,32)-(39,33)
 *)

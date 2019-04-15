@@ -1,4 +1,4 @@
-AppG (fromList [VarG,BopG EmptyG EmptyG])
-mulByDigit (i - 2) l
-clone x (n - 1)
-mulByDigit (i - 1) l
+TupleG (fromList [ListG (fromList [EmptyG])])
+([x + 1] , [x + 1])
+([x + 1] , [x + 2])
+([0] , [0])

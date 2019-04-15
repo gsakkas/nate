@@ -9,24 +9,16 @@ let rec digitsOfInt n = let l = [] in if n < 0 then l else l;;
 *)
 
 (* changed spans
-(2,38)-(2,53)
+(2,54)-(2,54)
 l
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (2,59)-(2,60)) "l"
-*)
-
-(* typed spans
-(2,59)-(2,60)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-unit
+(* type error slice
+(2,25)-(2,54)
+(2,33)-(2,35)
+(2,39)-(2,54)
+(2,53)-(2,54)
+(2,54)-(2,54)
 *)

@@ -70,32 +70,17 @@ let rec exprToString ex =
 *)
 
 (* changed spans
-(32,46)-(32,68)
+(32,47)-(32,69)
 ")*"
 LitG
 
-(32,46)-(32,68)
+(32,72)-(32,75)
 exprToString e3 ^ ")"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-Lit (Just (33,36)-(33,40)) (LS ")*")
-App (Just (33,43)-(33,68)) (Var (Just (33,62)-(33,63)) "^") [App (Just (33,44)-(33,61)) (Var (Just (33,45)-(33,57)) "exprToString") [Var (Just (33,58)-(33,60)) "e3"],Lit (Just (33,64)-(33,67)) (LS ")")]
-*)
-
-(* typed spans
-(33,36)-(33,40)
-(33,43)-(33,68)
-*)
-
-(* correct types
-string
-string
-*)
-
-(* bad types
-string
-string
+(* type error slice
+(32,47)-(32,69)
+(32,48)-(32,52)
 *)

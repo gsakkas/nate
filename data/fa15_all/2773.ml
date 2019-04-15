@@ -41,24 +41,16 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(17,19)-(17,29)
+(17,20)-(17,30)
 mulByDigit i t
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (17,19)-(17,35)) (Var (Just (17,20)-(17,30)) "mulByDigit") [Var (Just (17,31)-(17,32)) "i",Var (Just (17,33)-(17,34)) "t"]
-*)
-
-(* typed spans
-(17,19)-(17,35)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(6,4)-(18,39)
+(6,20)-(18,37)
+(17,20)-(17,30)
+(17,20)-(17,65)
+(17,31)-(17,32)
 *)

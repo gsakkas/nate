@@ -1,15 +1,4 @@
-TupleG (fromList [VarG,LamG EmptyG])
-(fun x -> (x , f x = x) , b)
-(fun b ->
-   (f b , f b <> b) , b)
-(fun x -> (f b , 3 < 4) , b)
-(fun x ->
-   (f b , not (b = f b)) , b)
-(fun x ->
-   (f x , x <> f x) , b)
-(fun input ->
-   (let b = f input in
-    (b , b <> input)) , b)
-(fun x ->
-   (let b = f x in
-    (b , b <> x)) , b)
+AppG (fromList [ListG (fromList [EmptyG])])
+[n] @ [(n + c) + d]
+[n + 1] @ [((n + c) + d) mod 10]
+matchHeads [["b"]]

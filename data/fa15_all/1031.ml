@@ -55,29 +55,35 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(23,28)-(23,48)
-let args =
-  List.combine (List.rev (0 :: l1))
-               (List.rev (0 :: l2)) in
-let (_ , res) =
-  List.fold_left f base args in
-res
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+(23,29)-(23,49)
+List.rev (0 :: l1)
+AppG (fromList [ConAppG (Just EmptyG)])
+
+(23,50)-(23,70)
+List.rev (0 :: l2)
+AppG (fromList [ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-Let (Just (23,4)-(24,51)) NonRec [(VarPat (Just (23,8)-(23,12)) "args",App (Just (23,15)-(23,69)) (Var (Just (23,15)-(23,27)) "List.combine") [App (Just (23,28)-(23,48)) (Var (Just (23,29)-(23,37)) "List.rev") [ConApp (Just (23,38)-(23,47)) "::" (Just (Tuple (Just (23,39)-(23,46)) [Lit (Just (23,39)-(23,40)) (LI 0),Var (Just (23,44)-(23,46)) "l1"])) Nothing],App (Just (23,49)-(23,69)) (Var (Just (23,50)-(23,58)) "List.rev") [ConApp (Just (23,59)-(23,68)) "::" (Just (Tuple (Just (23,60)-(23,67)) [Lit (Just (23,60)-(23,61)) (LI 0),Var (Just (23,65)-(23,67)) "l2"])) Nothing]])] (Let (Just (24,4)-(24,51)) NonRec [(TuplePat (Just (24,9)-(24,14)) [WildPat (Just (24,9)-(24,10)),VarPat (Just (24,11)-(24,14)) "res"],App (Just (24,18)-(24,44)) (Var (Just (24,18)-(24,32)) "List.fold_left") [Var (Just (24,33)-(24,34)) "f",Var (Just (24,35)-(24,39)) "base",Var (Just (24,40)-(24,44)) "args"])] (Var (Just (24,48)-(24,51)) "res"))
-*)
-
-(* typed spans
-(23,4)-(24,51)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list list
+(* type error slice
+(19,5)-(24,52)
+(19,11)-(21,76)
+(19,13)-(21,76)
+(21,7)-(21,76)
+(21,19)-(21,20)
+(21,32)-(21,39)
+(21,37)-(21,38)
+(23,5)-(24,52)
+(23,16)-(23,28)
+(23,16)-(23,70)
+(23,29)-(23,49)
+(23,47)-(23,48)
+(23,50)-(23,70)
+(23,51)-(23,64)
+(23,52)-(23,60)
+(23,68)-(23,69)
+(24,19)-(24,33)
+(24,19)-(24,45)
+(24,34)-(24,35)
+(24,41)-(24,45)
 *)

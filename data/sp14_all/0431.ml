@@ -49,24 +49,15 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(19,9)-(19,13)
+(19,10)-(19,14)
 num
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (19,9)-(19,12)) "num"
-*)
-
-(* typed spans
-(19,9)-(19,12)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-(int * int) -> 'a
+(* type error slice
+(18,15)-(18,19)
+(18,15)-(18,27)
+(19,9)-(19,21)
+(19,10)-(19,14)
 *)

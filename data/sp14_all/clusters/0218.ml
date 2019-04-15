@@ -1,6 +1,4 @@
-TupleG (fromList [IteG EmptyG EmptyG EmptyG])
-(if depth = 0
- then buildX ()
- else build (rand , depth - 1) , if depth = 0
-                                 then buildY ()
-                                 else build (rand , depth - 1))
+CaseG VarG (fromList [(LitPatG,Nothing,ListG (fromList [EmptyG])),(WildPatG,Nothing,AppG (fromList [EmptyG]))])
+match n with
+| 0 -> [0]
+| _ -> digitsOfInt (n / 10) @ [n mod 10]

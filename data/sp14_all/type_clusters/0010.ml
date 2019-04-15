@@ -1,4 +1,5 @@
-('a -> 'a) -> 'a -> 'a
-'a -> 'a
-('a -> 'b) -> 'a -> 'b
-('a -> ('b -> 'a -> 'c) -> 'b -> 'c) -> 'a -> ('b -> 'a -> 'c) -> 'b -> 'c
+'a list list
+int list
+'a list
+(int * int) list
+'tNewPart

@@ -10,24 +10,23 @@ let rec clone x n = let accum = [] in if n < 1 then [] else clone x n;;
 *)
 
 (* changed spans
-(3,42)-(3,70)
+(3,43)-(3,71)
 clone x n
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (2,60)-(2,69)) (Var (Just (2,60)-(2,65)) "clone") [Var (Just (2,66)-(2,67)) "x",Var (Just (2,68)-(2,69)) "n"]
-*)
-
-(* typed spans
-(2,60)-(2,69)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(2,4)-(3,73)
+(2,15)-(3,71)
+(2,17)-(3,71)
+(3,3)-(3,71)
+(3,15)-(3,17)
+(3,21)-(3,71)
+(3,43)-(3,52)
+(3,43)-(3,71)
+(3,44)-(3,49)
+(3,56)-(3,71)
+(3,57)-(3,66)
+(3,58)-(3,63)
 *)

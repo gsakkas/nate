@@ -41,24 +41,24 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(18,41)-(18,42)
+(18,42)-(18,43)
 digitsOfInt n
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (18,41)-(18,56)) (Var (Just (18,42)-(18,53)) "digitsOfInt") [Var (Just (18,54)-(18,55)) "n"]
-*)
-
-(* typed spans
-(18,41)-(18,56)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(10,15)-(10,37)
+(10,16)-(10,27)
+(10,28)-(10,36)
+(13,22)-(13,71)
+(13,60)-(13,71)
+(13,61)-(13,68)
+(13,69)-(13,70)
+(16,15)-(16,30)
+(16,16)-(16,27)
+(16,28)-(16,29)
+(18,33)-(18,44)
+(18,34)-(18,41)
+(18,42)-(18,43)
 *)

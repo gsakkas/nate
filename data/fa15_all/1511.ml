@@ -25,7 +25,7 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(10,11)-(10,75)
+(10,12)-(10,76)
 List.append (clone 0
                    (List.length l1 - List.length l2))
             l2
@@ -33,18 +33,19 @@ AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (10,11)-(10,75)) (Var (Just (10,12)-(10,23)) "List.append") [App (Just (10,24)-(10,71)) (Var (Just (10,25)-(10,30)) "clone") [Lit (Just (10,31)-(10,32)) (LI 0),Bop (Just (10,33)-(10,70)) Minus (App (Just (10,34)-(10,50)) (Var (Just (10,35)-(10,46)) "List.length") [Var (Just (10,47)-(10,49)) "l1"]) (App (Just (10,53)-(10,69)) (Var (Just (10,54)-(10,65)) "List.length") [Var (Just (10,66)-(10,68)) "l2"])],Var (Just (10,72)-(10,74)) "l2"]
-*)
-
-(* typed spans
-(10,11)-(10,75)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-'a list -> 'a list
+(* type error slice
+(3,45)-(3,67)
+(3,50)-(3,67)
+(3,51)-(3,56)
+(6,3)-(10,77)
+(8,7)-(8,77)
+(8,74)-(8,76)
+(10,7)-(10,77)
+(10,12)-(10,76)
+(10,13)-(10,24)
+(10,25)-(10,75)
+(10,26)-(10,31)
+(10,54)-(10,70)
+(10,55)-(10,66)
+(10,67)-(10,69)
 *)

@@ -1,9 +1,3 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG)])
-match l with
-| [] -> []
-| h -> h
-| h :: t -> t @ listReverse [h]
-match l with
-| [] -> []
-| t -> t
-| h :: t -> t @ listReverse [h]
+CaseG VarG (fromList [(VarPatG,Nothing,AppG (fromList [EmptyG]))])
+match n with
+| n -> incre n

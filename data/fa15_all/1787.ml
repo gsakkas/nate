@@ -86,32 +86,29 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(40,15)-(40,37)
+(40,16)-(40,38)
 exprToString e2
 AppG (fromList [VarG])
 
-(40,32)-(40,36)
-")/" ^ ("log(" ^ (exprToString e3 ^ "))"))
+(40,42)-(40,48)
+")/"
+LitG
+
+(40,52)-(40,69)
+"log("
+LitG
+
+(40,72)-(40,76)
+exprToString e3 ^ "))"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-App (Just (40,15)-(40,32)) (Var (Just (40,16)-(40,28)) "exprToString") [Var (Just (40,29)-(40,31)) "e2"]
-App (Just (41,17)-(41,63)) (Var (Just (41,23)-(41,24)) "^") [Lit (Just (41,18)-(41,22)) (LS ")/"),App (Just (41,25)-(41,62)) (Var (Just (41,33)-(41,34)) "^") [Lit (Just (41,26)-(41,32)) (LS "log("),App (Just (41,35)-(41,61)) (Var (Just (41,54)-(41,55)) "^") [App (Just (41,36)-(41,53)) (Var (Just (41,37)-(41,49)) "exprToString") [Var (Just (41,50)-(41,52)) "e3"],Lit (Just (41,56)-(41,60)) (LS "))")]]]
-*)
-
-(* typed spans
-(40,15)-(40,32)
-(41,17)-(41,63)
-*)
-
-(* correct types
-string
-string
-*)
-
-(* bad types
-string
-string
+(* type error slice
+(17,28)-(17,53)
+(17,29)-(17,46)
+(17,30)-(17,42)
+(17,47)-(17,48)
+(40,16)-(40,38)
+(40,17)-(40,29)
 *)

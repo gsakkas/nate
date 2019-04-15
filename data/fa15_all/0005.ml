@@ -87,7 +87,7 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(37,4)-(38,45)
+(37,5)-(38,46)
 let rec generatePadding =
   fun numZeros ->
     if numZeros <= 0
@@ -97,22 +97,37 @@ let toSum =
   intermediateSum @ generatePadding padCount in
 (padCount + 1 , bigAdd currList
                        toSum)
-LetG Rec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG Rec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Let (Just (37,4)-(40,45)) Rec [(VarPat (Just (37,12)-(37,27)) "generatePadding",Lam (Just (37,28)-(38,73)) (VarPat (Just (37,28)-(37,36)) "numZeros") (Ite (Just (38,6)-(38,73)) (Bop (Just (38,9)-(38,22)) Le (Var (Just (38,9)-(38,17)) "numZeros") (Lit (Just (38,21)-(38,22)) (LI 0))) (List (Just (38,28)-(38,30)) [] Nothing) (ConApp (Just (38,36)-(38,73)) "::" (Just (Tuple (Just (38,36)-(38,73)) [Lit (Just (38,36)-(38,37)) (LI 0),App (Just (38,41)-(38,73)) (Var (Just (38,42)-(38,57)) "generatePadding") [Bop (Just (38,58)-(38,72)) Minus (Var (Just (38,59)-(38,67)) "numZeros") (Lit (Just (38,70)-(38,71)) (LI 1))]])) Nothing)) Nothing)] (Let (Just (39,4)-(40,45)) NonRec [(VarPat (Just (39,8)-(39,13)) "toSum",App (Just (39,16)-(39,60)) (Var (Just (39,32)-(39,33)) "@") [Var (Just (39,16)-(39,31)) "intermediateSum",App (Just (39,34)-(39,60)) (Var (Just (39,35)-(39,50)) "generatePadding") [Var (Just (39,51)-(39,59)) "padCount"]])] (Tuple (Just (40,4)-(40,45)) [Bop (Just (40,5)-(40,19)) Plus (Var (Just (40,6)-(40,14)) "padCount") (Lit (Just (40,17)-(40,18)) (LI 1)),App (Just (40,21)-(40,44)) (Var (Just (40,22)-(40,28)) "bigAdd") [Var (Just (40,29)-(40,37)) "currList",Var (Just (40,38)-(40,43)) "toSum"]]))
-*)
-
-(* typed spans
-(37,4)-(40,45)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-(int * int list)
+(* type error slice
+(4,4)-(11,80)
+(4,13)-(11,78)
+(4,16)-(11,78)
+(11,32)-(11,48)
+(11,43)-(11,44)
+(11,45)-(11,47)
+(16,4)-(28,37)
+(16,12)-(28,35)
+(16,15)-(28,35)
+(28,19)-(28,34)
+(28,20)-(28,27)
+(28,31)-(28,33)
+(31,26)-(31,32)
+(31,26)-(31,57)
+(31,35)-(31,57)
+(31,36)-(31,46)
+(36,5)-(38,46)
+(36,27)-(36,37)
+(36,27)-(36,42)
+(37,5)-(38,46)
+(37,17)-(37,32)
+(37,17)-(37,51)
+(37,35)-(37,51)
+(37,36)-(37,38)
+(37,39)-(37,41)
+(38,22)-(38,45)
+(38,23)-(38,29)
+(38,39)-(38,44)
 *)

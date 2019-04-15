@@ -96,40 +96,25 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(27,20)-(27,28)
+(27,21)-(27,29)
 rand (0 , 1)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(29,18)-(29,26)
+(29,19)-(29,27)
 rand (0 , 6)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(45,12)-(45,17)
-buildX
-VarG
+(45,13)-(45,21)
+buildX ()
+AppG (fromList [ConAppG Nothing])
 
 *)
 
-(* changed exprs
-App (Just (28,17)-(28,28)) (Var (Just (28,17)-(28,21)) "rand") [Tuple (Just (28,22)-(28,28)) [Lit (Just (28,23)-(28,24)) (LI 0),Lit (Just (28,26)-(28,27)) (LI 1)]]
-App (Just (30,18)-(30,29)) (Var (Just (30,18)-(30,22)) "rand") [Tuple (Just (30,23)-(30,29)) [Lit (Just (30,24)-(30,25)) (LI 0),Lit (Just (30,27)-(30,28)) (LI 6)]]
-Var (Just (46,12)-(46,18)) "buildX"
-*)
-
-(* typed spans
-(28,17)-(28,28)
-(30,18)-(30,29)
-(46,12)-(46,18)
-*)
-
-(* correct types
-int
-int
-unit -> expr
-*)
-
-(* bad types
-int
-int
-(int -> int -> int * int) -> expr
+(* type error slice
+(33,23)-(33,50)
+(33,24)-(33,29)
+(33,30)-(33,49)
+(45,13)-(45,18)
+(45,13)-(45,21)
+(45,19)-(45,21)
 *)

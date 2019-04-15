@@ -1,5 +1,15 @@
-ConAppG (Just (TupleG (fromList [VarG,LitG])))
-0 :: l1
-0 :: l2
-0 :: a2
-0 :: a1
+LamG VarPatG (CaseG EmptyG (fromList [(ConsPatG EmptyPatG EmptyPatG,Nothing,EmptyG),(ConPatG Nothing,Nothing,EmptyG)]))
+fun l ->
+  match l with
+  | [] -> []
+  | h :: t -> listReverse t @ [h]
+fun x ->
+  match x with
+  | [] -> true
+  | h :: t -> if getHead x = getHead (listReverse x)
+              then matchHeads (getTail (listReverse t))
+              else false
+function
+  | [] -> l
+  | h :: t -> listReverseHelper (h :: l)
+                                t

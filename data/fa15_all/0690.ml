@@ -85,33 +85,16 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(17,16)-(17,39)
-fun (a , b , a_less , b_less) ->
-  Thresh (a , b , a_less , b_less)
-LamG (ConAppG (Just (TupleG (fromList [VarG]))))
-
-(37,9)-(37,19)
-buildThresh
-VarG
+(37,10)-(39,71)
+buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (17,17)-(17,67)) (TuplePat (Just (17,17)-(17,34)) [VarPat (Just (17,17)-(17,18)) "a",VarPat (Just (17,19)-(17,20)) "b",VarPat (Just (17,21)-(17,27)) "a_less",VarPat (Just (17,28)-(17,34)) "b_less"]) (ConApp (Just (17,38)-(17,67)) "Thresh" (Just (Tuple (Just (17,45)-(17,67)) [Var (Just (17,46)-(17,47)) "a",Var (Just (17,49)-(17,50)) "b",Var (Just (17,52)-(17,58)) "a_less",Var (Just (17,60)-(17,66)) "b_less"])) Nothing) Nothing
-Var (Just (39,9)-(39,20)) "buildThresh"
-*)
-
-(* typed spans
-(17,17)-(17,67)
-(39,9)-(39,20)
-*)
-
-(* correct types
-(expr * expr * expr * expr) -> expr
-(expr * expr * expr * expr) -> expr
-*)
-
-(* bad types
-(expr * expr) -> expr
-(expr * expr) -> expr
+(* type error slice
+(17,4)-(17,42)
+(17,17)-(17,40)
+(37,10)-(37,20)
+(37,10)-(39,71)
+(38,12)-(39,71)
 *)

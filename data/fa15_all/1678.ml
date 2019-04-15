@@ -31,42 +31,41 @@ let rec digitalRoot n = if n < 10 then n else helper n;;
 *)
 
 (* changed spans
-(11,2)-(14,8)
-let n = digitsOfInt n in
-sumList n
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
+(11,6)-(11,13)
+n < 10
+BopG VarG LitG
 
-(13,40)-(13,41)
-fun n ->
-  if n < 10 then n else helper n
-LamG (IteG EmptyG EmptyG EmptyG)
+(12,8)-(13,42)
+n
+VarG
 
-(14,7)-(14,8)
-10
-LitG
+(14,8)-(14,9)
+helper n
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Let (Just (10,19)-(10,53)) NonRec [(VarPat (Just (10,23)-(10,24)) "n",App (Just (10,27)-(10,40)) (Var (Just (10,27)-(10,38)) "digitsOfInt") [Var (Just (10,39)-(10,40)) "n"])] (App (Just (10,44)-(10,53)) (Var (Just (10,44)-(10,51)) "sumList") [Var (Just (10,52)-(10,53)) "n"])
-Lam (Just (12,20)-(12,54)) (VarPat (Just (12,20)-(12,21)) "n") (Ite (Just (12,24)-(12,54)) (Bop (Just (12,27)-(12,33)) Lt (Var (Just (12,27)-(12,28)) "n") (Lit (Just (12,31)-(12,33)) (LI 10))) (Var (Just (12,39)-(12,40)) "n") (App (Just (12,46)-(12,54)) (Var (Just (12,46)-(12,52)) "helper") [Var (Just (12,53)-(12,54)) "n"])) Nothing
-Lit (Just (12,31)-(12,33)) (LI 10)
-*)
-
-(* typed spans
-(10,19)-(10,53)
-(12,20)-(12,54)
-(12,31)-(12,33)
-*)
-
-(* correct types
-int
-int -> int
-int
-*)
-
-(* bad types
-int
-int list
-int
+(* type error slice
+(6,27)-(6,42)
+(6,27)-(6,48)
+(6,28)-(6,39)
+(6,43)-(6,44)
+(8,22)-(8,71)
+(8,60)-(8,71)
+(8,61)-(8,68)
+(8,69)-(8,70)
+(10,4)-(14,11)
+(10,21)-(14,9)
+(11,6)-(11,7)
+(11,6)-(11,13)
+(11,11)-(11,13)
+(12,8)-(13,42)
+(12,16)-(12,27)
+(12,16)-(12,29)
+(13,16)-(13,23)
+(13,16)-(13,25)
+(13,24)-(13,25)
+(13,29)-(13,40)
+(13,29)-(13,42)
+(13,41)-(13,42)
 *)

@@ -47,24 +47,15 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(21,19)-(21,24)
+(21,20)-(21,25)
 [i * h]
-ListG (BopG EmptyG EmptyG)
+ListG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-List (Just (21,19)-(21,26)) [Bop (Just (21,20)-(21,25)) Times (Var (Just (21,20)-(21,21)) "i") (Var (Just (21,24)-(21,25)) "h")] Nothing
-*)
-
-(* typed spans
-(21,19)-(21,26)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(17,15)-(21,25)
+(19,17)-(20,72)
+(19,35)-(19,36)
+(21,20)-(21,25)
 *)

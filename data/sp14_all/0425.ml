@@ -160,24 +160,20 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(75,8)-(76,70)
+(75,9)-(76,71)
 (buildAverage (build (rand , depth - 1) , build (rand , depth - 1)) , buildSine (build (rand , depth - 1)))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (75,8)-(77,50)) [App (Just (75,9)-(76,71)) (Var (Just (75,10)-(75,22)) "buildAverage") [Tuple (Just (76,12)-(76,70)) [App (Just (76,13)-(76,40)) (Var (Just (76,14)-(76,19)) "build") [Tuple (Just (76,20)-(76,39)) [Var (Just (76,21)-(76,25)) "rand",Bop (Just (76,27)-(76,38)) Minus (Var (Just (76,28)-(76,33)) "depth") (Lit (Just (76,36)-(76,37)) (LI 1))]],App (Just (76,42)-(76,69)) (Var (Just (76,43)-(76,48)) "build") [Tuple (Just (76,49)-(76,68)) [Var (Just (76,50)-(76,54)) "rand",Bop (Just (76,56)-(76,67)) Minus (Var (Just (76,57)-(76,62)) "depth") (Lit (Just (76,65)-(76,66)) (LI 1))]]]],App (Just (77,10)-(77,49)) (Var (Just (77,11)-(77,20)) "buildSine") [App (Just (77,21)-(77,48)) (Var (Just (77,22)-(77,27)) "build") [Tuple (Just (77,28)-(77,47)) [Var (Just (77,29)-(77,33)) "rand",Bop (Just (77,35)-(77,46)) Minus (Var (Just (77,36)-(77,41)) "depth") (Lit (Just (77,44)-(77,45)) (LI 1))]]]]
-*)
-
-(* typed spans
-(75,8)-(77,50)
-*)
-
-(* correct types
-(expr * expr)
-*)
-
-(* bad types
-expr
+(* type error slice
+(11,4)-(11,46)
+(11,19)-(11,44)
+(11,28)-(11,44)
+(17,4)-(17,42)
+(17,17)-(17,40)
+(74,7)-(74,17)
+(74,7)-(76,71)
+(75,9)-(76,71)
+(75,10)-(75,22)
 *)

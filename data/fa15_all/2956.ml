@@ -67,25 +67,25 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(29,14)-(29,35)
+(29,15)-(29,36)
 let (0 , res) = a in
 (0 , mulByDigit x res)
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG,LitPatG]),VarG)]) (TupleG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (29,14)-(29,56)) NonRec [(TuplePat (Just (29,19)-(29,24)) [LitPat (Just (29,19)-(29,20)) (LI 0),VarPat (Just (29,21)-(29,24)) "res"],Var (Just (29,28)-(29,29)) "a")] (Tuple (Just (29,33)-(29,56)) [Lit (Just (29,34)-(29,35)) (LI 0),App (Just (29,37)-(29,55)) (Var (Just (29,38)-(29,48)) "mulByDigit") [Var (Just (29,49)-(29,50)) "x",Var (Just (29,51)-(29,54)) "res"]])
-*)
-
-(* typed spans
-(29,14)-(29,56)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-(int * int list)
+(* type error slice
+(26,35)-(26,57)
+(26,36)-(26,46)
+(26,47)-(26,54)
+(29,3)-(31,76)
+(29,9)-(29,36)
+(29,11)-(29,36)
+(29,15)-(29,36)
+(29,19)-(29,35)
+(29,20)-(29,30)
+(29,31)-(29,32)
+(31,43)-(31,57)
+(31,43)-(31,69)
+(31,58)-(31,59)
 *)

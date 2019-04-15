@@ -39,35 +39,30 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(15,4)-(17,55)
+(15,5)-(17,56)
 if x < 10
 then count
 else helper (count + 1)
             (sumList (digits n))
 IteG (BopG EmptyG EmptyG) VarG (AppG (fromList [EmptyG]))
 
-(18,2)-(18,10)
+(18,3)-(18,11)
 helper 0 n
 AppG (fromList [VarG,LitG])
 
 *)
 
-(* changed exprs
-Ite (Just (15,4)-(15,69)) (Bop (Just (15,7)-(15,13)) Lt (Var (Just (15,7)-(15,8)) "x") (Lit (Just (15,11)-(15,13)) (LI 10))) (Var (Just (15,19)-(15,24)) "count") (App (Just (15,30)-(15,69)) (Var (Just (15,30)-(15,36)) "helper") [Bop (Just (15,37)-(15,48)) Plus (Var (Just (15,38)-(15,43)) "count") (Lit (Just (15,46)-(15,47)) (LI 1)),App (Just (15,49)-(15,69)) (Var (Just (15,50)-(15,57)) "sumList") [App (Just (15,58)-(15,68)) (Var (Just (15,59)-(15,65)) "digits") [Var (Just (15,66)-(15,67)) "n"]]])
-App (Just (16,2)-(16,12)) (Var (Just (16,2)-(16,8)) "helper") [Lit (Just (16,9)-(16,10)) (LI 0),Var (Just (16,11)-(16,12)) "n"]
-*)
-
-(* typed spans
-(15,4)-(15,69)
-(16,2)-(16,12)
-*)
-
-(* correct types
-int
-int
-*)
-
-(* bad types
-int
-int -> int
+(* type error slice
+(11,58)-(11,75)
+(11,63)-(11,75)
+(11,64)-(11,71)
+(14,3)-(18,11)
+(14,18)-(17,56)
+(14,24)-(17,56)
+(15,5)-(17,56)
+(15,11)-(15,12)
+(17,17)-(17,23)
+(17,17)-(17,56)
+(17,36)-(17,56)
+(17,37)-(17,44)
 *)

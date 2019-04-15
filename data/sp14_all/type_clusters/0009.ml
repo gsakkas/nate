@@ -1,5 +1,10 @@
-string
-int
-(int * int)
-float
-int list
+(expr * float * float)
+('a -> ('a * bool) * 'a)
+(int -> (int * bool) * int)
+(expr * expr)
+('a * 'b * ('b * 'a) list)
+(int list * int list)
+(expr * float * 'a)
+('a list * 'b list)
+('a list * int list)
+(int * int list)

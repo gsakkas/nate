@@ -55,24 +55,13 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(18,60)-(18,71)
+(18,61)-(18,72)
 ")/2)"
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (18,60)-(18,66)) (LS ")/2)")
-*)
-
-(* typed spans
-(18,60)-(18,66)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-string
+(* type error slice
+(18,61)-(18,72)
+(18,62)-(18,65)
 *)

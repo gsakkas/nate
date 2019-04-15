@@ -11,24 +11,19 @@ let pipe fs =
 *)
 
 (* changed spans
-(3,14)-(3,15)
-EMPTY
-EmptyG
-
-(3,33)-(3,75)
-x
-VarG
+(3,15)-(3,30)
+(fun n -> n) x
+AppG (fromList [VarG])
 
 *)
 
-(* typed spans
-(3,28)-(3,29)
-*)
-
-(* typed spans
-'a -> 'a
-*)
-
-(* typed spans
-'a
+(* type error slice
+(3,3)-(3,76)
+(3,9)-(3,30)
+(3,11)-(3,30)
+(3,15)-(3,16)
+(3,15)-(3,30)
+(3,52)-(3,66)
+(3,52)-(3,76)
+(3,67)-(3,68)
 *)

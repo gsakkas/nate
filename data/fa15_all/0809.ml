@@ -28,80 +28,26 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(11,7)-(11,12)
+(11,8)-(11,13)
 x < 10
 BopG VarG LitG
 
-(11,25)-(11,61)
+(11,26)-(11,62)
 sumList (digitsOfInt x) + y
 BopG (AppG (fromList [EmptyG])) VarG
 
-(11,25)-(11,61)
-sumList (digitsOfInt x)
-AppG (fromList [AppG (fromList [EmptyG])])
-
-(11,25)-(11,61)
-sumList
-VarG
-
-(11,25)-(11,61)
-digitsOfInt x
-AppG (fromList [VarG])
-
-(11,25)-(11,61)
-digitsOfInt
-VarG
-
-(11,25)-(11,61)
-x
-VarG
-
-(11,25)-(11,61)
-y
-VarG
-
 *)
 
-(* changed exprs
-Bop (Just (10,24)-(10,30)) Lt (Var (Just (10,24)-(10,25)) "x") (Lit (Just (10,28)-(10,30)) (LI 10))
-Bop (Just (10,43)-(10,72)) Plus (App (Just (10,43)-(10,68)) (Var (Just (10,44)-(10,51)) "sumList") [App (Just (10,52)-(10,67)) (Var (Just (10,53)-(10,64)) "digitsOfInt") [Var (Just (10,65)-(10,66)) "x"]]) (Var (Just (10,71)-(10,72)) "y")
-App (Just (10,43)-(10,68)) (Var (Just (10,44)-(10,51)) "sumList") [App (Just (10,52)-(10,67)) (Var (Just (10,53)-(10,64)) "digitsOfInt") [Var (Just (10,65)-(10,66)) "x"]]
-Var (Just (10,44)-(10,51)) "sumList"
-App (Just (10,52)-(10,67)) (Var (Just (10,53)-(10,64)) "digitsOfInt") [Var (Just (10,65)-(10,66)) "x"]
-Var (Just (10,53)-(10,64)) "digitsOfInt"
-Var (Just (10,65)-(10,66)) "x"
-Var (Just (10,71)-(10,72)) "y"
-*)
-
-(* typed spans
-(10,24)-(10,30)
-(10,43)-(10,72)
-(10,43)-(10,68)
-(10,44)-(10,51)
-(10,52)-(10,67)
-(10,53)-(10,64)
-(10,65)-(10,66)
-(10,71)-(10,72)
-*)
-
-(* correct types
-bool
-int
-int
-int list -> int
-int list
-int -> int list
-int
-int
-*)
-
-(* bad types
-bool
-int
-int
-int
-int
-int
-int
-int
+(* type error slice
+(10,3)-(12,42)
+(10,16)-(11,62)
+(10,18)-(11,62)
+(11,5)-(11,62)
+(11,19)-(11,20)
+(11,26)-(11,30)
+(11,26)-(11,62)
+(11,31)-(11,62)
+(11,60)-(11,61)
+(12,33)-(12,37)
+(12,33)-(12,42)
 *)

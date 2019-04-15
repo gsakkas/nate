@@ -23,36 +23,21 @@ let rec clone x n = cloneHelper x n;;
 *)
 
 (* changed spans
-(2,18)-(7,58)
-fun x ->
-  fun n ->
-    if x <= 0
-    then []
-    else cloneHelper x (n - 1)
-LamG (LamG EmptyG)
-
-(14,20)-(14,41)
+(14,21)-(14,42)
 cloneHelper x n
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Lam (Just (2,20)-(2,70)) (VarPat (Just (2,20)-(2,21)) "x") (Lam (Just (2,22)-(2,70)) (VarPat (Just (2,22)-(2,23)) "n") (Ite (Just (2,26)-(2,70)) (Bop (Just (2,29)-(2,35)) Le (Var (Just (2,29)-(2,30)) "x") (Lit (Just (2,34)-(2,35)) (LI 0))) (List (Just (2,41)-(2,43)) [] Nothing) (App (Just (2,49)-(2,70)) (Var (Just (2,49)-(2,60)) "cloneHelper") [Var (Just (2,61)-(2,62)) "x",Bop (Just (2,63)-(2,70)) Minus (Var (Just (2,64)-(2,65)) "n") (Lit (Just (2,68)-(2,69)) (LI 1))])) Nothing) Nothing
-App (Just (4,20)-(4,35)) (Var (Just (4,20)-(4,31)) "cloneHelper") [Var (Just (4,32)-(4,33)) "x",Var (Just (4,34)-(4,35)) "n"]
-*)
-
-(* typed spans
-(2,20)-(2,70)
-(4,20)-(4,35)
-*)
-
-(* correct types
-int -> int -> 'a list
-'a list
-*)
-
-(* bad types
-string -> string list -> string
-'a
+(* type error slice
+(9,4)-(10,72)
+(9,10)-(10,70)
+(10,46)-(10,60)
+(10,46)-(10,70)
+(10,68)-(10,70)
+(12,4)-(12,71)
+(12,18)-(12,69)
+(14,21)-(14,25)
+(14,21)-(14,42)
+(14,26)-(14,38)
 *)

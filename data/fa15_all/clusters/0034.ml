@@ -1,11 +1,9 @@
-AppG (fromList [LitG,ListG EmptyG])
-String.concat ""
-              ["sin(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["cos(pi*" ; exprToString s ; ")"]
-String.concat ""
-              ["((" ; exprToString s ; "+" ; exprToString p ; ")/2"]
-String.concat ""
-              [exprToString s ; "*" ; exprToString p]
-String.concat ""
-              ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
+ListG (fromList [LitG])
+[0]
+[7]
+[8]
+[(-1)]
+[0 ; 0]
+["[" ; "]"]
+[3]
+[5]

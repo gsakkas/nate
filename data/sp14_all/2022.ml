@@ -87,37 +87,60 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(38,4)-(40,63)
+(38,5)-(40,64)
 match a with
 | [] -> mulByDigit x l2
 | _ -> bigAdd a (mulByDigit x
                             l2)
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
+CaseG VarG (fromList [(ConPatG Nothing,Nothing,AppG (fromList [EmptyG])),(WildPatG,Nothing,AppG (fromList [EmptyG]))])
 
-(42,28)-(42,75)
+(42,29)-(42,76)
 let res =
   List.fold_left f base args in
 res
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) VarG
 
 *)
 
-(* changed exprs
-Case (Just (38,4)-(38,74)) (Var (Just (38,10)-(38,11)) "a") [(ConPat (Just (38,19)-(38,21)) "[]" Nothing,Nothing,App (Just (38,25)-(38,40)) (Var (Just (38,25)-(38,35)) "mulByDigit") [Var (Just (38,36)-(38,37)) "x",Var (Just (38,38)-(38,40)) "l2"]),(WildPat (Just (38,43)-(38,44)),Nothing,App (Just (38,48)-(38,74)) (Var (Just (38,48)-(38,54)) "bigAdd") [Var (Just (38,55)-(38,56)) "a",App (Just (38,57)-(38,74)) (Var (Just (38,58)-(38,68)) "mulByDigit") [Var (Just (38,69)-(38,70)) "x",Var (Just (38,71)-(38,73)) "l2"]])]
-Let (Just (40,28)-(40,71)) NonRec [(VarPat (Just (40,32)-(40,35)) "res",App (Just (40,38)-(40,64)) (Var (Just (40,38)-(40,52)) "List.fold_left") [Var (Just (40,53)-(40,54)) "f",Var (Just (40,55)-(40,59)) "base",Var (Just (40,60)-(40,64)) "args"])] (Var (Just (40,68)-(40,71)) "res")
-*)
-
-(* typed spans
-(38,4)-(38,74)
-(40,28)-(40,71)
-*)
-
-(* correct types
-int list
-int list
-*)
-
-(* bad types
-int list list
-'a
+(* type error slice
+(15,3)-(15,58)
+(15,9)-(15,10)
+(15,37)-(15,47)
+(15,37)-(15,49)
+(15,57)-(15,58)
+(17,4)-(26,37)
+(17,12)-(26,35)
+(17,15)-(26,35)
+(18,3)-(26,35)
+(26,3)-(26,13)
+(26,3)-(26,35)
+(28,4)-(34,76)
+(28,20)-(34,74)
+(28,22)-(34,74)
+(29,3)-(34,74)
+(33,3)-(34,74)
+(34,3)-(34,74)
+(34,35)-(34,45)
+(34,35)-(34,74)
+(37,3)-(42,76)
+(37,9)-(40,64)
+(38,5)-(40,64)
+(38,11)-(38,12)
+(39,13)-(39,30)
+(39,13)-(39,35)
+(39,14)-(39,24)
+(39,34)-(39,35)
+(40,15)-(40,60)
+(40,15)-(40,64)
+(40,16)-(40,22)
+(40,16)-(40,49)
+(40,42)-(40,43)
+(40,42)-(40,48)
+(40,51)-(40,59)
+(40,61)-(40,62)
+(40,63)-(40,64)
+(42,29)-(42,76)
+(42,43)-(42,57)
+(42,43)-(42,69)
+(42,58)-(42,59)
 *)

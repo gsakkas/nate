@@ -10,27 +10,26 @@ let rec clone x n = let accum = [] in if n < 1 then [] else clone x n;;
 *)
 
 (* changed spans
-(3,2)-(3,67)
+(3,3)-(3,68)
 let accum = [] in
 if n < 1
 then []
 else clone x n
-LetG NonRec (fromList [ListG EmptyG]) (IteG EmptyG EmptyG EmptyG)
+LetG NonRec (fromList [(VarPatG,ListG (fromList []))]) (IteG EmptyG EmptyG EmptyG)
 
 *)
 
-(* changed exprs
-Let (Just (2,20)-(2,69)) NonRec [(VarPat (Just (2,24)-(2,29)) "accum",List (Just (2,32)-(2,34)) [] Nothing)] (Ite (Just (2,38)-(2,69)) (Bop (Just (2,41)-(2,46)) Lt (Var (Just (2,41)-(2,42)) "n") (Lit (Just (2,45)-(2,46)) (LI 1))) (List (Just (2,52)-(2,54)) [] Nothing) (App (Just (2,60)-(2,69)) (Var (Just (2,60)-(2,65)) "clone") [Var (Just (2,66)-(2,67)) "x",Var (Just (2,68)-(2,69)) "n"]))
-*)
-
-(* typed spans
-(2,20)-(2,69)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(2,4)-(3,70)
+(2,15)-(3,68)
+(2,17)-(3,68)
+(3,3)-(3,68)
+(3,13)-(3,15)
+(3,19)-(3,68)
+(3,42)-(3,51)
+(3,42)-(3,68)
+(3,43)-(3,48)
+(3,55)-(3,68)
+(3,56)-(3,63)
+(3,57)-(3,60)
 *)

@@ -19,24 +19,20 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(7,38)-(7,44)
+(7,39)-(7,45)
 0
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (7,38)-(7,39)) (LI 0)
-*)
-
-(* typed spans
-(7,38)-(7,39)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-(int * int)
+(* type error slice
+(3,3)-(7,66)
+(3,9)-(5,54)
+(4,20)-(4,27)
+(4,21)-(4,22)
+(7,20)-(7,35)
+(7,20)-(7,56)
+(7,36)-(7,37)
+(7,38)-(7,51)
+(7,39)-(7,45)
 *)

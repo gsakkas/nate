@@ -1,2 +1,1 @@
-float
-expr
+'a -> ('a * bool)

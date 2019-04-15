@@ -74,61 +74,60 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(31,4)-(33,68)
+(31,5)-(33,69)
 match a with
 | (l1' , a') -> (l1' , bigAdd (mulByDigit x
                                           l1') a')
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,TupleG (fromList [EmptyG]))])
 
-(34,2)-(36,49)
-[]
-ListG EmptyG
-
-(35,13)-(35,32)
+(34,15)-(34,16)
 l1
 VarG
 
-(35,13)-(35,32)
+(34,18)-(34,20)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(35,13)-(35,32)
-let args = List.rev l2 in
-let (_ , res) =
-  List.fold_left f base args in
-res
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+(35,14)-(35,33)
+List.rev l2
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Case (Just (31,4)-(31,68)) (Var (Just (31,10)-(31,11)) "a") [(TuplePat (Just (31,20)-(31,26)) [VarPat (Just (31,20)-(31,23)) "l1'",VarPat (Just (31,24)-(31,26)) "a'"],Nothing,Tuple (Just (31,31)-(31,68)) [Var (Just (31,32)-(31,35)) "l1'",App (Just (31,37)-(31,67)) (Var (Just (31,38)-(31,44)) "bigAdd") [App (Just (31,45)-(31,63)) (Var (Just (31,46)-(31,56)) "mulByDigit") [Var (Just (31,57)-(31,58)) "x",Var (Just (31,59)-(31,62)) "l1'"],Var (Just (31,64)-(31,66)) "a'"]])]
-List (Just (32,18)-(32,20)) [] Nothing
-Var (Just (32,14)-(32,16)) "l1"
-List (Just (32,18)-(32,20)) [] Nothing
-Let (Just (33,2)-(33,75)) NonRec [(VarPat (Just (33,6)-(33,10)) "args",App (Just (33,13)-(33,24)) (Var (Just (33,13)-(33,21)) "List.rev") [Var (Just (33,22)-(33,24)) "l2"])] (Let (Just (33,28)-(33,75)) NonRec [(TuplePat (Just (33,33)-(33,38)) [WildPat (Just (33,33)-(33,34)),VarPat (Just (33,35)-(33,38)) "res"],App (Just (33,42)-(33,68)) (Var (Just (33,42)-(33,56)) "List.fold_left") [Var (Just (33,57)-(33,58)) "f",Var (Just (33,59)-(33,63)) "base",Var (Just (33,64)-(33,68)) "args"])] (Var (Just (33,72)-(33,75)) "res"))
-*)
-
-(* typed spans
-(31,4)-(31,68)
-(32,18)-(32,20)
-(32,14)-(32,16)
-(32,18)-(32,20)
-(33,2)-(33,75)
-*)
-
-(* correct types
-(int list * int list)
-int list
-int list
-int list
-int list
-*)
-
-(* bad types
-int list
-'a
-('a list * 'b)
-('a list * 'b)
-('a list * 'b)
+(* type error slice
+(5,4)-(8,70)
+(5,17)-(8,68)
+(5,20)-(8,68)
+(7,43)-(7,59)
+(7,44)-(7,55)
+(7,56)-(7,58)
+(13,4)-(24,37)
+(13,12)-(24,35)
+(13,15)-(24,35)
+(24,19)-(24,34)
+(24,20)-(24,27)
+(24,31)-(24,33)
+(27,17)-(27,23)
+(27,17)-(27,48)
+(27,24)-(27,25)
+(27,26)-(27,48)
+(27,27)-(27,37)
+(27,46)-(27,47)
+(30,3)-(36,50)
+(30,9)-(33,69)
+(30,11)-(33,69)
+(31,5)-(33,69)
+(32,5)-(33,69)
+(32,19)-(32,20)
+(33,5)-(33,69)
+(33,27)-(33,29)
+(33,40)-(33,46)
+(33,40)-(33,69)
+(33,47)-(33,69)
+(33,48)-(33,65)
+(33,49)-(33,59)
+(33,62)-(33,64)
+(36,17)-(36,31)
+(36,17)-(36,43)
+(36,32)-(36,33)
 *)

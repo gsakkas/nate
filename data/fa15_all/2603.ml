@@ -12,25 +12,17 @@ let rec digitsOfInt n = if n < 0 then [] else (match n with | 0 -> []);;
 *)
 
 (* changed spans
-(5,7)-(5,62)
+(5,8)-(5,63)
 match n with
 | 0 -> []
-CaseG VarG (fromList [(Nothing,ListG EmptyG)])
+CaseG VarG (fromList [(LitPatG,Nothing,ListG (fromList []))])
 
 *)
 
-(* changed exprs
-Case (Just (2,46)-(2,70)) (Var (Just (2,53)-(2,54)) "n") [(LitPat (Just (2,62)-(2,63)) (LI 0),Nothing,List (Just (2,67)-(2,69)) [] Nothing)]
-*)
-
-(* typed spans
-(2,46)-(2,70)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(3,6)-(3,7)
+(3,6)-(3,11)
+(3,10)-(3,11)
+(5,8)-(5,63)
+(5,15)-(5,16)
 *)

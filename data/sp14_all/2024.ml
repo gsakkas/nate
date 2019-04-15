@@ -89,25 +89,25 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(40,11)-(40,64)
+(40,12)-(40,65)
 bigAdd (List.rev (0 :: (List.rev a)))
        (mulByDigit x l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (40,11)-(40,66)) (Var (Just (40,11)-(40,17)) "bigAdd") [App (Just (40,18)-(40,48)) (Var (Just (40,19)-(40,27)) "List.rev") [ConApp (Just (40,28)-(40,47)) "::" (Just (Tuple (Just (40,29)-(40,46)) [Lit (Just (40,29)-(40,30)) (LI 0),App (Just (40,34)-(40,46)) (Var (Just (40,35)-(40,43)) "List.rev") [Var (Just (40,44)-(40,45)) "a"]])) Nothing],App (Just (40,49)-(40,66)) (Var (Just (40,50)-(40,60)) "mulByDigit") [Var (Just (40,61)-(40,62)) "x",Var (Just (40,63)-(40,65)) "l2"]]
-*)
-
-(* typed spans
-(40,11)-(40,66)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(15,3)-(15,58)
+(15,9)-(15,10)
+(15,37)-(15,47)
+(15,37)-(15,49)
+(15,57)-(15,58)
+(17,4)-(26,37)
+(17,12)-(26,35)
+(17,15)-(26,35)
+(18,3)-(26,35)
+(26,3)-(26,13)
+(26,3)-(26,35)
+(40,12)-(40,18)
+(40,12)-(40,65)
 *)

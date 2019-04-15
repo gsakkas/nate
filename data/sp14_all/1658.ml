@@ -23,32 +23,22 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(9,6)-(9,24)
+(9,7)-(9,25)
 whilesFun f
 AppG (fromList [VarG])
 
-(9,6)-(9,24)
-b
-VarG
-
 *)
 
-(* changed exprs
-App (Just (9,6)-(9,17)) (Var (Just (9,6)-(9,15)) "whilesFun") [Var (Just (9,16)-(9,17)) "f"]
-Var (Just (9,20)-(9,21)) "b"
-*)
-
-(* typed spans
-(9,6)-(9,17)
-(9,20)-(9,21)
-*)
-
-(* correct types
-'a -> ('a * bool)
-'a
-*)
-
-(* bad types
-('a -> ('a * bool) * 'b)
-('a -> ('a * bool) * 'b)
+(* type error slice
+(3,12)-(3,13)
+(3,12)-(3,15)
+(4,53)-(4,59)
+(4,53)-(4,67)
+(4,60)-(4,67)
+(4,61)-(4,62)
+(7,3)-(7,9)
+(7,3)-(9,30)
+(8,5)-(9,30)
+(8,6)-(9,26)
+(9,7)-(9,25)
 *)

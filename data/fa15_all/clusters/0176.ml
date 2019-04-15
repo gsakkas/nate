@@ -1,4 +1,4 @@
-TupleG (fromList [IteG EmptyG EmptyG EmptyG,ConAppG (Just EmptyG)])
-(if ((a1 + x1) + x2) >= 10
- then 1
- else 0 , ((a1 + x1) + x2) :: a2)
+IteG (BopG EmptyG EmptyG) (ListG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+if i = 0
+then [0]
+else bigAdd l l

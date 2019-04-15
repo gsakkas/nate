@@ -21,25 +21,23 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(7,31)-(7,68)
+(7,32)-(7,69)
 helper ((v mod 10) :: acc)
        (v / 10)
 AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-App (Just (7,31)-(7,66)) (Var (Just (7,31)-(7,37)) "helper") [ConApp (Just (7,38)-(7,57)) "::" (Just (Tuple (Just (7,39)-(7,56)) [Bop (Just (7,39)-(7,49)) Mod (Var (Just (7,40)-(7,41)) "v") (Lit (Just (7,46)-(7,48)) (LI 10)),Var (Just (7,53)-(7,56)) "acc"])) Nothing,Bop (Just (7,58)-(7,66)) Div (Var (Just (7,59)-(7,60)) "v") (Lit (Just (7,63)-(7,65)) (LI 10))]
-*)
-
-(* typed spans
-(7,31)-(7,66)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(7,9)-(7,69)
+(7,23)-(7,26)
+(7,32)-(7,51)
+(7,32)-(7,69)
+(7,33)-(7,39)
+(7,40)-(7,50)
+(7,55)-(7,69)
+(7,56)-(7,59)
+(8,7)-(8,13)
+(8,7)-(8,18)
+(8,14)-(8,16)
 *)

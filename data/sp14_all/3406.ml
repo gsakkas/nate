@@ -103,40 +103,34 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(38,36)-(38,37)
+(38,37)-(38,38)
 x' :: xs'
-ConAppG (Just (TupleG (fromList [VarG])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
-(44,22)-(44,53)
+(44,23)-(44,54)
 (len , (-1) :: (((sum mod 10) + 1) :: xs'))
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG LitG) LitG])))])))])
-
-(44,52)-(44,53)
-xs'
-VarG
+TupleG (fromList [VarG,ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-ConApp (Just (38,36)-(38,45)) "::" (Just (Tuple (Just (38,36)-(38,45)) [Var (Just (38,36)-(38,38)) "x'",Var (Just (38,42)-(38,45)) "xs'"])) Nothing
-Tuple (Just (44,22)-(44,64)) [Var (Just (44,23)-(44,26)) "len",ConApp (Just (44,28)-(44,63)) "::" (Just (Tuple (Just (44,29)-(44,62)) [Lit (Just (44,29)-(44,33)) (LI (-1)),ConApp (Just (44,37)-(44,62)) "::" (Just (Tuple (Just (44,37)-(44,62)) [Bop (Just (44,37)-(44,55)) Plus (Bop (Just (44,38)-(44,50)) Mod (Var (Just (44,39)-(44,42)) "sum") (Lit (Just (44,47)-(44,49)) (LI 10))) (Lit (Just (44,53)-(44,54)) (LI 1)),Var (Just (44,59)-(44,62)) "xs'"])) Nothing])) Nothing]
-Var (Just (44,59)-(44,62)) "xs'"
-*)
-
-(* typed spans
-(38,36)-(38,45)
-(44,22)-(44,64)
-(44,59)-(44,62)
-*)
-
-(* correct types
-int list
-(int * int list)
-int list
-*)
-
-(* bad types
-int list
-int list
-int list
+(* type error slice
+(24,5)-(48,52)
+(24,11)-(45,66)
+(24,13)-(45,66)
+(25,7)-(45,66)
+(27,11)-(45,66)
+(28,11)-(45,66)
+(30,13)-(38,41)
+(30,20)-(30,21)
+(38,29)-(38,39)
+(38,37)-(38,38)
+(40,13)-(45,66)
+(40,20)-(40,21)
+(41,28)-(41,53)
+(43,18)-(45,65)
+(44,23)-(44,54)
+(45,23)-(45,65)
+(48,19)-(48,33)
+(48,19)-(48,45)
+(48,34)-(48,35)
 *)

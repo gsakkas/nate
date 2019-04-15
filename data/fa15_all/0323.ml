@@ -82,7 +82,7 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(33,4)-(34,74)
+(33,5)-(34,75)
 let (ll , accumulate) = a in
 let multed =
   mulByDigit x l1 in
@@ -90,38 +90,78 @@ let accumulate =
   List.append accumulate [0] in
 (l1 , bigAdd accumulate
              multed)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
-(36,2)-(39,49)
+(35,15)-(35,16)
 l1
 VarG
 
-(36,2)-(39,49)
+(35,18)-(35,20)
 [0]
-ListG LitG
+ListG (fromList [LitG])
+
+(36,3)-(39,50)
+let args = l2 in
+let (_ , res) =
+  List.fold_left f base args in
+res
+LetG NonRec (fromList [(VarPatG,VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Let (Just (33,4)-(36,36)) NonRec [(TuplePat (Just (33,9)-(33,22)) [VarPat (Just (33,9)-(33,11)) "ll",VarPat (Just (33,12)-(33,22)) "accumulate"],Var (Just (33,26)-(33,27)) "a")] (Let (Just (34,4)-(36,36)) NonRec [(VarPat (Just (34,8)-(34,14)) "multed",App (Just (34,17)-(34,32)) (Var (Just (34,17)-(34,27)) "mulByDigit") [Var (Just (34,28)-(34,29)) "x",Var (Just (34,30)-(34,32)) "l1"])] (Let (Just (35,4)-(36,36)) NonRec [(VarPat (Just (35,8)-(35,18)) "accumulate",App (Just (35,21)-(35,47)) (Var (Just (35,21)-(35,32)) "List.append") [Var (Just (35,33)-(35,43)) "accumulate",List (Just (35,44)-(35,47)) [Lit (Just (35,45)-(35,46)) (LI 0)] Nothing])] (Tuple (Just (36,4)-(36,36)) [Var (Just (36,5)-(36,7)) "l1",App (Just (36,9)-(36,35)) (Var (Just (36,10)-(36,16)) "bigAdd") [Var (Just (36,17)-(36,27)) "accumulate",Var (Just (36,28)-(36,34)) "multed"]])))
-Var (Just (37,14)-(37,16)) "l1"
-List (Just (37,18)-(37,21)) [Lit (Just (37,19)-(37,20)) (LI 0)] Nothing
-*)
-
-(* typed spans
-(33,4)-(36,36)
-(37,14)-(37,16)
-(37,18)-(37,21)
-*)
-
-(* correct types
-(int list * int list)
-int list
-int list
-*)
-
-(* bad types
-(int * int list)
-'a
-'a
+(* type error slice
+(4,4)-(6,79)
+(4,13)-(6,77)
+(4,16)-(6,77)
+(6,22)-(6,40)
+(6,35)-(6,36)
+(6,37)-(6,39)
+(11,4)-(21,37)
+(11,12)-(21,35)
+(11,15)-(21,35)
+(12,3)-(21,35)
+(21,3)-(21,13)
+(21,3)-(21,35)
+(21,19)-(21,34)
+(21,20)-(21,27)
+(21,31)-(21,33)
+(23,4)-(29,66)
+(23,20)-(29,64)
+(23,22)-(29,64)
+(24,3)-(29,64)
+(27,3)-(29,64)
+(28,3)-(29,64)
+(29,3)-(29,64)
+(29,50)-(29,60)
+(29,50)-(29,64)
+(32,3)-(39,50)
+(32,9)-(34,75)
+(32,11)-(34,75)
+(33,5)-(34,75)
+(33,19)-(33,20)
+(34,5)-(34,75)
+(34,21)-(34,32)
+(34,21)-(34,38)
+(34,33)-(34,34)
+(34,35)-(34,38)
+(34,36)-(34,37)
+(34,42)-(34,75)
+(34,54)-(34,74)
+(34,55)-(34,61)
+(34,72)-(34,73)
+(36,3)-(39,50)
+(36,10)-(36,47)
+(36,16)-(36,27)
+(36,16)-(36,47)
+(36,28)-(36,29)
+(36,30)-(36,47)
+(36,31)-(36,41)
+(38,3)-(39,50)
+(38,14)-(38,28)
+(38,14)-(38,40)
+(38,29)-(38,31)
+(39,17)-(39,31)
+(39,17)-(39,43)
+(39,32)-(39,33)
+(39,39)-(39,43)
 *)

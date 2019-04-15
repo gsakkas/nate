@@ -1,4 +1,4 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-match f b with
-| (x , true) -> wwhile (f , x)
-| (x , false) -> x
+IteG (BopG EmptyG EmptyG) (ConAppG (Just EmptyG)) (ListG (fromList []))
+if n > 0
+then x :: (clone x (n - 1))
+else []

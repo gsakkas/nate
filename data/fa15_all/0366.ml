@@ -66,72 +66,31 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(2,9)-(2,26)
-fun e -> Sine e
-LamG (ConAppG (Just VarG))
-
-(33,24)-(33,25)
+(33,32)-(33,38)
 buildX ()
 AppG (fromList [ConAppG Nothing])
 
-(33,31)-(33,37)
-()
-ConAppG Nothing
-
-(33,31)-(33,37)
+(33,44)-(33,50)
 buildY ()
 AppG (fromList [ConAppG Nothing])
 
-(33,43)-(33,49)
-()
-ConAppG Nothing
-
-(36,16)-(36,47)
-buildSine
-VarG
-
-(36,36)-(36,37)
-depth
-VarG
+(36,12)-(36,48)
+buildSine (build (rand , depth - 1))
+AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (11,14)-(11,24)) (VarPat (Just (11,14)-(11,15)) "e") (ConApp (Just (11,18)-(11,24)) "Sine" (Just (Var (Just (11,23)-(11,24)) "e")) Nothing) Nothing
-App (Just (20,31)-(20,40)) (Var (Just (20,31)-(20,37)) "buildX") [ConApp (Just (20,38)-(20,40)) "()" Nothing (Just (TApp "unit" []))]
-ConApp (Just (20,38)-(20,40)) "()" Nothing (Just (TApp "unit" []))
-App (Just (20,46)-(20,55)) (Var (Just (20,46)-(20,52)) "buildY") [ConApp (Just (20,53)-(20,55)) "()" Nothing (Just (TApp "unit" []))]
-ConApp (Just (20,53)-(20,55)) "()" Nothing (Just (TApp "unit" []))
-Var (Just (23,11)-(23,20)) "buildSine"
-Var (Just (23,36)-(23,41)) "depth"
-*)
-
-(* typed spans
-(11,14)-(11,24)
-(20,31)-(20,40)
-(20,38)-(20,40)
-(20,46)-(20,55)
-(20,53)-(20,55)
-(23,11)-(23,20)
-(23,36)-(23,41)
-*)
-
-(* correct types
-expr -> expr
-expr
-unit
-expr
-unit
-expr -> expr
-int
-*)
-
-(* bad types
-float
-int
-unit -> expr
-unit -> expr
-unit -> expr
-(expr * int * int)
-int
+(* type error slice
+(18,3)-(28,26)
+(20,14)-(20,15)
+(21,15)-(21,18)
+(21,15)-(21,43)
+(21,26)-(21,42)
+(21,27)-(21,31)
+(21,32)-(21,41)
+(21,39)-(21,40)
+(36,12)-(36,16)
+(36,12)-(36,48)
+(36,17)-(36,48)
+(36,46)-(36,47)
 *)

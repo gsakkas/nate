@@ -81,42 +81,29 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(11,7)-(11,59)
+(11,8)-(11,60)
 (l1 , clone 0
             (List.length l1 - List.length l2) @ l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(12,7)-(12,59)
+(12,8)-(12,60)
 (clone 0
        (List.length l2 - List.length l1) @ l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(14,19)-(15,77)
-l2
-VarG
-
 *)
 
-(* changed exprs
-Tuple (Just (11,7)-(11,67)) [Var (Just (11,8)-(11,10)) "l1",App (Just (11,12)-(11,66)) (Var (Just (11,61)-(11,62)) "@") [App (Just (11,13)-(11,60)) (Var (Just (11,14)-(11,19)) "clone") [Lit (Just (11,20)-(11,21)) (LI 0),Bop (Just (11,22)-(11,59)) Minus (App (Just (11,23)-(11,39)) (Var (Just (11,24)-(11,35)) "List.length") [Var (Just (11,36)-(11,38)) "l1"]) (App (Just (11,42)-(11,58)) (Var (Just (11,43)-(11,54)) "List.length") [Var (Just (11,55)-(11,57)) "l2"])],Var (Just (11,63)-(11,65)) "l2"]]
-Tuple (Just (12,7)-(12,67)) [App (Just (12,8)-(12,62)) (Var (Just (12,57)-(12,58)) "@") [App (Just (12,9)-(12,56)) (Var (Just (12,10)-(12,15)) "clone") [Lit (Just (12,16)-(12,17)) (LI 0),Bop (Just (12,18)-(12,55)) Minus (App (Just (12,19)-(12,35)) (Var (Just (12,20)-(12,31)) "List.length") [Var (Just (12,32)-(12,34)) "l2"]) (App (Just (12,38)-(12,54)) (Var (Just (12,39)-(12,50)) "List.length") [Var (Just (12,51)-(12,53)) "l1"])],Var (Just (12,59)-(12,61)) "l1"],Var (Just (12,64)-(12,66)) "l2"]
-Var (Just (12,64)-(12,66)) "l2"
-*)
-
-(* typed spans
-(11,7)-(11,67)
-(12,7)-(12,67)
-(12,64)-(12,66)
-*)
-
-(* correct types
-(int list * int list)
-(int list * int list)
-int list
-*)
-
-(* bad types
-int list
-int list
-int list -> int list
+(* type error slice
+(9,4)-(12,62)
+(9,13)-(12,60)
+(9,16)-(12,60)
+(10,3)-(12,60)
+(12,8)-(12,60)
+(12,56)-(12,57)
+(18,3)-(38,35)
+(18,12)-(37,52)
+(38,14)-(38,35)
+(38,15)-(38,18)
+(38,19)-(38,34)
+(38,20)-(38,27)
 *)

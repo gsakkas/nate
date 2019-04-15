@@ -67,24 +67,20 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(27,16)-(27,58)
+(27,17)-(27,59)
 sin (pi *. cos (pi *. eval (e1 , x , y)))
 AppG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-App (Just (27,16)-(27,59)) (Var (Just (27,16)-(27,19)) "sin") [Bop (Just (27,20)-(27,59)) FTimes (Var (Just (27,21)-(27,23)) "pi") (App (Just (27,27)-(27,58)) (Var (Just (27,28)-(27,31)) "cos") [Bop (Just (27,32)-(27,57)) FTimes (Var (Just (27,33)-(27,35)) "pi") (App (Just (27,39)-(27,56)) (Var (Just (27,40)-(27,44)) "eval") [Tuple (Just (27,45)-(27,55)) [Var (Just (27,46)-(27,48)) "e1",Var (Just (27,50)-(27,51)) "x",Var (Just (27,53)-(27,54)) "y"]])])]
-*)
-
-(* typed spans
-(27,16)-(27,59)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(13,4)-(13,29)
+(13,10)-(13,27)
+(16,3)-(31,53)
+(19,16)-(19,19)
+(19,16)-(19,45)
+(27,17)-(27,20)
+(27,17)-(27,59)
+(27,23)-(27,59)
+(27,24)-(27,26)
 *)

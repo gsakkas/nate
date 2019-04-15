@@ -1,12 +1,5 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
-match x with
-| k -> y
-| _ -> assoc (d , k , l')
-match a with
-| "" -> x
-| _ -> a ^ (sep ^ x)
-match i with
-| 1 -> l
-| 10 -> l @ [0]
-| _ -> bigAdd l
-              (mulByDigit (i - 1) l)
+BopG LitG (AppG (fromList [EmptyG]))
+1.0 /. sin (pi *. eval (e1 , x , y))
+1 + additivePersistence (sumList (digits n))
+1.0 *. eval (e1 , x , y)
+1.0 /. eval (e , x , y)

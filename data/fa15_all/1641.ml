@@ -21,11 +21,11 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(4,28)-(4,36)
+(4,29)-(4,37)
 b'
 VarG
 
-(8,4)-(8,73)
+(8,6)-(8,70)
 let helper =
   fun x ->
     (let y = f x in
@@ -33,60 +33,21 @@ let helper =
      then (y , false)
      else (y , true)) in
 helper
-LetG NonRec (fromList [LamG EmptyG]) VarG
-
-(8,21)-(8,68)
-x
-VarG
-
-(8,21)-(8,68)
-if y = x
-then (y , false)
-else (y , true)
-IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
-
-(8,27)-(8,28)
-x
-VarG
-
-(8,63)-(8,67)
-helper
-VarG
+LetG NonRec (fromList [(VarPatG,LamG VarPatG EmptyG)]) VarG
 
 *)
 
-(* changed exprs
-Var (Just (3,49)-(3,51)) "b'"
-Let (Just (7,5)-(8,13)) NonRec [(VarPat (Just (7,10)-(7,16)) "helper",Lam (Just (7,17)-(7,75)) (VarPat (Just (7,17)-(7,18)) "x") (Let (Just (7,21)-(7,75)) NonRec [(VarPat (Just (7,25)-(7,26)) "y",App (Just (7,29)-(7,32)) (Var (Just (7,29)-(7,30)) "f") [Var (Just (7,31)-(7,32)) "x"])] (Ite (Just (7,36)-(7,75)) (Bop (Just (7,39)-(7,44)) Eq (Var (Just (7,39)-(7,40)) "y") (Var (Just (7,43)-(7,44)) "x")) (Tuple (Just (7,50)-(7,60)) [Var (Just (7,51)-(7,52)) "y",Lit (Just (7,54)-(7,59)) (LB False)]) (Tuple (Just (7,66)-(7,75)) [Var (Just (7,67)-(7,68)) "y",Lit (Just (7,70)-(7,74)) (LB True)]))) Nothing)] (Var (Just (8,6)-(8,12)) "helper")
-Var (Just (7,31)-(7,32)) "x"
-Ite (Just (7,36)-(7,75)) (Bop (Just (7,39)-(7,44)) Eq (Var (Just (7,39)-(7,40)) "y") (Var (Just (7,43)-(7,44)) "x")) (Tuple (Just (7,50)-(7,60)) [Var (Just (7,51)-(7,52)) "y",Lit (Just (7,54)-(7,59)) (LB False)]) (Tuple (Just (7,66)-(7,75)) [Var (Just (7,67)-(7,68)) "y",Lit (Just (7,70)-(7,74)) (LB True)])
-Var (Just (7,43)-(7,44)) "x"
-Var (Just (8,6)-(8,12)) "helper"
-*)
-
-(* typed spans
-(3,49)-(3,51)
-(7,5)-(8,13)
-(7,31)-(7,32)
-(7,36)-(7,75)
-(7,43)-(7,44)
-(8,6)-(8,12)
-*)
-
-(* correct types
-'a
-'a -> ('a * bool)
-'a
-('a * bool)
-'a
-'a -> ('a * bool)
-*)
-
-(* bad types
-('a * bool)
-(('a * bool) * 'b)
-('a * bool)
-('a * bool)
-'a
-bool
+(* type error slice
+(3,17)-(3,18)
+(3,17)-(3,20)
+(4,49)-(4,55)
+(4,49)-(4,63)
+(4,56)-(4,63)
+(4,57)-(4,58)
+(7,3)-(7,9)
+(7,3)-(8,74)
+(8,5)-(8,74)
+(8,6)-(8,70)
+(8,22)-(8,69)
+(8,42)-(8,52)
 *)

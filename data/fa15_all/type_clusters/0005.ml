@@ -1,4 +1,2 @@
-int list
-'a list
-int list list
-string list
+(int list * int list)
+(expr * 'a * 'a)

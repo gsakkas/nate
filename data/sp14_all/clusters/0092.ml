@@ -1,3 +1,7 @@
-ConAppG (Just (TupleG (fromList [AppG (fromList [AppG (fromList [VarG])]),TupleG (fromList [LitG])])))
-(3 , 3) :: (List.rev (List.combine l1
-                                   l2))
+IteG (BopG EmptyG EmptyG) (IteG EmptyG EmptyG EmptyG) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
+if depth = 0
+then if rand (0 , 1) = 0
+     then buildX ()
+     else buildY ()
+else (let y = rand (2 , 6) in
+      buildX ())

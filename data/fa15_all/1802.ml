@@ -18,7 +18,7 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(6,29)-(6,37)
+(6,30)-(6,38)
 let g =
   fun b ->
     (let xx = f b in
@@ -26,30 +26,26 @@ let g =
      then (xx , false)
      else (xx , true)) in
 g
-LetG NonRec (fromList [LamG EmptyG]) VarG
-
-(6,39)-(6,40)
-b
-VarG
+LetG NonRec (fromList [(VarPatG,LamG VarPatG EmptyG)]) VarG
 
 *)
 
-(* changed exprs
-Let (Just (6,5)-(7,8)) NonRec [(VarPat (Just (6,10)-(6,11)) "g",Lam (Just (6,12)-(6,74)) (VarPat (Just (6,12)-(6,13)) "b") (Let (Just (6,16)-(6,74)) NonRec [(VarPat (Just (6,20)-(6,22)) "xx",App (Just (6,25)-(6,28)) (Var (Just (6,25)-(6,26)) "f") [Var (Just (6,27)-(6,28)) "b"])] (Ite (Just (6,32)-(6,74)) (Bop (Just (6,35)-(6,41)) Eq (Var (Just (6,35)-(6,36)) "b") (Var (Just (6,39)-(6,41)) "xx")) (Tuple (Just (6,47)-(6,58)) [Var (Just (6,48)-(6,50)) "xx",Lit (Just (6,52)-(6,57)) (LB False)]) (Tuple (Just (6,64)-(6,74)) [Var (Just (6,65)-(6,67)) "xx",Lit (Just (6,69)-(6,73)) (LB True)]))) Nothing)] (Var (Just (7,6)-(7,7)) "g")
-Var (Just (7,10)-(7,11)) "b"
-*)
-
-(* typed spans
-(6,5)-(7,8)
-(7,10)-(7,11)
-*)
-
-(* correct types
-'a -> ('a * bool)
-'a
-*)
-
-(* bad types
-unit
-unit
+(* type error slice
+(2,4)-(2,50)
+(2,8)-(2,48)
+(2,10)-(2,48)
+(2,14)-(2,48)
+(2,33)-(2,48)
+(2,48)-(2,48)
+(4,36)-(4,37)
+(4,36)-(4,39)
+(4,53)-(4,59)
+(4,53)-(4,66)
+(4,60)-(4,66)
+(4,61)-(4,62)
+(6,22)-(6,28)
+(6,22)-(6,42)
+(6,29)-(6,42)
+(6,30)-(6,38)
+(6,31)-(6,33)
 *)

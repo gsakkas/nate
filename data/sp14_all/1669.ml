@@ -29,24 +29,16 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(12,64)-(12,65)
+(12,65)-(12,66)
 (e1 , x , y)
 TupleG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Tuple (Just (12,64)-(12,74)) [Var (Just (12,65)-(12,67)) "e1",Var (Just (12,69)-(12,70)) "x",Var (Just (12,72)-(12,73)) "y"]
-*)
-
-(* typed spans
-(12,64)-(12,74)
-*)
-
-(* correct types
-(expr * float * float)
-*)
-
-(* bad types
-expr
+(* type error slice
+(11,4)-(12,69)
+(11,15)-(12,67)
+(12,59)-(12,67)
+(12,60)-(12,64)
+(12,65)-(12,66)
 *)

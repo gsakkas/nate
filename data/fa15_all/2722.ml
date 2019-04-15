@@ -29,7 +29,7 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(10,2)-(14,13)
+(10,3)-(14,14)
 if n < 10
 then 0
 else 1 + additivePersistence (sumList (digits n))
@@ -37,18 +37,16 @@ IteG (BopG EmptyG EmptyG) LitG (BopG EmptyG EmptyG)
 
 *)
 
-(* changed exprs
-Ite (Just (10,2)-(10,70)) (Bop (Just (10,5)-(10,11)) Lt (Var (Just (10,5)-(10,6)) "n") (Lit (Just (10,9)-(10,11)) (LI 10))) (Lit (Just (10,17)-(10,18)) (LI 0)) (Bop (Just (10,24)-(10,70)) Plus (Lit (Just (10,24)-(10,25)) (LI 1)) (App (Just (10,28)-(10,70)) (Var (Just (10,29)-(10,48)) "additivePersistence") [App (Just (10,49)-(10,69)) (Var (Just (10,50)-(10,57)) "sumList") [App (Just (10,58)-(10,68)) (Var (Just (10,59)-(10,65)) "digits") [Var (Just (10,66)-(10,67)) "n"]]]))
-*)
-
-(* typed spans
-(10,2)-(10,70)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int -> int
+(* type error slice
+(9,4)-(14,16)
+(9,29)-(14,14)
+(10,3)-(14,14)
+(10,19)-(13,66)
+(11,5)-(13,66)
+(13,10)-(13,17)
+(13,10)-(13,66)
+(13,26)-(13,45)
+(14,3)-(14,10)
+(14,3)-(14,14)
+(14,13)-(14,14)
 *)

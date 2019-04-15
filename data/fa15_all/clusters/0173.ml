@@ -1,3 +1,4 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,LitG)])
-match explode x with
-| h :: t -> false
+IteG (BopG EmptyG EmptyG) LitG (BopG EmptyG EmptyG)
+if n < 10
+then 0
+else 1 + additivePersistence (sumList (digits n))

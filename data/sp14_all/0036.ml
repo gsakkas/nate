@@ -77,32 +77,21 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(28,15)-(28,32)
+(28,16)-(28,33)
 (t1 , [(h1 + x) mod 10])
-TupleG (fromList [VarG,ListG EmptyG])
+TupleG (fromList [VarG,ListG (fromList [EmptyG])])
 
-(33,15)-(33,45)
+(33,16)-(33,46)
 (t1 , (((h1 + x) + rh) mod 10) :: rt)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG])))])
+TupleG (fromList [VarG,ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-Tuple (Just (28,15)-(28,38)) [Var (Just (28,16)-(28,18)) "t1",List (Just (28,20)-(28,37)) [Bop (Just (28,21)-(28,36)) Mod (Bop (Just (28,21)-(28,29)) Plus (Var (Just (28,22)-(28,24)) "h1") (Var (Just (28,27)-(28,28)) "x")) (Lit (Just (28,34)-(28,36)) (LI 10))] Nothing]
-Tuple (Just (33,15)-(33,53)) [Var (Just (33,16)-(33,18)) "t1",ConApp (Just (33,20)-(33,52)) "::" (Just (Tuple (Just (33,21)-(33,51)) [Bop (Just (33,21)-(33,45)) Mod (Bop (Just (33,22)-(33,37)) Plus (Bop (Just (33,23)-(33,31)) Plus (Var (Just (33,24)-(33,26)) "h1") (Var (Just (33,29)-(33,30)) "x")) (Var (Just (33,34)-(33,36)) "rh")) (Lit (Just (33,42)-(33,44)) (LI 10)),Var (Just (33,49)-(33,51)) "rt"])) Nothing]
-*)
-
-(* typed spans
-(28,15)-(28,38)
-(33,15)-(33,53)
-*)
-
-(* correct types
-(int list * int list)
-(int list * int list)
-*)
-
-(* bad types
-int list
-int list
+(* type error slice
+(26,11)-(28,33)
+(27,16)-(27,54)
+(28,16)-(28,33)
+(30,11)-(33,46)
+(32,13)-(32,77)
+(33,16)-(33,46)
 *)

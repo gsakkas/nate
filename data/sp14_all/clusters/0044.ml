@@ -1,21 +1,22 @@
-CaseG VarG (fromList [(Nothing,VarG)])
-match l with
-| [] -> l
-| (_ :: tail :: []) :: [] -> l
-match x with
-| _ -> a
-match x with
-| (_ , _) -> a
-match e with
-| VarX -> x
-match e with
-| VarX -> x
-| VarY -> y
-match a with
-| (x , y) -> x
-match a with
-| (f , g) -> f
-match x with
-| x' :: xs -> x'
-match a with
-| (a1 , a2) -> a2
+LamG VarPatG (IteG EmptyG EmptyG EmptyG)
+fun accu ->
+  if n <= 0
+  then accu
+  else lastDigit (n / 10)
+                 ((n mod 10) :: accu)
+fun b' ->
+  if f b' = b'
+  then (b' , true)
+  else (b' , false)
+fun f' ->
+  if f b = b
+  then (b , true)
+  else (b , false)
+fun f' ->
+  if f b = b
+  then (b , false)
+  else (f b , true)
+fun a ->
+  if b = f b
+  then (b , false)
+  else (f b , true)

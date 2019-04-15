@@ -1,2 +1,4 @@
-AppG (fromList [ConAppG (Just (TupleG (fromList [ConAppG (Just (TupleG (fromList [VarG])))])))])
-exprToString (Average (Times (ex1 , ex2) , Times (ex2 , ex3)))
+CaseG VarG (fromList [(VarPatG,Nothing,VarG),(WildPatG,Nothing,AppG (fromList [EmptyG]))])
+match x with
+| k -> y
+| _ -> assoc (d , k , l')

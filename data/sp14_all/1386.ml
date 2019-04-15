@@ -28,32 +28,25 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(11,38)-(11,53)
-List.fold_left
-VarG
-
-(11,61)-(11,62)
-List.rev l
-AppG (fromList [VarG])
+(11,39)-(11,63)
+List.fold_left f base
+               (List.rev l)
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Var (Just (12,16)-(12,30)) "List.fold_left"
-App (Just (12,38)-(12,50)) (Var (Just (12,39)-(12,47)) "List.rev") [Var (Just (12,48)-(12,49)) "l"]
-*)
-
-(* typed spans
-(12,16)-(12,30)
-(12,38)-(12,50)
-*)
-
-(* correct types
-((int * int list) -> int -> (int * int list)) -> (int * int list) -> int list -> (int * int list)
-int list
-*)
-
-(* bad types
-((int * int list) -> int -> int) -> (int * int list) list -> int -> int
-'a list
+(* type error slice
+(3,3)-(11,70)
+(3,9)-(10,33)
+(3,11)-(10,33)
+(4,5)-(10,33)
+(6,9)-(10,33)
+(6,26)-(6,33)
+(6,31)-(6,32)
+(7,9)-(10,33)
+(8,9)-(10,33)
+(10,14)-(10,33)
+(11,39)-(11,54)
+(11,39)-(11,63)
+(11,55)-(11,56)
 *)

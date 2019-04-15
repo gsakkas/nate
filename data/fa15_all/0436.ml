@@ -17,24 +17,15 @@ let fixpoint (f,b) = let rec funt x = (b, ((f b) = b)) in wwhile (funt, b);;
 *)
 
 (* changed spans
-(6,39)-(6,43)
+(6,40)-(6,44)
 b
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (6,39)-(6,40)) "b"
-*)
-
-(* typed spans
-(6,39)-(6,40)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-'a -> ('a * bool)
+(* type error slice
+(6,22)-(6,78)
+(6,35)-(6,58)
+(6,39)-(6,58)
+(6,40)-(6,44)
 *)

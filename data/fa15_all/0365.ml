@@ -68,80 +68,42 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(13,20)-(13,28)
-Sine e
-ConAppG (Just VarG)
-
-(35,19)-(35,20)
+(35,32)-(35,38)
 buildX ()
 AppG (fromList [ConAppG Nothing])
 
-(35,24)-(35,25)
-()
-ConAppG Nothing
-
-(35,24)-(35,25)
+(35,44)-(35,50)
 buildY ()
 AppG (fromList [ConAppG Nothing])
 
-(35,31)-(35,37)
-()
-ConAppG Nothing
-
-(38,16)-(38,59)
-buildSine
-VarG
-
-(38,17)-(38,52)
-build (rand , depth - 1)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(38,48)-(38,49)
-depth
-VarG
+(38,12)-(38,60)
+buildSine (build (rand , depth - 1))
+AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-ConApp (Just (11,18)-(11,24)) "Sine" (Just (Var (Just (11,23)-(11,24)) "e")) Nothing
-App (Just (20,31)-(20,40)) (Var (Just (20,31)-(20,37)) "buildX") [ConApp (Just (20,38)-(20,40)) "()" Nothing (Just (TApp "unit" []))]
-ConApp (Just (20,38)-(20,40)) "()" Nothing (Just (TApp "unit" []))
-App (Just (20,46)-(20,55)) (Var (Just (20,46)-(20,52)) "buildY") [ConApp (Just (20,53)-(20,55)) "()" Nothing (Just (TApp "unit" []))]
-ConApp (Just (20,53)-(20,55)) "()" Nothing (Just (TApp "unit" []))
-Var (Just (23,11)-(23,20)) "buildSine"
-App (Just (23,21)-(23,48)) (Var (Just (23,22)-(23,27)) "build") [Tuple (Just (23,28)-(23,47)) [Var (Just (23,29)-(23,33)) "rand",Bop (Just (23,35)-(23,46)) Minus (Var (Just (23,36)-(23,41)) "depth") (Lit (Just (23,44)-(23,45)) (LI 1))]]
-Var (Just (23,36)-(23,41)) "depth"
-*)
-
-(* typed spans
-(11,18)-(11,24)
-(20,31)-(20,40)
-(20,38)-(20,40)
-(20,46)-(20,55)
-(20,53)-(20,55)
-(23,11)-(23,20)
-(23,21)-(23,48)
-(23,36)-(23,41)
-*)
-
-(* correct types
-expr
-expr
-unit
-expr
-unit
-expr -> expr
-expr
-int
-*)
-
-(* bad types
-expr
-int
-int
-int
-unit -> expr
-(expr * int * int)
-expr
-int
+(* type error slice
+(13,4)-(13,31)
+(13,17)-(13,29)
+(13,21)-(13,29)
+(13,28)-(13,29)
+(20,3)-(30,26)
+(22,14)-(22,15)
+(23,15)-(23,18)
+(23,15)-(23,43)
+(23,26)-(23,42)
+(23,27)-(23,31)
+(23,32)-(23,41)
+(23,39)-(23,40)
+(32,4)-(39,35)
+(32,16)-(39,33)
+(38,12)-(38,16)
+(38,12)-(38,60)
+(38,17)-(38,60)
+(38,18)-(38,53)
+(38,19)-(38,30)
+(38,31)-(38,36)
+(38,58)-(38,59)
+(39,12)-(39,17)
+(39,12)-(39,33)
 *)

@@ -39,26 +39,22 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(13,16)-(13,29)
+(13,17)-(13,30)
 let (carry , num) = a in
 let (l1 , l2) = x in
 (0 , l1 :: num)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Let (Just (13,16)-(13,74)) NonRec [(TuplePat (Just (13,21)-(13,30)) [VarPat (Just (13,21)-(13,26)) "carry",VarPat (Just (13,27)-(13,30)) "num"],Var (Just (13,34)-(13,35)) "a")] (Let (Just (13,39)-(13,74)) NonRec [(TuplePat (Just (13,44)-(13,49)) [VarPat (Just (13,44)-(13,46)) "l1",VarPat (Just (13,47)-(13,49)) "l2"],Var (Just (13,53)-(13,54)) "x")] (Tuple (Just (13,58)-(13,74)) [Lit (Just (13,59)-(13,60)) (LI 0),ConApp (Just (13,62)-(13,73)) "::" (Just (Tuple (Just (13,63)-(13,72)) [Var (Just (13,63)-(13,65)) "l1",Var (Just (13,69)-(13,72)) "num"])) Nothing]))
-*)
-
-(* typed spans
-(13,16)-(13,74)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-(int * 'a list)
+(* type error slice
+(13,5)-(16,52)
+(13,11)-(13,30)
+(13,13)-(13,30)
+(13,17)-(13,30)
+(13,21)-(13,29)
+(13,27)-(13,28)
+(16,19)-(16,33)
+(16,19)-(16,45)
+(16,34)-(16,35)
 *)

@@ -37,28 +37,38 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(11,11)-(21,34)
-let f =
-  fun a -> fun x -> a @ [0] in
-let base = [] in
-let args = l2 in
-List.fold_left f base args
-LetG NonRec (fromList [LamG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+(27,15)-(27,48)
+a @ [0]
+AppG (fromList [VarG,ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Let (Just (3,2)-(4,62)) NonRec [(VarPat (Just (3,6)-(3,7)) "f",Lam (Just (3,8)-(3,21)) (VarPat (Just (3,8)-(3,9)) "a") (Lam (Just (3,10)-(3,21)) (VarPat (Just (3,10)-(3,11)) "x") (App (Just (3,14)-(3,21)) (Var (Just (3,16)-(3,17)) "@") [Var (Just (3,14)-(3,15)) "a",List (Just (3,18)-(3,21)) [Lit (Just (3,19)-(3,20)) (LI 0)] Nothing]) Nothing) Nothing)] (Let (Just (4,2)-(4,62)) NonRec [(VarPat (Just (4,6)-(4,10)) "base",List (Just (4,13)-(4,15)) [] Nothing)] (Let (Just (4,19)-(4,62)) NonRec [(VarPat (Just (4,23)-(4,27)) "args",Var (Just (4,30)-(4,32)) "l2")] (App (Just (4,36)-(4,62)) (Var (Just (4,36)-(4,50)) "List.fold_left") [Var (Just (4,51)-(4,52)) "f",Var (Just (4,53)-(4,57)) "base",Var (Just (4,58)-(4,62)) "args"])))
-*)
-
-(* typed spans
-(3,2)-(4,62)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list -> int list -> int list
+(* type error slice
+(9,37)-(9,75)
+(9,51)-(9,61)
+(9,51)-(9,63)
+(9,69)-(9,75)
+(11,4)-(21,37)
+(11,12)-(21,35)
+(11,15)-(21,35)
+(12,3)-(21,35)
+(21,3)-(21,13)
+(21,3)-(21,35)
+(24,35)-(24,57)
+(24,36)-(24,46)
+(24,47)-(24,54)
+(27,3)-(28,63)
+(27,9)-(27,48)
+(27,11)-(27,48)
+(27,15)-(27,21)
+(27,15)-(27,48)
+(27,22)-(27,28)
+(27,23)-(27,24)
+(27,26)-(27,27)
+(27,29)-(27,48)
+(27,30)-(27,40)
+(27,41)-(27,44)
+(28,37)-(28,51)
+(28,37)-(28,63)
+(28,52)-(28,53)
 *)

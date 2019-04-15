@@ -45,24 +45,17 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(15,5)-(15,52)
+(15,6)-(15,53)
 print_string "going into then"
 AppG (fromList [LitG])
 
 *)
 
-(* changed exprs
-App (Just (15,5)-(15,35)) (Var (Just (15,5)-(15,17)) "print_string") [Lit (Just (15,18)-(15,35)) (LS "going into then")]
-*)
-
-(* typed spans
-(15,5)-(15,35)
-*)
-
-(* correct types
-unit
-*)
-
-(* bad types
-unit
+(* type error slice
+(15,6)-(15,18)
+(15,6)-(15,53)
+(16,6)-(18,7)
+(16,6)-(19,51)
+(20,8)-(20,27)
+(20,9)-(20,15)
 *)

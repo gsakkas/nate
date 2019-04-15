@@ -115,42 +115,20 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(50,15)-(50,24)
-intListToInt
-VarG
-
-(50,15)-(50,24)
-carryFunc (mulByDigit (intListToInt l1)
-                      [s])
+(50,15)-(50,36)
+intListToInt (carryFunc (mulByDigit (intListToInt l1)
+                                    [s]))
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(50,25)-(50,34)
-mulByDigit (intListToInt l1)
-           [s]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
-
 *)
 
-(* changed exprs
-Var (Just (51,12)-(51,24)) "intListToInt"
-App (Just (51,25)-(51,71)) (Var (Just (51,26)-(51,35)) "carryFunc") [App (Just (51,36)-(51,70)) (Var (Just (51,37)-(51,47)) "mulByDigit") [App (Just (51,48)-(51,65)) (Var (Just (51,49)-(51,61)) "intListToInt") [Var (Just (51,62)-(51,64)) "l1"],List (Just (51,66)-(51,69)) [Var (Just (51,67)-(51,68)) "s"] Nothing]]
-App (Just (51,36)-(51,70)) (Var (Just (51,37)-(51,47)) "mulByDigit") [App (Just (51,48)-(51,65)) (Var (Just (51,49)-(51,61)) "intListToInt") [Var (Just (51,62)-(51,64)) "l1"],List (Just (51,66)-(51,69)) [Var (Just (51,67)-(51,68)) "s"] Nothing]
-*)
-
-(* typed spans
-(51,12)-(51,24)
-(51,25)-(51,71)
-(51,36)-(51,70)
-*)
-
-(* correct types
-int list -> int
-int list
-int list
-*)
-
-(* bad types
-'a list -> 'a list
-'a list -> 'a list
-int
+(* type error slice
+(36,4)-(36,76)
+(36,15)-(36,74)
+(36,27)-(36,35)
+(36,27)-(36,37)
+(36,36)-(36,37)
+(50,15)-(50,36)
+(50,16)-(50,25)
+(50,26)-(50,35)
 *)

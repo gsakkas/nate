@@ -53,72 +53,44 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(19,67)-(19,68)
+(19,68)-(19,69)
 2.0
 LitG
 
-(20,21)-(20,34)
+(20,22)-(20,35)
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(20,38)-(20,51)
+(20,39)-(20,52)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(22,15)-(22,22)
+(22,16)-(22,23)
 (a , x , y)
 TupleG (fromList [VarG])
 
-(22,32)-(22,39)
+(22,33)-(22,40)
 (b , x , y)
 TupleG (fromList [VarG])
 
-(23,16)-(23,28)
+(23,17)-(23,29)
 (a_less , x , y)
 TupleG (fromList [VarG])
 
-(24,16)-(24,28)
+(24,17)-(24,29)
 (b_less , x , y)
 TupleG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Lit (Just (19,67)-(19,70)) (LD 2.0)
-App (Just (20,21)-(20,38)) (Var (Just (20,22)-(20,26)) "eval") [Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]]
-App (Just (20,42)-(20,59)) (Var (Just (20,43)-(20,47)) "eval") [Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "e2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]]
-Tuple (Just (22,15)-(22,24)) [Var (Just (22,16)-(22,17)) "a",Var (Just (22,19)-(22,20)) "x",Var (Just (22,22)-(22,23)) "y"]
-Tuple (Just (22,34)-(22,43)) [Var (Just (22,35)-(22,36)) "b",Var (Just (22,38)-(22,39)) "x",Var (Just (22,41)-(22,42)) "y"]
-Tuple (Just (23,16)-(23,30)) [Var (Just (23,17)-(23,23)) "a_less",Var (Just (23,25)-(23,26)) "x",Var (Just (23,28)-(23,29)) "y"]
-Tuple (Just (24,16)-(24,30)) [Var (Just (24,17)-(24,23)) "b_less",Var (Just (24,25)-(24,26)) "x",Var (Just (24,28)-(24,29)) "y"]
-*)
-
-(* typed spans
-(19,67)-(19,70)
-(20,21)-(20,38)
-(20,42)-(20,59)
-(22,15)-(22,24)
-(22,34)-(22,43)
-(23,16)-(23,30)
-(24,16)-(24,30)
-*)
-
-(* correct types
-float
-float
-float
-(expr * float * float)
-(expr * float * float)
-(expr * float * float)
-(expr * float * float)
-*)
-
-(* bad types
-int
-float
-float
-(expr * float * float)
-(expr * float * float)
-(expr * float * float)
-(expr * float * float)
+(* type error slice
+(17,20)-(17,45)
+(17,27)-(17,44)
+(17,28)-(17,32)
+(19,24)-(19,69)
+(19,68)-(19,69)
+(20,22)-(20,35)
+(20,23)-(20,27)
+(20,39)-(20,52)
+(20,40)-(20,44)
 *)

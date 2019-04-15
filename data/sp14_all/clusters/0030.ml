@@ -1,18 +1,14 @@
-BopG VarG VarG
-s2 - s1
-s1 - s2
-lenl2 - lenl1
-depth - num
-a + x
-c + x'
-leng2 - leng1
-x * x
-length1 = length2
-length2 - length1
-length2 > length1
-pi *. x
-a * a
-a < b
-b - a
-a * x
-h * i
+ListG (fromList [VarG])
+[input]
+[initsum]
+[res]
+[n]
+[carry2 ; dig]
+[nextCarry]
+[new_carry ; digit]
+[a]
+[h]
+[y]
+[head ; tail]
+[x]
+[k]

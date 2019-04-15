@@ -1,13 +1,17 @@
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
-if eval (e1 , x , y) < eval (e2 , x , y)
-then eval (e3 , x , y)
-else eval (e4 , x , y)
-if eval (th1 , x , y) < eval (th2 , x , y)
-then eval (th3 , x , y)
-else eval (th4 , x , y)
-if rand (0 , 1) = 0
-then buildX ()
-else buildY ()
-if d > 1.0
-then eval (m , x , y)
-else eval (m , x , y) ** eval (n , x , y)
+LamG VarPatG (IteG EmptyG EmptyG EmptyG)
+fun b ->
+  if f b
+  then (b , true)
+  else (b , false)
+fun b ->
+  if f b = b
+  then (b , true)
+  else (f b , false)
+fun x ->
+  if f x = b
+  then (b , true)
+  else (f x , false)
+fun b' ->
+  if f b' = b'
+  then (f b' , false)
+  else (f b' , true)

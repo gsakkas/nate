@@ -1,3 +1,5 @@
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])
-(0 :: l1 , l2)
-(l1 , 0 :: l2)
+LetG NonRec (fromList [(VarPatG,BopG EmptyG EmptyG)]) (CaseG EmptyG (fromList [(ConsPatG EmptyPatG EmptyPatG,Nothing,EmptyG),(ConPatG Nothing,Nothing,EmptyG)]))
+let sum = fst x + snd x in
+match a with
+| [] -> (sum / 10) :: ((sum mod 10) :: a)
+| h :: t -> (sum / 10) :: ((h + (sum mod 10)) :: t)

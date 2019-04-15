@@ -23,24 +23,22 @@ let rec assoc (d,k,l) =
 *)
 
 (* changed spans
-(9,9)-(9,18)
+(9,10)-(9,19)
 acc
 VarG
 
+(9,20)-(9,23)
+(d , k , l)
+TupleG (fromList [VarG])
+
 *)
 
-(* changed exprs
-Var (Just (9,9)-(9,12)) "acc"
-*)
-
-(* typed spans
-(9,9)-(9,12)
-*)
-
-(* correct types
-('a * 'b) list
-*)
-
-(* bad types
-('a * 'b * 'c)
+(* type error slice
+(5,5)-(8,74)
+(8,55)-(8,61)
+(8,55)-(8,73)
+(8,62)-(8,63)
+(9,3)-(9,9)
+(9,3)-(9,23)
+(9,10)-(9,19)
 *)

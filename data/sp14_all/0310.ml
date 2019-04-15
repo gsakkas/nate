@@ -9,24 +9,13 @@ let rec sumList xs = match xs with | [] -> 0 | h::t -> h + (sumList t);;
 *)
 
 (* changed spans
-(2,27)-(2,28)
+(2,28)-(2,29)
 xs
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (2,27)-(2,29)) "xs"
-*)
-
-(* typed spans
-(2,27)-(2,29)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(2,22)-(2,70)
+(2,28)-(2,29)
 *)

@@ -1,12 +1,9 @@
-IteG (BopG EmptyG EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG)
-if carry <> []
-then (let ch :: _ = carry in
-      let tens =
-        ((x1 + x2) + ch) / 10 in
-      let ones =
-        ((x1 + x2) + ch) mod 10 in
-      ([tens] , tens :: (ones :: res)))
-else (let tens =
-        (x1 + x2) / 10 in
-      let ones = (x1 + x2) mod 10 in
-      ([tens] , tens :: (ones :: res)))
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),AppG (fromList [EmptyG]))]) (IteG EmptyG EmptyG EmptyG)
+let (x , y) = f b in
+if y = true
+then wwhile (f , x)
+else x
+let (b' , c') = f b in
+if c'
+then wwhile (f , b')
+else b'

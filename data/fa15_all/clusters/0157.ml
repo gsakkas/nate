@@ -1,4 +1,3 @@
-IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (ConAppG Nothing)
-if f b = (b , true)
-then wwhile (f , b)
-else ()
+LetG NonRec (fromList [(VarPatG,VarG)]) (AppG (fromList [EmptyG]))
+let rest' = t in
+helper (seen' , rest')

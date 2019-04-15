@@ -53,24 +53,19 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(23,4)-(25,74)
+(23,5)-(25,75)
 [0 ; 0 ; 0 ; 0 ; 0]
-ListG LitG
+ListG (fromList [LitG])
 
 *)
 
-(* changed exprs
-List (Just (22,20)-(22,35)) [Lit (Just (22,21)-(22,22)) (LI 0),Lit (Just (22,24)-(22,25)) (LI 0),Lit (Just (22,27)-(22,28)) (LI 0),Lit (Just (22,30)-(22,31)) (LI 0),Lit (Just (22,33)-(22,34)) (LI 0)] Nothing
-*)
-
-(* typed spans
-(22,20)-(22,35)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-'a
+(* type error slice
+(23,5)-(25,75)
+(23,11)-(23,22)
+(23,17)-(23,18)
+(23,17)-(23,22)
+(25,28)-(25,75)
+(25,42)-(25,56)
+(25,42)-(25,68)
+(25,57)-(25,58)
 *)

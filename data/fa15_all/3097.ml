@@ -67,72 +67,45 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(28,20)-(28,61)
+(28,21)-(28,62)
 (eval (expr , x , y) *. (eval (expr , x , y) +. 1.0)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
-(30,12)-(30,17)
+(30,13)-(30,18)
 (expr1 , x , y)
 TupleG (fromList [VarG])
 
-(30,22)-(30,58)
-x
-VarG
-
-(30,22)-(30,58)
-y
-VarG
-
-(30,23)-(30,26)
-abs_float
-VarG
-
-(30,34)-(30,39)
-(expr2 , x , y)
-TupleG (fromList [VarG])
-
-(30,50)-(30,55)
-(expr3 , x , y)
-TupleG (fromList [VarG])
+(30,23)-(30,59)
+abs_float (eval (expr2 , x , y) +. eval (expr3 , x , y))
+AppG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-Bop (Just (29,6)-(29,66)) FDiv (Bop (Just (29,6)-(29,59)) FTimes (App (Just (29,7)-(29,26)) (Var (Just (29,8)-(29,12)) "eval") [Tuple (Just (29,13)-(29,25)) [Var (Just (29,14)-(29,18)) "expr",Var (Just (29,20)-(29,21)) "x",Var (Just (29,23)-(29,24)) "y"]]) (Bop (Just (29,30)-(29,58)) FPlus (App (Just (29,31)-(29,50)) (Var (Just (29,32)-(29,36)) "eval") [Tuple (Just (29,37)-(29,49)) [Var (Just (29,38)-(29,42)) "expr",Var (Just (29,44)-(29,45)) "x",Var (Just (29,47)-(29,48)) "y"]]) (Lit (Just (29,54)-(29,57)) (LD 1.0)))) (Lit (Just (29,63)-(29,66)) (LD 2.0))
-Tuple (Just (31,12)-(31,25)) [Var (Just (31,13)-(31,18)) "expr1",Var (Just (31,20)-(31,21)) "x",Var (Just (31,23)-(31,24)) "y"]
-Var (Just (31,20)-(31,21)) "x"
-Var (Just (31,23)-(31,24)) "y"
-Var (Just (32,9)-(32,18)) "abs_float"
-Tuple (Just (32,26)-(32,39)) [Var (Just (32,27)-(32,32)) "expr2",Var (Just (32,34)-(32,35)) "x",Var (Just (32,37)-(32,38)) "y"]
-Tuple (Just (32,50)-(32,63)) [Var (Just (32,51)-(32,56)) "expr3",Var (Just (32,58)-(32,59)) "x",Var (Just (32,61)-(32,62)) "y"]
-*)
-
-(* typed spans
-(29,6)-(29,66)
-(31,12)-(31,25)
-(31,20)-(31,21)
-(31,23)-(31,24)
-(32,9)-(32,18)
-(32,26)-(32,39)
-(32,50)-(32,63)
-*)
-
-(* correct types
-float
-(expr * float * float)
-float
-float
-float -> float
-(expr * float * float)
-(expr * float * float)
-*)
-
-(* bad types
-int
-expr
-float
-float
-int -> int
-expr
-expr
+(* type error slice
+(16,3)-(30,59)
+(19,18)-(19,21)
+(19,18)-(19,49)
+(19,29)-(19,48)
+(19,30)-(19,34)
+(19,35)-(19,47)
+(28,21)-(28,58)
+(28,21)-(28,62)
+(28,22)-(28,33)
+(28,23)-(28,27)
+(28,28)-(28,32)
+(28,38)-(28,49)
+(28,39)-(28,43)
+(28,44)-(28,48)
+(30,7)-(30,19)
+(30,8)-(30,12)
+(30,13)-(30,18)
+(30,23)-(30,59)
+(30,24)-(30,27)
+(30,28)-(30,58)
+(30,29)-(30,41)
+(30,30)-(30,34)
+(30,35)-(30,40)
+(30,45)-(30,57)
+(30,46)-(30,50)
+(30,51)-(30,56)
 *)

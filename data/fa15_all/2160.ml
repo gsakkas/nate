@@ -15,24 +15,27 @@ let fixpoint (f,b) = wwhile ((fun x  -> ((f b), ((f b) = b))), b);;
 *)
 
 (* changed spans
-(5,40)-(5,64)
+(5,41)-(5,65)
 (f b , f b = b)
 TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-Tuple (Just (5,40)-(5,60)) [App (Just (5,41)-(5,46)) (Var (Just (5,42)-(5,43)) "f") [Var (Just (5,44)-(5,45)) "b"],Bop (Just (5,48)-(5,59)) Eq (App (Just (5,49)-(5,54)) (Var (Just (5,50)-(5,51)) "f") [Var (Just (5,52)-(5,53)) "b"]) (Var (Just (5,57)-(5,58)) "b")]
-*)
-
-(* typed spans
-(5,40)-(5,60)
-*)
-
-(* correct types
-('a * bool)
-*)
-
-(* bad types
-('a * bool)
+(* type error slice
+(3,3)-(3,64)
+(3,17)-(3,18)
+(3,17)-(3,20)
+(3,42)-(3,48)
+(3,42)-(3,56)
+(3,49)-(3,56)
+(3,50)-(3,51)
+(5,22)-(5,28)
+(5,22)-(5,70)
+(5,29)-(5,70)
+(5,30)-(5,66)
+(5,41)-(5,65)
+(5,44)-(5,45)
+(5,44)-(5,49)
+(5,48)-(5,49)
+(5,55)-(5,56)
 *)

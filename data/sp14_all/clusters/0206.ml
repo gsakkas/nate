@@ -1,14 +1,5 @@
-CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG),(Nothing,ConAppG (Just EmptyG))])
-match depth with
-| 0 -> (let halff =
-          rand (0 , 2) in
-        if halff = 0
-        then buildY ()
-        else buildX ())
-| 1 -> (let halff =
-          rand (0 , 2) in
-        if halff = 0
-        then Cosine (build (rand , depth - 1))
-        else Sine (build (rand , depth - 1)))
-| 2 -> Average (build (rand , depth - 1) , build (rand , depth - 1))
-| 3 -> Times (build (rand , depth - 1) , build (rand , depth - 1))
+IteG (BopG EmptyG EmptyG) (SeqG EmptyG EmptyG) (AppG (fromList [EmptyG]))
+if sumList (digitsOfInt n) < 9
+then (1 :: x;
+additivePersistence (sumList (digitsOfInt n)))
+else sumList x

@@ -1,2 +1,2 @@
-LetG NonRec (fromList [ListG EmptyG]) VarG
-let c = [a ; b] in c
+BopG LitG LitG
+0.0 -. 1.0

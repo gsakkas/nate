@@ -1,1 +1,2 @@
-expr -> expr
+(int * int list)
+(int list * int list)

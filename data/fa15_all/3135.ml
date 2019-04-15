@@ -75,24 +75,17 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(35,11)-(35,23)
+(35,12)-(35,24)
 (- 1.0) /. 3.0
 BopG (UopG EmptyG) LitG
 
 *)
 
-(* changed exprs
-Bop (Just (35,11)-(35,24)) FDiv (Uop (Just (35,11)-(35,17)) Neg (Lit (Just (35,13)-(35,16)) (LD 1.0))) (Lit (Just (35,21)-(35,24)) (LD 3.0))
-*)
-
-(* typed spans
-(35,11)-(35,24)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(30,7)-(35,24)
+(33,9)-(34,74)
+(35,12)-(35,18)
+(35,12)-(35,24)
+(35,14)-(35,17)
+(35,21)-(35,24)
 *)

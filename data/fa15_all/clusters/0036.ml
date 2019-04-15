@@ -1,16 +1,8 @@
-LamG (TupleG (fromList [EmptyG]))
-fun x -> (x , f x = x)
-fun b ->
-  (f b , if f b = b
-         then true
-         else false)
-fun x -> (2 , f b = b)
-fun bt -> (bt , f bt = bt)
-fun b -> (f b , f b = b)
-fun x -> (f b , 3 < 4)
-fun input ->
-  (f input , f input = b)
-fun b ->
-  (f b , (b = f b) = false)
-fun y -> (f b , b = f b)
-fun x -> (f x , x <> f x)
+TupleG (fromList [AppG (fromList [EmptyG])])
+(f x , isFPoint x)
+(buildX () , build (rand , d))
+(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+(build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
+(carry @ [0] , bigAdd (mulByDigit x1
+                                  x2 @ carry) res)
+(build (rand , d) , build (rand , d) , build (rand , d))

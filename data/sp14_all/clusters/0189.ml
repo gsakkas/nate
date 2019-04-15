@@ -1,4 +1,2 @@
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (BopG EmptyG EmptyG)
-let sum =
-  num + additivePersistence num in
-1 + additivePersistence num
+AppG (fromList [LitG,ListG (fromList [])])
+f 0 []

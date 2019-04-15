@@ -137,34 +137,38 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(52,14)-(52,24)
+(52,15)-(52,25)
 match a with
 | (_ , z) -> (0 , bigAdd z x)
 | _ -> (0 , [])
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG,WildPatG]),Nothing,TupleG (fromList [EmptyG])),(WildPatG,Nothing,TupleG (fromList [EmptyG]))])
 
-(53,13)-(53,15)
+(53,14)-(53,16)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
 *)
 
-(* changed exprs
-Case (Just (52,14)-(52,70)) (Var (Just (52,20)-(52,21)) "a") [(TuplePat (Just (52,30)-(52,33)) [WildPat (Just (52,30)-(52,31)),VarPat (Just (52,32)-(52,33)) "z"],Nothing,Tuple (Just (52,38)-(52,55)) [Lit (Just (52,39)-(52,40)) (LI 0),App (Just (52,42)-(52,54)) (Var (Just (52,43)-(52,49)) "bigAdd") [Var (Just (52,50)-(52,51)) "z",Var (Just (52,52)-(52,53)) "x"]]),(WildPat (Just (52,58)-(52,59)),Nothing,Tuple (Just (52,63)-(52,70)) [Lit (Just (52,64)-(52,65)) (LI 0),List (Just (52,67)-(52,69)) [] Nothing])]
-Tuple (Just (53,13)-(53,20)) [Lit (Just (53,14)-(53,15)) (LI 0),List (Just (53,17)-(53,19)) [] Nothing]
-*)
-
-(* typed spans
-(52,14)-(52,70)
-(53,13)-(53,20)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-*)
-
-(* bad types
-int list
-int list
+(* type error slice
+(18,3)-(18,70)
+(18,9)-(18,10)
+(18,37)-(18,70)
+(18,51)-(18,61)
+(18,51)-(18,63)
+(18,69)-(18,70)
+(20,4)-(38,37)
+(20,12)-(38,35)
+(20,15)-(38,35)
+(21,3)-(38,35)
+(38,3)-(38,13)
+(38,3)-(38,35)
+(52,3)-(66,50)
+(52,9)-(52,25)
+(52,11)-(52,25)
+(52,15)-(52,21)
+(52,15)-(52,25)
+(66,3)-(66,50)
+(66,17)-(66,31)
+(66,17)-(66,43)
+(66,32)-(66,33)
 *)

@@ -1,9 +1,7 @@
-(expr * float * float)
-('a -> ('a * bool) * 'a)
-(int list * int list)
-('a list * 'b list)
-('a list * 'a list)
-('a -> 'a * 'a)
-(expr * float * 'a)
-((int * int) -> int * int)
-('a * 'b * ('b * 'a) list)
+float
+'a
+expr
+int list
+'a -> ('a * bool)
+'a list
+int

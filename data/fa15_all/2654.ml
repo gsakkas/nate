@@ -103,24 +103,18 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(48,24)-(48,40)
+(48,25)-(48,41)
 build1
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (48,24)-(48,30)) "build1"
-*)
-
-(* typed spans
-(48,24)-(48,30)
-*)
-
-(* correct types
-expr
-*)
-
-(* bad types
-(expr * expr)
+(* type error slice
+(13,4)-(13,33)
+(13,17)-(13,31)
+(13,22)-(13,31)
+(13,29)-(13,31)
+(48,13)-(48,24)
+(48,13)-(48,41)
+(48,25)-(48,41)
 *)

@@ -11,24 +11,22 @@ let pipe fs =
 *)
 
 (* changed spans
-(3,38)-(3,40)
+(3,39)-(3,41)
 fun fs -> fs
-LamG VarG
+LamG VarPatG VarG
 
 *)
 
-(* changed exprs
-Lam (Just (3,36)-(3,43)) (VarPat (Just (3,36)-(3,38)) "fs") (Var (Just (3,41)-(3,43)) "fs") Nothing
-*)
-
-(* typed spans
-(3,36)-(3,43)
-*)
-
-(* correct types
-'a -> 'a
-*)
-
-(* bad types
-'a -> 'b
+(* type error slice
+(3,3)-(3,69)
+(3,9)-(3,24)
+(3,19)-(3,24)
+(3,20)-(3,21)
+(3,28)-(3,69)
+(3,39)-(3,41)
+(3,45)-(3,59)
+(3,45)-(3,69)
+(3,60)-(3,61)
+(3,62)-(3,66)
+(3,67)-(3,69)
 *)

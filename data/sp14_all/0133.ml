@@ -49,29 +49,54 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(15,6)-(19,75)
+(15,7)-(19,76)
 let (l1' , l2') = x in
 let addit =
   (l1' + l2') + carry in
 (if addit > 10
  then addit mod 10
  else 0 , (addit / 10) :: num)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Let (Just (15,6)-(17,71)) NonRec [(TuplePat (Just (15,11)-(15,18)) [VarPat (Just (15,11)-(15,14)) "l1'",VarPat (Just (15,15)-(15,18)) "l2'"],Var (Just (15,22)-(15,23)) "x")] (Let (Just (16,6)-(17,71)) NonRec [(VarPat (Just (16,10)-(16,15)) "addit",Bop (Just (16,18)-(16,37)) Plus (Bop (Just (16,18)-(16,29)) Plus (Var (Just (16,19)-(16,22)) "l1'") (Var (Just (16,25)-(16,28)) "l2'")) (Var (Just (16,32)-(16,37)) "carry"))] (Tuple (Just (17,6)-(17,71)) [Ite (Just (17,7)-(17,47)) (Bop (Just (17,11)-(17,21)) Gt (Var (Just (17,11)-(17,16)) "addit") (Lit (Just (17,19)-(17,21)) (LI 10))) (Bop (Just (17,27)-(17,39)) Mod (Var (Just (17,27)-(17,32)) "addit") (Lit (Just (17,37)-(17,39)) (LI 10))) (Lit (Just (17,45)-(17,46)) (LI 0)),ConApp (Just (17,49)-(17,70)) "::" (Just (Tuple (Just (17,50)-(17,69)) [Bop (Just (17,50)-(17,62)) Div (Var (Just (17,51)-(17,56)) "addit") (Lit (Just (17,59)-(17,61)) (LI 10)),Var (Just (17,66)-(17,69)) "num"])) Nothing]))
-*)
-
-(* typed spans
-(15,6)-(17,71)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-(int * int list)
+(* type error slice
+(2,44)-(2,45)
+(2,44)-(2,66)
+(2,49)-(2,66)
+(2,50)-(2,55)
+(2,56)-(2,57)
+(4,4)-(6,55)
+(4,13)-(6,53)
+(4,16)-(6,53)
+(5,3)-(6,53)
+(6,3)-(6,53)
+(6,5)-(6,19)
+(6,6)-(6,11)
+(6,12)-(6,13)
+(6,27)-(6,52)
+(6,28)-(6,46)
+(6,29)-(6,34)
+(6,47)-(6,48)
+(12,3)-(23,35)
+(12,12)-(22,52)
+(13,5)-(22,52)
+(13,11)-(19,76)
+(13,13)-(19,76)
+(15,7)-(19,76)
+(15,13)-(15,14)
+(18,23)-(18,34)
+(18,24)-(18,27)
+(21,5)-(22,52)
+(21,16)-(21,28)
+(21,16)-(21,34)
+(21,32)-(21,34)
+(22,19)-(22,33)
+(22,19)-(22,45)
+(22,34)-(22,35)
+(22,41)-(22,45)
+(23,14)-(23,35)
+(23,15)-(23,18)
+(23,19)-(23,34)
+(23,20)-(23,27)
 *)

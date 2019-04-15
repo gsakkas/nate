@@ -1,26 +1,9 @@
-TupleG (fromList [VarG,LetG NonRec (fromList [EmptyG]) EmptyG])
-(let d =
-   fun x ->
-     (let xx = f b in
-      (xx , xx = b)) in
- d , b)
-(let func =
-   fun b ->
-     (let ans = f b in
-      if b = ans
-      then (ans , false)
-      else (ans , true)) in
- func , b)
-(let f =
-   fun x ->
-     (let xx = (x * x) * x in
-      (xx , xx < 100)) in
- f , b)
-(let g =
-   fun x ->
-     (let xx = f x in
-      (xx , xx <> b)) in
- g , b)
-(let helper =
-   fun x -> (f x , f x = f b) in
- helper , b)
+AppG (fromList [VarG,LitG,ConAppG (Just EmptyG)])
+helper 0 (num :: xs') xs
+helper 1
+       (((num / 10) mod 10) :: ((num mod 10) :: xs'))
+       xs
+helper 0 (num :: accum) xs
+helper 1
+       (((num / 10) mod 10) :: ((num mod 10) :: accum))
+       xs

@@ -19,24 +19,29 @@ let fixpoint (f,b) = let y x = ((f b), (b = (f b))) in wwhile (y, b);;
 *)
 
 (* changed spans
-(7,29)-(7,49)
+(7,30)-(7,50)
 fun x -> (f b , b = f b)
-LamG (TupleG (fromList [EmptyG]))
+LamG VarPatG (TupleG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Lam (Just (7,27)-(7,51)) (VarPat (Just (7,27)-(7,28)) "x") (Tuple (Just (7,31)-(7,51)) [App (Just (7,32)-(7,37)) (Var (Just (7,33)-(7,34)) "f") [Var (Just (7,35)-(7,36)) "b"],Bop (Just (7,39)-(7,50)) Eq (Var (Just (7,40)-(7,41)) "b") (App (Just (7,44)-(7,49)) (Var (Just (7,45)-(7,46)) "f") [Var (Just (7,47)-(7,48)) "b"])]) Nothing
-*)
-
-(* typed spans
-(7,27)-(7,51)
-*)
-
-(* correct types
-'a -> ('a * bool)
-*)
-
-(* bad types
-('a * bool)
+(* type error slice
+(2,4)-(5,28)
+(2,13)-(5,26)
+(4,29)-(4,35)
+(4,29)-(4,48)
+(4,36)-(4,42)
+(4,37)-(4,38)
+(4,43)-(4,48)
+(4,44)-(4,45)
+(5,3)-(5,9)
+(5,3)-(5,26)
+(5,10)-(5,16)
+(5,11)-(5,12)
+(7,22)-(7,67)
+(7,30)-(7,50)
+(7,54)-(7,60)
+(7,54)-(7,67)
+(7,61)-(7,67)
+(7,62)-(7,63)
 *)

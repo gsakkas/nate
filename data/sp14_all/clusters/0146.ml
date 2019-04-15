@@ -1,3 +1,3 @@
-AppG (fromList [UopG EmptyG,LitG])
-clone 0 (- diff)
-clone 0 (- lendiff)
+AppG (fromList [ConAppG (Just EmptyG),ListG (fromList [EmptyG])])
+List.append ("[" :: (List.map f
+                              l)) ["]"]

@@ -1,16 +1,11 @@
 int list
-'a
-(int * int list)
-int
-'a -> 'a
-string
-string list
 (int * int) list
-'a list
+'a
+int
 char list
-bool
-('a * bool)
-'a -> ('a * bool)
+expr
 float
-(int list * int list)
-int -> (int * bool)
+'a list
+bool
+string
+(int * int list)

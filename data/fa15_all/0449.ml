@@ -22,51 +22,38 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(4,53)-(4,54)
+(7,3)-(9,23)
 let gs =
   fun x ->
     (let isFPoint =
        fun x -> (f x - x) < 0 in
      (x , isFPoint x)) in
 wwhile (gs , b)
-LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
-
-(8,2)-(9,22)
-EMPTY
-EmptyG
-
-(8,42)-(8,46)
-EMPTY
-EmptyG
-
-(8,55)-(8,59)
-isFPoint
-VarG
-
-(8,64)-(8,69)
-EMPTY
-EmptyG
-
-(9,10)-(9,18)
-gs
-VarG
+LetG NonRec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* typed spans
-(7,2)-(8,16)
-(7,54)-(7,62)
-(8,10)-(8,12)
-*)
-
-(* typed spans
-int
-int -> bool
-int -> (int * bool)
-*)
-
-(* typed spans
-int
-int -> int
-int -> bool
+(* type error slice
+(3,3)-(4,69)
+(3,13)-(3,14)
+(3,13)-(3,16)
+(4,3)-(4,69)
+(4,9)-(4,12)
+(4,43)-(4,49)
+(4,43)-(4,56)
+(4,50)-(4,56)
+(4,51)-(4,52)
+(7,3)-(9,23)
+(7,16)-(7,35)
+(7,20)-(7,35)
+(8,3)-(9,23)
+(8,16)-(8,71)
+(8,20)-(8,71)
+(8,54)-(8,71)
+(8,55)-(8,63)
+(8,56)-(8,60)
+(9,3)-(9,9)
+(9,3)-(9,23)
+(9,10)-(9,23)
+(9,11)-(9,19)
 *)

@@ -1,12 +1,16 @@
-AppG (fromList [ListG EmptyG])
-append [h] [h]
-listReverse [a]
-[] @ [n mod 10]
-listReverse [n mod 10]
-app [5] [n mod 10]
-app [3] [8]
-List.hd [List.fold_left f base
-                        (mulByDigit i
-                                    (List.rev (List.map (fun x ->
-                                                           x * 10)
-                                                        t)) @ [h * i])]
+IteG (BopG EmptyG EmptyG) (TupleG (fromList [EmptyG])) (TupleG (fromList [EmptyG]))
+if diff > 0
+then (l1 , List.append (clone 0
+                              diff) l2)
+else (l1 , l2)
+if b < a
+then (l1 , List.append (clone 0
+                              (a - b)) l2)
+else (l1 , l2)
+if List.length l1 < List.length l2
+then (List.append (clone 0
+                         (List.length l2 - List.length l1))
+                  l1 , l2)
+else (l1 , List.append (clone 0
+                              (List.length l1 - List.length l2))
+                       l2)

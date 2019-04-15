@@ -63,25 +63,16 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(25,6)-(25,73)
+(25,7)-(25,74)
 match a with
 | (x , y) -> (carry2 , dig :: y)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,TupleG (fromList [EmptyG]))])
 
 *)
 
-(* changed exprs
-Case (Just (25,6)-(25,50)) (Var (Just (25,12)-(25,13)) "a") [(TuplePat (Just (25,22)-(25,25)) [VarPat (Just (25,22)-(25,23)) "x",VarPat (Just (25,24)-(25,25)) "y"],Nothing,Tuple (Just (25,30)-(25,50)) [Var (Just (25,31)-(25,37)) "carry2",ConApp (Just (25,39)-(25,49)) "::" (Just (Tuple (Just (25,40)-(25,48)) [Var (Just (25,40)-(25,43)) "dig",Var (Just (25,47)-(25,48)) "y"])) Nothing])]
-*)
-
-(* typed spans
-(25,6)-(25,50)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-(int * int list)
+(* type error slice
+(20,7)-(25,74)
+(20,25)-(20,26)
+(25,7)-(25,74)
+(25,13)-(25,14)
 *)

@@ -1,3 +1,4 @@
-TupleG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
-(mulByDigit x q , [])
-(List.length l1 , [])
+CaseG VarG (fromList [(ConsPatG WildPatG (ConsPatG EmptyPatG EmptyPatG),Nothing,ConAppG (Just EmptyG)),(ConPatG Nothing,Nothing,ListG (fromList []))])
+match l with
+| [] -> []
+| _ :: h :: [] -> h :: (listReverse [])

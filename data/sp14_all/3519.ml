@@ -17,24 +17,26 @@ let fixpoint (f,b) = wwhile (let func x x = (0, true) in ((func b), b));;
 *)
 
 (* changed spans
-(6,58)-(6,68)
+(6,59)-(6,69)
 func b
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (6,58)-(6,66)) (Var (Just (6,59)-(6,63)) "func") [Var (Just (6,64)-(6,65)) "b"]
-*)
-
-(* typed spans
-(6,58)-(6,66)
-*)
-
-(* correct types
-int -> (int * bool)
-*)
-
-(* bad types
-(int * bool)
+(* type error slice
+(3,9)-(3,10)
+(3,9)-(3,12)
+(4,42)-(4,48)
+(4,42)-(4,56)
+(4,49)-(4,56)
+(4,50)-(4,51)
+(6,22)-(6,28)
+(6,22)-(6,74)
+(6,29)-(6,74)
+(6,39)-(6,54)
+(6,41)-(6,54)
+(6,45)-(6,54)
+(6,58)-(6,73)
+(6,59)-(6,69)
+(6,60)-(6,64)
 *)

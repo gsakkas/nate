@@ -19,24 +19,16 @@ let rec sepConcat sep sl =
 *)
 
 (* changed spans
-(7,44)-(7,46)
+(7,45)-(7,47)
 t
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (7,44)-(7,45)) "t"
-*)
-
-(* typed spans
-(7,44)-(7,45)
-*)
-
-(* correct types
-string list
-*)
-
-(* bad types
-string
+(* type error slice
+(7,37)-(7,74)
+(7,45)-(7,47)
+(7,51)-(7,65)
+(7,51)-(7,74)
+(7,73)-(7,74)
 *)

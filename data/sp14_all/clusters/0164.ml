@@ -1,5 +1,7 @@
-CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,ConAppG (Just EmptyG)),(Nothing,ListG EmptyG)])
-match (List.rev list1 , List.rev list2) with
-| (h1 :: t1 , h2 :: t2) -> (h1 , h2) :: (pair t1
-                                              t2)
-| (_ , _) -> []
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,AppG (fromList [EmptyG])),(ConPatG Nothing,Nothing,LamG VarPatG EmptyG)])
+match fs with
+| h :: t -> f h h
+| [] -> fun x -> x
+match fs with
+| [] -> fun x -> x
+| h :: t -> f (fun x -> x) h

@@ -15,24 +15,18 @@ let rec digitalRoot n = if n > 10 then digitalRoot (sumDigits n) else n;;
 *)
 
 (* changed spans
-(5,39)-(5,62)
+(5,40)-(5,63)
 digitalRoot (sumDigits n)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (5,39)-(5,64)) (Var (Just (5,39)-(5,50)) "digitalRoot") [App (Just (5,51)-(5,64)) (Var (Just (5,52)-(5,61)) "sumDigits") [Var (Just (5,62)-(5,63)) "n"]]
-*)
-
-(* typed spans
-(5,39)-(5,64)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int
+(* type error slice
+(5,4)-(5,72)
+(5,21)-(5,70)
+(5,25)-(5,70)
+(5,40)-(5,51)
+(5,40)-(5,63)
+(5,62)-(5,63)
+(5,69)-(5,70)
 *)

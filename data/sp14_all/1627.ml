@@ -23,32 +23,23 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,20)-(7,64)
+(7,55)-(7,59)
+[h]
+ListG (fromList [VarG])
+
+(7,62)-(7,65)
 seen
 VarG
 
-(7,20)-(7,64)
+(7,65)-(7,65)
 seen
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (7,60)-(7,64)) "seen"
-Var (Just (7,70)-(7,74)) "seen"
-*)
-
-(* typed spans
-(7,60)-(7,64)
-(7,70)-(7,74)
-*)
-
-(* correct types
-'a list
-'a list
-*)
-
-(* bad types
-unit
-unit
+(* type error slice
+(7,21)-(7,65)
+(7,55)-(7,65)
+(7,60)-(7,61)
+(7,65)-(7,65)
 *)

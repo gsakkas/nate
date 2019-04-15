@@ -23,57 +23,22 @@ let stringOfList f l = "[" ^ ((sepConcat ";" (List.map f l)) ^ "]");;
 *)
 
 (* changed spans
-(9,23)-(9,31)
-(^)
-VarG
-
-(9,23)-(9,31)
-"["
-LitG
-
-(9,23)-(9,31)
-sepConcat ";" (List.map f
-                        l) ^ "]"
+(9,24)-(9,53)
+"[" ^ (sepConcat ";"
+                 (List.map f l) ^ "]")
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(9,34)-(9,52)
-l
-VarG
-
-(9,34)-(9,52)
-"]"
-LitG
-
 *)
 
-(* changed exprs
-Var (Just (9,27)-(9,28)) "^"
-Lit (Just (9,23)-(9,26)) (LS "[")
-App (Just (9,29)-(9,67)) (Var (Just (9,61)-(9,62)) "^") [App (Just (9,30)-(9,60)) (Var (Just (9,31)-(9,40)) "sepConcat") [Lit (Just (9,41)-(9,44)) (LS ";"),App (Just (9,45)-(9,59)) (Var (Just (9,46)-(9,54)) "List.map") [Var (Just (9,55)-(9,56)) "f",Var (Just (9,57)-(9,58)) "l"]],Lit (Just (9,63)-(9,66)) (LS "]")]
-Var (Just (9,57)-(9,58)) "l"
-Lit (Just (9,63)-(9,66)) (LS "]")
-*)
-
-(* typed spans
-(9,27)-(9,28)
-(9,23)-(9,26)
-(9,29)-(9,67)
-(9,57)-(9,58)
-(9,63)-(9,66)
-*)
-
-(* correct types
-string -> string -> string
-string
-string
-'a list
-string
-*)
-
-(* bad types
-('a -> 'b) -> 'a list -> 'b list
-('a -> 'b) -> 'a list -> 'b list
-('a -> 'b) -> 'a list -> 'b list
-string
-string
+(* type error slice
+(2,4)-(7,61)
+(2,19)-(7,59)
+(2,23)-(7,59)
+(3,3)-(7,59)
+(4,11)-(4,13)
+(9,24)-(9,32)
+(9,24)-(9,53)
+(9,35)-(9,53)
+(9,36)-(9,50)
+(9,37)-(9,46)
 *)

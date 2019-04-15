@@ -56,7 +56,7 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(19,16)-(19,50)
+(19,17)-(19,51)
 let (x1 , x2) = x in
 let (a1 , a2) = a in
 let h :: _ = a1 in
@@ -65,38 +65,31 @@ let tens =
 let ones =
   (x1 + x2) + (h mod 10) in
 (tens :: a1 , ones :: a2)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
 
-(20,19)-(20,20)
+(20,17)-(20,18)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(21,4)-(22,51)
+(20,20)-(20,21)
 []
-ListG EmptyG
+ListG (fromList [])
 
 *)
 
-(* changed exprs
-Let (Just (20,6)-(24,71)) NonRec [(TuplePat (Just (20,11)-(20,16)) [VarPat (Just (20,11)-(20,13)) "x1",VarPat (Just (20,14)-(20,16)) "x2"],Var (Just (20,20)-(20,21)) "x")] (Let (Just (21,6)-(24,71)) NonRec [(TuplePat (Just (21,11)-(21,16)) [VarPat (Just (21,11)-(21,13)) "a1",VarPat (Just (21,14)-(21,16)) "a2"],Var (Just (21,20)-(21,21)) "a")] (Let (Just (22,6)-(24,71)) NonRec [(ConsPat (Just (22,10)-(22,14)) (VarPat (Just (22,10)-(22,11)) "h") (WildPat (Just (22,13)-(22,14))),Var (Just (22,17)-(22,19)) "a1")] (Let (Just (23,6)-(24,71)) NonRec [(VarPat (Just (23,10)-(23,14)) "tens",Bop (Just (23,17)-(23,37)) Plus (Bop (Just (23,17)-(23,26)) Plus (Var (Just (23,18)-(23,20)) "x1") (Var (Just (23,23)-(23,25)) "x2")) (Bop (Just (23,29)-(23,37)) Div (Var (Just (23,30)-(23,31)) "h") (Lit (Just (23,34)-(23,36)) (LI 10))))] (Let (Just (24,6)-(24,71)) NonRec [(VarPat (Just (24,10)-(24,14)) "ones",Bop (Just (24,17)-(24,39)) Plus (Bop (Just (24,17)-(24,26)) Plus (Var (Just (24,18)-(24,20)) "x1") (Var (Just (24,23)-(24,25)) "x2")) (Bop (Just (24,29)-(24,39)) Mod (Var (Just (24,30)-(24,31)) "h") (Lit (Just (24,36)-(24,38)) (LI 10))))] (Tuple (Just (24,43)-(24,71)) [ConApp (Just (24,44)-(24,56)) "::" (Just (Tuple (Just (24,45)-(24,55)) [Var (Just (24,45)-(24,49)) "tens",Var (Just (24,53)-(24,55)) "a1"])) Nothing,ConApp (Just (24,58)-(24,70)) "::" (Just (Tuple (Just (24,59)-(24,69)) [Var (Just (24,59)-(24,63)) "ones",Var (Just (24,67)-(24,69)) "a2"])) Nothing])))))
-List (Just (25,16)-(25,18)) [] Nothing
-List (Just (25,20)-(25,22)) [] Nothing
-*)
-
-(* typed spans
-(20,6)-(24,71)
-(25,16)-(25,18)
-(25,20)-(25,22)
-*)
-
-(* correct types
-(int list * int list)
-int list
-int list
-*)
-
-(* bad types
-(int * int)
-int
-int list
+(* type error slice
+(19,5)-(22,52)
+(19,11)-(19,51)
+(19,13)-(19,51)
+(19,17)-(19,51)
+(19,23)-(19,24)
+(21,5)-(22,52)
+(21,16)-(21,24)
+(21,16)-(21,45)
+(21,25)-(21,45)
+(21,26)-(21,38)
+(22,19)-(22,33)
+(22,19)-(22,45)
+(22,34)-(22,35)
+(22,41)-(22,45)
 *)

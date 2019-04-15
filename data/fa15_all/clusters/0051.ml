@@ -1,9 +1,16 @@
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-let b = fst x + snd x in
-match a with
-| h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
-| _ -> [b / 10 ; b mod 10]
-let sum = fst x + snd x in
-match a with
-| [] -> (sum / 10) :: ((sum mod 10) :: a)
-| h :: t -> (sum / 10) :: ((h + (sum mod 10)) :: t)
+TupleG (fromList [VarG,LamG VarPatG EmptyG])
+(fun x -> (x , f x = x) , b)
+(fun x -> (b , f b = b) , b)
+(fun b ->
+   (f b , f b <> b) , b)
+(fun x -> (f b , 3 < 4) , b)
+(fun x ->
+   (f b , not (b = f b)) , b)
+(fun x ->
+   (f x , x <> f x) , b)
+(fun input ->
+   (let b = f input in
+    (b , b <> input)) , b)
+(fun x ->
+   (let b = f x in
+    (b , b <> x)) , b)

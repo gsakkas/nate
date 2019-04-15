@@ -18,56 +18,32 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(6,35)-(6,40)
+(6,36)-(6,41)
 (false , x)
 TupleG (fromList [VarG,LitG])
 
-(6,46)-(6,50)
+(6,47)-(6,51)
 (true , f2 x)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(6,54)-(6,60)
-f2
-VarG
-
-(6,54)-(6,60)
-x
-VarG
-
-(6,54)-(6,60)
-wwhile (f1 f , b)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
 *)
 
-(* changed exprs
-Tuple (Just (6,35)-(6,45)) [Lit (Just (6,36)-(6,41)) (LB False),Var (Just (6,43)-(6,44)) "x"]
-Tuple (Just (6,51)-(6,65)) [Lit (Just (6,52)-(6,56)) (LB True),App (Just (6,58)-(6,64)) (Var (Just (6,59)-(6,61)) "f2") [Var (Just (6,62)-(6,63)) "x"]]
-Var (Just (6,59)-(6,61)) "f2"
-Var (Just (6,62)-(6,63)) "x"
-App (Just (7,2)-(7,20)) (Var (Just (7,2)-(7,8)) "wwhile") [Tuple (Just (7,9)-(7,20)) [App (Just (7,10)-(7,16)) (Var (Just (7,11)-(7,13)) "f1") [Var (Just (7,14)-(7,15)) "f"],Var (Just (7,18)-(7,19)) "b"]]
-*)
-
-(* typed spans
-(6,35)-(6,45)
-(6,51)-(6,65)
-(6,59)-(6,61)
-(6,62)-(6,63)
-(7,2)-(7,20)
-*)
-
-(* correct types
-(bool * bool)
-(bool * bool)
-bool -> bool
-bool
-bool
-*)
-
-(* bad types
-bool
-bool
-('a -> ('a * bool) * 'a) -> 'a
-('a -> ('a * bool) * 'a) -> 'a
-('a -> ('a * bool) * 'a) -> 'a
+(* type error slice
+(3,3)-(3,64)
+(3,17)-(3,18)
+(3,17)-(3,20)
+(3,42)-(3,48)
+(3,42)-(3,56)
+(3,49)-(3,56)
+(3,50)-(3,51)
+(6,3)-(6,73)
+(6,10)-(6,51)
+(6,13)-(6,51)
+(6,17)-(6,51)
+(6,47)-(6,51)
+(6,55)-(6,61)
+(6,55)-(6,73)
+(6,62)-(6,73)
+(6,63)-(6,69)
+(6,64)-(6,66)
 *)

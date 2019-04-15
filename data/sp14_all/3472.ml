@@ -14,25 +14,22 @@ let rec listReverse l = match l with | [] -> [];;
 *)
 
 (* changed spans
-(7,24)-(7,54)
+(7,25)-(7,55)
 match l with
 | [] -> []
-CaseG VarG (fromList [(Nothing,ListG EmptyG)])
+CaseG VarG (fromList [(ConPatG Nothing,Nothing,ListG (fromList []))])
 
 *)
 
-(* changed exprs
-Case (Just (2,24)-(2,47)) (Var (Just (2,30)-(2,31)) "l") [(ConPat (Just (2,39)-(2,41)) "[]" Nothing,Nothing,List (Just (2,45)-(2,47)) [] Nothing)]
-*)
-
-(* typed spans
-(2,24)-(2,47)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a
+(* type error slice
+(2,4)-(5,9)
+(2,13)-(5,7)
+(3,3)-(5,7)
+(4,44)-(4,67)
+(4,55)-(4,67)
+(4,56)-(4,58)
+(5,3)-(5,5)
+(5,3)-(5,7)
+(7,25)-(7,32)
+(7,25)-(7,55)
 *)

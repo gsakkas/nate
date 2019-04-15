@@ -109,57 +109,43 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(46,18)-(46,48)
+(46,19)-(46,49)
 intListToInt (mulByDigit (intListToInt l1)
                          [s])
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(51,13)-(51,42)
+(51,14)-(51,43)
 List.combine l2 l2
 AppG (fromList [VarG])
 
-(51,13)-(51,42)
-List.combine
-VarG
-
-(51,13)-(51,42)
-l2
-VarG
-
-(51,13)-(51,42)
-l2
-VarG
-
 *)
 
-(* changed exprs
-App (Just (46,18)-(46,65)) (Var (Just (46,18)-(46,30)) "intListToInt") [App (Just (46,31)-(46,65)) (Var (Just (46,32)-(46,42)) "mulByDigit") [App (Just (46,43)-(46,60)) (Var (Just (46,44)-(46,56)) "intListToInt") [Var (Just (46,57)-(46,59)) "l1"],List (Just (46,61)-(46,64)) [Var (Just (46,62)-(46,63)) "s"] Nothing]]
-App (Just (51,13)-(51,31)) (Var (Just (51,13)-(51,25)) "List.combine") [Var (Just (51,26)-(51,28)) "l2",Var (Just (51,29)-(51,31)) "l2"]
-Var (Just (51,13)-(51,25)) "List.combine"
-Var (Just (51,26)-(51,28)) "l2"
-Var (Just (51,29)-(51,31)) "l2"
-*)
-
-(* typed spans
-(46,18)-(46,65)
-(51,13)-(51,31)
-(51,13)-(51,25)
-(51,26)-(51,28)
-(51,29)-(51,31)
-*)
-
-(* correct types
-int
-(int * int) list
-int list -> int list -> (int * int) list
-int list
-int list
-*)
-
-(* bad types
-int list
-(int list * int list) list
-(int list * int list) list
-(int list * int list) list
-(int list * int list) list
+(* type error slice
+(4,4)-(10,20)
+(4,13)-(10,18)
+(4,16)-(10,18)
+(9,45)-(9,61)
+(9,46)-(9,57)
+(9,58)-(9,60)
+(15,4)-(27,37)
+(15,12)-(27,35)
+(15,15)-(27,35)
+(27,19)-(27,34)
+(27,20)-(27,27)
+(27,31)-(27,33)
+(39,17)-(39,23)
+(39,17)-(39,48)
+(39,26)-(39,48)
+(39,27)-(39,37)
+(46,9)-(49,44)
+(46,19)-(46,29)
+(46,19)-(46,49)
+(47,12)-(47,21)
+(47,13)-(47,16)
+(48,16)-(48,25)
+(48,17)-(48,20)
+(48,35)-(48,44)
+(48,36)-(48,39)
+(49,20)-(49,29)
+(49,21)-(49,24)
 *)

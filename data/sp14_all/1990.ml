@@ -37,35 +37,42 @@ let palindrome w = (explode w) = (listReverse (explode w));;
 *)
 
 (* changed spans
-(17,20)-(18,62)
-match l with
-| [] -> []
-| h :: t -> myAppend (listReverse t)
-                     h
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG)])
-
-(20,19)-(20,68)
+(20,20)-(20,69)
 explode w = listReverse (explode w)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Case (Just (10,2)-(10,62)) (Var (Just (10,8)-(10,9)) "l") [(ConPat (Just (10,17)-(10,19)) "[]" Nothing,Nothing,List (Just (10,23)-(10,25)) [] Nothing),(ConsPat (Just (10,28)-(10,32)) (VarPat (Just (10,28)-(10,29)) "h") (VarPat (Just (10,31)-(10,32)) "t"),Nothing,App (Just (10,36)-(10,62)) (Var (Just (10,36)-(10,44)) "myAppend") [App (Just (10,45)-(10,60)) (Var (Just (10,46)-(10,57)) "listReverse") [Var (Just (10,58)-(10,59)) "t"],Var (Just (10,61)-(10,62)) "h"])]
-Bop (Just (12,19)-(12,58)) Eq (App (Just (12,19)-(12,30)) (Var (Just (12,20)-(12,27)) "explode") [Var (Just (12,28)-(12,29)) "w"]) (App (Just (12,33)-(12,58)) (Var (Just (12,34)-(12,45)) "listReverse") [App (Just (12,46)-(12,57)) (Var (Just (12,47)-(12,54)) "explode") [Var (Just (12,55)-(12,56)) "w"]])
-*)
-
-(* typed spans
-(10,2)-(10,62)
-(12,19)-(12,58)
-*)
-
-(* correct types
-char list
-bool
-*)
-
-(* bad types
-char list -> char list
-'a
+(* type error slice
+(4,4)-(7,9)
+(4,13)-(7,7)
+(5,3)-(7,7)
+(6,44)-(6,51)
+(6,44)-(6,67)
+(6,45)-(6,50)
+(6,55)-(6,67)
+(6,56)-(6,58)
+(7,3)-(7,5)
+(7,3)-(7,7)
+(10,28)-(10,46)
+(10,29)-(10,40)
+(10,30)-(10,37)
+(10,38)-(10,39)
+(10,43)-(10,45)
+(13,8)-(13,19)
+(13,8)-(13,33)
+(13,9)-(13,16)
+(13,17)-(13,18)
+(13,22)-(13,33)
+(13,23)-(13,30)
+(13,31)-(13,32)
+(14,10)-(14,21)
+(14,10)-(14,45)
+(14,22)-(14,33)
+(14,23)-(14,30)
+(14,31)-(14,32)
+(20,20)-(20,31)
+(20,20)-(20,69)
+(20,32)-(20,43)
+(20,33)-(20,40)
 *)

@@ -65,26 +65,45 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(24,6)-(26,41)
+(24,7)-(26,42)
 match a2 with
 | [] -> (0 :: a1 , (sum / 10) :: ((sum mod 10) :: a2))
 | h :: t -> ((sum / 10) :: a1 , (sum mod 10) :: a2)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,TupleG (fromList [EmptyG])),(ConPatG Nothing,Nothing,TupleG (fromList [EmptyG]))])
 
 *)
 
-(* changed exprs
-Case (Just (24,6)-(26,58)) (Var (Just (24,12)-(24,14)) "a2") [(ConPat (Just (25,8)-(25,10)) "[]" Nothing,Nothing,Tuple (Just (25,14)-(25,61)) [ConApp (Just (25,15)-(25,24)) "::" (Just (Tuple (Just (25,16)-(25,23)) [Lit (Just (25,16)-(25,17)) (LI 0),Var (Just (25,21)-(25,23)) "a1"])) Nothing,ConApp (Just (25,26)-(25,60)) "::" (Just (Tuple (Just (25,27)-(25,59)) [Bop (Just (25,27)-(25,37)) Div (Var (Just (25,28)-(25,31)) "sum") (Lit (Just (25,34)-(25,36)) (LI 10)),ConApp (Just (25,41)-(25,59)) "::" (Just (Tuple (Just (25,41)-(25,59)) [Bop (Just (25,41)-(25,53)) Mod (Var (Just (25,42)-(25,45)) "sum") (Lit (Just (25,50)-(25,52)) (LI 10)),Var (Just (25,57)-(25,59)) "a2"])) Nothing])) Nothing]),(ConsPat (Just (26,8)-(26,12)) (VarPat (Just (26,8)-(26,9)) "h") (VarPat (Just (26,11)-(26,12)) "t"),Nothing,Tuple (Just (26,16)-(26,58)) [ConApp (Just (26,17)-(26,35)) "::" (Just (Tuple (Just (26,18)-(26,34)) [Bop (Just (26,18)-(26,28)) Div (Var (Just (26,19)-(26,22)) "sum") (Lit (Just (26,25)-(26,27)) (LI 10)),Var (Just (26,32)-(26,34)) "a1"])) Nothing,ConApp (Just (26,37)-(26,57)) "::" (Just (Tuple (Just (26,38)-(26,56)) [Bop (Just (26,38)-(26,50)) Mod (Var (Just (26,39)-(26,42)) "sum") (Lit (Just (26,47)-(26,49)) (LI 10)),Var (Just (26,54)-(26,56)) "a2"])) Nothing])]
-*)
-
-(* typed spans
-(24,6)-(26,58)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-(int list * int list list)
+(* type error slice
+(15,3)-(15,70)
+(15,40)-(15,41)
+(15,40)-(15,45)
+(15,44)-(15,45)
+(15,51)-(15,61)
+(15,51)-(15,63)
+(15,62)-(15,63)
+(18,3)-(30,35)
+(18,12)-(29,52)
+(19,5)-(29,52)
+(19,11)-(26,42)
+(21,7)-(26,42)
+(21,21)-(21,22)
+(24,7)-(26,42)
+(25,9)-(25,78)
+(25,31)-(25,57)
+(25,45)-(25,57)
+(25,68)-(25,78)
+(26,28)-(26,41)
+(26,29)-(26,34)
+(26,38)-(26,40)
+(27,5)-(29,52)
+(28,5)-(29,52)
+(29,5)-(29,52)
+(29,19)-(29,33)
+(29,19)-(29,45)
+(29,34)-(29,35)
+(29,49)-(29,52)
+(30,3)-(30,13)
+(30,3)-(30,35)
+(30,14)-(30,35)
+(30,15)-(30,18)
 *)

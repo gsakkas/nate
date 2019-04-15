@@ -15,24 +15,18 @@ let sqsum xs =
 *)
 
 (* changed spans
-(4,54)-(4,56)
+(4,55)-(4,57)
 f hd hd
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (4,54)-(4,63)) (Var (Just (4,55)-(4,56)) "f") [Var (Just (4,57)-(4,59)) "hd",Var (Just (4,60)-(4,62)) "hd"]
-*)
-
-(* typed spans
-(4,54)-(4,63)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int list
+(* type error slice
+(4,14)-(4,61)
+(4,40)-(4,49)
+(4,41)-(4,42)
+(4,43)-(4,45)
+(4,52)-(4,61)
+(4,53)-(4,54)
+(4,55)-(4,57)
 *)

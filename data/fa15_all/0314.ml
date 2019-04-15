@@ -9,24 +9,15 @@ let stringOfList f l = "[" ^ ("List.map f l" ^ "]");;
 *)
 
 (* changed spans
-(2,30)-(2,44)
+(2,31)-(2,45)
 "List.map f l"
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (2,30)-(2,44)) (LS "List.map f l")
-*)
-
-(* typed spans
-(2,30)-(2,44)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-'a list
+(* type error slice
+(2,30)-(2,52)
+(2,31)-(2,45)
+(2,32)-(2,40)
+(2,46)-(2,47)
 *)

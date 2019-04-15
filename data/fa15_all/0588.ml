@@ -32,24 +32,19 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(15,15)-(15,40)
+(15,16)-(15,41)
 "sin"
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (12,58)-(12,63)) (LS "sin")
-*)
-
-(* typed spans
-(12,58)-(12,63)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-int
+(* type error slice
+(11,4)-(15,43)
+(11,22)-(15,41)
+(12,3)-(15,41)
+(13,14)-(13,17)
+(15,16)-(15,21)
+(15,16)-(15,41)
+(15,24)-(15,41)
+(15,25)-(15,37)
 *)

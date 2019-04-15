@@ -21,24 +21,19 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(7,10)-(7,32)
+(7,11)-(7,33)
 digitsOfInt (n * (-1))
 AppG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-App (Just (7,10)-(7,32)) (Var (Just (7,10)-(7,21)) "digitsOfInt") [Bop (Just (7,22)-(7,32)) Times (Var (Just (7,23)-(7,24)) "n") (Lit (Just (7,27)-(7,31)) (LI (-1)))]
-*)
-
-(* typed spans
-(7,10)-(7,32)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(5,5)-(7,34)
+(6,11)-(6,33)
+(6,11)-(6,46)
+(6,12)-(6,23)
+(6,34)-(6,35)
+(7,11)-(7,26)
+(7,11)-(7,33)
+(7,12)-(7,23)
 *)

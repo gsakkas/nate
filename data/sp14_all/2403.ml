@@ -51,12 +51,12 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(15,18)-(15,35)
+(15,19)-(15,36)
 match a with
 | (x , y) -> x
-CaseG VarG (fromList [(Nothing,VarG)])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,VarG)])
 
-(15,33)-(15,34)
+(16,7)-(18,40)
 match x with
 | (addend_a , addend_b) -> (let new_carry =
                               ((carry + addend_a) + addend_b) / 10 in
@@ -64,55 +64,23 @@ match x with
                               ((carry + addend_a) + addend_b) mod 10 in
                             match a with
                             | (x , y) -> (new_carry , digit :: y))
-CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)])
 
-(16,6)-(18,39)
-let new_carry =
-  ((carry + addend_a) + addend_b) / 10 in
-let digit =
-  ((carry + addend_a) + addend_b) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(19,15)-(19,16)
+(19,16)-(19,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
-
-(20,4)-(21,51)
-[]
-ListG EmptyG
+TupleG (fromList [LitG,ListG (fromList [])])
 
 *)
 
-(* changed exprs
-Case (Just (15,18)-(15,43)) (Var (Just (15,24)-(15,25)) "a") [(TuplePat (Just (15,34)-(15,37)) [VarPat (Just (15,34)-(15,35)) "x",VarPat (Just (15,36)-(15,37)) "y"],Nothing,Var (Just (15,42)-(15,43)) "x")]
-Case (Just (16,6)-(20,61)) (Var (Just (16,12)-(16,13)) "x") [(TuplePat (Just (17,9)-(17,26)) [VarPat (Just (17,9)-(17,17)) "addend_a",VarPat (Just (17,18)-(17,26)) "addend_b"],Nothing,Let (Just (18,10)-(20,61)) NonRec [(VarPat (Just (18,14)-(18,23)) "new_carry",Bop (Just (18,26)-(18,62)) Div (Bop (Just (18,26)-(18,57)) Plus (Bop (Just (18,27)-(18,45)) Plus (Var (Just (18,28)-(18,33)) "carry") (Var (Just (18,36)-(18,44)) "addend_a")) (Var (Just (18,48)-(18,56)) "addend_b")) (Lit (Just (18,60)-(18,62)) (LI 10)))] (Let (Just (19,10)-(20,61)) NonRec [(VarPat (Just (19,14)-(19,19)) "digit",Bop (Just (19,22)-(19,60)) Mod (Bop (Just (19,22)-(19,53)) Plus (Bop (Just (19,23)-(19,41)) Plus (Var (Just (19,24)-(19,29)) "carry") (Var (Just (19,32)-(19,40)) "addend_a")) (Var (Just (19,44)-(19,52)) "addend_b")) (Lit (Just (19,58)-(19,60)) (LI 10)))] (Case (Just (20,10)-(20,61)) (Var (Just (20,17)-(20,18)) "a") [(TuplePat (Just (20,27)-(20,30)) [VarPat (Just (20,27)-(20,28)) "x",VarPat (Just (20,29)-(20,30)) "y"],Nothing,Tuple (Just (20,35)-(20,60)) [Var (Just (20,36)-(20,45)) "new_carry",ConApp (Just (20,47)-(20,59)) "::" (Just (Tuple (Just (20,48)-(20,58)) [Var (Just (20,48)-(20,53)) "digit",Var (Just (20,57)-(20,58)) "y"])) Nothing])])))]
-Let (Just (18,10)-(20,61)) NonRec [(VarPat (Just (18,14)-(18,23)) "new_carry",Bop (Just (18,26)-(18,62)) Div (Bop (Just (18,26)-(18,57)) Plus (Bop (Just (18,27)-(18,45)) Plus (Var (Just (18,28)-(18,33)) "carry") (Var (Just (18,36)-(18,44)) "addend_a")) (Var (Just (18,48)-(18,56)) "addend_b")) (Lit (Just (18,60)-(18,62)) (LI 10)))] (Let (Just (19,10)-(20,61)) NonRec [(VarPat (Just (19,14)-(19,19)) "digit",Bop (Just (19,22)-(19,60)) Mod (Bop (Just (19,22)-(19,53)) Plus (Bop (Just (19,23)-(19,41)) Plus (Var (Just (19,24)-(19,29)) "carry") (Var (Just (19,32)-(19,40)) "addend_a")) (Var (Just (19,44)-(19,52)) "addend_b")) (Lit (Just (19,58)-(19,60)) (LI 10)))] (Case (Just (20,10)-(20,61)) (Var (Just (20,17)-(20,18)) "a") [(TuplePat (Just (20,27)-(20,30)) [VarPat (Just (20,27)-(20,28)) "x",VarPat (Just (20,29)-(20,30)) "y"],Nothing,Tuple (Just (20,35)-(20,60)) [Var (Just (20,36)-(20,45)) "new_carry",ConApp (Just (20,47)-(20,59)) "::" (Just (Tuple (Just (20,48)-(20,58)) [Var (Just (20,48)-(20,53)) "digit",Var (Just (20,57)-(20,58)) "y"])) Nothing])]))
-Tuple (Just (21,15)-(21,22)) [Lit (Just (21,16)-(21,17)) (LI 0),List (Just (21,19)-(21,21)) [] Nothing]
-List (Just (21,19)-(21,21)) [] Nothing
-*)
-
-(* typed spans
-(15,18)-(15,43)
-(16,6)-(20,61)
-(18,10)-(20,61)
-(21,15)-(21,22)
-(21,19)-(21,21)
-*)
-
-(* correct types
-int
-(int * int list)
-(int * int list)
-(int * int list)
-int list
-*)
-
-(* bad types
-int
-(int * int)
-int list
-int
-int list
+(* type error slice
+(14,5)-(21,52)
+(14,11)-(18,40)
+(16,7)-(18,40)
+(16,13)-(16,14)
+(19,5)-(21,52)
+(19,16)-(19,17)
+(21,19)-(21,33)
+(21,19)-(21,45)
+(21,34)-(21,35)
+(21,36)-(21,40)
 *)

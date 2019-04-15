@@ -89,24 +89,16 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(31,24)-(31,39)
+(31,25)-(31,40)
 ")/(abs("
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (31,24)-(31,33)) (LS ")/(abs(")
-*)
-
-(* typed spans
-(31,24)-(31,33)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-int
+(* type error slice
+(31,24)-(33,80)
+(31,25)-(31,40)
+(31,26)-(31,29)
+(31,32)-(31,39)
+(31,41)-(31,42)
 *)

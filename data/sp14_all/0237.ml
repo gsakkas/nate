@@ -75,32 +75,25 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(35,12)-(35,32)
+(35,13)-(35,33)
 ","
 LitG
 
-(35,12)-(35,32)
-exprToString b ^ ("," ^ (exprToString c ^ ")"))
-AppG (fromList [AppG (fromList [EmptyG])])
+(35,37)-(35,40)
+exprToString b
+AppG (fromList [VarG])
+
+(35,44)-(35,60)
+","
+LitG
+
+(35,63)-(35,66)
+exprToString c ^ ")"
+AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-Lit (Just (35,12)-(35,15)) (LS ",")
-App (Just (35,18)-(35,71)) (Var (Just (35,36)-(35,37)) "^") [App (Just (35,19)-(35,35)) (Var (Just (35,20)-(35,32)) "exprToString") [Var (Just (35,33)-(35,34)) "b"],App (Just (35,38)-(35,70)) (Var (Just (35,43)-(35,44)) "^") [Lit (Just (35,39)-(35,42)) (LS ","),App (Just (35,45)-(35,69)) (Var (Just (35,63)-(35,64)) "^") [App (Just (35,46)-(35,62)) (Var (Just (35,47)-(35,59)) "exprToString") [Var (Just (35,60)-(35,61)) "c"],Lit (Just (35,65)-(35,68)) (LS ")")]]]
-*)
-
-(* typed spans
-(35,12)-(35,15)
-(35,18)-(35,71)
-*)
-
-(* correct types
-string
-string
-*)
-
-(* bad types
-string
-string
+(* type error slice
+(35,13)-(35,33)
+(35,14)-(35,17)
 *)

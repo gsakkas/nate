@@ -23,7 +23,7 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(6,2)-(7,77)
+(6,3)-(7,78)
 let absNumZeros =
   abs numZeros in
 if numZeros = 0
@@ -33,22 +33,20 @@ else (let listZeros =
       if numZeros > 0
       then (l1 , listZeros @ l2)
       else (listZeros @ l1 , l2))
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) (IteG EmptyG EmptyG EmptyG)
 
 *)
 
-(* changed exprs
-Let (Just (6,2)-(11,77)) NonRec [(VarPat (Just (6,6)-(6,17)) "absNumZeros",App (Just (6,20)-(6,32)) (Var (Just (6,20)-(6,23)) "abs") [Var (Just (6,24)-(6,32)) "numZeros"])] (Ite (Just (7,2)-(11,77)) (Bop (Just (7,5)-(7,17)) Eq (Var (Just (7,5)-(7,13)) "numZeros") (Lit (Just (7,16)-(7,17)) (LI 0))) (Tuple (Just (8,7)-(8,15)) [Var (Just (8,8)-(8,10)) "l1",Var (Just (8,12)-(8,14)) "l2"]) (Let (Just (10,4)-(11,77)) NonRec [(VarPat (Just (10,9)-(10,18)) "listZeros",App (Just (10,21)-(10,40)) (Var (Just (10,21)-(10,26)) "clone") [Lit (Just (10,27)-(10,28)) (LI 0),Var (Just (10,29)-(10,40)) "absNumZeros"])] (Ite (Just (11,5)-(11,76)) (Bop (Just (11,8)-(11,20)) Gt (Var (Just (11,8)-(11,16)) "numZeros") (Lit (Just (11,19)-(11,20)) (LI 0))) (Tuple (Just (11,26)-(11,48)) [Var (Just (11,27)-(11,29)) "l1",App (Just (11,31)-(11,47)) (Var (Just (11,42)-(11,43)) "@") [Var (Just (11,32)-(11,41)) "listZeros",Var (Just (11,44)-(11,46)) "l2"]]) (Tuple (Just (11,54)-(11,76)) [App (Just (11,55)-(11,71)) (Var (Just (11,66)-(11,67)) "@") [Var (Just (11,56)-(11,65)) "listZeros",Var (Just (11,68)-(11,70)) "l1"],Var (Just (11,73)-(11,75)) "l2"]))))
-*)
-
-(* typed spans
-(6,2)-(11,77)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-('a list * 'b list) list
+(* type error slice
+(2,49)-(2,66)
+(2,50)-(2,55)
+(6,3)-(7,78)
+(6,19)-(6,24)
+(6,19)-(6,44)
+(7,30)-(7,46)
+(7,31)-(7,40)
+(7,41)-(7,42)
+(7,56)-(7,72)
+(7,57)-(7,66)
+(7,67)-(7,68)
 *)

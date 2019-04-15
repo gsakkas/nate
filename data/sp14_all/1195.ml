@@ -74,60 +74,33 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(22,16)-(22,44)
+(22,17)-(22,45)
 match x with
 | (x1 , x2) -> match a with
                | (o , z) -> if ((o + x1) + x2) > 9
                             then (1 , (((o + x1) + x2) mod 10) :: z)
                             else (0 , ((o + x1) + x2) :: z)
-CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))])
 
-(23,15)-(23,16)
+(23,16)-(23,17)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
-(24,4)-(30,51)
-[]
-ListG EmptyG
-
-(26,15)-(26,20)
+(26,16)-(26,21)
 List.rev list1
 AppG (fromList [VarG])
 
-(26,22)-(26,27)
+(26,23)-(26,28)
 List.rev list2
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Case (Just (23,6)-(29,48)) (Var (Just (23,12)-(23,13)) "x") [(TuplePat (Just (24,9)-(24,14)) [VarPat (Just (24,9)-(24,11)) "x1",VarPat (Just (24,12)-(24,14)) "x2"],Nothing,Case (Just (25,10)-(29,48)) (Var (Just (25,17)-(25,18)) "a") [(TuplePat (Just (26,14)-(26,17)) [VarPat (Just (26,14)-(26,15)) "o",VarPat (Just (26,16)-(26,17)) "z"],Nothing,Ite (Just (27,15)-(29,47)) (Bop (Just (27,18)-(27,37)) Gt (Bop (Just (27,18)-(27,33)) Plus (Bop (Just (27,19)-(27,27)) Plus (Var (Just (27,20)-(27,21)) "o") (Var (Just (27,24)-(27,26)) "x1")) (Var (Just (27,30)-(27,32)) "x2")) (Lit (Just (27,36)-(27,37)) (LI 9))) (Tuple (Just (28,20)-(28,56)) [Lit (Just (28,21)-(28,22)) (LI 1),ConApp (Just (28,24)-(28,55)) "::" (Just (Tuple (Just (28,25)-(28,54)) [Bop (Just (28,25)-(28,49)) Mod (Bop (Just (28,26)-(28,41)) Plus (Bop (Just (28,27)-(28,35)) Plus (Var (Just (28,28)-(28,29)) "o") (Var (Just (28,32)-(28,34)) "x1")) (Var (Just (28,38)-(28,40)) "x2")) (Lit (Just (28,46)-(28,48)) (LI 10)),Var (Just (28,53)-(28,54)) "z"])) Nothing]) (Tuple (Just (29,20)-(29,47)) [Lit (Just (29,21)-(29,22)) (LI 0),ConApp (Just (29,24)-(29,46)) "::" (Just (Tuple (Just (29,25)-(29,45)) [Bop (Just (29,25)-(29,40)) Plus (Bop (Just (29,26)-(29,34)) Plus (Var (Just (29,27)-(29,28)) "o") (Var (Just (29,31)-(29,33)) "x1")) (Var (Just (29,37)-(29,39)) "x2"),Var (Just (29,44)-(29,45)) "z"])) Nothing]))])]
-Tuple (Just (30,15)-(30,22)) [Lit (Just (30,16)-(30,17)) (LI 0),List (Just (30,19)-(30,21)) [] Nothing]
-List (Just (30,19)-(30,21)) [] Nothing
-App (Just (33,15)-(33,31)) (Var (Just (33,16)-(33,24)) "List.rev") [Var (Just (33,25)-(33,30)) "list1"]
-App (Just (33,33)-(33,49)) (Var (Just (33,34)-(33,42)) "List.rev") [Var (Just (33,43)-(33,48)) "list2"]
-*)
-
-(* typed spans
-(23,6)-(29,48)
-(30,15)-(30,22)
-(30,19)-(30,21)
-(33,15)-(33,31)
-(33,33)-(33,49)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-int list
-int list
-int list
-*)
-
-(* bad types
-int
-int
-int list
-int list
-int list
+(* type error slice
+(23,5)-(30,52)
+(23,16)-(23,17)
+(30,5)-(30,52)
+(30,19)-(30,33)
+(30,19)-(30,45)
+(30,36)-(30,40)
 *)

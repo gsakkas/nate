@@ -109,24 +109,14 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(48,14)-(48,38)
+(48,15)-(48,39)
 sum + r
 BopG VarG VarG
 
 *)
 
-(* changed exprs
-Bop (Just (48,14)-(48,23)) Plus (Var (Just (48,15)-(48,18)) "sum") (Var (Just (48,21)-(48,22)) "r")
-*)
-
-(* typed spans
-(48,14)-(48,23)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int
+(* type error slice
+(48,15)-(48,39)
+(48,16)-(48,28)
+(48,29)-(48,38)
 *)

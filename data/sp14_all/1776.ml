@@ -55,32 +55,36 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(23,28)-(23,48)
+(23,29)-(23,49)
 List.rev (0 :: l1)
-AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG])))])
+AppG (fromList [ConAppG (Just EmptyG)])
 
-(23,51)-(23,59)
-0 :: l2
-ConAppG (Just (TupleG (fromList [VarG,LitG])))
+(23,50)-(23,70)
+List.rev (0 :: l2)
+AppG (fromList [ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-App (Just (23,28)-(23,48)) (Var (Just (23,29)-(23,37)) "List.rev") [ConApp (Just (23,38)-(23,47)) "::" (Just (Tuple (Just (23,39)-(23,46)) [Lit (Just (23,39)-(23,40)) (LI 0),Var (Just (23,44)-(23,46)) "l1"])) Nothing]
-ConApp (Just (23,59)-(23,68)) "::" (Just (Tuple (Just (23,60)-(23,67)) [Lit (Just (23,60)-(23,61)) (LI 0),Var (Just (23,65)-(23,67)) "l2"])) Nothing
-*)
-
-(* typed spans
-(23,28)-(23,48)
-(23,59)-(23,68)
-*)
-
-(* correct types
-int list
-int list
-*)
-
-(* bad types
-int list list
-'a list -> 'a list
+(* type error slice
+(19,5)-(24,52)
+(19,11)-(21,77)
+(19,13)-(21,77)
+(20,7)-(21,77)
+(20,19)-(20,20)
+(21,27)-(21,34)
+(21,28)-(21,29)
+(23,5)-(24,52)
+(23,16)-(23,28)
+(23,16)-(23,70)
+(23,29)-(23,49)
+(23,30)-(23,43)
+(23,31)-(23,39)
+(23,47)-(23,48)
+(23,51)-(23,63)
+(23,52)-(23,60)
+(23,61)-(23,62)
+(24,19)-(24,33)
+(24,19)-(24,45)
+(24,34)-(24,35)
+(24,41)-(24,45)
 *)

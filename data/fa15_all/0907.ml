@@ -52,35 +52,29 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(18,21)-(18,68)
+(18,22)-(18,69)
 match a with
 | (carry , list) -> (let num =
                        (l1e + l2e) + carry in
                      (num mod 9 , [7] @ list))
-CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)])
 
-(22,18)-(22,64)
+(22,19)-(22,65)
 (padZero l1 l2 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Case (Just (19,10)-(21,76)) (Var (Just (19,17)-(19,18)) "a") [(TuplePat (Just (20,14)-(20,24)) [VarPat (Just (20,14)-(20,19)) "carry",VarPat (Just (20,20)-(20,24)) "list"],Nothing,Let (Just (21,15)-(21,75)) NonRec [(VarPat (Just (21,19)-(21,22)) "num",Bop (Just (21,25)-(21,44)) Plus (Bop (Just (21,25)-(21,36)) Plus (Var (Just (21,26)-(21,29)) "l1e") (Var (Just (21,32)-(21,35)) "l2e")) (Var (Just (21,39)-(21,44)) "carry"))] (Tuple (Just (21,48)-(21,75)) [Bop (Just (21,49)-(21,60)) Mod (Var (Just (21,50)-(21,53)) "num") (Lit (Just (21,58)-(21,59)) (LI 9)),App (Just (21,62)-(21,74)) (Var (Just (21,67)-(21,68)) "@") [List (Just (21,63)-(21,66)) [Lit (Just (21,64)-(21,65)) (LI 7)] Nothing,Var (Just (21,69)-(21,73)) "list"]]))]
-Tuple (Just (25,18)-(25,39)) [App (Just (25,19)-(25,34)) (Var (Just (25,20)-(25,27)) "padZero") [Var (Just (25,28)-(25,30)) "l1",Var (Just (25,31)-(25,33)) "l2"],Var (Just (25,36)-(25,38)) "l2"]
-*)
-
-(* typed spans
-(19,10)-(21,76)
-(25,18)-(25,39)
-*)
-
-(* correct types
-(int * int list)
-(int list * int list)
-*)
-
-(* bad types
-(int * int list)
-('a list * 'b list)
+(* type error slice
+(16,5)-(21,52)
+(16,11)-(18,69)
+(16,13)-(18,69)
+(17,7)-(18,69)
+(18,22)-(18,69)
+(18,32)-(18,47)
+(18,46)-(18,47)
+(18,51)-(18,69)
+(21,19)-(21,33)
+(21,19)-(21,45)
+(21,34)-(21,35)
 *)

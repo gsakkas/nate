@@ -11,24 +11,20 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(3,52)-(3,74)
+(3,53)-(3,75)
 n mod 10
 BopG VarG LitG
 
 *)
 
-(* changed exprs
-Bop (Just (3,52)-(3,60)) Mod (Var (Just (3,52)-(3,53)) "n") (Lit (Just (3,58)-(3,60)) (LI 10))
-*)
-
-(* typed spans
-(3,52)-(3,60)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-'a
+(* type error slice
+(2,4)-(3,79)
+(2,21)-(3,77)
+(3,3)-(3,77)
+(3,26)-(3,77)
+(3,47)-(3,76)
+(3,50)-(3,51)
+(3,52)-(3,76)
+(3,53)-(3,64)
+(3,53)-(3,75)
 *)

@@ -1,4 +1,7 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (TupleG (fromList [EmptyG]))
-let ff = f b in (ff , b = ff)
-let result = f b in
-(result , result = b)
+LamG (TuplePatG (fromList [VarPatG])) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
+fun (f , b) ->
+  (let f =
+     fun b ->
+       (let x = f b in
+        (x , x <> b)) in
+   f)

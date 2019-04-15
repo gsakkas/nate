@@ -1,13 +1,20 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,LitG),(Nothing,IteG EmptyG EmptyG EmptyG)])
-match e with
-| VarX -> x
-| VarY -> y
-| Sine b -> sin (pi *. eval (b , x , y))
-| Cosine b -> cos (pi *. eval (b , x , y))
-| Average (a , b) -> (eval (a , x , y) +. eval (b , x , y)) /. 2.0
-| Times (a , b) -> eval (a , x , y) *. eval (b , x , y)
-| Thresh (a , b , c , d) -> if eval (a , x , y) < eval (b , x , y)
-                            then eval (c , x , y)
-                            else eval (d , x , y)
-| TripMult (a , b , c) -> (eval (a , x , y) *. eval (b , x , y)) *. eval (c , x , y)
-| _ -> 0.0
+LetG NonRec (fromList [(VarPatG,IteG EmptyG EmptyG EmptyG)]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
+let subtreeSize1 =
+  if depth = 1
+  then 0
+  else rand (1 , depth - 1) in
+let subtreeSize2 =
+  if depth = 1
+  then 0
+  else rand (1 , depth - 1) in
+let subtreeSize3 =
+  if depth = 1
+  then 0
+  else rand (1 , depth - 1) in
+let subtreeeSize4 =
+  if depth = 1
+  then 0
+  else rand (1 , depth - 1) in
+let x = rand (1 , 5) in
+match x with
+| _ -> buildSine (build (rand , subtreeSize1))

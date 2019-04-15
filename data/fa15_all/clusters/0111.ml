@@ -1,4 +1,4 @@
-CaseG VarG (fromList [(Nothing,VarG)])
-match e with
-| VarX -> x
-| VarY -> y
+AppG (fromList [AppG (fromList [EmptyG]),ListG (fromList [])])
+List.append (clone x (n - 1))
+            []
+digitsOfInt (n mod 10) @ []

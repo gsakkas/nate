@@ -1,7 +1,4 @@
-AppG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
-digits (n / 10)
-       ((n mod 10) :: digitList)
-digitsOfIntHelper (n / 10)
-                  ((n mod 10) :: result)
-helper ((v mod 10) :: acc)
-       (v / 10)
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,ConAppG (Just EmptyG)),(WildPatG,Nothing,VarG)])
+match x with
+| (h1 , h2) -> ((h1 + h2) / 10) :: (((h1 + h2) mod 10) :: a)
+| _ -> a

@@ -1,3 +1,1 @@
-(int * int) -> int
-int -> bool
-int -> int
+('a -> ('a * bool) * 'a)

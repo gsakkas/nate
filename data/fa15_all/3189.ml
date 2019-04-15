@@ -75,40 +75,38 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(28,12)-(28,36)
+(28,13)-(28,37)
 [(x1 + x2) / 10 ; 0]
-ListG LitG
+ListG (fromList [BopG EmptyG EmptyG,LitG])
 
-(28,38)-(28,56)
+(28,39)-(28,57)
 [(x1 + x2) mod 10]
-ListG (BopG EmptyG EmptyG)
+ListG (fromList [BopG EmptyG EmptyG])
 
-(31,41)-(31,65)
+(31,42)-(31,66)
 a2 @ [((x1 + x2) + c) mod 10]
-AppG (fromList [VarG,ListG EmptyG])
+AppG (fromList [VarG,ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-List (Just (28,12)-(28,31)) [Bop (Just (28,13)-(28,27)) Div (Bop (Just (28,13)-(28,22)) Plus (Var (Just (28,14)-(28,16)) "x1") (Var (Just (28,19)-(28,21)) "x2")) (Lit (Just (28,25)-(28,27)) (LI 10)),Lit (Just (28,29)-(28,30)) (LI 0)] Nothing
-List (Just (28,33)-(28,51)) [Bop (Just (28,34)-(28,50)) Mod (Bop (Just (28,34)-(28,43)) Plus (Var (Just (28,35)-(28,37)) "x1") (Var (Just (28,40)-(28,42)) "x2")) (Lit (Just (28,48)-(28,50)) (LI 10))] Nothing
-App (Just (31,41)-(31,72)) (Var (Just (31,45)-(31,46)) "@") [Var (Just (31,42)-(31,44)) "a2",List (Just (31,47)-(31,71)) [Bop (Just (31,48)-(31,70)) Mod (Bop (Just (31,48)-(31,63)) Plus (Bop (Just (31,49)-(31,58)) Plus (Var (Just (31,50)-(31,52)) "x1") (Var (Just (31,55)-(31,57)) "x2")) (Var (Just (31,61)-(31,62)) "c")) (Lit (Just (31,68)-(31,70)) (LI 10))] Nothing]
-*)
-
-(* typed spans
-(28,12)-(28,31)
-(28,33)-(28,51)
-(31,41)-(31,72)
-*)
-
-(* correct types
-int list
-int list
-int list
-*)
-
-(* bad types
-int list
-int
-int
+(* type error slice
+(24,5)-(34,52)
+(24,11)-(31,68)
+(24,13)-(31,68)
+(25,7)-(31,68)
+(26,7)-(31,68)
+(27,7)-(31,68)
+(28,13)-(28,37)
+(28,14)-(28,30)
+(28,31)-(28,32)
+(30,9)-(31,68)
+(31,10)-(31,67)
+(31,42)-(31,66)
+(32,5)-(34,52)
+(32,16)-(32,24)
+(32,21)-(32,23)
+(34,19)-(34,33)
+(34,19)-(34,45)
+(34,34)-(34,35)
+(34,36)-(34,40)
 *)

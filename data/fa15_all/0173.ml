@@ -10,24 +10,19 @@ let rec digitsOfInt n = if n > 0 then [n / 10; n mod 10] else [];;
 *)
 
 (* changed spans
-(3,17)-(3,37)
+(3,18)-(3,38)
 n / 10
 BopG VarG LitG
 
 *)
 
-(* changed exprs
-Bop (Just (2,39)-(2,45)) Div (Var (Just (2,39)-(2,40)) "n") (Lit (Just (2,43)-(2,45)) (LI 10))
-*)
-
-(* typed spans
-(2,39)-(2,45)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int
+(* type error slice
+(2,4)-(3,59)
+(2,21)-(3,57)
+(3,3)-(3,57)
+(3,17)-(3,49)
+(3,18)-(3,29)
+(3,18)-(3,38)
+(3,40)-(3,48)
+(3,55)-(3,57)
 *)

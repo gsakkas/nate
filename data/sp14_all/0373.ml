@@ -67,24 +67,22 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(21,32)-(21,47)
+(21,33)-(21,48)
 [1 ; 0] @ acc
-AppG (fromList [VarG,ListG EmptyG])
+AppG (fromList [VarG,ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (21,32)-(21,46)) (Var (Just (21,40)-(21,41)) "@") [List (Just (21,33)-(21,39)) [Lit (Just (21,34)-(21,35)) (LI 1),Lit (Just (21,37)-(21,38)) (LI 0)] Nothing,Var (Just (21,42)-(21,45)) "acc"]
-*)
-
-(* typed spans
-(21,32)-(21,46)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list list
+(* type error slice
+(21,33)-(21,48)
+(21,34)-(21,40)
+(21,44)-(21,47)
+(24,10)-(27,38)
+(24,24)-(24,41)
+(26,10)-(27,38)
+(26,25)-(26,70)
+(26,63)-(26,70)
+(27,20)-(27,37)
+(27,21)-(27,29)
+(27,33)-(27,36)
 *)

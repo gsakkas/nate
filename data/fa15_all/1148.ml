@@ -123,88 +123,36 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(38,21)-(38,58)
+(38,59)-(38,59)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(59,8)-(59,41)
+(59,9)-(59,42)
 helper (List.length l2 * 2) x
 AppG (fromList [VarG,BopG EmptyG EmptyG])
 
-(59,8)-(59,41)
-helper
-VarG
-
-(59,8)-(59,41)
-List.length l2 * 2
-BopG (AppG (fromList [EmptyG])) LitG
-
-(59,8)-(59,41)
-List.length l2
-AppG (fromList [VarG])
-
-(59,8)-(59,41)
-List.length
-VarG
-
-(59,8)-(59,41)
-l2
-VarG
-
-(59,8)-(59,41)
-2
-LitG
-
-(59,8)-(59,41)
-x
-VarG
-
 *)
 
-(* changed exprs
-List (Just (38,64)-(38,66)) [] Nothing
-App (Just (59,8)-(59,41)) (Var (Just (59,9)-(59,15)) "helper") [Bop (Just (59,16)-(59,38)) Times (App (Just (59,17)-(59,33)) (Var (Just (59,18)-(59,29)) "List.length") [Var (Just (59,30)-(59,32)) "l2"]) (Lit (Just (59,36)-(59,37)) (LI 2)),Var (Just (59,39)-(59,40)) "x"]
-Var (Just (59,9)-(59,15)) "helper"
-Bop (Just (59,16)-(59,38)) Times (App (Just (59,17)-(59,33)) (Var (Just (59,18)-(59,29)) "List.length") [Var (Just (59,30)-(59,32)) "l2"]) (Lit (Just (59,36)-(59,37)) (LI 2))
-App (Just (59,17)-(59,33)) (Var (Just (59,18)-(59,29)) "List.length") [Var (Just (59,30)-(59,32)) "l2"]
-Var (Just (59,18)-(59,29)) "List.length"
-Var (Just (59,30)-(59,32)) "l2"
-Lit (Just (59,36)-(59,37)) (LI 2)
-Var (Just (59,39)-(59,40)) "x"
-*)
-
-(* typed spans
-(38,64)-(38,66)
-(59,8)-(59,41)
-(59,9)-(59,15)
-(59,16)-(59,38)
-(59,17)-(59,33)
-(59,18)-(59,29)
-(59,30)-(59,32)
-(59,36)-(59,37)
-(59,39)-(59,40)
-*)
-
-(* correct types
-int list
-int list
-int -> int -> int list
-int
-int
-int list -> int
-int list
-int
-int
-*)
-
-(* bad types
-unit
-unit list
-unit list
-unit list
-unit list
-unit list
-unit list
-unit list
-unit list
+(* type error slice
+(38,22)-(38,59)
+(38,36)-(38,42)
+(38,36)-(38,59)
+(38,59)-(38,59)
+(46,3)-(59,42)
+(46,9)-(55,44)
+(48,5)-(55,44)
+(48,11)-(48,12)
+(54,13)-(54,38)
+(54,14)-(54,32)
+(54,36)-(54,37)
+(58,3)-(59,42)
+(58,17)-(58,31)
+(58,17)-(58,43)
+(58,32)-(58,33)
+(59,3)-(59,6)
+(59,3)-(59,42)
+(59,7)-(59,8)
+(59,9)-(59,42)
+(59,10)-(59,16)
+(59,10)-(59,41)
 *)

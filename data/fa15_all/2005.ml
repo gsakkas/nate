@@ -65,24 +65,18 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(30,18)-(30,25)
+(30,19)-(30,26)
 d *. d
 BopG VarG VarG
 
 *)
 
-(* changed exprs
-Bop (Just (30,18)-(30,26)) FTimes (Var (Just (30,19)-(30,20)) "d") (Var (Just (30,24)-(30,25)) "d")
-*)
-
-(* typed spans
-(30,18)-(30,26)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(29,7)-(30,35)
+(29,15)-(29,73)
+(30,13)-(30,27)
+(30,14)-(30,18)
+(30,19)-(30,26)
+(30,20)-(30,21)
+(30,24)-(30,25)
 *)

@@ -142,24 +142,25 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(63,22)-(63,49)
+(63,23)-(63,50)
 (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (65,10)-(66,40)) [App (Just (65,11)-(65,38)) (Var (Just (65,12)-(65,17)) "build") [Tuple (Just (65,18)-(65,37)) [Var (Just (65,19)-(65,23)) "rand",Bop (Just (65,25)-(65,36)) Minus (Var (Just (65,26)-(65,31)) "depth") (Lit (Just (65,34)-(65,35)) (LI 1))]],App (Just (65,40)-(65,67)) (Var (Just (65,41)-(65,46)) "build") [Tuple (Just (65,47)-(65,66)) [Var (Just (65,48)-(65,52)) "rand",Bop (Just (65,54)-(65,65)) Minus (Var (Just (65,55)-(65,60)) "depth") (Lit (Just (65,63)-(65,64)) (LI 1))]],App (Just (66,12)-(66,39)) (Var (Just (66,13)-(66,18)) "build") [Tuple (Just (66,19)-(66,38)) [Var (Just (66,20)-(66,24)) "rand",Bop (Just (66,26)-(66,37)) Minus (Var (Just (66,27)-(66,32)) "depth") (Lit (Just (66,35)-(66,36)) (LI 1))]]]
-*)
-
-(* typed spans
-(65,10)-(66,40)
-*)
-
-(* correct types
-(expr * expr * expr)
-*)
-
-(* bad types
-expr
+(* type error slice
+(17,4)-(17,43)
+(17,17)-(17,41)
+(21,4)-(21,27)
+(21,15)-(21,25)
+(21,19)-(21,25)
+(21,24)-(21,25)
+(37,12)-(37,21)
+(37,12)-(37,49)
+(37,22)-(37,49)
+(37,23)-(37,28)
+(63,12)-(63,22)
+(63,12)-(63,50)
+(63,23)-(63,50)
+(63,24)-(63,29)
 *)

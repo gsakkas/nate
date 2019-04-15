@@ -75,25 +75,19 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(35,2)-(35,31)
+(35,3)-(35,32)
 mulByDigit i (helper i l
                      accum)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (35,2)-(35,33)) (Var (Just (35,2)-(35,12)) "mulByDigit") [Var (Just (35,13)-(35,14)) "i",App (Just (35,15)-(35,33)) (Var (Just (35,16)-(35,22)) "helper") [Var (Just (35,23)-(35,24)) "i",Var (Just (35,25)-(35,26)) "l",Var (Just (35,27)-(35,32)) "accum"]]
-*)
-
-(* typed spans
-(35,2)-(35,33)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-'a
+(* type error slice
+(31,4)-(35,34)
+(31,20)-(35,32)
+(31,22)-(35,32)
+(32,3)-(35,32)
+(33,3)-(35,32)
+(35,3)-(35,13)
+(35,3)-(35,32)
 *)

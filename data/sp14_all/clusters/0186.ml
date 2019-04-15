@@ -1,2 +1,2 @@
-BopG LitG LitG
-0.0 -. 1.0
+LamG VarPatG (BopG EmptyG EmptyG)
+fun x -> x * 1

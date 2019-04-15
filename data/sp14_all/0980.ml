@@ -10,24 +10,20 @@ let rec listReverse l =
 *)
 
 (* changed spans
-(2,57)-(2,75)
+(2,58)-(2,76)
 listReverse t @ [h]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
+AppG (fromList [AppG (fromList [EmptyG]),ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (3,35)-(3,56)) (Var (Just (3,51)-(3,52)) "@") [App (Just (3,35)-(3,50)) (Var (Just (3,36)-(3,47)) "listReverse") [Var (Just (3,48)-(3,49)) "t"],List (Just (3,53)-(3,56)) [Var (Just (3,54)-(3,55)) "h"] Nothing]
-*)
-
-(* typed spans
-(3,35)-(3,56)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(2,4)-(2,78)
+(2,21)-(2,76)
+(2,25)-(2,76)
+(2,31)-(2,32)
+(2,46)-(2,47)
+(2,58)-(2,76)
+(2,59)-(2,70)
+(2,59)-(2,72)
+(2,74)-(2,75)
 *)

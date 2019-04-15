@@ -23,26 +23,28 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(8,25)-(8,62)
+(8,26)-(8,63)
 fun b' ->
   (let fOfB = f' b' in
    (fOfB , fOfB = b'))
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
+LamG VarPatG (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
 *)
 
-(* changed exprs
-Lam (Just (8,23)-(8,67)) (VarPat (Just (8,23)-(8,25)) "b'") (Let (Just (8,28)-(8,67)) NonRec [(VarPat (Just (8,32)-(8,36)) "fOfB",App (Just (8,39)-(8,44)) (Var (Just (8,39)-(8,41)) "f'") [Var (Just (8,42)-(8,44)) "b'"])] (Tuple (Just (8,48)-(8,67)) [Var (Just (8,49)-(8,53)) "fOfB",Bop (Just (8,55)-(8,66)) Eq (Var (Just (8,56)-(8,60)) "fOfB") (Var (Just (8,63)-(8,65)) "b'")])) Nothing
-*)
-
-(* typed spans
-(8,23)-(8,67)
-*)
-
-(* correct types
-'a -> ('a * bool)
-*)
-
-(* bad types
-('a * bool)
+(* type error slice
+(3,12)-(3,13)
+(3,12)-(3,15)
+(4,53)-(4,59)
+(4,53)-(4,67)
+(4,60)-(4,67)
+(4,61)-(4,62)
+(7,3)-(7,9)
+(7,3)-(9,9)
+(8,5)-(9,9)
+(8,6)-(8,79)
+(8,21)-(8,63)
+(8,26)-(8,63)
+(8,45)-(8,63)
+(8,67)-(8,76)
+(8,67)-(8,78)
 *)

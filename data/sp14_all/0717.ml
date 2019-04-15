@@ -11,24 +11,20 @@ let rec sumList xs =
 *)
 
 (* changed spans
-(3,5)-(3,17)
+(3,6)-(3,18)
 xs
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (3,5)-(3,7)) "xs"
-*)
-
-(* typed spans
-(3,5)-(3,7)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(3,6)-(3,18)
+(3,6)-(3,23)
+(3,7)-(3,14)
+(3,15)-(3,17)
+(3,21)-(3,23)
+(3,36)-(3,70)
+(3,48)-(3,50)
+(3,54)-(3,55)
+(3,54)-(3,69)
 *)

@@ -14,42 +14,24 @@ let sqsum xs =
 *)
 
 (* changed spans
-(3,14)-(3,62)
+(3,15)-(3,63)
 a + (x * x)
 BopG VarG (BopG EmptyG EmptyG)
 
-(4,13)-(4,19)
+(4,14)-(4,20)
 match xs with
 | [] -> 0
 | hd :: tl -> f 0 hd
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
-
-(4,17)-(4,19)
-hd
-VarG
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,AppG (fromList [EmptyG])),(ConPatG Nothing,Nothing,LitG)])
 
 *)
 
-(* changed exprs
-Bop (Just (3,14)-(3,25)) Plus (Var (Just (3,14)-(3,15)) "a") (Bop (Just (3,18)-(3,25)) Times (Var (Just (3,19)-(3,20)) "x") (Var (Just (3,23)-(3,24)) "x"))
-Case (Just (4,13)-(4,55)) (Var (Just (4,19)-(4,21)) "xs") [(ConPat (Just (4,29)-(4,31)) "[]" Nothing,Nothing,Lit (Just (4,35)-(4,36)) (LI 0)),(ConsPat (Just (4,39)-(4,45)) (VarPat (Just (4,39)-(4,41)) "hd") (VarPat (Just (4,43)-(4,45)) "tl"),Nothing,App (Just (4,49)-(4,55)) (Var (Just (4,49)-(4,50)) "f") [Lit (Just (4,51)-(4,52)) (LI 0),Var (Just (4,53)-(4,55)) "hd"])]
-Var (Just (4,53)-(4,55)) "hd"
-*)
-
-(* typed spans
-(3,14)-(3,25)
-(4,13)-(4,55)
-(4,53)-(4,55)
-*)
-
-(* correct types
-int
-int
-int
-*)
-
-(* bad types
-int
-int
-int list
+(* type error slice
+(4,14)-(4,15)
+(4,14)-(4,20)
+(4,18)-(4,20)
+(4,24)-(4,38)
+(4,24)-(4,48)
+(4,39)-(4,40)
+(4,46)-(4,48)
 *)

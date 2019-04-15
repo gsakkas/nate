@@ -10,32 +10,26 @@ let rec listReverse l = if (List.length l) > 0 then [List.hd l] else [];;
 *)
 
 (* changed spans
-(3,5)-(3,16)
+(3,6)-(3,17)
 List.length l
 AppG (fromList [VarG])
 
-(3,26)-(3,63)
-0
-LitG
+(3,27)-(3,64)
+[List.hd l]
+ListG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (2,27)-(2,42)) (Var (Just (2,28)-(2,39)) "List.length") [Var (Just (2,40)-(2,41)) "l"]
-Lit (Just (2,45)-(2,46)) (LI 0)
-*)
-
-(* typed spans
-(2,27)-(2,42)
-(2,45)-(2,46)
-*)
-
-(* correct types
-int
-int
-*)
-
-(* bad types
-'a list -> int
-'a list
+(* type error slice
+(2,4)-(3,74)
+(2,21)-(3,72)
+(3,6)-(3,17)
+(3,6)-(3,21)
+(3,20)-(3,21)
+(3,27)-(3,50)
+(3,28)-(3,39)
+(3,40)-(3,47)
+(3,54)-(3,61)
+(3,54)-(3,63)
+(3,62)-(3,63)
 *)

@@ -65,24 +65,15 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(30,24)-(30,40)
+(30,25)-(30,41)
 eval (Average (e1 , e2) , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (30,24)-(30,55)) (Var (Just (30,24)-(30,28)) "eval") [Tuple (Just (30,29)-(30,55)) [ConApp (Just (30,30)-(30,48)) "Average" (Just (Tuple (Just (30,39)-(30,47)) [Var (Just (30,40)-(30,42)) "e1",Var (Just (30,44)-(30,46)) "e2"])) Nothing,Var (Just (30,50)-(30,51)) "x",Var (Just (30,53)-(30,54)) "y"]]
-*)
-
-(* typed spans
-(30,24)-(30,55)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-expr
+(* type error slice
+(16,3)-(30,41)
+(19,16)-(19,19)
+(19,16)-(19,45)
+(30,25)-(30,41)
 *)

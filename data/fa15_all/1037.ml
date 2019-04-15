@@ -79,67 +79,7 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(28,62)-(28,63)
-fun l2 ->
-  (let f =
-     fun a ->
-       fun x ->
-         (let (b , c) = a in
-          let r =
-            bigAdd (mulByDigit x
-                               (List.rev l2)) [b] in
-          match r with
-          | [] -> (0 , 0 :: c)
-          | h :: t -> (h , (List.hd t) :: c)) in
-   let base = (0 , []) in
-   let args = List.rev l1 in
-   let (_ , res) =
-     List.fold_left f base args in
-   res)
-LamG (LetG NonRec (fromList [EmptyG]) EmptyG)
-
-(30,19)-(33,62)
-EMPTY
-EmptyG
-
-(30,22)-(33,62)
-fun l1 ->
-  fun l2 ->
-    (let f =
-       fun a ->
-         fun x ->
-           (let (b , c) = a in
-            let r =
-              bigAdd (mulByDigit x
-                                 (List.rev l2)) [b] in
-            match r with
-            | [] -> (0 , 0 :: c)
-            | h :: t -> (h , (List.hd t) :: c)) in
-     let base = (0 , []) in
-     let args = List.rev l1 in
-     let (_ , res) =
-       List.fold_left f base args in
-     res)
-LamG (LamG EmptyG)
-
-(31,2)-(33,62)
-EMPTY
-EmptyG
-
-(31,8)-(31,10)
-let r =
-  bigAdd (mulByDigit x
-                     (List.rev l2)) [b] in
-match r with
-| [] -> (0 , 0 :: c)
-| h :: t -> (h , (List.hd t) :: c)
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(32,10)-(32,13)
-EMPTY
-EmptyG
-
-(32,11)-(32,12)
+(36,15)-(36,44)
 let (b , c) = a in
 let r =
   bigAdd (mulByDigit x
@@ -147,90 +87,44 @@ let r =
 match r with
 | [] -> (0 , 0 :: c)
 | h :: t -> (h , (List.hd t) :: c)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
 
-(33,31)-(33,32)
-EMPTY
-EmptyG
-
-(33,33)-(33,35)
-EMPTY
-EmptyG
-
-(33,37)-(33,62)
-EMPTY
-EmptyG
-
-(33,38)-(33,48)
-EMPTY
-EmptyG
-
-(33,49)-(33,50)
-EMPTY
-EmptyG
-
-(33,51)-(33,53)
-EMPTY
-EmptyG
-
-(33,54)-(33,61)
-EMPTY
-EmptyG
-
-(33,59)-(33,60)
-EMPTY
-EmptyG
-
-(35,11)-(38,75)
-EMPTY
-EmptyG
-
-(35,14)-(38,75)
-EMPTY
-EmptyG
-
-(36,2)-(38,75)
-EMPTY
-EmptyG
-
-(36,8)-(36,43)
-EMPTY
-EmptyG
-
-(36,10)-(36,43)
-EMPTY
-EmptyG
-
-(36,14)-(36,24)
-EMPTY
-EmptyG
-
-(36,14)-(36,43)
-EMPTY
-EmptyG
-
-(36,26)-(36,34)
-match r with
-| [] -> (0 , 0 :: c)
-| h :: t -> (h , (List.hd t) :: c)
-CaseG VarG (fromList [(Nothing,TupleG (fromList [EmptyG]))])
-
-(36,35)-(36,37)
-List.hd t
-AppG (fromList [VarG])
-
-(38,22)-(38,24)
+(38,23)-(38,25)
 l1
 VarG
 
 *)
 
-(* typed spans
-int list -> int list
-int list -> int list -> int list
-(int * int list)
-(int * int list)
-(int * int list)
-int
-int list
+(* type error slice
+(5,4)-(10,53)
+(5,13)-(10,51)
+(10,27)-(10,45)
+(10,40)-(10,41)
+(10,42)-(10,44)
+(17,4)-(25,37)
+(17,12)-(25,35)
+(25,19)-(25,34)
+(25,20)-(25,27)
+(25,28)-(25,30)
+(28,34)-(28,40)
+(28,34)-(28,65)
+(28,43)-(28,65)
+(28,44)-(28,54)
+(33,13)-(33,19)
+(33,13)-(33,63)
+(33,20)-(33,37)
+(33,21)-(33,31)
+(33,38)-(33,63)
+(33,39)-(33,49)
+(36,3)-(38,76)
+(36,9)-(36,44)
+(36,11)-(36,44)
+(36,15)-(36,25)
+(36,15)-(36,44)
+(37,3)-(38,76)
+(37,14)-(37,21)
+(38,43)-(38,57)
+(38,43)-(38,69)
+(38,58)-(38,59)
+(38,60)-(38,64)
 *)

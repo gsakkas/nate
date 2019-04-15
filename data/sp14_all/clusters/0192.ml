@@ -1,6 +1,2 @@
-LetG NonRec (fromList [LitG]) (SeqG EmptyG EmptyG)
-let x = 1 in
-(x + 1;
-if sumList (digitsOfInt n) > 9
-then additivePersistence (sumList (digitsOfInt n))
-else x)
+BopG (AppG (fromList [EmptyG])) (BopG EmptyG EmptyG)
+eval (f , x , y) +. (eval (g , x , y) *. eval (h , x , y))

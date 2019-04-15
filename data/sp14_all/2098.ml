@@ -53,40 +53,20 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(11,11)-(11,20)
-fun e -> Sine e
-LamG (ConAppG (Just VarG))
-
-(17,9)-(17,15)
-buildSine
-VarG
-
-(17,17)-(17,23)
-buildX
-VarG
+(17,10)-(17,28)
+buildSine (buildX ())
+AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (11,14)-(11,24)) (VarPat (Just (11,14)-(11,15)) "e") (ConApp (Just (11,18)-(11,24)) "Sine" (Just (Var (Just (11,23)-(11,24)) "e")) Nothing) Nothing
-Var (Just (19,9)-(19,18)) "buildSine"
-Var (Just (19,20)-(19,26)) "buildX"
-*)
-
-(* typed spans
-(11,14)-(11,24)
-(19,9)-(19,18)
-(19,20)-(19,26)
-*)
-
-(* correct types
-expr -> expr
-expr -> expr
-unit -> expr
-*)
-
-(* bad types
-unit -> expr
-unit -> expr
-unit -> expr
+(* type error slice
+(11,4)-(11,23)
+(11,12)-(11,21)
+(13,4)-(13,23)
+(13,12)-(13,21)
+(13,17)-(13,21)
+(17,10)-(17,16)
+(17,10)-(17,28)
+(17,17)-(17,28)
+(17,18)-(17,24)
 *)

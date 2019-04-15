@@ -1,5 +1,4 @@
 (int * int list)
-(int list * int list)
 bool
-'a list
+(int list * int list)
 ('a list * int list)

@@ -47,51 +47,39 @@ let palindrome w =
 *)
 
 (* changed spans
-(7,12)-(10,6)
-fun z ->
-  match listReverse z with
-  | [] -> []
-  | h :: t -> t
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(13,8)-(13,17)
+(13,9)-(13,18)
 x
 VarG
 
-(15,19)-(15,30)
+(15,20)-(15,31)
 x
 VarG
 
-(17,38)-(17,42)
+(17,39)-(17,43)
 matchHeads (loseTail t)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (7,13)-(7,64)) (VarPat (Just (7,13)-(7,14)) "z") (Case (Just (7,17)-(7,64)) (App (Just (7,23)-(7,36)) (Var (Just (7,23)-(7,34)) "listReverse") [Var (Just (7,35)-(7,36)) "z"]) [(ConPat (Just (7,44)-(7,46)) "[]" Nothing,Nothing,List (Just (7,50)-(7,52)) [] Nothing),(ConsPat (Just (7,55)-(7,59)) (VarPat (Just (7,55)-(7,56)) "h") (VarPat (Just (7,58)-(7,59)) "t"),Nothing,Var (Just (7,63)-(7,64)) "t")]) Nothing
-Var (Just (15,8)-(15,9)) "x"
-Var (Just (17,19)-(17,20)) "x"
-App (Just (19,38)-(19,61)) (Var (Just (19,38)-(19,48)) "matchHeads") [App (Just (19,49)-(19,61)) (Var (Just (19,50)-(19,58)) "loseTail") [Var (Just (19,59)-(19,60)) "t"]]
-*)
-
-(* typed spans
-(7,13)-(7,64)
-(15,8)-(15,9)
-(17,19)-(17,20)
-(19,38)-(19,61)
-*)
-
-(* correct types
-char list -> char list
-char list
-char list
-bool
-*)
-
-(* bad types
-string -> char list
-char list
-char list
-bool
+(* type error slice
+(7,4)-(10,9)
+(7,13)-(10,7)
+(8,3)-(10,7)
+(9,13)-(9,30)
+(9,14)-(9,27)
+(9,28)-(9,29)
+(9,44)-(9,67)
+(9,55)-(9,67)
+(9,56)-(9,58)
+(10,3)-(10,5)
+(10,3)-(10,7)
+(12,4)-(17,56)
+(12,20)-(17,54)
+(13,9)-(13,16)
+(13,9)-(13,18)
+(13,17)-(13,18)
+(20,47)-(20,57)
+(20,47)-(20,69)
+(20,58)-(20,69)
+(20,59)-(20,66)
 *)

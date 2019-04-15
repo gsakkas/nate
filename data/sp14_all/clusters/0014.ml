@@ -1,66 +1,20 @@
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
-let args = l2 in
-let (_ , res) =
-  List.fold_left f base args in
-res
-let (carry , num) = a in
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(if addit > 10
- then addit mod 10
- else 0 , (addit / 10) :: num)
-let (l1' , l2') = x in
-let addit =
-  (l1' + l2') + carry in
-(addit / 10 , (addit mod 10) :: num)
-let (carry , num) = a in
-let (l1 , l2) = x in
-(0 , l1 :: num)
-let (x1 , x2) = x in
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (a1 , a2) = a in
-let h :: _ = a1 in
-let tens =
-  (x1 + x2) + (h / 10) in
-let ones =
-  (x1 + x2) + (h mod 10) in
-(tens :: a1 , ones :: a2)
-let (x' , x'') = x in
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (upper_mult , total) =
-  a in
-let newTotal =
-  mulByDigit x upper_mult in
-let updateTotal =
-  bigAdd newTotal total in
-(upper_mult @ [0] , updateTotal)
-let base = h in
-let l = sl in
-List.fold_left f base l
-let (l2digit2 , templ12) =
-  a in
-let multres =
-  mulByDigit l2digit templ1 in
-(0 , bigAdd (templ12 @ [0])
-            multres)
-let (i , j) = x in
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let args = l1 in
-let (_ , res) =
-  List.fold_left f base args in
-res
+BopG (BopG EmptyG EmptyG) LitG
+(eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+(eval (e1 , x , y) +. eval (e1 , x , y)) /. 2.0
+(eval (a , x , y) +. eval (b , x , y)) /. 2.0
+(eval (i1 , x , y) +. eval (i2 , x , y)) /. 2.0
+(eval (expr , x , y) +. eval (expr1 , x , y)) /. 2.0
+(x +. y) /. 2.0
+(h1 + h2) / 10
+(eval (v , x , y) +. eval (w , x , y)) /. 2.0
+((i + j) + s) mod 10
+(eval (m , x , y) +. eval (n , x , y)) /. 2.0
+(eval (a , x , y) *. eval (b , x , y)) /. 2.0
+((eval (a , x , y) *. eval (a , x , y)) +. (eval (b , x , y) *. eval (c , x , y))) /. 2.0
+(eval (t , x , y) *. eval (u , x , y)) /. 2.0
+(sin (pi *. eval (e , x , y)) -. cos (pi *. eval (e , x , y))) /. 3.0
+((eval (a , sin (pi *. x) , sin (pi *. y)) +. eval (b , sin (pi *. x) , sin (pi *. y))) +. eval (c , sin (pi *. x) , sin (pi *. y))) /. 3.0
+(eval (e2 , x , y) +. eval (e3 , x , y)) /. 2.0
+(eval (e1 , x , y) *. eval (e2 , x , y)) /. 2.0
+(eval (var3 , x , y) +. eval (var4 , x , y)) /. 2.0
+(eval (ex1 , x , y) +. eval (ex2 , x , y)) /. 2.0

@@ -48,24 +48,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(16,6)-(18,57)
+(16,7)-(18,58)
 (((num1 + num2) + carry) / 10 , (((num1 + num2) + carry) mod 10) :: sum)
 TupleG (fromList [BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-Tuple (Just (16,6)-(17,13)) [Bop (Just (16,7)-(16,37)) Div (Bop (Just (16,8)-(16,31)) Plus (Bop (Just (16,9)-(16,22)) Plus (Var (Just (16,10)-(16,14)) "num1") (Var (Just (16,17)-(16,21)) "num2")) (Var (Just (16,25)-(16,30)) "carry")) (Lit (Just (16,34)-(16,36)) (LI 10)),ConApp (Just (16,39)-(17,12)) "::" (Just (Tuple (Just (16,40)-(17,11)) [Bop (Just (16,40)-(16,72)) Mod (Bop (Just (16,41)-(16,64)) Plus (Bop (Just (16,42)-(16,55)) Plus (Var (Just (16,43)-(16,47)) "num1") (Var (Just (16,50)-(16,54)) "num2")) (Var (Just (16,58)-(16,63)) "carry")) (Lit (Just (16,69)-(16,71)) (LI 10)),Var (Just (17,8)-(17,11)) "sum"])) Nothing]
-*)
-
-(* typed spans
-(16,6)-(17,13)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-(int * int list)
+(* type error slice
+(16,7)-(18,58)
+(17,12)-(17,13)
+(18,12)-(18,58)
 *)

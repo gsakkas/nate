@@ -63,7 +63,7 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(27,17)-(28,75)
+(27,18)-(28,76)
 fun i ->
   fun l ->
     fun acc ->
@@ -72,30 +72,37 @@ fun i ->
       | 1 -> l
       | _ -> helper (i - 1) l
                     (bigAdd acc l)
-LamG (LamG EmptyG)
+LamG VarPatG (LamG VarPatG EmptyG)
 
-(29,15)-(29,16)
+(29,10)-(29,13)
+i
+VarG
+
+(29,14)-(29,15)
+l
+VarG
+
+(29,16)-(29,17)
 [0]
-ListG LitG
+ListG (fromList [LitG])
 
 *)
 
-(* changed exprs
-Lam (Just (27,17)-(28,75)) (VarPat (Just (27,17)-(27,18)) "i") (Lam (Just (27,19)-(28,75)) (VarPat (Just (27,19)-(27,20)) "l") (Lam (Just (27,21)-(28,75)) (VarPat (Just (27,21)-(27,24)) "acc") (Case (Just (28,4)-(28,75)) (Var (Just (28,10)-(28,11)) "i") [(LitPat (Just (28,19)-(28,20)) (LI 0),Nothing,List (Just (28,24)-(28,27)) [Lit (Just (28,25)-(28,26)) (LI 0)] Nothing),(LitPat (Just (28,30)-(28,31)) (LI 1),Nothing,Var (Just (28,35)-(28,36)) "l"),(WildPat (Just (28,39)-(28,40)),Nothing,App (Just (28,44)-(28,75)) (Var (Just (28,44)-(28,50)) "helper") [Bop (Just (28,51)-(28,58)) Minus (Var (Just (28,52)-(28,53)) "i") (Lit (Just (28,56)-(28,57)) (LI 1)),Var (Just (28,59)-(28,60)) "l",App (Just (28,61)-(28,75)) (Var (Just (28,62)-(28,68)) "bigAdd") [Var (Just (28,69)-(28,72)) "acc",Var (Just (28,73)-(28,74)) "l"]])]) Nothing) Nothing) Nothing
-List (Just (29,13)-(29,16)) [Lit (Just (29,14)-(29,15)) (LI 0)] Nothing
-*)
-
-(* typed spans
-(27,17)-(28,75)
-(29,13)-(29,16)
-*)
-
-(* correct types
-int -> int list -> int list -> int list
-int list
-*)
-
-(* bad types
-int list -> int -> int list -> int list
-int list
+(* type error slice
+(27,3)-(29,17)
+(27,18)-(28,76)
+(27,22)-(28,76)
+(27,24)-(28,76)
+(28,5)-(28,76)
+(28,25)-(28,31)
+(28,25)-(28,39)
+(28,47)-(28,53)
+(28,47)-(28,76)
+(28,54)-(28,61)
+(28,55)-(28,56)
+(28,62)-(28,76)
+(28,63)-(28,69)
+(29,3)-(29,9)
+(29,3)-(29,17)
+(29,10)-(29,13)
 *)

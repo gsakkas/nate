@@ -1,2 +1,4 @@
-ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG])))
-0 :: (List.rev l)
+CaseG VarG (fromList [(VarPatG,Nothing,BopG EmptyG EmptyG),(LitPatG,Nothing,VarG)])
+match x with
+| 0 -> a
+| x -> x * x

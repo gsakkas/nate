@@ -1,15 +1,9 @@
-ListG VarG
-[h]
-[input]
-[initsum]
-[res]
-[n]
-[a]
-[carry2 ; dig]
-[nextCarry]
-[new_carry ; digit]
-[y]
-[head ; tail]
-[x]
-[n ; n mod 10]
-[k]
+LamG VarPatG (TupleG (fromList [EmptyG]))
+fun b'' -> (f b , false)
+fun b'' -> (f b , true)
+fun x -> (x * x , x < 100)
+fun x -> (f x , false)
+fun b -> (f b , f b = b)
+fun x -> (x , x = b)
+fun x -> (f b , b = f b)
+fun x -> (0 , true)

@@ -41,24 +41,17 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(16,14)-(16,44)
+(16,15)-(16,45)
 lengthOfList (digitsOfInt n) 0
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-App (Just (16,14)-(16,46)) (Var (Just (16,15)-(16,27)) "lengthOfList") [App (Just (16,28)-(16,43)) (Var (Just (16,29)-(16,40)) "digitsOfInt") [Var (Just (16,41)-(16,42)) "n"],Lit (Just (16,44)-(16,45)) (LI 0)]
-*)
-
-(* typed spans
-(16,14)-(16,46)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-'a -> int
+(* type error slice
+(8,39)-(8,62)
+(8,40)-(8,52)
+(16,14)-(16,50)
+(16,15)-(16,45)
+(16,16)-(16,28)
+(16,48)-(16,49)
 *)

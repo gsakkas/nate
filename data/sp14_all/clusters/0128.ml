@@ -1,2 +1,4 @@
-BopG (AppG (fromList [EmptyG])) VarG
-eval (a , x , y) *. pi
+CaseG VarG (fromList [(LitPatG,Nothing,LitG),(WildPatG,Nothing,AppG (fromList [EmptyG]))])
+match n with
+| 0 -> 0
+| _ -> additivePersistence (sumList (digitsOfInt n))

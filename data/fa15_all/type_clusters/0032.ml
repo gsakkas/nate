@@ -1,6 +1,3 @@
-'a
-'a -> int
-int list
-string
-'a -> 'a
+float
+int
 bool

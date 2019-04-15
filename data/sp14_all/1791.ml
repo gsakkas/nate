@@ -16,40 +16,27 @@ let pipe fs =
 *)
 
 (* changed spans
-(4,35)-(4,36)
+(4,36)-(4,37)
 fun x -> x * 1
-LamG (BopG EmptyG EmptyG)
+LamG VarPatG (BopG EmptyG EmptyG)
 
-(4,60)-(4,61)
+(4,61)-(4,62)
 x * 1
 BopG VarG LitG
 
-(4,63)-(4,64)
-1
-LitG
-
 *)
 
-(* changed exprs
-Lam (Just (5,26)-(5,43)) (VarPat (Just (5,31)-(5,32)) "x") (Bop (Just (5,37)-(5,42)) Times (Var (Just (5,37)-(5,38)) "x") (Lit (Just (5,41)-(5,42)) (LI 1))) Nothing
-Bop (Just (5,67)-(5,72)) Times (Var (Just (5,67)-(5,68)) "x") (Lit (Just (5,71)-(5,72)) (LI 1))
-Lit (Just (5,71)-(5,72)) (LI 1)
-*)
-
-(* typed spans
-(5,26)-(5,43)
-(5,67)-(5,72)
-(5,71)-(5,72)
-*)
-
-(* correct types
-int -> int
-int
-int
-*)
-
-(* bad types
-int
-'a
-'a -> 'a
+(* type error slice
+(3,3)-(5,27)
+(3,9)-(3,24)
+(3,11)-(3,24)
+(3,13)-(3,24)
+(4,14)-(4,65)
+(4,36)-(4,37)
+(4,48)-(4,49)
+(4,48)-(4,65)
+(4,50)-(4,63)
+(5,3)-(5,17)
+(5,3)-(5,27)
+(5,18)-(5,19)
 *)

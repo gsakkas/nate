@@ -87,24 +87,23 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(34,11)-(34,21)
+(34,12)-(34,22)
 0.1
 LitG
 
+(34,26)-(34,35)
+eval (a , x , y)
+AppG (fromList [TupleG (fromList [EmptyG])])
+
 *)
 
-(* changed exprs
-Lit (Just (34,11)-(34,14)) (LD 0.1)
-*)
-
-(* typed spans
-(34,11)-(34,14)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-float
+(* type error slice
+(23,20)-(23,36)
+(23,21)-(23,25)
+(23,26)-(23,35)
+(34,12)-(34,22)
+(34,12)-(34,35)
+(34,13)-(34,17)
+(34,18)-(34,21)
+(34,26)-(34,35)
 *)

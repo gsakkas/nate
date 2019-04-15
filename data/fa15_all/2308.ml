@@ -44,88 +44,35 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(19,23)-(19,24)
+(19,24)-(19,25)
 y
 VarG
 
-(19,55)-(19,70)
+(19,51)-(19,52)
 y
 VarG
 
-(19,62)-(19,69)
+(19,56)-(19,71)
 ")/2)"
 LitG
 
-(19,62)-(19,69)
+(20,20)-(20,53)
 exprToString x ^ ("*" ^ exprToString y)
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(20,19)-(20,52)
-exprToString
-VarG
-
-(20,19)-(20,52)
-x
-VarG
-
-(20,34)-(20,37)
-"*" ^ exprToString y
-AppG (fromList [AppG (fromList [EmptyG]),LitG])
-
-(20,38)-(20,50)
-exprToString y
-AppG (fromList [VarG])
-
-(20,51)-(20,52)
-y
-VarG
-
 *)
 
-(* changed exprs
-Var (Just (18,28)-(18,29)) "y"
-Var (Just (18,55)-(18,56)) "y"
-Lit (Just (18,60)-(18,66)) (LS ")/2)")
-App (Just (19,19)-(19,62)) (Var (Just (19,36)-(19,37)) "^") [App (Just (19,19)-(19,35)) (Var (Just (19,20)-(19,32)) "exprToString") [Var (Just (19,33)-(19,34)) "x"],App (Just (19,38)-(19,62)) (Var (Just (19,43)-(19,44)) "^") [Lit (Just (19,39)-(19,42)) (LS "*"),App (Just (19,45)-(19,61)) (Var (Just (19,46)-(19,58)) "exprToString") [Var (Just (19,59)-(19,60)) "y"]]]
-Var (Just (19,20)-(19,32)) "exprToString"
-Var (Just (19,33)-(19,34)) "x"
-App (Just (19,38)-(19,62)) (Var (Just (19,43)-(19,44)) "^") [Lit (Just (19,39)-(19,42)) (LS "*"),App (Just (19,45)-(19,61)) (Var (Just (19,46)-(19,58)) "exprToString") [Var (Just (19,59)-(19,60)) "y"]]
-App (Just (19,45)-(19,61)) (Var (Just (19,46)-(19,58)) "exprToString") [Var (Just (19,59)-(19,60)) "y"]
-Var (Just (19,59)-(19,60)) "y"
-*)
-
-(* typed spans
-(18,28)-(18,29)
-(18,55)-(18,56)
-(18,60)-(18,66)
-(19,19)-(19,62)
-(19,20)-(19,32)
-(19,33)-(19,34)
-(19,38)-(19,62)
-(19,45)-(19,61)
-(19,59)-(19,60)
-*)
-
-(* correct types
-expr
-expr
-string
-string
-expr -> string
-expr
-string
-string
-expr
-*)
-
-(* bad types
-expr
-int
-int
-int
-string
-string
-string
-expr -> string
-expr
+(* type error slice
+(15,27)-(15,51)
+(15,28)-(15,44)
+(15,29)-(15,41)
+(15,45)-(15,46)
+(19,36)-(19,72)
+(19,54)-(19,55)
+(19,56)-(19,71)
+(19,57)-(19,60)
+(19,63)-(19,70)
+(19,64)-(19,65)
+(20,20)-(20,32)
+(20,20)-(20,53)
 *)

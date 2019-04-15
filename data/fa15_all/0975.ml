@@ -58,7 +58,7 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(12,2)-(22,10)
+(12,3)-(22,11)
 match e with
 | VarX -> "x"
 | VarY -> "y"
@@ -73,22 +73,40 @@ match e with
 | Thresh (s , p , r , d) -> String.concat ""
                                           ["(" ; exprToString s ; "<" ; exprToString p ; "?" ; exprToString r ; ":" ; exprToString d ; ")"]
 | _ -> ""
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,LitG)])
+CaseG VarG (fromList [(ConPatG Nothing,Nothing,LitG),(ConPatG (Just VarPatG),Nothing,AppG (fromList [EmptyG])),(ConPatG (Just (TuplePatG (fromList [EmptyPatG]))),Nothing,AppG (fromList [EmptyG])),(WildPatG,Nothing,LitG)])
 
 *)
 
-(* changed exprs
-Case (Just (12,2)-(31,11)) (Var (Just (12,8)-(12,9)) "e") [(ConPat (Just (13,4)-(13,8)) "VarX" Nothing,Nothing,Lit (Just (13,13)-(13,16)) (LS "x")),(ConPat (Just (14,4)-(14,8)) "VarY" Nothing,Nothing,Lit (Just (14,13)-(14,16)) (LS "y")),(ConPat (Just (15,4)-(15,10)) "Sine" (Just (VarPat (Just (15,9)-(15,10)) "s")),Nothing,App (Just (15,14)-(15,63)) (Var (Just (15,14)-(15,27)) "String.concat") [Lit (Just (15,28)-(15,30)) (LS ""),List (Just (15,31)-(15,63)) [Lit (Just (15,32)-(15,41)) (LS "sin(pi*"),App (Just (15,43)-(15,57)) (Var (Just (15,43)-(15,55)) "exprToString") [Var (Just (15,56)-(15,57)) "s"],Lit (Just (15,59)-(15,62)) (LS ")")] Nothing]),(ConPat (Just (16,4)-(16,12)) "Cosine" (Just (VarPat (Just (16,11)-(16,12)) "s")),Nothing,App (Just (16,16)-(16,65)) (Var (Just (16,16)-(16,29)) "String.concat") [Lit (Just (16,30)-(16,32)) (LS ""),List (Just (16,33)-(16,65)) [Lit (Just (16,34)-(16,43)) (LS "cos(pi*"),App (Just (16,45)-(16,59)) (Var (Just (16,45)-(16,57)) "exprToString") [Var (Just (16,58)-(16,59)) "s"],Lit (Just (16,61)-(16,64)) (LS ")")] Nothing]),(ConPat (Just (17,4)-(17,16)) "Average" (Just (TuplePat (Just (17,13)-(17,16)) [VarPat (Just (17,13)-(17,14)) "s",VarPat (Just (17,15)-(17,16)) "p"])),Nothing,App (Just (18,6)-(18,73)) (Var (Just (18,6)-(18,19)) "String.concat") [Lit (Just (18,20)-(18,22)) (LS ""),List (Just (18,23)-(18,73)) [Lit (Just (18,24)-(18,28)) (LS "(("),App (Just (18,30)-(18,44)) (Var (Just (18,30)-(18,42)) "exprToString") [Var (Just (18,43)-(18,44)) "s"],Lit (Just (18,46)-(18,49)) (LS "+"),App (Just (18,51)-(18,65)) (Var (Just (18,51)-(18,63)) "exprToString") [Var (Just (18,64)-(18,65)) "p"],Lit (Just (18,67)-(18,72)) (LS ")/2")] Nothing]),(ConPat (Just (19,4)-(19,14)) "Times" (Just (TuplePat (Just (19,11)-(19,14)) [VarPat (Just (19,11)-(19,12)) "s",VarPat (Just (19,13)-(19,14)) "p"])),Nothing,App (Just (19,19)-(19,73)) (Var (Just (19,19)-(19,32)) "String.concat") [Lit (Just (19,33)-(19,35)) (LS ""),List (Just (19,36)-(19,73)) [App (Just (19,37)-(19,51)) (Var (Just (19,37)-(19,49)) "exprToString") [Var (Just (19,50)-(19,51)) "s"],Lit (Just (19,53)-(19,56)) (LS "*"),App (Just (19,58)-(19,72)) (Var (Just (19,58)-(19,70)) "exprToString") [Var (Just (19,71)-(19,72)) "p"]] Nothing]),(ConPat (Just (20,4)-(20,19)) "Thresh" (Just (TuplePat (Just (20,12)-(20,19)) [VarPat (Just (20,12)-(20,13)) "s",VarPat (Just (20,14)-(20,15)) "p",VarPat (Just (20,16)-(20,17)) "r",VarPat (Just (20,18)-(20,19)) "d"])),Nothing,App (Just (21,6)-(30,12)) (Var (Just (21,6)-(21,19)) "String.concat") [Lit (Just (21,20)-(21,22)) (LS ""),List (Just (22,8)-(30,12)) [Lit (Just (22,9)-(22,12)) (LS "("),App (Just (23,8)-(23,22)) (Var (Just (23,8)-(23,20)) "exprToString") [Var (Just (23,21)-(23,22)) "s"],Lit (Just (24,8)-(24,11)) (LS "<"),App (Just (25,8)-(25,22)) (Var (Just (25,8)-(25,20)) "exprToString") [Var (Just (25,21)-(25,22)) "p"],Lit (Just (26,8)-(26,11)) (LS "?"),App (Just (27,8)-(27,22)) (Var (Just (27,8)-(27,20)) "exprToString") [Var (Just (27,21)-(27,22)) "r"],Lit (Just (28,8)-(28,11)) (LS ":"),App (Just (29,8)-(29,22)) (Var (Just (29,8)-(29,20)) "exprToString") [Var (Just (29,21)-(29,22)) "d"],Lit (Just (30,8)-(30,11)) (LS ")")] Nothing]),(WildPat (Just (31,4)-(31,5)),Nothing,Lit (Just (31,9)-(31,11)) (LS ""))]
-*)
-
-(* typed spans
-(12,2)-(31,11)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-string
+(* type error slice
+(11,4)-(22,13)
+(11,22)-(22,11)
+(12,3)-(22,11)
+(13,14)-(13,17)
+(15,14)-(15,40)
+(15,14)-(15,46)
+(15,15)-(15,24)
+(15,27)-(15,39)
+(15,43)-(15,46)
+(16,16)-(16,42)
+(16,16)-(16,48)
+(16,17)-(16,26)
+(16,45)-(16,48)
+(17,17)-(17,71)
+(17,18)-(17,47)
+(17,19)-(17,40)
+(17,20)-(17,24)
+(17,43)-(17,46)
+(17,66)-(17,71)
+(18,15)-(18,35)
+(18,15)-(18,50)
+(18,31)-(18,34)
+(20,7)-(21,14)
+(20,8)-(20,61)
+(20,10)-(20,38)
+(20,11)-(20,31)
+(20,12)-(20,15)
+(20,34)-(20,37)
+(20,57)-(20,60)
+(21,11)-(21,14)
+(22,10)-(22,11)
 *)

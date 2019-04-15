@@ -14,40 +14,28 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(2,42)-(2,45)
+(2,43)-(2,46)
 r
 VarG
 
-(4,48)-(4,54)
+(4,56)-(4,67)
 digitsOfInt (n / 10)
 AppG (fromList [BopG EmptyG EmptyG])
 
-(4,72)-(4,74)
+(4,68)-(4,76)
 [n mod 10]
-ListG (BopG EmptyG EmptyG)
+ListG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-Var (Just (2,42)-(2,43)) "r"
-App (Just (5,33)-(5,55)) (Var (Just (5,34)-(5,45)) "digitsOfInt") [Bop (Just (5,46)-(5,54)) Div (Var (Just (5,47)-(5,48)) "n") (Lit (Just (5,51)-(5,53)) (LI 10))]
-List (Just (5,56)-(5,66)) [Bop (Just (5,57)-(5,65)) Mod (Var (Just (5,57)-(5,58)) "n") (Lit (Just (5,63)-(5,65)) (LI 10))] Nothing
-*)
-
-(* typed spans
-(2,42)-(2,43)
-(5,33)-(5,55)
-(5,56)-(5,66)
-*)
-
-(* correct types
-int list
-int list
-int list
-*)
-
-(* bad types
-int list
-int list -> int -> int list
-int
+(* type error slice
+(2,22)-(2,74)
+(2,62)-(2,74)
+(2,63)-(2,69)
+(2,70)-(2,71)
+(4,4)-(4,78)
+(4,21)-(4,76)
+(4,49)-(4,55)
+(4,49)-(4,76)
+(4,56)-(4,67)
 *)

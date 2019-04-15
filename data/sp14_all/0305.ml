@@ -14,24 +14,21 @@ let rec listReverse l = match l with | [] -> [] | h::t -> append [h] [h];;
 *)
 
 (* changed spans
-(5,36)-(5,62)
+(5,37)-(5,63)
 append [h] [h]
-AppG (fromList [ListG EmptyG])
+AppG (fromList [ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (4,58)-(4,72)) (Var (Just (4,58)-(4,64)) "append") [List (Just (4,65)-(4,68)) [Var (Just (4,66)-(4,67)) "h"] Nothing,List (Just (4,69)-(4,72)) [Var (Just (4,70)-(4,71)) "h"] Nothing]
-*)
-
-(* typed spans
-(4,58)-(4,72)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list -> 'a list
+(* type error slice
+(2,64)-(2,77)
+(2,65)-(2,71)
+(4,4)-(5,65)
+(4,21)-(5,63)
+(5,3)-(5,63)
+(5,24)-(5,26)
+(5,37)-(5,43)
+(5,37)-(5,63)
+(5,44)-(5,63)
+(5,45)-(5,56)
 *)

@@ -1,2 +1,3 @@
-string
-int
+int list
+(int * int) list
+'a list

@@ -53,35 +53,56 @@ let palindrome w =
 *)
 
 (* changed spans
-(6,12)-(9,6)
+(4,38)-(4,40)
+t
+VarG
+
+(4,51)-(4,52)
+[]
+ListG (fromList [])
+
+(10,1)-(10,1)
 fun l ->
   match l with
   | [] -> []
   | h :: t -> listReverse t @ [h]
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+LamG VarPatG (CaseG EmptyG (fromList [(ConsPatG EmptyPatG EmptyPatG,Nothing,EmptyG),(ConPatG Nothing,Nothing,EmptyG)]))
 
-(25,23)-(25,48)
+(11,21)-(12,58)
+EMPTY
+EmptyG
+
+(25,24)-(25,49)
 [["b"]]
-ListG (ListG EmptyG)
+ListG (fromList [ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (6,20)-(7,57)) (VarPat (Just (6,20)-(6,21)) "l") (Case (Just (7,2)-(7,57)) (Var (Just (7,8)-(7,9)) "l") [(ConPat (Just (7,17)-(7,19)) "[]" Nothing,Nothing,List (Just (7,23)-(7,25)) [] Nothing),(ConsPat (Just (7,28)-(7,32)) (VarPat (Just (7,28)-(7,29)) "h") (VarPat (Just (7,31)-(7,32)) "t"),Nothing,App (Just (7,36)-(7,57)) (Var (Just (7,52)-(7,53)) "@") [App (Just (7,36)-(7,51)) (Var (Just (7,37)-(7,48)) "listReverse") [Var (Just (7,49)-(7,50)) "t"],List (Just (7,54)-(7,57)) [Var (Just (7,55)-(7,56)) "h"] Nothing])]) Nothing
-List (Just (23,57)-(23,64)) [List (Just (23,58)-(23,63)) [Lit (Just (23,59)-(23,62)) (LS "b")] Nothing] Nothing
-*)
-
-(* typed spans
-(6,20)-(7,57)
-(23,57)-(23,64)
-*)
-
-(* correct types
-string list list -> string list list
-string list list
-*)
-
-(* bad types
-string -> char list
-'a list list
+(* type error slice
+(2,4)-(2,54)
+(2,13)-(2,52)
+(2,17)-(2,52)
+(2,23)-(2,24)
+(2,38)-(2,40)
+(2,51)-(2,52)
+(6,4)-(9,9)
+(6,13)-(9,7)
+(7,3)-(9,7)
+(8,44)-(8,51)
+(8,44)-(8,67)
+(8,45)-(8,50)
+(8,55)-(8,67)
+(8,56)-(8,58)
+(9,3)-(9,5)
+(9,3)-(9,7)
+(18,10)-(18,21)
+(18,11)-(18,18)
+(18,19)-(18,20)
+(18,33)-(18,48)
+(18,34)-(18,45)
+(18,46)-(18,47)
+(25,24)-(25,49)
+(25,25)-(25,36)
+(25,37)-(25,48)
+(25,38)-(25,45)
 *)

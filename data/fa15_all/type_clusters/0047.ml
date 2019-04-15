@@ -1,3 +1,1 @@
-int
-string
-int list
+(int * int list)

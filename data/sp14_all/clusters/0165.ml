@@ -1,6 +1,4 @@
-TupleG (fromList [VarG,IteG EmptyG EmptyG EmptyG])
-(if f b = b
- then (fun b'' ->
-         (f b , false))
- else (fun b'' ->
-         (f b , true)) , b)
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,AppG (fromList [EmptyG])),(ConPatG Nothing,Nothing,LitG)])
+match xs with
+| [] -> 0
+| hd :: tl -> f 0 hd

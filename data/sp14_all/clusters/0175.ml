@@ -1,7 +1,3 @@
-ListG (AppG (fromList [EmptyG]))
-[sqsum (mulByDigit i
-                   (List.rev (List.map (fun x ->
-                                          x * 10)
-                                       t)) @ [h * i])]
-[List.fold_left f base
-                (h :: t)]
+CaseG VarG (fromList [(WildPatG,Just (BopG VarG LitG),ListG (fromList []))])
+match n with
+| _ when n < 0 -> []

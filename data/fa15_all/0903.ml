@@ -50,44 +50,35 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(16,16)-(16,44)
+(16,17)-(16,45)
 match x with
 | (l1e , l2e) -> match a with
                  | (carry , list) -> (let num =
                                         (l1e + l2e) + carry in
                                       (num mod 9 , [7] @ list))
-CaseG VarG (fromList [(Nothing,CaseG EmptyG (fromList [(Nothing,EmptyG)]))])
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))])
 
-(17,15)-(17,43)
+(17,16)-(17,44)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
-(20,18)-(20,33)
+(20,19)-(20,34)
 (padZero l1 l2 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Case (Just (17,6)-(21,76)) (Var (Just (17,12)-(17,13)) "x") [(TuplePat (Just (18,9)-(18,16)) [VarPat (Just (18,9)-(18,12)) "l1e",VarPat (Just (18,13)-(18,16)) "l2e"],Nothing,Case (Just (19,10)-(21,76)) (Var (Just (19,17)-(19,18)) "a") [(TuplePat (Just (20,14)-(20,24)) [VarPat (Just (20,14)-(20,19)) "carry",VarPat (Just (20,20)-(20,24)) "list"],Nothing,Let (Just (21,15)-(21,75)) NonRec [(VarPat (Just (21,19)-(21,22)) "num",Bop (Just (21,25)-(21,44)) Plus (Bop (Just (21,25)-(21,36)) Plus (Var (Just (21,26)-(21,29)) "l1e") (Var (Just (21,32)-(21,35)) "l2e")) (Var (Just (21,39)-(21,44)) "carry"))] (Tuple (Just (21,48)-(21,75)) [Bop (Just (21,49)-(21,60)) Mod (Var (Just (21,50)-(21,53)) "num") (Lit (Just (21,58)-(21,59)) (LI 9)),App (Just (21,62)-(21,74)) (Var (Just (21,67)-(21,68)) "@") [List (Just (21,63)-(21,66)) [Lit (Just (21,64)-(21,65)) (LI 7)] Nothing,Var (Just (21,69)-(21,73)) "list"]]))])]
-Tuple (Just (22,15)-(22,22)) [Lit (Just (22,16)-(22,17)) (LI 0),List (Just (22,19)-(22,21)) [] Nothing]
-Tuple (Just (25,18)-(25,39)) [App (Just (25,19)-(25,34)) (Var (Just (25,20)-(25,27)) "padZero") [Var (Just (25,28)-(25,30)) "l1",Var (Just (25,31)-(25,33)) "l2"],Var (Just (25,36)-(25,38)) "l2"]
-*)
-
-(* typed spans
-(17,6)-(21,76)
-(22,15)-(22,22)
-(25,18)-(25,39)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-(int list * int list)
-*)
-
-(* bad types
-('a * 'b)
-('a * 'b)
-int list
+(* type error slice
+(4,4)-(7,62)
+(4,13)-(7,60)
+(4,16)-(7,60)
+(5,3)-(7,60)
+(7,8)-(7,60)
+(7,56)-(7,57)
+(15,3)-(20,35)
+(15,12)-(19,52)
+(20,14)-(20,35)
+(20,15)-(20,18)
+(20,19)-(20,34)
+(20,20)-(20,27)
 *)

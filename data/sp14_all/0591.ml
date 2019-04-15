@@ -46,42 +46,53 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(15,16)-(15,44)
+(15,17)-(15,45)
 let (x' , x'') = x in
 let (c , s) = a in
 (((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
 
-(16,21)-(16,24)
+(16,17)-(16,20)
+0
+LitG
+
+(16,22)-(16,25)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(17,24)-(17,36)
+(17,25)-(17,37)
 List.combine l1 l2
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Let (Just (16,6)-(18,65)) NonRec [(TuplePat (Just (16,11)-(16,17)) [VarPat (Just (16,11)-(16,13)) "x'",VarPat (Just (16,14)-(16,17)) "x''"],Var (Just (16,21)-(16,22)) "x")] (Let (Just (17,6)-(18,65)) NonRec [(TuplePat (Just (17,11)-(17,14)) [VarPat (Just (17,11)-(17,12)) "c",VarPat (Just (17,13)-(17,14)) "s"],Var (Just (17,18)-(17,19)) "a")] (Tuple (Just (18,6)-(18,65)) [Bop (Just (18,7)-(18,30)) Div (Bop (Just (18,8)-(18,24)) Plus (Bop (Just (18,9)-(18,17)) Plus (Var (Just (18,10)-(18,11)) "c") (Var (Just (18,14)-(18,16)) "x'")) (Var (Just (18,20)-(18,23)) "x''")) (Lit (Just (18,27)-(18,29)) (LI 10)),ConApp (Just (18,32)-(18,64)) "::" (Just (Tuple (Just (18,33)-(18,63)) [Bop (Just (18,33)-(18,58)) Mod (Bop (Just (18,34)-(18,50)) Plus (Bop (Just (18,35)-(18,43)) Plus (Var (Just (18,36)-(18,37)) "c") (Var (Just (18,40)-(18,42)) "x'")) (Var (Just (18,46)-(18,49)) "x''")) (Lit (Just (18,55)-(18,57)) (LI 10)),Var (Just (18,62)-(18,63)) "s"])) Nothing]))
-List (Just (19,19)-(19,21)) [] Nothing
-App (Just (20,24)-(20,44)) (Var (Just (20,25)-(20,37)) "List.combine") [Var (Just (20,38)-(20,40)) "l1",Var (Just (20,41)-(20,43)) "l2"]
-*)
-
-(* typed spans
-(16,6)-(18,65)
-(19,19)-(19,21)
-(20,24)-(20,44)
-*)
-
-(* correct types
-(int * int list)
-int list
-(int * int) list
-*)
-
-(* bad types
-(int list * int list)
-int list
-'a list
+(* type error slice
+(3,45)-(3,46)
+(3,45)-(3,67)
+(3,50)-(3,67)
+(3,51)-(3,56)
+(3,57)-(3,58)
+(5,4)-(8,70)
+(5,17)-(8,68)
+(5,20)-(8,68)
+(6,3)-(8,68)
+(7,14)-(7,61)
+(7,15)-(7,20)
+(7,21)-(7,22)
+(8,8)-(8,68)
+(8,9)-(8,63)
+(8,10)-(8,57)
+(8,11)-(8,16)
+(8,58)-(8,59)
+(14,3)-(19,35)
+(14,12)-(18,52)
+(17,16)-(17,24)
+(17,16)-(17,37)
+(17,25)-(17,37)
+(17,26)-(17,33)
+(17,34)-(17,36)
+(19,14)-(19,35)
+(19,15)-(19,18)
+(19,19)-(19,34)
+(19,20)-(19,27)
 *)

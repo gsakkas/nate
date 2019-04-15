@@ -1,4 +1,6 @@
-IteG (BopG EmptyG EmptyG) (BopG EmptyG EmptyG) LitG
-if (x * y) > 10
-then (x * y) mod 10
-else 0
+LetG NonRec (fromList [(VarPatG,LamG (TuplePatG (fromList [EmptyPatG])) EmptyG)]) (AppG (fromList [EmptyG]))
+let combine =
+  fun (a , b) -> a + b in
+List.map combine
+         (List.rev (List.combine l1
+                                 l2))

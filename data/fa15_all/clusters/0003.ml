@@ -1,77 +1,57 @@
-AppG (fromList [VarG])
-List.combine l1 l2
-exprToString e2
-exprToString e3
-print_int n
-exprToString e1
-List.mem h t
-f b
-f x
-List.fold_left f base args
-cloneHelper x n
-mulByDigit i tl
-(fun n -> n) a
-(fun a -> x) x
-(fun n -> a) x
-List.map f l
-fixpointHelper f b
-exprToString y
-digits n
-digitsOfInt n2
-List.combine l1' l2'
-List.rev l1
-List.rev l2
-List.mem h seen
-List.rev l
-digitsOfInt x
-itt x' i
-padZero l1 l2
-sep ^ x
-List.fold_left f base l
-List.combine x y
-f t
-bigAdd l l
-f a
-a x
-List.hd xs
-List.combine l2 l2
-List.length l2
-exprToString f
-List.length l'
-digitsOfInt n
-listReverse t
-explode w
-exprToString nlog
-sumList t
-mulByDigit i t
-exprToString a
-exprToString b
-exprToString c
-exprToString d
-helper f
-filter t h
-exprToString ex3
-sumList y
-ex y
-mulByDigit x1 x2
-x a
-a ^ sep
-List.length l1
-List.mem h l
-exprToString z
-exprToString e
-matchHeads w
-getHead x
-listReverse x
-(fun x -> x) a
-exprToString i
-exprToString i2
-remainder i h
-remainder h i
-List.hd lt2
-List.tl lt2
-mulByDigit x res
-List.fold_left fx base l
-a ^ b
-listReverse l'
-bigAdd m a'
+AppG (fromList [AppG (fromList [EmptyG])])
+List.rev (List.combine l1 l2)
+exprToString e1 ^ ("*" ^ exprToString e2)
+not (List.mem h seen)
+sumList (digits n)
+exprToString e1 ^ ("+" ^ exprToString e2)
+sumList (digitsOfInt n)
+x (a n)
+buildSine (build (rand , depth - 1))
+f (f (f (f b)))
+listReverse (explode w)
+buildCosine (build (rand , depth - 1))
+exprToString expr ^ ("^2-" ^ (exprToString expr ^ "-1)"))
+digitalRoot (sumList (digitsOfInt n))
+sumList (digitsOfInt x)
+List.rev ([0] @ l1)
+List.combine (List.rev l1)
+             (List.rev l2)
+List.combine (List.rev (0 :: l1))
+             (List.rev (0 :: l2))
+bigAdd (bigAdd l l)
+       (mulByDigit (i - 1) l)
+intListToInt (mulByDigit (intListToInt l1)
+                         [s])
+intListToInt (carryFunc (mulByDigit (intListToInt l1)
+                                    [s]))
+List.rev (List.combine l2 l2)
+exprToString e ^ ("*" ^ exprToString f)
+x (a b)
+additivePersistence (sumList x)
+additivePersistence (sumList (digits n))
+x (a f')
+log (eval (nlog , x , y))
+exprToString e ^ ("*" ^ exprToString ex)
+x (a y)
+exprToString e ^ ("*" ^ exprToString e)
+additivePersistence (sumList (digitsOfInt n))
+List.rev (helper l1 l2)
+eval (m , x , y) ** eval (n , x , y)
+List.rev (List.combine (0 :: l1)
+                       (0 :: l2))
+List.rev (helper ([] , l))
+not (List.mem h l)
+List.rev (mulByDigit (i - 1)
+                     l)
+x (a x')
+buildCotangent (build (rand , depth - 1))
+exprToString x ^ ("*" ^ exprToString y)
+matchHeads (loseTail t)
+matchHeads (explode w)
+bigAdd total (mulByDigit x
+                         l2) @ listZeros pow
+atan (eval (e1 , x , y))
+exprToString a ^ ("*" ^ exprToString b)
+x (x a)
+removeZero (add (padZero l1
+                         l2))

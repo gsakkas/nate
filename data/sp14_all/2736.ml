@@ -21,25 +21,16 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(8,7)-(8,39)
+(8,8)-(8,40)
 (List.append (clone 0 (0 - a))
              l1 , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (8,7)-(8,47)) [App (Just (8,8)-(8,42)) (Var (Just (8,9)-(8,20)) "List.append") [App (Just (8,21)-(8,38)) (Var (Just (8,22)-(8,27)) "clone") [Lit (Just (8,28)-(8,29)) (LI 0),Bop (Just (8,30)-(8,37)) Minus (Lit (Just (8,31)-(8,32)) (LI 0)) (Var (Just (8,35)-(8,36)) "a")],Var (Just (8,39)-(8,41)) "l1"],Var (Just (8,44)-(8,46)) "l2"]
-*)
-
-(* typed spans
-(8,7)-(8,47)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-int list
+(* type error slice
+(6,3)-(8,40)
+(7,8)-(7,42)
+(8,8)-(8,19)
+(8,8)-(8,40)
 *)

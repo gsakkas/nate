@@ -1,2 +1,2 @@
-AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,TupleG (fromList [VarG])])))])
-pair ((h1 , h2) :: acc) t1 t2
+TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
+(f x , f x = x)

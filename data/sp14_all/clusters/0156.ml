@@ -1,9 +1,5 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (IteG EmptyG EmptyG EmptyG)
-let (x , y) = f b in
-if y = true
-then wwhile (f , x)
-else x
-let (b' , c') = f b in
-if c'
-then wwhile (f , b')
-else b'
+LetG NonRec (fromList [(ConsPatG VarPatG VarPatG,VarG)]) (CaseG EmptyG (fromList [(ConsPatG EmptyPatG EmptyPatG,Nothing,EmptyG),(ConPatG Nothing,Nothing,EmptyG)]))
+let h :: t = l in
+match l with
+| [] -> []
+| h :: t -> listReverse t

@@ -19,17 +19,16 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(7,21)-(7,25)
-EMPTY
-EmptyG
+(7,21)-(7,33)
+f b
+AppG (fromList [VarG])
 
 *)
 
-(* typed spans
-*)
-
-(* typed spans
-*)
-
-(* typed spans
+(* type error slice
+(7,3)-(7,67)
+(7,16)-(7,47)
+(7,20)-(7,47)
+(7,21)-(7,33)
+(7,22)-(7,26)
 *)

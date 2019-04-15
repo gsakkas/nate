@@ -50,23 +50,11 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(11,12)-(11,40)
+(11,13)-(11,41)
 (10 , 13 , 57)
 TupleG (fromList [LitG])
 
-(11,12)-(11,40)
-4.0 *. atan 1.0
-BopG LitG (AppG (fromList [EmptyG]))
-
-(11,21)-(11,40)
-atan
-VarG
-
-(13,14)-(19,69)
-1.0
-LitG
-
-(14,2)-(19,69)
+(14,3)-(19,70)
 match e with
 | VarX -> x +. 0.0
 | VarY -> y +. 0.0
@@ -77,38 +65,14 @@ match e with
 | Thresh (h1 , h2 , h3 , h4) -> if eval (h1 , x , y) < eval (h2 , x , y)
                                 then eval (h3 , x , y)
                                 else eval (h4 , x , y)
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,BopG EmptyG EmptyG),(Nothing,IteG EmptyG EmptyG EmptyG)])
+CaseG VarG (fromList [(ConPatG Nothing,Nothing,BopG EmptyG EmptyG),(ConPatG (Just VarPatG),Nothing,AppG (fromList [EmptyG])),(ConPatG (Just (TuplePatG (fromList [EmptyPatG]))),Nothing,BopG EmptyG EmptyG),(ConPatG (Just (TuplePatG (fromList [EmptyPatG]))),Nothing,IteG EmptyG EmptyG EmptyG)])
 
 *)
 
-(* changed exprs
-Tuple (Just (11,12)-(11,24)) [Lit (Just (11,13)-(11,15)) (LI 10),Lit (Just (11,17)-(11,19)) (LI 13),Lit (Just (11,21)-(11,23)) (LI 57)]
-Bop (Just (13,9)-(13,26)) FTimes (Lit (Just (13,9)-(13,12)) (LD 4.0)) (App (Just (13,16)-(13,26)) (Var (Just (13,17)-(13,21)) "atan") [Lit (Just (13,22)-(13,25)) (LD 1.0)])
-Var (Just (13,17)-(13,21)) "atan"
-Lit (Just (13,22)-(13,25)) (LD 1.0)
-Case (Just (16,2)-(26,26)) (Var (Just (16,8)-(16,9)) "e") [(ConPat (Just (17,4)-(17,8)) "VarX" Nothing,Nothing,Bop (Just (17,13)-(17,21)) FPlus (Var (Just (17,13)-(17,14)) "x") (Lit (Just (17,18)-(17,21)) (LD 0.0))),(ConPat (Just (18,4)-(18,8)) "VarY" Nothing,Nothing,Bop (Just (18,13)-(18,21)) FPlus (Var (Just (18,13)-(18,14)) "y") (Lit (Just (18,18)-(18,21)) (LD 0.0))),(ConPat (Just (19,4)-(19,11)) "Sine" (Just (VarPat (Just (19,9)-(19,11)) "s1")),Nothing,App (Just (19,15)-(19,44)) (Var (Just (19,15)-(19,18)) "sin") [Bop (Just (19,19)-(19,44)) FTimes (Var (Just (19,20)-(19,22)) "pi") (App (Just (19,26)-(19,43)) (Var (Just (19,27)-(19,31)) "eval") [Tuple (Just (19,32)-(19,42)) [Var (Just (19,33)-(19,35)) "s1",Var (Just (19,37)-(19,38)) "x",Var (Just (19,40)-(19,41)) "y"]])]),(ConPat (Just (20,4)-(20,13)) "Cosine" (Just (VarPat (Just (20,11)-(20,13)) "c1")),Nothing,App (Just (20,17)-(20,46)) (Var (Just (20,17)-(20,20)) "cos") [Bop (Just (20,21)-(20,46)) FTimes (Var (Just (20,22)-(20,24)) "pi") (App (Just (20,28)-(20,45)) (Var (Just (20,29)-(20,33)) "eval") [Tuple (Just (20,34)-(20,44)) [Var (Just (20,35)-(20,37)) "c1",Var (Just (20,39)-(20,40)) "x",Var (Just (20,42)-(20,43)) "y"]])]),(ConPat (Just (21,4)-(21,18)) "Average" (Just (TuplePat (Just (21,13)-(21,18)) [VarPat (Just (21,13)-(21,15)) "a1",VarPat (Just (21,16)-(21,18)) "a2"])),Nothing,Bop (Just (21,23)-(21,70)) FDiv (Bop (Just (21,23)-(21,63)) FPlus (App (Just (21,24)-(21,41)) (Var (Just (21,25)-(21,29)) "eval") [Tuple (Just (21,30)-(21,40)) [Var (Just (21,31)-(21,33)) "a1",Var (Just (21,35)-(21,36)) "x",Var (Just (21,38)-(21,39)) "y"]]) (App (Just (21,45)-(21,62)) (Var (Just (21,46)-(21,50)) "eval") [Tuple (Just (21,51)-(21,61)) [Var (Just (21,52)-(21,54)) "a2",Var (Just (21,56)-(21,57)) "x",Var (Just (21,59)-(21,60)) "y"]])) (Lit (Just (21,67)-(21,70)) (LD 2.0))),(ConPat (Just (22,4)-(22,16)) "Times" (Just (TuplePat (Just (22,11)-(22,16)) [VarPat (Just (22,11)-(22,13)) "t1",VarPat (Just (22,14)-(22,16)) "t2"])),Nothing,Bop (Just (22,21)-(22,59)) FTimes (App (Just (22,21)-(22,38)) (Var (Just (22,22)-(22,26)) "eval") [Tuple (Just (22,27)-(22,37)) [Var (Just (22,28)-(22,30)) "t1",Var (Just (22,32)-(22,33)) "x",Var (Just (22,35)-(22,36)) "y"]]) (App (Just (22,42)-(22,59)) (Var (Just (22,43)-(22,47)) "eval") [Tuple (Just (22,48)-(22,58)) [Var (Just (22,49)-(22,51)) "t2",Var (Just (22,53)-(22,54)) "x",Var (Just (22,56)-(22,57)) "y"]])),(ConPat (Just (23,4)-(23,23)) "Thresh" (Just (TuplePat (Just (23,12)-(23,23)) [VarPat (Just (23,12)-(23,14)) "h1",VarPat (Just (23,15)-(23,17)) "h2",VarPat (Just (23,18)-(23,20)) "h3",VarPat (Just (23,21)-(23,23)) "h4"])),Nothing,Ite (Just (24,6)-(26,26)) (Bop (Just (24,9)-(24,46)) Lt (App (Just (24,9)-(24,26)) (Var (Just (24,10)-(24,14)) "eval") [Tuple (Just (24,15)-(24,25)) [Var (Just (24,16)-(24,18)) "h1",Var (Just (24,20)-(24,21)) "x",Var (Just (24,23)-(24,24)) "y"]]) (App (Just (24,29)-(24,46)) (Var (Just (24,30)-(24,34)) "eval") [Tuple (Just (24,35)-(24,45)) [Var (Just (24,36)-(24,38)) "h2",Var (Just (24,40)-(24,41)) "x",Var (Just (24,43)-(24,44)) "y"]])) (App (Just (25,11)-(25,26)) (Var (Just (25,11)-(25,15)) "eval") [Tuple (Just (25,16)-(25,26)) [Var (Just (25,17)-(25,19)) "h3",Var (Just (25,21)-(25,22)) "x",Var (Just (25,24)-(25,25)) "y"]]) (App (Just (26,11)-(26,26)) (Var (Just (26,11)-(26,15)) "eval") [Tuple (Just (26,16)-(26,26)) [Var (Just (26,17)-(26,19)) "h4",Var (Just (26,21)-(26,22)) "x",Var (Just (26,24)-(26,25)) "y"]]))]
-*)
-
-(* typed spans
-(11,12)-(11,24)
-(13,9)-(13,26)
-(13,17)-(13,21)
-(13,22)-(13,25)
-(16,2)-(26,26)
-*)
-
-(* correct types
-(int * int * int)
-float
-float -> float
-float
-float
-*)
-
-(* bad types
-'a
-'a
-string
-(expr * float * float) -> float
-float
+(* type error slice
+(14,3)-(19,70)
+(15,14)-(15,22)
+(19,24)-(19,64)
+(19,24)-(19,70)
+(19,67)-(19,70)
 *)

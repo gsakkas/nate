@@ -54,98 +54,42 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(23,67)-(23,68)
+(23,68)-(23,69)
 2.0
 LitG
 
-(23,67)-(23,68)
+(24,22)-(24,39)
 eval (e1 , x , y) *. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(24,32)-(24,38)
-eval
-VarG
-
-(24,32)-(24,38)
-(e1 , x , y)
-TupleG (fromList [VarG])
-
-(25,40)-(25,52)
-eval
-VarG
-
-(25,40)-(25,52)
-(e2 , x , y)
-TupleG (fromList [VarG])
-
-(25,44)-(25,45)
+(25,29)-(25,53)
 if eval (e1 , x , y) < eval (e2 , x , y)
 then eval (e3 , x , y)
 else eval (e4 , x , y)
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(25,50)-(25,51)
-eval (e2 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(25,50)-(25,51)
-eval (e3 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(25,50)-(25,51)
-eval (e4 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
 *)
 
-(* changed exprs
-Lit (Just (19,67)-(19,70)) (LD 2.0)
-Bop (Just (20,21)-(20,59)) FTimes (App (Just (20,21)-(20,38)) (Var (Just (20,22)-(20,26)) "eval") [Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]]) (App (Just (20,42)-(20,59)) (Var (Just (20,43)-(20,47)) "eval") [Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "e2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]])
-Var (Just (20,22)-(20,26)) "eval"
-Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]
-Var (Just (20,43)-(20,47)) "eval"
-Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "e2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]
-Ite (Just (22,6)-(24,26)) (Bop (Just (22,9)-(22,46)) Lt (App (Just (22,9)-(22,26)) (Var (Just (22,10)-(22,14)) "eval") [Tuple (Just (22,15)-(22,25)) [Var (Just (22,16)-(22,18)) "e1",Var (Just (22,20)-(22,21)) "x",Var (Just (22,23)-(22,24)) "y"]]) (App (Just (22,29)-(22,46)) (Var (Just (22,30)-(22,34)) "eval") [Tuple (Just (22,35)-(22,45)) [Var (Just (22,36)-(22,38)) "e2",Var (Just (22,40)-(22,41)) "x",Var (Just (22,43)-(22,44)) "y"]])) (App (Just (23,11)-(23,26)) (Var (Just (23,11)-(23,15)) "eval") [Tuple (Just (23,16)-(23,26)) [Var (Just (23,17)-(23,19)) "e3",Var (Just (23,21)-(23,22)) "x",Var (Just (23,24)-(23,25)) "y"]]) (App (Just (24,11)-(24,26)) (Var (Just (24,11)-(24,15)) "eval") [Tuple (Just (24,16)-(24,26)) [Var (Just (24,17)-(24,19)) "e4",Var (Just (24,21)-(24,22)) "x",Var (Just (24,24)-(24,25)) "y"]])
-App (Just (22,29)-(22,46)) (Var (Just (22,30)-(22,34)) "eval") [Tuple (Just (22,35)-(22,45)) [Var (Just (22,36)-(22,38)) "e2",Var (Just (22,40)-(22,41)) "x",Var (Just (22,43)-(22,44)) "y"]]
-App (Just (23,11)-(23,26)) (Var (Just (23,11)-(23,15)) "eval") [Tuple (Just (23,16)-(23,26)) [Var (Just (23,17)-(23,19)) "e3",Var (Just (23,21)-(23,22)) "x",Var (Just (23,24)-(23,25)) "y"]]
-App (Just (24,11)-(24,26)) (Var (Just (24,11)-(24,15)) "eval") [Tuple (Just (24,16)-(24,26)) [Var (Just (24,17)-(24,19)) "e4",Var (Just (24,21)-(24,22)) "x",Var (Just (24,24)-(24,25)) "y"]]
-*)
-
-(* typed spans
-(19,67)-(19,70)
-(20,21)-(20,59)
-(20,22)-(20,26)
-(20,27)-(20,37)
-(20,43)-(20,47)
-(20,48)-(20,58)
-(22,6)-(24,26)
-(22,29)-(22,46)
-(23,11)-(23,26)
-(24,11)-(24,26)
-*)
-
-(* correct types
-float
-float
-(expr * float * float) -> float
-(expr * float * float)
-(expr * float * float) -> float
-(expr * float * float)
-float
-float
-float
-float
-*)
-
-(* bad types
-int
-int
-(expr * expr)
-(expr * expr)
-(expr * expr * expr * expr)
-(expr * expr * expr * expr)
-expr
-expr
-expr
-expr
+(* type error slice
+(13,4)-(13,42)
+(13,17)-(13,40)
+(13,26)-(13,40)
+(13,33)-(13,35)
+(17,4)-(25,55)
+(17,15)-(25,53)
+(18,3)-(25,53)
+(19,14)-(19,15)
+(21,15)-(21,18)
+(21,15)-(21,43)
+(21,19)-(21,43)
+(21,26)-(21,42)
+(21,27)-(21,31)
+(22,17)-(22,20)
+(22,17)-(22,45)
+(23,24)-(23,69)
+(23,68)-(23,69)
+(24,22)-(24,32)
+(24,22)-(24,39)
+(24,33)-(24,39)
+(24,34)-(24,35)
 *)

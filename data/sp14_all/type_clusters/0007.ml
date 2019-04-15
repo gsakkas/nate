@@ -1,5 +1,1 @@
-expr
-int
-float
-'a
-'a list
+(int * int list)

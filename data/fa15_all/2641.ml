@@ -80,37 +80,33 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(28,19)-(29,72)
-fun n ->
-  match n with
-  | 0 -> []
-  | 1 -> [0]
-  | x -> [0] @ listZeros (n - 1)
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(34,16)-(34,61)
+(34,17)-(34,62)
 bigAdd total (mulByDigit x
                          l2) @ listZeros pow
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (28,18)-(29,68)) (VarPat (Just (28,18)-(28,19)) "n") (Case (Just (29,2)-(29,68)) (Var (Just (29,8)-(29,9)) "n") [(LitPat (Just (29,17)-(29,18)) (LI 0),Nothing,List (Just (29,22)-(29,24)) [] Nothing),(LitPat (Just (29,27)-(29,28)) (LI 1),Nothing,List (Just (29,32)-(29,35)) [Lit (Just (29,33)-(29,34)) (LI 0)] Nothing),(VarPat (Just (29,38)-(29,39)) "x",Nothing,App (Just (29,43)-(29,68)) (Var (Just (29,47)-(29,48)) "@") [List (Just (29,43)-(29,46)) [Lit (Just (29,44)-(29,45)) (LI 0)] Nothing,App (Just (29,49)-(29,68)) (Var (Just (29,50)-(29,59)) "listZeros") [Bop (Just (29,60)-(29,67)) Minus (Var (Just (29,61)-(29,62)) "n") (Lit (Just (29,65)-(29,66)) (LI 1))]])]) Nothing
-App (Just (37,16)-(37,68)) (Var (Just (37,50)-(37,51)) "@") [App (Just (37,17)-(37,49)) (Var (Just (37,18)-(37,24)) "bigAdd") [Var (Just (37,25)-(37,30)) "total",App (Just (37,31)-(37,48)) (Var (Just (37,32)-(37,42)) "mulByDigit") [Var (Just (37,43)-(37,44)) "x",Var (Just (37,45)-(37,47)) "l2"]],App (Just (37,52)-(37,67)) (Var (Just (37,53)-(37,62)) "listZeros") [Var (Just (37,63)-(37,66)) "pow"]]
-*)
-
-(* typed spans
-(28,18)-(29,68)
-(37,16)-(37,68)
-*)
-
-(* correct types
-int -> int list
-int list
-*)
-
-(* bad types
-int -> int list -> int list
-int
+(* type error slice
+(29,51)-(29,73)
+(29,52)-(29,62)
+(32,3)-(36,76)
+(32,9)-(34,63)
+(33,5)-(34,63)
+(33,23)-(33,24)
+(34,17)-(34,62)
+(34,18)-(34,23)
+(34,26)-(34,61)
+(34,27)-(34,46)
+(34,28)-(34,38)
+(34,49)-(34,60)
+(34,50)-(34,52)
+(34,53)-(34,55)
+(35,3)-(36,76)
+(35,14)-(35,21)
+(35,18)-(35,20)
+(36,43)-(36,57)
+(36,43)-(36,69)
+(36,58)-(36,59)
+(36,60)-(36,64)
 *)

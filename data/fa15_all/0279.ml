@@ -27,48 +27,32 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(10,7)-(10,30)
+(10,8)-(10,31)
 (l1 @ clone 0 diff , l2)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(11,17)-(11,18)
+(11,25)-(11,44)
 (l1 , l2 @ clone 0 diff)
 TupleG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(11,39)-(11,40)
-l2
-VarG
-
-(11,33)-(11,37)
+(11,44)-(11,44)
 (l1 , l2)
 TupleG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Tuple (Just (10,7)-(10,34)) [App (Just (10,8)-(10,29)) (Var (Just (10,12)-(10,13)) "@") [Var (Just (10,9)-(10,11)) "l1",App (Just (10,14)-(10,28)) (Var (Just (10,15)-(10,20)) "clone") [Lit (Just (10,21)-(10,22)) (LI 0),Var (Just (10,23)-(10,27)) "diff"]],Var (Just (10,31)-(10,33)) "l2"]
-Tuple (Just (11,24)-(11,51)) [Var (Just (11,25)-(11,27)) "l1",App (Just (11,29)-(11,50)) (Var (Just (11,33)-(11,34)) "@") [Var (Just (11,30)-(11,32)) "l2",App (Just (11,35)-(11,49)) (Var (Just (11,36)-(11,41)) "clone") [Lit (Just (11,42)-(11,43)) (LI 0),Var (Just (11,44)-(11,48)) "diff"]]]
-Var (Just (11,30)-(11,32)) "l2"
-Tuple (Just (11,57)-(11,65)) [Var (Just (11,58)-(11,60)) "l1",Var (Just (11,62)-(11,64)) "l2"]
-*)
-
-(* typed spans
-(10,7)-(10,34)
-(11,24)-(11,51)
-(11,30)-(11,32)
-(11,57)-(11,65)
-*)
-
-(* correct types
-(int list * int list)
-(int list * int list)
-int list
-(int list * int list)
-*)
-
-(* bad types
-'a list
-int
-int list -> int list -> int list
-int
+(* type error slice
+(5,4)-(5,63)
+(5,15)-(5,61)
+(5,17)-(5,61)
+(5,24)-(5,25)
+(5,24)-(5,29)
+(5,28)-(5,29)
+(10,8)-(10,26)
+(10,9)-(10,14)
+(10,17)-(10,20)
+(11,8)-(11,44)
+(11,25)-(11,44)
+(11,40)-(11,41)
+(11,44)-(11,44)
 *)

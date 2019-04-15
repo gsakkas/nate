@@ -35,24 +35,15 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(15,14)-(15,36)
+(15,15)-(15,37)
 "pi* "
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (15,14)-(15,20)) (LS "pi* ")
-*)
-
-(* typed spans
-(15,14)-(15,20)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-string list -> string
+(* type error slice
+(15,15)-(15,37)
+(15,15)-(15,56)
+(15,16)-(15,29)
+(15,38)-(15,39)
 *)

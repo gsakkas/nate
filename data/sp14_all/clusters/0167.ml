@@ -1,2 +1,4 @@
-TupleG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
-(f x , f x = x)
+CaseG VarG (fromList [(ConsPatG VarPatG (ConPatG Nothing),Nothing,ListG (fromList [EmptyG])),(ConPatG Nothing,Nothing,ListG (fromList []))])
+match l with
+| [] -> []
+| b :: [] -> [b]

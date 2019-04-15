@@ -1,11 +1,15 @@
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
-let (c , s) = a in
-(((c + x') + x'') / 10 , (((c + x') + x'') mod 10) :: s)
-let (pos , total) = a in
-(pos , l2)
-let (s , t) = a in
-(((i + j) + s) / 10 , (((i + j) + s) mod 10) :: t)
-let (h :: t , _) = a in
-([] , [])
-let (one , two) = a in
-(x :: one , y :: two)
+AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
+mulByDigit (i - 1) (bigAdd l
+                           l)
+max' (0.0 -. 1.0) (min 1.0
+                       ((2.71 ** ((sin (pi *. eval (a , x , y)) +. cos (pi *. eval (b , x , y))) -. 1.0)) -. 1.0))
+append (digitsOfInt (n / 10))
+       (n - ((n / 10) * 10))
+aPHelper (sumList (digits n))
+         (i + 1)
+clone (List.hd l1)
+      (List.length l1 - List.length l2)
+clone (List.hd l2)
+      (List.length l2 - List.length l1)
+mod_float (eval (w , x , y) *. eval (t , x , y))
+          (eval (u , x , y))

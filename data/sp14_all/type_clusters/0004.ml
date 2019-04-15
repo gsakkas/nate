@@ -1,3 +1,4 @@
-int list
-'a list
-string list
+int
+string
+float
+bool

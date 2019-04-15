@@ -1,3 +1,4 @@
-'a list
-int list
+'a
 int
+string
+bool

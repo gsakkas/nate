@@ -1,3 +1,4 @@
-AppG (fromList [VarG,LitG,ConAppG (Just (TupleG (fromList [VarG])))])
-helper 0 (num :: xs') xs
-helper 0 (num :: accum) xs
+IteG (BopG EmptyG EmptyG) (ListG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+if n < 10
+then [n]
+else digitsOfInt (n / 10) @ [n mod 10]

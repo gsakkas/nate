@@ -17,25 +17,15 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(7,2)-(7,53)
+(7,3)-(7,54)
 let retTuple = (l1 , l2) in
 retTuple
-LetG NonRec (fromList [TupleG (fromList [EmptyG])]) VarG
+LetG NonRec (fromList [(VarPatG,TupleG (fromList [EmptyG]))]) VarG
 
 *)
 
-(* changed exprs
-Let (Just (5,2)-(5,37)) NonRec [(VarPat (Just (5,6)-(5,14)) "retTuple",Tuple (Just (5,17)-(5,25)) [Var (Just (5,18)-(5,20)) "l1",Var (Just (5,22)-(5,24)) "l2"])] (Var (Just (5,29)-(5,37)) "retTuple")
-*)
-
-(* typed spans
-(5,2)-(5,37)
-*)
-
-(* correct types
-('a list * 'b list)
-*)
-
-(* bad types
-unit
+(* type error slice
+(7,3)-(7,54)
+(7,27)-(7,54)
+(7,54)-(7,54)
 *)

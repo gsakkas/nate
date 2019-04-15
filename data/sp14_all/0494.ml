@@ -61,7 +61,7 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(21,6)-(24,56)
+(21,7)-(24,57)
 let (a1 , a2) = a in
 let h :: _ = a1 in
 let tens =
@@ -69,38 +69,30 @@ let tens =
 let ones =
   (x1 + x2) + (h mod 10) in
 (tens :: a1 , ones :: a2)
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(ConsPatG EmptyPatG EmptyPatG,EmptyG)]) EmptyG)
 
-(25,19)-(25,20)
+(25,17)-(25,18)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(26,4)-(27,51)
+(25,20)-(25,21)
 []
-ListG EmptyG
+ListG (fromList [])
 
 *)
 
-(* changed exprs
-Let (Just (21,6)-(24,71)) NonRec [(TuplePat (Just (21,11)-(21,16)) [VarPat (Just (21,11)-(21,13)) "a1",VarPat (Just (21,14)-(21,16)) "a2"],Var (Just (21,20)-(21,21)) "a")] (Let (Just (22,6)-(24,71)) NonRec [(ConsPat (Just (22,10)-(22,14)) (VarPat (Just (22,10)-(22,11)) "h") (WildPat (Just (22,13)-(22,14))),Var (Just (22,17)-(22,19)) "a1")] (Let (Just (23,6)-(24,71)) NonRec [(VarPat (Just (23,10)-(23,14)) "tens",Bop (Just (23,17)-(23,37)) Plus (Bop (Just (23,17)-(23,26)) Plus (Var (Just (23,18)-(23,20)) "x1") (Var (Just (23,23)-(23,25)) "x2")) (Bop (Just (23,29)-(23,37)) Div (Var (Just (23,30)-(23,31)) "h") (Lit (Just (23,34)-(23,36)) (LI 10))))] (Let (Just (24,6)-(24,71)) NonRec [(VarPat (Just (24,10)-(24,14)) "ones",Bop (Just (24,17)-(24,39)) Plus (Bop (Just (24,17)-(24,26)) Plus (Var (Just (24,18)-(24,20)) "x1") (Var (Just (24,23)-(24,25)) "x2")) (Bop (Just (24,29)-(24,39)) Mod (Var (Just (24,30)-(24,31)) "h") (Lit (Just (24,36)-(24,38)) (LI 10))))] (Tuple (Just (24,43)-(24,71)) [ConApp (Just (24,44)-(24,56)) "::" (Just (Tuple (Just (24,45)-(24,55)) [Var (Just (24,45)-(24,49)) "tens",Var (Just (24,53)-(24,55)) "a1"])) Nothing,ConApp (Just (24,58)-(24,70)) "::" (Just (Tuple (Just (24,59)-(24,69)) [Var (Just (24,59)-(24,63)) "ones",Var (Just (24,67)-(24,69)) "a2"])) Nothing]))))
-List (Just (25,16)-(25,18)) [] Nothing
-List (Just (25,20)-(25,22)) [] Nothing
-*)
-
-(* typed spans
-(21,6)-(24,71)
-(25,16)-(25,18)
-(25,20)-(25,22)
-*)
-
-(* correct types
-(int list * int list)
-int list
-int list
-*)
-
-(* bad types
-(int * int)
-int
-int list
+(* type error slice
+(19,5)-(27,52)
+(19,11)-(24,57)
+(19,13)-(24,57)
+(20,7)-(24,57)
+(21,7)-(24,57)
+(21,19)-(21,20)
+(22,7)-(24,57)
+(23,7)-(24,57)
+(24,7)-(24,57)
+(24,45)-(24,57)
+(27,19)-(27,33)
+(27,19)-(27,45)
+(27,34)-(27,35)
 *)

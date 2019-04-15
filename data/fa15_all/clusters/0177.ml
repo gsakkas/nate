@@ -1,2 +1,4 @@
-TupleG (fromList [ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))])
-((sum mod 10) :: a2 , (sum / 10) :: a1)
+IteG (BopG EmptyG EmptyG) (ListG (fromList [EmptyG])) (ListG (fromList []))
+if n > 0
+then [n mod 10]
+else []

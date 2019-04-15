@@ -18,7 +18,7 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(2,17)-(2,55)
+(2,18)-(2,56)
 let rec helper =
   fun x ->
     fun l ->
@@ -28,22 +28,26 @@ let rec helper =
         | h :: t -> helper t l
                            (h :: acc) in
 helper x l []
-LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+LetG Rec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (3,2)-(5,15)) Rec [(VarPat (Just (3,10)-(3,16)) "helper",Lam (Just (3,17)-(4,58)) (VarPat (Just (3,17)-(3,18)) "x") (Lam (Just (3,19)-(4,58)) (VarPat (Just (3,19)-(3,20)) "l") (Lam (Just (3,21)-(4,58)) (VarPat (Just (3,21)-(3,24)) "acc") (Case (Just (4,4)-(4,58)) (Var (Just (4,10)-(4,11)) "x") [(ConPat (Just (4,19)-(4,21)) "[]" Nothing,Nothing,Var (Just (4,25)-(4,26)) "l"),(ConsPat (Just (4,29)-(4,33)) (VarPat (Just (4,29)-(4,30)) "h") (VarPat (Just (4,32)-(4,33)) "t"),Nothing,App (Just (4,37)-(4,58)) (Var (Just (4,37)-(4,43)) "helper") [Var (Just (4,44)-(4,45)) "t",Var (Just (4,46)-(4,47)) "l",ConApp (Just (4,48)-(4,58)) "::" (Just (Tuple (Just (4,49)-(4,57)) [Var (Just (4,49)-(4,50)) "h",Var (Just (4,54)-(4,57)) "acc"])) Nothing])]) Nothing) Nothing) Nothing)] (App (Just (5,2)-(5,15)) (Var (Just (5,2)-(5,8)) "helper") [Var (Just (5,9)-(5,10)) "x",Var (Just (5,11)-(5,12)) "l",List (Just (5,13)-(5,15)) [] Nothing])
-*)
-
-(* typed spans
-(3,2)-(5,15)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(2,4)-(2,58)
+(2,12)-(2,56)
+(2,14)-(2,56)
+(2,18)-(2,56)
+(2,39)-(2,42)
+(2,50)-(2,51)
+(2,50)-(2,56)
+(2,55)-(2,56)
+(4,4)-(5,68)
+(4,21)-(5,66)
+(5,3)-(5,66)
+(5,26)-(5,32)
+(5,26)-(5,66)
+(5,33)-(5,55)
+(5,34)-(5,45)
+(5,56)-(5,66)
+(5,57)-(5,65)
 *)

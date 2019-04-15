@@ -56,80 +56,40 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(11,18)-(11,43)
-EMPTY
-EmptyG
-
-(25,23)-(25,35)
-eval
-VarG
-
-(25,23)-(25,42)
+(25,24)-(25,43)
 (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
 BopG (BopG EmptyG EmptyG) LitG
 
-(25,37)-(25,38)
-(e1 , x , y)
-TupleG (fromList [VarG])
-
-(26,21)-(26,31)
-eval
-VarG
-
-(26,33)-(26,34)
-(e2 , x , y)
-TupleG (fromList [VarG])
-
-(27,28)-(27,39)
-eval
-VarG
-
-(27,28)-(27,52)
+(26,22)-(26,39)
 eval (e1 , x , y) *. eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(27,41)-(27,42)
-(e1 , x , y)
-TupleG (fromList [VarG])
-
-(27,47)-(27,48)
-eval (e2 , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
+(27,29)-(27,53)
+if eval (e1 , x , y) < eval (e2 , x , y)
+then eval (e3 , x , y)
+else eval (e4 , x , y)
+IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)
 
-(* typed spans
-(19,25)-(19,29)
-(19,23)-(19,70)
-(19,30)-(19,40)
-(19,46)-(19,50)
-(19,51)-(19,61)
-(20,22)-(20,26)
-(20,21)-(20,59)
-(20,27)-(20,37)
-(20,42)-(20,59)
-*)
-
-(* typed spans
-(expr * float * float) -> float
-float
-(expr * float * float)
-(expr * float * float) -> float
-(expr * float * float)
-(expr * float * float) -> float
-float
-(expr * float * float)
-float
-*)
-
-(* typed spans
-(expr * expr) -> expr
-expr
-expr
-(expr * expr) -> expr
-expr
-(expr * expr * expr * expr) -> expr
-expr
-expr
-expr
+(* type error slice
+(11,4)-(11,46)
+(11,19)-(11,44)
+(11,28)-(11,44)
+(11,37)-(11,39)
+(19,4)-(27,55)
+(19,15)-(27,53)
+(20,3)-(27,53)
+(21,14)-(21,15)
+(23,15)-(23,18)
+(23,15)-(23,43)
+(23,19)-(23,43)
+(23,26)-(23,42)
+(23,27)-(23,31)
+(24,17)-(24,20)
+(24,17)-(24,45)
+(25,24)-(25,36)
+(25,24)-(25,43)
+(25,37)-(25,43)
+(25,38)-(25,39)
 *)

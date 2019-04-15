@@ -1,8 +1,5 @@
-BopG (AppG (fromList [EmptyG])) LitG
-eval (t , x , y) /. 30.0
-List.length l2 * 2
-sqrt (abs_float (eval (n , x , y))) /. 1000.0
-recCounter (sumList (digitsOfInt n))
-           count + 1
-additivePersistence (sumList (digitsOfInt n)) + 1
-List.mem h seen = false
+CaseG VarG (fromList [(TuplePatG (fromList [VarPatG]),Nothing,LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)])
+match a with
+| (carry , list) -> (let num =
+                       (l1e + l2e) + carry in
+                     (num mod 9 , [7] @ list))

@@ -29,24 +29,16 @@ let rec digitalRoot n =
 *)
 
 (* changed spans
-(12,24)-(12,57)
+(12,25)-(12,58)
 digitalRoot (sumList (digitsOfInt n))
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (12,24)-(12,61)) (Var (Just (12,24)-(12,35)) "digitalRoot") [App (Just (12,36)-(12,61)) (Var (Just (12,37)-(12,44)) "sumList") [App (Just (12,45)-(12,60)) (Var (Just (12,46)-(12,57)) "digitsOfInt") [Var (Just (12,58)-(12,59)) "n"]]]
-*)
-
-(* typed spans
-(12,24)-(12,61)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int
+(* type error slice
+(11,4)-(12,60)
+(11,21)-(12,58)
+(12,3)-(12,58)
+(12,25)-(12,36)
+(12,25)-(12,58)
 *)

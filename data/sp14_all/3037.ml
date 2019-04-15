@@ -20,24 +20,16 @@ let rec sepConcat sep sl =
 *)
 
 (* changed spans
-(7,29)-(7,40)
+(7,30)-(7,41)
 [fun x -> x ^ sep]
-ListG (LamG EmptyG)
+ListG (fromList [LamG VarPatG EmptyG])
 
 *)
 
-(* changed exprs
-List (Just (8,14)-(8,35)) [Lam (Just (8,15)-(8,34)) (VarPat (Just (8,20)-(8,21)) "x") (App (Just (8,26)-(8,33)) (Var (Just (8,28)-(8,29)) "^") [Var (Just (8,26)-(8,27)) "x",Var (Just (8,30)-(8,33)) "sep"]) Nothing] Nothing
-*)
-
-(* typed spans
-(8,14)-(8,35)
-*)
-
-(* correct types
-string -> string list
-*)
-
-(* bad types
-string -> string
+(* type error slice
+(7,24)-(7,68)
+(7,30)-(7,41)
+(7,45)-(7,59)
+(7,45)-(7,68)
+(7,67)-(7,68)
 *)

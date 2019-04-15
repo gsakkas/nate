@@ -20,43 +20,33 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(7,13)-(7,65)
+(7,14)-(7,66)
 fun b ->
   if f b = b
   then (b , true)
   else (f b , false)
-LamG (IteG EmptyG EmptyG EmptyG)
+LamG VarPatG (IteG EmptyG EmptyG EmptyG)
 
-(7,69)-(7,73)
+(7,70)-(7,74)
 f'
 VarG
 
-(7,69)-(7,73)
-b
-VarG
-
 *)
 
-(* changed exprs
-Lam (Just (7,13)-(7,64)) (VarPat (Just (7,13)-(7,14)) "b") (Ite (Just (7,17)-(7,64)) (Bop (Just (7,20)-(7,29)) Eq (App (Just (7,20)-(7,25)) (Var (Just (7,21)-(7,22)) "f") [Var (Just (7,23)-(7,24)) "b"]) (Var (Just (7,28)-(7,29)) "b")) (Tuple (Just (7,35)-(7,44)) [Var (Just (7,36)-(7,37)) "b",Lit (Just (7,39)-(7,43)) (LB True)]) (Tuple (Just (7,50)-(7,64)) [App (Just (7,51)-(7,56)) (Var (Just (7,52)-(7,53)) "f") [Var (Just (7,54)-(7,55)) "b"],Lit (Just (7,58)-(7,63)) (LB False)])) Nothing
-Var (Just (7,68)-(7,70)) "f'"
-Var (Just (7,73)-(7,74)) "b"
-*)
-
-(* typed spans
-(7,13)-(7,64)
-(7,68)-(7,70)
-(7,73)-(7,74)
-*)
-
-(* correct types
-'a -> ('a * bool)
-'a -> ('a * bool)
-'a
-*)
-
-(* bad types
-'a -> ('a * bool)
-('a * bool)
-('a * bool)
+(* type error slice
+(3,9)-(3,10)
+(3,9)-(3,12)
+(3,42)-(3,48)
+(3,42)-(3,56)
+(3,49)-(3,56)
+(3,50)-(3,51)
+(6,3)-(6,9)
+(6,3)-(8,9)
+(7,5)-(8,9)
+(7,6)-(7,75)
+(7,14)-(7,66)
+(7,19)-(7,66)
+(7,52)-(7,66)
+(7,70)-(7,72)
+(7,70)-(7,74)
 *)

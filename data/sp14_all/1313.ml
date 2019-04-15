@@ -19,49 +19,28 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(4,4)-(6,58)
+(4,5)-(6,59)
 let (pos , total) = a in
 (pos , l2)
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (TupleG (fromList [EmptyG]))
 
-(8,13)-(8,43)
+(8,14)-(8,44)
 List.rev l1
 AppG (fromList [VarG])
 
-(8,13)-(8,43)
-List.rev
-VarG
-
-(8,13)-(8,43)
-l1
-VarG
-
 *)
 
-(* changed exprs
-Let (Just (3,14)-(3,46)) NonRec [(TuplePat (Just (3,19)-(3,28)) [VarPat (Just (3,19)-(3,22)) "pos",VarPat (Just (3,23)-(3,28)) "total"],Var (Just (3,32)-(3,33)) "a")] (Tuple (Just (3,37)-(3,46)) [Var (Just (3,38)-(3,41)) "pos",Var (Just (3,43)-(3,45)) "l2"])
-App (Just (5,13)-(5,24)) (Var (Just (5,13)-(5,21)) "List.rev") [Var (Just (5,22)-(5,24)) "l1"]
-Var (Just (5,13)-(5,21)) "List.rev"
-Var (Just (5,22)-(5,24)) "l1"
-*)
-
-(* typed spans
-(3,14)-(3,46)
-(5,13)-(5,24)
-(5,13)-(5,21)
-(5,22)-(5,24)
-*)
-
-(* correct types
-(int * int list)
-'a list
-'a list -> 'a list
-'a list
-*)
-
-(* bad types
-'a list
-('a list * 'b list)
-('a list * 'b list)
-('a list * 'b list)
+(* type error slice
+(3,3)-(9,50)
+(3,9)-(6,59)
+(3,11)-(6,59)
+(4,5)-(6,59)
+(5,5)-(6,59)
+(5,23)-(5,24)
+(6,5)-(6,59)
+(6,28)-(6,30)
+(6,41)-(6,59)
+(9,17)-(9,31)
+(9,17)-(9,43)
+(9,32)-(9,33)
 *)

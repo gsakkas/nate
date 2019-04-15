@@ -1,2 +1,2 @@
-AppG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])
-List.combine l1 (0 :: l2)
+TupleG (fromList [VarG,ListG (fromList [])])
+(l1 , [])

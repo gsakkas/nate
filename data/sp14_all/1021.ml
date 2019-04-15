@@ -13,24 +13,15 @@ let pipe fs =
 *)
 
 (* changed spans
-(5,32)-(5,35)
+(5,33)-(5,36)
 p
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (3,32)-(3,33)) "p"
-*)
-
-(* typed spans
-(3,32)-(3,33)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-'a
+(* type error slice
+(2,4)-(2,13)
+(2,9)-(2,11)
+(5,33)-(5,34)
+(5,33)-(5,36)
 *)

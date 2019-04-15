@@ -26,43 +26,27 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(9,28)-(9,69)
-fun xs ->
-  match xs with
-  | [] -> 0
-  | h :: t -> h + sumList t
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(9,61)-(9,67)
-sumList
-VarG
-
-(9,61)-(9,67)
-digits n
-AppG (fromList [VarG])
+(9,62)-(9,70)
+sumList (digits n)
+AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (9,16)-(9,70)) (VarPat (Just (9,16)-(9,18)) "xs") (Case (Just (9,21)-(9,70)) (Var (Just (9,27)-(9,29)) "xs") [(ConPat (Just (9,37)-(9,39)) "[]" Nothing,Nothing,Lit (Just (9,43)-(9,44)) (LI 0)),(ConsPat (Just (9,47)-(9,51)) (VarPat (Just (9,47)-(9,48)) "h") (VarPat (Just (9,50)-(9,51)) "t"),Nothing,Bop (Just (9,55)-(9,70)) Plus (Var (Just (9,55)-(9,56)) "h") (App (Just (9,59)-(9,70)) (Var (Just (9,60)-(9,67)) "sumList") [Var (Just (9,68)-(9,69)) "t"]))]) Nothing
-Var (Just (12,31)-(12,38)) "sumList"
-App (Just (12,39)-(12,49)) (Var (Just (12,40)-(12,46)) "digits") [Var (Just (12,47)-(12,48)) "n"]
-*)
-
-(* typed spans
-(9,16)-(9,70)
-(12,31)-(12,38)
-(12,39)-(12,49)
-*)
-
-(* correct types
-int list -> int
-int list -> int
-int list
-*)
-
-(* bad types
-int -> int list
-int -> int list
-int -> int list
+(* type error slice
+(2,24)-(2,77)
+(2,64)-(2,77)
+(2,65)-(2,71)
+(2,72)-(2,73)
+(5,26)-(5,32)
+(5,26)-(5,66)
+(5,33)-(5,55)
+(5,34)-(5,45)
+(7,4)-(7,37)
+(7,12)-(7,35)
+(7,16)-(7,27)
+(7,16)-(7,35)
+(9,33)-(9,70)
+(9,55)-(9,56)
+(9,62)-(9,68)
+(9,62)-(9,70)
 *)

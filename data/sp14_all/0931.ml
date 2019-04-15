@@ -41,25 +41,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(14,16)-(14,38)
+(14,17)-(14,39)
 match x with
 | (_ , _) -> a
-CaseG VarG (fromList [(Nothing,VarG)])
+CaseG VarG (fromList [(TuplePatG (fromList [WildPatG]),Nothing,VarG)])
 
 *)
 
-(* changed exprs
-Case (Just (14,16)-(14,41)) (Var (Just (14,22)-(14,23)) "x") [(TuplePat (Just (14,32)-(14,35)) [WildPat (Just (14,32)-(14,33)),WildPat (Just (14,34)-(14,35))],Nothing,Var (Just (14,40)-(14,41)) "a")]
-*)
-
-(* typed spans
-(14,16)-(14,41)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-(int * 'a list)
+(* type error slice
+(14,5)-(17,52)
+(14,11)-(14,39)
+(14,13)-(14,39)
+(14,17)-(14,39)
+(14,23)-(14,24)
+(16,5)-(17,52)
+(16,16)-(16,28)
+(16,16)-(16,34)
+(17,19)-(17,33)
+(17,19)-(17,45)
+(17,34)-(17,35)
+(17,41)-(17,45)
 *)

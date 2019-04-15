@@ -17,24 +17,17 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(6,39)-(6,73)
+(6,40)-(6,74)
 listReverse (digitsOfInt (n / 10))
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (6,39)-(6,75)) (Var (Just (6,40)-(6,51)) "listReverse") [App (Just (6,52)-(6,74)) (Var (Just (6,53)-(6,64)) "digitsOfInt") [Bop (Just (6,65)-(6,73)) Div (Var (Just (6,66)-(6,67)) "n") (Lit (Just (6,70)-(6,72)) (LI 10))]]
-*)
-
-(* typed spans
-(6,39)-(6,75)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(3,37)-(3,52)
+(3,37)-(3,58)
+(3,38)-(3,49)
+(3,53)-(3,54)
+(6,40)-(6,74)
+(6,41)-(6,52)
 *)

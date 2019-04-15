@@ -23,32 +23,29 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(8,13)-(8,34)
+(8,14)-(8,35)
 clone 0 (ll1 - ll2)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
 
-(9,9)-(9,32)
+(9,10)-(9,33)
 clone 0 (ll2 - ll1)
 AppG (fromList [BopG EmptyG EmptyG,LitG])
 
 *)
 
-(* changed exprs
-App (Just (8,13)-(8,34)) (Var (Just (8,14)-(8,19)) "clone") [Lit (Just (8,20)-(8,21)) (LI 0),Bop (Just (8,22)-(8,33)) Minus (Var (Just (8,23)-(8,26)) "ll1") (Var (Just (8,29)-(8,32)) "ll2")]
-App (Just (9,9)-(9,30)) (Var (Just (9,10)-(9,15)) "clone") [Lit (Just (9,16)-(9,17)) (LI 0),Bop (Just (9,18)-(9,29)) Minus (Var (Just (9,19)-(9,22)) "ll2") (Var (Just (9,25)-(9,28)) "ll1")]
-*)
-
-(* typed spans
-(8,13)-(8,34)
-(9,9)-(9,30)
-*)
-
-(* correct types
-int list
-int list
-*)
-
-(* bad types
-int
-int -> int list
+(* type error slice
+(2,44)-(2,66)
+(2,49)-(2,66)
+(2,50)-(2,55)
+(8,13)-(8,41)
+(8,14)-(8,35)
+(8,15)-(8,28)
+(8,16)-(8,21)
+(8,36)-(8,37)
+(9,9)-(9,39)
+(9,10)-(9,33)
+(9,11)-(9,16)
+(9,18)-(9,25)
+(9,19)-(9,20)
+(9,34)-(9,35)
 *)

@@ -33,24 +33,23 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(7,11)-(7,13)
+(7,12)-(7,14)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
 *)
 
-(* changed exprs
-Tuple (Just (7,11)-(7,18)) [Lit (Just (7,12)-(7,13)) (LI 0),List (Just (7,15)-(7,17)) [] Nothing]
-*)
-
-(* typed spans
-(7,11)-(7,18)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-'a list
+(* type error slice
+(5,3)-(14,50)
+(5,9)-(11,62)
+(5,11)-(11,62)
+(6,5)-(11,62)
+(7,12)-(7,14)
+(9,9)-(11,62)
+(10,9)-(11,62)
+(10,21)-(10,22)
+(11,9)-(11,62)
+(14,17)-(14,31)
+(14,17)-(14,43)
+(14,32)-(14,33)
 *)

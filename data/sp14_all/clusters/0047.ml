@@ -1,15 +1,4 @@
-AppG (fromList [VarG,LitG])
-sepConcat " " l
-clone 0 diff
-clone 0 l
-r_digitalRoot n (-1)
-f 2 xs
-f 0 xs
-f 4 xs
-f 0 hd
-b ^ "]"
-helper 0 n
-clone 0 l2G
-buildhelper 0 0 expr
-reverseInt n 0
-" " ^ x
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) VarG
+let res =
+  List.fold_left f base args in
+res

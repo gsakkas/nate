@@ -53,96 +53,62 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(18,28)-(18,41)
+(18,29)-(18,42)
 eval (e' , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(19,24)-(19,37)
+(19,25)-(19,38)
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(19,41)-(19,54)
+(19,42)-(19,55)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(19,59)-(19,60)
+(19,60)-(19,61)
 2.0
 LitG
 
-(20,21)-(20,34)
+(20,22)-(20,35)
 eval (e1 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(20,38)-(20,51)
+(20,39)-(20,52)
 eval (e2 , x , y)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(22,15)-(22,22)
+(22,16)-(22,23)
 (a , x , y)
 TupleG (fromList [VarG])
 
-(22,32)-(22,39)
+(22,33)-(22,40)
 (b , x , y)
 TupleG (fromList [VarG])
 
-(23,16)-(23,28)
+(23,17)-(23,29)
 (a_less , x , y)
 TupleG (fromList [VarG])
 
-(24,16)-(24,28)
+(24,17)-(24,29)
 (b_less , x , y)
 TupleG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (18,28)-(18,45)) (Var (Just (18,29)-(18,33)) "eval") [Tuple (Just (18,34)-(18,44)) [Var (Just (18,35)-(18,37)) "e'",Var (Just (18,39)-(18,40)) "x",Var (Just (18,42)-(18,43)) "y"]]
-App (Just (19,24)-(19,41)) (Var (Just (19,25)-(19,29)) "eval") [Tuple (Just (19,30)-(19,40)) [Var (Just (19,31)-(19,33)) "e1",Var (Just (19,35)-(19,36)) "x",Var (Just (19,38)-(19,39)) "y"]]
-App (Just (19,45)-(19,62)) (Var (Just (19,46)-(19,50)) "eval") [Tuple (Just (19,51)-(19,61)) [Var (Just (19,52)-(19,54)) "e2",Var (Just (19,56)-(19,57)) "x",Var (Just (19,59)-(19,60)) "y"]]
-Lit (Just (19,67)-(19,70)) (LD 2.0)
-App (Just (20,21)-(20,38)) (Var (Just (20,22)-(20,26)) "eval") [Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]]
-App (Just (20,42)-(20,59)) (Var (Just (20,43)-(20,47)) "eval") [Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "e2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]]
-Tuple (Just (22,15)-(22,24)) [Var (Just (22,16)-(22,17)) "a",Var (Just (22,19)-(22,20)) "x",Var (Just (22,22)-(22,23)) "y"]
-Tuple (Just (22,34)-(22,43)) [Var (Just (22,35)-(22,36)) "b",Var (Just (22,38)-(22,39)) "x",Var (Just (22,41)-(22,42)) "y"]
-Tuple (Just (23,16)-(23,30)) [Var (Just (23,17)-(23,23)) "a_less",Var (Just (23,25)-(23,26)) "x",Var (Just (23,28)-(23,29)) "y"]
-Tuple (Just (24,16)-(24,30)) [Var (Just (24,17)-(24,23)) "b_less",Var (Just (24,25)-(24,26)) "x",Var (Just (24,28)-(24,29)) "y"]
-*)
-
-(* typed spans
-(18,28)-(18,45)
-(19,24)-(19,41)
-(19,45)-(19,62)
-(19,67)-(19,70)
-(20,21)-(20,38)
-(20,42)-(20,59)
-(22,15)-(22,24)
-(22,34)-(22,43)
-(23,16)-(23,30)
-(24,16)-(24,30)
-*)
-
-(* correct types
-float
-float
-float
-float
-float
-float
-(expr * float * float)
-(expr * float * float)
-(expr * float * float)
-(expr * float * float)
-*)
-
-(* bad types
-float
-float
-float
-int
-float
-float
-(expr * float * float)
-(expr * float * float)
-(expr * float * float)
-(expr * float * float)
+(* type error slice
+(17,20)-(17,45)
+(17,27)-(17,44)
+(17,28)-(17,32)
+(18,29)-(18,42)
+(18,30)-(18,34)
+(19,24)-(19,61)
+(19,25)-(19,38)
+(19,26)-(19,30)
+(19,42)-(19,55)
+(19,43)-(19,47)
+(19,60)-(19,61)
+(20,22)-(20,35)
+(20,23)-(20,27)
+(20,39)-(20,52)
+(20,40)-(20,44)
 *)

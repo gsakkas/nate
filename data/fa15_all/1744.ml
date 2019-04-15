@@ -19,24 +19,20 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(6,26)-(6,35)
+(6,27)-(6,36)
 seen
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (6,26)-(6,30)) "seen"
-*)
-
-(* typed spans
-(6,26)-(6,30)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list list
+(* type error slice
+(3,3)-(7,28)
+(3,19)-(6,78)
+(6,15)-(6,78)
+(6,27)-(6,31)
+(6,27)-(6,36)
+(6,57)-(6,63)
+(6,57)-(6,78)
+(6,64)-(6,78)
+(6,65)-(6,70)
 *)

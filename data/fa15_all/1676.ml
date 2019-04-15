@@ -26,56 +26,28 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(8,28)-(8,61)
-fun xs ->
-  match xs with
-  | [] -> 0
-  | h :: t -> h + sumList t
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(8,32)-(8,61)
-fun n ->
-  if n < 10
-  then 0
-  else (let x = myHelper n in
-        1 + additivePersistence x)
-LamG (IteG EmptyG EmptyG EmptyG)
-
-(8,35)-(8,42)
+(8,36)-(8,43)
 n < 10
 BopG VarG LitG
 
-(8,48)-(8,59)
-myHelper
-VarG
+(8,49)-(8,62)
+0
+LitG
 
-(8,48)-(8,61)
+(8,62)-(8,62)
 let x = myHelper n in
 1 + additivePersistence x
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (BopG EmptyG EmptyG)
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) (BopG EmptyG EmptyG)
 
 *)
 
-(* typed spans
-(8,16)-(8,70)
-(12,28)-(13,75)
-(13,5)-(13,11)
-(13,33)-(13,41)
-(13,24)-(13,75)
-*)
-
-(* typed spans
-int list -> int
-int -> int
-bool
-int -> int
-int
-*)
-
-(* typed spans
-int -> unit
-unit
-bool
-int -> int list
-int list
+(* type error slice
+(6,27)-(6,42)
+(6,27)-(6,48)
+(6,28)-(6,39)
+(6,43)-(6,44)
+(8,33)-(8,62)
+(8,49)-(8,60)
+(8,49)-(8,62)
+(8,62)-(8,62)
 *)

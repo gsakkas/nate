@@ -9,24 +9,14 @@ let rec digitsOfInt n = if n <= 0 then [] else [n];;
 *)
 
 (* changed spans
-(2,47)-(2,55)
+(2,48)-(2,56)
 [n]
-ListG VarG
+ListG (fromList [VarG])
 
 *)
 
-(* changed exprs
-List (Just (2,47)-(2,50)) [Var (Just (2,48)-(2,49)) "n"] Nothing
-*)
-
-(* typed spans
-(2,47)-(2,50)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(2,25)-(2,56)
+(2,40)-(2,42)
+(2,48)-(2,56)
 *)

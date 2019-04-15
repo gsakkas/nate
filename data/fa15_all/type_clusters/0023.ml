@@ -1,2 +1,5 @@
-(int list * int list)
-('a list * int list)
+int list
+float
+'a list
+unit
+bool

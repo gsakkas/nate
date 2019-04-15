@@ -1,2 +1,4 @@
-AppG (fromList [LetG NonRec (fromList [EmptyG]) EmptyG])
-x (let fn = fun d -> d in fn)
+BopG VarG (IteG EmptyG EmptyG EmptyG)
+x + (if t = []
+     then 0
+     else sumList t)

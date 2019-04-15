@@ -73,32 +73,20 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(28,9)-(28,75)
+(28,10)-(28,76)
 buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(30,6)-(31,63)
+(30,7)-(31,64)
 buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (29,6)-(29,75)) (Var (Just (29,6)-(29,16)) "buildTimes") [Tuple (Just (29,17)-(29,75)) [App (Just (29,18)-(29,45)) (Var (Just (29,19)-(29,24)) "build") [Tuple (Just (29,25)-(29,44)) [Var (Just (29,26)-(29,30)) "rand",Bop (Just (29,32)-(29,43)) Minus (Var (Just (29,33)-(29,38)) "depth") (Lit (Just (29,41)-(29,42)) (LI 1))]],App (Just (29,47)-(29,74)) (Var (Just (29,48)-(29,53)) "build") [Tuple (Just (29,54)-(29,73)) [Var (Just (29,55)-(29,59)) "rand",Bop (Just (29,61)-(29,72)) Minus (Var (Just (29,62)-(29,67)) "depth") (Lit (Just (29,70)-(29,71)) (LI 1))]]]]
-App (Just (31,6)-(33,67)) (Var (Just (31,6)-(31,17)) "buildThresh") [Tuple (Just (32,8)-(33,67)) [App (Just (32,9)-(32,36)) (Var (Just (32,10)-(32,15)) "build") [Tuple (Just (32,16)-(32,35)) [Var (Just (32,17)-(32,21)) "rand",Bop (Just (32,23)-(32,34)) Minus (Var (Just (32,24)-(32,29)) "depth") (Lit (Just (32,32)-(32,33)) (LI 1))]],App (Just (32,38)-(32,65)) (Var (Just (32,39)-(32,44)) "build") [Tuple (Just (32,45)-(32,64)) [Var (Just (32,46)-(32,50)) "rand",Bop (Just (32,52)-(32,63)) Minus (Var (Just (32,53)-(32,58)) "depth") (Lit (Just (32,61)-(32,62)) (LI 1))]],App (Just (33,10)-(33,37)) (Var (Just (33,11)-(33,16)) "build") [Tuple (Just (33,17)-(33,36)) [Var (Just (33,18)-(33,22)) "rand",Bop (Just (33,24)-(33,35)) Minus (Var (Just (33,25)-(33,30)) "depth") (Lit (Just (33,33)-(33,34)) (LI 1))]],App (Just (33,39)-(33,66)) (Var (Just (33,40)-(33,45)) "build") [Tuple (Just (33,46)-(33,65)) [Var (Just (33,47)-(33,51)) "rand",Bop (Just (33,53)-(33,64)) Minus (Var (Just (33,54)-(33,59)) "depth") (Lit (Just (33,62)-(33,63)) (LI 1))]]]]
-*)
-
-(* typed spans
-(29,6)-(29,75)
-(31,6)-(33,67)
-*)
-
-(* correct types
-expr
-expr
-*)
-
-(* bad types
-expr
-expr
+(* type error slice
+(19,4)-(19,42)
+(19,17)-(19,40)
+(19,26)-(19,40)
+(28,10)-(28,20)
+(28,10)-(28,76)
 *)

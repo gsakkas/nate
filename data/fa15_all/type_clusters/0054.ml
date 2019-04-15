@@ -1,2 +1,4 @@
-('a * bool)
-(int * int list)
+int list
+'a list
+int
+(int * int) list

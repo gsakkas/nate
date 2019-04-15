@@ -68,72 +68,31 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(29,63)-(29,64)
+(29,64)-(29,65)
 2.0
 LitG
 
-(31,12)-(31,17)
+(31,13)-(31,18)
 (expr1 , x , y)
 TupleG (fromList [VarG])
 
-(31,22)-(31,74)
-x
-VarG
-
-(31,22)-(31,74)
-y
-VarG
-
-(31,23)-(31,26)
-abs_float
-VarG
-
-(31,35)-(31,40)
-expr2
-VarG
-
-(31,59)-(31,64)
-expr3
-VarG
+(31,23)-(31,75)
+abs_float (eval (expr2 , x , y) +. eval (expr3 , x , y))
+AppG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-Lit (Just (29,63)-(29,66)) (LD 2.0)
-Tuple (Just (31,12)-(31,25)) [Var (Just (31,13)-(31,18)) "expr1",Var (Just (31,20)-(31,21)) "x",Var (Just (31,23)-(31,24)) "y"]
-Var (Just (31,20)-(31,21)) "x"
-Var (Just (31,23)-(31,24)) "y"
-Var (Just (32,9)-(32,18)) "abs_float"
-Var (Just (32,27)-(32,32)) "expr2"
-Var (Just (32,51)-(32,56)) "expr3"
-*)
-
-(* typed spans
-(29,63)-(29,66)
-(31,12)-(31,25)
-(31,20)-(31,21)
-(31,23)-(31,24)
-(32,9)-(32,18)
-(32,27)-(32,32)
-(32,51)-(32,56)
-*)
-
-(* correct types
-float
-(expr * float * float)
-float
-float
-float -> float
-expr
-expr
-*)
-
-(* bad types
-int
-expr
-float
-float
-int -> int
-expr
-expr
+(* type error slice
+(16,3)-(31,75)
+(19,29)-(19,48)
+(19,30)-(19,34)
+(19,35)-(19,47)
+(29,7)-(29,65)
+(29,64)-(29,65)
+(31,7)-(31,19)
+(31,8)-(31,12)
+(31,13)-(31,18)
+(31,23)-(31,75)
+(31,24)-(31,27)
+(31,28)-(31,74)
 *)

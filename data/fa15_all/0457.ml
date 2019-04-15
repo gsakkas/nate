@@ -24,32 +24,34 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(8,17)-(8,36)
+(8,18)-(8,37)
 fun s -> (f s - s) < 0
-LamG (BopG EmptyG EmptyG)
+LamG VarPatG (BopG EmptyG EmptyG)
 
-(9,4)-(10,69)
+(9,5)-(10,70)
 (f x , isFPoint x)
 TupleG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Lam (Just (7,26)-(7,45)) (VarPat (Just (7,26)-(7,27)) "s") (Bop (Just (7,30)-(7,45)) Lt (Bop (Just (7,30)-(7,41)) Minus (App (Just (7,31)-(7,36)) (Var (Just (7,32)-(7,33)) "f") [Var (Just (7,34)-(7,35)) "s"]) (Var (Just (7,39)-(7,40)) "s")) (Lit (Just (7,44)-(7,45)) (LI 0))) Nothing
-Tuple (Just (7,49)-(7,70)) [App (Just (7,50)-(7,55)) (Var (Just (7,51)-(7,52)) "f") [Var (Just (7,53)-(7,54)) "x"],App (Just (7,57)-(7,69)) (Var (Just (7,58)-(7,66)) "isFPoint") [Var (Just (7,67)-(7,68)) "x"]]
-*)
-
-(* typed spans
-(7,26)-(7,45)
-(7,49)-(7,70)
-*)
-
-(* correct types
-int -> bool
-(int * bool)
-*)
-
-(* bad types
-int -> bool
-int
+(* type error slice
+(3,3)-(4,69)
+(3,13)-(3,14)
+(3,13)-(3,16)
+(4,3)-(4,69)
+(4,9)-(4,12)
+(4,43)-(4,49)
+(4,43)-(4,56)
+(4,50)-(4,56)
+(4,51)-(4,52)
+(7,3)-(11,17)
+(7,10)-(10,70)
+(8,5)-(10,70)
+(9,5)-(10,70)
+(10,5)-(10,70)
+(10,69)-(10,70)
+(11,3)-(11,9)
+(11,3)-(11,17)
+(11,10)-(11,17)
+(11,11)-(11,13)
 *)

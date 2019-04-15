@@ -1,7 +1,3 @@
-IteG (BopG EmptyG EmptyG) (ListG EmptyG) (AppG (fromList [EmptyG]))
-if n < 10
-then [n]
-else digitsOfInt (n / 10) @ [n mod 10]
-if n <= 0
-then []
-else [n mod 10] @ digitsOfInt (n / 10)
+BopG LitG (AppG (fromList [EmptyG]))
+1.0 -. exp ((- 1.0) *. eval (a , x , y))
+1 + additivePersistence num

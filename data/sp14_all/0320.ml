@@ -49,29 +49,22 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(22,6)-(22,67)
-eval (e1 , x , y) *. eval (e2 , x , y)
+(16,1)-(16,1)
+eval (e1 , x , y) < eval (e2 , x , y)
 BopG (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(22,6)-(22,67)
-EMPTY
-EmptyG
+(22,7)-(22,68)
+eval (e3 , x , y)
+AppG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Bop (Just (20,21)-(20,59)) FTimes (App (Just (20,21)-(20,38)) (Var (Just (20,22)-(20,26)) "eval") [Tuple (Just (20,27)-(20,37)) [Var (Just (20,28)-(20,30)) "e1",Var (Just (20,32)-(20,33)) "x",Var (Just (20,35)-(20,36)) "y"]]) (App (Just (20,42)-(20,59)) (Var (Just (20,43)-(20,47)) "eval") [Tuple (Just (20,48)-(20,58)) [Var (Just (20,49)-(20,51)) "e2",Var (Just (20,53)-(20,54)) "x",Var (Just (20,56)-(20,57)) "y"]])
-Var (Just (22,6)-(22,67)) "EMPTY"
-*)
-
-(* typed spans
-(20,21)-(20,59)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-unit
+(* type error slice
+(17,20)-(17,45)
+(17,27)-(17,44)
+(17,28)-(17,32)
+(22,7)-(22,68)
+(22,53)-(22,57)
+(22,53)-(22,68)
+(22,68)-(22,68)
 *)

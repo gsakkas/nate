@@ -47,40 +47,18 @@ let palindrome w =
 *)
 
 (* changed spans
-(16,25)-(16,38)
-List.tl
-VarG
-
-(16,25)-(16,38)
-lst
-VarG
-
-(16,25)-(16,38)
+(16,10)-(16,23)
 lst
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (16,10)-(16,17)) "List.tl"
-Var (Just (16,18)-(16,21)) "lst"
-Var (Just (16,25)-(16,28)) "lst"
-*)
-
-(* typed spans
-(16,10)-(16,17)
-(16,18)-(16,21)
-(16,25)-(16,28)
-*)
-
-(* correct types
-char list -> char list
-char list
-char list
-*)
-
-(* bad types
-char list
-char list
-char list
+(* type error slice
+(16,10)-(16,23)
+(16,10)-(16,39)
+(16,11)-(16,18)
+(16,19)-(16,22)
+(16,26)-(16,39)
+(16,27)-(16,34)
+(16,35)-(16,38)
 *)

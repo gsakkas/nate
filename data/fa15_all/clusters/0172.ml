@@ -1,3 +1,4 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,VarG)])
-match digits n with
-| x :: [] -> x
+IteG (BopG EmptyG EmptyG) LitG VarG
+if List.length t <> 0
+then ""
+else sep

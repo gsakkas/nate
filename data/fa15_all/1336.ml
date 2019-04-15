@@ -68,12 +68,7 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(11,11)-(11,20)
-fun (e1 , e2) ->
-  Times (e1 , e2)
-LamG (ConAppG (Just (TupleG (fromList [VarG]))))
-
-(16,2)-(18,77)
+(18,78)-(18,78)
 match rand (0 , 7) with
 | 0 -> buildX ()
 | 1 -> buildY ()
@@ -83,21 +78,17 @@ match rand (0 , 7) with
 | 5 -> buildTimes (build (rand , depth - 1) , build (rand , depth - 1))
 | 6 -> buildThresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))
 | _ -> buildX ()
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG]))])
+CaseG (AppG (fromList [EmptyG])) (fromList [(LitPatG,Nothing,AppG (fromList [EmptyG])),(WildPatG,Nothing,AppG (fromList [EmptyG]))])
 
 *)
 
-(* typed spans
-(19,16)-(19,39)
-(30,4)-(45,22)
-*)
-
-(* typed spans
-(expr * expr) -> expr
-expr
-*)
-
-(* typed spans
-unit -> expr
-unit
+(* type error slice
+(11,4)-(11,23)
+(11,12)-(11,21)
+(11,17)-(11,21)
+(16,3)-(18,78)
+(18,5)-(18,78)
+(18,35)-(18,41)
+(18,35)-(18,44)
+(18,78)-(18,78)
 *)

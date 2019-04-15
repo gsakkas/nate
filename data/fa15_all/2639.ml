@@ -42,26 +42,23 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(16,14)-(16,66)
+(16,15)-(16,67)
 let (a1 , a2) = a in
 (a1 , mulByDigit x
                  l1 @ clone 0 (List.length a1))
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (TupleG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (17,4)-(17,77)) NonRec [(TuplePat (Just (17,9)-(17,14)) [VarPat (Just (17,9)-(17,11)) "a1",VarPat (Just (17,12)-(17,14)) "a2"],Var (Just (17,18)-(17,19)) "a")] (Tuple (Just (17,23)-(17,77)) [Var (Just (17,24)-(17,26)) "a1",App (Just (17,28)-(17,76)) (Var (Just (17,47)-(17,48)) "@") [App (Just (17,29)-(17,46)) (Var (Just (17,30)-(17,40)) "mulByDigit") [Var (Just (17,41)-(17,42)) "x",Var (Just (17,43)-(17,45)) "l1"],App (Just (17,49)-(17,75)) (Var (Just (17,50)-(17,55)) "clone") [Lit (Just (17,56)-(17,57)) (LI 0),App (Just (17,58)-(17,74)) (Var (Just (17,59)-(17,70)) "List.length") [Var (Just (17,71)-(17,73)) "a1"]]]])
-*)
-
-(* typed spans
-(17,4)-(17,77)
-*)
-
-(* correct types
-('a list * int list)
-*)
-
-(* bad types
-('a list * int list)
+(* type error slice
+(16,3)-(18,76)
+(16,9)-(16,67)
+(16,11)-(16,67)
+(16,15)-(16,67)
+(16,49)-(16,64)
+(16,50)-(16,61)
+(16,62)-(16,63)
+(18,43)-(18,57)
+(18,43)-(18,69)
+(18,58)-(18,59)
 *)

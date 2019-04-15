@@ -1,2 +1,5 @@
-TupleG (fromList [BopG EmptyG EmptyG,ListG EmptyG])
-(b / 10 , [b mod 10])
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,AppG (fromList [EmptyG])),(ConPatG Nothing,Nothing,ListG (fromList []))])
+match l with
+| [] -> []
+| hd :: tl -> mulByDigit i
+                         tl @ [hd * i]

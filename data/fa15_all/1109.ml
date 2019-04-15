@@ -58,67 +58,33 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(18,6)-(25,63)
+(18,7)-(25,64)
 let b = fst x + snd x in
 match a with
 | h :: t -> ((h + b) / 10) :: (((h + b) mod 10) :: t)
 | _ -> [b / 10 ; b mod 10]
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+LetG NonRec (fromList [(VarPatG,BopG EmptyG EmptyG)]) (CaseG EmptyG (fromList [(ConsPatG EmptyPatG EmptyPatG,Nothing,EmptyG),(WildPatG,Nothing,EmptyG)]))
 
-(28,4)-(28,51)
+(28,5)-(28,52)
 List.fold_left f base args
 AppG (fromList [VarG])
 
-(28,4)-(28,51)
-List.fold_left
-VarG
-
-(28,4)-(28,51)
-f
-VarG
-
-(28,4)-(28,51)
-base
-VarG
-
-(28,4)-(28,51)
-args
-VarG
-
 *)
 
-(* changed exprs
-Let (Just (18,6)-(21,31)) NonRec [(VarPat (Just (18,10)-(18,11)) "b",Bop (Just (18,14)-(18,31)) Plus (App (Just (18,14)-(18,21)) (Var (Just (18,15)-(18,18)) "fst") [Var (Just (18,19)-(18,20)) "x"]) (App (Just (18,24)-(18,31)) (Var (Just (18,25)-(18,28)) "snd") [Var (Just (18,29)-(18,30)) "x"]))] (Case (Just (19,6)-(21,31)) (Var (Just (19,12)-(19,13)) "a") [(ConsPat (Just (20,8)-(20,12)) (VarPat (Just (20,8)-(20,9)) "h") (VarPat (Just (20,11)-(20,12)) "t"),Nothing,ConApp (Just (20,16)-(20,55)) "::" (Just (Tuple (Just (20,16)-(20,55)) [Bop (Just (20,16)-(20,30)) Div (Bop (Just (20,17)-(20,24)) Plus (Var (Just (20,18)-(20,19)) "h") (Var (Just (20,22)-(20,23)) "b")) (Lit (Just (20,27)-(20,29)) (LI 10)),ConApp (Just (20,34)-(20,55)) "::" (Just (Tuple (Just (20,34)-(20,55)) [Bop (Just (20,34)-(20,50)) Mod (Bop (Just (20,35)-(20,42)) Plus (Var (Just (20,36)-(20,37)) "h") (Var (Just (20,40)-(20,41)) "b")) (Lit (Just (20,47)-(20,49)) (LI 10)),Var (Just (20,54)-(20,55)) "t"])) Nothing])) Nothing),(WildPat (Just (21,8)-(21,9)),Nothing,List (Just (21,13)-(21,31)) [Bop (Just (21,14)-(21,20)) Div (Var (Just (21,14)-(21,15)) "b") (Lit (Just (21,18)-(21,20)) (LI 10)),Bop (Just (21,22)-(21,30)) Mod (Var (Just (21,22)-(21,23)) "b") (Lit (Just (21,28)-(21,30)) (LI 10))] Nothing)])
-App (Just (23,48)-(23,74)) (Var (Just (23,48)-(23,62)) "List.fold_left") [Var (Just (23,63)-(23,64)) "f",Var (Just (23,65)-(23,69)) "base",Var (Just (23,70)-(23,74)) "args"]
-Var (Just (23,48)-(23,62)) "List.fold_left"
-Var (Just (23,63)-(23,64)) "f"
-Var (Just (23,65)-(23,69)) "base"
-Var (Just (23,70)-(23,74)) "args"
-*)
-
-(* typed spans
-(18,6)-(21,31)
-(23,48)-(23,74)
-(23,48)-(23,62)
-(23,63)-(23,64)
-(23,65)-(23,69)
-(23,70)-(23,74)
-*)
-
-(* correct types
-int list
-int list
-(int list -> (int * int) -> int list) -> int list -> (int * int) list -> int list
-int list -> (int * int) -> int list
-int list
-(int * int) list
-*)
-
-(* bad types
-(int * int list)
-int list
-int list
-int list
-int list
-int list
+(* type error slice
+(17,5)-(28,52)
+(17,11)-(25,64)
+(17,13)-(25,64)
+(18,7)-(25,64)
+(18,13)-(18,14)
+(20,11)-(25,64)
+(20,18)-(20,19)
+(22,16)-(25,63)
+(24,21)-(25,62)
+(25,23)-(25,61)
+(25,24)-(25,55)
+(25,59)-(25,60)
+(28,19)-(28,33)
+(28,19)-(28,45)
+(28,34)-(28,35)
 *)

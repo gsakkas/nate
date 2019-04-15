@@ -1,2 +1,2 @@
-int list
-(int * int) list
+int
+bool

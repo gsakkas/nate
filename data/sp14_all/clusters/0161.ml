@@ -1,4 +1,4 @@
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])]))))])
-match l with
-| [] -> l
-| h :: t -> h :: (listReverse t)
+IteG (BopG EmptyG EmptyG) LitG (BopG EmptyG EmptyG)
+if n < 10
+then 1
+else 1 + additivePersistence (sumList (digitsOfInt n))

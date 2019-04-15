@@ -17,32 +17,24 @@ let rec clone x n =
 *)
 
 (* changed spans
-(4,55)-(4,60)
-clonehelper
-VarG
+(4,55)-(4,74)
+clonehelper tx (tn - 1)
+AppG (fromList [VarG,BopG EmptyG EmptyG])
 
-(5,2)-(5,21)
+(5,3)-(5,22)
 clonehelper x (abs n)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Var (Just (6,23)-(6,34)) "clonehelper"
-App (Just (7,2)-(7,23)) (Var (Just (7,2)-(7,13)) "clonehelper") [Var (Just (7,14)-(7,15)) "x",App (Just (7,16)-(7,23)) (Var (Just (7,17)-(7,20)) "abs") [Var (Just (7,21)-(7,22)) "n"]]
-*)
-
-(* typed spans
-(6,23)-(6,34)
-(7,2)-(7,23)
-*)
-
-(* correct types
-'a -> int -> 'a list
-'a list
-*)
-
-(* bad types
-'a -> int -> 'a list
-'a list
+(* type error slice
+(3,3)-(5,22)
+(3,23)-(4,74)
+(3,26)-(4,74)
+(4,11)-(4,13)
+(4,11)-(4,17)
+(4,16)-(4,17)
+(5,3)-(5,14)
+(5,3)-(5,22)
+(5,17)-(5,20)
 *)

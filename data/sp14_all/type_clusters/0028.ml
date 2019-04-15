@@ -1,2 +1,5 @@
-('a -> ('a * bool) * 'a)
-(int -> (int * bool) * int)
+'a
+float
+int list
+'a -> ('a * bool)
+'a list

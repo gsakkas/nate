@@ -23,48 +23,35 @@ let rec sepConcat sep sl =
 *)
 
 (* changed spans
-(7,53)-(7,55)
+(7,47)-(7,48)
 ""
 LitG
 
-(8,6)-(9,29)
+(7,54)-(7,56)
 sep
 VarG
 
-(8,51)-(8,54)
+(8,44)-(8,46)
 t
 VarG
 
-(9,6)-(9,29)
+(8,52)-(8,55)
 []
-ListG EmptyG
+ListG (fromList [])
 
 *)
 
-(* changed exprs
-Lit (Just (7,46)-(7,48)) (LS "")
-Var (Just (7,54)-(7,57)) "sep"
-Var (Just (8,43)-(8,44)) "t"
-List (Just (8,50)-(8,52)) [] Nothing
-*)
-
-(* typed spans
-(7,46)-(7,48)
-(7,54)-(7,57)
-(8,43)-(8,44)
-(8,50)-(8,52)
-*)
-
-(* correct types
-string
-string
-string list
-string list
-*)
-
-(* bad types
-'a list
-string
-string
-string
+(* type error slice
+(6,7)-(9,30)
+(6,13)-(6,24)
+(6,19)-(6,24)
+(6,21)-(6,22)
+(6,23)-(6,24)
+(7,7)-(9,30)
+(7,18)-(7,56)
+(7,54)-(7,56)
+(9,7)-(9,21)
+(9,7)-(9,30)
+(9,22)-(9,23)
+(9,24)-(9,28)
 *)

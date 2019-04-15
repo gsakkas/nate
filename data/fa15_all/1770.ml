@@ -33,73 +33,23 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(5,19)-(5,20)
-a
-VarG
-
-(13,8)-(13,64)
+(12,21)-(12,22)
 h :: seen
-ConAppG (Just (TupleG (fromList [VarG])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
-(13,8)-(13,64)
-h
-VarG
-
-(13,8)-(13,64)
-seen
-VarG
-
-(13,25)-(13,39)
-let rest' = filter t h in
-helper (seen' , rest')
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (AppG (fromList [EmptyG]))
-
-(13,33)-(13,38)
-t
-VarG
-
-(13,33)-(13,38)
-h
-VarG
+(13,21)-(13,40)
+filter t h
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (5,19)-(5,20)) "a"
-ConApp (Just (12,20)-(12,29)) "::" (Just (Tuple (Just (12,20)-(12,29)) [Var (Just (12,20)-(12,21)) "h",Var (Just (12,25)-(12,29)) "seen"])) Nothing
-Var (Just (12,20)-(12,21)) "h"
-Var (Just (12,25)-(12,29)) "seen"
-Let (Just (13,8)-(13,55)) NonRec [(VarPat (Just (13,12)-(13,17)) "rest'",App (Just (13,20)-(13,30)) (Var (Just (13,20)-(13,26)) "filter") [Var (Just (13,27)-(13,28)) "t",Var (Just (13,29)-(13,30)) "h"])] (App (Just (13,34)-(13,55)) (Var (Just (13,34)-(13,40)) "helper") [Tuple (Just (13,41)-(13,55)) [Var (Just (13,42)-(13,47)) "seen'",Var (Just (13,49)-(13,54)) "rest'"]])
-Var (Just (13,27)-(13,28)) "t"
-Var (Just (13,29)-(13,30)) "h"
-*)
-
-(* typed spans
-(5,19)-(5,20)
-(12,20)-(12,29)
-(12,20)-(12,21)
-(12,25)-(12,29)
-(13,8)-(13,55)
-(13,27)-(13,28)
-(13,29)-(13,30)
-*)
-
-(* correct types
-'a
-'a list
-'a
-'a list
-'a list
-'a list
-'a
-*)
-
-(* bad types
-'a
-'a list
-'a list
-'a list
-'a -> 'a list
-'a list
-'a list
+(* type error slice
+(5,48)-(5,60)
+(5,49)-(5,55)
+(9,5)-(13,65)
+(13,21)-(13,40)
+(13,26)-(13,40)
+(13,27)-(13,33)
+(13,34)-(13,39)
+(13,35)-(13,36)
 *)

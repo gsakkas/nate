@@ -1,3 +1,5 @@
-BopG LitG VarG
-1.0 *. x
-1.0 *. y
+LetG NonRec (fromList [(VarPatG,BopG EmptyG EmptyG)]) (AppG (fromList [EmptyG]))
+let comb =
+  eval (e1 , x , y) +. eval (e2 , x , y) in
+mod_float comb
+          (eval (e3 , x , y))

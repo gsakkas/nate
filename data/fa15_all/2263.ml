@@ -65,24 +65,17 @@ let rec mulByDigit i l = if i = 0 then [0] else bigAdd l l;;
 *)
 
 (* changed spans
-(30,48)-(30,77)
+(30,49)-(30,78)
 bigAdd l l
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (30,48)-(30,58)) (Var (Just (30,48)-(30,54)) "bigAdd") [Var (Just (30,55)-(30,56)) "l",Var (Just (30,57)-(30,58)) "l"]
-*)
-
-(* typed spans
-(30,48)-(30,58)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(30,4)-(30,80)
+(30,20)-(30,78)
+(30,22)-(30,78)
+(30,26)-(30,78)
+(30,49)-(30,59)
+(30,49)-(30,78)
 *)

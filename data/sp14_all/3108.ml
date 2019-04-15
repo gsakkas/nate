@@ -57,56 +57,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(23,16)-(23,45)
+(23,17)-(23,46)
 x
 VarG
 
-(24,4)-(25,74)
+(24,16)-(24,18)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
-(25,4)-(25,74)
+(25,16)-(25,24)
 [(0 , [])]
-ListG (TupleG (fromList [EmptyG]))
-
-(25,20)-(25,22)
-0
-LitG
-
-(25,20)-(25,22)
-[]
-ListG EmptyG
+ListG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Var (Just (23,16)-(23,17)) "x"
-Tuple (Just (24,15)-(24,22)) [Lit (Just (24,16)-(24,17)) (LI 0),List (Just (24,19)-(24,21)) [] Nothing]
-List (Just (25,15)-(25,24)) [Tuple (Just (25,16)-(25,23)) [Lit (Just (25,17)-(25,18)) (LI 0),List (Just (25,20)-(25,22)) [] Nothing]] Nothing
-Lit (Just (25,17)-(25,18)) (LI 0)
-List (Just (25,20)-(25,22)) [] Nothing
-*)
-
-(* typed spans
-(23,16)-(23,17)
-(24,15)-(24,22)
-(25,15)-(25,24)
-(25,17)-(25,18)
-(25,20)-(25,22)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-(int * int list) list
-int
-int list
-*)
-
-(* bad types
-'a list
-int list
-int list
-int list
-int list
+(* type error slice
+(25,5)-(25,75)
+(25,16)-(25,24)
+(25,42)-(25,56)
+(25,42)-(25,68)
+(25,64)-(25,68)
 *)

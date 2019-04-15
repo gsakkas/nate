@@ -1,7 +1,4 @@
-IteG (BopG EmptyG EmptyG) (ListG EmptyG) (IteG EmptyG EmptyG EmptyG)
-if i = 0
-then []
-else if i = 1
-     then l
-     else bigAdd (bigAdd l l)
-                 (mulByDigit (i - 2) l)
+TupleG (fromList [VarG,ListG (fromList [EmptyG])])
+(l1 , [0 ; 0 ; 0 ; 0])
+(t1 , [(h1 + x) mod 10])
+(p1 , [res / 10 ; res mod 10])

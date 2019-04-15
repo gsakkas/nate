@@ -23,32 +23,28 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(9,9)-(9,41)
+(9,10)-(9,42)
 (0 :: l1 , l2)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])
+TupleG (fromList [VarG,ConAppG (Just EmptyG)])
 
-(10,9)-(10,41)
+(10,10)-(10,42)
 (l1 , 0 :: l2)
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])
+TupleG (fromList [VarG,ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-Tuple (Just (7,9)-(7,24)) [ConApp (Just (7,10)-(7,19)) "::" (Just (Tuple (Just (7,11)-(7,18)) [Lit (Just (7,11)-(7,12)) (LI 0),Var (Just (7,16)-(7,18)) "l1"])) Nothing,Var (Just (7,21)-(7,23)) "l2"]
-Tuple (Just (8,9)-(8,24)) [Var (Just (8,10)-(8,12)) "l1",ConApp (Just (8,14)-(8,23)) "::" (Just (Tuple (Just (8,15)-(8,22)) [Lit (Just (8,15)-(8,16)) (LI 0),Var (Just (8,20)-(8,22)) "l2"])) Nothing]
-*)
-
-(* typed spans
-(7,9)-(7,24)
-(8,9)-(8,24)
-*)
-
-(* correct types
-(int list * int list)
-(int list * int list)
-*)
-
-(* bad types
-int list list list
-int list list list
+(* type error slice
+(2,44)-(2,68)
+(2,51)-(2,68)
+(2,52)-(2,57)
+(5,3)-(10,42)
+(6,8)-(6,16)
+(8,5)-(10,42)
+(9,10)-(9,15)
+(9,10)-(9,42)
+(9,16)-(9,25)
+(10,10)-(10,15)
+(10,10)-(10,42)
+(10,16)-(10,32)
+(10,17)-(10,28)
 *)

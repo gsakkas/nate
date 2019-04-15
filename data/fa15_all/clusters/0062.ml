@@ -1,2 +1,8 @@
-ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG,BopG VarG LitG])])))
-x :: (clone x (n - 1))
+TupleG (fromList [AppG (fromList [EmptyG]),LitG])
+(0 , mulByDigit x l1)
+(f b , false)
+(false , f b)
+(true , f2 x)
+(0 , List.fold_left f base
+                    args)
+(f b , true)

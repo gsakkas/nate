@@ -17,24 +17,19 @@ let rec listReverse l =
 *)
 
 (* changed spans
-(6,31)-(6,37)
+(6,32)-(6,38)
 tail
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (6,31)-(6,35)) "tail"
-*)
-
-(* typed spans
-(6,31)-(6,35)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list list
+(* type error slice
+(2,4)-(6,50)
+(2,21)-(6,48)
+(3,3)-(6,48)
+(3,9)-(3,10)
+(6,19)-(6,39)
+(6,20)-(6,31)
+(6,32)-(6,38)
+(6,33)-(6,37)
 *)

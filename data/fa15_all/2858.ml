@@ -23,72 +23,37 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(8,18)-(8,23)
-(@)
-VarG
+(8,18)-(8,35)
+clone 0 (y - x) @ l1
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(8,18)-(8,23)
-clone 0 (y - x)
-AppG (fromList [BopG EmptyG EmptyG,LitG])
-
-(8,36)-(8,37)
-l1
-VarG
-
-(8,44)-(8,66)
+(8,37)-(8,38)
 l2
 VarG
 
-(8,45)-(8,46)
+(8,46)-(8,47)
 l1
 VarG
 
-(8,49)-(8,54)
-(@)
-VarG
-
-(8,49)-(8,54)
-clone 0 (x - y)
-AppG (fromList [BopG EmptyG EmptyG,LitG])
+(8,49)-(8,66)
+clone 0 (x - y) @ l2
+AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Var (Just (9,27)-(9,28)) "@"
-App (Just (9,9)-(9,26)) (Var (Just (9,10)-(9,15)) "clone") [Lit (Just (9,16)-(9,17)) (LI 0),Bop (Just (9,18)-(9,25)) Minus (Var (Just (9,19)-(9,20)) "y") (Var (Just (9,23)-(9,24)) "x")]
-Var (Just (9,29)-(9,31)) "l1"
-Var (Just (9,34)-(9,36)) "l2"
-Var (Just (10,8)-(10,10)) "l1"
-Var (Just (10,31)-(10,32)) "@"
-App (Just (10,13)-(10,30)) (Var (Just (10,14)-(10,19)) "clone") [Lit (Just (10,20)-(10,21)) (LI 0),Bop (Just (10,22)-(10,29)) Minus (Var (Just (10,23)-(10,24)) "x") (Var (Just (10,27)-(10,28)) "y")]
-*)
-
-(* typed spans
-(9,27)-(9,28)
-(9,9)-(9,26)
-(9,29)-(9,31)
-(9,34)-(9,36)
-(10,8)-(10,10)
-(10,31)-(10,32)
-(10,13)-(10,30)
-*)
-
-(* correct types
-int list -> int list -> int list
-int list
-int list
-int list
-int list
-int list -> int list -> int list
-int list
-*)
-
-(* bad types
-int -> int -> int list
-int -> int -> int list
-int
-(int * int list)
-int
-int -> int -> int list
-int -> int -> int list
+(* type error slice
+(3,26)-(3,61)
+(3,35)-(3,40)
+(3,35)-(3,50)
+(3,54)-(3,60)
+(3,59)-(3,60)
+(7,3)-(8,67)
+(7,11)-(7,22)
+(7,11)-(7,25)
+(8,3)-(8,67)
+(8,17)-(8,39)
+(8,37)-(8,38)
+(8,45)-(8,67)
+(8,49)-(8,66)
+(8,50)-(8,55)
 *)

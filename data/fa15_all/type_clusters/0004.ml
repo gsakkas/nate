@@ -1,11 +1,5 @@
-(int * int) list
-string
-bool
 int
-'a
-expr
-char list
-int list
+string
 float
-(int * int list) list
-string list
+bool
+char

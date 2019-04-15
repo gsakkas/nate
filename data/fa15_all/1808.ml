@@ -23,72 +23,39 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,20)-(7,24)
+(7,21)-(7,25)
 h :: seen
-ConAppG (Just (TupleG (fromList [VarG])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
-(8,20)-(8,30)
+(8,21)-(8,31)
 t
 VarG
 
-(9,8)-(10,60)
+(9,9)-(10,61)
 helper (seen' , rest')
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(9,8)-(10,60)
-helper
-VarG
-
-(9,8)-(10,60)
-(seen' , rest')
-TupleG (fromList [VarG])
-
-(9,8)-(10,60)
-seen'
-VarG
-
-(9,8)-(10,60)
-rest'
-VarG
-
 *)
 
-(* changed exprs
-ConApp (Just (6,26)-(6,35)) "::" (Just (Tuple (Just (6,26)-(6,35)) [Var (Just (6,26)-(6,27)) "h",Var (Just (6,31)-(6,35)) "seen"])) Nothing
-Var (Just (6,51)-(6,52)) "t"
-App (Just (6,56)-(6,77)) (Var (Just (6,56)-(6,62)) "helper") [Tuple (Just (6,63)-(6,77)) [Var (Just (6,64)-(6,69)) "seen'",Var (Just (6,71)-(6,76)) "rest'"]]
-Var (Just (6,56)-(6,62)) "helper"
-Tuple (Just (6,63)-(6,77)) [Var (Just (6,64)-(6,69)) "seen'",Var (Just (6,71)-(6,76)) "rest'"]
-Var (Just (6,64)-(6,69)) "seen'"
-Var (Just (6,71)-(6,76)) "rest'"
-*)
-
-(* typed spans
-(6,26)-(6,35)
-(6,51)-(6,52)
-(6,56)-(6,77)
-(6,56)-(6,62)
-(6,63)-(6,77)
-(6,64)-(6,69)
-(6,71)-(6,76)
-*)
-
-(* correct types
-'a list
-'a list
-'a list
-('a list * 'a list) -> 'a list
-('a list * 'a list)
-'a list
-'a list
-*)
-
-(* bad types
-'a list
-'a list
-unit
-unit
-unit
-unit
-unit
+(* type error slice
+(3,3)-(11,28)
+(3,19)-(10,61)
+(4,5)-(10,61)
+(5,13)-(5,17)
+(7,9)-(10,61)
+(7,21)-(7,25)
+(8,9)-(10,61)
+(9,9)-(10,61)
+(10,14)-(10,61)
+(10,26)-(10,36)
+(10,31)-(10,36)
+(10,40)-(10,46)
+(10,40)-(10,61)
+(10,47)-(10,61)
+(10,48)-(10,53)
+(10,61)-(10,61)
+(11,3)-(11,11)
+(11,3)-(11,28)
+(11,12)-(11,28)
+(11,13)-(11,19)
 *)

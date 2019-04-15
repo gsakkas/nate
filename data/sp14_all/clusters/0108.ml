@@ -1,6 +1,5 @@
-TupleG (fromList [VarG,LitG])
-(0 , acc)
-(0 , n)
-(b , true)
-(b , false)
-(e , 0.0 , 0.0)
+CaseG VarG (fromList [(VarPatG,Nothing,AppG (fromList [EmptyG]))])
+match $x with
+| v -> x (a v)
+match n with
+| n -> [] @ [n mod 10]

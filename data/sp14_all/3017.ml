@@ -31,49 +31,30 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(12,8)-(12,48)
+(12,9)-(12,49)
 List.append (clone 0 (- diff))
             l1
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(13,7)-(13,51)
+(12,51)-(12,55)
 l2
 VarG
 
-(13,8)-(13,44)
+(13,9)-(13,45)
 List.append (clone 0 diff) l2
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(13,46)-(13,50)
-l2
+(13,47)-(13,51)
+l1
 VarG
 
 *)
 
-(* changed exprs
-App (Just (12,8)-(12,43)) (Var (Just (12,9)-(12,20)) "List.append") [App (Just (12,21)-(12,39)) (Var (Just (12,22)-(12,27)) "clone") [Lit (Just (12,28)-(12,29)) (LI 0),Uop (Just (12,30)-(12,38)) Neg (Var (Just (12,33)-(12,37)) "diff")],Var (Just (12,40)-(12,42)) "l1"]
-Var (Just (12,45)-(12,47)) "l2"
-App (Just (13,8)-(13,39)) (Var (Just (13,9)-(13,20)) "List.append") [App (Just (13,21)-(13,35)) (Var (Just (13,22)-(13,27)) "clone") [Lit (Just (13,28)-(13,29)) (LI 0),Var (Just (13,30)-(13,34)) "diff"],Var (Just (13,36)-(13,38)) "l2"]
-Var (Just (13,36)-(13,38)) "l2"
-*)
-
-(* typed spans
-(12,8)-(12,43)
-(12,45)-(12,47)
-(13,8)-(13,39)
-(13,36)-(13,38)
-*)
-
-(* correct types
-int list
-int list
-int list
-int list
-*)
-
-(* bad types
-'a
-('a * int)
-'a
-int
+(* type error slice
+(12,9)-(12,49)
+(12,10)-(12,21)
+(12,22)-(12,48)
+(13,9)-(13,45)
+(13,10)-(13,21)
+(13,22)-(13,44)
 *)

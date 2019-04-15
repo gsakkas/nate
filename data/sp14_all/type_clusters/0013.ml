@@ -1,2 +1,7 @@
 int list
-string list
+string
+'a -> 'a
+(int * int list)
+'a list
+float
+'a

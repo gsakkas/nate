@@ -61,32 +61,22 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(24,14)-(24,46)
+(24,15)-(24,47)
 valueToAddToArray :: currentSum
-ConAppG (Just (TupleG (fromList [VarG])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
-(26,15)-(26,42)
+(26,16)-(26,43)
 List.rev (List.combine l1 l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-ConApp (Just (24,14)-(24,47)) "::" (Just (Tuple (Just (24,15)-(24,46)) [Var (Just (24,15)-(24,32)) "valueToAddToArray",Var (Just (24,36)-(24,46)) "currentSum"])) Nothing
-App (Just (26,15)-(26,44)) (Var (Just (26,15)-(26,23)) "List.rev") [App (Just (26,24)-(26,44)) (Var (Just (26,25)-(26,37)) "List.combine") [Var (Just (26,38)-(26,40)) "l1",Var (Just (26,41)-(26,43)) "l2"]]
-*)
-
-(* typed spans
-(24,14)-(24,47)
-(26,15)-(26,44)
-*)
-
-(* correct types
-int list
-(int * int) list
-*)
-
-(* bad types
-int list
-(int * int) list
+(* type error slice
+(22,7)-(24,48)
+(22,31)-(22,55)
+(24,15)-(24,47)
+(24,16)-(24,33)
+(24,34)-(24,35)
+(26,16)-(26,24)
+(26,16)-(26,43)
 *)

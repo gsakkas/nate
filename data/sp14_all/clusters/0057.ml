@@ -1,15 +1,16 @@
-LetG NonRec (fromList [BopG EmptyG EmptyG]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-let z = fst x + snd x in
-match a with
-| (w , y) -> ((w + z) / 10 , ((w + z) mod 10) :: y)
-let depth = depth - 1 in
-match rand (0 , 4) with
-| 0 -> buildSine (build (rand , depth))
-| 1 -> buildCosine (build (rand , depth))
-| 2 -> buildAverage (build (rand , depth) , build (rand , depth))
-| 3 -> buildTimes (build (rand , depth) , build (rand , depth))
-| 4 -> buildThresh (build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))
-let digit =
-  ((carry + addend_a) + addend_b) mod 10 in
-match a with
-| (x , y) -> (new_carry , digit :: y)
+IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
+if rand (0 , 1) = 0
+then buildX ()
+else buildY ()
+if sumList (digits n) < 10
+then numdigits (digits n)
+else additivePersistence (sumList (digits n))
+if eval (x1 , x , y) < eval (x2 , x , y)
+then eval (x3 , x , y)
+else eval (x4 , x , y)
+if sumList (digits n) > 9
+then digitalRoot (sumList (digits n))
+else sumList (digits n)
+if eval (ex1 , x , y) < eval (ex2 , x , y)
+then eval (ex3 , x , y)
+else eval (ex4 , x , y)

@@ -73,24 +73,20 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(34,18)-(34,44)
+(34,19)-(34,45)
 padZero l1 l2
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (34,18)-(34,33)) (Var (Just (34,19)-(34,26)) "padZero") [Var (Just (34,27)-(34,29)) "l1",Var (Just (34,30)-(34,32)) "l2"]
-*)
-
-(* typed spans
-(34,18)-(34,33)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-(int list * int list)
+(* type error slice
+(5,4)-(11,38)
+(5,13)-(11,36)
+(5,16)-(11,36)
+(6,3)-(11,36)
+(7,10)-(7,18)
+(34,19)-(34,45)
+(34,20)-(34,28)
+(34,29)-(34,44)
+(34,30)-(34,37)
 *)

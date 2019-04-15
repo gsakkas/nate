@@ -15,26 +15,21 @@ let pipe fs =
 *)
 
 (* changed spans
-(4,13)-(4,62)
+(4,14)-(4,63)
 match fs with
 | [] -> fun x -> x
 | h :: t -> f (fun x -> x) h
-CaseG VarG (fromList [(Nothing,LamG EmptyG),(Nothing,AppG (fromList [EmptyG]))])
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,AppG (fromList [EmptyG])),(ConPatG Nothing,Nothing,LamG VarPatG EmptyG)])
 
 *)
 
-(* changed exprs
-Case (Just (4,13)-(4,76)) (Var (Just (4,19)-(4,21)) "fs") [(ConPat (Just (4,29)-(4,31)) "[]" Nothing,Nothing,Lam (Just (4,35)-(4,48)) (VarPat (Just (4,40)-(4,41)) "x") (Var (Just (4,46)-(4,47)) "x") Nothing),(ConsPat (Just (4,51)-(4,55)) (VarPat (Just (4,51)-(4,52)) "h") (VarPat (Just (4,54)-(4,55)) "t"),Nothing,App (Just (4,59)-(4,76)) (Var (Just (4,59)-(4,60)) "f") [Lam (Just (4,61)-(4,74)) (VarPat (Just (4,66)-(4,67)) "x") (Var (Just (4,72)-(4,73)) "x") Nothing,Var (Just (4,75)-(4,76)) "h"])]
-*)
-
-(* typed spans
-(4,13)-(4,76)
-*)
-
-(* correct types
-'a -> 'a
-*)
-
-(* bad types
-('a -> 'a) -> 'a -> 'a
+(* type error slice
+(4,3)-(5,27)
+(4,14)-(4,63)
+(4,38)-(4,39)
+(4,38)-(4,41)
+(5,3)-(5,17)
+(5,3)-(5,27)
+(5,18)-(5,19)
+(5,20)-(5,24)
 *)

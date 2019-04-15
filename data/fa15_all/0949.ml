@@ -11,24 +11,16 @@ let sqsum xs =
 *)
 
 (* changed spans
-(3,45)-(3,60)
-List.fold_left
-VarG
+(3,46)-(3,71)
+List.fold_left f base xs
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Var (Just (3,45)-(3,59)) "List.fold_left"
-*)
-
-(* typed spans
-(3,45)-(3,59)
-*)
-
-(* correct types
-(int -> int -> int) -> int -> int list -> int
-*)
-
-(* bad types
-(int -> int -> int) -> int list -> int -> int
+(* type error slice
+(3,30)-(3,71)
+(3,41)-(3,42)
+(3,46)-(3,61)
+(3,46)-(3,71)
+(3,64)-(3,68)
 *)

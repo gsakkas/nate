@@ -1,19 +1,10 @@
-LetG NonRec (fromList [LamG EmptyG]) (LetG Rec (fromList [EmptyG]) EmptyG)
-let comb =
-  fun a ->
-    fun b ->
-      match b with
-      | [] -> [a]
-      | hd :: tl -> [a + hd] in
-let rec mBDhelper =
-  fun i ->
-    fun x ->
-      match x with
-      | [] -> []
-      | hd :: tl -> if ((hd * i) - 9) <> 0
-                    then ((hd * i) / 10) :: (comb ((hd * i) mod 10)
-                                                  (mBDhelper i
-                                                             tl))
-                    else (hd * i) :: (mBDhelper i
-                                                tl) in
-mBDhelper i l
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) (CaseG EmptyG (fromList [(LitPatG,Nothing,EmptyG)]))
+let rdm = rand (0 , 7) in
+match rdm with
+| 0 -> buildY ()
+| 1 -> buildX ()
+| 2 -> Cosine (build (rand , depth - 1))
+| 3 -> Sine (build (rand , depth - 1))
+| 4 -> Average (build (rand , depth - 1) , build (rand , depth - 1))
+| 5 -> Times (build (rand , depth - 1) , build (rand , depth - 1))
+| 6 -> Thresh (build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1) , build (rand , depth - 1))

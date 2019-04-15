@@ -1,7 +1,8 @@
-AppG (fromList [VarG,LitG,ConAppG (Just (TupleG (fromList [BopG (BopG VarG LitG) LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))])))])
-helper 1
-       (((num / 10) mod 10) :: ((num mod 10) :: xs'))
-       xs
-helper 1
-       (((num / 10) mod 10) :: ((num mod 10) :: accum))
-       xs
+CaseG VarG (fromList [(ConPatG Nothing,Nothing,VarG),(ConPatG (Just VarPatG),Nothing,BopG EmptyG EmptyG),(ConPatG (Just (TuplePatG (fromList [EmptyPatG]))),Nothing,BopG EmptyG EmptyG)])
+match e with
+| VarX -> x
+| VarY -> y
+| Sine e -> pi *. x
+| Cosine e -> pi *. y
+| Average (e1 , e2) -> (eval (e1 , x , y) +. eval (e2 , x , y)) /. 2.0
+| Times (e1 , e2) -> eval (e1 , x , y) *. eval (e2 , x , y)

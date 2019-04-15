@@ -1,5 +1,6 @@
-CaseG (AppG (fromList [EmptyG])) (fromList [(Nothing,AppG (fromList [EmptyG])),(Nothing,ListG EmptyG)])
-match List.rev l with
-| _ :: [] -> []
-| h :: m :: t -> mulByDigit i
-                            (m :: t) @ [((h * i) / 10) + ((m * i) mod 10) ; (h * i) mod 10]
+IteG (BopG EmptyG EmptyG) (ListG (fromList [])) (CaseG EmptyG (fromList [(LitPatG,Nothing,EmptyG),(WildPatG,Nothing,EmptyG)]))
+if n < 0
+then []
+else (match n with
+      | 0 -> [0]
+      | _ -> digitsOfInt (n / 10) @ [n mod 10])

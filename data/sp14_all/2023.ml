@@ -85,26 +85,36 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(40,28)-(40,75)
+(40,29)-(40,76)
 let res =
   List.fold_left f base args in
 res
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) VarG
+LetG NonRec (fromList [(VarPatG,AppG (fromList [EmptyG]))]) VarG
 
 *)
 
-(* changed exprs
-Let (Just (40,28)-(40,71)) NonRec [(VarPat (Just (40,32)-(40,35)) "res",App (Just (40,38)-(40,64)) (Var (Just (40,38)-(40,52)) "List.fold_left") [Var (Just (40,53)-(40,54)) "f",Var (Just (40,55)-(40,59)) "base",Var (Just (40,60)-(40,64)) "args"])] (Var (Just (40,68)-(40,71)) "res")
-*)
-
-(* typed spans
-(40,28)-(40,71)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-'a
+(* type error slice
+(15,3)-(15,58)
+(15,9)-(15,10)
+(15,37)-(15,47)
+(15,37)-(15,49)
+(15,57)-(15,58)
+(28,4)-(34,76)
+(28,20)-(34,74)
+(28,22)-(34,74)
+(29,3)-(34,74)
+(33,3)-(34,74)
+(34,3)-(34,74)
+(34,35)-(34,45)
+(34,35)-(34,74)
+(37,3)-(40,76)
+(37,9)-(38,75)
+(37,11)-(38,75)
+(38,5)-(38,75)
+(38,26)-(38,36)
+(38,26)-(38,41)
+(40,29)-(40,76)
+(40,43)-(40,57)
+(40,43)-(40,69)
+(40,58)-(40,59)
 *)

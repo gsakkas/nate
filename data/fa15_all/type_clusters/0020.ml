@@ -1,5 +1,3 @@
-'a list
 int list
-char list
-string list
-string list list
+'a list
+(int * int) list

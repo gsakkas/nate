@@ -27,19 +27,13 @@ let rec eval (e,x,y) = match e with | VarX  -> x | VarY  -> y;;
 *)
 
 (* changed spans
-(11,29)-(11,38)
-EMPTY
-EmptyG
-
-(11,55)-(11,56)
-EMPTY
-EmptyG
-
-(11,68)-(11,69)
-EMPTY
-EmptyG
+(11,30)-(11,39)
+e
+VarG
 
 *)
 
-(* typed spans
+(* type error slice
+(11,24)-(11,70)
+(11,30)-(11,39)
 *)

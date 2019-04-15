@@ -1,3 +1,1 @@
-expr
-int
-string
+('a list * 'b list)

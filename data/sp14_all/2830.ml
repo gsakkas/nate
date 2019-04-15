@@ -13,24 +13,19 @@ let rec wwhile (f,b) =
 *)
 
 (* changed spans
-(4,9)-(4,15)
+(4,10)-(4,16)
 f b
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (4,9)-(4,14)) (Var (Just (4,10)-(4,11)) "f") [Var (Just (4,12)-(4,13)) "b"]
-*)
-
-(* typed spans
-(4,9)-(4,14)
-*)
-
-(* correct types
-('a * bool)
-*)
-
-(* bad types
-('a -> ('a * bool) * 'b)
+(* type error slice
+(3,46)-(3,52)
+(3,46)-(3,59)
+(3,53)-(3,59)
+(3,54)-(3,55)
+(4,3)-(4,9)
+(4,3)-(4,16)
+(4,10)-(4,16)
+(4,11)-(4,12)
 *)

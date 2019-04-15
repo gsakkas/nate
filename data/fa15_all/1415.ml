@@ -23,43 +23,24 @@ let rec digitalRoot n =
 *)
 
 (* changed spans
-(7,20)-(8,66)
-fun xs ->
-  match xs with
-  | [] -> 0
-  | h :: t -> h + sumList t
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(8,8)-(8,9)
+(8,9)-(8,10)
 digits n
 AppG (fromList [VarG])
 
-(8,56)-(8,62)
-sumList
-VarG
+(8,56)-(8,66)
+sumList t
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Lam (Just (7,16)-(7,70)) (VarPat (Just (7,16)-(7,18)) "xs") (Case (Just (7,21)-(7,70)) (Var (Just (7,27)-(7,29)) "xs") [(ConPat (Just (7,37)-(7,39)) "[]" Nothing,Nothing,Lit (Just (7,43)-(7,44)) (LI 0)),(ConsPat (Just (7,47)-(7,51)) (VarPat (Just (7,47)-(7,48)) "h") (VarPat (Just (7,50)-(7,51)) "t"),Nothing,Bop (Just (7,55)-(7,70)) Plus (Var (Just (7,55)-(7,56)) "h") (App (Just (7,59)-(7,70)) (Var (Just (7,60)-(7,67)) "sumList") [Var (Just (7,68)-(7,69)) "t"]))]) Nothing
-App (Just (10,8)-(10,16)) (Var (Just (10,8)-(10,14)) "digits") [Var (Just (10,15)-(10,16)) "n"]
-Var (Just (10,63)-(10,70)) "sumList"
-*)
-
-(* typed spans
-(7,16)-(7,70)
-(10,8)-(10,16)
-(10,63)-(10,70)
-*)
-
-(* correct types
-int list -> int
-int list
-int list -> int
-*)
-
-(* bad types
-int list -> int
-int list
-int -> int list
+(* type error slice
+(5,4)-(5,37)
+(5,12)-(5,35)
+(5,28)-(5,35)
+(5,29)-(5,32)
+(5,33)-(5,34)
+(8,3)-(8,67)
+(8,56)-(8,66)
+(8,57)-(8,63)
+(8,64)-(8,65)
 *)

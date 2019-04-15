@@ -15,24 +15,17 @@ let fixpoint (f,b) = wwhile ((fun x  -> let y = f x in (y, (y != x))), b);;
 *)
 
 (* changed spans
-(5,48)-(5,54)
+(5,49)-(5,55)
 f x
 AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-App (Just (5,48)-(5,51)) (Var (Just (5,48)-(5,49)) "f") [Var (Just (5,50)-(5,51)) "x"]
-*)
-
-(* typed spans
-(5,48)-(5,51)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-('a * 'b)
+(* type error slice
+(5,41)-(5,72)
+(5,49)-(5,55)
+(5,53)-(5,54)
+(5,63)-(5,71)
+(5,64)-(5,65)
+(5,69)-(5,70)
 *)

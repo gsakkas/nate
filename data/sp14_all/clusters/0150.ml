@@ -1,4 +1,2 @@
-BopG VarG (IteG EmptyG EmptyG EmptyG)
-x + (if t = []
-     then 0
-     else sumList t)
+LetG NonRec (fromList [(VarPatG,VarG)]) VarG
+let an = a in x

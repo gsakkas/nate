@@ -44,57 +44,39 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(14,6)-(15,71)
+(14,7)-(15,72)
 match (a , x) with
 | ((b , c) , (d , e)) -> (b , (d + e) :: c)
-CaseG (TupleG (fromList [EmptyG])) (fromList [(Nothing,TupleG (fromList [EmptyG]))])
+CaseG (TupleG (fromList [EmptyG])) (fromList [(TuplePatG (fromList [TuplePatG (fromList [EmptyPatG])]),Nothing,TupleG (fromList [EmptyG]))])
 
-(16,19)-(16,20)
+(16,17)-(16,18)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(17,4)-(21,51)
+(16,20)-(16,21)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(20,11)-(20,40)
+(19,23)-(19,52)
 [0 ; 0 ; 9 ; 9]
-ListG LitG
+ListG (fromList [LitG])
 
-(21,4)-(21,51)
+(20,12)-(20,41)
 [1 ; 0 ; 0 ; 2]
-ListG LitG
+ListG (fromList [LitG])
 
 *)
 
-(* changed exprs
-Case (Just (13,16)-(13,72)) (Tuple (Just (13,22)-(13,28)) [Var (Just (13,23)-(13,24)) "a",Var (Just (13,26)-(13,27)) "x"]) [(TuplePat (Just (13,38)-(13,47)) [TuplePat (Just (13,38)-(13,41)) [VarPat (Just (13,38)-(13,39)) "b",VarPat (Just (13,40)-(13,41)) "c"],TuplePat (Just (13,44)-(13,47)) [VarPat (Just (13,44)-(13,45)) "d",VarPat (Just (13,46)-(13,47)) "e"]],Nothing,Tuple (Just (13,53)-(13,72)) [Var (Just (13,54)-(13,55)) "b",ConApp (Just (13,57)-(13,71)) "::" (Just (Tuple (Just (13,58)-(13,70)) [Bop (Just (13,58)-(13,65)) Plus (Var (Just (13,59)-(13,60)) "d") (Var (Just (13,63)-(13,64)) "e"),Var (Just (13,69)-(13,70)) "c"])) Nothing])]
-List (Just (14,16)-(14,18)) [] Nothing
-List (Just (14,20)-(14,22)) [] Nothing
-List (Just (15,38)-(15,50)) [Lit (Just (15,39)-(15,40)) (LI 0),Lit (Just (15,42)-(15,43)) (LI 0),Lit (Just (15,45)-(15,46)) (LI 9),Lit (Just (15,48)-(15,49)) (LI 9)] Nothing
-List (Just (15,51)-(15,63)) [Lit (Just (15,52)-(15,53)) (LI 1),Lit (Just (15,55)-(15,56)) (LI 0),Lit (Just (15,58)-(15,59)) (LI 0),Lit (Just (15,61)-(15,62)) (LI 2)] Nothing
-*)
-
-(* typed spans
-(13,16)-(13,72)
-(14,16)-(14,18)
-(14,20)-(14,22)
-(15,38)-(15,50)
-(15,51)-(15,63)
-*)
-
-(* correct types
-('a list * int list)
-'a list
-int list
-int list
-int list
-*)
-
-(* bad types
-int list
-int
-int list
-int list list
-int list
+(* type error slice
+(13,5)-(21,52)
+(13,11)-(15,72)
+(13,13)-(15,72)
+(14,7)-(15,72)
+(14,13)-(14,19)
+(14,14)-(14,15)
+(15,38)-(15,72)
+(15,56)-(15,72)
+(21,19)-(21,33)
+(21,19)-(21,45)
+(21,34)-(21,35)
 *)

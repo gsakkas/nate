@@ -15,24 +15,16 @@ let rec assoc (d,k,l) =
 *)
 
 (* changed spans
-(3,8)-(3,9)
+(3,9)-(3,10)
 l
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (3,8)-(3,9)) "l"
-*)
-
-(* typed spans
-(3,8)-(3,9)
-*)
-
-(* correct types
-('a * 'b) list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(3,3)-(5,57)
+(3,9)-(3,10)
+(5,22)-(5,23)
+(5,22)-(5,28)
+(5,26)-(5,28)
 *)

@@ -1,1 +1,2 @@
-'a -> 'b -> ('b -> 'c list) -> 'c list -> 'c list
+(int list * 'a list)
+(int * int list)

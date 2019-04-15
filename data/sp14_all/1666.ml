@@ -11,24 +11,18 @@ let rec sumList xs =
 *)
 
 (* changed spans
-(3,40)-(3,60)
+(3,41)-(3,61)
 sumList (List.tl xs)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (3,40)-(3,62)) (Var (Just (3,41)-(3,48)) "sumList") [App (Just (3,49)-(3,61)) (Var (Just (3,50)-(3,57)) "List.tl") [Var (Just (3,58)-(3,60)) "xs"]]
-*)
-
-(* typed spans
-(3,40)-(3,62)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int
+(* type error slice
+(2,4)-(3,63)
+(2,17)-(3,61)
+(3,3)-(3,61)
+(3,9)-(3,11)
+(3,41)-(3,61)
+(3,42)-(3,49)
+(3,50)-(3,57)
 *)

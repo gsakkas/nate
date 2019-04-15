@@ -49,40 +49,30 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(17,15)-(17,35)
+(17,16)-(17,36)
 (((j + k) + l) - 10) :: m
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
-(18,15)-(18,28)
+(18,16)-(18,29)
 ((j + k) + l) :: m
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG VarG VarG) VarG])))
-
-(19,4)-(21,51)
-m
-VarG
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
 *)
 
-(* changed exprs
-ConApp (Just (17,15)-(17,42)) "::" (Just (Tuple (Just (17,16)-(17,41)) [Bop (Just (17,16)-(17,36)) Minus (Bop (Just (17,17)-(17,30)) Plus (Bop (Just (17,18)-(17,25)) Plus (Var (Just (17,19)-(17,20)) "j") (Var (Just (17,23)-(17,24)) "k")) (Var (Just (17,28)-(17,29)) "l")) (Lit (Just (17,33)-(17,35)) (LI 10)),Var (Just (17,40)-(17,41)) "m"])) Nothing
-ConApp (Just (18,15)-(18,35)) "::" (Just (Tuple (Just (18,16)-(18,34)) [Bop (Just (18,16)-(18,29)) Plus (Bop (Just (18,17)-(18,24)) Plus (Var (Just (18,18)-(18,19)) "j") (Var (Just (18,22)-(18,23)) "k")) (Var (Just (18,27)-(18,28)) "l"),Var (Just (18,33)-(18,34)) "m"])) Nothing
-Var (Just (18,33)-(18,34)) "m"
-*)
-
-(* typed spans
-(17,15)-(17,42)
-(18,15)-(18,35)
-(18,33)-(18,34)
-*)
-
-(* correct types
-int list
-int list
-int list
-*)
-
-(* bad types
-int
-int
-int list
+(* type error slice
+(13,5)-(21,52)
+(13,11)-(18,30)
+(13,13)-(18,30)
+(14,7)-(18,30)
+(15,7)-(18,30)
+(16,7)-(18,30)
+(18,12)-(18,30)
+(18,16)-(18,29)
+(19,5)-(21,52)
+(19,16)-(19,23)
+(19,20)-(19,22)
+(21,19)-(21,33)
+(21,19)-(21,45)
+(21,34)-(21,35)
+(21,36)-(21,40)
 *)

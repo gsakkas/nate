@@ -1,7 +1,12 @@
-IteG (BopG EmptyG EmptyG) (IteG EmptyG EmptyG EmptyG) (LetG NonRec (fromList [EmptyG]) EmptyG)
-if depth = 0
-then if rand (0 , 1) = 0
-     then buildX ()
-     else buildY ()
-else (let y = rand (2 , 6) in
-      buildX ())
+IteG (BopG EmptyG EmptyG) (LetG NonRec (fromList [(ConsPatG EmptyPatG EmptyPatG,EmptyG)]) EmptyG) (LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)
+if carry <> []
+then (let ch :: _ = carry in
+      let tens =
+        ((x1 + x2) + ch) / 10 in
+      let ones =
+        ((x1 + x2) + ch) mod 10 in
+      ([tens] , tens :: (ones :: res)))
+else (let tens =
+        (x1 + x2) / 10 in
+      let ones = (x1 + x2) mod 10 in
+      ([tens] , tens :: (ones :: res)))

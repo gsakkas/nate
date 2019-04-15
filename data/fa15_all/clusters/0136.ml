@@ -1,11 +1,5 @@
-CaseG VarG (fromList [(Nothing,IteG EmptyG EmptyG EmptyG),(Nothing,ListG EmptyG)])
-match l with
-| [] -> []
-| x :: xs' -> if x = 0
-              then rmzhelp xs'
-              else x :: xs'
-match l with
-| [] -> []
-| h :: t -> if h = 0
-            then removeZero t
-            else h :: t
+LetG NonRec (fromList [(VarPatG,LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)]) (AppG (fromList [EmptyG]))
+let n1 =
+  (let x0 = digitsOfInt n in
+   sumList x0) in
+additivePersistence n1

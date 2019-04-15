@@ -29,24 +29,16 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(12,9)-(12,14)
+(12,10)-(12,15)
 (l1 , l2)
 TupleG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Tuple (Just (12,9)-(12,17)) [Var (Just (12,10)-(12,12)) "l1",Var (Just (12,14)-(12,16)) "l2"]
-*)
-
-(* typed spans
-(12,9)-(12,17)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-(int list * int list)
+(* type error slice
+(8,9)-(8,53)
+(8,10)-(8,21)
+(8,50)-(8,52)
+(12,10)-(12,12)
+(12,10)-(12,15)
 *)

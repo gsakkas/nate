@@ -83,50 +83,56 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(38,6)-(38,71)
+(38,7)-(38,72)
 mulByDigit i
            (List.rev (List.map (fun x ->
                                   x * 10) t))
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(39,8)-(39,27)
-helper [] (h * i) @ []
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
-
-(39,8)-(39,27)
-(@)
-VarG
-
-(39,9)-(39,15)
-helper [] (h * i)
-AppG (fromList [BopG EmptyG EmptyG,ListG EmptyG])
-
-*)
-
-(* changed exprs
-App (Just (38,6)-(38,63)) (Var (Just (38,7)-(38,17)) "mulByDigit") [Var (Just (38,18)-(38,19)) "i",App (Just (38,20)-(38,62)) (Var (Just (38,21)-(38,29)) "List.rev") [App (Just (38,30)-(38,61)) (Var (Just (38,31)-(38,39)) "List.map") [Lam (Just (38,40)-(38,58)) (VarPat (Just (38,45)-(38,46)) "x") (Bop (Just (38,51)-(38,57)) Times (Var (Just (38,51)-(38,52)) "x") (Lit (Just (38,55)-(38,57)) (LI 10))) Nothing,Var (Just (38,59)-(38,60)) "t"]]]
-App (Just (39,8)-(39,34)) (Var (Just (39,29)-(39,30)) "@") [App (Just (39,9)-(39,28)) (Var (Just (39,10)-(39,16)) "helper") [List (Just (39,17)-(39,19)) [] Nothing,Bop (Just (39,20)-(39,27)) Times (Var (Just (39,21)-(39,22)) "h") (Var (Just (39,25)-(39,26)) "i")],List (Just (39,31)-(39,33)) [] Nothing]
-Var (Just (39,29)-(39,30)) "@"
-App (Just (39,9)-(39,28)) (Var (Just (39,10)-(39,16)) "helper") [List (Just (39,17)-(39,19)) [] Nothing,Bop (Just (39,20)-(39,27)) Times (Var (Just (39,21)-(39,22)) "h") (Var (Just (39,25)-(39,26)) "i")]
-*)
-
-(* typed spans
-(38,6)-(38,63)
-(39,8)-(39,34)
-(39,29)-(39,30)
 (39,9)-(39,28)
+helper [] (h * i) @ []
+AppG (fromList [AppG (fromList [EmptyG]),ListG (fromList [])])
+
 *)
 
-(* correct types
-int list
-int list
-int list -> int list -> int list
-int list
-*)
-
-(* bad types
-int list
-int list list
-int list list
-int list -> int -> int list
+(* type error slice
+(2,35)-(2,36)
+(2,35)-(2,57)
+(2,40)-(2,57)
+(2,41)-(2,46)
+(2,47)-(2,48)
+(4,4)-(7,80)
+(4,13)-(7,78)
+(4,16)-(7,78)
+(6,22)-(6,69)
+(6,23)-(6,28)
+(6,29)-(6,30)
+(7,13)-(7,77)
+(7,14)-(7,25)
+(7,26)-(7,73)
+(7,27)-(7,32)
+(7,74)-(7,76)
+(12,4)-(29,37)
+(12,12)-(29,35)
+(12,15)-(29,35)
+(29,19)-(29,34)
+(29,20)-(29,27)
+(29,31)-(29,33)
+(36,9)-(36,67)
+(36,23)-(36,26)
+(36,32)-(36,38)
+(36,32)-(36,67)
+(36,39)-(36,58)
+(36,54)-(36,57)
+(37,59)-(37,65)
+(37,59)-(37,77)
+(37,68)-(37,77)
+(37,69)-(37,74)
+(38,7)-(38,72)
+(38,7)-(39,28)
+(38,8)-(38,13)
+(38,73)-(38,74)
+(39,9)-(39,28)
+(39,10)-(39,16)
+(39,10)-(39,27)
 *)

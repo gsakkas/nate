@@ -79,29 +79,26 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(30,6)-(37,26)
+(30,7)-(37,27)
 let max' =
   fun a ->
     fun b ->
       if a < b then b else a in
 max' 1.0 (min 1.0
               ((2.71 ** ((sin (pi *. eval (a , x , y)) +. cos (pi *. eval (b , x , y))) -. 1.0)) -. 1.0))
-LetG NonRec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+LetG NonRec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (28,6)-(35,22)) NonRec [(VarPat (Just (28,10)-(28,14)) "max'",Lam (Just (28,15)-(28,43)) (VarPat (Just (28,15)-(28,16)) "a") (Lam (Just (28,17)-(28,43)) (VarPat (Just (28,17)-(28,18)) "b") (Ite (Just (28,21)-(28,43)) (Bop (Just (28,24)-(28,29)) Lt (Var (Just (28,24)-(28,25)) "a") (Var (Just (28,28)-(28,29)) "b")) (Var (Just (28,35)-(28,36)) "b") (Var (Just (28,42)-(28,43)) "a")) Nothing) Nothing)] (App (Just (29,6)-(35,22)) (Var (Just (29,6)-(29,10)) "max'") [Lit (Just (29,11)-(29,14)) (LD 1.0),App (Just (30,8)-(35,22)) (Var (Just (30,9)-(30,12)) "min") [Lit (Just (30,13)-(30,16)) (LD 1.0),Bop (Just (31,11)-(35,21)) FMinus (App (Just (31,12)-(34,26)) (Var (Just (31,18)-(31,20)) "**") [Lit (Just (31,13)-(31,17)) (LD 2.71),Bop (Just (32,15)-(34,25)) FMinus (Bop (Just (32,16)-(33,50)) FPlus (App (Just (32,17)-(32,47)) (Var (Just (32,18)-(32,21)) "sin") [Bop (Just (32,22)-(32,46)) FTimes (Var (Just (32,23)-(32,25)) "pi") (App (Just (32,29)-(32,45)) (Var (Just (32,30)-(32,34)) "eval") [Tuple (Just (32,35)-(32,44)) [Var (Just (32,36)-(32,37)) "a",Var (Just (32,39)-(32,40)) "x",Var (Just (32,42)-(32,43)) "y"]])]) (App (Just (33,19)-(33,49)) (Var (Just (33,20)-(33,23)) "cos") [Bop (Just (33,24)-(33,48)) FTimes (Var (Just (33,25)-(33,27)) "pi") (App (Just (33,31)-(33,47)) (Var (Just (33,32)-(33,36)) "eval") [Tuple (Just (33,37)-(33,46)) [Var (Just (33,38)-(33,39)) "b",Var (Just (33,41)-(33,42)) "x",Var (Just (33,44)-(33,45)) "y"]])])) (Lit (Just (34,21)-(34,24)) (LD 1.0))]) (Lit (Just (35,17)-(35,20)) (LD 1.0))]])
-*)
-
-(* typed spans
-(28,6)-(35,22)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-int
+(* type error slice
+(13,4)-(13,18)
+(13,11)-(13,14)
+(13,11)-(13,16)
+(18,3)-(38,28)
+(21,15)-(21,18)
+(21,15)-(21,43)
+(30,7)-(30,10)
+(30,7)-(37,27)
+(31,9)-(37,27)
+(31,10)-(31,13)
 *)

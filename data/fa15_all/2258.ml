@@ -80,57 +80,25 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(35,33)-(35,44)
+(35,34)-(35,45)
 place * 10
 BopG VarG LitG
 
-(35,47)-(35,53)
+(35,47)-(35,71)
 bigAdd (mulByDigit (place * 10)
                    l1) l
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
-(35,54)-(35,64)
-mulByDigit (place * 10) l1
-AppG (fromList [VarG,BopG EmptyG EmptyG])
-
-(35,65)-(35,66)
-place * 10
-BopG VarG LitG
-
-(36,2)-(37,75)
-l
-VarG
-
 *)
 
-(* changed exprs
-Bop (Just (36,20)-(36,32)) Times (Var (Just (36,21)-(36,26)) "place") (Lit (Just (36,29)-(36,31)) (LI 10))
-App (Just (36,34)-(36,73)) (Var (Just (36,35)-(36,41)) "bigAdd") [App (Just (36,42)-(36,70)) (Var (Just (36,43)-(36,53)) "mulByDigit") [Bop (Just (36,54)-(36,66)) Times (Var (Just (36,55)-(36,60)) "place") (Lit (Just (36,63)-(36,65)) (LI 10)),Var (Just (36,67)-(36,69)) "l1"],Var (Just (36,71)-(36,72)) "l"]
-App (Just (36,42)-(36,70)) (Var (Just (36,43)-(36,53)) "mulByDigit") [Bop (Just (36,54)-(36,66)) Times (Var (Just (36,55)-(36,60)) "place") (Lit (Just (36,63)-(36,65)) (LI 10)),Var (Just (36,67)-(36,69)) "l1"]
-Bop (Just (36,54)-(36,66)) Times (Var (Just (36,55)-(36,60)) "place") (Lit (Just (36,63)-(36,65)) (LI 10))
-Var (Just (36,71)-(36,72)) "l"
-*)
-
-(* typed spans
-(36,20)-(36,32)
-(36,34)-(36,73)
-(36,42)-(36,70)
-(36,54)-(36,66)
-(36,71)-(36,72)
-*)
-
-(* correct types
-int
-int list
-int list
-int
-int list
-*)
-
-(* bad types
-int
-int list -> int list -> int list
-int -> int list -> int list
-'a list
-'a list
+(* type error slice
+(31,46)-(31,52)
+(31,46)-(31,77)
+(31,53)-(31,54)
+(31,55)-(31,77)
+(31,56)-(31,66)
+(31,75)-(31,76)
+(35,47)-(35,71)
+(35,48)-(35,54)
+(35,55)-(35,65)
 *)

@@ -59,40 +59,24 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(18,8)-(18,12)
+(18,9)-(18,13)
 depth
 VarG
 
-(22,18)-(22,22)
+(22,19)-(22,23)
 rand (0 , 2)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(23,6)-(25,43)
-(0 , 2)
-TupleG (fromList [LitG])
-
 *)
 
-(* changed exprs
-Var (Just (18,8)-(18,13)) "depth"
-App (Just (22,18)-(22,29)) (Var (Just (22,18)-(22,22)) "rand") [Tuple (Just (22,23)-(22,29)) [Lit (Just (22,24)-(22,25)) (LI 0),Lit (Just (22,27)-(22,28)) (LI 2)]]
-Tuple (Just (22,23)-(22,29)) [Lit (Just (22,24)-(22,25)) (LI 0),Lit (Just (22,27)-(22,28)) (LI 2)]
-*)
-
-(* typed spans
-(18,8)-(18,13)
-(22,18)-(22,29)
-(22,23)-(22,29)
-*)
-
-(* correct types
-int
-int
-(int * int)
-*)
-
-(* bad types
-(int * int) -> int
-(int * int) -> int
-expr
+(* type error slice
+(18,3)-(27,74)
+(18,9)-(18,13)
+(20,19)-(20,23)
+(20,19)-(20,30)
+(22,7)-(25,44)
+(22,19)-(22,23)
+(23,10)-(23,15)
+(23,10)-(23,19)
+(23,18)-(23,19)
 *)

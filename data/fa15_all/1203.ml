@@ -9,24 +9,18 @@ let rec wwhile (f,b) = match f b with | (h,t) -> if t = false then h;;
 *)
 
 (* changed spans
-(2,67)-(2,70)
+(2,68)-(2,71)
 h
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (2,67)-(2,68)) "h"
-*)
-
-(* typed spans
-(2,67)-(2,68)
-*)
-
-(* correct types
-unit
-*)
-
-(* bad types
-unit
+(* type error slice
+(2,24)-(2,71)
+(2,30)-(2,31)
+(2,30)-(2,33)
+(2,50)-(2,71)
+(2,68)-(2,69)
+(2,68)-(2,71)
+(2,71)-(2,71)
 *)

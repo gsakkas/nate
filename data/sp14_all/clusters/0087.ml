@@ -1,5 +1,5 @@
-AppG (fromList [LitG])
-float_of_int 2
-(+) 0
-int_of_char '3'
-print_string "going into then"
+AppG (fromList [VarG,AppG (fromList [EmptyG]),LitG])
+List.fold_left (^) ""
+               (List.map f l)
+buildhelper (rand (1 , 4))
+            depth ""

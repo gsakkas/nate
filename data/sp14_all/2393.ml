@@ -21,24 +21,16 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(8,18)-(8,40)
+(8,19)-(8,41)
 n / 10
 BopG VarG LitG
 
 *)
 
-(* changed exprs
-Bop (Just (8,18)-(8,26)) Div (Var (Just (8,19)-(8,20)) "n") (Lit (Just (8,23)-(8,25)) (LI 10))
-*)
-
-(* typed spans
-(8,18)-(8,26)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int
+(* type error slice
+(8,19)-(8,41)
+(8,19)-(8,69)
+(8,20)-(8,31)
+(8,45)-(8,69)
+(8,46)-(8,57)
 *)

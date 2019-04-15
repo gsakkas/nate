@@ -1,1 +1,2 @@
-(int * bool)
+int list
+'a list

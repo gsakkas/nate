@@ -10,24 +10,22 @@ let sqsum xs =
 *)
 
 (* changed spans
-(2,27)-(2,33)
+(2,28)-(2,34)
 a + (x * x)
 BopG VarG (BopG EmptyG EmptyG)
 
 *)
 
-(* changed exprs
-Bop (Just (3,14)-(3,25)) Plus (Var (Just (3,14)-(3,15)) "a") (Bop (Just (3,18)-(3,25)) Times (Var (Just (3,19)-(3,20)) "x") (Var (Just (3,23)-(3,24)) "x"))
-*)
-
-(* typed spans
-(3,14)-(3,25)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-float
+(* type error slice
+(2,16)-(2,78)
+(2,22)-(2,34)
+(2,28)-(2,29)
+(2,28)-(2,34)
+(2,30)-(2,32)
+(2,38)-(2,78)
+(2,49)-(2,50)
+(2,54)-(2,68)
+(2,54)-(2,78)
+(2,69)-(2,70)
+(2,71)-(2,75)
 *)

@@ -1,1 +1,3 @@
-'a -> int
+float
+int
+bool

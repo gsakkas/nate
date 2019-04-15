@@ -1,3 +1,1 @@
-float
-int
-bool
+('a -> ('a * bool) * 'a)

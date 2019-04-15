@@ -15,35 +15,23 @@ let fixpoint (f,b) = wwhile ((g f), b);;
 *)
 
 (* changed spans
-(2,16)-(2,77)
-fun h ->
-  fun x ->
-    (let xx = h x in
-     (xx , xx = h x))
-LamG (LamG EmptyG)
-
-(4,30)-(4,33)
-g
-VarG
+(4,30)-(4,37)
+g f
+AppG (fromList [VarG])
 
 *)
 
-(* changed exprs
-Lam (Just (2,6)-(2,46)) (VarPat (Just (2,6)-(2,7)) "h") (Lam (Just (2,8)-(2,46)) (VarPat (Just (2,8)-(2,9)) "x") (Let (Just (2,12)-(2,46)) NonRec [(VarPat (Just (2,16)-(2,18)) "xx",App (Just (2,21)-(2,24)) (Var (Just (2,21)-(2,22)) "h") [Var (Just (2,23)-(2,24)) "x"])] (Tuple (Just (2,28)-(2,46)) [Var (Just (2,29)-(2,31)) "xx",Bop (Just (2,33)-(2,45)) Eq (Var (Just (2,34)-(2,36)) "xx") (App (Just (2,39)-(2,44)) (Var (Just (2,40)-(2,41)) "h") [Var (Just (2,42)-(2,43)) "x"])])) Nothing) Nothing
-Var (Just (6,30)-(6,31)) "g"
-*)
-
-(* typed spans
-(2,6)-(2,46)
-(6,30)-(6,31)
-*)
-
-(* correct types
-('a -> 'a) -> 'a -> ('a * bool)
-('a -> 'a) -> 'a -> ('a * bool)
-*)
-
-(* bad types
-('a -> ('a * bool) * 'a) -> 'a
-'a -> 'a -> bool
+(* type error slice
+(2,24)-(2,78)
+(2,38)-(2,39)
+(2,38)-(2,41)
+(2,56)-(2,62)
+(2,56)-(2,70)
+(2,63)-(2,70)
+(2,64)-(2,65)
+(4,22)-(4,28)
+(4,22)-(4,41)
+(4,29)-(4,41)
+(4,30)-(4,37)
+(4,31)-(4,34)
 *)

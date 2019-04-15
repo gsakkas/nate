@@ -1,2 +1,6 @@
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (AppG (fromList [VarG])) (AppG (fromList [VarG]))) LitG])))
-((fst x + snd x) mod 10) :: a
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,IteG EmptyG EmptyG EmptyG),(ConPatG Nothing,Nothing,VarG)])
+match l with
+| [] -> l
+| h :: t -> if h = 0
+            then removeZero t
+            else l

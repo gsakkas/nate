@@ -59,24 +59,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(24,6)-(24,74)
+(24,7)-(24,75)
 ([(x1 + x2) mod 10] , [(x1 + x2) / 10])
-TupleG (fromList [ListG EmptyG])
+TupleG (fromList [ListG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Tuple (Just (22,35)-(22,73)) [List (Just (22,36)-(22,54)) [Bop (Just (22,37)-(22,53)) Mod (Bop (Just (22,37)-(22,46)) Plus (Var (Just (22,38)-(22,40)) "x1") (Var (Just (22,43)-(22,45)) "x2")) (Lit (Just (22,51)-(22,53)) (LI 10))] Nothing,List (Just (22,56)-(22,72)) [Bop (Just (22,57)-(22,71)) Div (Bop (Just (22,57)-(22,66)) Plus (Var (Just (22,58)-(22,60)) "x1") (Var (Just (22,63)-(22,65)) "x2")) (Lit (Just (22,69)-(22,71)) (LI 10))] Nothing]
-*)
-
-(* typed spans
-(22,35)-(22,73)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-(int * int list)
+(* type error slice
+(22,5)-(27,52)
+(22,11)-(24,75)
+(24,7)-(24,75)
+(24,20)-(24,21)
+(24,27)-(24,42)
+(24,40)-(24,41)
+(25,5)-(27,52)
+(25,16)-(25,24)
+(25,17)-(25,19)
+(27,19)-(27,33)
+(27,19)-(27,45)
+(27,34)-(27,35)
+(27,36)-(27,40)
 *)

@@ -1,3 +1,8 @@
-SeqG (ConAppG (Just EmptyG)) (AppG (fromList [EmptyG]))
-1 :: x;
-additivePersistence (sumList (digitsOfInt n))
+LetG NonRec (fromList [(VarPatG,BopG EmptyG EmptyG)]) (CaseG EmptyG (fromList [(LitPatG,Nothing,EmptyG)]))
+let depth = depth - 1 in
+match rand (0 , 4) with
+| 0 -> buildSine (build (rand , depth))
+| 1 -> buildCosine (build (rand , depth))
+| 2 -> buildAverage (build (rand , depth) , build (rand , depth))
+| 3 -> buildTimes (build (rand , depth) , build (rand , depth))
+| 4 -> buildThresh (build (rand , depth) , build (rand , depth) , build (rand , depth) , build (rand , depth))

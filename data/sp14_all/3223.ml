@@ -67,27 +67,30 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(31,2)-(45,81)
+(31,3)-(45,82)
 match e with
 | VarX -> x
 | VarY -> y
 | Sine ex -> sin (pi *. eval (ex , x , y))
-CaseG VarG (fromList [(Nothing,VarG),(Nothing,AppG (fromList [EmptyG]))])
+CaseG VarG (fromList [(ConPatG Nothing,Nothing,VarG),(ConPatG (Just VarPatG),Nothing,AppG (fromList [EmptyG]))])
 
 *)
 
-(* changed exprs
-Case (Just (14,2)-(17,44)) (Var (Just (14,8)-(14,9)) "e") [(ConPat (Just (15,4)-(15,8)) "VarX" Nothing,Nothing,Var (Just (15,13)-(15,14)) "x"),(ConPat (Just (16,4)-(16,8)) "VarY" Nothing,Nothing,Var (Just (16,13)-(16,14)) "y"),(ConPat (Just (17,4)-(17,11)) "Sine" (Just (VarPat (Just (17,9)-(17,11)) "ex")),Nothing,App (Just (17,15)-(17,44)) (Var (Just (17,15)-(17,18)) "sin") [Bop (Just (17,19)-(17,44)) FTimes (Var (Just (17,20)-(17,22)) "pi") (App (Just (17,26)-(17,43)) (Var (Just (17,27)-(17,31)) "eval") [Tuple (Just (17,32)-(17,42)) [Var (Just (17,33)-(17,35)) "ex",Var (Just (17,37)-(17,38)) "x",Var (Just (17,40)-(17,41)) "y"]])])]
-*)
-
-(* typed spans
-(14,2)-(17,44)
-*)
-
-(* correct types
-float
-*)
-
-(* bad types
-float
+(* type error slice
+(30,4)-(45,84)
+(30,15)-(45,82)
+(31,3)-(45,82)
+(34,16)-(34,19)
+(34,16)-(34,41)
+(34,27)-(34,40)
+(34,28)-(34,32)
+(34,33)-(34,35)
+(35,18)-(35,55)
+(35,28)-(35,29)
+(37,7)-(37,74)
+(37,12)-(37,13)
+(38,24)-(38,71)
+(38,43)-(38,44)
+(40,7)-(45,82)
+(40,11)-(40,12)
 *)

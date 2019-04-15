@@ -33,34 +33,32 @@ let padZero l1 l2 =
 *)
 
 (* changed spans
-(10,15)-(10,69)
+(10,16)-(10,70)
 clone (List.hd l1)
       (List.length l1 - List.length l2)
 AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
-(13,15)-(13,69)
+(13,16)-(13,70)
 clone (List.hd l2)
       (List.length l2 - List.length l1)
 AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-App (Just (10,15)-(10,71)) (Var (Just (10,15)-(10,20)) "clone") [App (Just (10,21)-(10,33)) (Var (Just (10,22)-(10,29)) "List.hd") [Var (Just (10,30)-(10,32)) "l1"],Bop (Just (10,34)-(10,71)) Minus (App (Just (10,35)-(10,51)) (Var (Just (10,36)-(10,47)) "List.length") [Var (Just (10,48)-(10,50)) "l1"]) (App (Just (10,54)-(10,70)) (Var (Just (10,55)-(10,66)) "List.length") [Var (Just (10,67)-(10,69)) "l2"])]
-App (Just (13,15)-(13,71)) (Var (Just (13,15)-(13,20)) "clone") [App (Just (13,21)-(13,33)) (Var (Just (13,22)-(13,29)) "List.hd") [Var (Just (13,30)-(13,32)) "l2"],Bop (Just (13,34)-(13,71)) Minus (App (Just (13,35)-(13,51)) (Var (Just (13,36)-(13,47)) "List.length") [Var (Just (13,48)-(13,50)) "l2"]) (App (Just (13,54)-(13,70)) (Var (Just (13,55)-(13,66)) "List.length") [Var (Just (13,67)-(13,69)) "l1"])]
-*)
-
-(* typed spans
-(10,15)-(10,71)
-(13,15)-(13,71)
-*)
-
-(* correct types
-'a list
-'a list
-*)
-
-(* bad types
-'a list
-'a list
+(* type error slice
+(2,49)-(2,66)
+(2,50)-(2,55)
+(2,58)-(2,65)
+(10,16)-(10,21)
+(10,16)-(10,70)
+(10,30)-(10,32)
+(10,34)-(10,50)
+(10,35)-(10,46)
+(10,47)-(10,49)
+(13,16)-(13,21)
+(13,16)-(13,70)
+(13,30)-(13,32)
+(13,34)-(13,50)
+(13,35)-(13,46)
+(13,47)-(13,49)
 *)

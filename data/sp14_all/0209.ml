@@ -74,42 +74,42 @@ let rec build (rand,depth) =
 *)
 
 (* changed spans
-(28,6)-(28,75)
+(28,7)-(28,76)
 if rand (0 , 1) = 0
 then buildX ()
 else buildY ()
 IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
-(30,6)-(51,77)
+(30,7)-(51,78)
 buildX ()
 AppG (fromList [ConAppG Nothing])
 
-(30,6)-(51,77)
-buildX
-VarG
-
 *)
 
-(* changed exprs
-Ite (Just (17,9)-(17,59)) (Bop (Just (17,12)-(17,29)) Eq (App (Just (17,12)-(17,25)) (Var (Just (17,13)-(17,17)) "rand") [Tuple (Just (17,18)-(17,24)) [Lit (Just (17,19)-(17,20)) (LI 0),Lit (Just (17,22)-(17,23)) (LI 1)]]) (Lit (Just (17,28)-(17,29)) (LI 0))) (App (Just (17,35)-(17,44)) (Var (Just (17,35)-(17,41)) "buildX") [ConApp (Just (17,42)-(17,44)) "()" Nothing (Just (TApp "unit" []))]) (App (Just (17,50)-(17,59)) (Var (Just (17,50)-(17,56)) "buildY") [ConApp (Just (17,57)-(17,59)) "()" Nothing (Just (TApp "unit" []))])
-App (Just (18,9)-(18,18)) (Var (Just (18,9)-(18,15)) "buildX") [ConApp (Just (18,16)-(18,18)) "()" Nothing (Just (TApp "unit" []))]
-Var (Just (18,9)-(18,15)) "buildX"
-*)
-
-(* typed spans
-(17,9)-(17,59)
-(18,9)-(18,18)
-(18,9)-(18,15)
-*)
-
-(* correct types
-expr
-expr
-unit -> expr
-*)
-
-(* bad types
-expr
-unit
-unit
+(* type error slice
+(17,4)-(17,70)
+(17,18)-(17,68)
+(17,39)-(17,68)
+(19,4)-(19,42)
+(19,17)-(19,40)
+(19,26)-(19,40)
+(23,4)-(23,23)
+(23,12)-(23,21)
+(23,17)-(23,21)
+(26,3)-(51,78)
+(28,7)-(28,76)
+(28,39)-(28,76)
+(28,67)-(28,73)
+(28,67)-(28,76)
+(30,7)-(51,78)
+(31,7)-(51,78)
+(34,9)-(51,78)
+(37,11)-(51,78)
+(42,13)-(51,78)
+(44,15)-(44,25)
+(44,15)-(45,75)
+(47,15)-(51,78)
+(49,17)-(49,28)
+(49,17)-(51,78)
+(51,78)-(51,78)
 *)

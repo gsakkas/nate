@@ -51,25 +51,28 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(21,24)-(21,58)
+(21,25)-(21,59)
 List.combine (0 :: l1)
              (0 :: l2)
-AppG (fromList [ConAppG (Just (TupleG (fromList [VarG,LitG])))])
+AppG (fromList [ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-App (Just (21,24)-(21,58)) (Var (Just (21,25)-(21,37)) "List.combine") [ConApp (Just (21,38)-(21,47)) "::" (Just (Tuple (Just (21,39)-(21,46)) [Lit (Just (21,39)-(21,40)) (LI 0),Var (Just (21,44)-(21,46)) "l1"])) Nothing,ConApp (Just (21,48)-(21,57)) "::" (Just (Tuple (Just (21,49)-(21,56)) [Lit (Just (21,49)-(21,50)) (LI 0),Var (Just (21,54)-(21,56)) "l2"])) Nothing]
-*)
-
-(* typed spans
-(21,24)-(21,58)
-*)
-
-(* correct types
-(int * int) list
-*)
-
-(* bad types
-(int * int) list
+(* type error slice
+(15,5)-(22,52)
+(15,11)-(19,71)
+(15,13)-(19,71)
+(17,7)-(19,71)
+(17,21)-(17,22)
+(21,5)-(22,52)
+(21,16)-(21,24)
+(21,16)-(21,59)
+(21,25)-(21,59)
+(21,26)-(21,42)
+(21,27)-(21,39)
+(21,40)-(21,41)
+(22,19)-(22,33)
+(22,19)-(22,45)
+(22,34)-(22,35)
+(22,41)-(22,45)
 *)

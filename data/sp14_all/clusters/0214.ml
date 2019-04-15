@@ -1,2 +1,7 @@
-TupleG (fromList [VarG,ConAppG (Just (TupleG (fromList [BopG VarG LitG,ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))])))])
-(p1 , (re / 10) :: ((re mod 10) :: b))
+CaseG VarG (fromList [(VarPatG,Nothing,IteG EmptyG EmptyG EmptyG),(LitPatG,Nothing,VarG),(WildPatG,Nothing,AppG (fromList [EmptyG]))])
+match n with
+| _ -> listReverse ns
+| 0 -> ns
+| n -> if n < 0
+       then []
+       else (n mod 10) :: (digitsOfInt (n / 10))

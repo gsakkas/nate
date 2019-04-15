@@ -37,7 +37,7 @@ let rec digitalRoot n =
 *)
 
 (* changed spans
-(15,2)-(15,74)
+(15,3)-(15,75)
 if sumList (digits n) > 9
 then digitalRoot (sumList (digits n))
 else sumList (digits n)
@@ -45,18 +45,16 @@ IteG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG])) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Ite (Just (15,2)-(17,25)) (Bop (Just (15,5)-(15,29)) Gt (App (Just (15,5)-(15,25)) (Var (Just (15,6)-(15,13)) "sumList") [App (Just (15,14)-(15,24)) (Var (Just (15,15)-(15,21)) "digits") [Var (Just (15,22)-(15,23)) "n"]]) (Lit (Just (15,28)-(15,29)) (LI 9))) (App (Just (16,7)-(16,39)) (Var (Just (16,7)-(16,18)) "digitalRoot") [App (Just (16,19)-(16,39)) (Var (Just (16,20)-(16,27)) "sumList") [App (Just (16,28)-(16,38)) (Var (Just (16,29)-(16,35)) "digits") [Var (Just (16,36)-(16,37)) "n"]]]) (App (Just (17,7)-(17,25)) (Var (Just (17,7)-(17,14)) "sumList") [App (Just (17,15)-(17,25)) (Var (Just (17,16)-(17,22)) "digits") [Var (Just (17,23)-(17,24)) "n"]])
-*)
-
-(* typed spans
-(15,2)-(17,25)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-'a
+(* type error slice
+(12,22)-(12,71)
+(12,56)-(12,71)
+(12,60)-(12,71)
+(12,61)-(12,68)
+(12,69)-(12,70)
+(15,3)-(15,75)
+(15,11)-(15,18)
+(15,11)-(15,29)
+(15,66)-(15,73)
+(15,66)-(15,75)
+(15,74)-(15,75)
 *)

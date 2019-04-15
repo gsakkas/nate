@@ -1,4 +1,4 @@
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
 let (carry , currentSum) =
   a in
 let (toSum1 , toSum2) = x in
@@ -12,21 +12,10 @@ let carry =
 let (m , n) = x in
 let (y , z) = a in
 (addition (m , n) / 10 , [addition (m , n) mod 10])
-let (ll , accumulate) = a in
-let multed =
-  mulByDigit x l1 in
-let accumulate =
-  List.append accumulate [0] in
-(l1 , bigAdd accumulate
-             multed)
 let (x1 , x2) = x in
 let (carry , sum) = a in
 ((x1 + x2) / 10 , (((x1 + x2) + carry) mod 10) :: sum)
 let (a1 , a2) = a in
-let (x1 , x2) = x in
-let val1 = (a1 + x1) + x2 in
-let val2 = (x1 + x2) / 10 in
-(val2 , val1 :: a2)
 let (x1 , x2) = x in
 let val1 = (a1 + x1) + x2 in
 let val2 = (x1 + x2) / 10 in
@@ -63,9 +52,6 @@ else (carry' , acc)
 let (carry , ans) = a in
 let (y , z) = x in
 ((y + z) + carry) > 9
-let seen' = seen in
-let rest' = t in
-helper (seen' , rest')
 let (x1 , x2) = x in
 let (carry , res) = a in
 (((x1 + x2) + carry) / 10 , (((x1 + x2) + carry) mod 10) :: res)
@@ -76,14 +62,6 @@ let (carry , res) = a in
 let (l1x , l2x) = x in
 let (a1 , a2) = a in
 (a1 , (l1x + l2x) :: a2)
-let (a1 , a2) = a in
-let test =
-  match a1 with
-  | [] -> 1
-  | h :: t -> 10 * h in
-let multi =
-  mulByDigit (test * x) l1 in
-(test :: a1 , bigAdd multi a2)
 let (x1 , x2) = x in
 let (a1 , a2) = a in
 if (x1 + x2) > 10
@@ -108,10 +86,3 @@ let (l , m) = a in
 if ((j + k) + l) > 9
 then (1 , (((j + k) + l) - 10) :: m)
 else (0 , ((j + k) + l) :: m)
-let (c , a1 :: a2) = a in
-let v = (x1 + x2) + c in
-(v / 10 , [v / 10] @ ([v mod 10] @ a2))
-let (c , a') = a in
-let m = mulByDigit x l2 in
-let s = bigAdd m a' in
-(c + 1 , s)

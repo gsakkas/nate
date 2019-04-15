@@ -1,3 +1,5 @@
-ConAppG (Just (TupleG (fromList [VarG,LitG])))
-0 :: ns
-0 :: l2
+IteG (BopG EmptyG EmptyG) (LamG VarPatG EmptyG) (LamG VarPatG EmptyG)
+if f b = b
+then (fun b'' ->
+        (f b , false))
+else (fun b'' -> (f b , true))

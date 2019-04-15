@@ -1,2 +1,4 @@
 int
+float
 bool
+'tNewPart

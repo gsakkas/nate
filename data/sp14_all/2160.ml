@@ -23,32 +23,22 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(7,23)-(7,41)
+(7,24)-(7,42)
 List.mem h seen
 AppG (fromList [VarG])
 
-(7,20)-(7,56)
+(7,57)-(7,57)
 h :: seen
-ConAppG (Just (TupleG (fromList [VarG])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
 *)
 
-(* changed exprs
-App (Just (7,23)-(7,38)) (Var (Just (7,23)-(7,31)) "List.mem") [Var (Just (7,32)-(7,33)) "h",Var (Just (7,34)-(7,38)) "seen"]
-ConApp (Just (7,59)-(7,68)) "::" (Just (Tuple (Just (7,59)-(7,68)) [Var (Just (7,59)-(7,60)) "h",Var (Just (7,64)-(7,68)) "seen"])) Nothing
-*)
-
-(* typed spans
-(7,23)-(7,38)
-(7,59)-(7,68)
-*)
-
-(* correct types
-bool
-'a list
-*)
-
-(* bad types
-bool
-unit
+(* type error slice
+(7,21)-(7,57)
+(7,24)-(7,25)
+(7,24)-(7,42)
+(7,25)-(7,42)
+(7,26)-(7,34)
+(7,48)-(7,57)
+(7,57)-(7,57)
 *)

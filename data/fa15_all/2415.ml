@@ -25,24 +25,22 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(8,25)-(8,29)
-EMPTY
-EmptyG
+(8,26)-(8,30)
+h
+VarG
 
-(8,65)-(8,74)
+(8,31)-(8,32)
 seen
 VarG
 
 *)
 
-(* typed spans
-(8,48)-(8,52)
-*)
-
-(* typed spans
-'a list
-*)
-
-(* typed spans
-'a list list list
+(* type error slice
+(8,17)-(8,25)
+(8,17)-(8,32)
+(8,26)-(8,30)
+(8,31)-(8,32)
+(8,66)-(8,67)
+(8,66)-(8,75)
+(8,71)-(8,75)
 *)

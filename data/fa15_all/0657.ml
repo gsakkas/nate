@@ -17,56 +17,22 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(3,53)-(3,74)
+(3,54)-(3,75)
 front :: (add back next)
-ConAppG (Just (TupleG (fromList [VarG,AppG (fromList [VarG])])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
-(6,25)-(6,47)
-add
-VarG
-
-(6,52)-(6,62)
-n mod 10
-BopG VarG LitG
-
-(6,52)-(6,62)
-n
-VarG
-
-(6,52)-(6,62)
-10
-LitG
+(6,26)-(6,63)
+add (digitsOfInt (n / 10))
+    (n mod 10)
+AppG (fromList [AppG (fromList [EmptyG]),BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-ConApp (Just (3,53)-(3,77)) "::" (Just (Tuple (Just (3,53)-(3,77)) [Var (Just (3,53)-(3,58)) "front",App (Just (3,62)-(3,77)) (Var (Just (3,63)-(3,66)) "add") [Var (Just (3,67)-(3,71)) "back",Var (Just (3,72)-(3,76)) "next"]])) Nothing
-Var (Just (6,25)-(6,28)) "add"
-Bop (Just (6,52)-(6,62)) Mod (Var (Just (6,53)-(6,54)) "n") (Lit (Just (6,59)-(6,61)) (LI 10))
-Var (Just (6,53)-(6,54)) "n"
-Lit (Just (6,59)-(6,61)) (LI 10)
-*)
-
-(* typed spans
-(3,53)-(3,77)
-(6,25)-(6,28)
-(6,52)-(6,62)
-(6,53)-(6,54)
-(6,59)-(6,61)
-*)
-
-(* correct types
-int list
-int list -> int -> int list
-int
-int
-int
-*)
-
-(* bad types
-'a list
-('a list -> 'a list list -> 'a -> 'a list) -> int list -> 'b list
-int list
-int list
-int list
+(* type error slice
+(5,4)-(6,65)
+(5,21)-(6,63)
+(6,3)-(6,63)
+(6,26)-(6,48)
+(6,26)-(6,63)
+(6,27)-(6,38)
 *)

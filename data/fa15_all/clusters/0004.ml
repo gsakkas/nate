@@ -1,55 +1,44 @@
-AppG (fromList [AppG (fromList [EmptyG])])
-List.rev (List.combine l1 l2)
-exprToString e1 ^ ("*" ^ exprToString e2)
-not (List.mem h seen)
-sumList (digits n)
-exprToString e1 ^ ("+" ^ exprToString e2)
-sumList (digitsOfInt n)
-x (a n)
-buildSine (build (rand , depth - 1))
-f (f (f (f b)))
-listReverse (explode w)
-buildCosine (build (rand , depth - 1))
-exprToString expr ^ ("^2-" ^ (exprToString expr ^ "-1)"))
-digitalRoot (sumList (digitsOfInt n))
-sumList (digitsOfInt x)
-List.rev ([0] @ l1)
-List.combine (List.rev (0 :: l1))
-             (List.rev (0 :: l2))
-intListToInt (mulByDigit (intListToInt l1)
-                         [s])
-carryFunc (mulByDigit (intListToInt l1)
-                      [s])
-List.rev (List.combine l2 l2)
-exprToString e ^ ("*" ^ exprToString f)
-x (a b)
-additivePersistence (sumList x)
-additivePersistence (sumList (digits n))
-log (eval (nlog , x , y))
-exprToString e ^ ("*" ^ exprToString ex)
-List.combine (List.rev l1)
-             (List.rev l2)
-x (a y)
-exprToString e ^ ("*" ^ exprToString e)
-additivePersistence (sumList (digitsOfInt n))
-List.rev (helper l1 l2)
-not (List.mem h l)
-List.rev (mulByDigit (i - 1)
-                     l)
-x (a x')
-exprToString x ^ ("*" ^ exprToString y)
-matchHeads (loseTail t)
-getHead (listReverse x)
-matchHeads (getTail (listReverse t))
-matchHeads (explode w)
-exprToString e1 ^ (" * " ^ (exprToString e2 ^ ") /6)"))
-bigAdd total (mulByDigit x
-                         l2) @ listZeros pow
-atan (eval (e1 , x , y))
-exprToString a ^ ("*" ^ exprToString b)
-mulByDigit i
-           t' @ ([remainder h'
-                            i + carry h i] @ [remainder h
-                                                        i])
-x (x a)
-add (padZero l1 l2)
+LitG
+0
+""
+2.0
+3.0
+4.0
+1.0
+"("
+"1/sin(pi*"
+")"
+"cos(pi*"
+"sin(pi*"
+"List.map f l"
+30.0
+0.0
+"sin"
+"+"
+"*"
+"?"
+":"
+1
+8
+false
+10.0
+")/2)"
+"; "
+5.0
+"x"
+"y"
+true
+10
+")/"
+"log("
+" + "
+")/("
+"]"
+4
+"(("
+2
+'u'
+6.0
+" * "
+" "
+"["

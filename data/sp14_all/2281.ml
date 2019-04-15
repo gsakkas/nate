@@ -81,32 +81,17 @@ let rec exprToString e =
 *)
 
 (* changed spans
-(38,29)-(38,53)
+(38,30)-(38,54)
 "cos("
 LitG
 
-(38,29)-(38,53)
+(38,57)-(38,61)
 exprToString e3 ^ "))"
 AppG (fromList [AppG (fromList [EmptyG]),LitG])
 
 *)
 
-(* changed exprs
-Lit (Just (38,29)-(38,35)) (LS "cos(")
-App (Just (38,38)-(38,64)) (Var (Just (38,57)-(38,58)) "^") [App (Just (38,39)-(38,56)) (Var (Just (38,40)-(38,52)) "exprToString") [Var (Just (38,53)-(38,55)) "e3"],Lit (Just (38,59)-(38,63)) (LS "))")]
-*)
-
-(* typed spans
-(38,29)-(38,35)
-(38,38)-(38,64)
-*)
-
-(* correct types
-string
-string
-*)
-
-(* bad types
-string
-string
+(* type error slice
+(38,30)-(38,54)
+(38,31)-(38,37)
 *)

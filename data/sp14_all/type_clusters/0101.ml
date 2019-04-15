@@ -1,1 +1,1 @@
-'tEMPTY
+float

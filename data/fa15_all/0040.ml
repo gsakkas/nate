@@ -37,32 +37,36 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(14,14)-(14,29)
+(14,15)-(14,30)
 (0 , mulByDigit x l1)
 TupleG (fromList [AppG (fromList [EmptyG]),LitG])
 
-(15,13)-(15,15)
+(15,14)-(15,16)
 (0 , [])
-TupleG (fromList [LitG,ListG EmptyG])
+TupleG (fromList [LitG,ListG (fromList [])])
 
 *)
 
-(* changed exprs
-Tuple (Just (14,14)-(14,36)) [Lit (Just (14,15)-(14,16)) (LI 0),App (Just (14,18)-(14,35)) (Var (Just (14,19)-(14,29)) "mulByDigit") [Var (Just (14,30)-(14,31)) "x",Var (Just (14,32)-(14,34)) "l1"]]
-Tuple (Just (15,13)-(15,20)) [Lit (Just (15,14)-(15,15)) (LI 0),List (Just (15,17)-(15,19)) [] Nothing]
-*)
-
-(* typed spans
-(14,14)-(14,36)
-(15,13)-(15,20)
-*)
-
-(* correct types
-(int * int list)
-(int * int list)
-*)
-
-(* bad types
-int list
-int list
+(* type error slice
+(3,3)-(3,70)
+(3,9)-(3,10)
+(3,37)-(3,70)
+(3,51)-(3,61)
+(3,51)-(3,63)
+(3,69)-(3,70)
+(5,4)-(11,31)
+(5,20)-(11,29)
+(5,22)-(11,29)
+(6,3)-(11,29)
+(11,3)-(11,13)
+(11,3)-(11,29)
+(14,3)-(16,67)
+(14,9)-(14,30)
+(14,11)-(14,30)
+(14,15)-(14,25)
+(14,15)-(14,30)
+(16,20)-(16,67)
+(16,34)-(16,48)
+(16,34)-(16,60)
+(16,49)-(16,50)
 *)

@@ -53,59 +53,24 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(4,12)-(9,43)
-fun (t , u) ->
-  match List.rev t with
-  | [] -> []
-  | h :: t -> match List.rev u with
-              | [] -> []
-              | h' :: t' -> if (h + h') > 10
-                            then addHelper (t , t') @ [(1 + h') + h]
-                            else addHelper (t , t') @ [h' + h]
-LamG (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
-
-(16,16)-(16,21)
+(16,17)-(16,22)
 addHelper (a , x)
 AppG (fromList [TupleG (fromList [EmptyG])])
 
-(16,20)-(16,21)
-(a , x)
-TupleG (fromList [VarG])
-
-(17,4)-(18,74)
-x
-VarG
-
-(18,15)-(18,23)
+(18,16)-(18,24)
 []
-ListG EmptyG
+ListG (fromList [])
 
-(18,71)-(18,74)
-EMPTY
-EmptyG
+(18,28)-(18,75)
+List.fold_left f base args
+AppG (fromList [VarG])
 
 *)
 
-(* typed spans
-(4,19)-(13,47)
-(27,16)-(27,32)
-(27,26)-(27,32)
-(27,30)-(27,31)
-(28,32)-(28,34)
-*)
-
-(* typed spans
-(int list * int list) -> int list
-int list
-(int list * int list)
-int list
-int list list
-*)
-
-(* typed spans
-int list -> int list -> (int list * int list)
-'a list
-'a list
-int list
-(int list * int list)
+(* type error slice
+(18,5)-(18,75)
+(18,16)-(18,24)
+(18,42)-(18,56)
+(18,42)-(18,68)
+(18,64)-(18,68)
 *)

@@ -1,11 +1,10 @@
-LamG (ConAppG (Just (TupleG (fromList [VarG]))))
-fun (a , b , a_less , b_less) ->
-  Thresh (a , b , a_less , b_less)
-fun (e1 , e2) ->
-  Average (e1 , e2)
-fun (e1 , e2) ->
-  Times (e1 , e2)
-fun (e1 , e2 , e3) ->
-  Weird (e1 , e2 , e3)
-fun (e1 , e2) ->
-  Tangent (e1 , e2)
+AppG (fromList [ConAppG (Just EmptyG)])
+List.rev (h1 :: t1)
+listReverse (hd :: l)
+listReverse (h :: l)
+padZero (0 :: l1) (0 :: l2)
+List.rev (0 :: l1)
+List.rev (0 :: l2)
+mulHelper (0 :: (List.rev l))
+List.combine (0 :: l1)
+             (0 :: l2)

@@ -60,45 +60,49 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(18,41)-(18,42)
+(18,42)-(18,43)
 [x]
-ListG VarG
+ListG (fromList [VarG])
 
-(18,48)-(18,76)
+(18,49)-(18,77)
 intlist (x / 10) @ [x mod 10]
-AppG (fromList [AppG (fromList [EmptyG]),ListG EmptyG])
+AppG (fromList [AppG (fromList [EmptyG]),ListG (fromList [EmptyG])])
 
-(21,10)-(23,65)
+(21,11)-(23,66)
 match a with
 | [] -> (let sum = z + y in
          intlist sum)
 | h :: t -> (let sum =
                (h + z) + y in
              intlist sum @ t)
-CaseG VarG (fromList [(Nothing,LetG NonRec (fromList [EmptyG]) EmptyG)])
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG),(ConPatG Nothing,Nothing,LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG)])
 
 *)
 
-(* changed exprs
-List (Just (19,23)-(19,26)) [Var (Just (19,24)-(19,25)) "x"] Nothing
-App (Just (19,32)-(19,63)) (Var (Just (19,51)-(19,52)) "@") [App (Just (19,32)-(19,50)) (Var (Just (19,33)-(19,40)) "intlist") [Bop (Just (19,41)-(19,49)) Div (Var (Just (19,42)-(19,43)) "x") (Lit (Just (19,46)-(19,48)) (LI 10))],List (Just (19,53)-(19,63)) [Bop (Just (19,54)-(19,62)) Mod (Var (Just (19,54)-(19,55)) "x") (Lit (Just (19,60)-(19,62)) (LI 10))] Nothing]
-Case (Just (22,10)-(24,64)) (Var (Just (22,17)-(22,18)) "a") [(ConPat (Just (23,13)-(23,15)) "[]" Nothing,Nothing,Let (Just (23,19)-(23,49)) NonRec [(VarPat (Just (23,23)-(23,26)) "sum",Bop (Just (23,29)-(23,34)) Plus (Var (Just (23,29)-(23,30)) "z") (Var (Just (23,33)-(23,34)) "y"))] (App (Just (23,38)-(23,49)) (Var (Just (23,38)-(23,45)) "intlist") [Var (Just (23,46)-(23,49)) "sum"])),(ConsPat (Just (24,13)-(24,17)) (VarPat (Just (24,13)-(24,14)) "h") (VarPat (Just (24,16)-(24,17)) "t"),Nothing,Let (Just (24,21)-(24,63)) NonRec [(VarPat (Just (24,25)-(24,28)) "sum",Bop (Just (24,31)-(24,42)) Plus (Bop (Just (24,31)-(24,38)) Plus (Var (Just (24,32)-(24,33)) "h") (Var (Just (24,36)-(24,37)) "z")) (Var (Just (24,41)-(24,42)) "y"))] (App (Just (24,46)-(24,63)) (Var (Just (24,60)-(24,61)) "@") [App (Just (24,46)-(24,59)) (Var (Just (24,47)-(24,54)) "intlist") [Var (Just (24,55)-(24,58)) "sum"],Var (Just (24,62)-(24,63)) "t"]))]
-*)
-
-(* typed spans
-(19,23)-(19,26)
-(19,32)-(19,63)
-(22,10)-(24,64)
-*)
-
-(* correct types
-int list
-int list
-int list
-*)
-
-(* bad types
-int
-int list
-int
+(* type error slice
+(17,5)-(26,48)
+(17,11)-(23,66)
+(18,27)-(18,77)
+(18,30)-(18,31)
+(18,30)-(18,36)
+(18,34)-(18,36)
+(18,42)-(18,43)
+(18,49)-(18,77)
+(21,11)-(23,66)
+(21,18)-(21,19)
+(22,19)-(22,55)
+(22,29)-(22,36)
+(22,30)-(22,31)
+(22,44)-(22,51)
+(22,44)-(22,55)
+(23,22)-(23,65)
+(23,47)-(23,60)
+(23,47)-(23,65)
+(23,48)-(23,55)
+(24,5)-(26,48)
+(24,16)-(24,18)
+(26,15)-(26,29)
+(26,15)-(26,41)
+(26,30)-(26,31)
+(26,32)-(26,36)
 *)

@@ -19,40 +19,24 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(4,43)-(4,64)
-xs2
-VarG
-
-(4,58)-(4,60)
-append tl xs2
-AppG (fromList [VarG])
-
-(4,62)-(4,64)
-xs2
-VarG
+(4,44)-(4,65)
+hd :: (append tl xs2)
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
 *)
 
-(* changed exprs
-Var (Just (4,27)-(4,30)) "xs2"
-App (Just (4,49)-(4,64)) (Var (Just (4,50)-(4,56)) "append") [Var (Just (4,57)-(4,59)) "tl",Var (Just (4,60)-(4,63)) "xs2"]
-Var (Just (4,60)-(4,63)) "xs2"
-*)
-
-(* typed spans
-(4,27)-(4,30)
-(4,49)-(4,64)
-(4,60)-(4,63)
-*)
-
-(* correct types
-int list
-int list
-int list
-*)
-
-(* bad types
-'a
-'a list
-'a list list
+(* type error slice
+(3,3)-(7,11)
+(3,18)-(4,65)
+(4,5)-(4,65)
+(4,44)-(4,50)
+(4,44)-(4,65)
+(4,51)-(4,62)
+(4,52)-(4,55)
+(4,59)-(4,61)
+(4,63)-(4,65)
+(6,35)-(6,41)
+(6,35)-(6,70)
+(6,60)-(6,70)
+(6,61)-(6,69)
 *)

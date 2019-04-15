@@ -107,96 +107,56 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(37,57)-(37,58)
-fun l ->
-  int_of_string (sepConcat ""
-                           (List.map string_of_int l))
-LamG (AppG (fromList [EmptyG]))
+(29,20)-(30,56)
+EMPTY
+EmptyG
 
-(37,57)-(37,58)
+(51,1)-(51,1)
 fun i ->
   fun l ->
     if i > 0
     then bigAdd l
                 (mulByDigit (i - 1) l)
     else []
-LamG (LamG EmptyG)
+LamG VarPatG (LamG VarPatG EmptyG)
 
-(44,8)-(47,43)
+(44,19)-(44,65)
 intListToInt (mulByDigit (intListToInt l1)
                          [s])
 AppG (fromList [AppG (fromList [EmptyG])])
 
-(44,44)-(44,61)
-intListToInt
-VarG
-
-(44,58)-(44,60)
-[s]
-ListG VarG
-
-(49,13)-(49,42)
+(49,14)-(49,43)
 List.combine l2 l2
 AppG (fromList [VarG])
 
-(49,13)-(49,42)
-List.combine
-VarG
-
-(49,13)-(49,42)
-l2
-VarG
-
-(49,13)-(49,42)
-l2
-VarG
-
 *)
 
-(* changed exprs
-Lam (Just (36,17)-(36,76)) (VarPat (Just (36,17)-(36,18)) "l") (App (Just (36,21)-(36,76)) (Var (Just (36,21)-(36,34)) "int_of_string") [App (Just (36,35)-(36,76)) (Var (Just (36,36)-(36,45)) "sepConcat") [Lit (Just (36,46)-(36,48)) (LS ""),App (Just (36,49)-(36,75)) (Var (Just (36,50)-(36,58)) "List.map") [Var (Just (36,59)-(36,72)) "string_of_int",Var (Just (36,73)-(36,74)) "l"]]]) Nothing
-Lam (Just (38,19)-(39,55)) (VarPat (Just (38,19)-(38,20)) "i") (Lam (Just (38,21)-(39,55)) (VarPat (Just (38,21)-(38,22)) "l") (Ite (Just (39,2)-(39,55)) (Bop (Just (39,5)-(39,10)) Gt (Var (Just (39,5)-(39,6)) "i") (Lit (Just (39,9)-(39,10)) (LI 0))) (App (Just (39,16)-(39,47)) (Var (Just (39,16)-(39,22)) "bigAdd") [Var (Just (39,23)-(39,24)) "l",App (Just (39,25)-(39,47)) (Var (Just (39,26)-(39,36)) "mulByDigit") [Bop (Just (39,37)-(39,44)) Minus (Var (Just (39,38)-(39,39)) "i") (Lit (Just (39,42)-(39,43)) (LI 1)),Var (Just (39,45)-(39,46)) "l"]]) (List (Just (39,53)-(39,55)) [] Nothing)) Nothing) Nothing
-App (Just (46,18)-(46,65)) (Var (Just (46,18)-(46,30)) "intListToInt") [App (Just (46,31)-(46,65)) (Var (Just (46,32)-(46,42)) "mulByDigit") [App (Just (46,43)-(46,60)) (Var (Just (46,44)-(46,56)) "intListToInt") [Var (Just (46,57)-(46,59)) "l1"],List (Just (46,61)-(46,64)) [Var (Just (46,62)-(46,63)) "s"] Nothing]]
-Var (Just (46,44)-(46,56)) "intListToInt"
-List (Just (46,61)-(46,64)) [Var (Just (46,62)-(46,63)) "s"] Nothing
-App (Just (51,13)-(51,31)) (Var (Just (51,13)-(51,25)) "List.combine") [Var (Just (51,26)-(51,28)) "l2",Var (Just (51,29)-(51,31)) "l2"]
-Var (Just (51,13)-(51,25)) "List.combine"
-Var (Just (51,26)-(51,28)) "l2"
-Var (Just (51,29)-(51,31)) "l2"
-*)
-
-(* typed spans
-(36,17)-(36,76)
-(38,19)-(39,55)
-(46,18)-(46,65)
-(46,44)-(46,56)
-(46,61)-(46,64)
-(51,13)-(51,31)
-(51,13)-(51,25)
-(51,26)-(51,28)
-(51,29)-(51,31)
-*)
-
-(* correct types
-int list -> int
-int -> int list -> int list
-int
-int list -> int
-int list
-(int * int) list
-int list -> int list -> (int * int) list
-int list
-int list
-*)
-
-(* bad types
-string list
-string list
-(int * int list)
-string
-string list
-(int list * int list) list
-(int list * int list) list
-(int list * int list) list
-(int list * int list) list
+(* type error slice
+(4,4)-(10,20)
+(4,13)-(10,18)
+(4,16)-(10,18)
+(9,45)-(9,61)
+(9,46)-(9,57)
+(9,58)-(9,60)
+(15,4)-(27,37)
+(15,12)-(27,35)
+(15,15)-(27,35)
+(27,19)-(27,34)
+(27,20)-(27,27)
+(27,31)-(27,33)
+(30,17)-(30,23)
+(30,17)-(30,48)
+(30,26)-(30,48)
+(30,27)-(30,37)
+(44,9)-(47,44)
+(44,19)-(44,29)
+(44,19)-(44,65)
+(45,12)-(45,21)
+(45,13)-(45,16)
+(46,16)-(46,25)
+(46,17)-(46,20)
+(46,35)-(46,44)
+(46,36)-(46,39)
+(47,20)-(47,29)
+(47,21)-(47,24)
 *)

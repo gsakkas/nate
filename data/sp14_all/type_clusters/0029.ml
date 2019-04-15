@@ -1,2 +1,4 @@
-'a -> ('a * bool)
-int -> (int * bool)
+expr
+string
+int list
+'a

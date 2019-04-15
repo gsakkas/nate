@@ -67,25 +67,14 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(29,15)-(29,51)
+(29,16)-(29,52)
 List.combine (List.rev l1)
              (List.rev l2)
 AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (29,15)-(29,55)) (Var (Just (29,15)-(29,27)) "List.combine") [App (Just (29,28)-(29,41)) (Var (Just (29,29)-(29,37)) "List.rev") [Var (Just (29,38)-(29,40)) "l1"],App (Just (29,42)-(29,55)) (Var (Just (29,43)-(29,51)) "List.rev") [Var (Just (29,52)-(29,54)) "l2"]]
-*)
-
-(* typed spans
-(29,15)-(29,55)
-*)
-
-(* correct types
-(int * int) list
-*)
-
-(* bad types
-(int * int) list
+(* type error slice
+(29,16)-(29,28)
+(29,16)-(29,52)
 *)

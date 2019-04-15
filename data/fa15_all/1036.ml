@@ -25,48 +25,41 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(8,28)-(8,40)
+(8,29)-(8,41)
 0
 LitG
 
-(8,28)-(8,40)
+(8,45)-(8,47)
 0 :: (0 :: (0 :: l1))
-ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])))])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
-(9,17)-(9,29)
+(9,18)-(9,30)
 0
 LitG
 
-(9,17)-(9,29)
+(9,34)-(9,36)
 0 :: (0 :: (0 :: l2))
-ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [LitG,ConAppG (Just (TupleG (fromList [VarG,LitG])))])))])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
 *)
 
-(* changed exprs
-Lit (Just (8,28)-(8,29)) (LI 0)
-ConApp (Just (8,33)-(8,50)) "::" (Just (Tuple (Just (8,33)-(8,50)) [Lit (Just (8,33)-(8,34)) (LI 0),ConApp (Just (8,38)-(8,50)) "::" (Just (Tuple (Just (8,38)-(8,50)) [Lit (Just (8,38)-(8,39)) (LI 0),ConApp (Just (8,43)-(8,50)) "::" (Just (Tuple (Just (8,43)-(8,50)) [Lit (Just (8,43)-(8,44)) (LI 0),Var (Just (8,48)-(8,50)) "l1"])) Nothing])) Nothing])) Nothing
-Lit (Just (9,17)-(9,18)) (LI 0)
-ConApp (Just (9,22)-(9,39)) "::" (Just (Tuple (Just (9,22)-(9,39)) [Lit (Just (9,22)-(9,23)) (LI 0),ConApp (Just (9,27)-(9,39)) "::" (Just (Tuple (Just (9,27)-(9,39)) [Lit (Just (9,27)-(9,28)) (LI 0),ConApp (Just (9,32)-(9,39)) "::" (Just (Tuple (Just (9,32)-(9,39)) [Lit (Just (9,32)-(9,33)) (LI 0),Var (Just (9,37)-(9,39)) "l2"])) Nothing])) Nothing])) Nothing
-*)
-
-(* typed spans
-(8,28)-(8,29)
-(8,33)-(8,50)
-(9,17)-(9,18)
-(9,22)-(9,39)
-*)
-
-(* correct types
-int
-int list
-int
-int list
-*)
-
-(* bad types
-int list
-int list
-int list
-int list
+(* type error slice
+(3,3)-(10,50)
+(3,9)-(5,74)
+(3,11)-(5,74)
+(5,5)-(5,74)
+(5,17)-(5,18)
+(5,30)-(5,37)
+(5,35)-(5,36)
+(7,3)-(10,50)
+(8,5)-(8,17)
+(8,5)-(9,38)
+(9,7)-(9,38)
+(9,8)-(9,16)
+(9,17)-(9,37)
+(9,18)-(9,30)
+(10,17)-(10,31)
+(10,17)-(10,43)
+(10,32)-(10,33)
+(10,39)-(10,43)
 *)

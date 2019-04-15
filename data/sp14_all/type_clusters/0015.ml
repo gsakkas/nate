@@ -1,5 +1,2 @@
-'a -> 'a
-'a -> 'b
-(int -> int * int) -> int
-int -> int
-int -> int list
+(int * int list)
+(int list * int list)

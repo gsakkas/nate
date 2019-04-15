@@ -11,24 +11,18 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(3,38)-(3,46)
+(3,39)-(3,47)
 [hd * i]
-ListG (BopG EmptyG EmptyG)
+ListG (fromList [BopG EmptyG EmptyG])
 
-(3,49)-(3,66)
-EMPTY
-EmptyG
+(3,50)-(3,67)
+mulByDigit i tl
+AppG (fromList [VarG])
 
 *)
 
-(* typed spans
-(3,38)-(3,46)
-*)
-
-(* typed spans
-int list
-*)
-
-(* typed spans
-int
+(* type error slice
+(3,39)-(3,47)
+(3,39)-(3,67)
+(3,48)-(3,49)
 *)

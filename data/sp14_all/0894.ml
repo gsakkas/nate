@@ -39,24 +39,17 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(15,15)-(15,17)
+(15,16)-(15,18)
 ([] , [])
-TupleG (fromList [ListG EmptyG])
+TupleG (fromList [ListG (fromList [])])
 
 *)
 
-(* changed exprs
-Tuple (Just (15,15)-(15,23)) [List (Just (15,16)-(15,18)) [] Nothing,List (Just (15,20)-(15,22)) [] Nothing]
-*)
-
-(* typed spans
-(15,15)-(15,23)
-*)
-
-(* correct types
-('a list * int list)
-*)
-
-(* bad types
-'a list
+(* type error slice
+(15,5)-(16,69)
+(15,16)-(15,18)
+(16,22)-(16,69)
+(16,36)-(16,50)
+(16,36)-(16,62)
+(16,53)-(16,57)
 *)

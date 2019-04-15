@@ -24,24 +24,14 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(8,10)-(8,69)
+(8,11)-(8,70)
 if true then [] else [h]
-IteG LitG (ListG EmptyG) (ListG EmptyG)
+IteG LitG (ListG (fromList [])) (ListG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Ite (Just (7,20)-(7,44)) (Lit (Just (7,23)-(7,27)) (LB True)) (List (Just (7,33)-(7,35)) [] Nothing) (List (Just (7,41)-(7,44)) [Var (Just (7,42)-(7,43)) "h"] Nothing)
-*)
-
-(* typed spans
-(7,20)-(7,44)
-*)
-
-(* correct types
-'a list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(8,11)-(8,70)
+(8,17)-(8,25)
+(8,17)-(8,35)
 *)

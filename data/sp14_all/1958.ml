@@ -23,24 +23,20 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(9,16)-(9,45)
+(9,17)-(9,46)
 mulHelper (0 :: (List.rev l))
-AppG (fromList [ConAppG (Just (TupleG (fromList [AppG (fromList [VarG]),LitG])))])
+AppG (fromList [ConAppG (Just EmptyG)])
 
 *)
 
-(* changed exprs
-App (Just (9,16)-(9,45)) (Var (Just (9,16)-(9,25)) "mulHelper") [ConApp (Just (9,26)-(9,45)) "::" (Just (Tuple (Just (9,27)-(9,44)) [Lit (Just (9,27)-(9,28)) (LI 0),App (Just (9,32)-(9,44)) (Var (Just (9,33)-(9,41)) "List.rev") [Var (Just (9,42)-(9,43)) "l"]])) Nothing]
-*)
-
-(* typed spans
-(9,16)-(9,45)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-'a list
+(* type error slice
+(4,5)-(8,77)
+(7,28)-(7,37)
+(7,28)-(7,39)
+(7,38)-(7,39)
+(9,3)-(9,53)
+(9,17)-(9,30)
+(9,17)-(9,46)
+(9,18)-(9,27)
+(9,28)-(9,29)
 *)

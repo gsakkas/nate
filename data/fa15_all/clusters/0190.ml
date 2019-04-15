@@ -1,2 +1,5 @@
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG (BopG VarG LitG)])))
-(h + (sum mod 10)) :: t
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,BopG EmptyG EmptyG),(ConsPatG VarPatG WildPatG,Nothing,VarG),(ConPatG Nothing,Nothing,LitG)])
+match xs with
+| [] -> 0
+| h :: _ -> h
+| h :: t -> h + sumList t

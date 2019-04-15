@@ -45,56 +45,28 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(18,21)-(18,43)
+(18,22)-(18,44)
 pi *. evalhelper p1 x y
 BopG VarG (AppG (fromList [EmptyG]))
 
-(19,19)-(19,29)
-cos
-VarG
-
-(19,19)-(19,29)
-pi *. evalhelper p1 x y
-BopG VarG (AppG (fromList [EmptyG]))
-
-(20,2)-(20,18)
-x
-VarG
-
-(20,2)-(20,18)
-y
-VarG
+(19,20)-(19,33)
+cos (pi *. evalhelper p1 x y)
+AppG (fromList [BopG EmptyG EmptyG])
 
 *)
 
-(* changed exprs
-Bop (Just (18,21)-(18,48)) FTimes (Var (Just (18,22)-(18,24)) "pi") (App (Just (18,28)-(18,47)) (Var (Just (18,29)-(18,39)) "evalhelper") [Var (Just (18,40)-(18,42)) "p1",Var (Just (18,43)-(18,44)) "x",Var (Just (18,45)-(18,46)) "y"])
-Var (Just (19,19)-(19,22)) "cos"
-Bop (Just (19,23)-(19,50)) FTimes (Var (Just (19,24)-(19,26)) "pi") (App (Just (19,30)-(19,49)) (Var (Just (19,31)-(19,41)) "evalhelper") [Var (Just (19,42)-(19,44)) "p1",Var (Just (19,45)-(19,46)) "x",Var (Just (19,47)-(19,48)) "y"])
-Var (Just (19,45)-(19,46)) "x"
-Var (Just (19,47)-(19,48)) "y"
-*)
-
-(* typed spans
-(18,21)-(18,48)
-(19,19)-(19,22)
-(19,23)-(19,50)
-(19,45)-(19,46)
-(19,47)-(19,48)
-*)
-
-(* correct types
-float
-float -> float
-float
-float
-float
-*)
-
-(* bad types
-int
-expr -> int
-expr -> int
-'a
-'a
+(* type error slice
+(11,4)-(11,29)
+(11,10)-(11,27)
+(15,5)-(19,33)
+(18,18)-(18,21)
+(18,18)-(18,44)
+(18,22)-(18,44)
+(18,23)-(18,25)
+(18,28)-(18,43)
+(18,29)-(18,39)
+(19,20)-(19,30)
+(19,20)-(19,33)
+(20,3)-(20,13)
+(20,3)-(20,19)
 *)

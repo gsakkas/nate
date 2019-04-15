@@ -1,21 +1,12 @@
-LetG NonRec (fromList [LamG EmptyG]) VarG
-let d =
-  fun x ->
-    (let xx = f b in
-     (xx , xx = b)) in
-d
-let a =
-  fun x ->
-    (let xx = f x in
-     (xx , x <> b)) in
-a
-let f =
-  fun x ->
-    (let xx = (x * x) * x in
-     (xx , xx < 100)) in
-f
-let g =
-  fun x ->
-    (let xx = f x in
-     (xx , xx <> b)) in
-g
+BopG (BopG EmptyG EmptyG) (AppG (fromList [EmptyG]))
+(eval (e1 , x , y) *. eval (e2 , x , y)) /. eval (e3 , x , y)
+(eval (e1 , x , y) +. eval (e2 , x , y)) +. eval (e3 , x , y)
+(eval (e1 , x , y) +. eval (e2 , x , y)) /. float_of_int 2
+((float_of_int (-1) *. eval (e1 , x , y)) *. eval (e2 , x , y)) *. eval (e3 , x , y)
+(eval (e1 , x , y) -. eval (e2 , x , y)) -. eval (e3 , x , y)
+(eval (e1 , x , y) /. eval (e2 , x , y)) /. eval (e3 , x , y)
+(sin (pi *. eval (e , x , y)) +. cos (pi *. eval (e , x , y))) *. cos (pi *. eval (e , x , y))
+(eval (a , x , y) *. eval (a , x , y)) *. eval (a , x , y)
+(eval (a , sin (pi *. x) , sin (pi *. y)) +. eval (b , sin (pi *. x) , sin (pi *. y))) +. eval (c , sin (pi *. x) , sin (pi *. y))
+((eval (e1 , x , y) ** 2.0) +. (eval (e2 , x , y) ** 2.0)) +. (eval (e3 , x , y) ** 2.0)
+(eval (e1 , x , y) +. eval (e2 , x , y)) -. eval (e3 , x , y)

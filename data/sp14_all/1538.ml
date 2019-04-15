@@ -15,25 +15,27 @@ let sqsum xs =
 *)
 
 (* changed spans
-(4,13)-(4,64)
+(4,14)-(4,65)
 match xs with
 | hd :: tl -> f (f hd hd) tl
-CaseG VarG (fromList [(Nothing,AppG (fromList [EmptyG]))])
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,AppG (fromList [EmptyG]))])
 
 *)
 
-(* changed exprs
-Case (Just (4,13)-(4,53)) (Var (Just (4,19)-(4,21)) "xs") [(ConsPat (Just (4,29)-(4,35)) (VarPat (Just (4,29)-(4,31)) "hd") (VarPat (Just (4,33)-(4,35)) "tl"),Nothing,App (Just (4,39)-(4,53)) (Var (Just (4,39)-(4,40)) "f") [App (Just (4,41)-(4,50)) (Var (Just (4,42)-(4,43)) "f") [Var (Just (4,44)-(4,46)) "hd",Var (Just (4,47)-(4,49)) "hd"],Var (Just (4,51)-(4,53)) "tl"])]
-*)
-
-(* typed spans
-(4,13)-(4,53)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-int list
+(* type error slice
+(4,3)-(5,27)
+(4,14)-(4,65)
+(4,20)-(4,22)
+(4,36)-(4,38)
+(4,51)-(4,52)
+(4,51)-(4,65)
+(4,53)-(4,62)
+(4,54)-(4,55)
+(4,56)-(4,58)
+(4,59)-(4,61)
+(4,63)-(4,65)
+(5,3)-(5,17)
+(5,3)-(5,27)
+(5,18)-(5,19)
+(5,20)-(5,24)
 *)

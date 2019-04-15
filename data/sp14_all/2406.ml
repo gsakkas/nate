@@ -52,7 +52,7 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(15,6)-(19,61)
+(15,7)-(19,62)
 let carry =
   match a with
   | (x , y) -> x in
@@ -63,22 +63,23 @@ match x with
                   ((carry + d1) + d2) mod 10 in
                 match a with
                 | (x , y) -> (new_carry , digit :: y))
-LetG NonRec (fromList [CaseG EmptyG (fromList [(Nothing,EmptyG)])]) (CaseG EmptyG (fromList [(Nothing,EmptyG)]))
+LetG NonRec (fromList [(VarPatG,CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))]) (CaseG EmptyG (fromList [(TuplePatG (fromList [EmptyPatG]),Nothing,EmptyG)]))
 
 *)
 
-(* changed exprs
-Let (Just (15,6)-(20,61)) NonRec [(VarPat (Just (15,10)-(15,15)) "carry",Case (Just (15,18)-(15,43)) (Var (Just (15,24)-(15,25)) "a") [(TuplePat (Just (15,34)-(15,37)) [VarPat (Just (15,34)-(15,35)) "x",VarPat (Just (15,36)-(15,37)) "y"],Nothing,Var (Just (15,42)-(15,43)) "x")])] (Case (Just (16,6)-(20,61)) (Var (Just (16,12)-(16,13)) "x") [(TuplePat (Just (17,9)-(17,14)) [VarPat (Just (17,9)-(17,11)) "d1",VarPat (Just (17,12)-(17,14)) "d2"],Nothing,Let (Just (18,10)-(20,61)) NonRec [(VarPat (Just (18,14)-(18,23)) "new_carry",Bop (Just (18,26)-(18,50)) Div (Bop (Just (18,26)-(18,45)) Plus (Bop (Just (18,27)-(18,39)) Plus (Var (Just (18,28)-(18,33)) "carry") (Var (Just (18,36)-(18,38)) "d1")) (Var (Just (18,42)-(18,44)) "d2")) (Lit (Just (18,48)-(18,50)) (LI 10)))] (Let (Just (19,10)-(20,61)) NonRec [(VarPat (Just (19,14)-(19,19)) "digit",Bop (Just (19,22)-(19,48)) Mod (Bop (Just (19,22)-(19,41)) Plus (Bop (Just (19,23)-(19,35)) Plus (Var (Just (19,24)-(19,29)) "carry") (Var (Just (19,32)-(19,34)) "d1")) (Var (Just (19,38)-(19,40)) "d2")) (Lit (Just (19,46)-(19,48)) (LI 10)))] (Case (Just (20,10)-(20,61)) (Var (Just (20,17)-(20,18)) "a") [(TuplePat (Just (20,27)-(20,30)) [VarPat (Just (20,27)-(20,28)) "x",VarPat (Just (20,29)-(20,30)) "y"],Nothing,Tuple (Just (20,35)-(20,60)) [Var (Just (20,36)-(20,45)) "new_carry",ConApp (Just (20,47)-(20,59)) "::" (Just (Tuple (Just (20,48)-(20,58)) [Var (Just (20,48)-(20,53)) "digit",Var (Just (20,57)-(20,58)) "y"])) Nothing])])))])
-*)
-
-(* typed spans
-(15,6)-(20,61)
-*)
-
-(* correct types
-(int * int list)
-*)
-
-(* bad types
-(int * int list)
+(* type error slice
+(14,5)-(22,52)
+(14,11)-(19,62)
+(14,13)-(19,62)
+(15,7)-(19,62)
+(17,11)-(19,62)
+(17,28)-(17,36)
+(17,29)-(17,30)
+(18,11)-(19,62)
+(19,11)-(19,62)
+(19,18)-(19,19)
+(19,36)-(19,61)
+(22,19)-(22,33)
+(22,19)-(22,45)
+(22,34)-(22,35)
 *)

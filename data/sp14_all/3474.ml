@@ -11,24 +11,16 @@ let rec listReverse l =
 *)
 
 (* changed spans
-(3,53)-(3,54)
+(3,54)-(3,55)
 h
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (3,53)-(3,54)) "h"
-*)
-
-(* typed spans
-(3,53)-(3,54)
-*)
-
-(* correct types
-'a
-*)
-
-(* bad types
-'a list
+(* type error slice
+(3,3)-(3,74)
+(3,39)-(3,43)
+(3,40)-(3,42)
+(3,54)-(3,55)
+(3,54)-(3,74)
 *)

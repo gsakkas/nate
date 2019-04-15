@@ -23,24 +23,21 @@ let removeDuplicates l =
 *)
 
 (* changed spans
-(8,20)-(8,21)
+(8,21)-(8,22)
 [0]
-ListG LitG
+ListG (fromList [LitG])
 
 *)
 
-(* changed exprs
-List (Just (8,20)-(8,23)) [Lit (Just (8,21)-(8,22)) (LI 0)] Nothing
-*)
-
-(* typed spans
-(8,20)-(8,23)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(3,3)-(9,28)
+(3,19)-(8,47)
+(4,5)-(8,47)
+(4,11)-(4,15)
+(8,9)-(8,47)
+(8,21)-(8,22)
+(8,26)-(8,32)
+(8,26)-(8,47)
+(8,33)-(8,47)
+(8,41)-(8,46)
 *)

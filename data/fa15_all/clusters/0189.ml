@@ -1,4 +1,5 @@
-TupleG (fromList [IteG EmptyG EmptyG EmptyG,ConAppG (Just EmptyG)])
-(if ((a1 + x1) + x2) >= 10
- then 1
- else 0 , ((a1 + x1) + x2) :: a2)
+CaseG VarG (fromList [(ConsPatG VarPatG VarPatG,Nothing,AppG (fromList [EmptyG])),(ConPatG Nothing,Nothing,ListG (fromList [EmptyG]))])
+match t with
+| [] -> [remainder i h]
+| h' :: t' -> [h' * i] @ mulByDigit i
+                                    t'

@@ -51,7 +51,7 @@ let rec mulByDigit i l =
 *)
 
 (* changed spans
-(22,25)-(22,54)
+(22,26)-(22,55)
 let rec helper =
   fun i ->
     fun acc ->
@@ -60,22 +60,14 @@ let rec helper =
         then helper i (bigAdd acc l) l
         else acc in
 helper i [] l
-LetG Rec (fromList [LamG EmptyG]) (AppG (fromList [EmptyG]))
+LetG Rec (fromList [(VarPatG,LamG VarPatG EmptyG)]) (AppG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (23,2)-(24,15)) Rec [(VarPat (Just (23,10)-(23,16)) "helper",Lam (Just (23,17)-(23,75)) (VarPat (Just (23,17)-(23,18)) "i") (Lam (Just (23,19)-(23,75)) (VarPat (Just (23,19)-(23,22)) "acc") (Lam (Just (23,23)-(23,75)) (VarPat (Just (23,23)-(23,24)) "l") (Ite (Just (23,27)-(23,75)) (Bop (Just (23,30)-(23,35)) Gt (Var (Just (23,30)-(23,31)) "i") (Lit (Just (23,34)-(23,35)) (LI 0))) (App (Just (23,41)-(23,66)) (Var (Just (23,41)-(23,47)) "helper") [Var (Just (23,48)-(23,49)) "i",App (Just (23,50)-(23,64)) (Var (Just (23,51)-(23,57)) "bigAdd") [Var (Just (23,58)-(23,61)) "acc",Var (Just (23,62)-(23,63)) "l"],Var (Just (23,65)-(23,66)) "l"]) (Var (Just (23,72)-(23,75)) "acc")) Nothing) Nothing) Nothing)] (App (Just (24,2)-(24,15)) (Var (Just (24,2)-(24,8)) "helper") [Var (Just (24,9)-(24,10)) "i",List (Just (24,11)-(24,13)) [] Nothing,Var (Just (24,14)-(24,15)) "l"])
-*)
-
-(* typed spans
-(23,2)-(24,15)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-'a
+(* type error slice
+(22,4)-(22,57)
+(22,20)-(22,55)
+(22,22)-(22,55)
+(22,26)-(22,36)
+(22,26)-(22,55)
 *)

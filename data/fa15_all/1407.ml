@@ -16,26 +16,19 @@ let rec additivePersistence n = additivePersistence (sumList (digits n));;
 *)
 
 (* changed spans
-(2,32)-(2,68)
-if n <= 0
-then []
-else digitsOfInt (n / 10) @ [n mod 10]
-IteG (BopG EmptyG EmptyG) (ListG EmptyG) (AppG (fromList [EmptyG]))
+(2,33)-(2,69)
+additivePersistence (sumList (digits n))
+AppG (fromList [AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Ite (Just (3,2)-(3,60)) (Bop (Just (3,5)-(3,11)) Le (Var (Just (3,5)-(3,6)) "n") (Lit (Just (3,10)-(3,11)) (LI 0))) (List (Just (3,17)-(3,19)) [] Nothing) (App (Just (3,25)-(3,60)) (Var (Just (3,48)-(3,49)) "@") [App (Just (3,25)-(3,47)) (Var (Just (3,26)-(3,37)) "digitsOfInt") [Bop (Just (3,38)-(3,46)) Div (Var (Just (3,39)-(3,40)) "n") (Lit (Just (3,43)-(3,45)) (LI 10))],List (Just (3,50)-(3,60)) [Bop (Just (3,51)-(3,59)) Mod (Var (Just (3,51)-(3,52)) "n") (Lit (Just (3,57)-(3,59)) (LI 10))] Nothing])
-*)
-
-(* typed spans
-(3,2)-(3,60)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-bool
+(* type error slice
+(2,4)-(2,71)
+(2,29)-(2,69)
+(2,33)-(2,34)
+(2,33)-(2,69)
+(2,37)-(2,69)
+(2,38)-(2,57)
+(2,58)-(2,68)
+(2,59)-(2,60)
 *)

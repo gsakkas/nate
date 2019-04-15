@@ -12,24 +12,15 @@ let rec digitsOfInt n =
 *)
 
 (* changed spans
-(4,31)-(4,53)
+(4,32)-(4,54)
 return
 VarG
 
 *)
 
-(* changed exprs
-Var (Just (3,50)-(3,56)) "return"
-*)
-
-(* typed spans
-(3,50)-(3,56)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int list
+(* type error slice
+(3,3)-(4,66)
+(3,16)-(3,18)
+(4,32)-(4,54)
+(4,33)-(4,39)
 *)

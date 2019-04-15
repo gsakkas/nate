@@ -1,3 +1,5 @@
-ConAppG (Just (TupleG (fromList [VarG,BopG VarG LitG])))
-(n mod 10) :: return
-(sum mod 10) :: acc
+LetG NonRec (fromList [(VarPatG,VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
+let args = l2 in
+let (_ , res) =
+  List.fold_left f base args in
+res

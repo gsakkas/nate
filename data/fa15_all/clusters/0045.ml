@@ -1,7 +1,11 @@
-LamG (BopG EmptyG EmptyG)
-fun (x , y) -> x + y
-fun s -> (f s - s) < 0
-fun i -> i + 1
-fun ss -> ss mod 10
-fun y -> y / 10
-fun x -> x mod 10
+TupleG (fromList [VarG,LetG NonRec (fromList [(VarPatG,EmptyG)]) EmptyG])
+(let g =
+   fun b ->
+     (let t = f b in
+      if b = t
+      then (b , false)
+      else (t , true)) in
+ g , b)
+(let f' =
+   fun b -> (f b , b = f b) in
+ f' , b)

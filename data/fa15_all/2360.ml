@@ -25,24 +25,26 @@ let rec additivePersistence n =
 *)
 
 (* changed spans
-(10,51)-(10,52)
+(10,52)-(10,53)
 h :: t
-ConAppG (Just (TupleG (fromList [VarG])))
+ConAppG (Just (TupleG (fromList [EmptyG])))
 
 *)
 
-(* changed exprs
-ConApp (Just (10,51)-(10,59)) "::" (Just (Tuple (Just (10,52)-(10,58)) [Var (Just (10,52)-(10,53)) "h",Var (Just (10,57)-(10,58)) "t"])) Nothing
-*)
-
-(* typed spans
-(10,51)-(10,59)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-int
+(* type error slice
+(5,22)-(5,71)
+(5,59)-(5,71)
+(5,60)-(5,68)
+(5,69)-(5,70)
+(7,4)-(7,37)
+(7,12)-(7,35)
+(7,28)-(7,35)
+(7,29)-(7,32)
+(7,33)-(7,34)
+(10,9)-(10,15)
+(10,9)-(10,17)
+(10,16)-(10,17)
+(10,43)-(10,51)
+(10,43)-(10,53)
+(10,52)-(10,53)
 *)

@@ -52,25 +52,16 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(21,6)-(21,64)
+(21,7)-(21,65)
 let (one , two) = a in
 (x :: one , y :: two)
-LetG NonRec (fromList [VarG]) (TupleG (fromList [EmptyG]))
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (TupleG (fromList [EmptyG]))
 
 *)
 
-(* changed exprs
-Let (Just (20,28)-(20,73)) NonRec [(TuplePat (Just (20,33)-(20,40)) [VarPat (Just (20,33)-(20,36)) "one",VarPat (Just (20,37)-(20,40)) "two"],Var (Just (20,44)-(20,45)) "a")] (Tuple (Just (20,49)-(20,73)) [ConApp (Just (20,50)-(20,60)) "::" (Just (Tuple (Just (20,51)-(20,59)) [Var (Just (20,51)-(20,52)) "x",Var (Just (20,56)-(20,59)) "one"])) Nothing,ConApp (Just (20,62)-(20,72)) "::" (Just (Tuple (Just (20,63)-(20,71)) [Var (Just (20,63)-(20,64)) "y",Var (Just (20,68)-(20,71)) "two"])) Nothing])
-*)
-
-(* typed spans
-(20,28)-(20,73)
-*)
-
-(* correct types
-(int list * int list)
-*)
-
-(* bad types
-(int list * int list)
+(* type error slice
+(21,7)-(21,17)
+(21,7)-(21,65)
+(21,18)-(21,65)
+(21,40)-(21,64)
 *)

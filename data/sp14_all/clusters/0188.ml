@@ -1,4 +1,2 @@
-LetG NonRec (fromList [AppG (fromList [EmptyG])]) (ListG EmptyG)
-let y :: [] =
-  loop (input / 10) in
-[y ; input mod 10]
+AppG (fromList [VarG,BopG EmptyG EmptyG,ConAppG (Just EmptyG)])
+helper (f :: acc) f (x - 1)

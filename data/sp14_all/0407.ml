@@ -57,64 +57,24 @@ let rec eval (e,x,y) =
 *)
 
 (* changed spans
-(20,22)-(20,45)
+(20,18)-(20,19)
 1.0
 LitG
 
-(20,27)-(20,44)
+(20,23)-(20,46)
 1.0 -. exp ((- 1.0) *. eval (a , x , y))
 BopG LitG (AppG (fromList [EmptyG]))
 
-(20,33)-(20,37)
-(- 1.0)
-UopG LitG
-
-(20,41)-(20,42)
-eval (a , x , y)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(21,21)-(21,65)
-x
-VarG
-
-(21,21)-(21,65)
-y
-VarG
-
 *)
 
-(* changed exprs
-Lit (Just (20,17)-(20,19)) (LD 1.0)
-Bop (Just (20,23)-(20,64)) FMinus (Lit (Just (20,24)-(20,26)) (LD 1.0)) (App (Just (20,30)-(20,63)) (Var (Just (20,31)-(20,34)) "exp") [Bop (Just (20,35)-(20,62)) FTimes (Uop (Just (20,36)-(20,41)) Neg (Lit (Just (20,38)-(20,40)) (LD 1.0))) (App (Just (20,45)-(20,61)) (Var (Just (20,46)-(20,50)) "eval") [Tuple (Just (20,51)-(20,60)) [Var (Just (20,52)-(20,53)) "a",Var (Just (20,55)-(20,56)) "x",Var (Just (20,58)-(20,59)) "y"]])])
-Uop (Just (20,36)-(20,41)) Neg (Lit (Just (20,38)-(20,40)) (LD 1.0))
-App (Just (20,45)-(20,61)) (Var (Just (20,46)-(20,50)) "eval") [Tuple (Just (20,51)-(20,60)) [Var (Just (20,52)-(20,53)) "a",Var (Just (20,55)-(20,56)) "x",Var (Just (20,58)-(20,59)) "y"]]
-Var (Just (20,55)-(20,56)) "x"
-Var (Just (20,58)-(20,59)) "y"
-*)
-
-(* typed spans
-(20,17)-(20,19)
-(20,23)-(20,64)
-(20,36)-(20,41)
-(20,45)-(20,61)
-(20,55)-(20,56)
-(20,58)-(20,59)
-*)
-
-(* correct types
-float
-float
-int
-float
-float
-float
-*)
-
-(* bad types
-int
-float -> float
-int
-expr
-float
-float
+(* type error slice
+(15,3)-(26,26)
+(20,18)-(20,19)
+(20,18)-(20,46)
+(20,23)-(20,46)
+(20,28)-(20,45)
+(20,29)-(20,32)
+(20,33)-(20,44)
+(20,34)-(20,38)
+(20,42)-(20,43)
 *)

@@ -83,24 +83,22 @@ let bigMul l1 l2 =
 *)
 
 (* changed spans
-(37,39)-(37,75)
+(37,40)-(37,76)
 bigAdd (mulByDigit prod l1) l
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (37,39)-(37,70)) (Var (Just (37,40)-(37,46)) "bigAdd") [App (Just (37,47)-(37,67)) (Var (Just (37,48)-(37,58)) "mulByDigit") [Var (Just (37,59)-(37,63)) "prod",Var (Just (37,64)-(37,66)) "l1"],Var (Just (37,68)-(37,69)) "l"]
-*)
-
-(* typed spans
-(37,39)-(37,70)
-*)
-
-(* correct types
-int list
-*)
-
-(* bad types
-'a list
+(* type error slice
+(31,47)-(31,53)
+(31,47)-(31,78)
+(31,54)-(31,55)
+(31,56)-(31,78)
+(31,57)-(31,67)
+(31,76)-(31,77)
+(37,40)-(37,76)
+(37,41)-(37,47)
+(37,48)-(37,75)
+(37,49)-(37,66)
+(37,50)-(37,60)
 *)

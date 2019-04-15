@@ -23,24 +23,20 @@ let stringOfList f l =
 *)
 
 (* changed spans
-(5,10)-(5,12)
+(5,11)-(5,13)
 ""
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (5,10)-(5,12)) (LS "")
-*)
-
-(* typed spans
-(5,10)-(5,12)
-*)
-
-(* correct types
-string
-*)
-
-(* bad types
-'a list
+(* type error slice
+(4,3)-(9,20)
+(5,11)-(5,13)
+(7,7)-(9,20)
+(8,45)-(8,63)
+(8,47)-(8,48)
+(8,49)-(8,63)
+(8,50)-(8,60)
+(9,7)-(9,17)
+(9,7)-(9,20)
 *)

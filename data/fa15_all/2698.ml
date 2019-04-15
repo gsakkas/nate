@@ -23,24 +23,17 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(9,26)-(9,42)
+(9,27)-(9,43)
 notEqual b (f b)
 AppG (fromList [VarG,AppG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-App (Just (9,26)-(9,44)) (Var (Just (9,27)-(9,35)) "notEqual") [Var (Just (9,36)-(9,37)) "b",App (Just (9,38)-(9,43)) (Var (Just (9,39)-(9,40)) "f") [Var (Just (9,41)-(9,42)) "b"]]
-*)
-
-(* typed spans
-(9,26)-(9,44)
-*)
-
-(* correct types
-bool
-*)
-
-(* bad types
-bool
+(* type error slice
+(2,4)-(2,37)
+(2,14)-(2,35)
+(2,16)-(2,35)
+(2,20)-(2,35)
+(9,27)-(9,43)
+(9,28)-(9,36)
 *)

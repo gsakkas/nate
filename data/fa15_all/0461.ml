@@ -24,69 +24,45 @@ let fixpoint (f,b) =
 *)
 
 (* changed spans
-(8,17)-(8,36)
+(8,18)-(8,37)
 fun s -> (f s - s) < 0
-LamG (BopG EmptyG EmptyG)
+LamG VarPatG (BopG EmptyG EmptyG)
 
-(9,4)-(10,72)
+(9,5)-(10,73)
 (f x , isFPoint x)
 TupleG (fromList [AppG (fromList [EmptyG])])
 
-(11,2)-(11,16)
-isFPoint
-VarG
-
-(11,2)-(11,16)
-x
-VarG
-
-(11,2)-(11,16)
-wwhile (gs , b)
-AppG (fromList [TupleG (fromList [EmptyG])])
-
-(11,2)-(11,16)
-wwhile
-VarG
-
-(11,2)-(11,16)
-EMPTY
-EmptyG
-
 *)
 
-(* changed exprs
-Lam (Just (7,26)-(7,45)) (VarPat (Just (7,26)-(7,27)) "s") (Bop (Just (7,30)-(7,45)) Lt (Bop (Just (7,30)-(7,41)) Minus (App (Just (7,31)-(7,36)) (Var (Just (7,32)-(7,33)) "f") [Var (Just (7,34)-(7,35)) "s"]) (Var (Just (7,39)-(7,40)) "s")) (Lit (Just (7,44)-(7,45)) (LI 0))) Nothing
-Tuple (Just (7,49)-(7,70)) [App (Just (7,50)-(7,55)) (Var (Just (7,51)-(7,52)) "f") [Var (Just (7,53)-(7,54)) "x"],App (Just (7,57)-(7,69)) (Var (Just (7,58)-(7,66)) "isFPoint") [Var (Just (7,67)-(7,68)) "x"]]
-Var (Just (7,58)-(7,66)) "isFPoint"
-Var (Just (7,67)-(7,68)) "x"
-App (Just (8,2)-(8,16)) (Var (Just (8,2)-(8,8)) "wwhile") [Tuple (Just (8,9)-(8,16)) [Var (Just (8,10)-(8,12)) "gs",Var (Just (8,14)-(8,15)) "b"]]
-Var (Just (8,2)-(8,8)) "wwhile"
-Var (Just (11,2)-(11,16)) "EMPTY"
-*)
-
-(* typed spans
-(7,26)-(7,45)
-(7,49)-(7,70)
-(7,58)-(7,66)
-(7,67)-(7,68)
-(8,2)-(8,16)
-(8,2)-(8,8)
-*)
-
-(* correct types
-int -> bool
-(int * bool)
-int -> bool
-int
-int
-(int -> (int * bool) * int) -> int
-*)
-
-(* bad types
-int -> bool
-int
-'a
-'a
-'a
-'a
+(* type error slice
+(3,3)-(4,69)
+(3,13)-(3,14)
+(3,13)-(3,16)
+(4,3)-(4,69)
+(4,9)-(4,12)
+(4,43)-(4,49)
+(4,43)-(4,56)
+(4,50)-(4,56)
+(4,51)-(4,52)
+(7,3)-(11,17)
+(7,10)-(10,73)
+(8,5)-(10,73)
+(8,18)-(8,37)
+(8,22)-(8,33)
+(8,31)-(8,32)
+(9,5)-(10,73)
+(10,5)-(10,73)
+(10,20)-(10,65)
+(10,23)-(10,31)
+(10,23)-(10,33)
+(10,32)-(10,33)
+(10,39)-(10,40)
+(10,46)-(10,48)
+(10,46)-(10,65)
+(10,69)-(10,71)
+(10,69)-(10,73)
+(11,3)-(11,9)
+(11,3)-(11,17)
+(11,10)-(11,17)
+(11,11)-(11,13)
 *)

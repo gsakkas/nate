@@ -34,24 +34,18 @@ let rec digitalRoot n =
 *)
 
 (* changed spans
-(13,2)-(14,54)
+(14,55)-(14,55)
 0
 LitG
 
 *)
 
-(* changed exprs
-Lit (Just (15,7)-(15,8)) (LI 0)
-*)
-
-(* typed spans
-(15,7)-(15,8)
-*)
-
-(* correct types
-int
-*)
-
-(* bad types
-unit
+(* type error slice
+(10,56)-(10,71)
+(10,60)-(10,71)
+(10,61)-(10,68)
+(13,3)-(14,55)
+(14,8)-(14,15)
+(14,8)-(14,55)
+(14,55)-(14,55)
 *)

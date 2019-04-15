@@ -65,7 +65,7 @@ let bigAdd l1 l2 =
 *)
 
 (* changed spans
-(19,6)-(27,41)
+(19,7)-(27,42)
 let (fst , sec) = x in
 let (fst' , sec') =
   if (fst + sec) > 9
@@ -77,30 +77,36 @@ let (carry' , digits') =
   then (1 , digits @ [fst'])
   else (0 , digits @ [fst']) in
 (carry' , digits')
-LetG NonRec (fromList [VarG]) (LetG NonRec (fromList [EmptyG]) EmptyG)
+LetG NonRec (fromList [(TuplePatG (fromList [VarPatG]),VarG)]) (LetG NonRec (fromList [(TuplePatG (fromList [EmptyPatG]),EmptyG)]) EmptyG)
 
-(29,53)-(29,55)
+(29,16)-(29,24)
+List.rev (List.combine l1 l2)
+AppG (fromList [AppG (fromList [EmptyG])])
+
+(29,27)-(29,58)
 [(0 , 0)]
-ListG (TupleG (fromList [EmptyG]))
+ListG (fromList [TupleG (fromList [EmptyG])])
 
 *)
 
-(* changed exprs
-Let (Just (19,6)-(25,23)) NonRec [(TuplePat (Just (19,11)-(19,18)) [VarPat (Just (19,11)-(19,14)) "fst",VarPat (Just (19,15)-(19,18)) "sec"],Var (Just (19,22)-(19,23)) "x")] (Let (Just (20,6)-(25,23)) NonRec [(TuplePat (Just (20,11)-(20,20)) [VarPat (Just (20,11)-(20,15)) "fst'",VarPat (Just (20,16)-(20,20)) "sec'"],Ite (Just (21,8)-(21,77)) (Bop (Just (21,11)-(21,26)) Gt (Bop (Just (21,11)-(21,22)) Plus (Var (Just (21,12)-(21,15)) "fst") (Var (Just (21,18)-(21,21)) "sec")) (Lit (Just (21,25)-(21,26)) (LI 9))) (Tuple (Just (21,32)-(21,55)) [Bop (Just (21,33)-(21,51)) Minus (Bop (Just (21,34)-(21,45)) Plus (Var (Just (21,35)-(21,38)) "fst") (Var (Just (21,41)-(21,44)) "sec")) (Lit (Just (21,48)-(21,50)) (LI 10)),Lit (Just (21,53)-(21,54)) (LI 1)]) (Tuple (Just (21,61)-(21,77)) [Bop (Just (21,62)-(21,73)) Plus (Var (Just (21,63)-(21,66)) "fst") (Var (Just (21,69)-(21,72)) "sec"),Lit (Just (21,75)-(21,76)) (LI 0)]))] (Let (Just (22,6)-(25,23)) NonRec [(TuplePat (Just (22,11)-(22,23)) [VarPat (Just (22,11)-(22,16)) "carry",VarPat (Just (22,17)-(22,23)) "digits"],Var (Just (22,27)-(22,28)) "a")] (Let (Just (23,6)-(25,23)) NonRec [(TuplePat (Just (23,11)-(23,25)) [VarPat (Just (23,11)-(23,17)) "carry'",VarPat (Just (23,18)-(23,25)) "digits'"],Ite (Just (24,8)-(24,75)) (Bop (Just (24,11)-(24,19)) Eq (Var (Just (24,11)-(24,15)) "sec'") (Lit (Just (24,18)-(24,19)) (LI 1))) (Tuple (Just (24,25)-(24,47)) [Lit (Just (24,26)-(24,27)) (LI 1),App (Just (24,29)-(24,46)) (Var (Just (24,37)-(24,38)) "@") [Var (Just (24,30)-(24,36)) "digits",List (Just (24,39)-(24,45)) [Var (Just (24,40)-(24,44)) "fst'"] Nothing]]) (Tuple (Just (24,53)-(24,75)) [Lit (Just (24,54)-(24,55)) (LI 0),App (Just (24,57)-(24,74)) (Var (Just (24,65)-(24,66)) "@") [Var (Just (24,58)-(24,64)) "digits",List (Just (24,67)-(24,73)) [Var (Just (24,68)-(24,72)) "fst'"] Nothing]]))] (Tuple (Just (25,6)-(25,23)) [Var (Just (25,7)-(25,13)) "carry'",Var (Just (25,15)-(25,22)) "digits'"]))))
-List (Just (27,49)-(27,57)) [Tuple (Just (27,50)-(27,56)) [Lit (Just (27,51)-(27,52)) (LI 0),Lit (Just (27,54)-(27,55)) (LI 0)]] Nothing
-*)
-
-(* typed spans
-(19,6)-(25,23)
-(27,49)-(27,57)
-*)
-
-(* correct types
-(int * int list)
-(int * int) list
-*)
-
-(* bad types
-(int * int)
-int list
+(* type error slice
+(18,5)-(30,52)
+(18,11)-(27,42)
+(18,13)-(27,42)
+(19,7)-(27,42)
+(19,13)-(19,19)
+(19,17)-(19,18)
+(21,11)-(23,32)
+(23,16)-(23,32)
+(23,30)-(23,31)
+(26,20)-(26,41)
+(26,28)-(26,29)
+(26,30)-(26,40)
+(27,20)-(27,41)
+(27,21)-(27,27)
+(27,28)-(27,29)
+(27,30)-(27,40)
+(30,19)-(30,33)
+(30,19)-(30,45)
+(30,34)-(30,35)
 *)

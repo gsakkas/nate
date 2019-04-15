@@ -1,4 +1,5 @@
-ConAppG (Just (TupleG (fromList [VarG,BopG (BopG (BopG VarG VarG) VarG) LitG])))
-(((x1 + x2) + carry) mod 10) :: sum
-(((x1 + x2) + a1) - 10) :: a2
-(((j + k) + l) - 10) :: m
+LetG NonRec (fromList [(VarPatG,BopG EmptyG EmptyG)]) (IteG EmptyG EmptyG EmptyG)
+let sum = fst x + snd x in
+if sum > 9
+then (1 , ((sum - 10) + fst a) :: (snd a))
+else (0 , (sum + fst a) :: (snd a))

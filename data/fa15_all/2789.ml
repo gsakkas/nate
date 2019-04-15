@@ -9,32 +9,23 @@ let pipe fs = let f a x = x in let base f x = x in List.fold_left f base fs;;
 *)
 
 (* changed spans
-(2,26)-(2,29)
+(2,27)-(2,30)
 x
 VarG
 
-(2,33)-(2,75)
+(2,43)-(2,48)
 fun f -> fun x -> x
-LamG (LamG EmptyG)
+LamG VarPatG (LamG VarPatG EmptyG)
 
 *)
 
-(* changed exprs
-Var (Just (2,26)-(2,27)) "x"
-Lam (Just (2,40)-(2,47)) (VarPat (Just (2,40)-(2,41)) "f") (Lam (Just (2,42)-(2,47)) (VarPat (Just (2,42)-(2,43)) "x") (Var (Just (2,46)-(2,47)) "x") Nothing) Nothing
-*)
-
-(* typed spans
-(2,26)-(2,27)
-(2,40)-(2,47)
-*)
-
-(* correct types
-'a -> 'b -> 'b
-'a -> 'b -> 'b
-*)
-
-(* bad types
-'a
-'a
+(* type error slice
+(2,15)-(2,76)
+(2,21)-(2,30)
+(2,23)-(2,30)
+(2,27)-(2,28)
+(2,27)-(2,30)
+(2,52)-(2,66)
+(2,52)-(2,76)
+(2,67)-(2,68)
 *)

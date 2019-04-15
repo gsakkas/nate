@@ -1,3 +1,3 @@
-LetG NonRec (fromList [VarG]) (BopG EmptyG EmptyG)
-let (y , z) = x in
-((y + z) + carry) = 10
+ListG (fromList [VarG,BopG EmptyG EmptyG])
+[a ; ((fst x + snd x) + a) mod 10]
+[carry ; (carry + b) + c]
