@@ -59,7 +59,7 @@ test = pd.concat(test)
 print test.shape
 
 # Maximum number of clusters in files
-max_num_cls = 41
+max_num_cls = 50
 
 # Number of cluster-labels to use
 num_of_cls = 20
