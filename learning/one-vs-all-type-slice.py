@@ -132,7 +132,7 @@ if model != 'load':
 
     joblib.dump(
         clf,
-        os.path.join('models', model + '-' + str(num_of_cls) + '-ova.pkl'))
+        os.path.join('models', model + '-' + str(num_of_cls) + '-multiclass.pkl'))
 
 anses = clf.predict(test_samps.values)
 
